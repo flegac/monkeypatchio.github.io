@@ -1,11 +1,12 @@
 # Dependencies
 markdown:         redcarpet
+
 #Sass
 sass:
-    sass_dir: 	  _sass
-    style: 	      compressed
-# Permalinks
-permalink:        pretty
+  sass_dir:          _sass
+  style:            :compressed
+
+highlighter: pygments
 
 
 # Setup
