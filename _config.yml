@@ -20,3 +20,8 @@ author:
   name:           Emmanuel Vinas
   url:            https://twitter.com/EmmanuelVinas
   email:          emmanuel@monkeypatch.io
+  
+# Custom vars
+version:          1.0.0
+github:
+  repo:           https://github.com/MonkeyPatchIo/monkeypatchio.github.io
