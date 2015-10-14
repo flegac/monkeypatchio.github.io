@@ -7,13 +7,15 @@
 <!--<![endif]-->  
    {% include head.html %}
     <body class="{{body-class}}">
+    	{% include main_js.js %}
+
 		{% include header.html %}
 		
 	    {{ content }}
-		
+
 		{% include footer.html %}
 
-		{% include main_js.js %}
+
   </body>
 
 </html>
