@@ -1,27 +1,32 @@
 # Dependencies
-markdown:         redcarpet
+markdown:		redcarpet
 
 #Sass
 sass:
-  sass_dir:          _sass
-  style:            :compressed
+  sass_dir:		_sass
+  style:		:compressed
 
-highlighter: pygments
+highlighter: 	pygments
 
 
 # Setup
-title:            MonkeyPatch - Expertise Informatique
-keywords: 		  Expertise informatique, 
-description:      Société de conseil informatique spécialisée dans les nouvelles technologies.
-url:              http://www.monkeypatch.io
-paginate:         1
+title:			MonkeyPatch - Expertise Informatique
+keywords:		Expertise informatique, 
+description:	Société de conseil informatique spécialisée dans les nouvelles technologies.
+url:			http://www.monkeypatch.io
+paginate:		1
 baseurl:          
 author:
-  name:           Emmanuel Vinas
-  url:            https://twitter.com/EmmanuelVinas
-  email:          emmanuel@monkeypatch.io
+  name:			Emmanuel Vinas
+  url:			https://twitter.com/EmmanuelVinas
+  email:		emmanuel@monkeypatch.io
   
 # Custom vars
-version:          1.0.0
+version:		1.0.0
 github:
-  repo:           https://github.com/MonkeyPatchIo/monkeypatchio.github.io
+ repo:			https://github.com/MonkeyPatchIo/monkeypatchio.github.io
+
+contact:
+	tel:			06.72.73.21.38
+	mail:			emmanuel@monkeypatch.io
+

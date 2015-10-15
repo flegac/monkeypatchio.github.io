@@ -254,7 +254,7 @@ promo: index_promo.html
 	   </p><!--//phone-->
 	   <p class="email contact-info">
 		   <span class="intro">You can also email us</span>
-		   <span class="info"><a href="mailto:hello@yourdevstudio.com">hello@yourdevstudio.com</a></span>
+		   <span class="info"><a href="mailto:<% page.contact.mail %>"><% page.contact.mail %></a></span>
 	   </p><!--//phone-->              
 	</div><!--//container-->
 </section><!--//cta-section-->
@@ -334,7 +334,7 @@ promo: index_promo.html
 			<div class="modal-body">
 				<ul class="contact-info list-inline text-center">
 					<li class="tel"><span class="fs1" aria-hidden="true" data-icon="&#x77;"></span><br /> <a href="+0800123456">0800 123 4567</a></li>
-					<li class="email"><span class="fs1" aria-hidden="true" data-icon="&#xe010;"></span><br /> <a href="#">hello@yourdevstudio.com</a></li>
+					<li class="email"><span class="fs1" aria-hidden="true" data-icon="&#xe010;"></span><br /> <a href="#"><% page.contact.mail %></a></li>
 				</ul>
 				{% include contact_form.html %}
 			</div><!--//modal-body-->
