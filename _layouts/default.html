@@ -9,13 +9,8 @@
     <body class="{{page.body-class}}">
     	{% include main_js.js %}
 
-    	<div class="header-wrapper {{page.header-class}}">
-			{% include header.html %}
-		
-			{% include {{page.promo}} %}
+    	{% include header.html %}
 	
-		</div><!--//header-wrapper-->
-
 	    {{ content }}
 
 		{% include footer.html %}
