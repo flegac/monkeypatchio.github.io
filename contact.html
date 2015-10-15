@@ -13,8 +13,8 @@ promo: contact_promo.html
         <h2 class="title text-center">Start your project today</h2>
         <p class="intro text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet tortor consequat nisi scelerisque commodo etiam justo sapien.</p>
         <ul class="contact-info list-inline text-center">
-            <li class="tel"><span class="fs1" aria-hidden="true" data-icon="&#x77;"></span><br /> <a href="+0800123456">0800 123 4567</a></li>
-            <li class="email"><span class="fs1" aria-hidden="true" data-icon="&#xe010;"></span><br /> <a href="#"><% page.contact.mail %></a></li>
+            <li class="tel"><span class="fs1" aria-hidden="true" data-icon="&#x77;"></span><br /> <a href="+0800123456">{{ site.contact.tel }}</a></li>
+            <li class="email"><span class="fs1" aria-hidden="true" data-icon="&#xe010;"></span><br /> <a href="#">{{ site.contact.mail }}</a></li>
         </ul>
         {% include contact_form.html %}
     </div><!--//container-->
@@ -27,9 +27,9 @@ promo: contact_promo.html
         <div class="map-overlay">
             <h4 class="title">MonkeyPatch</h4>
             <p class="address">                          
-                <span class="region">7 ter chemin du tricou</span><br/>
-                <span class="postal-code">31670</span><br/>
-                <span class="country-name">France</span>
+                <span class="region">{{ site.contact.address }}</span><br/>
+                <span class="postal-code">{{ site.contact.postcode }}</span><br/>
+                <span class="country-name">{{ site.contact.country }}</span>
             </p>
         </div>
     </div><!--//gmap-wrapper-->
