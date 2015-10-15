@@ -8,8 +8,20 @@
 						<h3 class="sub-title">Quick Links</h3>
 						<ul class="list-unstyled">
 
+						{% assign sorted_pages = site.pages %}
+						{% for group in (1..10) %}
+							{% for node in sorted_pages  %}
+					      		{% if group == node.group %}
+									<li><a href="{{node.url}}">{{node.title}}</a></li>
+								{% endif %}
+							{% endfor %}
+						{% endfor %}
+
 							 {% for node in site.pages %}
-							 	<li><a href="{{node.url}}">{{node.title}}</a></li>
+							 	{% if page.permalink %}
+							 	{% else %}
+							 		
+							 	{% endif %}
 							  {% endfor %}
 						</ul>
 					</div><!--//footer-col-inner-->
