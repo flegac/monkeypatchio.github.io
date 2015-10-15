@@ -16,30 +16,7 @@ promo: contact_promo.html
             <li class="tel"><span class="fs1" aria-hidden="true" data-icon="&#x77;"></span><br /> <a href="+0800123456">0800 123 4567</a></li>
             <li class="email"><span class="fs1" aria-hidden="true" data-icon="&#xe010;"></span><br /> <a href="#">hello@yourdevstudio.com</a></li>
         </ul>
-        <form id="contact-form" class="contact-form form" method="post" action="#">                    
-            <div class="row text-center">
-                <div class="contact-form-inner col-md-8 col-sm-12 col-xs-12 col-md-offset-2 col-sm-offset-0 xs-offset-0">
-                    <div class="row">                                                                                       
-                        <div class="col-md-6 col-sm-6 col-xs-12 form-group">
-                            <label class="sr-only" for="cname">Your name</label>
-                            <input type="text" class="form-control" id="cname" name="name" placeholder="Your name" minlength="2" required>
-                        </div>                    
-                        <div class="col-md-6 col-sm-6 col-xs-12 form-group">
-                            <label class="sr-only" for="cemail">Email address</label>
-                            <input type="email" class="form-control" id="cemail" name="email" placeholder="Your email address" required>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                            <label class="sr-only" for="cmessage">Your message</label>
-                            <textarea class="form-control" id="cmessage" name="message" placeholder="Enter your message" rows="12" required></textarea>
-                        </div>
-                         <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                            <button type="submit" class="btn btn-block btn-cta btn-cta-primary">Send Message</button>
-                        </div>                           
-                    </div><!--//row-->
-                </div>
-            </div><!--//row-->
-            <div id="form-messages"></div>
-        </form><!--//contact-form-->
+        {<}% include contact_form.html %}
     </div><!--//container-->
 </section><!--//contact-section-->
 
@@ -58,23 +35,7 @@ promo: contact_promo.html
     </div><!--//gmap-wrapper-->
 </section><!--//map-section-->
     
-    <script type="text/javascript" src="assets/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>     
-    <script type="text/javascript" src="assets/plugins/FitVids/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>     
-    
-    <!-- Form Validation -->
-    <script type="text/javascript" src="assets/plugins/jquery.validate.min.js"></script> 
-    <script type="text/javascript" src="assets/js/form-validation-custom.js"></script> 
-    
-    <!-- Form iOS fix -->
-    <script type="text/javascript" src="assets/plugins/isMobile/isMobile.min.js"></script>
-    <script type="text/javascript" src="assets/js/form-mobile-fix.js"></script>
-    
-    <!-- Google Map -->
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> 
-    <script type="text/javascript" src="assets/plugins/gmaps/gmaps.js"></script> 
-    <script type="text/javascript" src="assets/js/map.js"></script>
-             
-</body>
-</html> 
-
+<!-- Google Map -->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> 
+<script type="text/javascript" src="{{ site.baseurl }}/public/plugins/gmaps/gmaps.js"></script> 
+<script type="text/javascript" src="{{ site.baseurl }}/public/js/map.js"></script>
