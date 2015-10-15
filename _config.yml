@@ -3,7 +3,7 @@ markdown:		redcarpet
 
 #Sass
 sass:
-	sass_dir:		_sass
+	sass_dir:	_sass
 	style:		:compressed
 
 highlighter: 	pygments
@@ -16,8 +16,8 @@ url:			http://www.monkeypatch.io
 paginate:		1
 baseurl:          
 author:
-	name:			Emmanuel Vinas
-	url:			https://twitter.com/EmmanuelVinas
+	name:		Emmanuel Vinas
+	url:		https://twitter.com/EmmanuelVinas
 	email:		emmanuel@monkeypatch.io
   
 # Custom vars
@@ -29,4 +29,3 @@ github:
 contact:
 	tel:		06-72-73-21-38
 	mail:		emmanuel@monkeypatch.io
-	
