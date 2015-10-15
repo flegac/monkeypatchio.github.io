@@ -3,15 +3,15 @@ jQuery(document).ready(function(){
 
     map = new GMaps({
         div: '#map',
-        lat: 51.451573,
-        lng: -2.595008,
+        lat: 43.5378893,
+        lng: 1.5329330,
     });
     map.addMarker({
-        lat: 51.451573,
-        lng: -2.595008,
+        lat: 43.5378893,
+        lng: 1.5329330,
         title: 'Address',      
         infoWindow: {
-            content: '<h5 class="title">DevStudio</h5><p><span class="region">Address line goes here</span><br><span class="postal-code">Postcode</span><br><span class="country-name">Country</span></p>'
+            content: '<h5 class="title">MonkeyPatch</h5><p><span class="region">7 ter chemin du Tricou</span><br><span class="postal-code">31670</span><br><span class="country-name">France</span></p>'
         }
         
     });
