@@ -36,6 +36,7 @@
 		</div><!--//container-->
 	</header><!--//header-->   
 
-	{% include {{page.promo}} %}
-	
+	{% if page.promo %}
+		{% include {{page.promo}} %}
+	{% endif %}
 </div><!--//header-wrapper-->
