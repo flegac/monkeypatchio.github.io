@@ -43,7 +43,7 @@ $(document).ready(function() {
         ns: { namespaces: ['ns.common', 'ns.special'], defaultNs: 'ns.special'},
         useLocalStorage: false,
         debug: false,
-        fallbackLng: false
+        fallbackLng: 'en'
     }, function(t) {
         $('body').i18n();
     });
