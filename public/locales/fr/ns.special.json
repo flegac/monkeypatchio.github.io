@@ -1,6 +1,6 @@
 {
-    "app": {
-      "locale.code": "en",
-      "home.who-we-are": "Qui nous sommes"
+	"locale-code": "fr",
+    "home": {
+      "who-we-are": "Qui nous sommes"
     }
 }
