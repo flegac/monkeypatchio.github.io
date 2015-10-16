@@ -42,7 +42,8 @@ $(document).ready(function() {
         resGetPath: 'public/locales/__lng__/__ns__.json'
         ns: { namespaces: ['ns.common', 'ns.special'], defaultNs: 'ns.special'},
         useLocalStorage: false,
-        debug: false
+        debug: false,
+        fallbackLng: false
     }, function(t) {
         $('body').i18n();
     });
