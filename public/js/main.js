@@ -36,6 +36,13 @@ $(document).ready(function() {
              $('#header').removeClass('header-shrink');             
          }
     }); 
-    
 
+    $.i18n.init({
+        lng: 'en',
+        ns: { namespaces: ['ns.common', 'ns.special'], defaultNs: 'ns.special'},
+        useLocalStorage: false,
+        debug: true
+    }, function(t) {
+        $('body').i18n();
+    });
 });
