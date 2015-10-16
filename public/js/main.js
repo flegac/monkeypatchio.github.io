@@ -39,7 +39,7 @@ $(document).ready(function() {
 
     $.i18n.init({
         lng: 'en',
-        resGetPath: 'public/locales/__lng__/__ns__.json'
+        resGetPath: 'public/locales/__lng__/__ns__.json',
         ns: { namespaces: ['ns.common', 'ns.special'], defaultNs: 'ns.special'},
         useLocalStorage: false,
         debug: false,
