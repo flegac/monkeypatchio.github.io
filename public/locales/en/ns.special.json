@@ -1,6 +1,13 @@
 {
 	"locale-code": "en",
     "home": {
-      "who-we-are": "Who we are"
+      "who-we-are": "Who we are",
+      "home.intro": "We are a team of It experts. We are specialised in cloud, mobile and database.",
+      "home.skilled": "Skilled team",
+      "home.skilled-desc": "Tell your potential client why they should choose your service and how you are different from your competitors.",
+      "home.agile":"Agile approach",
+      "home.agile-desc":"Tell your potential client why they should choose your service and how you are different from your competitors.",
+      
+
     }
 }
