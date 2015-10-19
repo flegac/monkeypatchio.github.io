@@ -1,2485 +1,2762 @@
 //colors
-$color_trout_approx: #455061
-$color_storm_dust_approx: #666666
-$color_viking_approx: #5cbbdb
-$color_shakespeare_approx: #47b3d7
-$white: #fff
-$color_tulip_tree_approx: #eea740
-$color_fire_bush_approx: #ec9c29
-$color_pale_sky_approx: #65758e
-$color_comet_approx: #505c70
-$color_gallery_approx: #eeeeee
-$color_shady_lady_approx: #a6a6a6
-$color_bon_jour_approx: #e1e1e1
-$color_jelly_bean_approx: #217997
-$color_lynch_approx: #72829b
-$color_chicago_approx: #595959
-$white_30: rgba(255, 255, 255, 0.3)
-$white_80: rgba(255, 255, 255, 0.8)
-$color_tuna_90_approx: rgba(48, 56, 67, 0.9)
-$white_60: rgba(255, 255, 255, 0.6)
-$color_scooter_approx: #32aad2
-$color_curious_blue_approx: #2a9bc1
-$black_50: rgba(0, 0, 0, 0.5)
-$color_alabaster_approx: #f8f9fa
-$color_tuna_approx: #303843
-$white_50: rgba(255, 255, 255, 0.5)
-$color_bali_hai_approx: #909cb0
-$color_regent_gray_approx: #818fa5
-$color_mischka_approx: #cbd1da
-$color_mountain_mist_approx: #999999
-$color_seagull_approx: #86cde5
-$color_wild_sand_approx: #f5f5f5
-$color_bright_gray_approx: #3b4452
-$color_pumice_approx: #c6c6c6
-$color_charade_approx: #252b35
-$color_cadet_blue_approx: #a5afbf
-$color_mine_shaft_approx: #333
-$color_heather_approx: #bcc4d0
-$color_black_squeeze_approx: #eff8fb
-$color_flame_pea_approx: #e65348
-$color_eastern_blue_approx: #268aac
-$color_cornflower_approx: #9bd5e9
-$color_bunker_90_approx: rgba(16, 19, 23, 0.9)
-$white_90: rgba(255, 255, 255, 0.9)
-$white_20: rgba(255, 255, 255, 0.2)
-$color_shuttle_gray_approx: #5a697f
-$black_40: rgba(0, 0, 0, 0.4)
-$color_pastel_green_approx: #71e08b
-$color_java_approx: #2ec0c3
-$color_mulberry_approx: #ba4a7c
-$color_chenin_approx: #e0d971
-$color_japonica_approx: #e07971
-$color_puerto_rico_approx: #47c9af
-$color_vista_blue_approx: #9ad2a8
-$color_harvest_gold_approx: #e0b770
+$color_trout_approx: #455061;
+$color_storm_dust_approx: #666666;
+$gray: gray;
+$color_viking_approx: #5cbbdb;
+$color_shakespeare_approx: #47b3d7;
+$white: #fff;
+$color_tulip_tree_approx: #eea740;
+$color_fire_bush_approx: #ec9c29;
+$color_pale_sky_approx: #65758e;
+$color_comet_approx: #505c70;
+$color_gallery_approx: #eeeeee;
+$color_shady_lady_approx: #a6a6a6;
+$color_bon_jour_approx: #e1e1e1;
+$color_jelly_bean_approx: #217997;
+$color_lynch_approx: #72829b;
+$color_chicago_approx: #595959;
+$white_30: rgba(255, 255, 255, 0.3);
+$white_80: rgba(255, 255, 255, 0.8);
+$color_tuna_90_approx: rgba(48, 56, 67, 0.9);
+$white_60: rgba(255, 255, 255, 0.6);
+$color_scooter_approx: #32aad2;
+$color_curious_blue_approx: #2a9bc1;
+$black_50: rgba(0, 0, 0, 0.5);
+$color_alabaster_approx: #f8f9fa;
+$color_tuna_approx: #303843;
+$white_50: rgba(255, 255, 255, 0.5);
+$color_bali_hai_approx: #909cb0;
+$color_regent_gray_approx: #818fa5;
+$color_mischka_approx: #cbd1da;
+$color_mountain_mist_approx: #999999;
+$color_seagull_approx: #86cde5;
+$color_wild_sand_approx: #f5f5f5;
+$color_bright_gray_approx: #3b4452;
+$color_pumice_approx: #c6c6c6;
+$color_charade_approx: #252b35;
+$color_cadet_blue_approx: #a5afbf;
+$color_mine_shaft_approx: #333;
+$color_heather_approx: #bcc4d0;
+$color_black_squeeze_approx: #eff8fb;
+$color_flame_pea_approx: #e65348;
+$color_eastern_blue_approx: #268aac;
+$color_cornflower_approx: #9bd5e9;
+$color_bunker_90_approx: rgba(16, 19, 23, 0.9);
+$white_90: rgba(255, 255, 255, 0.9);
+$white_20: rgba(255, 255, 255, 0.2);
+$color_shuttle_gray_approx: #5a697f;
+$black_40: rgba(0, 0, 0, 0.4);
+$color_pastel_green_approx: #71e08b;
+$color_java_approx: #2ec0c3;
+$color_mulberry_approx: #ba4a7c;
+$color_chenin_approx: #e0d971;
+$color_japonica_approx: #e07971;
+$color_puerto_rico_approx: #47c9af;
+$color_vista_blue_approx: #9ad2a8;
+$color_harvest_gold_approx: #e0b770;
 
 //fonts
-$font_0: Merriweather Sans
-$font_1: arial
-$font_2: sans-serif
-$font_3: Russo One
-$font_4: FontAwesome
-$font_5: Open Sans
-$font_6: Helvetica Neue
-$font_7: Helvetica
-$font_8: Arial
+$font_0: Merriweather Sans;
+$font_1: arial;
+$font_2: sans-serif;
+$font_3: Russo One;
+$font_4: FontAwesome;
+$font_5: Open Sans;
+$font_6: Helvetica Neue;
+$font_7: Helvetica;
+$font_8: Arial;
 
 //urls
-$url_0: url(../images/background/promo-background-1.jpg)
-$url_1: url(../images/background/promo-background-2.jpg)
-$url_2: url(../images/background/promo-background-3.jpg)
-$url_3: url(../images/background/heading-background-1.jpg)
-$url_4: url(../images/background/case-study-background-1.jpg)
-$url_5: url(../images/background/heading-background-2.jpg)
-$url_6: url(../images/background/heading-background-3.jpg)
-$url_7: url(../images/background/heading-background-4.jpg)
-$url_8: url(../images/work/work-example-1.1.jpg)
-$url_9: url(../images/work/work-example-2.1.jpg)
-$url_10: url(../images/work/work-example-3.1.jpg)
-$url_11: url(../images/background/cta-background.jpg)
+$url_0: url(../images/background/promo-background-1.jpg);
+$url_1: url(../images/background/promo-background-2.jpg);
+$url_2: url(../images/background/promo-background-3.jpg);
+$url_3: url(../images/background/heading-background-1.jpg);
+$url_4: url(../images/background/case-study-background-1.jpg);
+$url_5: url(../images/background/heading-background-2.jpg);
+$url_6: url(../images/background/heading-background-3.jpg);
+$url_7: url(../images/background/heading-background-4.jpg);
+$url_8: url(../images/work/work-example-1.1.jpg);
+$url_9: url(../images/work/work-example-2.1.jpg);
+$url_10: url(../images/work/work-example-3.1.jpg);
+$url_11: url(../images/background/cta-background.jpg);
 
 //@extend-elements
 //original selectors
-//a.btn-cta-primary, .btn-cta-primary
-.extend_1 
-	background: $color_tulip_tree_approx
-	border: none
-	color: $white
+//.btn, a.btn
+%extend_1 {
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	font-weight: bold;
+}
 
+//original selectors
+//a.btn-cta-primary, .btn-cta-primary
+%extend_2 {
+	background: $color_tulip_tree_approx;
+	border: none;
+	color: $white;
+}
 
 //original selectors
 //a.btn-cta-primary:hover, .btn-cta-primary:hover
-.extend_2 
-	background: $color_fire_bush_approx
-	border: none
-	color: $white
-
+%extend_3 {
+	background: $color_fire_bush_approx;
+	border: none;
+	color: $white;
+}
 
 //original selectors
 //a.btn-cta-secondary, .btn-cta-secondary
-.extend_3 
-	background: $color_pale_sky_approx
-	border: none
-	color: $white
-
+%extend_4 {
+	background: $color_pale_sky_approx;
+	border: none;
+	color: $white;
+}
 
 //original selectors
 //a.btn-cta-secondary:hover, .btn-cta-secondary:hover
-.extend_4 
-	background: $color_comet_approx
-	border: none
-	color: $white
-
+%extend_5 {
+	background: $color_comet_approx;
+	border: none;
+	color: $white;
+}
 
 //original selectors
 //.pagination >li:first-child >a, .pagination >li:first-child >span, .pagination >li:last-child >a, .pagination >li:last-child >span
-.extend_5 
-	//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
-	border-radius: 4px
-	//If you use compass, instead of the line below you could use + background-clip($clip)
-	background-clip: padding-box
-	background: none
-
-
-
-body 
-	font-family: $font_0, $font_1, $font_2
-	color: $color_storm_dust_approx
-	font-size: 16px
-	&.no-header-wrapper 
-		padding-top: 80px
-
-
-p 
-	margin-bottom: 16px
-	line-height: 1.5
-
-a 
-	color: $color_viking_approx
-	&:hover 
-		text-decoration: underline
-		color: $color_shakespeare_approx
-
-	&:focus 
-		text-decoration: none
-
-	&.btn 
-		font-weight: bold
-		.fa 
-			color: $white
-			margin-right: 5px
-
-		&:focus 
-			color: $white
-
-
-	&.btn-cta 
-		padding: 8px 30px
-
-	&.btn-cta-primary 
-		@extend %extend_1
-		&:hover 
-			@extend %extend_2
-
-
-	&.btn-cta-secondary 
-		@extend %extend_3
-		&:hover 
-			@extend %extend_4
-
-
-
-.btn 
-	font-weight: bold
-	.fa 
-		color: $white
-		margin-right: 5px
-
-	&:focus 
-		color: $white
-
-
-.btn-cta 
-	padding: 8px 30px
-
-.btn-cta-primary 
-	@extend %extend_1
-	&:hover 
-		@extend %extend_2
-
-
-.btn-cta-secondary 
-	@extend %extend_3
-	&:hover 
-		@extend %extend_4
-
-
-.highlight 
-	color: $color_viking_approx
-
-.form-control 
-	//If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-	box-shadow: none
-	height: 40px
-	border-color: $color_gallery_approx
-	&:-moz-placeholder 
-		color: $color_shady_lady_approx
-
-	&:-ms-input-placeholder 
-		color: $color_shady_lady_approx
-
-	&:focus 
-		border-color: $color_bon_jour_approx
-		//If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-		box-shadow: none
-
-
-.form-control::-webkit-input-placeholder 
-	color: $color_shady_lady_approx
-
-.form-control::-moz-placeholder 
-	color: $color_shady_lady_approx
-
-.text-highlight 
-	color: $color_jelly_bean_approx
-
-input[type="text"] 
-	appearance: none
-
-input[type="email"] 
-	appearance: none
-
-input[type="password"] 
-	appearance: none
-
-input[type="submit"] 
-	appearance: none
-
-input[type="button"] 
-	appearance: none
-
-textarea 
-	appearance: none
-
-select 
-	appearance: none
-
-#topcontrol 
-	background: $color_pale_sky_approx
-	color: $white
-	text-align: center
-	display: inline-block
-	width: 35px
-	height: 35px
-	border: none
-	//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
-	border-radius: 4px
-	//If you use compass, instead of the line below you could use + background-clip($clip)
-	background-clip: padding-box
-	z-index: 30
-	&:hover 
-		background: $color_lynch_approx
-
-	.fa 
-		position: relative
-		top: 3px
-		font-size: 25px
-
-
-.bg-slider-wrapper 
-	content: ""
-	position: absolute
-	width: 100%
-	top: 0
-	left: 0
-	height: 650px
-	background: $color_chicago_approx
-	.flexslider 
-		margin: 0
-		//If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-		box-shadow: none
-		border: none
-		//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
-		border-radius: 0
-		//If you use compass, instead of the line below you could use + background-clip($clip)
-		background-clip: padding-box
-		.slide 
-			display: block
-			height: 650px
-			&.slide-1 
-				background: $color_pale_sky_approx $url_0 no-repeat 50% top
-				background-size: cover
-
-			&.slide-2 
-				background: $color_pale_sky_approx $url_1 no-repeat 50% top
-				background-size: cover
-
-			&.slide-3 
-				background: $color_pale_sky_approx $url_2 no-repeat 50% top
-				background-size: cover
-
-
-		.flex-control-nav 
-			z-index: 20
-			bottom: 45px
-			position: relative
-			li a 
-				background: $white_30
-				&.flex-active 
-					background: $white_80
-
-
-
-
-
-.header-wrapper-home 
-	min-height: 650px
-
-.header-wrapper-work 
-	background: $color_pale_sky_approx $url_3 no-repeat 50% top
-	background-size: cover
-	min-height: 400px
-
-.header-wrapper-case-study 
-	background: $color_pale_sky_approx $url_4 no-repeat 50% top
-	background-size: cover
-	min-height: 400px
-
-.header-wrapper-about 
-	background: $color_pale_sky_approx $url_5 no-repeat 50% top
-	background-size: cover
-	min-height: 400px
-
-.header-wrapper-blog-home 
-	background: $color_pale_sky_approx $url_6 no-repeat 50% top
-	background-size: cover
-	min-height: 400px
-
-.header-wrapper-contact 
-	background: $color_pale_sky_approx $url_7 no-repeat 50% top
-	background-size: cover
-	min-height: 400px
-
-.header 
-	color: $white
-	width: 100%
-	z-index: 40
-	padding: 15px inherit
-	background: $color_tuna_90_approx
-	&.header-shrink 
-		padding: 0 inherit
-		img 
-			width: 60%
-
-		h1.logo 
-			font-size: 20px
-			line-height: 2.4
-
-		.main-nav .nav .nav-item 
-			font-size: 12px
-
-
-	.main-nav 
-		.navbar-toggle 
-			margin-right: 0
-			margin-top: 0
-			background: none
-			position: absolute
-			right: 10px
-			top: 5px
-			&:focus 
-				outline: none
-
-			.icon-bar 
-				background-color: $white_60
-				height: 3px
-
-			&:hover .icon-bar 
-				background-color: $white
-
-
-		.nav 
-			.nav-item 
-				font-weight: normal
-				text-transform: uppercase
-				font-size: 13px
-				margin-right: 15px
-				&.active 
-					color: $color_viking_approx
-					> a 
-						color: $color_viking_approx
-						background: none
-						font-weight: bold
-
-
-				a 
-					color: $white
-					&:hover 
-						color: $color_viking_approx
-						background: none
-
-					&:focus 
-						outline: none
-						background: none
-
-					&:active 
-						outline: none
-						background: none
-
-
-				&.last 
-					margin-right: 0
-
-
-			&.active 
-				position: relative
-				> a 
-					background: $color_shakespeare_approx
-					color: $white
-					color: $white_80
-					&:before 
-						content: "\f0d8"
-						position: absolute
-						bottom: -8px
-						left: 0
-						text-align: center
-						font-family: $font_4
-						display: block
-						font-size: 12px
-						width: 100%
-
-					&.dropdown-toggle:before 
-						display: none
-
-
-
-			.dropdown-menu 
-				//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
-				border-radius: 4px
-				//If you use compass, instead of the line below you could use + background-clip($clip)
-				background-clip: padding-box
-				margin: 0
-				border: none
-				text-transform: none
-				min-width: 180px
-				background: $color_shakespeare_approx
-				&:before 
-					content: ""
-					display: block
-					width: 0
-					height: 0
-					border-left: 10px solid transparent
-					border-right: 10px solid transparent
-					border-bottom: 10px solid $color_shakespeare_approx
-					position: absolute
-					right: 30px
-					top: -10px
-
-				a 
-					border-bottom: 1px solid $color_scooter_approx
-					padding: 8px 20px
-					color: $white
-					opacity: 1
-					&:hover 
-						background: $color_curious_blue_approx
-						color: $white
-
-
-
-			&.open a 
-				background: none
-
-
-
-	&.navbar-fixed-top .navbar-collapse 
-		padding-left: 15px
-		padding-right: 15px
-
-	h1.logo 
-		font-family: $font_3, $font_1, $font_2
-		margin-top: 0
-		margin-bottom: 0
-		font-weight: 800
-		font-size: 26px
-		float: left
-		line-height: 1.8
-		a 
-			color: $white
-			&:hover 
-				text-decoration: none
-
-			.highlight 
-				color: $color_viking_approx
-
-
-
-
-.promo 
-	color: $white
-	padding-top: 160px
-	.title 
-		font-size: 36px
-		font-family: $font_5, $font_1, $font_2
-		font-weight: 800
-		//If you use compass, instead of the line below you could use + text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-		text-shadow: 0 1px 1px $black_50
-		margin-bottom: 15px
-		margin-top: 0
-		text-transform: uppercase
-
-	.intro 
-		max-width: 700px
-		margin: 0 auto
-		font-size: 20px
-		//If you use compass, instead of the line below you could use + text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-		text-shadow: 0 1px 1px $black_50
-
-
-.home-promo 
-	color: $white
-	padding-top: 160px
-	position: relative
-	z-index: 10
-	.title 
-		font-size: 26px
-		font-family: $font_5, $font_1, $font_2
-		font-weight: 800
-		//If you use compass, instead of the line below you could use + text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-		text-shadow: 0 1px 1px $black_50
-		margin-bottom: 45px
-		text-transform: uppercase
-		span 
-			display: block
-
-		.middle 
-			margin-top: 20px
-			margin-bottom: 20px
-			font-size: 56px
-			color: $color_viking_approx
-
-		.bottom 
-			font-family: $font_0, $font_1, $font_2
-			font-style: italic
-			text-transform: lowercase
-			font-weight: 500
-
-
-	.btn 
-		font-size: 20px
-		font-weight: normal
-
-
-.who 
-	padding: 80px 0
-	.title 
-		font-size: 36px
-		font-family: $font_5, $font_1, $font_2
-		font-weight: 800
-		color: $color_comet_approx
-		margin-top: 0
-		margin-bottom: 30px
-
-	.intro 
-		margin: 0 auto
-		max-width: 700px
-		color: $color_storm_dust_approx
-		font-size: 20px
-		color: $color_pale_sky_approx
-		margin-bottom: 60px
-		font-weight: 300
-
-	.benefits 
-		.item 
-			font-size: 16px
-			margin-bottom: 60px
-			.fs1 
-				font-size: 36px
-				color: $color_pale_sky_approx
-
-
-		.item-inner 
-			padding: 30px
-			padding-top: 45px
-			background: $color_alabaster_approx
-
-		.sub-title 
-			font-weight: bold
-			font-size: 18px
-			margin-bottom: 15px
-			color: $color_comet_approx
-
-		.desc 
-			color: $color_pale_sky_approx
-
-
-
-.latest-work 
-	padding: 80px 0
-	.container-fluid 
-		padding-left: 0
-		padding-right: 0
-
-	.title 
-		font-family: $font_5, $font_1, $font_2
-		font-weight: 800
-		font-size: 36px
-		color: $color_comet_approx
-		margin-top: 0
-		margin-bottom: 60px
-
-	.owl-wrapper 
-		background: $color_tuna_approx
-
-	.item 
-		background: $color_tuna_approx
-		color: $white
-		min-height: 420px
-		text-align: center
-		.figure 
-			overflow: hidden
-			img 
-				opacity: 0.8
-				margin: 0 auto
-
-			&:hover img 
-				opacity: 1
-
-
-		.content 
-			.content-inner 
-				padding: 45px
-				text-align: left
-				color: $white_80
-
-			.project-title 
-				font-family: $font_5, $font_1, $font_2
-				text-align: center
-				font-size: 22px
-				font-weight: bold
-				margin-top: 0
-				margin-bottom: 30px
-				padding-bottom: 10px
-				border-bottom: 2px solid $white_50
-				display: inline-block
-				color: $white
-
-			.meta 
-				margin-bottom: 15px
-				font-weight: 300
-				strong 
-					color: $white
-
-
-			.desc 
-				margin-bottom: 30px
-
-			.link 
-				margin-bottom: 5px
-				a 
-					color: $color_bali_hai_approx
-					&:hover 
-						color: $color_viking_approx
-
-
-				.fa 
-					color: $color_bali_hai_approx
-					margin-right: 5px
-
-
-
-		.figure-container a 
-			display: block
-			min-height: 260px
-			opacity: 0.8
-			&:hover 
-				opacity: 1
-
-
-		&.item-1 .figure-container a 
-			background: $color_pale_sky_approx $url_8 no-repeat 50% 50%
-			background-size: cover
-
-		&.item-2 .figure-container a 
-			display: block
-			background: $color_pale_sky_approx $url_9 no-repeat 50% 50%
-			background-size: cover
-
-		&.item-3 .figure-container a 
-			display: block
-			background: $color_pale_sky_approx $url_10 no-repeat 50% 50%
-			background-size: cover
-
-
-
-.testimonials 
-	padding: 80px 0
-	.title 
-		font-size: 36px
-		font-family: $font_5, $font_1, $font_2
-		font-weight: 800
-		color: $color_comet_approx
-		margin-top: 0
-		margin-bottom: 30px
-
-	.intro 
-		max-width: 700px
-		color: $color_pale_sky_approx
-		font-weight: 300
-		margin: 0 auto
-		margin-bottom: 60px
-		font-size: 20px
-
-	.item 
-		margin-bottom: 60px
-		.item-inner 
-			padding: 30px
-
-		.quote-container 
-			position: relative
-			margin-bottom: 30px
-			.fa 
-				color: $color_mischka_approx
-				position: absolute
-				left: -35px
-				top: 0
-				font-size: 22px
-
-			.quote 
-				padding: 0
-				border-left: 0
-				font-style: italic
-				margin-bottom: 0
-
-
-		.meta 
-			.profile 
-				overflow: hidden
-				float: left
-				img 
-					float: left
-					margin-right: 15px
-
-				.name 
-					font-size: 14px
-					float: left
-					margin-top: 25px
-					max-width: 200px
-					color: $color_pale_sky_approx
-					.source-title 
-						color: $color_mountain_mist_approx
-
-
-
-			.client-logo 
-				float: right
-				max-width: 160px
-
-
-
-
-.logos 
-	padding-bottom: 80px
-	.title 
-		font-size: 28px
-		margin-top: 0
-		margin-bottom: 30px
-		color: $color_comet_approx
-		font-family: $font_5, $font_1, $font_2
-		font-weight: 700
-
-	.intro 
-		color: $color_pale_sky_approx
-		font-size: 20px
-		font-weight: 300
-		margin-bottom: 60px
-
-	.logo-list img 
-		opacity: 0.8
-		&:hover 
-			opacity: 1
-
-
-
-.cta-section 
-	background: $color_pale_sky_approx $url_11 no-repeat left top
-	background-size: cover
-	min-height: 420px
-	color: $white
-	padding-top: 80px
-	.title 
-		font-size: 36px
-		font-weight: 300
-		margin-top: 0
-		margin-bottom: 30px
-		font-family: $font_5, $font_1, $font_2
-		font-weight: 800
-		//If you use compass, instead of the line below you could use + text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-		text-shadow: 0 1px 1px $black_50
-
-	.contact-info 
-		font-size: 24px
-		span 
-			display: block
-			margin-bottom: 15px
-
-		.intro 
-			opacity: 0.8
-			font-weight: 300
-
-		.info 
-			font-family: $font_5, $font_1, $font_2
-			font-weight: 800
-
-		a 
-			color: $color_seagull_approx
-			&:hover 
-				color: $color_viking_approx
-
-
-
-
-.latest-blog 
-	padding: 80px 0
-	background: $color_wild_sand_approx
-	.title 
-		font-size: 36px
-		font-family: $font_5, $font_1, $font_2
-		font-weight: 800
-		color: $color_comet_approx
-		margin-top: 0
-		margin-bottom: 80px
-
-	.item 
-		margin-bottom: 60px
-
-	.item-inner 
-		background-color: $white
-		.figure 
-			background-color: $color_bright_gray_approx
-			overflow: hidden
-			text-align: center
-			img 
-				opacity: 0.8
-				margin: 0 auto
-				display: inline-block
-				&:hover 
-					opacity: 1
-
-
-
-		.sub-title 
-			margin-top: 15px
-			margin-bottom: 30px
-			font-size: 22px
-			a 
-				color: $color_pale_sky_approx
-				&:hover 
-					color: $color_viking_approx
-
-
-
-		.content-wrapper 
-			padding: 30px
-
-
-
-.work-list 
-	padding: 80px 0
-	background: $color_wild_sand_approx
-	.title 
-		font-size: 28px
-		font-family: $font_5, $font_1, $font_2
-		font-weight: 800
-		color: $color_comet_approx
-		margin-top: 0
-		margin-bottom: 30px
-
-	.button-group 
-		margin-bottom: 60px
-		font-size: 13px
-		clear: both
-		.btn 
-			background: $color_mischka_approx
-			color: $white
-			font-weight: 300
-			margin-right: 5px
-			margin-bottom: 15px
-			&.last 
-				margin-right: 0
-
-			&:hover 
-				background: $color_pale_sky_approx
-
-			&.is-checked 
-				background: $color_pale_sky_approx
-
-
-
-	.item 
-		margin-bottom: 60px
-		.item-inner 
-			background: $white
-
-		.figure 
-			position: relative
-			overflow: hidden
-			img 
-
-			.info-mask 
-				text-decoration: none
-				visibility: hidden
-				opacity: 0
-				padding: 30px
-				width: 100%
-				height: 100%
-				position: absolute
-				top: 0
-				left: 0
-				text-align: center
-				background: $color_tuna_90_approx
-				span 
-					display: block
-					margin-bottom: 15px
-					color: $white
-					&.btn 
-						display: inline-block
-						&:hover 
-							background: $color_fire_bush_approx
-
-
-
-
-			&:hover 
-				.info-mask 
-					visibility: visible
-					opacity: 1
-
-				img 
-
-
-
-		.content 
-			padding: 30px
-			.sub-title 
-				font-size: 16px
-				margin: 0
-				margin-bottom: 15px
-
-			.meta 
-				font-size: 14px
-				color: $color_mountain_mist_approx
-
-
-		.sub-title a 
-			color: $color_pale_sky_approx
-			&:hover 
-				color: $color_viking_approx
-
-
-
-
-.breadcrumbs 
-	margin-top: 15px
-	font-size: 13px
-	color: $color_pumice_approx
-	a 
-		color: $color_pumice_approx
-		&:hover 
-			color: $color_viking_approx
-
-
-	.fa 
-		margin-left: 5px
-		display: inline-block
-
-	.breadcrumbs-list li 
-		padding-right: 0
-
-
-.case-study-article 
-	padding: 80px 0
-	.project-title 
-		font-family: $font_5, $font_1, $font_2
-		font-weight: 800
-		margin-bottom: 30px
-		color: $color_comet_approx
-
-	.project-type 
-		color: $color_pale_sky_approx
-		margin-bottom: 60px
-		margin-top: 0
-		font-size: 22px
-		font-weight: 300
-		.dot 
-			font-size: 48px
-			position: relative
-			top: 8px
-
-
-	.content-wrapper 
-		.meta 
-			margin-bottom: 30px
-
-		.content-section 
-			margin-bottom: 30px
-
-		.section-title 
-			color: $color_pale_sky_approx
-			font-size: 20px
-			font-weight: bold
-
-
-	.media-wrapper 
-		img 
-			background: $color_charade_approx
-			opacity: 0.9
-			border: 1px solid $color_gallery_approx
-			&:hover 
-				opacity: 1
-
-
-		.featured 
-			margin-bottom: 30px
-
-		.thumbs .item 
-			margin-bottom: 15px
-
-
-	.testimonial-wrapper 
-		margin-top: 90px
-		padding: 60px 30px
-		.testimonial-inner 
-			max-width: 700px
-			margin: 0 auto
-
-		.quote-container 
-			position: relative
-			margin-bottom: 30px
-			color: $color_pale_sky_approx
-			background: $color_alabaster_approx
-			padding: 30px
-			.fa 
-				color: $color_cadet_blue_approx
-				font-size: 22px
-
-			.quote 
-				padding: 0
-				border-left: 0
-				padding-left: 30px
-				font-style: italic
-				margin-bottom: 30px
-
-			&:after 
-				content: ""
-				display: block
-				width: 0
-				height: 0
-				border-left: 15px solid transparent
-				border-right: 15px solid transparent
-				border-top: 15px solid $color_alabaster_approx
-				position: absolute
-				bottom: -15px
-				margin-left: -15px
-				left: 50%
-
-
-		.meta 
-			padding: 30px
-			.profile 
-				overflow: hidden
-				.name 
-					margin-top: 25px
-					.source-title 
-						color: $color_mountain_mist_approx
-
-
-
-
-
-
-.flexslider 
-	//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
-	border-radius: 0
-	//If you use compass, instead of the line below you could use + background-clip($clip)
-	background-clip: padding-box
-	padding: 0
-	border: 1px solid $color_gallery_approx
-	//If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-	box-shadow: none
-	overflow: hidden
-	&#carousel 
-		img 
-			opacity: 0.5
-			cursor: pointer
-			&:hover 
-				opacity: 1
-
-
-		.slides > li 
-			margin-right: 5px
-			&.flex-active-slide img 
-				opacity: 1
-				cursor: default
-
-
-
-	.flex-direction-nav a 
-		color: $color_wild_sand_approx
-		opacity: 0.7
-		//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
-		border-radius: 50%
-		//If you use compass, instead of the line below you could use + background-clip($clip)
-		background-clip: padding-box
-		background: $color_mine_shaft_approx
-		text-align: center
-		width: 32px
-		height: 32px
-		&:before 
-			font-size: 18px
-			//If you use compass, instead of the line below you could use + text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-			text-shadow: none
-			margin-bottom: 30px
-			padding-top: 8px
-
-		&:hover 
-			opacity: 1
-
-
-
-.services 
-	padding: 80px 0
-	.title 
-		font-size: 28px
-		font-family: $font_5, $font_1, $font_2
-		font-weight: 800
-		color: $color_comet_approx
-		margin-top: 0
-		margin-bottom: 30px
-
-	.intro 
-		font-size: 20px
-		font-weight: 300
-		color: $color_pale_sky_approx
-		max-width: 800px
-		margin: 0 auto
-		margin-bottom: 60px
-
-	.item 
-		margin-bottom: 30px
-
-	.item-inner 
-		background: $color_alabaster_approx
-		.header-box 
-			padding: 15px 30px
-			background: $color_bali_hai_approx
-			color: $white
-			.fs1 
-				color: $white
-				font-size: 28px
-				padding-top: 10px
-				display: inline-block
-				//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
-				border-radius: 50%
-				//If you use compass, instead of the line below you could use + background-clip($clip)
-				background-clip: padding-box
-				width: 56px
-				height: 56px
-				border: 1px solid $white
-
-
-		.sub-title 
-			font-size: 18px
-			font-weight: bold
-			margin-top: 0
-			margin-bottom: 20px
-			color: $color_comet_approx
-
-		.desc 
-			padding: 30px 15px
-			color: $color_pale_sky_approx
-
-
-	.btn-cta 
-		font-size: 16px
-		margin-top: 30px
-
-
-.team 
-	padding: 80px 0
-	.title 
-		font-size: 36px
-		font-family: $font_5, $font_1, $font_2
-		font-weight: 800
-		color: $color_comet_approx
-		margin-top: 0
-		margin-bottom: 15px
-
-	.intro 
-		max-width: 800px
-		margin: 0 auto
-		margin-bottom: 60px
-		font-weight: 300
-		color: $color_pale_sky_approx
-		font-size: 20px
-
-	.item 
-		margin-bottom: 30px
-		.item-inner 
-			background: $white
-			background: $color_wild_sand_approx
-			background: $color_alabaster_approx
-			padding: 30px
-			padding-bottom: 60px
-			overflow: hidden
-			position: relative
-
-		.figure 
-			margin-bottom: 30px
-
-		.info 
-			margin-bottom: 30px
-			.name 
-				margin-top: 0
-				color: $color_comet_approx
-				margin-bottom: 10px
-				font-size: 22px
-				font-weight: bold
-
-			.role 
-				font-size: 16px
-				margin-top: 0
-				margin-bottom: 15px
-				font-style: italic
-				color: $color_pale_sky_approx
-
-
-		.social 
-			padding-top: 15px
-			width: 100%
-			margin-left: -30px
-			position: absolute
-			bottom: 30px
-			.social-list 
-				margin: 0 auto
-				margin-bottom: 0
-				width: 100%
-				li 
-					a 
-						display: inline-block
-						width: 36px
-						height: 36px
-						background: $color_heather_approx
-						//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
-						border-radius: 50%
-						//If you use compass, instead of the line below you could use + background-clip($clip)
-						background-clip: padding-box
-						padding-top: 8px
-						&:hover 
-							background: $color_pale_sky_approx
-
-
-					.fa 
-						font-size: 18px
-						color: $white
-
-
-
-
-
-
-.join-us 
-	padding: 80px 0
-	background: $color_wild_sand_approx
-	.title 
-		font-size: 36px
-		font-family: $font_5, $font_1, $font_2
-		font-weight: 800
-		color: $color_comet_approx
-		margin-top: 0
-		margin-bottom: 30px
-
-	.intro 
-		max-width: 700px
-		margin: 0 auto
-		margin-bottom: 60px
-		color: $color_pale_sky_approx
-		font-weight: 300
-		font-size: 20px
-
-	.info 
-		margin-bottom: 30px
-
-	.partner 
-		margin-bottom: 30px
-		.sub-title 
-			margin-top: 0
-			margin-bottom: 15px
-			color: $color_comet_approx
-
-
-
-.photos 
-	padding: 80px 0
-	.title 
-		font-size: 36px
-		font-family: $font_5, $font_1, $font_2
-		font-weight: 800
-		color: $color_comet_approx
-		margin-top: 0
-		margin-bottom: 15px
-
-	.intro 
-		font-size: 18px
-		color: $color_pale_sky_approx
-		font-size: 20px
-		margin-bottom: 60px
-		font-weight: 300
-
-	#instafeed 
-		margin: 0 auto
-		display: inline-block
-		.item 
-			text-align: center
-			padding: 5px
-			background: $white
-			img 
-				display: block
-
-			&:hover img 
-				opacity: 0.9
-
-
-
-
-.blog-list 
-	padding: 80px 0
-	.container 
-		max-width: 860px
-
-	.item 
-		margin-bottom: 60px
-		.post-title 
-			margin-bottom: 15px
-			a 
-				color: $color_pale_sky_approx
-				&:hover 
-					color: $color_comet_approx
-
-
-
-		.figure 
-			margin-bottom: 15px
-			overflow: hidden
-			background: $color_comet_approx
-			text-align: center
-			img 
-				opacity: 1
-				border: 1px solid $color_gallery_approx
-				margin: 0 auto
-
-			&:hover img 
-				opacity: 0.8
-
-
-		.meta .meta-list 
-			font-size: 14px
-			li 
-				color: $color_mountain_mist_approx
-				a 
-					color: $color_mountain_mist_approx
-					&:hover 
-						color: $color_viking_approx
-
-
-
-			.post-time 
-				font-size: 16px
-				display: inline-block
-				text-align: center
-				padding: 5px 15px
-				background: $color_regent_gray_approx
-				color: $white
-				font-family: $font_6, $font_7, $font_8, $font_2
-				margin-bottom: 15px
-				span 
-					display: block
-					&.date 
-						font-family: $font_5, $font_1, $font_2
-						font-weight: 800
-						font-size: 26px
-
-					&.month 
-						font-weight: 300
-						text-transform: uppercase
-						padding-top: 0
-
-
-
-			.post-author 
-				margin-bottom: 5px
-
-
-
-
-.pagination 
-	margin-top: 90px
-	> 
-		&.disabled 
-			> span 
-				color: $color_pumice_approx
-				&:hover 
-					color: $color_pumice_approx
-
-				&:focus 
-					color: $color_pumice_approx
-
-
-			> a 
-				color: $color_pumice_approx
-				&:hover 
-					color: $color_pumice_approx
-
-				&:focus 
-					color: $color_pumice_approx
-
-
-
-		&.active 
-			> a 
-				background-color: $color_bali_hai_approx
-				border: none
-				&:hover 
-					background-color: $color_bali_hai_approx
-					border: none
-
-				&:focus 
-					background-color: $color_bali_hai_approx
-					border: none
-
-
-			> span 
-				background-color: $color_bali_hai_approx
-				border: none
-				&:hover 
-					background-color: $color_bali_hai_approx
-					border: none
-
-				&:focus 
-					background-color: $color_bali_hai_approx
-					border: none
-
-
-
-
-	> li 
-		> a 
-			&:hover 
-				background-color: $color_black_squeeze_approx
-				border: none
-
-			&:focus 
-				background-color: $color_black_squeeze_approx
-				border: none
-
-
-		> span 
-			&:hover 
-				background-color: $color_black_squeeze_approx
-				border: none
-
-			&:focus 
-				background-color: $color_black_squeeze_approx
-				border: none
-
-
-		&:first-child 
-			> a 
-				@extend %extend_5
-
-			> span 
-				@extend %extend_5
-
-
-		&:last-child 
-			> a 
-				@extend %extend_5
-
-			> span 
-				@extend %extend_5
-
-
-
-	li a 
-		//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
-		border-radius: 4px
-		//If you use compass, instead of the line below you could use + background-clip($clip)
-		background-clip: padding-box
-		border: none
-		margin-right: 5px
-		color: $color_pale_sky_approx
-		&:hover 
-			color: $color_comet_approx
-
-
-
-.blog-post-wrapper 
-	padding-top: 60px
-	.title 
-		margin-bottom: 30px
-		margin-top: 0
-		font-size: 28px
-		color: $color_comet_approx
-
-	.meta 
-		font-size: 13px
-		color: $color_mountain_mist_approx
-		margin-bottom: 15px
-		li 
-			margin-right: 0
-
-		.post-comments-link 
-			a 
-				color: $color_mountain_mist_approx
-				&:hover 
-					color: $color_viking_approx
-
-
-			.fa 
-				margin-right: 5px
-
-
-		.post-author a 
-			color: $color_mountain_mist_approx
-			&:hover 
-				color: $color_viking_approx
-
-
-
-	.share-container 
-		margin-bottom: 30px
-		overflow: hidden
-		li 
-			margin-bottom: 15px
-
-
-	.comment-area 
-		background: $color_wild_sand_approx
-		padding: 30px
-		.title 
-			font-size: 22px
-			font-family: $font_5, $font_1, $font_2
-			font-weight: 700
-			margin-bottom: 30px
-
-		.comment-container 
-			margin-bottom: 60px
-			.comment-item 
-				margin-bottom: 30px
-				.comment-item-box 
-					position: relative
-					background: $white
-					padding: 30px
-					padding-left: 115px
-					margin-bottom: 15px
-
-				.comment-author 
-					position: absolute
-					left: 30px
-					top: 30px
-					img 
-						width: 60px
-						height: 60px
-
-
-				.comment-body 
-					.name 
-						color: $color_pale_sky_approx
-						font-style: normal
-						a 
-							color: $color_pale_sky_approx
-							&:hover 
-								color: $color_viking_approx
-
-
-
-					.time 
-						color: $color_mountain_mist_approx
-						font-size: 13px
-						margin-bottom: 15px
-
-					.comment-reply-link 
-						padding: 5px 10px
-						font-size: 13px
-						background: $color_cadet_blue_approx
-						&:hover 
-							background: $color_pale_sky_approx
-
-
-
-				.children 
-					padding-left: 30px
-
-
-
-		.comment-form .error 
-			color: $color_flame_pea_approx
-			font-family: $font_1, $font_2
-			display: block
-			font-size: 14px
-			text-align: left
-			padding-top: 5px
-			font-weight: 300
-
-
-
-.blog-sidebar 
-	.widget 
-		margin-bottom: 60px
-		a 
-			color: $color_pale_sky_approx
-			&:hover 
-				color: $color_viking_approx
-
-
-		.title 
-			font-size: 20px
-			margin-bottom: 30px
-			margin-top: 0
-			font-weight: normal
-			color: $color_comet_approx
-
-		&.recent-posts 
-			li 
-				position: relative
-				padding-left: 60px
-				margin-bottom: 15px
-				border-bottom: 1px solid $color_gallery_approx
-				padding-bottom: 15px
-				min-height: 80px
-
-			.thumb 
-				position: absolute
-				left: 5px
-				top: 5px
-				width: 45px
-				height: 45px
-
-			.post-info .date 
-				color: $color_mountain_mist_approx
-				font-size: 12px
-				font-family: $font_6, $font_7, $font_8, $font_2
-
-
-		ul li 
-			margin-bottom: 10px
-			font-size: 15px
-			.count 
-				color: $color_mountain_mist_approx
-				font-family: $font_6, $font_7, $font_8, $font_2
-
-
-		&.instagram .instafeed 
-			.item 
-				display: inline-block
-				margin-right: 5px
-
-			img 
-				max-width: 75px
-				padding: 2px
-				border: 1px solid $color_gallery_approx
-				&:hover 
-					opacity: 0.8
-					background: $color_pale_sky_approx
-
-
-
-
-	.search-blog-form 
-		.form-group 
-			display: inline-block
-			margin-bottom: 0
-			vertical-align: middle
-			max-width: 168px
-
-		.form-control 
-			height: 38px
-
-		.btn 
-			padding: 8px 12px
-			.fa 
-				margin-right: 0
-
-
-
-
-.post 
-	margin-bottom: 60px
-	.content 
-		.post-title 
-			font-size: 22px
-			a 
-				color: $color_storm_dust_approx
-				&:hover 
-					color: $color_eastern_blue_approx
-
-
-
-		.post-entry .read-more .fa 
-			margin-left: 5px
-			position: relative
-			top: 1px
-
-
-
-.blog-entry 
-	.title 
-		margin-bottom: 15px
-		font-family: $font_5, $font_1, $font_2
-		font-weight: 700
-
-	.meta 
-		margin-bottom: 15px
-
-	.post-thumb 
-		margin-bottom: 30px
-
-	.custom-list-style 
-		margin-bottom: 30px
-		li 
-			list-style: none
-			margin-bottom: 5px
-			.fa 
-				margin-right: 5px
-				color: $color_viking_approx
-
-
-
-	p 
-		margin-bottom: 30px
-		line-height: 1.5
-
-	.post-nav 
-		margin-bottom: 60px
-		.nav-next 
-			float: right
-			.fa 
-				margin-left: 5px
-
-
-		.nav-previous .fa 
-			margin-right: 5px
-
-
-
-.custom-quote 
-	border-color: $color_cornflower_approx
-	font-weight: normal
-	font-style: italic
-	p 
-		line-height: 1.6
-
-	.fa 
-		color: $color_viking_approx
-		margin-right: 10px
-
-	.source 
-		font-style: normal
-		.name 
-			color: $color_storm_dust_approx
-
-		.title 
-			font-size: 13px
-			color: $color_mountain_mist_approx
-
-
-
-.contact-section 
-	padding: 80px 0
-	color: $color_mountain_mist_approx
-	background: $color_wild_sand_approx
-	.title 
-		font-size: 36px
-		font-family: $font_5, $font_1, $font_2
-		font-weight: 800
-		color: $color_comet_approx
-		margin-top: 0
-		margin-bottom: 30px
-
-	.intro 
-		max-width: 700px
-		margin: 0 auto
-		margin-bottom: 60px
-		color: $color_pale_sky_approx
-		font-weight: 300
-		font-size: 20px
-
-	.contact-info 
-		margin-bottom: 60px
-		li 
-			margin-right: 60px
-			margin-bottom: 30px
-			font-family: $font_5, $font_1, $font_2
-			a 
-				color: $color_pale_sky_approx
-
-			&:last-child 
-				margin-right: 0
-
-
-		.fs1 
-			//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
-			border-radius: 50%
-			//If you use compass, instead of the line below you could use + background-clip($clip)
-			background-clip: padding-box
-			color: $white
-			width: 48px
-			height: 48px
-			border: 1px solid $color_pale_sky_approx
-			color: $color_pale_sky_approx
-			font-size: 22px
-			padding-top: 5px
-			display: inline-block
-			margin-bottom: 15px
-			text-align: center
-
-		.tel .fs1 
-			padding-top: 8px
-
-
-	.contact-form .error 
-		color: $color_flame_pea_approx
-		font-family: $font_1, $font_2
-		display: block
-		font-size: 14px
-		text-align: left
-		padding-top: 5px
-		font-weight: 300
-
-
-.map-section 
-	.title 
-		font-size: 36px
-		font-weight: 300
-		margin-top: 0
-		margin-bottom: 30px
-
-	.gmap-wrapper 
-		position: relative
-		.map-overlay 
-			position: absolute
-			background: $white
-			border: 1px solid $color_gallery_approx
-			padding: 30px
-			top: 30px
-			right: 30px
-			.title 
-				font-family: $font_5, $font_1, $font_2
-				font-weight: 800
-				color: $color_pale_sky_approx
-				font-size: 20px
-				margin-top: 0
-				margin-bottom: 15px
-
-			.address 
-				margin-bottom: 0
-				color: $color_pale_sky_approx
-
-
-
-	.gmap 
-		height: 400px
-		text-align: left
-		font-weight: normal
-		//If you use compass, instead of the line below you could use + box-sizing($bs)
-		box-sizing: content-box
-		* 
-			//If you use compass, instead of the line below you could use + box-sizing($bs)
-			box-sizing: content-box
-			&:before 
-				//If you use compass, instead of the line below you could use + box-sizing($bs)
-				box-sizing: content-box
-
-			&:after 
-				//If you use compass, instead of the line below you could use + box-sizing($bs)
-				box-sizing: content-box
-
-
-		.title 
-			font-size: 14px
-			font-weight: 400
-			margin-bottom: 15px
-			margin-top: 5px
-
-		.gm-style-iw 
-			width: 150px
-
-
-
-.section-404 
-	padding-top: 130px
-	padding-bottom: 120px
-	.title-404 
-		font-size: 120px
-		font-weight: 800
-		font-family: $font_5, $font_1, $font_2
-		color: $color_pale_sky_approx
-
-	.intro 
-		font-size: 24px
-		margin-bottom: 30px
-
-
-.modal 
-	.modal-dialog 
-		width: 760px
-
-	.modal-title 
-		font-family: $font_5, $font_1, $font_2
-		font-weight: 800
-		font-size: 36px
-		color: $color_comet_approx
-		padding-top: 26px
-
-	.modal-body 
-		padding: 30px 60px
-
-	.modal-header 
-		border: none
-
-	&.modal-contact 
-		.modal-title 
-			margin-bottom: 30px
-
-		.intro 
-			padding: 0 15px
-			margin-bottom: 15px
-			color: $color_pale_sky_approx
-			font-weight: 300
-			font-size: 18px
-
-		.contact-info 
-			margin-bottom: 30px
-			li 
-				margin-right: 60px
-				margin-bottom: 30px
-				font-family: $font_5, $font_1, $font_2
-				a 
-					color: $color_pale_sky_approx
-
-				&:last-child 
-					margin-right: 0
-
-
-			.fs1 
-				//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
-				border-radius: 50%
-				//If you use compass, instead of the line below you could use + background-clip($clip)
-				background-clip: padding-box
-				color: $white
-				width: 48px
-				height: 48px
-				border: 1px solid $color_pale_sky_approx
-				color: $color_pale_sky_approx
-				font-size: 22px
-				padding-top: 5px
-				display: inline-block
-				margin-bottom: 15px
-				text-align: center
-
-			.tel .fs1 
-				padding-top: 8px
-
-
-		.contact-form .error 
-			color: $color_flame_pea_approx
-			font-family: $font_1, $font_2
-			display: block
-			font-size: 14px
-			text-align: left
-			padding-top: 5px
-			padding-left: 5px
-			font-weight: 300
-
-
-
-.blueimp-gallery 
-	background: $color_bunker_90_approx
-
-.footer 
-	.footer-content 
-		background: $color_bright_gray_approx
-		color: $white_50
-		padding: 30px 0
-		padding-bottom: 30px
-		font-size: 14px
-		a 
-			color: $white_60
-			&:hover 
-				color: $color_viking_approx
-
-
-		.sub-title 
-			color: $white_90
-			font-family: $font_5, $font_1, $font_2
-			font-weight: 700
-			font-size: 18px
-			margin-bottom: 30px
-
-		.contact-col 
-			.fs1 
-				font-size: 20px
-				margin-right: 10px
-				line-height: 1.5
-				vertical-align: middle
-				color: $white_80
-
-			.adr 
-				padding-left: 45px
-				position: relative
-				.fs1 
-					position: absolute
-					left: 15px
-					top: 0
-
-
-
-		.links-col li 
-			margin-bottom: 10px
-
-		.blog-col .item 
-			margin-bottom: 30px
-			position: relative
-			padding-left: 75px
-			padding-right: 30px
-			.post-title 
-				font-size: 14px
-				font-weight: 700
-				color: $white_80
-
-			.figure 
-				position: absolute
-				left: 0
-				top: 0
-
-			.intro 
-				margin-bottom: 5px
-
-			.meta 
-				color: $white_20
-
-
-
-	.bottom-bar 
-		background: $color_tuna_approx
-		color: $white_50
-		padding: 15px
-		text-align: center
-		.copyright 
-			display: block
-			font-size: 13px
-			a 
-				color: $white_50
-				&:hover 
-					color: $white_50
-
-
-
-
-	.social-icons 
-		margin: 0 auto
-		li 
-			margin-bottom: 15px
-
-
-
-.social-icons 
-	list-style: none
-	padding: 10px 0
-	margin: 0 auto
-	margin-bottom: 25px
-	display: inline-block
-	li 
-		float: left
-		&.last 
-			margin-right: 0
-
-
-	a 
-		display: inline-block
-		background: $color_trout_approx
-		width: 36px
-		height: 36px
-		text-align: center
-		padding-top: 7px
-		//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
-		border-radius: 50%
-		//If you use compass, instead of the line below you could use + background-clip($clip)
-		background-clip: padding-box
-		font-size: 16px
-		margin-right: 10px
-		float: left
-		&:hover 
-			background: $color_shuttle_gray_approx
-			.fa 
-				color: $white
-
-
-		.fa 
-			color: $white_60
-			&:before 
-				font-size: 18px
-				text-align: center
-				padding: 0
-
-
-
-
-.config-wrapper 
-	position: absolute
-	top: 100px
-	right: 0
-	z-index: 100
-
-.config-wrapper-inner 
-	position: relative
-
-.config-trigger 
-	display: block
-	position: absolute
-	left: -36px
-	width: 36px
-	height: 36px
-	background: $color_wild_sand_approx
-	color: $white
-	text-align: center
-	//If you use compass, instead of the line below you could use + border-top-right-radius($radius)
-	border-top-right-radius: 0
-	//If you use compass, instead of the line below you could use + border-bottom-right-radius($radius)
-	border-bottom-right-radius: 0
-	//If you use compass, instead of the line below you could use + border-bottom-left-radius($radius)
-	border-bottom-left-radius: 4px
-	//If you use compass, instead of the line below you could use + border-top-left-radius($radius)
-	border-top-left-radius: 4px
-	//If you use compass, instead of the line below you could use + background-clip($clip)
-	background-clip: padding-box
-	&:hover 
-		text-decoration: none
-		.fs1 
-			color: $color_comet_approx
-
-
-	.fs1 
-		font-size: 22px
-		padding-top: 5px
-		display: block
-		color: $color_pale_sky_approx
-
-
-.config-panel 
-	width: 180px
-	display: none
-	background: $color_wild_sand_approx
-	padding: 15px
-	//If you use compass, instead of the line below you could use + border-top-right-radius($radius)
-	border-top-right-radius: 0
-	//If you use compass, instead of the line below you could use + border-bottom-right-radius($radius)
-	border-bottom-right-radius: 0
-	//If you use compass, instead of the line below you could use + border-bottom-left-radius($radius)
-	border-bottom-left-radius: 4px
-	//If you use compass, instead of the line below you could use + border-top-left-radius($radius)
-	border-top-left-radius: 0
-	//If you use compass, instead of the line below you could use + background-clip($clip)
-	background-clip: padding-box
-	h5 
-		margin-bottom: 15px
-		color: $color_pale_sky_approx
-
-	#color-options 
-		margin-bottom: 10px
-		li 
-			padding-right: 0
-			a 
-				display: block
-				width: 20px
-				height: 20px
-				border: 2px solid transparent
-				&:hover 
-					opacity: 0.9
-					border: 2px solid $black_40
-
-
-			&.active a 
-				border: 2px solid $black_40
-
-			&.theme-1 a 
-				background: $color_viking_approx
-
-			&.theme-2 a 
-				background-color: $color_pastel_green_approx
-
-			&.theme-3 a 
-				background-color: $color_java_approx
-
-			&.theme-4 a 
-				background-color: $color_mulberry_approx
-
-			&.theme-5 a 
-				background-color: $color_chenin_approx
-
-			&.theme-6 a 
-				background-color: $color_japonica_approx
-
-			&.theme-7 a 
-				background-color: $color_puerto_rico_approx
-
-			&.theme-8 a 
-				background-color: $color_vista_blue_approx
-
-			&.theme-9 a 
-				background-color: $color_harvest_gold_approx
-
-			&.theme-10 a 
-				background-color: $color_eastern_blue_approx
-
-
-
-	.close 
-		position: absolute
-		right: 5px
-		top: 5px
-		color: $white
-		.fa 
-			color: $color_pale_sky_approx
-
-
-
-@media(max-width: 767px) 
-	.config-wrapper 
-		display: none
-
-	.header 
-		padding: 0 inherit
-		h1.logo 
-			font-size: 20px
-			line-height: 2.4
-
-		.main-nav .nav 
-			.nav-item 
-				margin-right: 0
-
-			.dropdown-menu 
-				//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
-				border-radius: 0
-				//If you use compass, instead of the line below you could use + background-clip($clip)
-				background-clip: padding-box
-				width: 100%
-				padding: 0
-				&:before 
-					display: none
-
-
-
-
-	.navbar-collapse 
-		border-top: none
-		//If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-		box-shadow: none
-		width: 100%
-		left: 0
-		top: 48px
-		position: absolute
-		background: $color_trout_approx
-		z-index: 45
-		.nav 
-			margin: 0
-
-
-	.header-wrapper-home 
-		min-height: 560px
-		min-height: 460px
-
-	.home-promo 
-		padding-top: 80px
-		.title 
-			span 
-				font-size: 22px
-
-			.middle 
-				font-size: 36px
-
-			.bottom 
-				font-size: 22px
-
-
-
-	.promo 
-		padding-top: 100px
-		.title .middle 
-			font-size: 38px
-
-
-	.modal 
-		.modal-dialog 
-			width: auto
-			.intro 
-				font-size: 16px
-
-
-		&.modal-contact 
-			.modal-title 
-				font-size: 22px
-
-			.contact-info li 
-				margin-right: 0
-
-
-		.modal-body 
-			padding: 15px 30px
-
-
-	.bg-slider-wrapper 
-		height: 460px
-		.flexslider .slide 
-			height: 460px
-
-
-	.section-404 
-		.title-404 
-			font-size: 80px
-
-		.intro 
-			font-size: 20px
-
-
-	body.no-header-wrapper 
-		padding-top: 50px
-
-	.navbar-fixed-top .navbar-collapse 
-		max-height: inherit
-
-	.navbar-fixed-bottom .navbar-collapse 
-		max-height: inherit
-
-	.nav-tabs > li > a 
-		padding: 10px 5px
-
-	.main-nav .navbar-collapse .navbar-nav 
-		padding-top: 15px
-		padding-bottom: 15px
-
-	.section .title 
-		font-size: 26px
-
-	.testimonials .item .meta .name 
-		max-width: none
-
-	.cta-section .contact-info 
-		font-size: 20px
-
-	.blog-list .item 
-		.post-title 
-			font-size: 22px
-
-		.meta .meta-list 
-			text-align: left
-			li 
-				display: inline-block
-				margin-right: 5px
-
-			.post-time 
-				font-size: 11px
-				padding: 5px 10px
-				margin-right: 5px
-				span.date 
-					font-size: 14px
-
-
-
-
-	.blog-post-wrapper .comment-area .comment-container .comment-item 
-		.comment-author 
-			top: 15px
-			left: 15px
-			img 
-				width: 35px
-				height: 35px
-
-
-		.comment-item-box 
-			padding: 15px
-			padding-left: 65px
-
-		.children 
-			padding-left: 15px
-
-
-	.contact-section .contact-info li 
-		margin-right: 0
-
-
-@media(min-width: 768px) 
-	.config-wrapper 
-		display: none
-
-	.header .main-nav .nav .nav-item 
-		margin-right: 10px
-
-	.modal .modal-dialog 
-		width: 660px
-
-	.latest-work .item .figure-container a 
-		min-height: 440px
-
-
-@media(min-width: 992px) 
-	.config-wrapper 
-		display: block
-
-	.header-wrapper-home 
-		height: 650px
-
-	.main-nav 
-		float: right !important
-		&.navbar-right 
-			float: right !important
-
-
-	.header 
-		h1.logo 
-			float: left
-			margin: inherit
-
-		.main-nav .nav .nav-item 
-			margin-right: 15px
-
-
-	.navbar-form .form-control 
-		width: 280px
-
-	.navbar-fixed-top .navbar-collapse 
-		padding-left: 15px
-		padding-right: 15px
-
-	.testimonials .item .meta 
-		.name 
-			max-width: 300px
-
-		.client-logo 
-			max-width: none
-
-
-	.modal .modal-dialog 
-		width: 760px
-
-	.latest-work .item .figure-container a 
-		min-height: 440px
-
-
-@media(min-width: 1200px) 
-	.latest-work .item .figure-container a 
-		min-height: 520px
-
-
-.video-container iframe 
-	max-width: 100%
-
-.nav .open > a 
-	background: none
-	&:hover 
-		background: none
-
-	&:focus 
-		background: none
-
-
-.owl-theme .owl-controls 
-	margin-top: 30px
-	margin-bottom: 30px
-	.owl-page span 
-		background: $color_pale_sky_approx
-
-	.owl-buttons div 
-		background: $color_pale_sky_approx
-		&:hover 
-			background: $color_regent_gray_approx
+%extend_6 {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	//Instead of the line below you could use @include background-clip($clip)
+	background-clip: padding-box;
+	background: none;
+}
+
+//original selectors
+//.map-section .gmap, .map-section .gmap *, .map-section .gmap *:before, .map-section .gmap *:after
+%extend_7 {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: content-box;
+}
+
+
+body {
+	font-family: $font_0, $font_1, $font_2;
+	color: $color_storm_dust_approx;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: $grayscale;
+	&.no-header-wrapper {
+		padding-top: 80px;
+	}
+}
+p {
+	margin-bottom: 16px;
+	line-height: 1.5;
+}
+a {
+	color: $color_viking_approx;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	&:hover {
+		text-decoration: underline;
+		color: $color_shakespeare_approx;
+	}
+	&:focus {
+		text-decoration: none;
+	}
+	&.btn {
+		@extend %extend_1;
+		.fa {
+			color: $white;
+			margin-right: 5px;
+		}
+		&:focus {
+			color: $white;
+		}
+	}
+	&.btn-cta {
+		padding: 8px 30px;
+	}
+	&.btn-cta-primary {
+		@extend %extend_2;
+		&:hover {
+			@extend %extend_3;
+		}
+	}
+	&.btn-cta-secondary {
+		@extend %extend_4;
+		&:hover {
+			@extend %extend_5;
+		}
+	}
+}
+.btn {
+	@extend %extend_1;
+	.fa {
+		color: $white;
+		margin-right: 5px;
+	}
+	&:focus {
+		color: $white;
+	}
+}
+.btn-cta {
+	padding: 8px 30px;
+}
+.btn-cta-primary {
+	@extend %extend_2;
+	&:hover {
+		@extend %extend_3;
+	}
+}
+.btn-cta-secondary {
+	@extend %extend_4;
+	&:hover {
+		@extend %extend_5;
+	}
+}
+.highlight {
+	color: $color_viking_approx;
+}
+.form-control {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+	height: 40px;
+	border-color: $color_gallery_approx;
+	&:-moz-placeholder {
+		color: $color_shady_lady_approx;
+	}
+	&:-ms-input-placeholder {
+		color: $color_shady_lady_approx;
+	}
+	&:focus {
+		border-color: $color_bon_jour_approx;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: none;
+	}
+}
+.form-control::-webkit-input-placeholder {
+	color: $color_shady_lady_approx;
+}
+.form-control::-moz-placeholder {
+	color: $color_shady_lady_approx;
+}
+.text-highlight {
+	color: $color_jelly_bean_approx;
+}
+input[type="text"] {
+	appearance: none;
+	-webkit-appearance: none;
+}
+input[type="email"] {
+	appearance: none;
+	-webkit-appearance: none;
+}
+input[type="password"] {
+	appearance: none;
+	-webkit-appearance: none;
+}
+input[type="submit"] {
+	appearance: none;
+	-webkit-appearance: none;
+}
+input[type="button"] {
+	appearance: none;
+	-webkit-appearance: none;
+}
+textarea {
+	appearance: none;
+	-webkit-appearance: none;
+}
+select {
+	appearance: none;
+	-webkit-appearance: none;
+}
+#topcontrol {
+	background: $color_pale_sky_approx;
+	color: $white;
+	text-align: center;
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	border: none;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	//Instead of the line below you could use @include background-clip($clip)
+	background-clip: padding-box;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	z-index: 30;
+	&:hover {
+		background: $color_lynch_approx;
+	}
+	.fa {
+		position: relative;
+		top: 3px;
+		font-size: 25px;
+	}
+}
+.bg-slider-wrapper {
+	content: "";
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: 650px;
+	background: $color_chicago_approx;
+	.flexslider {
+		margin: 0;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: none;
+		border: none;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		-ms-border-radius: 0;
+		-o-border-radius: 0;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		//Instead of the line below you could use @include background-clip($clip)
+		background-clip: padding-box;
+		.slide {
+			display: block;
+			height: 650px;
+			&.slide-1 {
+				background: $color_pale_sky_approx $url_0 no-repeat 50% top;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+			}
+			&.slide-2 {
+				background: $color_pale_sky_approx $url_1 no-repeat 50% top;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+			}
+			&.slide-3 {
+				background: $color_pale_sky_approx $url_2 no-repeat 50% top;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+			}
+		}
+		.flex-control-nav {
+			z-index: 20;
+			bottom: 45px;
+			position: relative;
+			li a {
+				background: $white_30;
+				&.flex-active {
+					background: $white_80;
+				}
+			}
+		}
+	}
+}
+.header-wrapper-home {
+	min-height: 650px;
+}
+.header-wrapper-work {
+	background: $color_pale_sky_approx $url_3 no-repeat 50% top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-height: 400px;
+}
+.header-wrapper-case-study {
+	background: $color_pale_sky_approx $url_4 no-repeat 50% top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-height: 400px;
+}
+.header-wrapper-about {
+	background: $color_pale_sky_approx $url_5 no-repeat 50% top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-height: 400px;
+}
+.header-wrapper-blog-home {
+	background: $color_pale_sky_approx $url_6 no-repeat 50% top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-height: 400px;
+}
+.header-wrapper-contact {
+	background: $color_pale_sky_approx $url_7 no-repeat 50% top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-height: 400px;
+}
+.header {
+	color: $white;
+	width: 100%;
+	z-index: 40;
+	padding: 15px inherit;
+	background: $color_tuna_90_approx;
+	-webkit-transition: padding 0.6s ease-in-out;
+	-moz-transition: padding 0.6s ease-in-out;
+	-ms-transition: padding 0.6s ease-in-out;
+	-o-transition: padding 0.6s ease-in-out;
+	&.header-shrink {
+		padding: 0 inherit;
+		img {
+			width: 60%;
+		}
+		h1.logo {
+			font-size: 20px;
+			line-height: 2.4;
+		}
+		.main-nav .nav .nav-item {
+			font-size: 12px;
+		}
+	}
+	.main-nav {
+		.navbar-toggle {
+			margin-right: 0;
+			margin-top: 0;
+			background: none;
+			position: absolute;
+			right: 10px;
+			top: 5px;
+			&:focus {
+				outline: none;
+			}
+			.icon-bar {
+				background-color: $white_60;
+				height: 3px;
+			}
+			&:hover .icon-bar {
+				background-color: $white;
+			}
+		}
+		.nav {
+			.nav-item {
+				font-weight: normal;
+				text-transform: uppercase;
+				font-size: 13px;
+				margin-right: 15px;
+				&.active {
+					color: $color_viking_approx;
+					> a {
+						color: $color_viking_approx;
+						background: none;
+						font-weight: bold;
+					}
+				}
+				a {
+					color: $white;
+					&:hover {
+						color: $color_viking_approx;
+						background: none;
+					}
+					&:focus {
+						outline: none;
+						background: none;
+					}
+					&:active {
+						outline: none;
+						background: none;
+					}
+				}
+				&.last {
+					margin-right: 0;
+				}
+			}
+			&.active {
+				position: relative;
+				> a {
+					background: $color_shakespeare_approx;
+					color: $white;
+					color: $white_80;
+					&:before {
+						content: "\f0d8";
+						position: absolute;
+						bottom: -8px;
+						left: 0;
+						text-align: center;
+						font-family: $font_4;
+						display: block;
+						font-size: 12px;
+						width: 100%;
+					}
+					&.dropdown-toggle:before {
+						display: none;
+					}
+				}
+			}
+			.dropdown-menu {
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				-ms-border-radius: 4px;
+				-o-border-radius: 4px;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 4px;
+				-moz-background-clip: padding;
+				-webkit-background-clip: padding-box;
+				//Instead of the line below you could use @include background-clip($clip)
+				background-clip: padding-box;
+				margin: 0;
+				border: none;
+				text-transform: none;
+				min-width: 180px;
+				background: $color_shakespeare_approx;
+				&:before {
+					content: "";
+					display: block;
+					width: 0;
+					height: 0;
+					border-left: 10px solid transparent;
+					border-right: 10px solid transparent;
+					border-bottom: 10px solid $color_shakespeare_approx;
+					position: absolute;
+					right: 30px;
+					top: -10px;
+				}
+				a {
+					border-bottom: 1px solid $color_scooter_approx;
+					padding: 8px 20px;
+					color: $white;
+					-webkit-opacity: 1;
+					-moz-opacity: 1;
+					opacity: 1;
+					&:hover {
+						background: $color_curious_blue_approx;
+						color: $white;
+					}
+				}
+			}
+			&.open a {
+				background: none;
+			}
+		}
+	}
+	&.navbar-fixed-top .navbar-collapse {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	h1.logo {
+		font-family: $font_3, $font_1, $font_2;
+		margin-top: 0;
+		margin-bottom: 0;
+		font-weight: 800;
+		font-size: 26px;
+		float: left;
+		line-height: 1.8;
+		a {
+			color: $white;
+			&:hover {
+				text-decoration: none;
+			}
+			.highlight {
+				color: $color_viking_approx;
+			}
+		}
+	}
+}
+.promo {
+	color: $white;
+	padding-top: 160px;
+	.title {
+		font-size: 36px;
+		font-family: $font_5, $font_1, $font_2;
+		font-weight: 800;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 1px $black_50;
+		margin-bottom: 15px;
+		margin-top: 0;
+		text-transform: uppercase;
+	}
+	.intro {
+		max-width: 700px;
+		margin: 0 auto;
+		font-size: 20px;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 1px $black_50;
+	}
+}
+.home-promo {
+	color: $white;
+	padding-top: 160px;
+	position: relative;
+	z-index: 10;
+	.title {
+		font-size: 26px;
+		font-family: $font_5, $font_1, $font_2;
+		font-weight: 800;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 1px $black_50;
+		margin-bottom: 45px;
+		text-transform: uppercase;
+		span {
+			display: block;
+		}
+		.middle {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			font-size: 56px;
+			color: $color_viking_approx;
+		}
+		.bottom {
+			font-family: $font_0, $font_1, $font_2;
+			font-style: italic;
+			text-transform: lowercase;
+			font-weight: 500;
+		}
+	}
+	.btn {
+		font-size: 20px;
+		font-weight: normal;
+	}
+}
+.who {
+	padding: 80px 0;
+	.title {
+		font-size: 36px;
+		font-family: $font_5, $font_1, $font_2;
+		font-weight: 800;
+		color: $color_comet_approx;
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+	.intro {
+		margin: 0 auto;
+		max-width: 700px;
+		color: $color_storm_dust_approx;
+		font-size: 20px;
+		color: $color_pale_sky_approx;
+		margin-bottom: 60px;
+		font-weight: 300;
+	}
+	.benefits {
+		.item {
+			font-size: 16px;
+			margin-bottom: 60px;
+			.fs1 {
+				font-size: 36px;
+				color: $color_pale_sky_approx;
+			}
+		}
+		.item-inner {
+			padding: 30px;
+			padding-top: 45px;
+			background: $color_alabaster_approx;
+		}
+		.sub-title {
+			font-weight: bold;
+			font-size: 18px;
+			margin-bottom: 15px;
+			color: $color_comet_approx;
+		}
+		.desc {
+			color: $color_pale_sky_approx;
+		}
+	}
+}
+.latest-work {
+	padding: 80px 0;
+	.container-fluid {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.title {
+		font-family: $font_5, $font_1, $font_2;
+		font-weight: 800;
+		font-size: 36px;
+		color: $color_comet_approx;
+		margin-top: 0;
+		margin-bottom: 60px;
+	}
+	.owl-wrapper {
+		background: $color_tuna_approx;
+	}
+	.item {
+		background: $color_tuna_approx;
+		color: $white;
+		min-height: 420px;
+		text-align: center;
+		.figure {
+			-webkit-transition: all 0.4s ease-in-out;
+			-moz-transition: all 0.4s ease-in-out;
+			-ms-transition: all 0.4s ease-in-out;
+			-o-transition: all 0.4s ease-in-out;
+			overflow: hidden;
+			img {
+				-webkit-opacity: 0.8;
+				-moz-opacity: 0.8;
+				opacity: 0.8;
+				margin: 0 auto;
+				-webkit-transition: transform 0.5s linear;
+				-moz-transition: transform 0.5s linear;
+				-ms-transition: transform 0.5s linear;
+				-o-transition: transform 0.5s linear;
+			}
+			&:hover img {
+				-webkit-opacity: 1;
+				-moz-opacity: 1;
+				opacity: 1;
+				-webkit-transform: scale(1.1);
+				-moz-transform: scale(1.1);
+				-ms-transform: scale(1.1);
+				-o-transform: scale(1.1);
+			}
+		}
+		.content {
+			.content-inner {
+				padding: 45px;
+				text-align: left;
+				color: $white_80;
+			}
+			.project-title {
+				font-family: $font_5, $font_1, $font_2;
+				text-align: center;
+				font-size: 22px;
+				font-weight: bold;
+				margin-top: 0;
+				margin-bottom: 30px;
+				padding-bottom: 10px;
+				border-bottom: 2px solid $white_50;
+				display: inline-block;
+				color: $white;
+			}
+			.meta {
+				margin-bottom: 15px;
+				font-weight: 300;
+				strong {
+					color: $white;
+				}
+			}
+			.desc {
+				margin-bottom: 30px;
+			}
+			.link {
+				margin-bottom: 5px;
+				a {
+					color: $color_bali_hai_approx;
+					&:hover {
+						color: $color_viking_approx;
+					}
+				}
+				.fa {
+					color: $color_bali_hai_approx;
+					margin-right: 5px;
+				}
+			}
+		}
+		.figure-container a {
+			display: block;
+			min-height: 260px;
+			-webkit-opacity: 0.8;
+			-moz-opacity: 0.8;
+			opacity: 0.8;
+			&:hover {
+				-webkit-opacity: 1;
+				-moz-opacity: 1;
+				opacity: 1;
+			}
+		}
+		&.item-1 .figure-container a {
+			background: $color_pale_sky_approx $url_8 no-repeat 50% 50%;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+		&.item-2 .figure-container a {
+			display: block;
+			background: $color_pale_sky_approx $url_9 no-repeat 50% 50%;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+		&.item-3 .figure-container a {
+			display: block;
+			background: $color_pale_sky_approx $url_10 no-repeat 50% 50%;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+	}
+}
+.testimonials {
+	padding: 80px 0;
+	.title {
+		font-size: 36px;
+		font-family: $font_5, $font_1, $font_2;
+		font-weight: 800;
+		color: $color_comet_approx;
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+	.intro {
+		max-width: 700px;
+		color: $color_pale_sky_approx;
+		font-weight: 300;
+		margin: 0 auto;
+		margin-bottom: 60px;
+		font-size: 20px;
+	}
+	.item {
+		margin-bottom: 60px;
+		.item-inner {
+			padding: 30px;
+		}
+		.quote-container {
+			position: relative;
+			margin-bottom: 30px;
+			.fa {
+				color: $color_mischka_approx;
+				position: absolute;
+				left: -35px;
+				top: 0;
+				font-size: 22px;
+			}
+			.quote {
+				padding: 0;
+				border-left: 0;
+				font-style: italic;
+				margin-bottom: 0;
+			}
+		}
+		.meta {
+			.profile {
+				overflow: hidden;
+				float: left;
+				img {
+					float: left;
+					margin-right: 15px;
+				}
+				.name {
+					font-size: 14px;
+					float: left;
+					margin-top: 25px;
+					max-width: 200px;
+					color: $color_pale_sky_approx;
+					.source-title {
+						color: $color_mountain_mist_approx;
+					}
+				}
+			}
+			.client-logo {
+				float: right;
+				max-width: 160px;
+			}
+		}
+	}
+}
+.logos {
+	padding-bottom: 80px;
+	.title {
+		font-size: 28px;
+		margin-top: 0;
+		margin-bottom: 30px;
+		color: $color_comet_approx;
+		font-family: $font_5, $font_1, $font_2;
+		font-weight: 700;
+	}
+	.intro {
+		color: $color_pale_sky_approx;
+		font-size: 20px;
+		font-weight: 300;
+		margin-bottom: 60px;
+	}
+	.logo-list img {
+		-webkit-opacity: 0.8;
+		-moz-opacity: 0.8;
+		opacity: 0.8;
+		&:hover {
+			-webkit-opacity: 1;
+			-moz-opacity: 1;
+			opacity: 1;
+		}
+	}
+}
+.cta-section {
+	background: $color_pale_sky_approx $url_11 no-repeat left top;
+	background-size: cover;
+	min-height: 420px;
+	color: $white;
+	padding-top: 80px;
+	.title {
+		font-size: 36px;
+		font-weight: 300;
+		margin-top: 0;
+		margin-bottom: 30px;
+		font-family: $font_5, $font_1, $font_2;
+		font-weight: 800;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 1px $black_50;
+	}
+	.contact-info {
+		font-size: 24px;
+		span {
+			display: block;
+			margin-bottom: 15px;
+		}
+		.intro {
+			-webkit-opacity: 0.8;
+			-moz-opacity: 0.8;
+			opacity: 0.8;
+			font-weight: 300;
+		}
+		.info {
+			font-family: $font_5, $font_1, $font_2;
+			font-weight: 800;
+		}
+		a {
+			color: $color_seagull_approx;
+			&:hover {
+				color: $color_viking_approx;
+			}
+		}
+	}
+}
+.latest-blog {
+	padding: 80px 0;
+	background: $color_wild_sand_approx;
+	.title {
+		font-size: 36px;
+		font-family: $font_5, $font_1, $font_2;
+		font-weight: 800;
+		color: $color_comet_approx;
+		margin-top: 0;
+		margin-bottom: 80px;
+	}
+	.item {
+		margin-bottom: 60px;
+	}
+	.item-inner {
+		background-color: $white;
+		.figure {
+			background-color: $color_bright_gray_approx;
+			overflow: hidden;
+			text-align: center;
+			img {
+				-webkit-opacity: 0.8;
+				-moz-opacity: 0.8;
+				opacity: 0.8;
+				-webkit-transition: transform 0.5s linear;
+				-moz-transition: transform 0.5s linear;
+				-ms-transition: transform 0.5s linear;
+				-o-transition: transform 0.5s linear;
+				margin: 0 auto;
+				display: inline-block;
+				&:hover {
+					-webkit-opacity: 1;
+					-moz-opacity: 1;
+					opacity: 1;
+					-webkit-transform: scale(1.05);
+					-moz-transform: scale(1.05);
+					-ms-transform: scale(1.05);
+					-o-transform: scale(1.05);
+				}
+			}
+		}
+		.sub-title {
+			margin-top: 15px;
+			margin-bottom: 30px;
+			font-size: 22px;
+			a {
+				color: $color_pale_sky_approx;
+				&:hover {
+					color: $color_viking_approx;
+				}
+			}
+		}
+		.content-wrapper {
+			padding: 30px;
+		}
+	}
+}
+.work-list {
+	padding: 80px 0;
+	background: $color_wild_sand_approx;
+	.title {
+		font-size: 28px;
+		font-family: $font_5, $font_1, $font_2;
+		font-weight: 800;
+		color: $color_comet_approx;
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+	.button-group {
+		margin-bottom: 60px;
+		font-size: 13px;
+		clear: both;
+		.btn {
+			background: $color_mischka_approx;
+			color: $white;
+			font-weight: 300;
+			margin-right: 5px;
+			margin-bottom: 15px;
+			&.last {
+				margin-right: 0;
+			}
+			&:hover {
+				background: $color_pale_sky_approx;
+			}
+			&.is-checked {
+				background: $color_pale_sky_approx;
+			}
+		}
+	}
+	.item {
+		margin-bottom: 60px;
+		.item-inner {
+			background: $white;
+		}
+		.figure {
+			position: relative;
+			-webkit-transition: all 0.4s ease-in-out;
+			-moz-transition: all 0.4s ease-in-out;
+			-ms-transition: all 0.4s ease-in-out;
+			-o-transition: all 0.4s ease-in-out;
+			overflow: hidden;
+			img {
+				-webkit-transition: transform 0.5s linear;
+				-moz-transition: transform 0.5s linear;
+				-ms-transition: transform 0.5s linear;
+				-o-transition: transform 0.5s linear;
+			}
+			.info-mask {
+				text-decoration: none;
+				visibility: hidden;
+				-webkit-opacity: 0;
+				-moz-opacity: 0;
+				opacity: 0;
+				padding: 30px;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				text-align: center;
+				background: $color_tuna_90_approx;
+				span {
+					display: block;
+					margin-bottom: 15px;
+					color: $white;
+					&.btn {
+						display: inline-block;
+						&:hover {
+							background: $color_fire_bush_approx;
+						}
+					}
+				}
+			}
+			&:hover {
+				.info-mask {
+					visibility: visible;
+					-webkit-opacity: 1;
+					-moz-opacity: 1;
+					opacity: 1;
+				}
+				img {
+					-webkit-transform: scale(1.1);
+					-moz-transform: scale(1.1);
+					-ms-transform: scale(1.1);
+					-o-transform: scale(1.1);
+				}
+			}
+		}
+		.content {
+			padding: 30px;
+			.sub-title {
+				font-size: 16px;
+				margin: 0;
+				margin-bottom: 15px;
+			}
+			.meta {
+				font-size: 14px;
+				color: $color_mountain_mist_approx;
+			}
+		}
+		.sub-title a {
+			color: $color_pale_sky_approx;
+			&:hover {
+				color: $color_viking_approx;
+			}
+		}
+	}
+}
+.breadcrumbs {
+	margin-top: 15px;
+	font-size: 13px;
+	color: $color_pumice_approx;
+	a {
+		color: $color_pumice_approx;
+		&:hover {
+			color: $color_viking_approx;
+		}
+	}
+	.fa {
+		margin-left: 5px;
+		display: inline-block;
+	}
+	.breadcrumbs-list li {
+		padding-right: 0;
+	}
+}
+.case-study-article {
+	padding: 80px 0;
+	.project-title {
+		font-family: $font_5, $font_1, $font_2;
+		font-weight: 800;
+		margin-bottom: 30px;
+		color: $color_comet_approx;
+	}
+	.project-type {
+		color: $color_pale_sky_approx;
+		margin-bottom: 60px;
+		margin-top: 0;
+		font-size: 22px;
+		font-weight: 300;
+		.dot {
+			font-size: 48px;
+			position: relative;
+			top: 8px;
+		}
+	}
+	.content-wrapper {
+		.meta {
+			margin-bottom: 30px;
+		}
+		.content-section {
+			margin-bottom: 30px;
+		}
+		.section-title {
+			color: $color_pale_sky_approx;
+			font-size: 20px;
+			font-weight: bold;
+		}
+	}
+	.media-wrapper {
+		img {
+			background: $color_charade_approx;
+			-webkit-transition: all 0.4s ease-in-out;
+			-moz-transition: all 0.4s ease-in-out;
+			-ms-transition: all 0.4s ease-in-out;
+			-o-transition: all 0.4s ease-in-out;
+			-webkit-opacity: 0.9;
+			-moz-opacity: 0.9;
+			opacity: 0.9;
+			border: 1px solid $color_gallery_approx;
+			&:hover {
+				-webkit-opacity: 1;
+				-moz-opacity: 1;
+				opacity: 1;
+			}
+		}
+		.featured {
+			margin-bottom: 30px;
+		}
+		.thumbs .item {
+			margin-bottom: 15px;
+		}
+	}
+	.testimonial-wrapper {
+		margin-top: 90px;
+		padding: 60px 30px;
+		.testimonial-inner {
+			max-width: 700px;
+			margin: 0 auto;
+		}
+		.quote-container {
+			position: relative;
+			margin-bottom: 30px;
+			color: $color_pale_sky_approx;
+			background: $color_alabaster_approx;
+			padding: 30px;
+			.fa {
+				color: $color_cadet_blue_approx;
+				font-size: 22px;
+			}
+			.quote {
+				padding: 0;
+				border-left: 0;
+				padding-left: 30px;
+				font-style: italic;
+				margin-bottom: 30px;
+			}
+			&:after {
+				content: "";
+				display: block;
+				width: 0;
+				height: 0;
+				border-left: 15px solid transparent;
+				border-right: 15px solid transparent;
+				border-top: 15px solid $color_alabaster_approx;
+				position: absolute;
+				bottom: -15px;
+				margin-left: -15px;
+				left: 50%;
+			}
+		}
+		.meta {
+			padding: 30px;
+			.profile {
+				overflow: hidden;
+				.name {
+					margin-top: 25px;
+					.source-title {
+						color: $color_mountain_mist_approx;
+					}
+				}
+			}
+		}
+	}
+}
+.flexslider {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	//Instead of the line below you could use @include background-clip($clip)
+	background-clip: padding-box;
+	padding: 0;
+	border: 1px solid $color_gallery_approx;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+	overflow: hidden;
+	&#carousel {
+		img {
+			-webkit-opacity: 0.5;
+			-moz-opacity: 0.5;
+			opacity: 0.5;
+			cursor: pointer;
+			&:hover {
+				-webkit-opacity: 1;
+				-moz-opacity: 1;
+				opacity: 1;
+			}
+		}
+		.slides > li {
+			margin-right: 5px;
+			&.flex-active-slide img {
+				-webkit-opacity: 1;
+				-moz-opacity: 1;
+				opacity: 1;
+				cursor: default;
+			}
+		}
+	}
+	.flex-direction-nav a {
+		color: $color_wild_sand_approx;
+		-webkit-opacity: 0.7;
+		-moz-opacity: 0.7;
+		opacity: 0.7;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		-ms-border-radius: 50%;
+		-o-border-radius: 50%;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 50%;
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		//Instead of the line below you could use @include background-clip($clip)
+		background-clip: padding-box;
+		background: $color_mine_shaft_approx;
+		text-align: center;
+		width: 32px;
+		height: 32px;
+		&:before {
+			font-size: 18px;
+			//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			text-shadow: none;
+			margin-bottom: 30px;
+			padding-top: 8px;
+		}
+		&:hover {
+			-webkit-opacity: 1;
+			-moz-opacity: 1;
+			opacity: 1;
+		}
+	}
+}
+.services {
+	padding: 80px 0;
+	.title {
+		font-size: 28px;
+		font-family: $font_5, $font_1, $font_2;
+		font-weight: 800;
+		color: $color_comet_approx;
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+	.intro {
+		font-size: 20px;
+		font-weight: 300;
+		color: $color_pale_sky_approx;
+		max-width: 800px;
+		margin: 0 auto;
+		margin-bottom: 60px;
+	}
+	.item {
+		margin-bottom: 30px;
+	}
+	.item-inner {
+		background: $color_alabaster_approx;
+		.header-box {
+			padding: 15px 30px;
+			background: $color_bali_hai_approx;
+			color: $white;
+			.fs1 {
+				color: $white;
+				font-size: 28px;
+				padding-top: 10px;
+				display: inline-block;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				-ms-border-radius: 50%;
+				-o-border-radius: 50%;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 50%;
+				-moz-background-clip: padding;
+				-webkit-background-clip: padding-box;
+				//Instead of the line below you could use @include background-clip($clip)
+				background-clip: padding-box;
+				width: 56px;
+				height: 56px;
+				border: 1px solid $white;
+			}
+		}
+		.sub-title {
+			font-size: 18px;
+			font-weight: bold;
+			margin-top: 0;
+			margin-bottom: 20px;
+			color: $color_comet_approx;
+		}
+		.desc {
+			padding: 30px 15px;
+			color: $color_pale_sky_approx;
+		}
+	}
+	.btn-cta {
+		font-size: 16px;
+		margin-top: 30px;
+	}
+}
+.team {
+	padding: 80px 0;
+	.title {
+		font-size: 36px;
+		font-family: $font_5, $font_1, $font_2;
+		font-weight: 800;
+		color: $color_comet_approx;
+		margin-top: 0;
+		margin-bottom: 15px;
+	}
+	.intro {
+		max-width: 800px;
+		margin: 0 auto;
+		margin-bottom: 60px;
+		font-weight: 300;
+		color: $color_pale_sky_approx;
+		font-size: 20px;
+	}
+	.item {
+		margin-bottom: 30px;
+		.item-inner {
+			background: $white;
+			background: $color_wild_sand_approx;
+			background: $color_alabaster_approx;
+			padding: 30px;
+			padding-bottom: 60px;
+			overflow: hidden;
+			position: relative;
+		}
+		.figure {
+			margin-bottom: 30px;
+		}
+		.info {
+			margin-bottom: 30px;
+			.name {
+				margin-top: 0;
+				color: $color_comet_approx;
+				margin-bottom: 10px;
+				font-size: 22px;
+				font-weight: bold;
+			}
+			.role {
+				font-size: 16px;
+				margin-top: 0;
+				margin-bottom: 15px;
+				font-style: italic;
+				color: $color_pale_sky_approx;
+			}
+		}
+		.social {
+			padding-top: 15px;
+			width: 100%;
+			margin-left: -30px;
+			position: absolute;
+			bottom: 30px;
+			.social-list {
+				margin: 0 auto;
+				margin-bottom: 0;
+				width: 100%;
+				li {
+					a {
+						display: inline-block;
+						width: 36px;
+						height: 36px;
+						background: $color_heather_approx;
+						-webkit-border-radius: 50%;
+						-moz-border-radius: 50%;
+						-ms-border-radius: 50%;
+						-o-border-radius: 50%;
+						//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+						border-radius: 50%;
+						-moz-background-clip: padding;
+						-webkit-background-clip: padding-box;
+						//Instead of the line below you could use @include background-clip($clip)
+						background-clip: padding-box;
+						padding-top: 8px;
+						&:hover {
+							background: $color_pale_sky_approx;
+						}
+					}
+					.fa {
+						font-size: 18px;
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+}
+.join-us {
+	padding: 80px 0;
+	background: $color_wild_sand_approx;
+	.title {
+		font-size: 36px;
+		font-family: $font_5, $font_1, $font_2;
+		font-weight: 800;
+		color: $color_comet_approx;
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+	.intro {
+		max-width: 700px;
+		margin: 0 auto;
+		margin-bottom: 60px;
+		color: $color_pale_sky_approx;
+		font-weight: 300;
+		font-size: 20px;
+	}
+	.info {
+		margin-bottom: 30px;
+	}
+	.partner {
+		margin-bottom: 30px;
+		.sub-title {
+			margin-top: 0;
+			margin-bottom: 15px;
+			color: $color_comet_approx;
+		}
+	}
+}
+.photos {
+	padding: 80px 0;
+	.title {
+		font-size: 36px;
+		font-family: $font_5, $font_1, $font_2;
+		font-weight: 800;
+		color: $color_comet_approx;
+		margin-top: 0;
+		margin-bottom: 15px;
+	}
+	.intro {
+		font-size: 18px;
+		color: $color_pale_sky_approx;
+		font-size: 20px;
+		margin-bottom: 60px;
+		font-weight: 300;
+	}
+	#instafeed {
+		margin: 0 auto;
+		display: inline-block;
+		.item {
+			text-align: center;
+			padding: 5px;
+			background: $white;
+			img {
+				display: block;
+				-webkit-transition: transform 0.4s linear;
+				-moz-transition: transform 0.4s linear;
+				-ms-transition: transform 0.4s linear;
+				-o-transition: transform 0.4s linear;
+			}
+			&:hover img {
+				-webkit-opacity: 0.9;
+				-moz-opacity: 0.9;
+				opacity: 0.9;
+			}
+		}
+	}
+}
+.blog-list {
+	padding: 80px 0;
+	.container {
+		max-width: 860px;
+	}
+	.item {
+		margin-bottom: 60px;
+		.post-title {
+			margin-bottom: 15px;
+			a {
+				color: $color_pale_sky_approx;
+				&:hover {
+					color: $color_comet_approx;
+				}
+			}
+		}
+		.figure {
+			margin-bottom: 15px;
+			overflow: hidden;
+			background: $color_comet_approx;
+			text-align: center;
+			img {
+				-webkit-transition: transform 0.4s linear;
+				-moz-transition: transform 0.4s linear;
+				-ms-transition: transform 0.4s linear;
+				-o-transition: transform 0.4s linear;
+				-webkit-opacity: 1;
+				-moz-opacity: 1;
+				opacity: 1;
+				border: 1px solid $color_gallery_approx;
+				margin: 0 auto;
+			}
+			&:hover img {
+				-webkit-opacity: 0.8;
+				-moz-opacity: 0.8;
+				opacity: 0.8;
+				-webkit-transform: scale(1.1);
+				-moz-transform: scale(1.1);
+				-ms-transform: scale(1.1);
+				-o-transform: scale(1.1);
+			}
+		}
+		.meta .meta-list {
+			font-size: 14px;
+			li {
+				color: $color_mountain_mist_approx;
+				a {
+					color: $color_mountain_mist_approx;
+					&:hover {
+						color: $color_viking_approx;
+					}
+				}
+			}
+			.post-time {
+				font-size: 16px;
+				display: inline-block;
+				text-align: center;
+				padding: 5px 15px;
+				background: $color_regent_gray_approx;
+				color: $white;
+				font-family: $font_6, $font_7, $font_8, $font_2;
+				margin-bottom: 15px;
+				span {
+					display: block;
+					&.date {
+						font-family: $font_5, $font_1, $font_2;
+						font-weight: 800;
+						font-size: 26px;
+					}
+					&.month {
+						font-weight: 300;
+						text-transform: uppercase;
+						padding-top: 0;
+					}
+				}
+			}
+			.post-author {
+				margin-bottom: 5px;
+			}
+		}
+	}
+}
+.pagination {
+	margin-top: 90px;
+	> {
+		&.disabled {
+			> span {
+				color: $color_pumice_approx;
+				&:hover {
+					color: $color_pumice_approx;
+				}
+				&:focus {
+					color: $color_pumice_approx;
+				}
+			}
+			> a {
+				color: $color_pumice_approx;
+				&:hover {
+					color: $color_pumice_approx;
+				}
+				&:focus {
+					color: $color_pumice_approx;
+				}
+			}
+		}
+		&.active {
+			> a {
+				background-color: $color_bali_hai_approx;
+				border: none;
+				&:hover {
+					background-color: $color_bali_hai_approx;
+					border: none;
+				}
+				&:focus {
+					background-color: $color_bali_hai_approx;
+					border: none;
+				}
+			}
+			> span {
+				background-color: $color_bali_hai_approx;
+				border: none;
+				&:hover {
+					background-color: $color_bali_hai_approx;
+					border: none;
+				}
+				&:focus {
+					background-color: $color_bali_hai_approx;
+					border: none;
+				}
+			}
+		}
+	}
+	> li {
+		> a {
+			&:hover {
+				background-color: $color_black_squeeze_approx;
+				border: none;
+			}
+			&:focus {
+				background-color: $color_black_squeeze_approx;
+				border: none;
+			}
+		}
+		> span {
+			&:hover {
+				background-color: $color_black_squeeze_approx;
+				border: none;
+			}
+			&:focus {
+				background-color: $color_black_squeeze_approx;
+				border: none;
+			}
+		}
+		&:first-child {
+			> a {
+				@extend %extend_6;
+			}
+			> span {
+				@extend %extend_6;
+			}
+		}
+		&:last-child {
+			> a {
+				@extend %extend_6;
+			}
+			> span {
+				@extend %extend_6;
+			}
+		}
+	}
+	li a {
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		-ms-border-radius: 4px;
+		-o-border-radius: 4px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 4px;
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		//Instead of the line below you could use @include background-clip($clip)
+		background-clip: padding-box;
+		border: none;
+		margin-right: 5px;
+		color: $color_pale_sky_approx;
+		&:hover {
+			color: $color_comet_approx;
+		}
+	}
+}
+.blog-post-wrapper {
+	padding-top: 60px;
+	.title {
+		margin-bottom: 30px;
+		margin-top: 0;
+		font-size: 28px;
+		color: $color_comet_approx;
+	}
+	.meta {
+		font-size: 13px;
+		color: $color_mountain_mist_approx;
+		margin-bottom: 15px;
+		li {
+			margin-right: 0;
+		}
+		.post-comments-link {
+			a {
+				color: $color_mountain_mist_approx;
+				&:hover {
+					color: $color_viking_approx;
+				}
+			}
+			.fa {
+				margin-right: 5px;
+			}
+		}
+		.post-author a {
+			color: $color_mountain_mist_approx;
+			&:hover {
+				color: $color_viking_approx;
+			}
+		}
+	}
+	.share-container {
+		margin-bottom: 30px;
+		overflow: hidden;
+		li {
+			margin-bottom: 15px;
+		}
+	}
+	.comment-area {
+		background: $color_wild_sand_approx;
+		padding: 30px;
+		.title {
+			font-size: 22px;
+			font-family: $font_5, $font_1, $font_2;
+			font-weight: 700;
+			margin-bottom: 30px;
+		}
+		.comment-container {
+			margin-bottom: 60px;
+			.comment-item {
+				margin-bottom: 30px;
+				.comment-item-box {
+					position: relative;
+					background: $white;
+					padding: 30px;
+					padding-left: 115px;
+					margin-bottom: 15px;
+				}
+				.comment-author {
+					position: absolute;
+					left: 30px;
+					top: 30px;
+					img {
+						width: 60px;
+						height: 60px;
+					}
+				}
+				.comment-body {
+					.name {
+						color: $color_pale_sky_approx;
+						font-style: normal;
+						a {
+							color: $color_pale_sky_approx;
+							&:hover {
+								color: $color_viking_approx;
+							}
+						}
+					}
+					.time {
+						color: $color_mountain_mist_approx;
+						font-size: 13px;
+						margin-bottom: 15px;
+					}
+					.comment-reply-link {
+						padding: 5px 10px;
+						font-size: 13px;
+						background: $color_cadet_blue_approx;
+						&:hover {
+							background: $color_pale_sky_approx;
+						}
+					}
+				}
+				.children {
+					padding-left: 30px;
+				}
+			}
+		}
+		.comment-form .error {
+			color: $color_flame_pea_approx;
+			font-family: $font_1, $font_2;
+			display: block;
+			font-size: 14px;
+			text-align: left;
+			padding-top: 5px;
+			font-weight: 300;
+		}
+	}
+}
+.blog-sidebar {
+	.widget {
+		margin-bottom: 60px;
+		a {
+			color: $color_pale_sky_approx;
+			&:hover {
+				color: $color_viking_approx;
+			}
+		}
+		.title {
+			font-size: 20px;
+			margin-bottom: 30px;
+			margin-top: 0;
+			font-weight: normal;
+			color: $color_comet_approx;
+		}
+		&.recent-posts {
+			li {
+				position: relative;
+				padding-left: 60px;
+				margin-bottom: 15px;
+				border-bottom: 1px solid $color_gallery_approx;
+				padding-bottom: 15px;
+				min-height: 80px;
+			}
+			.thumb {
+				position: absolute;
+				left: 5px;
+				top: 5px;
+				width: 45px;
+				height: 45px;
+			}
+			.post-info .date {
+				color: $color_mountain_mist_approx;
+				font-size: 12px;
+				font-family: $font_6, $font_7, $font_8, $font_2;
+			}
+		}
+		ul li {
+			margin-bottom: 10px;
+			font-size: 15px;
+			.count {
+				color: $color_mountain_mist_approx;
+				font-family: $font_6, $font_7, $font_8, $font_2;
+			}
+		}
+		&.instagram .instafeed {
+			.item {
+				display: inline-block;
+				margin-right: 5px;
+			}
+			img {
+				max-width: 75px;
+				padding: 2px;
+				border: 1px solid $color_gallery_approx;
+				&:hover {
+					-webkit-opacity: 0.8;
+					-moz-opacity: 0.8;
+					opacity: 0.8;
+					background: $color_pale_sky_approx;
+				}
+			}
+		}
+	}
+	.search-blog-form {
+		.form-group {
+			display: inline-block;
+			margin-bottom: 0;
+			vertical-align: middle;
+			max-width: 168px;
+		}
+		.form-control {
+			height: 38px;
+		}
+		.btn {
+			padding: 8px 12px;
+			.fa {
+				margin-right: 0;
+			}
+		}
+	}
+}
+.post {
+	margin-bottom: 60px;
+	.content {
+		.post-title {
+			font-size: 22px;
+			a {
+				color: $color_storm_dust_approx;
+				&:hover {
+					color: $color_eastern_blue_approx;
+				}
+			}
+		}
+		.post-entry .read-more .fa {
+			margin-left: 5px;
+			position: relative;
+			top: 1px;
+		}
+	}
+}
+.blog-entry {
+	.title {
+		margin-bottom: 15px;
+		font-family: $font_5, $font_1, $font_2;
+		font-weight: 700;
+	}
+	.meta {
+		margin-bottom: 15px;
+	}
+	.post-thumb {
+		margin-bottom: 30px;
+	}
+	.custom-list-style {
+		margin-bottom: 30px;
+		li {
+			list-style: none;
+			margin-bottom: 5px;
+			.fa {
+				margin-right: 5px;
+				color: $color_viking_approx;
+			}
+		}
+	}
+	p {
+		margin-bottom: 30px;
+		line-height: 1.5;
+	}
+	.post-nav {
+		margin-bottom: 60px;
+		.nav-next {
+			float: right;
+			.fa {
+				margin-left: 5px;
+			}
+		}
+		.nav-previous .fa {
+			margin-right: 5px;
+		}
+	}
+}
+.custom-quote {
+	border-color: $color_cornflower_approx;
+	font-weight: normal;
+	font-style: italic;
+	p {
+		line-height: 1.6;
+	}
+	.fa {
+		color: $color_viking_approx;
+		margin-right: 10px;
+	}
+	.source {
+		font-style: normal;
+		.name {
+			color: $color_storm_dust_approx;
+		}
+		.title {
+			font-size: 13px;
+			color: $color_mountain_mist_approx;
+		}
+	}
+}
+.contact-section {
+	padding: 80px 0;
+	color: $color_mountain_mist_approx;
+	background: $color_wild_sand_approx;
+	.title {
+		font-size: 36px;
+		font-family: $font_5, $font_1, $font_2;
+		font-weight: 800;
+		color: $color_comet_approx;
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+	.intro {
+		max-width: 700px;
+		margin: 0 auto;
+		margin-bottom: 60px;
+		color: $color_pale_sky_approx;
+		font-weight: 300;
+		font-size: 20px;
+	}
+	.contact-info {
+		margin-bottom: 60px;
+		li {
+			margin-right: 60px;
+			margin-bottom: 30px;
+			font-family: $font_5, $font_1, $font_2;
+			a {
+				color: $color_pale_sky_approx;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		.fs1 {
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			-ms-border-radius: 50%;
+			-o-border-radius: 50%;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 50%;
+			-moz-background-clip: padding;
+			-webkit-background-clip: padding-box;
+			//Instead of the line below you could use @include background-clip($clip)
+			background-clip: padding-box;
+			color: $white;
+			width: 48px;
+			height: 48px;
+			border: 1px solid $color_pale_sky_approx;
+			color: $color_pale_sky_approx;
+			font-size: 22px;
+			padding-top: 5px;
+			display: inline-block;
+			margin-bottom: 15px;
+			text-align: center;
+		}
+		.tel .fs1 {
+			padding-top: 8px;
+		}
+	}
+	.contact-form .error {
+		color: $color_flame_pea_approx;
+		font-family: $font_1, $font_2;
+		display: block;
+		font-size: 14px;
+		text-align: left;
+		padding-top: 5px;
+		font-weight: 300;
+	}
+}
+.map-section {
+	.title {
+		font-size: 36px;
+		font-weight: 300;
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+	.gmap-wrapper {
+		position: relative;
+		.map-overlay {
+			position: absolute;
+			background: $white;
+			border: 1px solid $color_gallery_approx;
+			padding: 30px;
+			top: 30px;
+			right: 30px;
+			.title {
+				font-family: $font_5, $font_1, $font_2;
+				font-weight: 800;
+				color: $color_pale_sky_approx;
+				font-size: 20px;
+				margin-top: 0;
+				margin-bottom: 15px;
+			}
+			.address {
+				margin-bottom: 0;
+				color: $color_pale_sky_approx;
+			}
+		}
+	}
+	.gmap {
+		height: 400px;
+		text-align: left;
+		font-weight: normal;
+		@extend %extend_7;
+		* {
+			@extend %extend_7;
+			&:before {
+				@extend %extend_7;
+			}
+			&:after {
+				@extend %extend_7;
+			}
+		}
+		.title {
+			font-size: 14px;
+			font-weight: 400;
+			margin-bottom: 15px;
+			margin-top: 5px;
+		}
+		.gm-style-iw {
+			width: 150px;
+		}
+	}
+}
+.section-404 {
+	padding-top: 130px;
+	padding-bottom: 120px;
+	.title-404 {
+		font-size: 120px;
+		font-weight: 800;
+		font-family: $font_5, $font_1, $font_2;
+		color: $color_pale_sky_approx;
+	}
+	.intro {
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+}
+.modal {
+	.modal-dialog {
+		width: 760px;
+	}
+	.modal-title {
+		font-family: $font_5, $font_1, $font_2;
+		font-weight: 800;
+		font-size: 36px;
+		color: $color_comet_approx;
+		padding-top: 26px;
+	}
+	.modal-body {
+		padding: 30px 60px;
+	}
+	.modal-header {
+		border: none;
+	}
+	&.modal-contact {
+		.modal-title {
+			margin-bottom: 30px;
+		}
+		.intro {
+			padding: 0 15px;
+			margin-bottom: 15px;
+			color: $color_pale_sky_approx;
+			font-weight: 300;
+			font-size: 18px;
+		}
+		.contact-info {
+			margin-bottom: 30px;
+			li {
+				margin-right: 60px;
+				margin-bottom: 30px;
+				font-family: $font_5, $font_1, $font_2;
+				a {
+					color: $color_pale_sky_approx;
+				}
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+			.fs1 {
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				-ms-border-radius: 50%;
+				-o-border-radius: 50%;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 50%;
+				-moz-background-clip: padding;
+				-webkit-background-clip: padding-box;
+				//Instead of the line below you could use @include background-clip($clip)
+				background-clip: padding-box;
+				color: $white;
+				width: 48px;
+				height: 48px;
+				border: 1px solid $color_pale_sky_approx;
+				color: $color_pale_sky_approx;
+				font-size: 22px;
+				padding-top: 5px;
+				display: inline-block;
+				margin-bottom: 15px;
+				text-align: center;
+			}
+			.tel .fs1 {
+				padding-top: 8px;
+			}
+		}
+		.contact-form .error {
+			color: $color_flame_pea_approx;
+			font-family: $font_1, $font_2;
+			display: block;
+			font-size: 14px;
+			text-align: left;
+			padding-top: 5px;
+			padding-left: 5px;
+			font-weight: 300;
+		}
+	}
+}
+.blueimp-gallery {
+	background: $color_bunker_90_approx;
+}
+.footer {
+	.footer-content {
+		background: $color_bright_gray_approx;
+		color: $white_50;
+		padding: 30px 0;
+		padding-bottom: 30px;
+		font-size: 14px;
+		a {
+			color: $white_60;
+			&:hover {
+				color: $color_viking_approx;
+			}
+		}
+		.sub-title {
+			color: $white_90;
+			font-family: $font_5, $font_1, $font_2;
+			font-weight: 700;
+			font-size: 18px;
+			margin-bottom: 30px;
+		}
+		.contact-col {
+			.fs1 {
+				font-size: 20px;
+				margin-right: 10px;
+				line-height: 1.5;
+				vertical-align: middle;
+				color: $white_80;
+			}
+			.adr {
+				padding-left: 45px;
+				position: relative;
+				.fs1 {
+					position: absolute;
+					left: 15px;
+					top: 0;
+				}
+			}
+		}
+		.links-col li {
+			margin-bottom: 10px;
+		}
+		.blog-col .item {
+			margin-bottom: 30px;
+			position: relative;
+			padding-left: 75px;
+			padding-right: 30px;
+			.post-title {
+				font-size: 14px;
+				font-weight: 700;
+				color: $white_80;
+			}
+			.figure {
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.intro {
+				margin-bottom: 5px;
+			}
+			.meta {
+				color: $white_20;
+			}
+		}
+	}
+	.bottom-bar {
+		background: $color_tuna_approx;
+		color: $white_50;
+		padding: 15px;
+		text-align: center;
+		.copyright {
+			display: block;
+			font-size: 13px;
+			a {
+				color: $white_50;
+				&:hover {
+					color: $white_50;
+				}
+			}
+		}
+	}
+	.social-icons {
+		margin: 0 auto;
+		li {
+			margin-bottom: 15px;
+		}
+	}
+}
+.social-icons {
+	list-style: none;
+	padding: 10px 0;
+	margin: 0 auto;
+	margin-bottom: 25px;
+	display: inline-block;
+	li {
+		float: left;
+		&.last {
+			margin-right: 0;
+		}
+	}
+	a {
+		display: inline-block;
+		background: $color_trout_approx;
+		width: 36px;
+		height: 36px;
+		text-align: center;
+		padding-top: 7px;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		-ms-border-radius: 50%;
+		-o-border-radius: 50%;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 50%;
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		//Instead of the line below you could use @include background-clip($clip)
+		background-clip: padding-box;
+		font-size: 16px;
+		margin-right: 10px;
+		float: left;
+		&:hover {
+			background: $color_shuttle_gray_approx;
+			.fa {
+				color: $white;
+			}
+		}
+		.fa {
+			color: $white_60;
+			&:before {
+				font-size: 18px;
+				text-align: center;
+				padding: 0;
+			}
+		}
+	}
+}
+.config-wrapper {
+	position: absolute;
+	top: 100px;
+	right: 0;
+	z-index: 100;
+}
+.config-wrapper-inner {
+	position: relative;
+}
+.config-trigger {
+	display: block;
+	position: absolute;
+	left: -36px;
+	width: 36px;
+	height: 36px;
+	background: $color_wild_sand_approx;
+	color: $white;
+	text-align: center;
+	-webkit-border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-webkit-border-bottom-left-radius: 4px;
+	-webkit-border-top-left-radius: 4px;
+	-moz-border-radius-topright: 0;
+	-moz-border-radius-bottomright: 0;
+	-moz-border-radius-bottomleft: 4px;
+	-moz-border-radius-topleft: 4px;
+	//Instead of the line below you could use @include border-top-right-radius($radius)
+	border-top-right-radius: 0;
+	//Instead of the line below you could use @include border-bottom-right-radius($radius)
+	border-bottom-right-radius: 0;
+	//Instead of the line below you could use @include border-bottom-left-radius($radius)
+	border-bottom-left-radius: 4px;
+	//Instead of the line below you could use @include border-top-left-radius($radius)
+	border-top-left-radius: 4px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	//Instead of the line below you could use @include background-clip($clip)
+	background-clip: padding-box;
+	&:hover {
+		text-decoration: none;
+		.fs1 {
+			color: $color_comet_approx;
+		}
+	}
+	.fs1 {
+		font-size: 22px;
+		padding-top: 5px;
+		display: block;
+		color: $color_pale_sky_approx;
+	}
+}
+.config-panel {
+	width: 180px;
+	display: none;
+	background: $color_wild_sand_approx;
+	padding: 15px;
+	-webkit-border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-webkit-border-bottom-left-radius: 4px;
+	-webkit-border-top-left-radius: 0;
+	-moz-border-radius-topright: 0;
+	-moz-border-radius-bottomright: 0;
+	-moz-border-radius-bottomleft: 4px;
+	-moz-border-radius-topleft: 0;
+	//Instead of the line below you could use @include border-top-right-radius($radius)
+	border-top-right-radius: 0;
+	//Instead of the line below you could use @include border-bottom-right-radius($radius)
+	border-bottom-right-radius: 0;
+	//Instead of the line below you could use @include border-bottom-left-radius($radius)
+	border-bottom-left-radius: 4px;
+	//Instead of the line below you could use @include border-top-left-radius($radius)
+	border-top-left-radius: 0;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	//Instead of the line below you could use @include background-clip($clip)
+	background-clip: padding-box;
+	h5 {
+		margin-bottom: 15px;
+		color: $color_pale_sky_approx;
+	}
+	#color-options {
+		margin-bottom: 10px;
+		li {
+			padding-right: 0;
+			a {
+				display: block;
+				width: 20px;
+				height: 20px;
+				border: 2px solid transparent;
+				&:hover {
+					-webkit-opacity: 0.9;
+					-moz-opacity: 0.9;
+					opacity: 0.9;
+					border: 2px solid $black_40;
+				}
+			}
+			&.active a {
+				border: 2px solid $black_40;
+			}
+			&.theme-1 a {
+				background: $color_viking_approx;
+			}
+			&.theme-2 a {
+				background-color: $color_pastel_green_approx;
+			}
+			&.theme-3 a {
+				background-color: $color_java_approx;
+			}
+			&.theme-4 a {
+				background-color: $color_mulberry_approx;
+			}
+			&.theme-5 a {
+				background-color: $color_chenin_approx;
+			}
+			&.theme-6 a {
+				background-color: $color_japonica_approx;
+			}
+			&.theme-7 a {
+				background-color: $color_puerto_rico_approx;
+			}
+			&.theme-8 a {
+				background-color: $color_vista_blue_approx;
+			}
+			&.theme-9 a {
+				background-color: $color_harvest_gold_approx;
+			}
+			&.theme-10 a {
+				background-color: $color_eastern_blue_approx;
+			}
+		}
+	}
+	.close {
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		color: $white;
+		.fa {
+			color: $color_pale_sky_approx;
+		}
+	}
+}
+@media(max-width: 767px) {
+	.config-wrapper {
+		display: none;
+	}
+	.header {
+		padding: 0 inherit;
+		h1.logo {
+			font-size: 20px;
+			line-height: 2.4;
+		}
+		.main-nav .nav {
+			.nav-item {
+				margin-right: 0;
+			}
+			.dropdown-menu {
+				-webkit-border-radius: 0;
+				-moz-border-radius: 0;
+				-ms-border-radius: 0;
+				-o-border-radius: 0;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 0;
+				-moz-background-clip: padding;
+				-webkit-background-clip: padding-box;
+				//Instead of the line below you could use @include background-clip($clip)
+				background-clip: padding-box;
+				width: 100%;
+				padding: 0;
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+	.navbar-collapse {
+		border-top: none;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: none;
+		width: 100%;
+		left: 0;
+		top: 48px;
+		position: absolute;
+		background: $color_trout_approx;
+		z-index: 45;
+		.nav {
+			margin: 0;
+		}
+	}
+	.header-wrapper-home {
+		min-height: 560px;
+		min-height: 460px;
+	}
+	.home-promo {
+		padding-top: 80px;
+		.title {
+			span {
+				font-size: 22px;
+			}
+			.middle {
+				font-size: 36px;
+			}
+			.bottom {
+				font-size: 22px;
+			}
+		}
+	}
+	.promo {
+		padding-top: 100px;
+		.title .middle {
+			font-size: 38px;
+		}
+	}
+	.modal {
+		.modal-dialog {
+			width: auto;
+			.intro {
+				font-size: 16px;
+			}
+		}
+		&.modal-contact {
+			.modal-title {
+				font-size: 22px;
+			}
+			.contact-info li {
+				margin-right: 0;
+			}
+		}
+		.modal-body {
+			padding: 15px 30px;
+		}
+	}
+	.bg-slider-wrapper {
+		height: 460px;
+		.flexslider .slide {
+			height: 460px;
+		}
+	}
+	.section-404 {
+		.title-404 {
+			font-size: 80px;
+		}
+		.intro {
+			font-size: 20px;
+		}
+	}
+	body.no-header-wrapper {
+		padding-top: 50px;
+	}
+	.navbar-fixed-top .navbar-collapse {
+		max-height: inherit;
+	}
+	.navbar-fixed-bottom .navbar-collapse {
+		max-height: inherit;
+	}
+	.nav-tabs > li > a {
+		padding: 10px 5px;
+	}
+	.main-nav .navbar-collapse .navbar-nav {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.section .title {
+		font-size: 26px;
+	}
+	.testimonials .item .meta .name {
+		max-width: none;
+	}
+	.cta-section .contact-info {
+		font-size: 20px;
+	}
+	.blog-list .item {
+		.post-title {
+			font-size: 22px;
+		}
+		.meta .meta-list {
+			text-align: left;
+			li {
+				display: inline-block;
+				margin-right: 5px;
+			}
+			.post-time {
+				font-size: 11px;
+				padding: 5px 10px;
+				margin-right: 5px;
+				span.date {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	.blog-post-wrapper .comment-area .comment-container .comment-item {
+		.comment-author {
+			top: 15px;
+			left: 15px;
+			img {
+				width: 35px;
+				height: 35px;
+			}
+		}
+		.comment-item-box {
+			padding: 15px;
+			padding-left: 65px;
+		}
+		.children {
+			padding-left: 15px;
+		}
+	}
+	.contact-section .contact-info li {
+		margin-right: 0;
+	}
+}
+@media(min-width: 768px) {
+	.config-wrapper {
+		display: none;
+	}
+	.header .main-nav .nav .nav-item {
+		margin-right: 10px;
+	}
+	.modal .modal-dialog {
+		width: 660px;
+	}
+	.latest-work .item .figure-container a {
+		min-height: 440px;
+	}
+}
+@media(min-width: 992px) {
+	.config-wrapper {
+		display: block;
+	}
+	.header-wrapper-home {
+		height: 650px;
+	}
+	.main-nav {
+		float: right !important;
+		&.navbar-right {
+			float: right !important;
+		}
+	}
+	.header {
+		h1.logo {
+			float: left;
+			margin: inherit;
+		}
+		.main-nav .nav .nav-item {
+			margin-right: 15px;
+		}
+	}
+	.navbar-form .form-control {
+		width: 280px;
+	}
+	.navbar-fixed-top .navbar-collapse {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.testimonials .item .meta {
+		.name {
+			max-width: 300px;
+		}
+		.client-logo {
+			max-width: none;
+		}
+	}
+	.modal .modal-dialog {
+		width: 760px;
+	}
+	.latest-work .item .figure-container a {
+		min-height: 440px;
+	}
+}
+@media(min-width: 1200px) {
+	.latest-work .item .figure-container a {
+		min-height: 520px;
+	}
+}
+.video-container iframe {
+	max-width: 100%;
+}
+.nav .open > a {
+	background: none;
+	&:hover {
+		background: none;
+	}
+	&:focus {
+		background: none;
+	}
+}
+.owl-theme .owl-controls {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	.owl-page span {
+		background: $color_pale_sky_approx;
+	}
+	.owl-buttons div {
+		background: $color_pale_sky_approx;
+		&:hover {
+			background: $color_regent_gray_approx;
+		}
+	}
+}
