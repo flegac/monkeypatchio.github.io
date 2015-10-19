@@ -2,15 +2,15 @@
 	"locale-code": "en",
     "home": {
       "who-we-are": "Who we are",
-      "home.intro": "We are a team of It experts. We are specialised in cloud, mobile and database.",
-      "home.skilled": "Skilled team",
-      "home.skilled-desc": "Tell your potential client why they should choose your service and how you are different from your competitors.",
-      "home.agile":"Agile approach",
-      "home.agile-desc":"Tell your potential client why they should choose your service and how you are different from your competitors.",
-      "home.quality":"High quality code",
-      "home.quality-desc":"Tell your potential client why they should choose your service and how you are different from your competitors.",
-      "home.overheads":"No overheads",
-      "home.overheads-desc":"Tell your potential client why they should choose your service and how you are different from your competitors.",
-      "home.more":"More about us"
+      "intro": "We are a team of It experts. We are specialised in cloud, mobile and database.",
+      "skilled": "Skilled team",
+      "skilled-desc": "Tell your potential client why they should choose your service and how you are different from your competitors.",
+      "agile":"Agile approach",
+      "agile-desc":"Tell your potential client why they should choose your service and how you are different from your competitors.",
+      "quality":"High quality code",
+      "quality-desc":"Tell your potential client why they should choose your service and how you are different from your competitors.",
+      "overheads":"No overheads",
+      "overheads-desc":"Tell your potential client why they should choose your service and how you are different from your competitors.",
+      "more":"More about us"
     }
 }
