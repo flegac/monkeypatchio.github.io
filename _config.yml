@@ -3,7 +3,7 @@ markdown:        redcarpet
 
 #Sass
 sass:
-    sass_dir:    _sass
+    sass_dir:     _scss
     style:       :compressed
 
 highlighter:     pygments
