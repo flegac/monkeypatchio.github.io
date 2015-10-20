@@ -37,6 +37,8 @@ $(document).ready(function() {
          }
     }); 
 
+    /* I18N management */
+
     $.i18n.init({
         lng: 'en',
         resGetPath: 'public/locales/__lng__/__ns__.json',
@@ -46,5 +48,17 @@ $(document).ready(function() {
         fallbackLng: 'en'
     }, function(t) {
         $('body').i18n();
+    });
+
+    $('#languageEn').click(function() {
+        $.i18n.setLng("en", function(t) {
+          $('body').i18n();
+        });
+    });
+
+    $('#languageFr').click(function() {
+        $.i18n.setLng("fr", function(t) {
+          $('body').i18n();
+        });
     });
 });
