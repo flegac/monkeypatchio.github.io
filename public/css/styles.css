@@ -2470,13 +2470,15 @@ body.no-header-wrapper {
 	width:60%;
 }
 
-.header .main-nav .nav .nav-item > li.locale-item {
+/** Locales */
+.header .main-nav .nav > li.locale-item {
   margin-right:0px;
   margin-left:0px;
 }
 
-.header .main-nav .nav .nav-item > li.locale-item > li.locale-item a > a {
+.header .main-nav .nav > li.locale-item > a {
   padding-right:2px;
   padding-left:2px;
+  font-weight:normal;
 }
 
