@@ -25,5 +25,8 @@
     	"email":"FR:Email address",
     	"message":"FR:Your message",
     	"send":"FR:Send Message"
+    },
+    "careers":{
+        "in-progress":"En construction"
     }
 }

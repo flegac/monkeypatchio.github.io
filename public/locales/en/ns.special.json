@@ -25,5 +25,8 @@
     	"email":"Email address",
     	"message":"Your message",
     	"send":"Send Message"
+    },
+    "careers":{
+        "in-progress":"In Progress"
     }
 }
