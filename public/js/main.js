@@ -55,7 +55,7 @@ $(document).ready(function() {
         $.i18n.setLng("en", function(t) {
           $('#languageFr').removeClass("active");
           $('#languageEn').addClass("active");
-         $.cookie('name', 'value');
+          $.cookie('i18next', 'en');
           $('body').i18n();
         });
     });
@@ -64,7 +64,7 @@ $(document).ready(function() {
         $.i18n.setLng("fr", function(t) {
           $('#languageEn').removeClass("active");
           $('#languageFr').addClass("active");
-         $.cookie('name', 'value');
+          $.cookie('i18next', 'fr');
           $('body').i18n();
         });
     });
