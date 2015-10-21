@@ -43,7 +43,7 @@ $(document).ready(function() {
         lng: 'en',
         resGetPath: 'public/locales/__lng__/__ns__.json',
         ns: { namespaces: ['ns.common', 'ns.special'], defaultNs: 'ns.special'},
-        useLocalStorage: false,
+        useLocalStorage: true,
         debug: false,
         useCookie: true,
         fallbackLng: 'en'
