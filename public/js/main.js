@@ -52,8 +52,6 @@ $(document).ready(function() {
 
     $('#changeLocaleToEn').click(function() {
         $.i18n.setLng("en", function(t) {
-          $('#languageFr').removeClass("active");
-          $('#languageEn').addClass("active");
           $.cookie('i18next', 'en');
           $('body').i18n();
         });
@@ -61,8 +59,8 @@ $(document).ready(function() {
 
     $('#changeLocaleToFr').click(function() {
         $.i18n.setLng("fr", function(t) {
-          $('#languageEn').removeClass("active");
-          $('#languageFr').addClass("active");
+          //$('#languageEn').removeClass("active");
+          //$('#languageFr').addClass("active");
           $.cookie('i18next', 'fr');
           $('body').i18n();
         });
