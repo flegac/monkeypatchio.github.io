@@ -6,7 +6,7 @@
 <script type="text/javascript" src="{{ site.baseurl }}/public/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
 <script type="text/javascript" src="{{ site.baseurl }}/public/plugins/FitVids/jquery.fitvids.js"></script>
 <!-- Jquery cookie -->   
-<link rel="stylesheet" href="{{ site.baseurl }}/public/js/jquery.cookie.js">
+<script type="text/javascript" src="{{ site.baseurl }}/public/js/jquery.cookie.js"></script>
 <!-- i18n -->
 <script src="{{ site.baseurl }}/public/js/min/i18next.js"></script>
 <script type="text/javascript" src="{{ site.baseurl }}/public/js/main.js"></script>
