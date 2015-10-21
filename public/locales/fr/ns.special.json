@@ -1,5 +1,11 @@
 {
 	"locale-code":"fr",
+  "titles":{
+    "home":"Home",
+    "about":"A propos de nous",
+    "contact":"Contact",
+    "careers":"Carrières"
+  },
   "home": {
     "tagline1":"Ensemble, nous",
     "tagline2":"Changeons les idées en innovations",

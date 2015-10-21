@@ -1,5 +1,11 @@
 {
 	"locale-code": "en",
+  "titles":{
+    "home":"Home",
+    "about":"About us",
+    "contact":"Contact",
+    "careers":"Careers"
+  },
   "home": {
     "tagline1":"Together, we",
     "tagline2":"Convert ideas into innovations",
