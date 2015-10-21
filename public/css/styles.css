@@ -2470,12 +2470,12 @@ body.no-header-wrapper {
 	width:60%;
 }
 
-.header.locale-item{
+.navbar-nav > li.locale-item {
   margin-right:0px;
   margin-left:0px;
 }
 
-.header.locale-item a{
+.navbar-nav > li.locale-item a > a {
   padding-right:2px;
   padding-left:2px;
 }
