@@ -22,7 +22,7 @@
 					{% for group in (1..10) %}
 						{% for node in sorted_pages  %}
 				      		{% if group == node.group %}
-				      			{% if node.title == page.title %}
+				      			{% if node.key-title == page.key-title %}
 									<li class="active nav-item">
 								{% else %}
 									<li class="nav-item">
