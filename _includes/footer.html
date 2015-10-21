@@ -5,14 +5,14 @@
 			<div class="row">
 				<div class="footer-col col-md-3 col-sm-4 links-col">
 					<div class="footer-col-inner">
-						<h3 class="sub-title">Quick Links</h3>
+						<h3 class="sub-title" data-i18n="general.quick-links"></h3>
 						<ul class="list-unstyled">
 
 						{% assign sorted_pages = site.pages %}
 						{% for group in (1..10) %}
 							{% for node in sorted_pages  %}
 					      		{% if group == node.group %}
-									<li><a href="{{node.url}}">{{node.title}}</a></li>
+									<li><a href="{{node.url}}" data-i18n="titles.{{node.key-title}}"></a></li>
 								{% endif %}
 							{% endfor %}
 						{% endfor %}
@@ -22,7 +22,7 @@
 				</div><!--//foooter-col-->
 				<div class="footer-col col-md-3 col-sm-12 contact-col">
 					<div class="footer-col-inner">
-						<h3 class="sub-title">Get In Touch</h3>
+						<h3 class="sub-title" data-i18n="general.get-in-touch"></h3>
 						<p class="intro"></p>
 						<div class="row">
 							<p class="adr clearfix col-md-12 col-sm-4">
