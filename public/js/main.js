@@ -55,7 +55,7 @@ $(document).ready(function() {
         $.i18n.setLng("en", function(t) {
           $('#languageFr').removeClass("active");
           $('#languageEn').addClass("active");
-           cookie.create('i18next', "en");
+          $.cookie.create('i18next', "en");
           $('body').i18n();
         });
     });
