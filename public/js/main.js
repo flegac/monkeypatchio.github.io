@@ -40,7 +40,6 @@ $(document).ready(function() {
     /* I18N management */
 
     $.i18n.init({
-        lng: 'en',
         resGetPath: 'public/locales/__lng__/__ns__.json',
         ns: { namespaces: ['ns.special'], defaultNs: 'ns.special'},
         useLocalStorage: true,
