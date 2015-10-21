@@ -1,6 +1,8 @@
 {
 	"locale-code": "en",
     "home": {
+      "tagline1":"Together, we",
+      "tagline2":"Convert ideas into innovations",
       "who-we-are": "Who we are",
       "intro": "We are a team of It experts. We are specialised in cloud, mobile and database.",
       "skilled": "Skilled team",

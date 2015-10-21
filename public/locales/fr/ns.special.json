@@ -1,6 +1,8 @@
 {
 	"locale-code":"fr",
     "home": {
+      "tagline1":"Ensemble, nous",
+      "tagline2":"Changeons les idées en innovations",
       "who-we-are":"FR:Who we are",
       "intro":"FR:We are a team of It experts. We are specialised in cloud, mobile and database.",
       "skilled":"FR:Skilled team",
