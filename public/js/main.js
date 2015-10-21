@@ -45,6 +45,7 @@ $(document).ready(function() {
         ns: { namespaces: ['ns.common', 'ns.special'], defaultNs: 'ns.special'},
         useLocalStorage: false,
         debug: false,
+        useCookie: true,
         fallbackLng: 'en'
     }, function(t) {
         $('body').i18n();
@@ -54,6 +55,7 @@ $(document).ready(function() {
         $.i18n.setLng("en", function(t) {
           $('#languageFr').removeClass("active");
           $('#languageEn').addClass("active");
+           cookie.create('i18next', "en");
           $('body').i18n();
         });
     });
@@ -62,6 +64,7 @@ $(document).ready(function() {
         $.i18n.setLng("fr", function(t) {
           $('#languageEn').removeClass("active");
           $('#languageFr').addClass("active");
+          $.cookie.create('i18next', "fr");
           $('body').i18n();
         });
     });
