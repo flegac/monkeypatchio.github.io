@@ -18,7 +18,7 @@ baseurl:
 author:
     name:        Emmanuel Vinas
     url:         https://twitter.com/EmmanuelVinas
-    email:       emmanuel@monkeypatch.io
+    email:       contact@monkeypatch.io
 
 # Custom vars
 version:         1.0.0
