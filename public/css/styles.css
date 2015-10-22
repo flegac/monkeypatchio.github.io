@@ -268,7 +268,7 @@ body.no-header-wrapper {
   width: 100%;
   z-index: 40;
   padding: 15px inherit;
-  background: rgba(48, 56, 67, 0.9);
+  background: rgba(3, 169, 244, 0.9);
   -webkit-transition: padding 0.6s ease-in-out;
   -moz-transition: padding 0.6s ease-in-out;
   -ms-transition: padding 0.6s ease-in-out;
@@ -933,7 +933,7 @@ body.no-header-wrapper {
   top: 0;
   left: 0;
   text-align: center;
-  background: rgba(48, 56, 67, 0.9);
+  background: rgba(3, 169, 244, 0.9);
 }
 .work-list .item .figure .info-mask span {
   display: block;
