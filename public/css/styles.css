@@ -2088,7 +2088,7 @@ body.no-header-wrapper {
 }
 .social-icons a {
   display: inline-block;
-  background: #455061;
+  background: #FFFFFF;
   width: 36px;
   height: 36px;
   text-align: center;
@@ -2118,6 +2118,7 @@ body.no-header-wrapper {
   font-size: 18px;
   text-align: center;
   padding: 0;
+  color: #0288d1;
 }
 /* ======= Configure Style (REMOVE ON YOUR PRODUCTION SITE) ======= */
 .config-wrapper {
