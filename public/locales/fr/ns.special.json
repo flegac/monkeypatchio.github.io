@@ -4,7 +4,8 @@
     "home":"Home",
     "about":"A propos de nous",
     "contact":"Contact",
-    "careers":"Carrières"
+    "careers":"Carrières",
+    "terms":"Terms and Conditions"
   },
   "general":{
     "talk-to-us":"Nous contacter",
@@ -39,5 +40,8 @@
   },
   "careers": {
     "in-progress":"En construction"
+  },
+  "terms": {
+    "terms":"In progress T&C"
   }
 }
