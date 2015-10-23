@@ -54,13 +54,13 @@ a.btn-cta,
 }
 a.btn-cta-primary,
 .btn-cta-primary {
-  background: #eea740;
+  background: #0288D1;
   border: none;
   color: #fff;
 }
 a.btn-cta-primary:hover,
 .btn-cta-primary:hover {
-  background: #ec9c29;
+  background: #026CA6;
   border: none;
   color: #fff;
 }
@@ -791,10 +791,10 @@ body.no-header-wrapper {
   font-weight: 800;
 }
 .cta-section .contact-info a {
-  color: #86cde5;
+  color: #03A9F4;
 }
 .cta-section .contact-info a:hover {
-  color: #71c4e0;
+  color: #0288D1;
 }
 /* ======= Latest blog posts ======= */
 .latest-blog {
