@@ -39,7 +39,8 @@
   	"send":"Send Message"
   },
   "careers": {
-    "in-progress":"In Progress"
+    "title":"In Progress",
+    "subtitle":"subtitle"
   },
   "terms": {
     "terms":"In progress T&C"
