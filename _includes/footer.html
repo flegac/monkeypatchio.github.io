@@ -29,10 +29,13 @@
 								<span class="fs1" aria-hidden="true" data-icon="&#xe01d;"></span>        
 								<span class="adr-group">       
 									<span class="street-address">{{ site.contact.address }}</span><br />
-									<span class="city">{{ site.contact.city }}</span><br />
-									<span class="postal-code">{{ site.contact.postcode }}</span><br />
+									<span class="postal-code">{{ site.contact.postcode }}, </span><span class="city">{{ site.contact.city }}</span><br />
 									<span class="country-name">{{ site.contact.country }}</span>
 								</span>
+								<ul class="social-icons list-inline">
+									<li><a href="https://twitter.com/monkeypatchfr"><i class="fa fa-twitter"></i></a></li>                        
+									<li><a href="https://linkedin.com/in/monkeypatch"><i class="fa fa-linkedin"></i></a></li>
+								</ul> 
 							</p>
 							<p class="tel col-md-12 col-sm-4"><span class="fs1" aria-hidden="true" data-icon="&#x77;"></span><a href="tel:+{{ site.contact.tel }}">{{ site.contact.tel }}</a></p>
 							<p class="email col-md-12 col-sm-4"><span class="fs1" aria-hidden="true" data-icon="&#xe010;"></span><a href="mailto:{{ site.contact.mail }}">{{ site.contact.mail }}</a></p> 
@@ -44,10 +47,7 @@
 	</div><!--//footer-content-->
 	<div class="bottom-bar">
 		<div class="container center">                                   
-			<ul class="social-icons list-inline">
-				<li><a href="https://twitter.com/monkeypatchfr"><i class="fa fa-twitter"></i></a></li>                        
-				<li><a href="https://linkedin.com/in/monkeypatch"><i class="fa fa-linkedin"></i></a></li>
-			</ul> 
+			
 			<small class="copyright text-center">Copyright @ 2015 MonkeyPatch</small>                 
 		</div><!--//container-->
 	</div><!--//bottom-bar-->
