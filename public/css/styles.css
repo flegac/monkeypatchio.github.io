@@ -331,7 +331,7 @@ body.no-header-wrapper {
   margin-right: 15px;
 }
 .header .main-nav .nav .nav-item.active > a {
-  color: #71c4e0;
+  color: #013D5C;
   background: none;
   font-weight: bold;
 }
@@ -339,7 +339,7 @@ body.no-header-wrapper {
   color: #fff;
 }
 .header .main-nav .nav .nav-item a:hover {
-  color: #71c4e0;
+  color: #026CA6;
   background: none;
 }
 .header .main-nav .nav .nav-item a:focus {
