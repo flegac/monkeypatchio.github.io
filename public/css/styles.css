@@ -2071,7 +2071,7 @@ body.no-header-wrapper {
   margin: 0 auto;
 }
 .footer .social-icons li {
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 .social-icons {
   list-style: none;
