@@ -1313,6 +1313,10 @@ body.no-header-wrapper {
   padding-bottom: 10px;
 }
 
+.careers .item .item-inner .info >p {
+  margin-bottom: 3px;
+}
+
 .join-us {
   padding: 80px 0;
   background: #f5f5f5;
