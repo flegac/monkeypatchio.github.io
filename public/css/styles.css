@@ -1310,11 +1310,11 @@ body.no-header-wrapper {
 }
 
 .careers .item .item-inner {
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 
 .careers .item .info{
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 .careers .item .item-inner .info >p {
