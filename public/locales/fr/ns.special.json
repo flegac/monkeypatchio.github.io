@@ -42,7 +42,7 @@
     "front-end":"Front-end",
     "front-end-desc":"Véritable vitrine du Web. Pivot entre le Design (UI/UX) et le Back-End, il est en charge de créer des interfaces claires et simples pour l'utilisateur. Le responsive design n’a plus de secret pour lui. Jongleur entre les librairies Javascript les plus récentes, il excelle également dans la mise en page html5 et css.",
     "back-end":"Back-end",
-    "back-end-desc":"Sans lui, nombreux projets web ou mobiles ne seraient qu'une coquille vide. Alors qu'il travaille souvent sur des éléments invisible à l'utilisateur, il peut se vanter d'être indispensable. Il maitrise les bases de données sql ou NoSql, les notions de sécurité.",
+    "back-end-desc":"Sans lui, nombreux projets web ou mobiles ne seraient qu'une coquille vide. Alors qu'il travaille souvent sur des éléments invisible à l'utilisateur, il peut se vanter d'être indispensable. Il maîtrise les bases de données sql ou NoSql, ainsi que divers language tel que Java, Ruby, .net",
     "mobile":"Mobile",
     "mobile-desc":"Toujours scotché à son smartphone, il maitrise parfaitement les règles et optimisations du développement mobile. Il réalise des applications en prenant soin des détails afin que l'expérience utilisateur soit la plus satisaisante.",
     "devops":"Dev Ops",
