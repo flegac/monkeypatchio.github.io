@@ -1313,9 +1313,15 @@ body.no-header-wrapper {
   padding-bottom: 10px;
 }
 
+.careers .item .info{
+    margin-bottom: 5px;
+}
+
 .careers .item .item-inner .info >p {
   margin-bottom: 0px;
 }
+
+
 
 .join-us {
   padding: 80px 0;
