@@ -2,15 +2,18 @@
 	"locale-code": "en",
   "titles":{
     "home":"Home",
-    "about":"About us",
+    "expert":"Our expertise",
+    "about":"Our thoughts",
+    "careers":"Be a Monkey",
+    "jobs":"Our Jobs",
     "contact":"Contact",
-    "careers":"Careers",
     "terms":"Terms and Conditions"
   },
   "general":{
     "talk-to-us":"Talk to us",
     "get-in-touch":"Get In Touch",
-    "quick-links":"Quick Links"
+    "quick-links":"Quick Links",
+    "in-progress":"In Progress"
   },
   "home": {
     "tagline1":"Together, we",
@@ -54,5 +57,8 @@
   },
   "terms": {
     "terms":"In progress T&C"
+  },
+  "jobs":{
+
   }
 }

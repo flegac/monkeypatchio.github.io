@@ -2,21 +2,24 @@
 	"locale-code":"fr",
   "titles":{
     "home":"Home",
-    "about":"A propos de nous",
+    "expert":"Notre Expertise",
+    "about":"Notre Philo",
+    "careers":"Être Monkeys",
+    "jobs":"Nos Jobs",
     "contact":"Contact",
-    "careers":"Carrières",
     "terms":"Terms and Conditions"
   },
   "general":{
     "talk-to-us":"Nous contacter",
     "get-in-touch":"Rester en contact",
-    "quick-links":"Quick Links"
+    "quick-links":"Quick Links",
+    "in-progress":"En Construction"
   },
   "home": {
     "tagline1":"Ensemble",
     "tagline2":"Changeons les idées en innovations",
-    "who-we-are":"FR:Who we are",
-    "intro":"FR:We are a team of It experts. We are specialised in cloud, mobile and database.",
+    "who-we-are":"Qui nous sommes",
+    "intro":"Nous sommes une équipe d'experts spécialisés dans le web, mobile et le cloud.",
     "skilled":"FR:Skilled team",
     "skilled-desc":"FR:Tell your potential client why they should choose your service and how you are different from your competitors.",
     "agile":"FR:Agile approach",
@@ -37,7 +40,7 @@
   	"send":"FR:Send Message"
   },
   "careers": {
-    "title":"In Progress",
+    "title":"Careers",
     "subtitle":"subtitle",
     "front-end":"Front-end",
     "front-end-desc":"Pivot entre le Design (UI/UX) et le Back-End, il est en charge de créer des interfaces claires et simples pour l'utilisateur. Le responsive design n’a plus de secret pour lui.Jongleur entre les librairies Javascript les plus récentes, il excelle également dans la mise en page html5 et css.",
@@ -54,5 +57,8 @@
   },
   "terms": {
     "terms":"In progress T&C"
+  },
+  "jobs":{
+
   }
 }
