@@ -48,7 +48,9 @@
     "devops":"Dev Ops",
     "devops-desc":"A cheval entre le développeur et l'administrateur système, il améliore la performance et la sécurité en ayant cette double compétence. Il s'assure que les applications fonctionnement aussi bien en développement qu'en production. Capable de maitriser différents langages, ils saura configurer n'importe quelle application déployée dans le cloud",
     "ux-ui":"UI/UX",
-    "ux-ui-desc":"Il a pour mission d'améliorer l’usage utilisateur et est en charge de la conception générale de l'interface, de la clarté et de la navigabilité. Il a connaissance des dernières tendaces du design web et mobile"
+    "ux-ui-desc":"Il a pour mission d'améliorer l’usage utilisateur et est en charge de la conception générale de l'interface, de la clarté et de la navigabilité. Il a connaissance des dernières tendaces du design web et mobile",
+    "secu":"Securité",
+    "secu-desc":"il étudie le système d'information dans sa globalité et propose des moyens pour sécurisé à la fois les données et les applications. Il permet à l'entreprise de contrer les attaques et protège la confidentialité. Les dernières méthodes de hacking ne sont pas un secret pour lui, et il sait comment s'en protéger."
   },
   "terms": {
     "terms":"In progress T&C"
