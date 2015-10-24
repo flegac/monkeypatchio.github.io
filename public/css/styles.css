@@ -1308,6 +1308,11 @@ body.no-header-wrapper {
   font-size: 18px;
   color: #fff;
 }
+
+.careers .item .item-inner {
+  padding-bottom: 10px;
+}
+
 .join-us {
   padding: 80px 0;
   background: #f5f5f5;
