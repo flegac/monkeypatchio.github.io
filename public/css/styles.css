@@ -54,13 +54,13 @@ a.btn-cta,
 }
 a.btn-cta-primary,
 .btn-cta-primary {
-  background: #eea740;
+  background: #0288D1;
   border: none;
   color: #fff;
 }
 a.btn-cta-primary:hover,
 .btn-cta-primary:hover {
-  background: #ec9c29;
+  background: #026CA6;
   border: none;
   color: #fff;
 }
@@ -331,7 +331,7 @@ body.no-header-wrapper {
   margin-right: 15px;
 }
 .header .main-nav .nav .nav-item.active > a {
-  color: #71c4e0;
+  color: #013D5C;
   background: none;
   font-weight: bold;
 }
@@ -339,7 +339,7 @@ body.no-header-wrapper {
   color: #fff;
 }
 .header .main-nav .nav .nav-item a:hover {
-  color: #71c4e0;
+  color: #026CA6;
   background: none;
 }
 .header .main-nav .nav .nav-item a:focus {
@@ -468,7 +468,7 @@ body.no-header-wrapper {
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 56px;
-  color: #71c4e0;
+  color: #2ebcfc;
 }
 .home-promo .title .bottom {
   font-family: 'Merriweather Sans', arial, sans-serif;
@@ -797,10 +797,10 @@ body.no-header-wrapper {
   font-weight: 800;
 }
 .cta-section .contact-info a {
-  color: #86cde5;
+  color: #1CB1F5;
 }
 .cta-section .contact-info a:hover {
-  color: #71c4e0;
+  color: #0BA7F2;
 }
 /* ======= Latest blog posts ======= */
 .latest-blog {
@@ -1992,7 +1992,7 @@ body.no-header-wrapper {
 /* ======= Footer ======= */
 .footer .footer-content {
   background: #0288D1;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
   padding: 30px 0;
   padding-bottom: 30px;
   font-size: 14px;
@@ -2071,7 +2071,7 @@ body.no-header-wrapper {
   margin: 0 auto;
 }
 .footer .social-icons li {
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 .social-icons {
   list-style: none;

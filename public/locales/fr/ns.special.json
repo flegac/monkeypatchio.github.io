@@ -4,7 +4,8 @@
     "home":"Home",
     "about":"A propos de nous",
     "contact":"Contact",
-    "careers":"Carrières"
+    "careers":"Carrières",
+    "terms":"Terms and Conditions"
   },
   "general":{
     "talk-to-us":"Nous contacter",
@@ -12,7 +13,7 @@
     "quick-links":"Quick Links"
   },
   "home": {
-    "tagline1":"Ensemble, nous",
+    "tagline1":"Ensemble",
     "tagline2":"Changeons les idées en innovations",
     "who-we-are":"FR:Who we are",
     "intro":"FR:We are a team of It experts. We are specialised in cloud, mobile and database.",
@@ -37,5 +38,8 @@
   },
   "careers": {
     "in-progress":"En construction"
+  },
+  "terms": {
+    "terms":"In progress T&C"
   }
 }

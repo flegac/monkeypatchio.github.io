@@ -4,7 +4,8 @@
     "home":"Home",
     "about":"About us",
     "contact":"Contact",
-    "careers":"Careers"
+    "careers":"Careers",
+    "terms":"Terms and Conditions"
   },
   "general":{
     "talk-to-us":"Talk to us",
@@ -36,6 +37,10 @@
   	"send":"Send Message"
   },
   "careers": {
-    "in-progress":"In Progress"
+    "title":"In Progress",
+    "subtitle":"subtitle"
+  },
+  "terms": {
+    "terms":"In progress T&C"
   }
 }
