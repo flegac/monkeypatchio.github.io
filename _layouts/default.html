@@ -1,4 +1,3 @@
-   {% include head.html %}
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
@@ -13,9 +12,17 @@
 
 		{% include footer.html %}
 
-		{% for jsInc in page.js_include %}
-			{% include {{ jsInc[1] }} %}
-		{% endfor %}
+		<!-- include js -->
+		{% include libraries.js %}
+
+		{% if page.jsinclude %}
+			{% for jsInc in page.jsinclude %}
+				{% assign js = {{jsInc[1]}} %}
+				{% include {{js}} %}
+			{% endfor %}
+		{%endif %}
+
+		<script type="text/javascript" src="{{ site.baseurl }}/public/js/main.js"></script>
   </body>
 </html>
 

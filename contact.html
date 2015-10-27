@@ -5,15 +5,16 @@ group: 5
 body-class: contact-page
 header-class: header-wrapper-contact
 promo: contact_promo.html
-js_include:
-   map: js_map.html
+jsinclude:
+   map: libraries-maps.js
+   form: libraries-form.js
 ---
 <!-- ******Contact Section****** --> 
 <section class="contact-section section">
     <div class="container">
         <h2 class="title text-center">Start your project today</h2>
         <p class="intro text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet tortor consequat nisi scelerisque commodo etiam justo sapien.</p>
-        <div class="gmap" id="map"></div><!--//map-->
+        
         <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12">
                 <ul class="contact-info list-inline text-center">
@@ -23,8 +24,7 @@ js_include:
                 {% include contact_form.html %}
             </div><!-- // col -->
             <div class="col-md-6 col-sm-6 col-xs-12">
-                
-                
+                <div class="gmap" id="map"></div><!--//map-->
             </div><!-- // col -->
         </div><!--//row-->
     </div><!--//container-->

@@ -9,4 +9,3 @@
 <script type="text/javascript" src="{{ site.baseurl }}/public/js/jquery.cookie.js"></script>
 <!-- i18n -->
 <script type="text/javascript" src="{{ site.baseurl }}/public/js/min/i18next.js"></script>
-<script type="text/javascript" src="{{ site.baseurl }}/public/js/main.js"></script>
