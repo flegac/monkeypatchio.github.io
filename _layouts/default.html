@@ -12,6 +12,10 @@
 	    {{ content }}
 
 		{% include footer.html %}
+
+		{% for jsInc in page.js_include %}
+			{% include {{ jsInc[1] }} %}
+		{% endfor %}
   </body>
 </html>
 
