@@ -15,6 +15,7 @@ $(document).ready(function() {
      $('#services .item-inner').matchHeight();
      $('#team .item-inner').matchHeight();
      $('#careers .item-inner').matchHeight();
+     $('#offers .item-inner').matchHeight();
      
     /* ======= jQuery Placeholder ======= */
     /* Ref: https://github.com/mathiasbynens/jquery-placeholder */
