@@ -6,7 +6,7 @@
 		function toggleChevron(e) {
 			$(e.target)
 				.prev('.item-inner')
-				.find("i.indicator")
+				.find("p.indicator")
 				.toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
 		}
 		$('#accordion').on('hidden.bs.collapse', toggleChevron);
