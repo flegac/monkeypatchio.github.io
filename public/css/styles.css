@@ -1913,6 +1913,10 @@ body.no-header-wrapper {
   background: white; 
   padding: 10px
 }
+.offers-section .indicator{
+  background: white; 
+  padding: 10px
+}
 
 
 /* ======= Map section ======= */
