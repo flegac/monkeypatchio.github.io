@@ -5,7 +5,7 @@
 		});	
 		function toggleChevron(e) {
 			$(e.target)
-				.prev('.row')
+				.prev('.item-inner')
 				.find("i.indicator")
 				.toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
 		}
