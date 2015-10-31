@@ -13,7 +13,7 @@ jsinclude:
 <!-- ******Map Section****** --> 
 <section class="map-section section">
     <div class="container">
-       <h2 class="title text-center">Start your project today</h2>
+        <h2 class="title text-center">Start your project today</h2>
         <p class="intro text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet tortor consequat nisi scelerisque commodo etiam justo sapien.</p>
         <div class="row">
             <div id="map-outer" class="col-md-12 col-sm-6 col-xs-12">
@@ -23,7 +23,9 @@ jsinclude:
                         <p class="address">     
                             <span class="region">{{ site.contact.address }}</span><br/>
                             <span class="postal-code">{{ site.contact.postcode }}</span><br/>
-                            <span class="country-name">{{ site.contact.country }}</span>
+                            <span class="country-name">{{ site.contact.country }}</span><br/>
+                            <span class="fs1" aria-hidden="true" data-icon="&#x77;">&nbsp;</span><a href="+0800123456">{{ site.contact.tel }}</a><br/>
+                            <span class="fs1" aria-hidden="true" data-icon="&#xe010;">&nbsp;</span><a href="#">{{ site.contact.mail }}</a>
                         </p>
                     </div>
                 </div>
@@ -37,10 +39,7 @@ jsinclude:
 <!-- ******Contact Section****** --> 
 <section class="contact-section section">
     <div class="container">
-        <ul class="contact-info list-inline text-center">
-            <li class="tel"><span class="fs1" aria-hidden="true" data-icon="&#x77;"></span><br /> <a href="+0800123456">{{ site.contact.tel }}</a></li>
-            <li class="email"><span class="fs1" aria-hidden="true" data-icon="&#xe010;"></span><br /><a href="#">{{ site.contact.mail }}</a></li>
-        </ul>
+        <h4 class="title text-center">Et pour nous écrire</h4>
         {% include contact_form.html %}
     </div><!--//container-->
 </section><!--//contact-section-->
