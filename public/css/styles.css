@@ -266,7 +266,7 @@ body.no-header-wrapper {
 
 /* header jobs */
 .header-wrapper-jobs {
-  background: #65758e url('../images/background/recutement.jpg') no-repeat 80% top;
+  background: #65758e url('../images/background/recutement.jpg') no-repeat 50% top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
