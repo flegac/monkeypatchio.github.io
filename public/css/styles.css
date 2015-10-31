@@ -307,9 +307,18 @@ body.no-header-wrapper {
 .header.header-shrink {
   padding: 0px inherit;
 }
+.header img{
+  width: 220px;
+}
+.header.header-shrink .navbar-nav > li > a{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 .header.header-shrink h1.logo {
-  font-size: 20px;
-  line-height: 2.4;
+  line-height: 1.3;
+}
+.header.header-shrink img{
+  width: 120px;
 }
 .header.header-shrink .main-nav .nav .nav-item {
   font-size: 12px;
@@ -2556,11 +2565,6 @@ body.no-header-wrapper {
   .latest-work .item .figure-container a {
     min-height: 520px;
   }
-}
-
-/* Changes Monkey */
-.header.header-shrink img{
-	width:60%;
 }
 
 /** Locales */
