@@ -37,7 +37,10 @@
   	"name":"Your name",
   	"email":"Email address",
   	"message":"Your message",
-  	"send":"Send Message"
+  	"send":"Send Message",
+    "start":"Start your project today",
+    "meet":"Rencontrons nous, partageons un café, discutons de votre projet...",
+    "contactus":"And to email us"
   },
   "careers": {
     "title":"In Progress",

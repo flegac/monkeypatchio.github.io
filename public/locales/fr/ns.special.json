@@ -34,10 +34,13 @@
     "start-project-intro":"FR:Lorem ipsum dolor sit amet consectetur adipiscing elit laoreet tortor consequat nisi scelerisque commodo etiam justo sapien."
   },
   "contact": {
-  	"name":"FR:Your name",
-  	"email":"FR:Email address",
-  	"message":"FR:Your message",
-  	"send":"FR:Send Message"
+  	"name":"Votre nom",
+  	"email":"Votre email",
+  	"message":"Votre message",
+  	"send":"Envoyer votre message",
+    "start":"Start your project today",
+    "meet":"Rencontrons nous, partageons un café, discutons de votre projet...",
+    "contactus":"Et pour nous écrire"
   },
   "careers": {
     "title":"Careers",
