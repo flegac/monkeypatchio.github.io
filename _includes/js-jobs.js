@@ -9,7 +9,7 @@
     	$('#accordion').on('shown.bs.collapse', function (e) {
         	var offset = $('.panel-collapse.collapse.in').offset()+200;
         	if(offset) {
-        		var offsetTop = offset.top+200;
+        		var offsetTop = offset.top+20;
 	            $('html,body').animate({
 	            	scrollTop: offsetTop
             	}, 500); 
