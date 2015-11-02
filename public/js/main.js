@@ -10,7 +10,23 @@ $(document).ready(function() {
         useCookie: true,
         fallbackLng: 'en'
     }, function(t) {
+        /* Translate */
         $('body').i18n();
+
+        /* ======= Twitter Bootstrap hover dropdown ======= */   
+        /* Ref: https://github.com/CWSpear/bootstrap-hover-dropdown */ 
+        /* apply dropdownHover to all elements with the data-hover="dropdown" attribute 
+        $('[data-hover="dropdown"]').dropdownHover();*/
+        
+        /* ======= jQuery Responsive equal heights plugin ======= */
+        /* Ref: https://github.com/liabru/jquery-match-height */
+        
+         $('#services .item-inner').matchHeight();
+         $('#who .item-inner').matchHeight();    
+         $('#team .item-inner').matchHeight();
+         $('#careers .item-inner').matchHeight();
+         $('#offers .item-inner').matchHeight();
+
     });
 
     $('#changeLocaleToEn').click(function() {
@@ -29,19 +45,7 @@ $(document).ready(function() {
         });
     });
 
-    /* ======= Twitter Bootstrap hover dropdown ======= */   
-    /* Ref: https://github.com/CWSpear/bootstrap-hover-dropdown */ 
-    /* apply dropdownHover to all elements with the data-hover="dropdown" attribute 
-    $('[data-hover="dropdown"]').dropdownHover();*/
-    
-    /* ======= jQuery Responsive equal heights plugin ======= */
-    /* Ref: https://github.com/liabru/jquery-match-height */
-    
-     $('#services .item-inner').matchHeight();
-     $('#who .item-inner').matchHeight();    
-     $('#team .item-inner').matchHeight();
-     $('#careers .item-inner').matchHeight();
-     $('#offers .item-inner').matchHeight();
+
      
     /* ======= jQuery Placeholder ======= */
     /* Ref: https://github.com/mathiasbynens/jquery-placeholder */
