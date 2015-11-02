@@ -271,7 +271,8 @@ body.no-header-wrapper {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 800px;
+  min-height: 650px;
+  
 }
 
 /* header jobs */
@@ -281,7 +282,7 @@ body.no-header-wrapper {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 650px;
+  min-height: 800px;
 }
 .header-wrapper-jobs .promo {
   padding-top: 550px;
