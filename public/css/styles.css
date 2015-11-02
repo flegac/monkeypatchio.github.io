@@ -289,10 +289,10 @@ body.no-header-wrapper {
   font-size: 30px;
 }
 
-.panel-heading .fa-chevron:after {
+.accordion-header .fa-chevron:after {
     content: "\f078";   
 }
-.panel-heading.collapsed .fa-chevron:after {
+.accordion-header.collapsed .fa-chevron:after {
     content: "\f054";   
 }
 
