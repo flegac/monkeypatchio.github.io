@@ -13,7 +13,9 @@
     "talk-to-us":"Nous contacter",
     "get-in-touch":"Rester en contact",
     "quick-links":"Quick Links",
-    "in-progress":"En Construction"
+    "in-progress":"En Construction",
+    "contact-modal-title":"Pour nous contacter",
+    "contact-modal-intro":"remplissez le formulaire"
   },
   "home": {
     "tagline1":"Ensemble",
