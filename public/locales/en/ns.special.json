@@ -62,6 +62,7 @@
     "terms":"In progress T&C"
   },
   "jobs":{
-
+    "nojobs":"Pour l’instant, aucune annonce ouverte ne correspond à votre profil mais vous vous sentez déjà Monkey’s, n’hésitez pas à nous contacter pour faire connaissance",
+    "application":"spontaneous application"
   }
 }
