@@ -1968,11 +1968,11 @@ body.no-header-wrapper {
 #assets .row {
   margin-bottom: 10px;
 }
-.assets-section .offer-title{
+.assets-section .assets-title{
   border-left: 3px #12A7EA solid;
 }
 
-.assets-section .offer-title, .offers-section .assets-desc, .assets-section .assets-collapse {
+.assets-section .assets-title, .assets-section .assets-desc, .assets-section .assets-collapse {
   background: white; 
   padding: 10px
 }
