@@ -301,9 +301,11 @@ body.no-header-wrapper {
 }
 
 .accordion-header .fa-chevron:after {
+    color:#03A9F5;
     content: "\f078";   
 }
 .accordion-header.collapsed .fa-chevron:after {
+    color:#03A9F5;
     content: "\f054";   
 }
 
