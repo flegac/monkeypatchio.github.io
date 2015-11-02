@@ -264,6 +264,16 @@ body.no-header-wrapper {
   min-height: 400px;
 }
 
+/* header career */
+.header-wrapper-career{
+  background: #65758e url('../images/background/career.jpg') no-repeat 50% top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 800px;
+}
+
 /* header jobs */
 .header-wrapper-jobs {
   background: #65758e url('../images/background/recutement.jpg') no-repeat 50% top;
@@ -271,7 +281,7 @@ body.no-header-wrapper {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 800px;
+  min-height: 650px;
 }
 .header-wrapper-jobs .promo {
   padding-top: 550px;
