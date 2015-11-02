@@ -289,6 +289,13 @@ body.no-header-wrapper {
   font-size: 30px;
 }
 
+.panel-heading .fa-chevron:after {
+    content: "\f078";   
+}
+.panel-heading.collapsed .fa-chevron:after {
+    content: "\f054";   
+}
+
 .header {
   color: #fff;
   width: 100%;
