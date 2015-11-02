@@ -1953,6 +1953,34 @@ body.no-header-wrapper {
   border-left: 3px #12A7EA solid;
 }
 
+/* ======= Assets section =======*/ 
+
+.assets-section {
+  padding: 80px 0;
+  color: #999999;
+  background: #f5f5f5;
+}
+
+.assets-section .title{
+  padding-bottom: 30px;
+}
+
+#assets .row {
+  margin-bottom: 10px;
+}
+.assets-section .offer-title{
+  border-left: 3px #12A7EA solid;
+}
+
+.assets-section .offer-title, .offers-section .assets-desc, .assets-section .assets-collapse {
+  background: white; 
+  padding: 10px
+}
+.assets-section .panel-collapse{
+  background: white; 
+  border-left: 3px #12A7EA solid;
+}
+
 /* ======= Map section ======= */
 .map-section {
   padding: 80px 0;
