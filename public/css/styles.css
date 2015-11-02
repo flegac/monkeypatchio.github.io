@@ -1922,7 +1922,11 @@ body.no-header-wrapper {
   border-right: 3px #f5f5f5 solid;
   border-left: 3px #12A7EA solid;
 }
-.offers-section .offer-title, .offers-section .offer-desc, .offers-section .offer-collapse{
+.offers-section .offer-title, .offers-section .offer-desc {
+  cursor:pointer;  
+}
+
+.offers-section .offer-title, .offers-section .offer-desc, .offers-section .offer-collapse {
   background: white; 
   padding: 10px
 }
