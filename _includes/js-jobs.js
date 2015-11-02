@@ -27,7 +27,7 @@
     	}); 
 
 	/** highlight jobs headers */
-     $('#accordion .row').hover(function () {
+     $('#accordion .accordion-header').hover(function () {
             $(this).addClass('highlight');
         }, function () {
             $(this).removeClass('highlight');
