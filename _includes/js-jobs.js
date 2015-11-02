@@ -10,7 +10,7 @@
         	var offset = $('.panel-collapse.collapse.in').offset();
         	if(offset) {
 	            $('html,body').animate({
-                	scrollTop: offset.top+100;
+                	scrollTop: offset.top+100
             	}, 500); 
         	}
     	}); 
