@@ -7,11 +7,10 @@
 
 		/** Animate to current job */
     	$('#accordion').on('shown.bs.collapse', function (e) {
-        	var offset = $('.panel-collapse.collapse.in').offset()+200;
+        	var offset = $('.panel-collapse.collapse.in').offset();
         	if(offset) {
-        		var offsetTop = offset.top+20;
 	            $('html,body').animate({
-	            	scrollTop: offsetTop
+                	scrollTop: offset.top+10
             	}, 500); 
         	}
     	}); 
