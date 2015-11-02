@@ -25,6 +25,7 @@ $(document).ready(function() {
          $('#who .item-inner').matchHeight();    
          $('#team .item-inner').matchHeight();
          $('#careers .item-inner').matchHeight();
+         $('#assets .item-inner').matchHeight();
          $('#offers .item-inner').matchHeight();
 
     });
