@@ -7,7 +7,7 @@
 
 		/** Animate to current job */
     	$('#accordion').on('shown.bs.collapse', function (e) {
-        	var offset = $(e.target).find('div.accordion-header').offset();
+        	var offset = $('.panel-collapse.collapse.in').offset();
         	if(offset) {
 	            $('html,body').animate({
                 	scrollTop: $('.panel-title a').offset().top -20
