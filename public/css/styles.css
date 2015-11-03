@@ -156,9 +156,17 @@ select {
   max-width: 100%;
 }
 
-.underlined{
-  height:3px;
+.underlined-white{
+  margin-top:20px;
+  margin-bottom:20px;
+  height:2px;
   background:#FFFFFF;
+}
+.underlined-blue{
+  margin-top:20px;
+  margin-bottom:20px;
+  height:2px;
+  background:#4285F4;
 }
 /* ======= Homepage Headline Background & Slideshow ======= */
 .bg-slider-wrapper {
@@ -1855,6 +1863,34 @@ body.no-header-wrapper {
   font-size: 13px;
   color: #999999;
 }
+/* ======= Expertise Page  ======= */
+.solutions-section {
+  padding: 80px 0;
+  color: #000000;
+  background: #FFFFFF;
+}
+.solutions-offers-section {
+  padding: 20px 0;
+  color: #FFFFFF;
+  background: #13A8EB;
+}
+.missions-section {
+  padding: 20px 0;
+  color: #FFFFFF;
+  background: #9B26AF;
+}
+.experts-profiles-section {
+  padding: 20px 0;
+  color: #4285F4;
+  background: #FFFFFF;
+}
+.experts-contact-section {
+  padding: 20px 0;
+  color: #7F7F7F;
+  background: #F4F4F4;
+}
+
+
 /* ======= Contact Page  ======= */
 .contact-section {
   padding: 80px 0;
