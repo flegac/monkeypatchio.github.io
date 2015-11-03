@@ -1864,6 +1864,9 @@ body.no-header-wrapper {
   color: #999999;
 }
 /* ======= Expertise Page  ======= */
+.section-content{
+  padding: 40px 0;
+}
 .solutions-section {
   padding: 80px 0;
   color: #000000;
