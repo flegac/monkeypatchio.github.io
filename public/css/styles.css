@@ -1869,6 +1869,8 @@ body.no-header-wrapper {
 }
 .section-content img {
   margin:0 auto;
+  padding-bottom:10px;
+  padding-top:5px;
 }
 .solutions-section {
   padding: 80px 0;
