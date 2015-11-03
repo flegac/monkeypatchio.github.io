@@ -155,6 +155,11 @@ select {
 .video-container iframe {
   max-width: 100%;
 }
+
+.underlined{
+  height:3px;
+  background:#FFFFFF;
+}
 /* ======= Homepage Headline Background & Slideshow ======= */
 .bg-slider-wrapper {
   content: "";
