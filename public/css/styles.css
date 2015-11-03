@@ -1951,8 +1951,8 @@ body.no-header-wrapper {
   cursor:pointer;  
 }
 
-.accordion-header > div {
-  margin-bottom: 10px;
+.accordion-content {
+  margin-top: 10px;
 }
 
 .offers-section .offer-title, .offers-section .offer-desc, .offers-section .offer-collapse {
