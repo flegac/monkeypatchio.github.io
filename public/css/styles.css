@@ -314,6 +314,10 @@ body.no-header-wrapper {
     content: "\f054";   
 }
 
+.panel-group .row{
+  margin:0;
+}
+
 .header {
   color: #fff;
   width: 100%;
