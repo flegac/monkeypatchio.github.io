@@ -45,8 +45,8 @@
     "contactus":"Et pour nous écrire"
   },
   "careers": {
-    "title":"Careers",
-    "subtitle":"subtitle",
+    "title":"Les profils de la tribu",
+    "subtitle":"Un équipe complémentaire",
     "front-end":"Front-end",
     "front-end-desc":"Pivot entre le Design (UI/UX) et le Back-End, il est en charge de créer des interfaces claires et simples pour l'utilisateur. Le responsive design n’a plus de secret pour lui.Jongleur entre les librairies Javascript les plus récentes, il excelle également dans la mise en page html5 et css.",
     "back-end":"Back-end",
