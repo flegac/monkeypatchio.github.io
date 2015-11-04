@@ -827,6 +827,7 @@ body.no-header-wrapper {
   -webkit-opacity: 0.8;
   -moz-opacity: 0.8;
   opacity: 0.8;
+  margin: margin:0 auto;
 }
 .logos .logo-list img:hover {
   -webkit-opacity: 1;
