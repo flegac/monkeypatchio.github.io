@@ -577,13 +577,13 @@ body.no-header-wrapper {
   margin-bottom: 60px;
 }
 .who .benefits .item .fs1 {
-  font-size: 36px;
-  color: #65758e;
+  font-size: 60px;
+  color: ##727272;
 }
 .who .benefits .item-inner {
   padding: 30px;
   padding-top: 45px;
-  background: #f8f9fa;
+  background: #727272;
 }
 .who .benefits .sub-title {
   font-weight: bold;
@@ -1871,6 +1871,7 @@ body.no-header-wrapper {
   padding-bottom:10px;
   padding-top:5px;
 }
+
 .solutions-section {
   padding: 80px 0;
   color: #000000;
@@ -1881,6 +1882,10 @@ body.no-header-wrapper {
   color: #FFFFFF;
   background: #13A8EB;
 }
+.solutions-offers-section p {
+  font-size: 18px;
+}
+
 .missions-section {
   padding: 40px 0;
   color: #FFFFFF;
