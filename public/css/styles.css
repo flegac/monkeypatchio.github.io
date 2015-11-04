@@ -348,6 +348,9 @@ body.no-header-wrapper {
 .header img{
   width: 220px;
 }
+.header .navbar-nav > li > a {
+  line-height: 30px;
+}
 .header.header-shrink .navbar-nav > li > a{
   padding-top: 5px;
   padding-bottom: 5px;
