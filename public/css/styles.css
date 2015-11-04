@@ -1885,7 +1885,8 @@ body.no-header-wrapper {
   background: #FFFFFF;
 }
 .section .subtitle{
-  padding-bottom: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .solutions-offers-section {
