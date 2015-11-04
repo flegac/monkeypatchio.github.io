@@ -9,13 +9,14 @@
 body {
   font-family: 'Merriweather Sans', arial, sans-serif;
   color: #666666;
-  font-size: 16px;
+  font-size: 18px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 p {
   margin-bottom: 16px;
   line-height: 1.5;
+  font-size: 18px;
 }
 a {
   color: #5cbbdb;
@@ -1878,7 +1879,7 @@ body.no-header-wrapper {
   background: #FFFFFF;
 }
 .solutions-offers-section {
-  padding: 40px 0;
+  padding: 60px 0;
   color: #FFFFFF;
   background: #13A8EB;
 }
@@ -1887,17 +1888,17 @@ body.no-header-wrapper {
 }
 
 .missions-section {
-  padding: 40px 0;
+  padding: 60px 0;
   color: #FFFFFF;
   background: #9B26AF;
 }
 .experts-profiles-section {
-  padding: 40px 0;
+  padding: 60px 0;
   color: #4285F4;
   background: #FFFFFF;
 }
 .experts-contact-section {
-  padding: 40px 0;
+  padding: 60px 0;
   color: #7F7F7F;
   background: #F4F4F4;
 }
