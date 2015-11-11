@@ -886,6 +886,9 @@ body h4 ul{
 .team .item .info {
   margin-bottom: 30px;
 }
+.team .item .info h3{
+  text-align: left;
+}
 .team .item .info .name {
   margin-top: 0;
   color: #505c70;
