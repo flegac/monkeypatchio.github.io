@@ -24,13 +24,15 @@
     "intro":"Nous sommes une équipe d'experts spécialisés dans le web, mobile et le cloud convaincus par l’agilité et le lean startup. Nos consultants sont tous des passionnés qui aiment participer aux meetups, conférences techniques et hackathon pour tester de nouvelles technologies, partager leur expertise et progresser.",
     "skilled":"Une équipe qualifiée",
     "skilled-desc":"Notre équipe seulement composée de passionnés ayant au moins 5 ans d'expérience",
-    "agile":"Approche agile",
-    "agile-desc":"FR:Tell your potential client why they should choose your service and how you are different from your competitors.",
-    "quality":"Code de qualité",
-    "quality-desc":"FR:Tell your potential client why they should choose your service and how you are different from your competitors.",
-    "overheads":"Consultants passionnée",
-    "overheads-desc":"FR:Tell your potential client why they should choose your service and how you are different from your competitors.",
-    "more":"FR:More about us",
+    "benefits":{
+      "agile":"Approche agile",
+      "agile-desc":"!!!!!!!!!!!!!!!!!!!!!!!!!!",
+      "quality":"Code de qualité",
+      "quality-desc":"!!!!!!!!!!!!!!!!!!!!!!!!!!",
+      "overheads":"Consultants passionnée",
+      "overheads-desc":"!!!!!!!!!!!!!!!!!!!!!!!!!!"
+    },
+    
     "worked-with":"Ils nous ont déjà fait confiance",
     "start-project":"FR:Start your project today",
     "start-project-intro":"FR:Lorem ipsum dolor sit amet consectetur adipiscing elit laoreet tortor consequat nisi scelerisque commodo etiam justo sapien."
@@ -45,8 +47,17 @@
     "contactus":"Et pour nous écrire"
   },
   "careers": {
-    "title":"Les profils de la tribu",
-    "subtitle":"Un équipe complémentaire",
+    "assets":{
+      "title":"Les Atouts de la Tribu",
+      "intro":"Chez MonkeyPatch, nous recherchons à constituer une équipe d’Experts qui partagent nos valeurs et nos ambitions."
+
+
+    },
+    "team":{
+      "title":"Les profils de la tribu",
+      "intro":"Un équipe complémentaire"
+    },
+    
     "front-end":"Front-end",
     "front-end-desc":"Pivot entre le Design (UI/UX) et le Back-End, il est en charge de créer des interfaces claires et simples pour l'utilisateur. Le responsive design n’a plus de secret pour lui.Jongleur entre les librairies Javascript les plus récentes, il excelle également dans la mise en page html5 et css.",
     "back-end":"Back-end",
@@ -66,5 +77,40 @@
   "jobs":{
     "nojobs":"Pour l’instant, aucune annonce ouverte ne correspond à votre profil mais vous vous sentez déjà Monkey’s, n’hésitez pas à nous contacter pour faire connaissance",
     "application":"candidature spontanée"
+  },
+  "expertise":{
+    "solutions":{
+      "title":"Créateur de solutions globales et ciblées",
+      "subtitle":"Le web, le mobile, le Big Data sont autant une révolution technologique qu'une révolution dans les usages:<br/>les utilisateurs  peuvent ainsi accéder à tous leurs services partout et tout le temps<br/><br/>Nous vous accompagnons à chaque étape de vos projets grâce à un éventail d'experts reconnus pour leurs réalisations et pour leurs expériences."
+    },
+    "offers":{
+      "title":"Nos Offres",
+      "subtitle":"Nous répondons aux différents enjeux de nos clients.<br/>De la stratégie à la mise en oeuvre technique, nous les accompagnons à chaque étape d'un <br/>projet d'application Web / Mobile / Big Data",
+      "audit":"Audit technique",
+      "lead":"Lead technique",
+      "advise":"Conseil technique",
+      "dev":"Développement"
+    },
+    "missions":{
+      "title":"Nos Missions Types",
+      "subtitle":"Etre agile, se réinventer en permanence, selon vos attentes et vos besoins. Nous pensons nos modes de collaboration en ce sens : être efficace, inventif et savoir rester simple.",
+      "innovation":"Innovation",
+      "proto":"Prototype",
+      "project":"Projet",
+      "accompaniment":"Accompagnement"
+    },
+    "profiles":{
+      "title":"Le Profil de Nos Experts",
+      "subtitle":"Nous répondons aux différents enjeux de nos clients.<br/>De la stratégie à la mise en oeuvre technique, nous les accompagnons à chaque étape d'un<br/>projet d'application Web / Mobile / Big Data",
+      "mobile":"Consultant Mobile",
+      "web":"Consultant Web",
+      "security":"Consultant sécurité",
+      "ui-ux":"Consultant UI / UX "
+    },
+    "contact":{
+      "title":"Prendre contact",
+      "subtitle":"Nous avons la volonté de vous accompagner sur votre démarche d’innovation technologique <br/>ou d’utilisation de nouveaux usages.<br/>Chez nous, chaque client a une et seule personne qui recueille votre besoin, l’analyse et vous propose les  solutions les plus adaptées.",
+      "meet":"Rencontrer nos facilitateurs d'innovation"
+    }
   }
 }

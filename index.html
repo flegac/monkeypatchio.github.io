@@ -3,7 +3,7 @@ layout: default
 key-title: home
 body-class: home-page
 header-class: header-wrapper-home
-promo: index_promo.html
+promo: promo/promo_index.html
 jsinclude:
    form: libraries-form.js
    home: libraries-home.js
@@ -11,14 +11,18 @@ jsinclude:
 
 <!-- ******Why Section****** -->
 <section id="who" class="who section">
-	<div class="container text-center">
-		<h2 class="title text-center" data-i18n="home.who-we-are"></h2>
-		<p class="intro text-center" data-i18n="home.intro"></p>
-		<div class="row benefits text-center">
+	<div class="container">
+		
+		<div class="section-titles">
+			<h1 data-i18n="home.who-we-are"></h1>
+			<h2 data-i18n="home.intro"></h2>
+		</div><!--//section-titles-->
+		
+		<div class="row benefits">
 			<div class="item col-md-3 col-sm-6 col-xs-12">
 				<div class="item-inner">
 					<div class="fs1" aria-hidden="true" data-icon="&#xe007;"></div>                        
-					<h3 class="sub-title" data-i18n="home.skilled"></h3>
+					<h3 class="sub-title" data-i18n="home.benefits.skilled"></h3>
 					<!--<div class="desc">
 						<p data-i18n="home.skilled-desc"></p>
 					</div>-->                
@@ -27,7 +31,7 @@ jsinclude:
 			<div class="item col-md-3 col-sm-6 col-xs-12 sm-break">
 				<div class="item-inner">
 					<div class="fs1" aria-hidden="true" data-icon="&#xe01c;"></div>
-					<h3 class="sub-title" data-i18n="home.agile"></h3>
+					<h3 class="sub-title" data-i18n="home.benefits.agile"></h3>
 					<!--<div class="desc">
 						<p data-i18n="home.agile-desc"></p>
 					</div>-->   
@@ -36,7 +40,7 @@ jsinclude:
 			<div class="item col-md-3 col-sm-6 col-xs-12">
 				<div class="item-inner">
 					<div class="fs1" aria-hidden="true" data-icon="&#xe031;"></div>
-					<h3 class="sub-title" data-i18n="home.quality"></h3>
+					<h3 class="sub-title" data-i18n="home.benefits.quality"></h3>
 					<!--<div class="desc">
 						<p data-i18n="home.quality-desc"></p>
 					</div>-->    
@@ -45,7 +49,7 @@ jsinclude:
 			<div class="item col-md-3 col-sm-6 col-xs-12">
 				<div class="item-inner">
 					<div class="fs1" aria-hidden="true" data-icon="&#xe030;"></div>                        
-					<h3 class="sub-title" data-i18n="home.overheads"></h3>
+					<h3 class="sub-title" data-i18n="home.benefits.overheads"></h3>
 					<!--<div class="desc">
 						<p data-i18n="home.overheads-desc"></p>
 					</div>-->  
@@ -56,10 +60,14 @@ jsinclude:
 	</div><!--//container-->
 </section><!--//who-->
 
-<!-- ******Logos Section****** -->
-<section id="logos" class="logos section">
+<!-- ****** customers Section****** -->
+<section id="customers" class="customers last-section section">
 	<div class="container text-center">
-		<h2 class="title" data-i18n="home.worked-with"></h2>
+		
+		<div class="section-titles">
+			<h1 data-i18n="home.worked-with"></h1>
+		</div><!--//section-titles-->
+
 		<ul class="logo-list list-inline row">
 			<li class="col-md-4 col-sm-4 col-xs-6"><a href="#"><img class="img-responsive" src="{{ site.baseurl }}/public/images/logos/logo-1.png" alt="" /></a></li>
 			<li class="col-md-4 col-sm-4 col-xs-6 xs-break"><a href="#"><img class="img-responsive" src="{{ site.baseurl }}/public/images/logos/logo-2.png" alt="" /></a></li>
@@ -71,6 +79,6 @@ jsinclude:
 			<li class="col-md-4 col-sm-4 col-xs-6 xs-break"><a href="#"><img class="img-responsive" src="{{ site.baseurl }}/public/images/logos/logo-6.png" alt="" /></a></li>
 		</ul><!--//logos-list-->               
 	</div><!--//container-->
-</section><!--//logos-->
+</section><!--//customers-->
 
 {% include contact_modal.html %}
