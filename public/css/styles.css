@@ -1398,6 +1398,9 @@ body h4 ul{
 }
 
 /* ======= Footer ======= */
+.footer h3{
+  text-align: left;
+}
 .footer .footer-content {
   background: #0288D1;
   color: rgba(255, 255, 255, 0.7);
@@ -1488,7 +1491,7 @@ body h4 ul{
 /* ======= Social ======= */
 .social-icons {
   list-style: none;
-  padding: 10px 0;
+  padding: 10px 0px 0px 15px;
   margin: 0 auto;
   margin-bottom: 25px;
   display: inline-block;
