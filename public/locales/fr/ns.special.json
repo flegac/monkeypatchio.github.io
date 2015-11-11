@@ -12,10 +12,11 @@
   "general":{
     "talk-to-us":"Nous contacter",
     "get-in-touch":"Rester en contact",
-    "quick-links":"Quick Links",
+    "quick-links":"Liens rapides",
     "in-progress":"En Construction",
     "contact-modal-title":"Pour nous contacter",
-    "contact-modal-intro":"remplissez le formulaire"
+    "contact-modal-intro":"Remplissez le formulaire",
+    "social-networks":"Réseaux sociaux"
   },
   "home": {
     "tagline1":"Ensemble",
