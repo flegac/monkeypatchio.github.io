@@ -13,8 +13,11 @@ jsinclude:
 <!-- ******Map Section****** --> 
 <section class="map-section section">
     <div class="container">
-        <h2 class="title text-center" data-i18n="contact.start"></h2>
-        <p class="intro text-center" data-i18n="contact.meet"></p>
+        <div class="section-titles">
+            <h1 data-i18n="contact.start"></h1>
+            <h2 data-i18n="contact.meet"></h2>
+        </div><!--//section-titles-->
+
         <div class="row">
             <div id="map-outer" class="col-md-12 col-sm-6 col-xs-12">
                 <div id="address" class="col-md-4">
@@ -37,9 +40,11 @@ jsinclude:
 
 
 <!-- ******Contact Section****** --> 
-<section class="contact-section section">
+<section class="contact-section last-section section">
     <div class="container">
-        <h4 class="title text-center" data-i18n="contact.contactus"></h4>
+        <div class="section-titles">
+            <h1 data-i18n="contact.contactus"></h1>
+        </div><!--//section-titles-->
         {% include contact_form.html %}
     </div><!--//container-->
 </section><!--//contact-section-->

@@ -38,11 +38,13 @@
     "start-project-intro":"FR:Lorem ipsum dolor sit amet consectetur adipiscing elit laoreet tortor consequat nisi scelerisque commodo etiam justo sapien."
   },
   "contact": {
+    "title":"Nous contacter",
+    "intro":"Si vous avez un projet ou voulez en savoir plus sur nos services. Nous sommes à votre écoute.",
   	"name":"Votre nom",
   	"email":"Votre email",
   	"message":"Votre message",
   	"send":"Envoyer votre message",
-    "start":"Start your project today",
+    "start":"Commencez votre projet aujourd'hui",
     "meet":"Rencontrons nous, partageons un café, discutons de votre projet...",
     "contactus":"Et pour nous écrire"
   },
@@ -110,7 +112,7 @@
     "offers":{
       "title":"Nos Offres"
     },
-    "nojobs":"Pour l’instant, aucune annonce ouverte ne correspond à votre profil mais vous vous sentez déjà Monkey’s, n’hésitez pas à nous contacter pour faire connaissance",
+    "nojobs":"Pour l’instant, aucune annonce ouverte ne correspond à votre profil mais vous vous sentez déjà Monkeys, n’hésitez pas à nous contacter pour faire connaissance",
     "application":"candidature spontanée"
   },
   "expertise":{
