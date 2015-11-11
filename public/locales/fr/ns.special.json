@@ -25,12 +25,13 @@
     "intro":"Nous sommes une équipe d'experts spécialisés dans le web, mobile et le cloud convaincus par l’agilité et le lean startup. Nos consultants sont tous des passionnés qui aiment participer aux meetups, conférences techniques et hackathon pour tester de nouvelles technologies, partager leur expertise et progresser.",
     "benefits":{
       "skilled":"Une équipe qualifiée",
-      "skilled-desc":"Notre équipe seulement composée de passionnés ayant au moins 5 ans d'expérience",
       "agile":"Approche agile",
-      "agile-desc":"!!!!!!!!!!!!!!!!!!!!!!!!!!",
       "quality":"Code de qualité",
+      "overheads":"Consultants passionnés",
+      "agile-desc":"!!!!!!!!!!!!!!!!!!!!!!!!!!",
+      "skilled-desc":"Notre équipe seulement composée de passionnés ayant au moins 5 ans d'expérience",
       "quality-desc":"!!!!!!!!!!!!!!!!!!!!!!!!!!",
-      "overheads":"Consultants passionnée",
+      
       "overheads-desc":"!!!!!!!!!!!!!!!!!!!!!!!!!!"
     },
     
