@@ -860,9 +860,6 @@ body h4{
 }
 
 /* ======= Both Careers & About - Team section ======= */
-.careers-section {
-  background: #fff url("/public/images/careers/assets_bg-bottom.png") no-repeat scroll center top / 100%;
-}
 .team .item {
   margin-bottom: 30px;
 }
@@ -1202,8 +1199,8 @@ body h4{
   margin-top:-120px;
 }
 .assets-section {
+  background: #f5f5f5 url("/public/images/careers/assets_bg-bottom.png") no-repeat scroll center bottom / 100%;
   color: #999999;
-  background: #f5f5f5;
 }
 
 .assets-section .title{
