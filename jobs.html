@@ -12,16 +12,22 @@ jsinclude:
 <!-- ******jobs Section****** -->
 <section class="jobs-section section">
     <div class="container">
-   		<div class="row">
-   			<h2 class="title text-center">Nous recherchons avant tout à bâtir une équipe de passionnés qui aiment partager et confronter leur expertise à des problématiques clients pointues</h2>
-        </div><!-- // row -->
+	   		<div class="section-titles row">
+	            <h1 data-i18n="jobs.title"></h1>
+	            <h2 data-i18n="jobs.intro"></h2>
+	        </div><!--//section-titles-->      
     </div><!--//container-->
 </section><!--//section jobs-->   
 
 <!-- ******jobs Section****** -->
-<section id="offers" class="offers-section section">
+<section id="offers" class="offers-section last-section section">
     <div class="container">
-    	<h2 class="title text-center">Nos Offres</h2>
+	    <div class="container">
+		   		<div class="section-titles row">
+		            <h1 data-i18n="jobs.offers.title"></h1>
+		        </div><!--//section-titles-->      
+	    </div><!--//container-->
+
     	<div class="panel-group" id="accordion">
     		<!-- // Offre 1 -->
 			<div class="row accordion-header collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#offer-content-1">
@@ -213,11 +219,10 @@ jsinclude:
 				</div>
 			</div><!-- // row -->
     	</div><!-- // accordion -->	
-   		<div class="row conclusion">
-            <div class="col-md-8 col-sm-6 col-xs-12" data-i18n="jobs.nojobs"></div>
+   		<div class="row conclusion vertical-align">
+            <div class="col-md-8 col-sm-6 col-xs-12"><h3 data-i18n="jobs.nojobs"></h3></div>
             <div class="col-md-4 col-sm-6 col-xs-12">
-				<button class="btn btn-cta btn-cta-primary" type="button" data-toggle="modal" data-target="#modal-contact" data-backdrop="static" data-i18n="jobs.application">
-				</button>
+				<button class="btn btn-cta btn-cta-primary" type="button" data-toggle="modal" data-target="#modal-contact" data-backdrop="static" data-i18n="jobs.application"></button>
             </div>
 
         </div><!-- // row -->    
