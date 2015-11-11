@@ -49,9 +49,39 @@
   "careers": {
     "assets":{
       "title":"Les Atouts de la Tribu",
-      "intro":"Chez MonkeyPatch, nous recherchons à constituer une équipe d’Experts qui partagent nos valeurs et nos ambitions."
-
-
+      "intro":"Chez MonkeyPatch, nous recherchons à constituer une équipe d’Experts qui partagent nos valeurs et nos ambitions.",
+      "1":{
+        "title":"Une passion commune et partagée",
+        "content":"Nous ne recrutons que des ingénieurs qui ont le gène de l'info !<br/><br/>La passion de l'informatique et de l'innovation permet à nos consultants d'être toujours à la pointe des meilleures pratiques des technologies du Web, du Mobile et du Big Data.<br/><br/>Nous cultivons cet état d'esprit en consacrant du temps à la veille technologique et à l'échange de nos expertises.<br/><br/>Être un Monkey, vous invite à toujours être inveti dans l'évolution des technologies.Mais le comportement et le savoir-être de nos consultants comptent bien plus encore.<br/><br/>Il faut partager la passion de l'informatique pour faire partie de notre tribu."
+      },
+      "2":{
+        "title":"Travailler dans une entreprise engagée et respectueuse",
+        "content":" Parce que travailler dans une entreprise respecteuse de ses consultants et honorant ses engagements ça n'a pas de prix !<br/><br/>L’engagement de nos collaborateurs est crucial pour la satisfaction de nos clients. Pour devenir la société d'expertise n°1, nous devons tenir le même engagement auprés de l'ensemble de nos consultants.<br/><br/> La garantie de nos engagements et le respects de tous est l'une de la clé de la réussite de notre société. <br/><br/>La passion de l'informatique et de l'innovation permet à nos consultants d'être toujours à la pointe des meilleures pratiques des technologies du Web, du Mobile et du Big Data.<br/><br/>Nous cultivons cet état d'esprit en consacrant du temps à la veille technologique et à l'échange de nos expertises.<br/><br/>Être un Monkey, vous invite à toujours être inveti dans l'évolution des technologies.<br/>Mais le comportement et le savoir-être de nos consultants comptent bien plus encore. "
+      },
+      "3":{
+        "title":"Évoluer dans un environnement d’expertise et d’innovation",
+        "content":"Des projets innovants :  un environnement passionnant et exigeant<br/><br/>MonkeyPatch conseille et réalise pour ses clients des projets sur les nouvelles technologies liées au Web, la Mobilité et le BigData.<br/><br/>Pas d'intercontrat improductif. Nous accompagnons des startups partenaires sur leur problématique techniques. <br/>Entre deux misisons vous interviendrez sur des problematique ciblée par cycle de 10 jours ouvrables. <br/><br/>Vos expertises seront tout le temps mis à contribution pour une étude de faisabilité technique ou pour la réalisation de fonctions complexes ..." 
+      },
+      "4":{
+        "title":"Construire son avenir en équipe",
+        "content":"On est rien sans l'esprit d'équipe !<br/><br/>Investi sur le long terme, nous établissons une relation de proximité avec nos collaborateurs par le biais d’échanges réguliers et suivis.<br/><br/>Nous noueons un lien de confiance et d’engagement qui nous permet de stimuler le partage d'expérience et d'expertise entre les Monkeys  lors d'afterwork, d'hackathon, ... ou simplement autour d'un café.<br/><br/>Repousser ses limites techniques grace au soutien d'une equipe d'experts et à l'accompagnement d'une société pas comme les autres." 
+      },
+      "5":{
+        "title":"Esprit start-up",
+        "content":"Un fonctionnement qui stimule l’innovation, renforce l’esprit d’équipe et rend plus réactif.<br/><br/>Responsabiliser et donner de la liberté aux Monkeys leur permet de s'épanouir et de grandir sereinement.<br/><br/>Nous rejoindre, c’est intégrer :<br/><br/><ul><li>Une dynamique entrepreneuriale : chacun est investi dans le développement de la société</li><li>Une ambiance de travail conviviale</li><li>Des échanges constants</li><li>Des initiatives antiroutine, ...</li></ul><br/>Cultiver l’esprit ­d’en­treprise ­de ses salariés, et si c’était ça ­l’esprit startup ? " 
+      },
+      "6":{
+        "title":"Le Pack Monkey",
+        "content":"Chez MonkeyPatch, nous aimons capitaliser et voir nos Experts progresser !<br/><br/>Nous soutenons toute initiative qui permet à nos consultants d'enrichir leur expertise et la reconnaissance de leurs pairs :<br/><br/><ul><li>Rédaction d'articles techniques (blog)</li><li>Participation et/ou animation de conférences techniques (à Toulouse ou à l'internationnal)</li><li>Participation et/ou organisation d'hackathons</li><li>Développement de supports de formation de nouvelles technologique</li></ul>Nous partons du principe que chacun doit porter sa pierre à l’édifice.<br/><br/>Pour encourager cette démarche nous allouant chaque année un budget et un nombre de jours de disponibilité pour suivre des formations, participer aux conférences ou aux hackathons ...Et enfin nous permettons à chaque consultant de choisir son materiel." 
+      },
+      "7":{
+        "title":"Une entreprise pas comme les autres",
+        "content":" Nous bousculons les codes des entreprises traditionnelles.<br/><br/>Nous souhaitons que chacun de nos Monkeys puisse être force de proposition, être partie prenante dans le recrutement des nouveaux Monkeys, avoir son mot à dire sur les investissement de l'entreprise.Nos collaborateurs peuvent prendre part au board de la société, et ainsi prendre part pleinement aux choix de la stratégie de l'entreprise.<br/><br/>Une entreprise qui parie sur les hommes de son équipe." 
+      },
+      "8":{
+        "title":"Bénéficier d’une rémunération attractive et équitable",
+        "content":" En tant que membre de l’équipe de MonkeyPatch, vous serez reconnu pour votre travail et votre engagement, à la fois en tant qu’individu qu'au niveau collectif.<br/><br/>Nous souhaitons récompenser à juste titre l'ensemble de nos consultants. Leur rémunération comprend un salaire fixe, des primes individelles liées à leurs activités et une part variable liée à la productivité collective.Chez nous le salaire se n'est ni un taboo ni un secret, on est transparent sur le salaire de l'equipe dirigeante.<br/><br/>Notre mot d'ordre, travailler sur des  problématiques clientes pointues et exigeantes, mérite une reconnaissance humaine et financière." 
+      }
     },
     "team":{
       "title":"Les profils de la tribu",
