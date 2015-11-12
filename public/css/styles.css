@@ -1194,7 +1194,7 @@ body h4 ul{
   cursor:pointer;  
 }
 
-.accordion-content {
+.panel-collapse {
   margin-top: 10px;
 }
 
@@ -1227,9 +1227,6 @@ body h4 ul{
   padding-bottom: 30px;
 }
 
-#assets .row {
-  margin-bottom: 10px;
-}
 .assets-section .assets-title{
   border-left: 3px #12A7EA solid;
 }
