@@ -8,7 +8,7 @@ $(document).ready(function() {
         useLocalStorage: false,
         debug: false,
         useCookie: true,
-        fallbackLng: 'en'
+        fallbackLng: 'fr'
     }, function(t) {
         /* Translate */
         $('body').i18n();

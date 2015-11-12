@@ -1,13 +1,13 @@
 {
 	"locale-code":"fr",
   "titles":{
-    "home":"Home",
+    "home":"Accueil",
     "expert":"Notre Expertise",
     "about":"Notre Philo",
     "careers":"Être Monkeys",
     "jobs":"Nos Jobs",
     "contact":"Contact",
-    "terms":"Terms and Conditions"
+    "terms":"Termes et conditions"
   },
   "general":{
     "talk-to-us":"Nous contacter",
@@ -22,7 +22,7 @@
     "tagline1":"Ensemble",
     "tagline2":"Changeons les idées en innovations",
     "who-we-are":"Qui nous sommes",
-    "intro":"Nous sommes une équipe d'experts spécialisés dans le web, mobile et le cloud convaincus par l’agilité et le lean startup. Nos consultants sont tous des passionnés qui aiment participer aux meetups, conférences techniques et hackathon pour tester de nouvelles technologies, partager leur expertise et progresser.",
+    "intro":"Nous sommes une équipe d'experts spécialisés dans le web, le mobile et le cloud. Convaincus par l’agilité et le lean startup, nos consultants sont tous des passionnés qui aiment participer aux meetups, conférences techniques et hackathon pour tester de nouvelles technologies, partager leur expertise et progresser.",
     "benefits":{
       "skilled":"Une équipe qualifiée",
       "agile":"Approche agile",
@@ -35,9 +35,7 @@
       "overheads-desc":"!!!!!!!!!!!!!!!!!!!!!!!!!!"
     },
     
-    "worked-with":"Ils nous ont déjà fait confiance",
-    "start-project":"FR:Start your project today",
-    "start-project-intro":"FR:Lorem ipsum dolor sit amet consectetur adipiscing elit laoreet tortor consequat nisi scelerisque commodo etiam justo sapien."
+    "worked-with":"Ils nous ont déjà fait confiance"
   },
   "contact": {
     "title":"Nous contacter",
@@ -55,12 +53,12 @@
       "title":"Les Atouts de la Tribu",
       "intro":"Chez MonkeyPatch, nous recherchons à constituer une équipe d’Experts qui partagent nos valeurs et nos ambitions.",
       "1":{
-        "title":"Une passion commune et partagée",
-        "content":"Nous ne recrutons que des ingénieurs qui ont le gène de l'info !<br/><br/>La passion de l'informatique et de l'innovation permet à nos consultants d'être toujours à la pointe des meilleures pratiques des technologies du Web, du Mobile et du Big Data.<br/><br/>Nous cultivons cet état d'esprit en consacrant du temps à la veille technologique et à l'échange de nos expertises.<br/><br/>Être un Monkey, vous invite à toujours être inveti dans l'évolution des technologies.Mais le comportement et le savoir-être de nos consultants comptent bien plus encore.<br/><br/>Il faut partager la passion de l'informatique pour faire partie de notre tribu."
+        "title":"Une passion commune partagée",
+        "content":"Nous recrutons uniquement des ingénieurs qui ont le gène de l'info !<br/><br/>La passion de l'informatique et de l'innovation permet à nos consultants d'être toujours à la pointe des meilleures pratiques des technologies du Web, du Mobile et du Big Data.<br/><br/>Nous cultivons cet état d'esprit en consacrant du temps pour de la veille technologique et l'échange de nos expertises.<br/><br/>Être un Monkey vous invite à toujours être inveti dans l'évolution des technologies. Mais le comportement et le savoir-être de nos consultants comptent bien plus encore.<br/><br/>Il faut partager la passion de l'informatique pour faire partie de notre tribu."
       },
       "2":{
         "title":"Travailler dans une entreprise engagée et respectueuse",
-        "content":" Parce que travailler dans une entreprise respecteuse de ses consultants et honorant ses engagements ça n'a pas de prix !<br/><br/>L’engagement de nos collaborateurs est crucial pour la satisfaction de nos clients. Pour devenir la société d'expertise n°1, nous devons tenir le même engagement auprés de l'ensemble de nos consultants.<br/><br/> La garantie de nos engagements et le respects de tous est l'une de la clé de la réussite de notre société. <br/><br/>La passion de l'informatique et de l'innovation permet à nos consultants d'être toujours à la pointe des meilleures pratiques des technologies du Web, du Mobile et du Big Data.<br/><br/>Nous cultivons cet état d'esprit en consacrant du temps à la veille technologique et à l'échange de nos expertises.<br/><br/>Être un Monkey, vous invite à toujours être inveti dans l'évolution des technologies.<br/>Mais le comportement et le savoir-être de nos consultants comptent bien plus encore. "
+        "content":" Parce que travailler dans une entreprise respecteuse de ses consultants et honorant ses engagements ça n'a pas de prix !<br/><br/>L’engagement de nos collaborateurs est crucial pour la satisfaction de nos clients. Pour devenir la société d'expertise n°1, nous devons tenir le même engagement auprés de l'ensemble de nos consultants.<br/><br/>La garantie de nos engagements et le respects de tous est la clé de la réussite de notre société. <br/><br/>La passion de l'informatique et de l'innovation permet à nos consultants d'être toujours à la pointe des meilleures pratiques des technologies du Web, du Mobile et du Big Data.<br/><br/>Nous cultivons cet état d'esprit en consacrant du temps à la veille technologique et à l'échange de nos expertises.<br/><br/>Être un Monkey, vous invite à toujours être inveti dans l'évolution des technologies.<br/>Mais le comportement et le savoir-être de nos consultants comptent bien plus encore. "
       },
       "3":{
         "title":"Évoluer dans un environnement d’expertise et d’innovation",
@@ -105,17 +103,14 @@
     "secu":"Expert sécurité",
     "secu-desc":"Les dernières méthodes de hacking ne sont pas un secret pour lui. Il propose des moyens pour sécuriser à la fois les données et les applications. Il permet à l'entreprise de contrer les attaques et protège la confidentialité."
   },
-  "terms": {
-    "terms":"In progress T&C"
-  },
   "jobs":{
     "title":"Si vous êtes Monkeys",
     "intro":"Nous recherchons avant tout à bâtir une équipe de passionnés qui aiment partager et confronter leur expertise à des problématiques clients pointues",
     "offers":{
       "title":"Nos Offres"
     },
-    "nojobs":"Pour l’instant, aucune annonce ouverte ne correspond à votre profil mais vous vous sentez déjà Monkeys, n’hésitez pas à nous contacter pour faire connaissance",
-    "application":"candidature spontanée"
+    "nojobs":"Pour l’instant, aucune annonce ouverte ne correspond à votre profil mais si vous sentez déjà Monkeys, n’hésitez pas à nous contacter pour faire connaissance",
+    "application":"Candidature spontanée"
   },
   "expertise":{
     "solutions":{
