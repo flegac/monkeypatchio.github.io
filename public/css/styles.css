@@ -310,7 +310,6 @@ body.no-header-wrapper {
   -o-background-size: cover;
   background-size: cover;
   min-height: 650px;
-  
 }
 
 /* header jobs */
@@ -1566,6 +1565,9 @@ body h4 ul{
   .header-wrapper-home {
     min-height: 560px;
   }
+  .header-wrapper-career{
+    min-height: 560px;
+  }
   .header .main-nav .nav .nav-item {
     margin-right: 0;
   }
@@ -1599,6 +1601,9 @@ body h4 ul{
     padding-top: 80px;
   }
   .header-wrapper-home {
+    min-height: 460px;
+  }
+  .header-wrapper-career{
     min-height: 460px;
   }
   .promo .title .middle {
@@ -1685,6 +1690,10 @@ body h4 ul{
   .section-404 .intro {
     font-size: 20px;
   }
+
+  .conclusion button{
+    margin-top: 10px;
+  }
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -1708,6 +1717,9 @@ body h4 ul{
   }
   .header-wrapper-home {
     height: 650px;
+  }
+  .header-wrapper-career{
+    min-height: 650px;
   }
   .main-nav {
     float: right !important;
