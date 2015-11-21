@@ -1083,7 +1083,7 @@ body h4 ul{
   padding-bottom: 60px;
   background: #9B26AF;
 }
-.missions-section h1, .missions-section h2, .missions-section h4 {
+.missions-section h1, .missions-section h2, .missions-section h3, .missions-section h4 {
   color:#fff;
 }
 
@@ -1093,7 +1093,7 @@ body h4 ul{
   padding-bottom: 60px;
 }
 
-.experts-profiles-section h1, .experts-profiles-section h2, .experts-profiles-section h4 {
+.experts-profiles-section h1, .experts-profiles-section h2, .experts-profiles-section h3, .experts-profiles-section h4 {
   color: #4285F4;
 }
 
