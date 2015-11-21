@@ -115,7 +115,10 @@
   "expertise":{
     "solutions":{
       "title":"Créateur de solutions globales et ciblées",
-      "subtitle":"Le web, le mobile, le Big Data sont autant une révolution technologique qu'une révolution dans les usages:<br/>les utilisateurs  peuvent ainsi accéder à tous leurs services partout et tout le temps<br/><br/>Nous vous accompagnons à chaque étape de vos projets grâce à un éventail d'experts reconnus pour leurs réalisations et pour leurs expériences."
+      "subtitle-1":"Sous titre 1",
+      "content-1":"Le web, le mobile, le Big Data sont autant une révolution technologique qu'une révolution dans les usages",
+      "subtitle-2":"Sous titre 1",
+      "content-2":"Le web, le mobile, le Big Data sont autant une révolution technologique qu'une révolution dans les usages"
     },
     "offers":{
       "title":"Nos Offres",
