@@ -1533,7 +1533,7 @@ body h4 ul{
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
   body h1{
-    font-size: 30px;
+    font-size: 26px;
   } 
   body h2{
     font-size: 18px;
@@ -1541,8 +1541,12 @@ body h4 ul{
   body h3{
     font-size: 16px;
   }
-  .config-wrapper {
-    display: none;
+  .section-titles {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .section-titles h3{
+    margin-top: 25px;
   }
   .header {
     padding: 0px inherit;
@@ -1697,16 +1701,12 @@ body h4 ul{
   .section-404 .intro {
     font-size: 20px;
   }
-
   .conclusion button{
     margin-top: 10px;
   }
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .config-wrapper {
-    display: none;
-  }
   .header .main-nav .nav .nav-item {
     margin-right: 10px;
   }
@@ -1719,9 +1719,6 @@ body h4 ul{
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .config-wrapper {
-    display: block;
-  }
   .header-wrapper-home {
     height: 650px;
   }
