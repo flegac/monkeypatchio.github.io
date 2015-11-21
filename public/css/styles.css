@@ -1049,10 +1049,11 @@ body h4 ul{
 
 .section-content{
   padding-bottom:10px;
+  text-align: center;
 }
 
 .section-content img {
-  margin:0 auto;
+  height: 90px; 
   padding-bottom:10px;
   padding-top:5px;
 }
