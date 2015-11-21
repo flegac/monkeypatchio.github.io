@@ -672,8 +672,11 @@ body.no-header-wrapper {
   margin-top: 100px;
   margin-bottom: 100px;
 }
-.section-titles h3{
+.section-titles h2{
   margin-top: 50px;
+}
+.section-titles h3{
+  margin-top: 25px;
 }
 body h1{
   font-size: 40px;
@@ -693,6 +696,7 @@ body h3{
   color: #5E5E5E;
   font-size: 18px;
   text-align: center;
+  font-weight: 300;
 }
 
 body h4{
@@ -1548,8 +1552,11 @@ body h4 ul{
     margin-top: 50px;
     margin-bottom: 50px;
   }
+  .section-titles h2{
+    margin-top: 20px;
+  }
   .section-titles h3{
-    margin-top: 25px;
+    margin-top: 15px;
   }
   .header {
     padding: 0px inherit;
