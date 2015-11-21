@@ -1532,6 +1532,15 @@ body h4 ul{
 
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
+  body h1{
+    font-size: 30px;
+  } 
+  body h2{
+    font-size: 18px;
+  } 
+  body h3{
+    font-size: 16px;
+  }
   .config-wrapper {
     display: none;
   }
