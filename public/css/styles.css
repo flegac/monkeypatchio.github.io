@@ -679,22 +679,24 @@ body h1{
   font-size: 40px;
   font-family: 'Open Sans', arial, sans-serif;
   font-weight: bold;
-  color: #505c70;
+  color: #5E5E5E;
   text-align: center;
 }
 
 body h2{
+  color: #5E5E5E;
   font-size: 20px;
-  color: #65758e;
   text-align: center;
 }
 
 body h3{
+  color: #5E5E5E;
   font-size: 18px;
   text-align: center;
 }
 
 body h4{
+  color: #5E5E5E;
   text-align: center;
 }
 
