@@ -114,8 +114,11 @@
   },
   "expertise":{
     "solutions":{
-      "title":"Créateur de solutions globales et ciblées",
-      "subtitle":"Le web, le mobile, le Big Data sont autant une révolution technologique qu'une révolution dans les usages:<br/>les utilisateurs  peuvent ainsi accéder à tous leurs services partout et tout le temps<br/><br/>Nous vous accompagnons à chaque étape de vos projets grâce à un éventail d'experts reconnus pour leurs réalisations et pour leurs expériences."
+      "title":"Experts dans les technologies Web, mobile et Big Data",
+      "subtitle-1":"Partenaire technique des projets complexes et innovants",
+      "content-1":"Nous accompagnons nos clients à chaque étape de leurs projets grâce à un éventail d’experts reconnus pour leurs réalisations et pour leurs expériences. Nous n'hésitions pas à nous investir dans les parties techniques.<br/><br/>Au contraire, nos Experts aiment coder, discuter méthodologies, architectures et nouvelles technologies …",
+      "subtitle-2":"Chacun de nos Experts a l’informatique dans son ADN",
+      "content-2":"La passion de l'informatique et de l'innovation permet à nos consultants d'être toujours à la pointe des meilleures technologies du Web, du Mobile et du Big Data. Nous cultivons cet état d'esprit en consacrant du temps à la veille technologique et à l'échange de nos expertises."
     },
     "offers":{
       "title":"Nos Offres",

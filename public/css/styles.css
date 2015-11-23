@@ -670,32 +670,38 @@ body.no-header-wrapper {
 
 /* =========  Titles ========== */
 .section-titles {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 .section-titles h2{
-  margin-top: 30px;
+  margin-top: 50px;
+}
+.section-titles h3{
+  margin-top: 25px;
 }
 body h1{
-  font-size: 36px;
+  font-size: 40px;
   font-family: 'Open Sans', arial, sans-serif;
-  font-weight: 800;
-  color: #505c70;
+  font-weight: bold;
+  color: #5E5E5E;
   text-align: center;
 }
 
 body h2{
+  color: #5E5E5E;
   font-size: 20px;
-  color: #65758e;
   text-align: center;
 }
 
 body h3{
+  color: #5E5E5E;
   font-size: 18px;
   text-align: center;
+  font-weight: 300;
 }
 
 body h4{
+  color: #5E5E5E;
   text-align: center;
 }
 
@@ -1047,11 +1053,12 @@ body h4 ul{
 /* ======= Expertise Page  ======= */
 
 .section-content{
-  padding-bottom:30px;
+  padding-bottom:10px;
+  text-align: center;
 }
 
 .section-content img {
-  margin:0 auto;
+  height: 90px; 
   padding-bottom:10px;
   padding-top:5px;
 }
@@ -1061,11 +1068,9 @@ body h4 ul{
   padding-top: 40px;
   padding-bottom: 40px;
 }
-
-.solutions-section h1, .solutions-section h2 {
-  color:#000;
+.solutions-section h1{
+  color:#13a8eb;  
 }
-
 
 /* ======= Expertise Pag - solutions-offers  ======= */
 
@@ -1074,7 +1079,7 @@ body h4 ul{
   background: #13A8EB;
 }
 
-.solutions-offers-section h1, .solutions-offers-section h2, .solutions-offers-section h4 {
+.solutions-offers-section h1, .solutions-offers-section h2, .solutions-offers-section h3, .solutions-offers-section h4 {
   color:#fff;
 }
 
@@ -1084,7 +1089,7 @@ body h4 ul{
   padding-bottom: 60px;
   background: #9B26AF;
 }
-.missions-section h1, .missions-section h2, .missions-section h4 {
+.missions-section h1, .missions-section h2, .missions-section h3, .missions-section h4 {
   color:#fff;
 }
 
@@ -1094,7 +1099,7 @@ body h4 ul{
   padding-bottom: 60px;
 }
 
-.experts-profiles-section h1, .experts-profiles-section h2, .experts-profiles-section h4 {
+.experts-profiles-section h1, .experts-profiles-section h2, .experts-profiles-section h3, .experts-profiles-section h4 {
   color: #4285F4;
 }
 
@@ -1535,8 +1540,24 @@ body h4 ul{
 
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
-  .config-wrapper {
-    display: none;
+  body h1{
+    font-size: 26px;
+  } 
+  body h2{
+    font-size: 18px;
+  } 
+  body h3{
+    font-size: 16px;
+  }
+  .section-titles {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .section-titles h2{
+    margin-top: 20px;
+  }
+  .section-titles h3{
+    margin-top: 15px;
   }
   .header {
     padding: 0px inherit;
@@ -1691,16 +1712,12 @@ body h4 ul{
   .section-404 .intro {
     font-size: 20px;
   }
-
   .conclusion button{
     margin-top: 10px;
   }
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .config-wrapper {
-    display: none;
-  }
   .header .main-nav .nav .nav-item {
     margin-right: 10px;
   }
@@ -1713,9 +1730,6 @@ body h4 ul{
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .config-wrapper {
-    display: block;
-  }
   .header-wrapper-home {
     height: 650px;
   }
