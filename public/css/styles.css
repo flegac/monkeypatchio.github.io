@@ -5,6 +5,7 @@ body {
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x:hidden;
 }
 p {
   margin-bottom: 16px;
