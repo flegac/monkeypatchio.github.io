@@ -812,16 +812,19 @@ body h4 ul{
 .employees-section {
   background: #13A8EB;
   color:#FFFFFF;
+  padding : 80px;
 }
 
 .einstein-section {
   background: #000000;
   color:#FFFFFF;
+  padding : 80px;
 }
 
 .coffee-section {
   background: #F4F4F4;
   color:#000000;
+  padding : 80px;
 }
 
 /* ======= cta-section ======= */
