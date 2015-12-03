@@ -781,6 +781,16 @@ body h4 ul{
   color: #65758e;
 }
 
+/* ======= Philo =========*/
+.section-philo {
+  background: #65758e url('../images/background/philo.jpg') no-repeat 50% top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 800px;
+}
+
 /* ======= cta-section ======= */
 .cta-section {
   background: #65758e url('../images/background/cta-background.jpg') no-repeat left top;
