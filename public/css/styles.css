@@ -809,6 +809,21 @@ body h4 ul{
   min-height: 1060px;
 }
 
+.employees-section {
+  background: #13A8EB;
+  color:#FFFFFF;
+}
+
+.einstein-section {
+  background: #000000;
+  color:#FFFFFF;
+}
+
+.coffee-section {
+  background: #F4F4F4;
+  color:#000000;
+}
+
 /* ======= cta-section ======= */
 .cta-section {
   background: #65758e url('../images/background/cta-background.jpg') no-repeat left top;
