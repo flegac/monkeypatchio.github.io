@@ -149,5 +149,15 @@
       "subtitle":"Nous avons la volonté de vous accompagner sur votre démarche d’innovation technologique <br/>ou d’utilisation de nouveaux usages.<br/>Chez nous, chaque client a une et seule personne qui recueille votre besoin, l’analyse et vous propose les  solutions les plus adaptées.",
       "meet":"Rencontrer nos facilitateurs d'innovation"
     }
+  },
+  "philo":{
+    "company":{
+      "title":"Nous construisons une entreprise pas comme les autres.",
+      "spirit":"Esprit d’équipe",
+      "expertise":"Expertise",
+      "efficiency":"Efficacité",
+      "fulfillment":"Epanouissement",
+      "subtitle":"Fortement attachés à l’épanouissement personnel, nous souhaitons que tous nos salariés soit acteurs de leur quotidien et participent aux prises de décisions pour le collectif."
+    }
   }
 }
