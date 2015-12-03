@@ -719,6 +719,20 @@ body h4 ul{
   padding-bottom: 60px;
 }
 
+/* ====== Careers section =======*/
+.careers-section .item .item-inner {
+  padding-bottom: 30px;
+}
+
+.careers-section .item .item-inner {
+  background: #f8f9fa;
+  padding: 30px;
+  padding-bottom: 60px;
+  overflow: hidden;
+  position: relative;
+}
+
+
 /* ======= Promo Jobs section ======= */
 .promo-jobs{
     padding-top: 500px;
@@ -896,7 +910,7 @@ body h4 ul{
   margin-top: 30px;
 }
 
-/* ======= Both Careers & About - Team section ======= */
+/* ======= Both Careers - Team section ======= */
 .careers-section {
   margin-top:-60px;
 }
@@ -938,6 +952,7 @@ body h4 ul{
   margin-bottom: 15px;
   font-style: italic;
   color: #65758e;
+  text-align: left;
 }
 .team .item .social {
   padding-top: 15px;
@@ -977,9 +992,6 @@ body h4 ul{
 
 /* =======  - Team section ======= */
 
-.team .item .item-inner {
-  padding-bottom: 30px;
-}
 
 .team .item .info{
     margin-bottom: 0px;
