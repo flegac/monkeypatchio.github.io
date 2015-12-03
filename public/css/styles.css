@@ -1809,4 +1809,7 @@ body h4 ul{
   .latest-work .item .figure-container a {
     min-height: 520px;
   }
+  .section-philo{
+     min-height: 1060px;
+  }
 }
