@@ -806,7 +806,7 @@ body h4 ul{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 800px;
+  min-height: 1060px;
 }
 
 /* ======= cta-section ======= */
@@ -1650,6 +1650,9 @@ body h4 ul{
   .home-promo, .contact-promo {
     padding-top: 80px;
   }
+  .section-philo{
+     min-height: 460px;
+  }
   .header-wrapper-home {
     min-height: 460px;
   }
@@ -1795,6 +1798,9 @@ body h4 ul{
   }
   .latest-work .item .figure-container a {
     min-height: 440px;
+  }
+  .section-philo{
+     min-height: 540px;
   }
 }
 
