@@ -796,6 +796,9 @@ body h4 ul{
 }
 
 /* ======= Philo =========*/
+.philo-company-section{
+  padding-top:160px;
+}
 .section-philo {
   background: #65758e url('../images/background/philo.jpg') no-repeat 50% top;
   -webkit-background-size: cover;
@@ -803,6 +806,7 @@ body h4 ul{
   -o-background-size: cover;
   background-size: cover;
   min-height: 800px;
+  margin-top:60px;
 }
 
 /* ======= cta-section ======= */
