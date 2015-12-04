@@ -814,6 +814,13 @@ body h4 ul{
   min-height: 1060px;
 }
 
+.section-philo h1{
+    color:#FFFFFF;
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
 .employees-section {
   background: #13A8EB;
   color:#FFFFFF;
