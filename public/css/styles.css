@@ -815,6 +815,7 @@ body h4 ul{
 
 .section-philo, .section-philo h1{
     min-height: 1060px;
+    line-height: 1060px;
 }
 
 .section-philo h1 {
@@ -1696,6 +1697,7 @@ body h4 ul{
   }
   .section-philo, .section-philo h1{
      min-height: 460px;
+     line-height: 460px;
   }
   .header-wrapper-home {
     min-height: 460px;
@@ -1845,6 +1847,7 @@ body h4 ul{
   }
   .section-philo, .section-philo h1{
      min-height: 540px;
+     line-height: 540px;
   }
 }
 
@@ -1855,5 +1858,6 @@ body h4 ul{
   }
   .section-philo, .section-philo h1{
      min-height: 1060px;
+     line-height: 1060px;
   }
 }
