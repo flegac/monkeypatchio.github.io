@@ -811,14 +811,11 @@ body h4 ul{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 1060px;
 }
 
-.section-philo h1{
+.section-philo, .section-philo h1{
     color:#FFFFFF;
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
+    min-height: 1060px;
 }
 
 .employees-section {
@@ -1693,7 +1690,7 @@ body h4 ul{
   .home-promo, .contact-promo {
     padding-top: 80px;
   }
-  .section-philo{
+  .section-philo, .section-philo h1{
      min-height: 460px;
   }
   .header-wrapper-home {
@@ -1842,7 +1839,7 @@ body h4 ul{
   .latest-work .item .figure-container a {
     min-height: 440px;
   }
-  .section-philo{
+  .section-philo, .section-philo h1{
      min-height: 540px;
   }
 }
@@ -1852,7 +1849,7 @@ body h4 ul{
   .latest-work .item .figure-container a {
     min-height: 520px;
   }
-  .section-philo{
+  .section-philo, .section-philo h1{
      min-height: 1060px;
   }
 }
