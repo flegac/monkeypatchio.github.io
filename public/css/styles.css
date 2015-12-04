@@ -795,10 +795,15 @@ body h4 ul{
   color: #65758e;
 }
 
-/* ======= Philo =========*/
-.philo-company-section{
+/* ======= About Page =========*/
+.philo-company-section {
   padding-top:160px;
 }
+
+.philo-company-section h3{
+  color:#2EBCFC;
+}
+
 .section-philo {
   margin-top:80px;
   background: #65758e url('../images/background/philo.jpg') no-repeat 50% top;
@@ -814,11 +819,24 @@ body h4 ul{
   color:#FFFFFF;
   padding : 80px;
 }
+.employees-section h1, .employees-section h2, .employees-section h3{
+  color:#FFFFFF;
+}
+.employees-section .projects h2 {
+  color:#000000; 
+}
 
 .einstein-section {
   background: #000000;
-  color:#FFFFFF;
   padding : 80px;
+}
+.einstein-section h2{
+  color:#FFFFFF;
+}
+
+.einstein-section .from{
+  clear: both;
+  float: right;
 }
 
 .coffee-section {
