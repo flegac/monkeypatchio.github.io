@@ -344,6 +344,7 @@ body.no-header-wrapper {
 
 .navbar-nav > li > a {
   color: #fff;
+  border-bottom: 3px solid none;
 }
 
 .navbar-nav > li.active > a, .navbar-nav > li > a:hover  {
