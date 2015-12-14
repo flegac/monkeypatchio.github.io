@@ -310,11 +310,6 @@ body.no-header-wrapper {
   min-height: 800px;
 }
 
-.header-wrapper-jobs .container-fluid {
-  background: rgba(255, 255, 255, 0.5);
-  padding:60px;
-  color:#02A8F3;
-}
 .header-wrapper-jobs .container-fluid .title {
   font-size: 50px;
 }
@@ -322,7 +317,6 @@ body.no-header-wrapper {
 .header-wrapper-jobs .container-fluid .intro {
   font-size: 30px;
 }
-
 
 /* ==== Navbar ==== */
 .navbar {
