@@ -239,9 +239,7 @@ select {
 }
 
 /* ======= Header ======= */
-body.no-header-wrapper, .header-wrapper-home {
-  margin-top: 110px;
-}
+
 .header-wrapper-home {
   min-height: 650px;
 }
@@ -1636,6 +1634,9 @@ body h4 ul{
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  body.no-header-wrapper, .header-wrapper-career {
+    margin-top: 110px;
+  }
   .navbar img{
     height: 60px;
   }
