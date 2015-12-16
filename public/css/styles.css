@@ -1527,7 +1527,7 @@ body h4 ul{
     line-height: 2.4;
   }
 
-  body.no-header-wrapper, .header-wrapper-home {
+  body.no-header-wrapper, .header-wrapper-career {
     margin-top: 50px;
   }
   .header-wrapper-home {
@@ -1544,9 +1544,6 @@ body h4 ul{
      line-height: 460px;
   }
   .header-wrapper-home {
-    min-height: 460px;
-  }
-  .header-wrapper-career{
     min-height: 460px;
   }
   .promo .title .middle {
