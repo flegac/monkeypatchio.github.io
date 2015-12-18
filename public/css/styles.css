@@ -1525,7 +1525,7 @@ body h4 ul{
     line-height: 2.4;
   }
 
-  body.no-header-wrapper, .header-wrapper-career {
+  body.no-header-wrapper, .header-wrapper-career, .header-wrapper-contact {
     margin-top: 50px;
   }
   .header-wrapper-home {
@@ -1634,7 +1634,7 @@ body h4 ul{
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  body.no-header-wrapper, .header-wrapper-career {
+  body.no-header-wrapper, .header-wrapper-career, .header-wrapper-contact {
     margin-top: 110px;
   }
   .navbar img{
