@@ -320,79 +320,48 @@ select {
 .navbar .icon-bar{
   background: #FFFFFF;
 }
-.navbar .navbar-collapse {
-   margin-left: 0px;
-}
-
-.navbar-fixed-top .nav {
-    padding: 15px 0;
-}
-.navbar-fixed-top .navbar-brand {
-    padding: 0 15px;
-}
 
 .navbar .navbar-header{
   margin-left: 20px;
 }
 
-.navbar-nav > li.locale-item {
-  margin-right:0px;
-  margin-left:0px;
-}
-
 .navbar-nav > li > a {
   color: #fff;
-  border-bottom: 3px solid none;
+  margin-bottom: 3px;
 }
 
 .navbar-nav > li.active > a, .navbar-nav > li > a:hover  {
   border-bottom: 3px solid white;
   background: none;
+  margin-bottom: 0px;
 }
 
-.navbar img{
-  height: 40px;
-  padding-top: 10px;
+/* ==== NavBar locales ==== */
+.navbar-nav > li.locale-item {
+  margin-right:0px;
+  margin-left:0px;
 }
 
-/* ==== Header ==== */
-.header.navbar-fixed-top .navbar-collapse {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.header.header-shrink {
-  padding: 0px inherit;
+.navbar-nav > li.locale-item > a {
+  font-size: 13px;
+  padding-right: 4px;
+  padding-left: 4px;
+  border : none;
 }
 
-.header .navbar-nav > li > a {
-  line-height: 40px;
+/* ==== Header  shrink==== */
+.header.header-shrink .navbar-fixed-top .nav {
+  padding: 10px 0 10px 0;
 }
+
+.header.header-shrink .navbar-fixed-top .navbar-brand {
+  padding: 10px 0 0px 0;
+}
+
 .header.header-shrink .navbar-nav > li > a{
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.header.header-shrink h1.logo {
-  line-height: 1.3;
-}
-.header h1.logo {
-  font-family: "Russo One", arial, sans-serif;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-weight: 800;
-  font-size: 26px;
-  float: left;
-  line-height: 2;
-}
-.header h1.logo a {
-  color: #fff;
-}
-.header h1.logo a:hover {
-  text-decoration: none;
-}
-.header h1.logo a .highlight {
-  color: #71c4e0;
-}
-
 /* ======= Accordion ========*/
 .accordion-header .fa-chevron:after {
     color:#03A9F5;
@@ -1492,10 +1461,27 @@ body h4 ul{
 
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
+ 
+  .navbar img {
+    height: 38px;
+    padding-bottom: 10px;
+    padding-top: 0;
+  }
+
+  .navbar-nav > li > a {
+    font-size: 13px;
+    border-bottom: none;
+    margin-bottom:0px; 
+  }
+  .navbar-nav > li.locale-item > a{
+    font-size: 11px;
+    padding-left: 15px;
+  }
 
   .navbar-nav > li.active > a, .navbar-nav > li > a:hover  {
     border-bottom: none;
     background: #0A97D3;
+    font-size: 13px;
   }
 
   body h1{
@@ -1549,9 +1535,6 @@ body h4 ul{
   }
   .section .title {
     font-size: 26px;
-  }
-  .testimonials .item .meta .name {
-    max-width: none;
   }
   .cta-section .contact-info {
     font-size: 20px;
@@ -1632,14 +1615,46 @@ body h4 ul{
     margin-top: 10px;
   }
 }
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  
+  .navbar-nav > li > a {
+    padding:20px 8px 10px 8px;
+    font-size: 16px;
+  }
+  .navbar .navbar-collapse {
+    margin-left: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height:10px;
+    height : 40px;
+  }
+
+  .navbar-fixed-top .nav {
+      padding: 20px 0 20px 0;
+  }
+
+  .navbar-fixed-top .navbar-brand {
+    padding: 15px 0 0 0;
+  }
+
+/* ==== NavBar Logo ==== */
+  .navbar img {
+    height: 45px;
+    padding-bottom: 0;
+    padding-top: 15px;
+  }
+
+  .header.header-shrink .navbar img{
+    padding-bottom: 20px;
+    padding-top:0;
+  }
+
   body.no-header-wrapper, .header-wrapper-career, .header-wrapper-contact {
     margin-top: 110px;
   }
-  .navbar img{
-    height: 60px;
-  }
+
   .modal .modal-dialog {
     width: 660px;
   }
@@ -1656,9 +1671,6 @@ body h4 ul{
       text-align: center;
   }
 
-  .navbar-fixed-top .navbar-brand {
-    padding: 15px 0;
-  }
   .nav-center {
     text-align: center;
   }
@@ -1667,6 +1679,26 @@ body h4 ul{
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+/* ==== NavBar img ==== */
+  .navbar img {
+    height: 60px;
+    padding-bottom: 10px;
+    padding-top:10px;
+  }
+
+  .navbar-nav > li > a {
+    padding:20px 15px 10px 15px;
+    font-size: 18px;
+  }
+
+  .navbar-nav > li.locale-item > a{
+    font-size: 14px;
+  }
+
+  .header.header-shrink .navbar img{
+    padding-bottom: 30px;
+  }
+
   .header-wrapper-home {
     height: 650px;
   }
@@ -1679,16 +1711,6 @@ body h4 ul{
   .header h1.logo {
     float: left;
     margin: inherit;
-  }
-  .navbar-fixed-top .navbar-collapse {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .testimonials .item .meta .name {
-    max-width: 300px;
-  }
-  .testimonials .item .meta .client-logo {
-    max-width: none;
   }
   .modal .modal-dialog {
     width: 760px;
