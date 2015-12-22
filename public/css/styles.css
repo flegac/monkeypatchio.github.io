@@ -808,9 +808,6 @@ body h4 ul{
 }
 
 /* ======= Both Careers - Team section ======= */
-.careers-section {
-  margin-top:-60px;
-}
 .careers-section .section-titles{
   margin-top:0;
 }
@@ -1142,8 +1139,12 @@ body h4 ul{
   margin-top:-120px;
 }
 .assets-section {
-  background: #f5f5f5 url("/public/images/careers/assets_bg-top.png") no-repeat scroll center bottom / 100% auto;
+  background: #f5f5f5;
   color: #999999;
+}
+
+.careers-section{
+  background: #FFFFFF url("/public/images/careers/assets_bg-top.png") no-repeat scroll center bottom / 100% auto;
   padding-bottom:120px;
 }
 
