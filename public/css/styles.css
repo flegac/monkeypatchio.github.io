@@ -114,7 +114,7 @@ select {
   -webkit-appearance: none;
 }
 #topcontrol {
-  background: #65758e;
+  background: #025480;
   color: #fff;
   text-align: center;
   display: inline-block;
@@ -136,7 +136,7 @@ select {
   z-index: 30;
 }
 #topcontrol:hover {
-  background: #72829b;
+  background: #013D5C;
 }
 #topcontrol .fa {
   position: relative;
