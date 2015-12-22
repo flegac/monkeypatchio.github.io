@@ -1137,12 +1137,12 @@ body h4 ul{
 
 /* ======= Assets section =======*/ 
 .asset-top-section{
-  background: url("/public/images/careers/assets_bg-top.png") no-repeat scroll center bottom / 100% 100%;
+  background: url("/public/images/careers/assets_bg-bottom.png") no-repeat scroll center bottom / 100% 100%;
   height:120px;
   margin-top:-120px;
 }
 .assets-section {
-  background: #f5f5f5 url("/public/images/careers/assets_bg-bottom.png") no-repeat scroll center bottom / 100% auto;
+  background: #f5f5f5 url("/public/images/careers/assets_bg-top.png") no-repeat scroll center bottom / 100% auto;
   color: #999999;
   padding-bottom:120px;
 }
@@ -1652,7 +1652,7 @@ body h4 ul{
   }
 
   body.no-header-wrapper, .header-wrapper-career, .header-wrapper-contact {
-    margin-top: 110px;
+    margin-top: 94px;
   }
 
   .modal .modal-dialog {
