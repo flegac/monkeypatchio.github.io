@@ -1392,7 +1392,7 @@ body h4 ul{
   text-align: center;
 }
 .footer .bottom-bar .copyright {
-  display: block;
+  display: inline;
   font-size: 13px;
 }
 .footer .bottom-bar .copyright a {
