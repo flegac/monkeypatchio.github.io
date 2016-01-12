@@ -1676,6 +1676,9 @@ body h4 ul{
     text-align: center;
   }
 
+  .btn{
+    font-size: 12px;
+  }
 }
 
 /* Medium devices (desktops, 992px and up) */
