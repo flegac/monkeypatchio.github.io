@@ -1494,6 +1494,9 @@ body h4 ul{
   body h3{
     font-size: 16px;
   }
+  .btn{
+    font-size: 12px;
+  }
   .section-titles {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -1675,7 +1678,6 @@ body h4 ul{
   .nav-center {
     text-align: center;
   }
-
 }
 
 /* Medium devices (desktops, 992px and up) */

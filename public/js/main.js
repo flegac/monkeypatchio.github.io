@@ -64,6 +64,4 @@ $(document).ready(function() {
              $('#header').removeClass('header-shrink');             
          }
     }); 
-
-    
 });
