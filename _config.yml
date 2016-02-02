@@ -10,7 +10,7 @@ highlighter:     pygments
 
 # Setup
 title:           MonkeyPatch - Expertise Informatique
-keywords:        Expertise informatique, 
+keywords:        Expertise informatique, Developement informatique
 description:     Société de conseil informatique spécialisée dans les nouvelles technologies.
 url:             http://www.monkeypatch.io
 paginate:        1
