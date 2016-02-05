@@ -1467,6 +1467,7 @@ body h4 ul{
     height: 38px;
     padding-bottom: 10px;
     padding-top: 0;
+    padding-left: 0;
   }
 
   .navbar-nav > li > a {
@@ -1648,6 +1649,7 @@ body h4 ul{
     height: 45px;
     padding-bottom: 0;
     padding-top: 15px;
+    padding-left:100px;
   }
 
   .header.header-shrink .navbar img{
