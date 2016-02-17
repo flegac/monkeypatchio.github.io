@@ -6,7 +6,9 @@ sass:
     sass_dir:     _scss
     style:       :compressed
 
-highlighter:     pygments
+highlighter:     rouge
+gems:
+  - jekyll-sitemap
 
 # Setup
 title:           MonkeyPatch - Expertise Informatique
