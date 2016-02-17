@@ -992,12 +992,16 @@ body h4 ul{
 
 /* ======= Expertise Pag - solutions-offers  ======= */
 
-.solutions-offers-section {
+.solutions-offers-section .approach-section {
   padding-bottom: 60px;
   background: #13A8EB;
 }
 
 .solutions-offers-section h1, .solutions-offers-section h2, .solutions-offers-section h3, .solutions-offers-section h4 {
+  color:#fff;
+}
+
+.approach-section h1, .approach-section h2, .approach-section h3, .approach-section h4 {
   color:#fff;
 }
 
