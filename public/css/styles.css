@@ -969,14 +969,14 @@ body h4 ul{
 }
 
 /* ======= Expertise Page  ======= */
-p .subtitle{
+p.subtitle{
   font-size: 21px;
   font-weight: 600;
   text-align: left;
   padding-bottom: 10px;
 }
 
-p .line{
+p.line{
   font-size: 18px;
   text-align: left;
   font-weight: 400;
