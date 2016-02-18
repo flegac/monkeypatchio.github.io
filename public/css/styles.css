@@ -986,7 +986,8 @@ body h4 ul{
   padding-top: 40px;
   padding-bottom: 40px;
 }
-.solutions-section h1{
+
+.solutions-section, .solutions-section h1{
   color:#13a8eb;  
 }
 
@@ -995,6 +996,7 @@ body h4 ul{
 .solutions-offers-section, .approach-section {
   padding-bottom: 60px;
   background: #13A8EB;
+  color:#fff;
 }
 
 .solutions-offers-section h1, .solutions-offers-section h2, .solutions-offers-section h3, .solutions-offers-section h4 {
@@ -1010,6 +1012,7 @@ body h4 ul{
 .missions-section {
   padding-bottom: 60px;
   background: #9B26AF;
+  color:#fff;
 }
 .missions-section h1, .missions-section h2, .missions-section h3, .missions-section h4 {
   color:#fff;
@@ -1019,6 +1022,7 @@ body h4 ul{
 
 .experts-profiles-section {
   padding-bottom: 60px;
+  color: #4285F4;
 }
 
 .experts-profiles-section h1, .experts-profiles-section h2, .experts-profiles-section h3, .experts-profiles-section h4 {
@@ -1029,6 +1033,7 @@ body h4 ul{
 .experts-contact-section {
   padding-bottom: 60px;
   background: #F4F4F4;
+  color: #7F7F7F;
 }
 
 .experts-contact-section h1, .experts-contact-section h2, .experts-contact-section h4 {
