@@ -518,14 +518,14 @@ select {
 
 /* =========  Titles ========== */
 .section-titles {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 80px;
+  margin-bottom: 800px;
 }
 .section-titles h2{
-  margin-top: 50px;
+  margin-top: 40px;
 }
 .section-titles h3{
-  margin-top: 25px;
+  margin-top: 20px;
 }
 body h1{
   font-size: 40px;
