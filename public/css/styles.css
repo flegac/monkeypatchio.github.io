@@ -973,6 +973,7 @@ p .subtitle{
   font-size: 21px;
   font-weight: 600;
   text-align: left;
+  padding-bottom: 10px;
 }
 
 p .line{
@@ -993,11 +994,6 @@ p .line{
 }
 
 /* ======= Expertise Pag - Solutions  ======= */
-.section .subtitle{
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
 .solutions-section, .solutions-section h1{
   color:#13a8eb;  
 }
