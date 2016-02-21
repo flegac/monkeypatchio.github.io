@@ -1519,27 +1519,6 @@ select {
 		margin-bottom: 60px;
 		font-weight: 300;
 	}
-	#instafeed {
-		margin: 0 auto;
-		display: inline-block;
-		.item {
-			text-align: center;
-			padding: 5px;
-			background: $white;
-			img {
-				display: block;
-				-webkit-transition: transform 0.4s linear;
-				-moz-transition: transform 0.4s linear;
-				-ms-transition: transform 0.4s linear;
-				-o-transition: transform 0.4s linear;
-			}
-			&:hover img {
-				-webkit-opacity: 0.9;
-				-moz-opacity: 0.9;
-				opacity: 0.9;
-			}
-		}
-	}
 }
 .blog-list {
 	padding: 80px 0;
@@ -1884,23 +1863,6 @@ select {
 			.count {
 				color: $color_mountain_mist_approx;
 				font-family: $font_6, $font_7, $font_8, $font_2;
-			}
-		}
-		&.instagram .instafeed {
-			.item {
-				display: inline-block;
-				margin-right: 5px;
-			}
-			img {
-				max-width: 75px;
-				padding: 2px;
-				border: 1px solid $color_gallery_approx;
-				&:hover {
-					-webkit-opacity: 0.8;
-					-moz-opacity: 0.8;
-					opacity: 0.8;
-					background: $color_pale_sky_approx;
-				}
 			}
 		}
 	}
