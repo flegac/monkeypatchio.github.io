@@ -1,67 +1,69 @@
 $(document).ready(function() {
+    // i18n
+    var i18n = i18next
+      .use(i18nextXHRBackend) // allow loading json with XHR
+      .use(i18nextBrowserLanguageDetector) // auto detect lang
+      .use(i18nextLocalStorageCache); // caching in localStorage
 
-    /* I18N management */
+    var updateText = function() {
+      /* Translate */
+      $('body').localize();
 
-    $.i18n.init({
-        resGetPath: 'public/locales/__lng__/__ns__.json',
-        ns: { namespaces: ['ns.special'], defaultNs: 'ns.special'},
-        useLocalStorage: false,
-        debug: false,
-        useCookie: true,
-        fallbackLng: 'fr'
-    }, function(t) {
-        /* Translate */
-        $('body').i18n();
+      /* ======= Twitter Bootstrap hover dropdown ======= */
+      /* Ref: https://github.com/CWSpear/bootstrap-hover-dropdown */
+      /* apply dropdownHover to all elements with the data-hover="dropdown" attribute
+      $('[data-hover="dropdown"]').dropdownHover();*/
 
-        /* ======= Twitter Bootstrap hover dropdown ======= */   
-        /* Ref: https://github.com/CWSpear/bootstrap-hover-dropdown */ 
-        /* apply dropdownHover to all elements with the data-hover="dropdown" attribute 
-        $('[data-hover="dropdown"]').dropdownHover();*/
-        
-        /* ======= jQuery Responsive equal heights plugin ======= */
-        /* Ref: https://github.com/liabru/jquery-match-height */
-        
-         $('#services .item-inner').matchHeight();
-         $('#who .item-inner').matchHeight();    
-         $('#team .item-inner').matchHeight();
-         $('#careers .item-inner').matchHeight();
-         $('#assets .item-inner').matchHeight();
-         $('#offers .item-inner').matchHeight();
+      /* ======= jQuery Responsive equal heights plugin ======= */
+      /* Ref: https://github.com/liabru/jquery-match-height */
 
+       $('#services .item-inner').matchHeight();
+       $('#who .item-inner').matchHeight();
+       $('#team .item-inner').matchHeight();
+       $('#careers .item-inner').matchHeight();
+       $('#assets .item-inner').matchHeight();
+       $('#offers .item-inner').matchHeight();
+    };
+
+    i18n.init({
+      debug: true,
+      backend: {
+        loadPath: '/public/locales/{{lng}}/{{ns}}.json'
+      },
+      detection: {
+        order: ['querystring', 'cookie', 'localStorage', 'navigator'],
+        lookupQuerystring: 'lng'
+      },
+      fallbackLng: 'en'
+    }, function() {
+      i18nextJquery.init(i18n, $);
+      updateText();
     });
 
     $('#changeLocaleToEn').click(function() {
-        $.i18n.setLng("en", function(t) {
-          $.cookie('i18next', 'en');
-          $('body').i18n();
-        });
+        i18next.changeLanguage('en', updateText);
     });
 
     $('#changeLocaleToFr').click(function() {
-        $.i18n.setLng("fr", function(t) {
-          //$('#languageEn').removeClass("active");
-          //$('#languageFr').addClass("active");
-          $.cookie('i18next', 'fr');
-          $('body').i18n();
-        });
+      i18next.changeLanguage('fr', updateText);
     });
 
 
-     
+
     /* ======= jQuery Placeholder ======= */
     /* Ref: https://github.com/mathiasbynens/jquery-placeholder */
-    
-    $('input, textarea').placeholder();         
-    
-	/* ======= Fixed Header animation ======= */ 
-        
+
+    $('input, textarea').placeholder();
+
+	/* ======= Fixed Header animation ======= */
+
     $(window).on('scroll', function() {
-         
+
          if ($(window).scrollTop() > 80 ) {
              $('#header').addClass('header-shrink');
          }
          else {
-             $('#header').removeClass('header-shrink');             
+             $('#header').removeClass('header-shrink');
          }
-    }); 
+    });
 });
