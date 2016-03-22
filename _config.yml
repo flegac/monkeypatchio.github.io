@@ -13,7 +13,7 @@ gems:
 # Setup
 title:           MonkeyPatch - Expertise Informatique
 keywords:        Expertise informatique, Developement informatique
-description:     Société de conseil informatique spécialisée dans les nouvelles technologies.
+description:     Société de conseil et d'expertise en informatique spécialisée dans les nouvelles technologies.
 url:             http://www.monkeypatch.io
 paginate:        1
 baseurl:          
