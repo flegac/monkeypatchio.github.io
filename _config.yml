@@ -9,10 +9,11 @@ sass:
 highlighter:     rouge
 gems:
   - jekyll-sitemap
+  - jekyll-paginate
 
 # Setup
 title:           MonkeyPatch - Expertise Informatique
-keywords:        Expertise informatique, Developement informatique
+keywords:        Expertise informatique, Dévelopement informatique
 description:     Société de conseil et d'expertise en informatique spécialisée dans les nouvelles technologies.
 url:             http://www.monkeypatch.io
 paginate:        1
