@@ -10,6 +10,8 @@ highlighter:     rouge
 gems:
   - jekyll-sitemap
   - jekyll-paginate
+exclude:
+  - deploy.sh
 
 # Setup
 title:           MonkeyPatch - Expertise Informatique
