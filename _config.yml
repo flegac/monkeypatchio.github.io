@@ -10,6 +10,8 @@ highlighter:     rouge
 gems:
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-press
+  - jekyll-seo-tag
 exclude:
   - deploy.sh
 
