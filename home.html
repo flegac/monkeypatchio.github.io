@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--  lastBuildDate : Tue, 12 Jul 2016 19:23:22 +0200 -->
+<!--  lastBuildDate : Tue, 12 Jul 2016 17:18:40 +0200 -->
 <html>
    <head>
-  <title>Contact</title>
+  <title>Accueil</title>
   <!-- Meta -->
   <meta charset="utf-8">
   <!-- Google site verification -->
@@ -12,23 +12,6 @@
   <meta name="keywords" content="Expertise informatique, Dévelopement informatique" />
   <meta name="description" content="Société de conseil et d'expertise en informatique spécialisée dans les nouvelles technologies." />
   <meta name="author" content="Emmanuel Vinas">
-  
-  <meta property="og:site_name" content="MonkeyPatch - Expertise Informatique"/>
-  <meta property="og:title" content="titles.contact"/>
-  <meta property="og:description" content=" "/>
-  <meta property="og:url" content="http://www.monkeypatch.io/contact"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:locale" content="fr"/>
-  <meta property="og:image" content=""/>
-  <meta property="og:image:type" content="image/jpeg"/>
-  <meta property="og:image:width" content="640"/>
-  <meta property="og:image:height" content="320"/>
-  <meta name="twitter:creator" content="@MonkeyPatch_io" />
-  
-  
-  <link rel="alternate" hreflang="en" href="/en/index" />
-  
-
   <link rel="shortcut icon" href="favicon.ico">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
@@ -74,9 +57,9 @@
 
 </head>
 
-    <body class="contact-page">
+    <body class="home-page">
     	
-    	<div class="header-wrapper header-wrapper-contact">
+    	<div class="header-wrapper header-wrapper-home">
   <!-- ******HEADER****** -->
   <header id="header" class="header navbar-fixed-top">
     <nav role="navigation" class="navbar navbar-fixed-top">
@@ -92,12 +75,12 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button data-target="#navbar-collapse-menu" data-toggle="collapse" class="navbar-toggle" type="button">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="index" class="navbar-brand">
+		                    <span class="sr-only">Toggle navigation</span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                </button>
+          <a href="index.html" class="navbar-brand">
             <img alt="" src="/public/images/logos/logo-monkey.svg">
           </a>
         </div>
@@ -117,11 +100,9 @@
                 
               
                 
-                  <li class="nav-item">
-                    
-                      <a href="/expert">Notre Expertise</a>
-                    
-                  </li>
+                  
+                    <li class="nav-item"><a href="/expert">Notre Expertise</a></li>
+                  
                 
               
                 
@@ -137,11 +118,9 @@
                 
               
                 
-                  <li class="nav-item">
-                    
-                      <a href="/about">Notre Philo</a>
-                    
-                  </li>
+                  
+                    <li class="nav-item"><a href="/about">Notre Philo</a></li>
+                  
                 
               
                 
@@ -165,11 +144,9 @@
                 
               
                 
-                  <li class="nav-item">
-                    
-                      <a href="/careers">Être Monkeys</a>
-                    
-                  </li>
+                  
+                    <li class="nav-item"><a href="/careers">Être Monkeys</a></li>
+                  
                 
               
                 
@@ -199,11 +176,9 @@
                 
               
                 
-                  <li class="nav-item">
-                    
-                      <a href="/job">Nos Jobs</a>
-                    
-                  </li>
+                  
+                    <li class="nav-item"><a href="/job">Nos Jobs</a></li>
+                  
                 
               
                 
@@ -219,11 +194,9 @@
                 
               
                 
-                  <li class="active nav-item">
-                    
-                      <a href="/contact">Contact</a>
-                    
-                  </li>
+                  
+                    <li class="nav-item"><a href="/contact">Contact</a></li>
+                  
                 
               
                 
@@ -342,13 +315,7 @@
 
           <!-- locales -->
           <ul class="nav navbar-nav navbar-right">
-            <li class="locale-item nav-item">
-              <a href="en/contact" >EN</a>
-            </li>
-            <li class="locale-item nav-item hidden-xs"><a>|</a></li>
-            <li class="active locale-item nav-item">
-              <a href="/contact" >FR</a>
-            </li>
+            
           </ul>
           <!-- locales -->
         </div>
@@ -360,8 +327,25 @@
   <!--//header-->
 
   
-    <section class="contact-promo section">
-  <div class="container text-center"></div>
+    <div class="bg-slider-wrapper">
+  <div id="bg-slider" class="flexslider bg-slider">
+    <ul class="slides">
+      <li class="slide slide-1"></li>
+      <li class="slide slide-2"></li>
+      <li class="slide slide-3"></li>
+    </ul>
+  </div>
+</div>
+<section id="home-promo" class="home-promo section">
+  <div class="container text-center">
+    <div class="header-title-section">
+      <h1 class="intro">Ensemble</h1>
+      <h1 class="title">Changeons les idées en innovations</h1>
+    </div>
+    <button class="btn btn-cta btn-cta-primary" type="button" data-toggle="modal" data-target="#modal-contact" data-backdrop="static">
+      Nous contacter
+    </button>
+  </div>
 </section>
 
   
@@ -369,37 +353,84 @@
 <!--//header-wrapper-->
 
 	
-	    <!-- ******Map Section****** --> 
-<section class="map-section section">
-    <div class="container">
-        <div class="section-titles">
-            <h1>Venez nous rencontrer</h1>
-            <h2>Que ce soit pour discuter de vos projets ou de votre souhait de rejoindre notre équipe, n’hésitez pas à nous contacter. </h2>
-        </div><!--//section-titles-->
+	    <!-- ******Why Section****** -->
+<section id="who" class="who section">
+	<div class="container">
+		
+		<div class="section-titles">
+			<h1>Qui nous sommes</h1>
+			<h2>Nous sommes une équipe d'experts spécialisés dans le web, le mobile et le cloud. Convaincus par l’agilité et le lean startup, nos consultants sont tous des passionnés qui aiment participer aux meetups, conférences techniques et hackathons pour tester de nouvelles technologies, partager leur expertise et progresser.</h2>
+		</div><!--//section-titles-->
+		
+		<div class="row benefits text-center">
+			<div class="item col-md-3 col-sm-6 col-xs-12">
+				<div class="item-inner">
+					<div class="fs1" aria-hidden="true" data-icon="&#xe007;"></div>                        
+					<h3 class="sub-title">Une équipe qualifiée</h3>
+				</div>       
+			</div><!--//item-->
+			<div class="item col-md-3 col-sm-6 col-xs-12 sm-break">
+				<div class="item-inner">
+					<div class="fs1" aria-hidden="true" data-icon="&#xe01c;"></div>
+					<h3 class="sub-title">Approche agile</h3>
+				</div><!--//item-inner-->                    
+			</div><!--//item-->
+			<div class="item col-md-3 col-sm-6 col-xs-12">
+				<div class="item-inner">
+					<div class="fs1" aria-hidden="true" data-icon="&#xe031;"></div>
+					<h3 class="sub-title">Code de qualité</h3>
+				</div><!--//item-inner-->
+			</div><!--//item-->
+			<div class="item col-md-3 col-sm-6 col-xs-12">
+				<div class="item-inner">
+					<div class="fs1" aria-hidden="true" data-icon="&#xe030;"></div>                        
+					<h3 class="sub-title">Consultants passionnés</h3>
+				</div><!--//item-inner-->              
+			</div><!--//item-->
+		</div><!--//row-->
+</section><!--//who-->
 
-        <div class="row">
-            <div id="map-outer" class="col-md-12 col-sm-6 col-xs-12">
-                <div id="address" class="col-md-4">
-                    <div class="adress-outer col-md-12" >
-                        <h2>Monkey Patch</h2>     
-                        <p class="address">     
-                            <span class="fs1" aria-hidden="true" data-icon="&#x77;">&nbsp;</span><a href="tel:91335781">05 34 32 61 45</a><br/>
-                            <span class="fs1" aria-hidden="true" data-icon="&#xe010;">&nbsp;</span><a href="mailto:contact@monkeypatch.io">contact@monkeypatch.io</a><br/>
-                            <span class="region">12 Avenue de l'Europe</span><br/>
-                            <span class="postal-code">31520, Ramonville-Saint-Agne</span><br/>
-                            <span class="country-name">France</span>
-                        </p>
-                    </div>
-                </div>
-                <div id="map" class="col-md-8 col-sm-6 col-xs-12" style="height:400px;"></div>
-            </div><!-- //map-outer -->
-        </div><!-- // row -->
-    </div><!--//container-->
-</section>
+<!-- ****** customers Section****** -->
+<section id="customers" class="customers last-section section">
+	<div class="container text-center">
+		
+		<div class="section-titles">
+			<h1>Ils nous ont déjà fait confiance</h1>
+		</div><!--//section-titles-->
 
-<!-- ******Contact Section****** --> 
-<section class="contact-section last-section section">
-    <div class="container">
+		<ul class="logo-list list-inline row">
+			<li class="col-md-4 col-sm-4 col-xs-12"><img class="img-responsive" src="/public/images/logos/logo-1.png" alt="" /></li>
+			<li class="col-md-4 col-sm-4 col-xs-12"><img class="img-responsive" src="/public/images/logos/logo-2.png" alt="" /></li>
+			<li class="col-md-4 col-sm-4 col-xs-12"><img class="img-responsive" src="/public/images/logos/logo-3.png" alt="" /></li>                   
+		</ul><!--//logo-list-->
+		<ul class="logo-list list-inline row last">
+			<li class="col-md-4 col-sm-4 col-xs-12"><img class="img-responsive" src="/public/images/logos/logo-4.png" alt="" /></li> 
+			<li class="col-md-4 col-sm-4 col-xs-12"><img class="img-responsive" src="/public/images/logos/logo-5.png" alt="" /></li>
+			<li class="col-md-4 col-sm-4 col-xs-12 "><img class="img-responsive" src="/public/images/logos/logo-6.png" alt="" /></li>
+		</ul><!--//logos-list-->               
+	</div><!--//container-->
+</section><!--//customers-->
+
+<!-- Contact Modal -->
+<div class="modal modal-contact" id="modal-contact" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 id="contactModalLabel" class="modal-title text-center">Pour nous contacter</h4>
+        <p class="intro text-center">Remplissez le formulaire</p>
+      </div>
+      <div class="modal-body">
+        <ul class="contact-info list-inline text-center">
+          <li class="tel">
+            <span class="fs1" aria-hidden="true" data-icon="&#x77;"></span><br />
+            <a href="tel:91335781">05 34 32 61 45</a>
+          </li>
+          <li class="email">
+            <span class="fs1" aria-hidden="true" data-icon="&#xe010;"></span><br />
+            <a href="mailto:contact@monkeypatch.io">contact@monkeypatch.io</a>
+          </li>
+        </ul>
         <form id="contact-form" class="contact-form" method="post" action="//formspree.io/contact@monkeypatch.io">
   <input type="hidden" name="_next" value="/" />
   <input type="hidden" name="_subject" value="Contact from monkeypatch.io" />
@@ -431,9 +462,14 @@
 </form>
 <!--//contact-form-->
 
-    </div><!--//container-->
-</section><!--//contact-section-->
-
+      </div>
+      <!--//modal-body-->
+    </div>
+    <!--//modal-content-->
+  </div>
+  <!--//modal-dialog-->
+</div>
+<!--//modal-->
 
 
 
@@ -459,7 +495,8 @@
                 
                   
                     <li>
-                      <a href="/expert">Notre Expertise</a>
+                      1
+                      <a href="/expert.html">Notre Expertise</a>
                     </li>
                   
                 
@@ -477,34 +514,11 @@
                 
                   
                     <li>
-                      <a href="/about">Notre Philo</a>
+                      2
+                      <a href="/about.html">Notre Philo</a>
                     </li>
                   
                 
-                  
-                
-                  
-                
-                  
-                
-                  
-                
-                  
-                
-                  
-                
-                  
-                
-              
-                
-                  
-                
-                  
-                
-                  
-                    <li>
-                      <a href="/careers">Être Monkeys</a>
-                    </li>
                   
                 
                   
@@ -526,6 +540,31 @@
                   
                 
                   
+                    <li>
+                      3
+                      <a href="/careers.html">Être Monkeys</a>
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              
+                
+                  
+                
+                  
+                
+                  
                 
                   
                 
@@ -535,7 +574,8 @@
                 
                   
                     <li>
-                      <a href="/job">Nos Jobs</a>
+                      4
+                      <a href="/job.html">Nos Jobs</a>
                     </li>
                   
                 
@@ -553,7 +593,8 @@
                 
                   
                     <li>
-                      <a href="/contact">Contact</a>
+                      5
+                      <a href="/contact.html">Contact</a>
                     </li>
                   
                 
@@ -724,17 +765,13 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script> 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-hover-dropdown/2.2.1/bootstrap-hover-dropdown.min.js"></script>
 <script type="text/javascript" src="/public/plugins/back-to-top.js"></script>             
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-placeholder/2.3.1/jquery.placeholder.js"></script>      
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+<!-- Jquery cookie -->   
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
 
 		
-			
-				
-				<!-- Google Map -->
-<script type="text/javascript" src="http://maps.google.com/maps/api/js"></script> 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.22/gmaps.min.js"></script> 
-<script type="text/javascript" src="/public/js/map.js"></script>
-
 			
 				
 				<!-- Form Validation -->
@@ -744,7 +781,18 @@
 <!-- Form iOS fix -->
 <script type="text/javascript" src="/public/plugins/isMobile/isMobile.min.js"></script>
 <script type="text/javascript" src="/public/js/form-mobile-fix.js"></script>
+			
+				
+				<!-- Flexslider -->    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.0/flexslider.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.0/jquery.flexslider-min.js"></script> 
+<script type="text/javascript" src="/public/js/flexslider-custom.js"></script>     
 
+<!-- Owl Carousel -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script> 
+<script type="text/javascript" src="/public/js/owl-custom.js"></script> 
 			
 		
 

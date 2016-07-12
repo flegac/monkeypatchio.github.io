@@ -1,1 +1,0 @@
-$(document).ready(function(){isMobile.any===!0&&($("input, textarea").on("focus",function(){$(".header").css({position:"absolute"}),$(window).scrollTop(0)}),$("input, textarea").on("blur",function(){$(".header").css({position:"fixed"})}))});

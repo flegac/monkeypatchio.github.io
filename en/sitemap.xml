@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://www.monkeypatch.io/about</loc>
+<loc>http://www.monkeypatch.io/en/about</loc>
 </url>
 <url>
-<loc>http://www.monkeypatch.io/careers</loc>
+<loc>http://www.monkeypatch.io/en/careers</loc>
 </url>
 <url>
-<loc>http://www.monkeypatch.io/contact</loc>
+<loc>http://www.monkeypatch.io/en/contact</loc>
 </url>
 <url>
-<loc>http://www.monkeypatch.io/expert</loc>
+<loc>http://www.monkeypatch.io/en/expert</loc>
 </url>
 <url>
-<loc>http://www.monkeypatch.io/index</loc>
+<loc>http://www.monkeypatch.io/en/index</loc>
 </url>
 <url>
-<loc>http://www.monkeypatch.io/job</loc>
+<loc>http://www.monkeypatch.io/en/job</loc>
 </url>
 <url>
-<loc>http://www.monkeypatch.io/terms</loc>
+<loc>http://www.monkeypatch.io/en/terms</loc>
 </url>
 </urlset>

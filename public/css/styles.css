@@ -346,7 +346,6 @@ select {
   font-size: 13px;
   padding-right: 4px;
   padding-left: 4px;
-  border : none;
 }
 
 /* ==== Header  shrink==== */
@@ -400,11 +399,6 @@ select {
 
 .customers .logo-list img {
   margin: 0 auto;
-  -webkit-opacity: 0.8;
-  -moz-opacity: 0.8;
-  opacity: 0.8;
-}
-.customers .logo-list img:hover {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
