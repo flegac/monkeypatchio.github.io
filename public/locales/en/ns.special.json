@@ -66,5 +66,9 @@
   "jobs":{
     "nojobs":"Pour l’instant, aucune annonce ouverte ne correspond à votre profil mais vous vous sentez déjà Monkeys, n’hésitez pas à nous contacter pour faire connaissance",
     "application":"spontaneous application"
+  },
+  "error": {
+      "404": "Oops! Something went wrong. <br>The requested page or file may have been moved or deleted.",
+      "back": "Back to Home" 
   }
 }
