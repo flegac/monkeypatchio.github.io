@@ -3,58 +3,59 @@ layout: default
 key-title: about
 group: 2
 body-class: about-page
-header-class: 
-promo:
+header-class:
+permalink: about
+title: titles.about
 ---
 <!-- ******philo Section****** -->
 <section class="philo-company-section section first-section">
     <div class="container text-center">
         <div class="header-title-section">
-            <h1 class="title" data-i18n="philo.company.title"/>
+            <h1 class="title">{% t philo.company.title %}</h1>
          </div>   
           <div class="row">
             <div class="item col-md-3 col-sm-3 col-xs-12">
-                <img src="{{ site.baseurl }}/public/images/philo/spirit.jpg"/>
-                <h3 data-i18n="philo.company.spirit"/>
+                <img src="{{ site.baseurl_root_root }}/public/images/philo/spirit.jpg"/>
+                <h3>{% t philo.company.spirit %}</h3>
             </div>  
             <div class="item col-md-3 col-sm-3 col-xs-12">
-                <img src="{{ site.baseurl }}/public/images/philo/expert.jpg"/>
-                <h3 data-i18n="philo.company.expertise"/>
+                <img src="{{ site.baseurl_root_root }}/public/images/philo/expert.jpg"/>
+                <h3>{% t philo.company.expertise %}</h3>
             </div>   
             <div class="item col-md-3 col-sm-3 col-xs-12">
-                <img src="{{ site.baseurl }}/public/images/philo/efficiency.jpg"/>
-                <h3 data-i18n="philo.company.efficiency"/>
+                <img src="{{ site.baseurl_root_root }}/public/images/philo/efficiency.jpg"/>
+                <h3>{% t philo.company.efficiency %}</h3>
             </div>  
             <div class="item col-md-3 col-sm-3 col-xs-12">
-                <img src="{{ site.baseurl }}/public/images/philo/fulfillment.jpg"/>
-                <h3 data-i18n="philo.company.fulfillment"/>
+                <img src="{{ site.baseurl_root_root }}/public/images/philo/fulfillment.jpg"/>
+                <h3>{% t philo.company.fulfillment %}</h3>
             </div>   
          </div>   
-         <h2 data-i18n="philo.company.subtitle"/>
+         <h2>{% t philo.company.subtitle %}</h2>
 </section>
 <!-- ******philo Section****** -->
 <div class="section-philo">
-  <h1 data-i18n="philo.header"></h1>
+  <h1>{% t philo.header %}</h1>
 </div>
 
 <!-- ******philo Section****** -->
 <section id="team" class="team team-section section">
     <div class="container">
-        <h1 class="title text-center" data-i18n="philo.founders.title"></h1>
-        <h2 class="intro text-center" data-i18n="philo.founders.text"></h2>
+        <h1 class="title text-center">{% t philo.founders.title %}</h1>
+        <h2 class="intro text-center">{% t philo.founders.text %}</h2>
         <div class="row">
             <div class="item col-md-6 col-sm-6 col-xs-12">
                 <div class="item-inner">
                     <div class="row">
                         <figure class="figure col-md-5 col-sm-12 col-xs-12">
-                            <img class="img-responsive" src="{{ site.baseurl }}/public/images/team/matthieu.jpg" alt=""/>
+                            <img class="img-responsive" src="{{ site.baseurl_root }}/public/images/team/matthieu.jpg" alt=""/>
                         </figure>
                         <div class="info col-md-7 col-sm-12 col-xs-12">
                             <h3 class="name">Matthieu</h3>
-                            <h4 class="role" data-i18n="philo.founders.matthieu.role1"></h4>
-                            <h4 class="role" data-i18n="philo.founders.matthieu.role2"></h4>
-                            <h5 data-i18n="philo.founders.matthieu.xp"></h5>
-                            <p data-i18n="philo.founders.matthieu.text"></p>
+                            <h4 class="role">{% t philo.founders.matthieu.role1 %}</h4>
+                            <h4 class="role">{% t philo.founders.matthieu.role2 %}</h4>
+                            <h5>{% t philo.founders.matthieu.xp %}</h5>
+                            <p>{% t philo.founders.matthieu.text %}</p>
                         </div><!--//info-->
                     </div><!--//row-->
                     <div class="social text-center">
@@ -69,14 +70,14 @@ promo:
                 <div class="item-inner">
                     <div class="row">
                         <figure class="figure col-md-5 col-sm-12 col-xs-12">
-                           <img class="img-responsive" src="{{ site.baseurl }}/public/images/team/emmanuel.jpg" alt=""/>
+                           <img class="img-responsive" src="{{ site.baseurl_root }}/public/images/team/emmanuel.jpg" alt=""/>
                         </figure>
                         <div class="info col-md-7 col-sm-12 col-xs-12">
                             <h3 class="name">Emmanuel</h3>
-                            <h4 class="role" data-i18n="philo.founders.manu.role1"></h4>
-                            <h4 class="role" data-i18n="philo.founders.manu.role2"></h4>
-                            <h5 data-i18n="philo.founders.manu.xp"></h5>
-                            <p data-i18n="philo.founders.manu.text"></p>
+                            <h4 class="role">{% t philo.founders.manu.role1 %}</h4>
+                            <h4 class="role">philo.founders.manu.role2</h4>
+                            <h5>{% t philo.founders.manu.xp %}</h5>
+                            <p>{% t philo.founders.manu.text %}</p>
                         </div><!--//info-->
                     </div><!--//row-->
                     <div class="social text-center">
@@ -97,13 +98,13 @@ promo:
 <section class="employees-section section">
     <div class="container text-center">
         <div class="header-title-section">
-            <h1 data-i18n="philo.employees.title"/>
+            <h1>{% t philo.employees.title %}</h1>
          </div>  
-         <h2 class="projects" data-i18n="philo.employees.projects"/>
-         <h2 data-i18n="philo.employees.need"/>
-         <h3 data-i18n="philo.employees.we-are"/>
-         <h2 data-i18n="philo.employees.but-we"/>
-         <h3 data-i18n="philo.employees.why"/>
+         <h2 class="projects">{% t philo.employees.projects %}</h2>
+         <h2>{% t philo.employees.need %}</h2>
+         <h3>{% t philo.employees.we-are %}</h3>
+         <h2>{% t philo.employees.but-we %}</h2>
+         <h3>{% t philo.employees.why %}</h3>
     </div>     
 </section><!--//employees-section-->
 
@@ -112,12 +113,12 @@ promo:
     <div class="container text-center">
         <div class="row">
             <div class="col-md-4 col-sm-4 col-xs-12">
-                <img class="img-responsive" src="{{ site.baseurl }}/public/images/philo/einstein.jpg" alt=""/>
+                <img class="img-responsive" src="{{ site.baseurl_root }}/public/images/philo/einstein.jpg" alt=""/>
             </div>
              <div class="col-md-8 col-sm-8 col-xs-12">
-                <h2 data-i18n="philo.einstein.sitation-1"/>
-                <h2 data-i18n="philo.einstein.sitation-2"/>
-                <h2 class="from" data-i18n="philo.einstein.from"/>
+                <h2>{% t philo.einstein.sitation-1 %}</h2>
+                <h2>{% t philo.einstein.sitation-2 %}</h2>
+                <h2 class="from">{% t philo.einstein.from %}</h2>
             </div>
         </div>       
     </div>  
@@ -128,14 +129,14 @@ promo:
     <div class="container text-center">
         <div class="row">
             <div class="col-md-2 col-sm-2 col-xs-12">
-                <img src="{{ site.baseurl }}/public/images/philo/coffee.png" alt="" width="100"/>
+                <img src="{{ site.baseurl_root }}/public/images/philo/coffee.png" alt="" width="100"/>
             </div>
              <div class="col-md-8 col-sm-8 col-xs-12">
-                <h1 data-i18n="philo.coffee.come"/>
-                <h2 data-i18n="philo.coffee.coffee"/>
+                <h1>{% t philo.coffee.come %}</h1>
+                <h2>{% t philo.coffee.coffee %}</h2>
             </div>
             <div class="col-md-2 col-sm-2 hidden-xs">
-                <img src="{{ site.baseurl }}/public/images/philo/coffee.png" alt="" width="100"/>
+                <img src="{{ site.baseurl_root }}/public/images/philo/coffee.png" alt="" width="100"/>
             </div>
         </div>       
     </div>       

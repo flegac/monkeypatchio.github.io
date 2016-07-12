@@ -4,6 +4,8 @@ key-title: home
 body-class: home-page
 header-class: header-wrapper-home
 promo: promo/promo_index.html
+title: titles.home
+permalink: index
 jsinclude:
    form: js/libraries-form.js
    home: js/libraries-home.js
@@ -14,50 +16,36 @@ jsinclude:
 	<div class="container">
 		
 		<div class="section-titles">
-			<h1 data-i18n="home.who-we-are"></h1>
-			<h2 data-i18n="home.intro"></h2>
+			<h1>{%t home.who-we-are %}</h1>
+			<h2>{%t home.intro %}</h2>
 		</div><!--//section-titles-->
 		
 		<div class="row benefits text-center">
 			<div class="item col-md-3 col-sm-6 col-xs-12">
 				<div class="item-inner">
 					<div class="fs1" aria-hidden="true" data-icon="&#xe007;"></div>                        
-					<h3 class="sub-title" data-i18n="home.benefits.skilled"></h3>
-					<!--<div class="desc">
-						<p data-i18n="home.skilled-desc"></p>
-					</div>-->                
+					<h3 class="sub-title">{%t home.benefits.skilled %}</h3>
 				</div>       
 			</div><!--//item-->
 			<div class="item col-md-3 col-sm-6 col-xs-12 sm-break">
 				<div class="item-inner">
 					<div class="fs1" aria-hidden="true" data-icon="&#xe01c;"></div>
-					<h3 class="sub-title" data-i18n="home.benefits.agile"></h3>
-					<!--<div class="desc">
-						<p data-i18n="home.agile-desc"></p>
-					</div>-->   
+					<h3 class="sub-title">{%t home.benefits.agile %}</h3>
 				</div><!--//item-inner-->                    
 			</div><!--//item-->
 			<div class="item col-md-3 col-sm-6 col-xs-12">
 				<div class="item-inner">
 					<div class="fs1" aria-hidden="true" data-icon="&#xe031;"></div>
-					<h3 class="sub-title" data-i18n="home.benefits.quality"></h3>
-					<!--<div class="desc">
-						<p data-i18n="home.quality-desc"></p>
-					</div>-->    
+					<h3 class="sub-title">{%t home.benefits.quality %}</h3>
 				</div><!--//item-inner-->
 			</div><!--//item-->
 			<div class="item col-md-3 col-sm-6 col-xs-12">
 				<div class="item-inner">
 					<div class="fs1" aria-hidden="true" data-icon="&#xe030;"></div>                        
-					<h3 class="sub-title" data-i18n="home.benefits.overheads"></h3>
-					<!--<div class="desc">
-						<p data-i18n="home.overheads-desc"></p>
-					</div>-->  
+					<h3 class="sub-title">{%t home.benefits.overheads %}</h3>
 				</div><!--//item-inner-->              
 			</div><!--//item-->
 		</div><!--//row-->
-		<!--<a class="btn btn-cta btn-cta-secondary" href="about.html" data-i18n="home.more"></a>-->
-	</div><!--//container-->
 </section><!--//who-->
 
 <!-- ****** customers Section****** -->
@@ -65,18 +53,18 @@ jsinclude:
 	<div class="container text-center">
 		
 		<div class="section-titles">
-			<h1 data-i18n="home.worked-with"></h1>
+			<h1>{%t home.worked-with %}</h1>
 		</div><!--//section-titles-->
 
 		<ul class="logo-list list-inline row">
-			<li class="col-md-4 col-sm-4 col-xs-12"><img class="img-responsive" src="{{ site.baseurl }}/public/images/logos/logo-1.png" alt="" /></li>
-			<li class="col-md-4 col-sm-4 col-xs-12"><img class="img-responsive" src="{{ site.baseurl }}/public/images/logos/logo-2.png" alt="" /></li>
-			<li class="col-md-4 col-sm-4 col-xs-12"><img class="img-responsive" src="{{ site.baseurl }}/public/images/logos/logo-3.png" alt="" /></li>                   
+			<li class="col-md-4 col-sm-4 col-xs-12"><img class="img-responsive" src="{{ site.baseurl_root }}/public/images/logos/logo-1.png" alt="" /></li>
+			<li class="col-md-4 col-sm-4 col-xs-12"><img class="img-responsive" src="{{ site.baseurl_root }}/public/images/logos/logo-2.png" alt="" /></li>
+			<li class="col-md-4 col-sm-4 col-xs-12"><img class="img-responsive" src="{{ site.baseurl_root }}/public/images/logos/logo-3.png" alt="" /></li>                   
 		</ul><!--//logo-list-->
 		<ul class="logo-list list-inline row last">
-			<li class="col-md-4 col-sm-4 col-xs-12"><img class="img-responsive" src="{{ site.baseurl }}/public/images/logos/logo-4.png" alt="" /></li> 
-			<li class="col-md-4 col-sm-4 col-xs-12"><img class="img-responsive" src="{{ site.baseurl }}/public/images/logos/logo-5.png" alt="" /></li>
-			<li class="col-md-4 col-sm-4 col-xs-12 "><img class="img-responsive" src="{{ site.baseurl }}/public/images/logos/logo-6.png" alt="" /></li>
+			<li class="col-md-4 col-sm-4 col-xs-12"><img class="img-responsive" src="{{ site.baseurl_root }}/public/images/logos/logo-4.png" alt="" /></li> 
+			<li class="col-md-4 col-sm-4 col-xs-12"><img class="img-responsive" src="{{ site.baseurl_root }}/public/images/logos/logo-5.png" alt="" /></li>
+			<li class="col-md-4 col-sm-4 col-xs-12 "><img class="img-responsive" src="{{ site.baseurl_root }}/public/images/logos/logo-6.png" alt="" /></li>
 		</ul><!--//logos-list-->               
 	</div><!--//container-->
 </section><!--//customers-->

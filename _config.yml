@@ -10,8 +10,16 @@ highlighter:     rouge
 gems:
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-multiple-languages-plugin
 exclude:
   - deploy.sh
+
+# Languages
+languages:
+  - "fr"
+  - "en"
+exclude_from_localizations:
+  - "public"
 
 # Setup
 title:           MonkeyPatch - Expertise Informatique

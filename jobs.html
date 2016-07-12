@@ -7,14 +7,16 @@ header-class: header-wrapper-jobs
 promo: promo/promo_jobs.html
 jsinclude:
    map: js/accordion.js
+title: titles.jobs
+permalink: job
 ---
 
 <!-- ******jobs Section****** -->
 <section class="jobs-section section">
     <div class="container">
 	   		<div class="section-titles row">
-	            <h1 data-i18n="jobs.title"></h1>
-	            <h2 data-i18n="jobs.intro"></h2>
+	            <h1>{% t jobs.title %}</h1>
+	            <h2>{% t jobs.intro %}</h2>
 	        </div><!--//section-titles-->      
     </div><!--//container-->
 </section><!--//section jobs-->   
@@ -24,7 +26,7 @@ jsinclude:
     <div class="container">
 	    <div class="container">
 		   		<div class="section-titles row">
-		            <h1 data-i18n="jobs.offers.title"></h1>
+		            <h1>{% t jobs.offers.title %}</h1>
 		        </div><!--//section-titles-->      
 	    </div><!--//container-->
 
@@ -35,7 +37,7 @@ jsinclude:
 			<div class="row accordion-header collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#offer-content-front-1">
 				<div class="offer-title col-md-6 col-sm-6 col-xs-6">
 					<div class="col-md-2 col-sm-2 hidden-xs item-inner">
-						<img class="img-responsive" src="{{ site.baseurl }}/public/images/monkies/front-end.png" alt="" width="60px" />
+						<img class="img-responsive" src="{{ site.baseurl_root }}/public/images/monkies/front-end.png" alt="" width="60px" />
 					</div>
 					<div class="col-md-10 col-sm-10 col-xs-12 item-inner">
 						Expert Front-End (H/F)
@@ -106,7 +108,7 @@ jsinclude:
 			<div class="row accordion-header collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#offer-content-1">
 				<div class="offer-title col-md-6 col-sm-6 col-xs-6">
 					<div class="col-md-2 col-sm-2 hidden-xs item-inner">
-						<img class="img-responsive" src="{{ site.baseurl }}/public/images/monkies/front-end.png" alt="" width="60px" />
+						<img class="img-responsive" src="{{ site.baseurl_root }}/public/images/monkies/front-end.png" alt="" width="60px" />
 					</div>
 					<div class="col-md-10 col-sm-10 col-xs-12 item-inner">
 						Front end developper (H/F)
@@ -172,7 +174,7 @@ jsinclude:
 			<div class="row accordion-header collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#offer-content-2">
 				<div class="offer-title col-md-6 col-sm-6 col-xs-6">
 					<div class="col-md-2 col-sm-2 hidden-xs item-inner">
-						<img class="img-responsive" src="{{ site.baseurl }}/public/images/monkies/mobile.png" alt="" width="60px" />
+						<img class="img-responsive" src="{{ site.baseurl_root }}/public/images/monkies/mobile.png" alt="" width="60px" />
 					</div>
 					<div class="col-md-10 col-sm-10 col-xs-12 item-inner">
 						Dev. / Lead tech Android (H/F)
@@ -236,7 +238,7 @@ jsinclude:
 			<div class="row accordion-header collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#offer-content-3">
 				<div class="offer-title col-md-6 col-sm-6 col-xs-6">
 					<div class="col-md-2 col-sm-2 hidden-xs item-inner">
-						<img class="img-responsive" src="{{ site.baseurl }}/public/images/monkies/back-end.png" alt="" width="60px" />
+						<img class="img-responsive" src="{{ site.baseurl_root }}/public/images/monkies/back-end.png" alt="" width="60px" />
 					</div>
 					<div class="col-md-10 col-sm-10 col-xs-12 item-inner">
 						Back End JEE (H/F)
@@ -293,11 +295,14 @@ jsinclude:
 			</div><!-- // row -->
     	</div><!-- // accordion -->	
    		<div class="row conclusion text-center">
-            <div class="col-md-8 col-sm-6 col-xs-12"><h3 data-i18n="jobs.nojobs"></h3></div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-				<button class="btn btn-cta btn-cta-primary" type="button" data-toggle="modal" data-target="#modal-contact" data-backdrop="static" data-i18n="jobs.application"></button>
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <h3>{% t jobs.nojobs %}</h3>
             </div>
-
+            <div class="col-md-4 col-sm-6 col-xs-12">
+				      <button class="btn btn-cta btn-cta-primary" type="button" data-toggle="modal" data-target="#modal-contact" data-backdrop="static">
+                {% t jobs.application %}
+              </button>
+            </div>
         </div><!-- // row -->    
     </div><!--//container-->
 </section><!--//section offers-->    

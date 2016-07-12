@@ -5,30 +5,30 @@
 			<div class="row">
 				<div class="footer-col col-md-3 col-sm-6 col-xs-12 links-col">
 					<div class="footer-col-inner">
-						<h3 class="sub-title" data-i18n="general.quick-links"></h3>
-						<ul class="list-unstyled">
-
-						{% assign sorted_pages = site.pages %}
-						{% for group in (1..10) %}
-							{% for node in sorted_pages  %}
-					      		{% if group == node.group %}
-									<li><a href="{{node.url}}" data-i18n="titles.{{node.key-title}}"></a></li>
-								{% endif %}
-							{% endfor %}
-						{% endfor %}
-
-						</ul>
+						<h3 class="sub-title">{% t general.quick-links %}</h3>
+            <ul class="list-unstyled">
+              {% assign sorted_pages = site.pages %}
+              {% for group in (1..10) %}
+                {% for node in sorted_pages  %}
+                  {% if group == node.group %}
+                    <li>
+                      <a href="{{ site.baseurl }}{{node.url}}">{% t node.title %}</a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
+            </ul>
 					</div><!--//footer-col-inner-->
 				</div><!--//foooter-col-->
 				<div class="footer-col col-md-4 col-sm-6 col-xs-12 contact-col">
 					<div class="footer-col-inner">
-						<h3 class="sub-title" data-i18n="general.get-in-touch"></h3>
+						<h3 class="sub-title">{% t general.get-in-touch %}</h3>
 						<div class="row">
 							<p class="adr clearfix col-md-12 col-sm-12">
 								<a href="contact.html">
 									<span class="fs1" aria-hidden="true" data-icon="&#xe01d;"></span>        
 									<span class="adr-group">  
-										<img class="highlight" src="{{ site.baseurl }}/public/images/icons/Toulouse.png" alt="" />
+										<img class="highlight" src="{{ site.baseurl_root }}/public/images/icons/Toulouse.png" alt="" />
 									</span>
 								</a>
 							</p>
@@ -38,7 +38,7 @@
 				</div><!--//foooter-col-->   
 				<div class="footer-col col-md-3 col-sm-6 col-xs-12 contact-col">
 					<div class="footer-col-inner">
-						<h3 class="sub-title" data-i18n="general.social-networks"></h3>
+						<h3 class="sub-title">{% t general.social-networks %}</h3>
 						<div class="row">
 							<ul class="social-icons list-inline">
 								<li><a href="https://twitter.com/monkeypatch_io"><i class="fa fa-twitter"></i></a></li>                        
@@ -54,7 +54,9 @@
 		<div class="container-fluid">                                   
       		<div class="col-md-2 hidden-xs"></div>
       		<div class="col-md-8 col-xs-12">
-				<span class="copyright text-center">Copyright @ 2016 MonkeyPatch - <a href="/terms.html" data-i18n="titles.terms"></a></span>                 
+				<span class="copyright text-center">Copyright @ 2016 MonkeyPatch - <a href="/terms.html">
+        {% t titles.terms %}
+        </a></span>                 
 			</div>
 			<div class="col-md-2 hidden-xs">
 				<span class="copyright">Made with</span>

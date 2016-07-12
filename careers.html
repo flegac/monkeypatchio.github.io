@@ -4,7 +4,9 @@ key-title: careers
 group: 3
 body-class: home-page
 header-class: header-wrapper-career
+title: titles.careers
 promo: 
+permalink: careers
 jsinclude:
    map: js/accordion.js
 ---
@@ -13,10 +15,9 @@ jsinclude:
 <!-- ******team Section****** -->
 <section id="careers" class="team careers-section">
     <div class="container">
-
          <div class="section-titles">
-            <h1 data-i18n="careers.team.title"></h1>
-            <h2 data-i18n="careers.team.intro"></h2>
+            <h1>{% t careers.team.title %}</h1>
+            <h2>{% t careers.team.intro %}</h2>
         </div><!--//section-titles-->
 
         <div class="row">
@@ -25,11 +26,11 @@ jsinclude:
                 <div class="item-inner">
                     <div class="row">
                         <figure class="figure col-md-5 col-sm-12 col-xs-12">
-                            <img class="img-responsive" src="{{ site.baseurl }}/public/images/monkies/front-end.png" alt=""/>
+                            <img class="img-responsive" src="{{ site.baseurl_root }}/public/images/monkies/front-end.png" alt=""/>
                         </figure>
                         <div class="info col-md-7 col-sm-12 col-xs-12">
-                            <h3 class="name" data-i18n="careers.front-end"></h3>
-                            <p data-i18n="careers.front-end-desc"></p>
+                            <h3 class="name">{% t careers.front-end %}</h3>
+                            <p>{% t careers.front-end-desc %}</p>
                         </div><!--//info-->
                     </div><!--//row-->
                 </div><!--//item-inner-->
@@ -40,11 +41,11 @@ jsinclude:
                 <div class="item-inner">
                     <div class="row">
                         <figure class="figure col-md-5 col-sm-12 col-xs-12">
-                            <img class="img-responsive" src="{{ site.baseurl }}/public/images/monkies/back-end.png" alt=""/>
+                            <img class="img-responsive" src="{{ site.baseurl_root }}/public/images/monkies/back-end.png" alt=""/>
                         </figure>
                         <div class="info col-md-7 col-sm-12 col-xs-12">
-                            <h3 class="name" data-i18n="careers.back-end"></h3>
-                            <p data-i18n="careers.back-end-desc"> </p>
+                            <h3 class="name">{% t careers.back-end %}</h3>
+                            <p>{% t careers.back-end-desc %}</p>
                         </div><!--//info-->
                     </div><!--//row-->
                 </div><!--//item-inner-->
@@ -55,11 +56,11 @@ jsinclude:
                 <div class="item-inner">
                     <div class="row">
                         <figure class="figure col-md-5 col-sm-12 col-xs-12">
-                            <img class="img-responsive" src="{{ site.baseurl }}/public/images/monkies/mobile.png" alt=""/>
+                            <img class="img-responsive" src="{{ site.baseurl_root }}/public/images/monkies/mobile.png" alt=""/>
                         </figure>
                         <div class="info col-md-7 col-sm-12 col-xs-12">
-                            <h3 class="name" data-i18n="careers.mobile"></h3>
-                            <p data-i18n="careers.mobile-desc"></p>
+                            <h3 class="name">{% t careers.mobile %}</h3>
+                            <p>{% t careers.mobile-desc %}</p>
                         </div><!--//info-->
                     </div><!--//row-->
                 </div><!--//item-inner-->
@@ -70,11 +71,11 @@ jsinclude:
                 <div class="item-inner">
                     <div class="row">
                         <figure class="figure col-md-5 col-sm-12 col-xs-12">
-                            <img class="img-responsive" src="{{ site.baseurl }}/public/images/monkies/dev-ops.png" alt=""/>
+                            <img class="img-responsive" src="{{ site.baseurl_root }}/public/images/monkies/dev-ops.png" alt=""/>
                         </figure>
                         <div class="info col-md-7 col-sm-12 col-xs-12">
-                            <h3 class="name" data-i18n="careers.devops"></h3>
-                            <p data-i18n="careers.devops-desc"></p>
+                            <h3 class="name">{% t careers.devops %}</h3>
+                            <p>{% t careers.devops-desc %}</p>
                         </div><!--//info-->
                     </div><!--//row-->
                 </div><!--//item-inner-->
@@ -85,11 +86,11 @@ jsinclude:
                 <div class="item-inner">
                     <div class="row">
                         <figure class="figure col-md-5 col-sm-12 col-xs-12">
-                            <img class="img-responsive" src="{{ site.baseurl }}/public/images/monkies/ui-ux.png" alt=""/>
+                            <img class="img-responsive" src="{{ site.baseurl_root }}/public/images/monkies/ui-ux.png" alt=""/>
                         </figure>
                         <div class="info col-md-7 col-sm-12 col-xs-12">
-                            <h3 class="name" data-i18n="careers.ux-ui"></h3>
-                            <p data-i18n="careers.ux-ui-desc"></p>
+                            <h3 class="name">{% t careers.ux-ui %}</h3>
+                            <p>{% t careers.ux-ui-desc %}</p>
                         </div><!--//info-->
                     </div><!--//row-->
                 </div><!--//item-inner-->
@@ -100,11 +101,11 @@ jsinclude:
                 <div class="item-inner">
                     <div class="row">
                         <figure class="figure col-md-5 col-sm-12 col-xs-12">
-                             <img class="img-responsive" src="{{ site.baseurl }}/public/images/monkies/big-data.png" alt=""/>
+                             <img class="img-responsive" src="{{ site.baseurl_root }}/public/images/monkies/big-data.png" alt=""/>
                         </figure>
                         <div class="info col-md-7 col-sm-12 col-xs-12">
-                            <h3 class="name" data-i18n="careers.big-data"></h3>
-                            <p data-i18n="careers.big-data-desc"></p>
+                            <h3 class="name">{% t careers.big-data %}</h3>
+                            <p>{% t careers.big-data-desc %}</p>
                         </div><!--//info-->
                     </div><!--//row-->
                 </div><!--//item-inner-->
@@ -119,17 +120,19 @@ jsinclude:
     <div class="container">
 
         <div class="section-titles">
-            <h1 data-i18n="careers.assets.title"></h1>
-            <h2 data-i18n="careers.assets.intro"></h2>
+            <h1>{% t careers.assets.title %}</h1>
+            <h2>{% t careers.assets.intro %}</h2>
         </div><!--//section-titles-->
 
         <div class="panel-group" id="accordion">
             <!-- // Assets 1 -->
             <div class="row accordion-header collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#asset-content-1">
                 <div class="assets-title col-md-1 col-sm-1 col-xs-1 text-center item-inner">
-                    <img class="img-responsive hidden-xs" src="{{ site.baseurl }}/public/images/icons/heart.jpg" />
+                    <img class="img-responsive hidden-xs" src="{{ site.baseurl_root }}/public/images/icons/heart.jpg" />
                 </div><!-- // div -->
-                <div class="assets-desc col-md-10 col-sm-10 col-xs-10 item-inner text-center" data-i18n="careers.assets.1.title"> </div><!-- // assets-desc -->
+                <div class="assets-desc col-md-10 col-sm-10 col-xs-10 item-inner text-center">
+                  {% t careers.assets.1.title %}
+                </div><!-- // assets-desc -->
                 <div class="assets-collapse col-md-1 col-sm-1 col-xs-1 text-center item-inner">
                     <i class="fa fa-chevron fa-fw"></i>
                 </div><!-- // indicator -->
@@ -137,7 +140,7 @@ jsinclude:
             <div class="row accordion-content">
                 <div id="asset-content-1" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <h4 data-i18n="[html]careers.assets.1.content"></h4>
+                        <h4>{% t careers.assets.1.content %}</h4>
                     </div>
                 </div><!-- // content -->
             </div><!-- // row -->
@@ -145,9 +148,11 @@ jsinclude:
             <!-- // Assets 2 -->
             <div class="row accordion-header collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#asset-content-2">
                 <div class="assets-title col-md-1 col-sm-1 col-xs-1 text-center item-inner">
-                    <img class="img-responsive hidden-xs" src="{{ site.baseurl }}/public/images/icons/hands.jpg"/>
+                    <img class="img-responsive hidden-xs" src="{{ site.baseurl_root }}/public/images/icons/hands.jpg"/>
                 </div><!-- // div -->
-                <div class="assets-desc col-md-10 col-sm-10 col-xs-10 item-inner text-center" data-i18n="careers.assets.2.title"></div><!-- // assets-desc -->
+                <div class="assets-desc col-md-10 col-sm-10 col-xs-10 item-inner text-center">
+                  {% t careers.assets.2.title %}
+                </div><!-- // assets-desc -->
                 <div class="assets-collapse col-md-1 col-sm-1 col-xs-1 text-center item-inner">
                     <i class="fa fa-chevron fa-fw"></i>
                 </div><!-- // indicator -->
@@ -155,7 +160,7 @@ jsinclude:
             <div class="row accordion-content">
                 <div id="asset-content-2" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <h4 data-i18n="[html]careers.assets.2.content"></h4>
+                        <h4>{% t careers.assets.2.content %}</h4>
                     </div>
                 </div><!-- // content -->
             </div><!-- // row -->
@@ -163,9 +168,11 @@ jsinclude:
             <!-- // Assets 3 -->
             <div class="row accordion-header collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#asset-content-3">
                 <div class="assets-title col-md-1 col-sm-1 col-xs-1 text-center item-inner">
-                    <img class="img-responsive hidden-xs" src="{{ site.baseurl }}/public/images/icons/light.jpg"/>
+                    <img class="img-responsive hidden-xs" src="{{ site.baseurl_root }}/public/images/icons/light.jpg"/>
                 </div><!-- // div -->
-                <div class="assets-desc col-md-10 col-sm-10 col-xs-10 item-inner text-center" data-i18n="careers.assets.3.title"></div><!-- // assets-desc -->
+                <div class="assets-desc col-md-10 col-sm-10 col-xs-10 item-inner text-center">
+                  {% t careers.assets.3.title %}
+                </div><!-- // assets-desc -->
                 <div class="assets-collapse col-md-1 col-sm-1 col-xs-1 text-center item-inner">
                     <i class="fa fa-chevron fa-fw"></i>
                 </div><!-- // indicator -->
@@ -173,7 +180,7 @@ jsinclude:
             <div class="row accordion-content">
                 <div id="asset-content-3" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <h4 data-i18n="[html]careers.assets.3.content"></h4>
+                        <h4>{% t careers.assets.3.content %}</h4>
                     </div>
                 </div>
             </div><!-- // row -->
@@ -181,9 +188,9 @@ jsinclude:
             <!-- // Assets 4 -->
             <div class="row accordion-header collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#asset-content-4">
                 <div class="assets-title col-md-1 col-sm-1 col-xs-1 text-center item-inner">
-                    <img class="img-responsive hidden-xs" src="{{ site.baseurl }}/public/images/icons/team.jpg"/>
+                    <img class="img-responsive hidden-xs" src="{{ site.baseurl_root }}/public/images/icons/team.jpg"/>
                 </div><!-- // div -->
-                <div class="assets-desc col-md-10 col-sm-10 col-xs-10 item-inner text-center" data-i18n="careers.assets.4.title"></div><!-- // assets-desc -->
+                <div class="assets-desc col-md-10 col-sm-10 col-xs-10 item-inner text-center">{% t careers.assets.4.title %}</div><!-- // assets-desc -->
                 <div class="assets-collapse col-md-1 col-sm-1 col-xs-1 text-center item-inner">
                     <i class="fa fa-chevron fa-fw"></i>
                 </div><!-- // indicator -->
@@ -191,7 +198,7 @@ jsinclude:
             <div class="row accordion-content">
                 <div id="asset-content-4" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <h4 data-i18n="[html]careers.assets.4.content"></h4>
+                        <h4>{% t careers.assets.4.content %}</h4>
                     </div>
                 </div>
             </div><!-- // row -->
@@ -199,9 +206,9 @@ jsinclude:
             <!-- // Assets 5 -->
             <div class="row accordion-header collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#asset-content-5">
                 <div class="assets-title col-md-1 col-sm-1 col-xs-1 text-center item-inner">
-                    <img class="img-responsive hidden-xs" src="{{ site.baseurl }}/public/images/icons/rocket.jpg"/>
+                    <img class="img-responsive hidden-xs" src="{{ site.baseurl_root }}/public/images/icons/rocket.jpg"/>
                 </div><!-- // div -->
-                <div class="assets-desc col-md-10 col-sm-10 col-xs-10 item-inner text-center" data-i18n="careers.assets.5.title"></div><!-- // assets-desc --> 
+                <div class="assets-desc col-md-10 col-sm-10 col-xs-10 item-inner text-center">{% t careers.assets.5.title %}</div><!-- // assets-desc --> 
                 <div class="assets-collapse col-md-1 col-sm-1 col-xs-1 text-center item-inner">
                     <i class="fa fa-chevron fa-fw"></i>
                 </div><!-- // indicator -->
@@ -209,7 +216,7 @@ jsinclude:
             <div class="row accordion-content">
                 <div id="asset-content-5" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <h4 data-i18n="[html]careers.assets.5.content"></h4>
+                        <h4>{% t careers.assets.5.content %}</h4>
                     </div>
                 </div>
             </div><!-- // row -->
@@ -217,9 +224,9 @@ jsinclude:
             <!-- // Assets 6 -->
             <div class="row accordion-header collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#asset-content-6">
                 <div class="assets-title col-md-1 col-sm-1 col-xs-1 text-center item-inner">
-                    <img class="img-responsive hidden-xs" src="{{ site.baseurl }}/public/images/icons/pack.jpg"/>
+                    <img class="img-responsive hidden-xs" src="{{ site.baseurl_root }}/public/images/icons/pack.jpg"/>
                 </div><!-- // div -->
-                <div class="assets-desc col-md-10 col-sm-10 col-xs-10 item-inner text-center" data-i18n="careers.assets.6.title"></div><!-- // assets-desc --> 
+                <div class="assets-desc col-md-10 col-sm-10 col-xs-10 item-inner text-center">{% t careers.assets.6.title %}</div><!-- // assets-desc --> 
                 <div class="assets-collapse col-md-1 col-sm-1 col-xs-1 text-center item-inner">
                     <i class="fa fa-chevron fa-fw"></i>
                 </div><!-- // indicator -->
@@ -227,7 +234,7 @@ jsinclude:
             <div class="row accordion-content">
                 <div id="asset-content-6" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <h4 data-i18n="[html]careers.assets.6.content"></h4>
+                        <h4>{% t careers.assets.6.content %}</h4>
                     </div>
                 </div>
             </div><!-- // row -->
@@ -235,9 +242,9 @@ jsinclude:
             <!-- // Assets 7 -->
             <div class="row accordion-header collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#asset-content-7">
                 <div class="assets-title col-md-1 col-sm-1 col-xs-1 text-center item-inner">
-                    <img class="img-responsive hidden-xs" src="{{ site.baseurl }}/public/images/icons/building.jpg"/>
+                    <img class="img-responsive hidden-xs" src="{{ site.baseurl_root }}/public/images/icons/building.jpg"/>
                 </div><!-- // div -->
-                <div class="assets-desc col-md-10 col-sm-10 col-xs-10 item-inner text-center" data-i18n="careers.assets.7.title"></div><!-- // assets-desc --> 
+                <div class="assets-desc col-md-10 col-sm-10 col-xs-10 item-inner text-center">{% t careers.assets.7.title %}</div><!-- // assets-desc --> 
                 <div class="assets-collapse col-md-1 col-sm-1 col-xs-1 text-center item-inner">
                     <i class="fa fa-chevron fa-fw"></i>
                 </div><!-- // indicator -->
@@ -245,7 +252,7 @@ jsinclude:
             <div class="row accordion-content">
                 <div id="asset-content-7" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <h4 data-i18n="[html]careers.assets.7.content"></h4>
+                        <h4>{% t careers.assets.7.content %}</h4>
                     </div>
                 </div>
             </div><!-- // row -->
@@ -253,9 +260,9 @@ jsinclude:
             <!-- // Assets 8 -->
             <div class="row accordion-header collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#asset-content-8">
                 <div class="assets-title col-md-1 col-sm-1 col-xs-1 text-center item-inner">
-                    <img class="img-responsive hidden-xs" src="{{ site.baseurl }}/public/images/icons/hand.jpg"/>
+                    <img class="img-responsive hidden-xs" src="{{ site.baseurl_root }}/public/images/icons/hand.jpg"/>
                 </div><!-- // div -->
-                <div class="assets-desc col-md-10 col-sm-10 col-xs-10 item-inner text-center" data-i18n="careers.assets.8.title"></div><!-- // assets-desc -->
+                <div class="assets-desc col-md-10 col-sm-10 col-xs-10 item-inner text-center">{% t careers.assets.8.title %}</div><!-- // assets-desc -->
                 <div class="assets-collapse col-md-1 col-sm-1 col-xs-1 text-center item-inner">
                     <i class="fa fa-chevron fa-fw"></i>
                 </div><!-- // indicator -->
@@ -263,7 +270,7 @@ jsinclude:
             <div class="row accordion-content">
                 <div id="asset-content-8" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <h4 data-i18n="[html]careers.assets.8.content"></h4>
+                        <h4>{% t careers.assets.8.content %}</h4>
                     </div>
                 </div>
             </div><!-- // row -->
