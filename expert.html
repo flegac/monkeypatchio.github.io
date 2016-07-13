@@ -1,254 +1,102 @@
 ---
 layout: default
-group: 1
+order: 1
 title: titles.expert
 permalink: expert
 ---
 
-<!-- ******solutions Section****** -->
-<section id="solutions" class="solutions-section first-section section">
-    <div class="container">
-    	<div class="section-titles row">
-    		<h1>{% t expertise.solutions.title %}</h1>
-            <h3>{% t expertise.solutions.line-1 %}</h3>
-            <h3>{% t expertise.solutions.line-2 %}</h3>
-            <h3>{% t expertise.solutions.line-3 %}</h3>
-            <h3>{% t expertise.solutions.line-4 %}</h3>
-        </div>      
-	</div>     
-</section>	
+<section class="solutions">
+  <h1>{% t expertise.solutions.title %}</h1>
+  <h3>{% t expertise.solutions.line-1 %}</h3>
+  <h3>{% t expertise.solutions.line-2 %}</h3>
+  <h3>{% t expertise.solutions.line-3 %}</h3>
+  <h3>{% t expertise.solutions.line-4 %}</h3>
+</section>
 
-<!-- ******solutions offers Section****** -->
-<section id="solutions-offers" class="solutions-offers-section section">
-    <div class="container">
-    	<div class="section-titles row">
-    		<h1>{% t expertise.offers.title %}</h1>
-        <h3>{% t expertise.offers.line-1 %}</h3>
+<section class="offers">
+  <h1>{% t expertise.offers.title %}</h1>
+  <h3>{% t expertise.offers.line-1 %}</h3>
+  <div class="list">
+    {% assign sorted_offers = site.expertise | sort:"order" | where: "lang", site.lang | where: "type", "offers" %}
+    {% for offer in sorted_offers %}
+      <div>
+        <span>
+          <img alt="{{offer.title}}" src="{{offer.img}}">
+        </span>
+        {% t offer.title %}
       </div>
-    	<div class="row section-content">
-            <div class="col-md-3 col-sm-3 col-xs-6">
-                <img src="{{ site.baseurl_root }}/public/images/expert/Architecture.png" alt=""/>
-                <h3 class="legend">{% t expertise.offers.legend-1 %}</h3>
-            </div>  
-            <div class="col-md-3 col-sm-3 col-xs-6">
-                <img src="{{ site.baseurl_root }}/public/images/expert/Dev.png" alt=""/>
-                <h3 class="legend">{% t expertise.offers.legend-2 %}</h3>
-            </div>
-            <div class="clearfix visible-xs"></div>
-            <div class="col-md-3 col-sm-3 col-xs-6">
-                <img src="{{ site.baseurl_root }}/public/images/expert/Lead_tech.png" alt=""/>
-                <h3 class="legend">{% t expertise.offers.legend-3 %}</h3>
-            </div>    
-            <div class="col-md-3 col-sm-3 col-xs-6">
-                <img src="{{ site.baseurl_root }}/public/images/expert/Conseil.png" alt=""/>
-                <h3 class="legend">{% t expertise.offers.legend-4 %}</h3>
-            </div>  
-        </div>  
-    	<div class="row underlined-white"></div>
-        <div class="row">
-            <!-- Architectures-->
-            <p class="subtitle">{% t expertise.offers.subtitle-1 %}</p>
-            <p class="line">{% t expertise.offers.line-1-1 %}</p>
-            <ul>
-                <li>{% t expertise.offers.bullet-1-1 %}</li>
-                <li>{% t expertise.offers.bullet-1-2 %}</li>
-                <li>{% t expertise.offers.bullet-1-3 %}</li>
-                <li>{% t expertise.offers.bullet-1-4 %}</li>
-            </ul>   
+    {% endfor %}
+  </div>
+  <hr>
+  <div class="detail">
+    {% for offer in sorted_offers %}
+      {{offer.content}}
+    {% endfor %}
+  </div>
+</section>
 
-            <!-- Development-->
-            <p class="subtitle">{% t expertise.offers.subtitle-2 %}</p>
-            <p class="line">{% t expertise.offers.line-2-1 %}</p>
-            <ul>
-                <li>{% t expertise.offers.bullet-2-1 %}</li>
-                <li>{% t expertise.offers.bullet-2-2 %}</li>
-                <li>{% t expertise.offers.bullet-2-3 %}</li>
-                <li>{% t expertise.offers.bullet-2-4 %}</li>
-            </ul>  
+<section class="interventions">
+  <h1>{% t expertise.interventions.title %}</h1>
+  <h3>{% t expertise.interventions.line-1 %}</h3>
+  <div class="list">
+    {% assign sorted_interventions = site.expertise | sort:"order" | where: "lang", site.lang | where: "type", "interventions" %}
+    {% for intervention in sorted_interventions %}
+      <div>
+        <span>
+          <img alt="{{intervention.title}}" src="{{intervention.img}}">
+        </span>
+        {% t intervention.title %}
+      </div>
+    {% endfor %}
+  </div>
+  <hr>
+  <div class="detail">
+    {% for intervention in sorted_interventions %}
+      {{intervention.content}}
+    {% endfor %}
+  </div>
+</section>
 
-            <!-- Technical Lead-->
-            <p class="subtitle">{% t expertise.offers.subtitle-3 %}</p>
-            <p class="line">{% t expertise.offers.line-3-1 %}</p>
-            <ul>
-                <li>{% t expertise.offers.bullet-3-1 %}</li>
-                <li>{% t expertise.offers.bullet-3-2 %}</li>
-                <li>{% t expertise.offers.bullet-3-3 %}</li>
-                <li>{% t expertise.offers.bullet-3-4 %}</li>
-                <li>{% t expertise.offers.bullet-3-5 %}</li>
-                <li>{% t expertise.offers.bullet-3-6 %}</li>
-            </ul>
+<section class="approach">
+  <h1>{% t expertise.approach.title %}</h1>
+  {% assign sorted_approaches = site.expertise | sort:"order" | where: "lang", site.lang | where: "type", "approach" %}
+  {% for approach in sorted_approaches %}
+    <div>
+      {{approach.content}}
+    </div>
+  {% endfor %}
+</section>
 
-             <!-- Audit -->
-            <p class="subtitle">{% t expertise.offers.subtitle-4 %}</p>
-            <p class="line">{% t expertise.offers.line-4-1 %}</p>
-            <p class="line">{% t expertise.offers.line-4-2 %}</p>
-            <ul>
-                <li>{% t expertise.offers.bullet-4-1 %}</li>
-                <li>{% t expertise.offers.bullet-4-2 %}</li>
-                <li>{% t expertise.offers.bullet-4-3 %}</li>
-                <li>{% t expertise.offers.bullet-4-4 %}</li>
-                <li>{% t expertise.offers.bullet-4-5 %}</li>
-                <li>{% t expertise.offers.bullet-4-6 %}</li>
-            </ul>
-       </div> 
-	</div>    	
-</section>	
+<section class="profiles">
+  <h1>{% t expertise.profiles.title %}</h1>
+  <h3>{% t expertise.profiles.line-1 %}</h3>
+  <h3>{% t expertise.profiles.line-2 %}</h3>
+  <h3>{% t expertise.profiles.line-3 %}</h3>
+  <div class="list">
+    {% assign sorted_profiles = site.expertise | sort:"order" | where: "lang", site.lang | where: "type", "profiles" %}
+    {% for profile in sorted_profiles %}
+      <div>
+        <span>
+          <img alt="{{profile.title}}" src="{{profile.img}}">
+        </span>
+        {% t profile.title %}
+      </div>
+    {% endfor %}
+  </div>
+  <hr>
+  <div class="detail">
+    {% for profile in sorted_profiles %}
+      {{profile.content}}
+    {% endfor %}
+  </div>
+</section>
 
-<!-- ******Interventions Section****** -->
-<section id="missions" class="missions-section section">
-    <div class="container">
-        <div class="section-titles row">
-            <h1>{% t expertise.interventions.title %}</h1>
-            <h3>{% t expertise.interventions.line-1 %}</h3>
-        </div>
-
-    	<div class="row section-content">
-            <div class="col-md-3 col-sm-3 col-xs-6">
-                <img src="{{ site.baseurl_root }}/public/images/expert/Innovations.png" alt=""/>
-                 <h3 class="legend">{% t expertise.interventions.legend-1 %}</h3>
-            </div>  
-            <div class="col-md-3 col-sm-3 col-xs-6">
-                <img src="{{ site.baseurl_root }}/public/images/expert/Proto.png" alt=""/>
-                <h3 class="legend">{% t expertise.interventions.legend-2 %}</h3>
-            </div>  
-            <div class="clearfix visible-xs"></div>
-            <div class="col-md-3 col-sm-3 col-xs-6">
-                <img src="{{ site.baseurl_root }}/public/images/expert/Project.png" alt=""/>
-                <h3 class="legend">{% t expertise.interventions.legend-3 %}</h3>
-            </div>  
-            <div class="col-md-3 col-sm-3 col-xs-6">
-                <img src="{{ site.baseurl_root }}/public/images/expert/Accompagnement.png" alt=""/>
-                <h3 class="legend">{% t expertise.interventions.legend-4 %}</h3>
-            </div>  
-        </div>  
-    	<div class="row underlined-white"></div>
-        <div class="row">
-            <!-- From Idea to Prototype-->
-            <p class="subtitle">{% t expertise.interventions.subtitle-1 %}</p>
-            <p class="line">{% t expertise.interventions.line-1-1 %}</p>
-            <ul>
-                <li>{% t expertise.interventions.bullet-1-1 %}</li>
-                <li>{% t expertise.interventions.bullet-1-2 %}</li>
-                <li>{% t expertise.interventions.bullet-1-3 %}</li>
-                <li>{% t expertise.interventions.bullet-1-4 %}</li>
-            </ul>   
-
-            <!-- From Idea to Prototype-->
-            <p class="subtitle">{% t expertise.interventions.subtitle-2 %}</p>
-            <p class="line">{% t expertise.interventions.line-2-1 %}</p>
-            <ul>
-                <li>{% t expertise.interventions.bullet-2-1 %}</li>
-                <li>{% t expertise.interventions.bullet-2-2 %}</li>
-                <li>{% t expertise.interventions.bullet-2-3 %}</li>
-                <li>{% t expertise.interventions.bullet-2-4 %}</li>
-            </ul>
-
-            <!-- Personalized support  -->
-            <p class="subtitle">{% t expertise.interventions.subtitle-3 %}</p>
-            <p class="line">{% t expertise.interventions.line-3-1 %}</p>
-            <ul>
-                <li>{% t expertise.interventions.bullet-3-1 %}</li>
-                <li>{% t expertise.interventions.bullet-3-2 %}</li>
-                <li>{% t expertise.interventions.bullet-3-3 %}</li>
-                <li>{% t expertise.interventions.bullet-3-4 %}</li>
-            </ul>
-        </div>    
-	</div>    	
-</section>	
-
-<!-- ******approach Section****** -->
-<section id="approach" class="approach-section section">
-    <div class="container">
-        <div class="section-titles row">
-            <h1>{% t expertise.approach.title %}</h1>
-            <h3>{% t expertise.approach.line-1 %}</h3>
-            <ul>
-                <li>{% t expertise.approach.bullet-1-1 %}</li>
-                <li>{% t expertise.approach.bullet-1-1 %}</li>
-                <li>{% t expertise.approach.bullet-1-2 %}</li>
-                <li>{% t expertise.approach.bullet-1-3 %}</li>
-                <li>{% t expertise.approach.bullet-1-4 %}</li>
-            </ul> 
-        </div>      
-    </div>     
-</section>  
-
-<!-- ******Experts  Section****** -->
-<section id="experts-profiles" class="experts-profiles-section section">
-    <div class="container">
-    	<div class="section-titles row">
-            <h1>{% t expertise.profiles.title %}</h1>
-            <h3>{% t expertise.profiles.line-1 %}</h3>
-            <h3>{% t expertise.profiles.line-2 %}</h3>
-            <h3>{% t expertise.profiles.line-3 %}</h3>
-        </div>
-
-    	<div class="row section-content">
-            <div class="col-md-3 col-sm-3 col-xs-6">
-                <img src="{{ site.baseurl_root }}/public/images/expert/Mobile.png" alt=""/>
-                <h3 class="legend">{% t expertise.profiles.legend-1 %}</h3>
-            </div>  
-            <div class="col-md-3 col-sm-3 col-xs-6">
-                <img src="{{ site.baseurl_root }}/public/images/expert/Front End.png" alt=""/>
-                <h3 class="legend">{% t expertise.profiles.legend-2 %}</h3>
-            </div>  
-            <div class="clearfix visible-xs"></div>
-            <div class="col-md-3 col-sm-3 col-xs-6">
-                <img src="{{ site.baseurl_root }}/public/images/expert/DevOps.png" alt=""/>
-                <h3 class="legend">{% t expertise.profiles.legend-3 %}</h3>
-            </div>  
-            <div class="col-md-3 col-sm-3 col-xs-6">
-                <img src="{{ site.baseurl_root }}/public/images/expert/UI-UX.png" alt=""/>
-                <h3 class="legend">{% t expertise.profiles.legend-4 %}</h3>
-            </div>  
-        </div>  
-    	<div class="row underlined-blue"></div>
-        <div class="row">
-            <!-- Web Consultant-->
-            <p class="subtitle">{% t expertise.profiles.subtitle-1 %}</p>
-            <p class="line">{% t expertise.profiles.line-1-1 %}</p>
-            <ul>
-                <li>{% t expertise.profiles.bullet-1-1 %}</li>
-                <li>{% t expertise.profiles.bullet-1-2 %}</li>
-                <li>{% t expertise.profiles.bullet-1-3 %}</li>
-            </ul>   
-
-            <!-- Mobile Consultant-->
-            <p class="subtitle">{% t expertise.profiles.subtitle-2 %}</p>
-            <p class="line">{% t expertise.profiles.line-2-1 %}</p>
-            <ul>
-                <li>{% t expertise.profiles.bullet-2-1 %}</li>
-                <li>{% t expertise.profiles.bullet-2-2 %}</li>
-                <li>{% t expertise.profiles.bullet-2-3 %}</li>
-            </ul>   
-            <!-- DevOps Consultant-->
-            <p class="subtitle">{% t expertise.profiles.subtitle-3 %}</p>
-            <p class="line">{% t expertise.profiles.line-3-1 %}</p>
-            <ul>
-                <li>{% t expertise.profiles.bullet-3-1 %}</li>
-                <li>{% t expertise.profiles.bullet-3-2 %}</li>
-                <li>{% t expertise.profiles.bullet-3-3 %}</li>
-                <li>{% t expertise.profiles.bullet-3-4 %}</li>
-            </ul>   
-            <!-- UI / UX Consultant-->
-            <p class="subtitle">{% t expertise.profiles.subtitle-4 %}</p>
-        </div>    
-	</div>    	
-</section>	
-
-<!-- ******Experts  Section****** -->
-<section id="experts-contact" class="experts-contact-section section">
-    <div class="container">
-    	<div class="section-titles row">
-            <h1>{% t expertise.contact.title %}</h1>
-            <p>{% t expertise.contact.subtitle %}</p>    
-        </div>
-        <div class="conclusion row text-center">
-            <button class="btn btn-cta btn-cta-primary" type="button" data-toggle="modal" data-target="#modal-contact" data-backdrop="static">
-              {% t expertise.contact.meet %}
-            </button>
-        </div>
-	</div>    	    
+<section class="contact">
+  <h1>{% t expertise.contact.title %}</h1>
+  <p>{% t expertise.contact.subtitle %}</p>    
+  <label class="button">
+    {% t expertise.contact.meet %}
+  </label> 	    
 </section>	
 
 {% include contact_modal.html %}

@@ -1,0 +1,84 @@
+.expert {
+
+  section {
+    padding: 3.5rem 0;
+    h1,h3, p {
+      max-width: 85vw;
+      margin: .5rem auto;
+    }
+
+    h1 {
+      font-weight: bold;
+      font-size: 2.5rem;
+    }
+    h3 {
+      font-size: 1.125rem;
+      font-weight: 400;
+    }
+
+    .list {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-items: stretch;
+      align-content: space-around;
+
+      &> div {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+    }
+    
+    hr {
+      width: 90%;
+    }
+
+    .detail {
+      text-align: left;
+    }
+  }
+
+  .solutions {
+    margin-top: 5.5rem;
+    h1 {
+      color: $txtSolutionHeader;
+    }
+    h3 {
+      color: $txtSolutionSubtitles;
+    }
+  }
+
+  .offers {
+    background-color: $bgOffers;
+    color: $white;
+  }
+
+  .interventions {
+    background-color: $bgInterventions; 
+    color: $white;
+  }
+
+  .approach {
+    background-color: $bgApproach;
+    color: $white;
+    &> div {
+      text-align: left;
+    }
+  }
+
+  .profiles {
+    color: $txtProfiles;
+  }
+
+  .contact {
+    background-color: $bgContact;
+    color: $txtContact;
+    padding-bottom: .5rem;
+    p {
+      margin-bottom: 3rem;
+    }
+  }
+}

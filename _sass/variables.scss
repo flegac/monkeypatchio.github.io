@@ -5,12 +5,15 @@ $black: #000;
 
 $blue5: #2ebcfc;
 $blue1: #03a9f4;
+$blue6: #13a8eb;
 $blue2: #0a97d3;
 $blue3: #0288d1;
+$blue7: #4285F4;
 $blue4: #026CA6;
 $darkBlue: #013d5c;
 
 $txtGrey: #666;
+
 
 // Links
 $txtLinkActive: $white;
@@ -32,8 +35,21 @@ $txtFooterHeader: $txtFooter;
 $bgSocial: $txtFooter;
 $txtSocial: $bgFooter;
 
-
 // Index
 $bgBenefit: #F8F9FA;
 $txtBenefitIcon: #727272;
 $txtBenefitHeader: #505c70;
+
+// Expert
+$txtSolutionHeader: $blue6;
+$txtSolutionSubtitles: #5E5E5E;
+
+$bgOffers: $blue6;
+$bgInterventions: #9B26AF;
+
+$bgApproach: $blue6;
+
+$txtProfiles:$blue7;
+
+$bgContact: #F4F4F4;
+$txtContact: #7F7F7F;

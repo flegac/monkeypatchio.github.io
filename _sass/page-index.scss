@@ -27,20 +27,6 @@
         text-shadow: 0 1px 1px transparentize($black,.5);
       }
     }
-
-    .button {
-      padding: .5rem 1.875rem;
-      background: $blue3;
-      color: $white;
-      border: none;
-      border-radius: .25rem;
-      font-size: 1.25rem;
-      font-weight: normal;
-      cursor: pointer;
-      &:hover {
-        background: $blue4;
-      }
-    }
   }
 
   .who, .customers {

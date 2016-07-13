@@ -8,15 +8,13 @@
     
     <nav class="menu">
       <ul>
-        {% assign sorted_pages = site.pages %}
-        {% for group in (1..10) %}
-          {% for node in sorted_pages %}
-            {% if group == node.group %}
-              <li class="{% if node.key-title == page.key-title %}active{% endif %}">
-                <a href="{{ site.baseurl }}{{ node.url }}">{% t node.title %}</a>
-              </li>
+        {% assign sorted_pages = site.pages | sort:"order" %}
+        {% for node in sorted_pages %}
+          <li class="{% if node.permalink == page.permalink %}active{% endif %}">
+            {% if node.order > 0 %}
+              <a href="{{ site.baseurl }}{{ node.url }}">{% t node.title %}</a>
             {% endif %}
-          {% endfor %}
+          </li>
         {% endfor %}
       </ul>
     </nav>
@@ -43,19 +41,16 @@
   <input type="checkbox" id="menu-hamburger"/>
   <nav class="menu-hamburger">
      <ul>
-        {% assign sorted_pages = site.pages %}
-        {% for group in (1..10) %}
-          {% for node in sorted_pages %}
-            {% if group == node.group %}
-              <li class="{% if node.permalink == page.permalink %}active{% endif %}">
-                <a href="{{ site.baseurl }}{{ node.url }}">{% t node.title %}</a>
-              </li>
-            {% endif %}
-          {% endfor %}
+        {% for node in sorted_pages %}
+          {% if node.order > 0 %}
+            <li class="{% if node.permalink == page.permalink %}active{% endif %}">
+              <a href="{{ site.baseurl }}{{ node.url }}">{% t node.title %}</a>
+            </li>
+          {% endif %}
         {% endfor %}
       </ul>
       <ul>
-          <li class="{% if site.lang == "en" %}active{% endif %}">
+        <li class="{% if site.lang == "en" %}active{% endif %}">
           <a href="{{ site.baseurl_root }}en{{ page.url}}" >{% t global.english %}</a>
         </li>
         <li class="{% if site.lang == "fr" %}active{% endif %}">

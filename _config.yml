@@ -52,3 +52,29 @@ contact:
   city:        Ramonville-Saint-Agne
   postcode:    31520
   country:     France
+
+# Collections
+collections:
+  - expertise
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      order: 0
+  -
+    scope:
+      path: "_expertise/offers"
+    values:
+      type: offers
+  -
+    scope:
+      path: "_expertise/interventions"
+    values:
+      type: interventions
+  -
+    scope:
+      path: "_expertise/profiles"
+    values:
+      type: profiles
