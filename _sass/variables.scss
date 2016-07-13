@@ -8,5 +8,19 @@ $txtGrey: #666;
 $txtLinkActive: $white;
 $txtLink: transparentize($txtLinkActive, .2);
 
+// Header
 $bgHeaderMenu: #03a9f4;
 $bgHeaderMenuActive: #0a97d3;
+
+
+// Footer
+$bgFooter: #0288d1;
+$bgFooterBottom: #026CA6;
+$bgBtnTop: #013d5c;
+
+$txtFooter: transparentize($white, .1);
+$txtFooterBottom: $txtFooter;
+$txtFooterHeader: $txtFooter;
+
+$bgSocial: $txtFooter;
+$txtSocial: $bgFooter;
