@@ -1,0 +1,19 @@
+clients:
+  - 
+    client: "/public/images/logos/logo-1.png"
+    name: "Generali"
+  - 
+    client: "/public/images/logos/logo-2.png"
+    name: "Airbus"
+  - 
+    client: "/public/images/logos/logo-3.png"
+    name: "CLS"
+  - 
+    client: "/public/images/logos/logo-4.png"
+    name: "Valtech"
+  - 
+    client: "/public/images/logos/logo-5.png"
+    name: "ResMed"
+  - 
+    client: "/public/images/logos/logo-6.png"
+    name: "Ingenico"

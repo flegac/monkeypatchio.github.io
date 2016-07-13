@@ -1,0 +1,112 @@
+body>header {
+  background: transparentize($bgHeaderMenu,.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo, nav {
+      display: inline-block;
+    }
+
+    .logo img {
+      margin-left: 1rem; 
+      width: 20vw;
+      max-width: 24rem;
+      max-height: 3.25rem;
+    }
+
+    nav ul {
+      display: inline-block;
+      li {
+        display: inline;
+        a {
+          white-space: nowrap;
+          padding: 1.25rem 0.5rem 0.625rem 0.5rem;
+          font-size: 1rem;
+          color: $txtLink;
+          text-decoration: none;
+        }
+        &.active a, & a:hover {
+          color: $txtLinkActive;
+          border-bottom: .1875rem solid $txtLinkActive;
+        }
+      }
+    }
+
+    nav.menu {
+      flex: 1 1 auto;
+      text-align: right;
+    }
+
+    nav.lang {
+      margin: 0 0.5rem 0 2rem;
+      ul li {
+        color: $txtLink;
+        a {
+          padding: 1.25rem 0 0.625rem 0;
+        }
+      }
+    }
+
+    nav.hamburger {
+      display: none;
+      label {
+        padding: 1.25rem 1rem 0.625rem 0.5rem;
+        font-size: 1.5rem;
+        color: $txtLink;
+        cursor: pointer;
+        &:hover {
+          color: $txtLinkActive;
+        }
+      }
+    }
+  }
+  #menu-hamburger {
+    display: none;
+
+    &~ .menu-hamburger {
+      display: none;
+    }
+
+    &:checked ~ .menu-hamburger {
+      display: block;
+    }
+  }
+  .menu-hamburger {
+    border-top: thin solid transparentize($white, .8); 
+    ul {
+      padding: 0;
+      li {
+        padding: .25rem 0.5rem;
+        list-style: none;
+        &.active {
+          background-color: $bgHeaderMenuActive;
+        }
+        a {
+          text-decoration: none;
+          color: $txtLink;
+          &:hover {
+            color: $txtLinkActive;
+          }
+        }
+     }
+    }
+  }
+}
+
+@media (max-width: 60rem) {
+  body>header .menu {
+    nav.menu, nav.lang {
+      display: none;
+    }
+    nav.hamburger {
+      display: inline-block;
+    }
+  }
+}

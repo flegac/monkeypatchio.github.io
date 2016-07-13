@@ -1,0 +1,13 @@
+@import "reset";
+
+body {
+  font-family: 'Open Sans', arial, sans-serif;
+  color: $txtGrey;
+  font-size: 1.125rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x:hidden;
+  margin-top: 5.25rem;
+}
+
+@import "header";

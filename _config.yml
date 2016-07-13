@@ -5,11 +5,12 @@ sass:
   style: compressed
 
 highlighter: rouge
+
 gems:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-multiple-languages-plugin
-  - jekyll-press
+#  - jekyll-press
   
 exclude:
   - deploy.sh
@@ -20,6 +21,7 @@ languages:
   - "en"
 exclude_from_localizations:
   - "public"
+  - "_sass"
 
 # Setup
 title: MonkeyPatch - Expertise Informatique
@@ -41,7 +43,7 @@ version:         1.0.0
 github:
   repo:        https://github.com/MonkeyPatchIo/monkeypatchio.github.io
 
-#Contact 
+# Contact 
 contact:
   tel:         05 34 32 61 45
   tel-link:    0534326145

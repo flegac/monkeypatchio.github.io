@@ -1,27 +1,18 @@
 <!DOCTYPE html>
 <!--  lastBuildDate : {{ site.time | date_to_rfc822 }} -->
 <html>
-   {% include head.html %}
-    <body class="{{page.body-class}}">
-    	
-    	{% include header.html %}
-	
-	    {{ content }}
+{% include head.html %}
+<body class="{{page.body-class}}">
+  {% include header.html %}
+  
+  {% if page.promo %}
+    {% include {{page.promo}} %}
+  {% endif %}
 
-		{% include footer.html %}
-
-		<!-- include js -->
-		{% include js/libraries.js %}
-
-		{% if page.jsinclude %}
-			{% for jsInc in page.jsinclude %}
-				{% assign js = {{jsInc[1]}} %}
-				{% include {{js}} %}
-			{% endfor %}
-		{%endif %}
-
-		<script type="text/javascript" src="{{ site.baseurl_root }}/public/js/main.js"></script>
-  </body>
+  {{ content }}
+  
+  {% include footer.html %}
+</body>
 </html>
 
 
