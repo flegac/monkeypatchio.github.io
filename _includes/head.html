@@ -9,18 +9,7 @@
   <meta name="keywords" content="{{ site.keywords }}" />
   <meta name="description" content="{{ site.description }}" />
   <meta name="author" content="{{ site.author.name }}">
-  
-  <meta property="og:site_name" content="{{ site.title }}"/>
-  <meta property="og:title" content="{{ page.title }}"/>
-  <meta property="og:description" content="{{ page.subtitle1 }} {{ page.subtitle2 }}"/>
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:locale" content="{{ site.lang }}"/>
-  <meta property="og:image" content="{{ page.header }}"/>
-  <meta property="og:image:type" content="image/jpeg"/>
-  <meta property="og:image:width" content="640"/>
-  <meta property="og:image:height" content="320"/>
-  <meta name="twitter:creator" content="@MonkeyPatch_io" />
+  {% include seo.html %}
   
   {% if site.lang == "fr" %}
   <link rel="alternate" hreflang="en" href="/en/index" />

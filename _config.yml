@@ -1,16 +1,16 @@
-# Dependencies
-markdown:        redcarpet
 
 #Sass
 sass:
-    sass_dir:     _sass
-    style:        compressed
+  sass_dir: _sass
+  style: compressed
 
-highlighter:     rouge
+highlighter: rouge
 gems:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-multiple-languages-plugin
+  - jekyll-press
+  
 exclude:
   - deploy.sh
 
@@ -22,28 +22,31 @@ exclude_from_localizations:
   - "public"
 
 # Setup
-title:           MonkeyPatch - Expertise Informatique
-keywords:        Expertise informatique, Dévelopement informatique
-description:     Société de conseil et d'expertise en informatique spécialisée dans les nouvelles technologies.
-url:             http://www.monkeypatch.io
-paginate:        1
-baseurl:          
-author:
-    name:        Emmanuel Vinas
-    url:         https://twitter.com/EmmanuelVinas
-    email:       emmanuel@monkeypatch.io
+title: MonkeyPatch - Expertise Informatique
+keywords: Expertise informatique, Dévelopement informatique
+description: Société de conseil et d'expertise en informatique spécialisée dans les nouvelles technologies.
+url: http://www.monkeypatch.io
+
+twitter:
+  username: MonkeyPatch_io
+
+logo: /public/images/logos/logo-mkp-blue.png
+social: 
+  links:
+    - "https://twitter.com/monkeypatch_io"
+    - "https://www.linkedin.com/company/monkeypatch-io" 
 
 # Custom vars
 version:         1.0.0
 github:
-    repo:        https://github.com/MonkeyPatchIo/monkeypatchio.github.io
+  repo:        https://github.com/MonkeyPatchIo/monkeypatchio.github.io
 
 #Contact 
 contact:
-    tel:         05 34 32 61 45
-    tel-link:    0534326145
-    mail:        contact@monkeypatch.io
-    address:     12 Avenue de l'Europe
-    city:        Ramonville-Saint-Agne
-    postcode:    31520
-    country:     France
+  tel:         05 34 32 61 45
+  tel-link:    0534326145
+  mail:        contact@monkeypatch.io
+  address:     12 Avenue de l'Europe
+  city:        Ramonville-Saint-Agne
+  postcode:    31520
+  country:     France
