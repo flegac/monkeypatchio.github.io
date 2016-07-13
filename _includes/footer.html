@@ -1,21 +1,6 @@
 <footer>
   <div class="top">
     <div>
-      <h3>{% t general.quick-links %}</h3>
-        <ul>
-          {% assign sorted_pages = site.pages %}
-          {% for group in (1..10) %}
-            {% for node in sorted_pages  %}
-              {% if group == node.group %}
-                <li>
-                  <a href="{{ site.baseurl }}{{node.url}}">{% t node.title %}</a>
-                </li>
-              {% endif %}
-            {% endfor %}
-          {% endfor %}
-        </ul>
-    </div>
-    <div>
       <h3>{% t general.get-in-touch %}</h3>
       <p>
         <a href="{{ site.baseurl }}contact">
@@ -27,6 +12,8 @@
         <i class="fa fa-envelope-o" aria-hidden="true"></i>
         <a class="mail" href="mailto:{{ site.contact.mail }}">{{ site.contact.mail }}</a>
       </p>
+    </div>
+    <div>
       <h3>{% t general.social-networks%}</h3>
       <ul class="social">
         <li>

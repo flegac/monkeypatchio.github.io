@@ -7,11 +7,25 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x:hidden;
-  margin-top: 5.25rem;
+}
+
+// Hide checkbox
+input[type=checkbox] {
+  display: none;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 @import "header";
 @import "footer";
+@import "modal";
+
 @import "page-index";
 @import "page-expert";
 @import "page-philo";

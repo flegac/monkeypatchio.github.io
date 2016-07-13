@@ -1,0 +1,96 @@
+.index {
+
+  .carousel {
+    background-image: url('/public/images/background/promo-background-1.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% top;
+    background-size: cover;
+    min-height: 650px;
+    justify-content: flex-start;
+
+    h1 {
+      text-transform: uppercase;
+      font-weight: 800;
+      max-width: 75vw;
+      display: inline-block;
+
+      &>div:first-child {
+        margin-top: 9.25rem;
+        font-size: 1.75rem;
+        color: $white;
+      }
+      &>div:nth-child(2) {
+        margin: 1.25rem 0 ;
+        line-height: 1.1em;
+        font-size: 3.5rem;
+        color: $blue5;
+        text-shadow: 0 1px 1px transparentize($black,.5);
+      }
+    }
+
+    .button {
+      padding: .5rem 1.875rem;
+      background: $blue3;
+      color: $white;
+      border: none;
+      border-radius: .25rem;
+      font-size: 1.25rem;
+      font-weight: normal;
+      cursor: pointer;
+      &:hover {
+        background: $blue4;
+      }
+    }
+  }
+
+  .who, .customers {
+    margin: 5rem 0;
+    h1, p {
+      margin: 1rem auto;
+      display: inline-block;
+      max-width: 75vw;
+    }
+  }
+
+  .who {
+    .benefits {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-items: stretch;
+      align-content: space-around;
+      &> div {
+        background-color: $bgBenefit;
+        min-width: 12rem;
+        width: 16vw;
+        margin: 1rem;
+        padding: 2rem 1.5rem 1rem 1.5rem;
+        i {
+          display: block;
+          font-size: 3.75rem;
+          color: $txtBenefitIcon;
+        }
+        h3 {
+        font-size: 1.125rem;
+          color: $txtBenefitHeader;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .customers {
+    .list {
+      margin: 0 20vw;
+      display: flex;
+      justify-content: space-around;
+      align-items: stretch;
+      flex-wrap: wrap;
+      align-items: stretch;
+      align-content: space-around;
+      &> img {
+        margin: 1rem;
+      }
+    }
+  }
+}

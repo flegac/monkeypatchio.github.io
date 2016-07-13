@@ -1,72 +1,44 @@
 ---
 layout: default
-key-title: home
-body-class: home-page
-header-class: header-wrapper-home
-promo: promo/promo_index.html
 title: titles.home
 permalink: index
-jsinclude:
-   form: js/libraries-form.js
-   home: js/libraries-home.js
 ---
 
-<!-- ******Why Section****** -->
-<section id="who" class="who section">
-	<div class="container">
-		
-		<div class="section-titles">
-			<h1>{%t home.who-we-are %}</h1>
-			<h2>{%t home.intro %}</h2>
-		</div><!--//section-titles-->
-		
-		<div class="row benefits text-center">
-			<div class="item col-md-3 col-sm-6 col-xs-12">
-				<div class="item-inner">
-					<div class="fs1" aria-hidden="true" data-icon="&#xe007;"></div>                        
-					<h3 class="sub-title">{%t home.benefits.skilled %}</h3>
-				</div>       
-			</div><!--//item-->
-			<div class="item col-md-3 col-sm-6 col-xs-12 sm-break">
-				<div class="item-inner">
-					<div class="fs1" aria-hidden="true" data-icon="&#xe01c;"></div>
-					<h3 class="sub-title">{%t home.benefits.agile %}</h3>
-				</div><!--//item-inner-->                    
-			</div><!--//item-->
-			<div class="item col-md-3 col-sm-6 col-xs-12">
-				<div class="item-inner">
-					<div class="fs1" aria-hidden="true" data-icon="&#xe031;"></div>
-					<h3 class="sub-title">{%t home.benefits.quality %}</h3>
-				</div><!--//item-inner-->
-			</div><!--//item-->
-			<div class="item col-md-3 col-sm-6 col-xs-12">
-				<div class="item-inner">
-					<div class="fs1" aria-hidden="true" data-icon="&#xe030;"></div>                        
-					<h3 class="sub-title">{%t home.benefits.overheads %}</h3>
-				</div><!--//item-inner-->              
-			</div><!--//item-->
-		</div><!--//row-->
-</section><!--//who-->
+<main>
+  <!-- Carousel -->
+  <section class="carousel">
+    <h1>
+      <div>{% t home.tagline1 %}</div>
+      <div>{% t home.tagline2 %}</div>
+    </h1>
+    <label for="contact" class="button">
+      {% t general.talk-to-us %}
+    </label>
+  </section> 
 
-<!-- ****** customers Section****** -->
-<section id="customers" class="customers last-section section">
-	<div class="container text-center">
-		
-		<div class="section-titles">
-			<h1>{%t home.worked-with %}</h1>
-		</div><!--//section-titles-->
+  <!-- Who -->
+  <section class="who">
+    <h1>{%t home.who-we-are %}</h1>
+    <p>{%t home.intro %}</p>
+    <div class="benefits">
+      {% for benefit in site.data.benefits %}
+      <div>
+        <i class="fa fa-{{benefit.icon}}" aria-hidden="true"></i>
+        <h3>{%t benefit.text %}</h3>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
 
-		<ul class="logo-list list-inline row">
-			<li class="col-md-4 col-sm-4 col-xs-12"><img class="img-responsive" src="{{ site.baseurl_root }}/public/images/logos/logo-1.png" alt="" /></li>
-			<li class="col-md-4 col-sm-4 col-xs-12"><img class="img-responsive" src="{{ site.baseurl_root }}/public/images/logos/logo-2.png" alt="" /></li>
-			<li class="col-md-4 col-sm-4 col-xs-12"><img class="img-responsive" src="{{ site.baseurl_root }}/public/images/logos/logo-3.png" alt="" /></li>                   
-		</ul><!--//logo-list-->
-		<ul class="logo-list list-inline row last">
-			<li class="col-md-4 col-sm-4 col-xs-12"><img class="img-responsive" src="{{ site.baseurl_root }}/public/images/logos/logo-4.png" alt="" /></li> 
-			<li class="col-md-4 col-sm-4 col-xs-12"><img class="img-responsive" src="{{ site.baseurl_root }}/public/images/logos/logo-5.png" alt="" /></li>
-			<li class="col-md-4 col-sm-4 col-xs-12 "><img class="img-responsive" src="{{ site.baseurl_root }}/public/images/logos/logo-6.png" alt="" /></li>
-		</ul><!--//logos-list-->               
-	</div><!--//container-->
-</section><!--//customers-->
+  <!-- Customers -->
+  <section class="customers">
+    <h1>{%t home.worked-with %}</h1>
+    <div class="list">
+      {% for customer in site.data.customers %}
+        <img alt="{{customer.alt}}" src="{{customer.img}}">
+      {% endfor %}
+    </div>
+  </section>
+</main>
 
 {% include contact_modal.html %}

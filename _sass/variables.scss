@@ -3,20 +3,27 @@
 $white: #fff;
 $black: #000;
 
+$blue5: #2ebcfc;
+$blue1: #03a9f4;
+$blue2: #0a97d3;
+$blue3: #0288d1;
+$blue4: #026CA6;
+$darkBlue: #013d5c;
+
 $txtGrey: #666;
 
+// Links
 $txtLinkActive: $white;
 $txtLink: transparentize($txtLinkActive, .2);
 
 // Header
-$bgHeaderMenu: #03a9f4;
-$bgHeaderMenuActive: #0a97d3;
-
+$bgHeaderMenu: $blue1;
+$bgHeaderMenuActive: $blue2;
 
 // Footer
-$bgFooter: #0288d1;
-$bgFooterBottom: #026CA6;
-$bgBtnTop: #013d5c;
+$bgFooter: $blue3;
+$bgFooterBottom: $blue4;
+$bgBtnTop: $darkBlue;
 
 $txtFooter: transparentize($white, .1);
 $txtFooterBottom: $txtFooter;
@@ -24,3 +31,9 @@ $txtFooterHeader: $txtFooter;
 
 $bgSocial: $txtFooter;
 $txtSocial: $bgFooter;
+
+
+// Index
+$bgBenefit: #F8F9FA;
+$txtBenefitIcon: #727272;
+$txtBenefitHeader: #505c70;
