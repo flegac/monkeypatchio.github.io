@@ -10,10 +10,12 @@ $blue2: #0a97d3;
 $blue3: #0288d1;
 $blue7: #4285F4;
 $blue4: #026CA6;
+
+
 $darkBlue: #013d5c;
 
 $txtGrey: #666;
-
+$grey2: #5E5E5E;
 
 // Links
 $txtLinkActive: $white;
@@ -42,7 +44,7 @@ $txtBenefitHeader: #505c70;
 
 // Expert
 $txtSolutionHeader: $blue6;
-$txtSolutionSubtitles: #5E5E5E;
+$txtSolutionSubtitles: $grey2;
 
 $bgOffers: $blue6;
 $bgInterventions: #9B26AF;
@@ -53,3 +55,7 @@ $txtProfiles:$blue7;
 
 $bgContact: #F4F4F4;
 $txtContact: #7F7F7F;
+
+// Team
+$txtTeamSocial: #bcc4d0;
+$txtTeamSocialHover: #65758e;

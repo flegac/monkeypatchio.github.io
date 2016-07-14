@@ -145,8 +145,7 @@ philo:
     but-we: "MAIS NOUS PENSONS SURTOUT QUE NOUS DEVONS NOUS APPUYER ET CAPITALISER SUR NOTRE ÉQUIPE."
     why: "Nous avons fait le choix de créer MonkeyPatch sans lien hiérarchique.Nous avons souhaité que tous les membres de l’équipe puissent prendre part à l’ensemble des décisions de l’entreprise et avoir accès de façon transparente aux chiffres de l’entreprise."
   einstein: 
-    sitation-1: "\"La logique vous conduira d’un point A à un point B."
-    sitation-2: "L’imagination et l’audace vous conduiront où vous le désirez.\""
+    sitation: "La logique vous conduira d’un point A à un point B. L’imagination et l’audace vous conduiront où vous le désirez."
     from: "Albert Einstein"
   coffee: 
     come: "Venez nous rencontrer"
@@ -155,16 +154,10 @@ philo:
   founders: 
     title: "Les fondateurs"
     text: "Animés par la même volonté et la même passion, Emmanuel et Matthieu ont décidé de créer MonkeyPatch fin 2015"
-    matthieu: 
-      role1: "Facilitateur d’Innovation"
-      role2: "Co-Fondateur"
-      xp: "+10 ans d’Exp"
-      text: "Business, Innovation, Stratégie et Gestion d’entreprise, Recrutement, Gestion d’équipe,  UI / UX"
-    manu: 
-      role1: "Developpeur Sénior"
-      role2: "Co-Fondateur"
-      xp: "+10 ans d’Exp"
-      text: "Passionné de la technique, des nouvelles technologies, Leader technique, Architecture web et mobile"
+    cofounder: "Co-Fondateur"
+    innov: "Facilitateur d’Innovation" 
+    devsenior: "Developpeur Sénior"
+    xp: "ans d’Exp."
 error: 
   404: "Oops! Quelque-chose s'est mal passé. <br>La page ou le fichier demandé peut avoir été déplacé ou supprimé."
   back: "Retour à l'accueil"

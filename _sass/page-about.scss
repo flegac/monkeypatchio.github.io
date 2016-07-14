@@ -1,0 +1,166 @@
+.about {
+  
+  section {
+    padding: 3.5rem 2.5rem;
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 1.125rem;
+      font-weight: normal;
+      margin: 0.5rem 0;
+    }
+  }
+
+  .philo {
+    max-width: 90vw;
+    margin: 0 auto;
+    h1 {
+      margin-top: 5.5rem;
+      color: $blue5;
+      text-shadow: 0 1px 1px transparentize($black,.5);
+      font-size: 3.5rem;
+      text-transform: uppercase;
+      font-weight: 800;
+    } 
+
+    &> div {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+
+      h3 {
+        color: $blue5;
+      }
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      color: $grey2;
+      font-weight: normal;
+    }
+  }
+
+  .dream {
+    background-image: url('/public/images/background/philo.jpg');
+    background-size: cover;
+    height: 640px;
+    justify-content: flex-start;
+    h1 {
+      color: $white;
+    }
+  }
+
+  .founders {
+    color: $grey2;
+    .list {
+      margin: 1rem;
+      display: flex;
+      justify-content: space-around;
+      &>div {
+        margin: 1rem;
+        padding: 0.5rem;
+        background-color: $bgBenefit;
+        display: flex;
+
+        .photo {
+          height: 100%;
+          display: flex;
+          align-items: center;
+
+          img {
+            max-width: 16rem;
+          }
+        }
+        
+        .detail {
+          text-align: left;
+          margin-left: 0.5rem;
+           h3,h4,h5 {
+              margin: 0.25em 0;
+           }
+           h4 {
+             color: $txtBenefitHeader;
+             font-weight: normal;
+           }
+           h4, h5 {
+             font-style: italic;
+             font-weight: normal;
+           }
+
+           ul.social {
+             padding: 0;
+             margin: 0;
+             text-align: center;
+             li {
+               display: inline-block;
+               padding: 0 1rem;
+               list-style: none;
+               a {
+                 font-size: 3rem;
+                 color: $txtTeamSocial;
+                 &:hover {
+                   color: $txtTeamSocialHover;
+                 }
+               }
+             }
+           }
+        }
+      }
+    }
+  }
+
+  .assets {
+    background-color: $blue6;
+    color: $white;
+
+    h2, h3 {
+      font-weight: normal;
+    }
+    .projects {
+      color: $black;
+    }
+  }
+
+  .quote {
+    background-color: $black;
+    flex-direction: row;
+    justify-content: space-around;
+
+    blockquote {
+      color: transparentize($white, 0.2);
+      p {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        &::before, &::after {
+          font-family: cursive;
+          font-size: 2.5rem;
+          color: transparentize($white, 0.6);
+        }
+        &::before {
+          content: '“ ';
+        }
+        &::after {
+          content: ' ”';
+        }
+      }
+      footer {
+        color: transparentize($white, 0.6);
+        text-align: right;
+      }
+    }
+  }
+
+  .coffee {
+    flex-direction: row;
+    justify-content: space-around;
+
+    div:first-child, div:last-child {
+      background-image: url('/public/images/philo/coffee.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      min-width: 6rem;
+      min-height: 6rem;
+    }
+  }
+}

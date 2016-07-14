@@ -56,12 +56,16 @@ contact:
 # Collections
 collections:
   - expertise
+  - jobs
+  - profiles
+  - teams
 
 defaults:
   -
     scope:
       path: "" # an empty string here means all files in the project
     values:
+      layout: default
       order: 0
   -
     scope:
