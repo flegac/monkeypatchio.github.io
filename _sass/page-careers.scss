@@ -1,0 +1,113 @@
+.careers{
+
+  section {
+    margin: 0;
+    h2 {
+      font-weight: normal;
+      font-size: 1.25rem;
+    }
+
+    .content {
+      text-align: left;
+      margin: 0.5rem;
+    }
+  }
+
+  .careers-top {
+    margin-top: 3.75rem;
+    height: 650px;
+    background-image: url('/public/images/background/career.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% top; 
+    background-size: cover;
+
+    &>div {
+      position: absolute;
+      bottom: 140px;
+      width: 100%;
+      height: 140px;
+      background: url('/public/images/careers/assets_bg-bottom.png') no-repeat scroll center bottom / 100% 100%;
+      
+    }
+  }
+
+  .profiles {
+    background: $white url('/public/images/careers/assets_bg-top.png') no-repeat scroll center bottom / 100% auto;
+    padding-bottom: 120px;
+    h1, h2 {
+      color: $grey2;
+    }
+
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      .profile {
+        background-color: $bgBenefit;
+        max-width: 32rem;
+        margin: 1rem;
+        padding: 0.25rem;
+        display: flex;
+        align-items: center;
+        img {
+          margin: 0.5rem;
+        }
+      }
+    }
+  }
+  
+  .assets {
+    background-color: $grey3;
+    padding-bottom: 2rem; 
+    color: $grey2;
+
+    .list {
+      display: flex;
+      flex-direction: column;
+
+      .asset {
+        margin: .5rem 0;
+        padding: 0 1rem 0 .5rem;
+        background-color: $white;
+        border-left: .25rem solid $blue6;
+        width: 80vw;
+        label {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          div {
+            flex: 1 1 auto; 
+            color: $grey4;
+            &:hover {
+             color: $blue6;
+            }
+          }
+          .fa{
+            &::after{
+              color: $blue6;
+              content: "\f054";
+            }
+          }
+        }
+        .content {
+          width: 100%;
+          display: none;
+        }
+      }
+
+      input[name="accordion"]:checked + .asset {
+        .fa{
+          &::after{
+            color: $blue6;
+            content: "\f078";
+          }
+        }
+        .content {
+          display: block;
+        }
+      }
+
+    }
+  }
+}

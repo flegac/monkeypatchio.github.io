@@ -43,50 +43,14 @@ contact:
   start: "Venez nous rencontrer"
   meet: "Que ce soit pour discuter de vos projets ou de votre souhait de rejoindre notre équipe, n’hésitez pas à nous contacter. "
 careers: 
-  assets: 
-    1: 
-      title: "Une passion commune partagée"
-      content: "Nous recrutons uniquement des ingénieurs qui ont le gène de l'info !<br/><br/>La passion de l'informatique et de l'innovation permet à nos consultants d'être toujours à la pointe des meilleures pratiques des technologies du Web, du Mobile et du Big Data.<br/><br/>Nous cultivons cet état d'esprit en consacrant du temps pour de la veille technologique et l'échange de nos expertises.<br/><br/>Être un Monkey vous invite à toujours être investi dans l'évolution des technologies. Mais le comportement et le savoir-être de nos consultants comptent bien plus encore.<br/><br/>Il faut partager la passion de l'informatique pour faire partie de notre tribu."
-    2: 
-      title: "Travailler dans une entreprise engagée et respectueuse"
-      content: " Parce que travailler dans une entreprise respectueuse de ses consultants et honorant ses engagements ça n'a pas de prix !<br/><br/>L’engagement de nos collaborateurs est crucial pour la satisfaction de nos clients. Pour devenir la société d'expertise n°1, nous devons tenir le même engagement auprès de l'ensemble de nos consultants.<br/><br/>La garantie de nos engagements et le respect de tous sont la clé de la réussite de notre société."
-    3: 
-      title: "Evoluer dans un environnement d’expertise et d’innovation"
-      content: "Des projets innovants :  un environnement passionnant et exigeant.<br/><br/>MonkeyPatch conseille et réalise pour ses clients des projets sur les nouvelles technologies liées au Web, la Mobilité et le BigData.<br/><br/>Pas d'intercontrat improductif. Nous accompagnons des startups partenaires sur leurs problématiques techniques.<br/>Entre deux missions vous interviendrez sur des problématiques ciblées par cycle de 10 jours ouvrables.<br/><br/>Vos expertises seront tout le temps mises à contribution pour une étude de faisabilité technique ou pour la réalisation de fonctions complexes..."
-    4: 
-      title: "Construire son avenir en équipe"
-      content: "On n'est rien sans l'esprit d'équipe !<br/><br/>Investis sur le long terme, nous établissons une relation de proximité avec nos collaborateurs par le biais d’échanges réguliers et suivis.<br/><br/>Nous nouons un lien de confiance et d’engagement qui nous permet de stimuler le partage d'expérience et d'expertise entre les Monkeys  lors d'afterwork, d'hackathon, ... ou simplement autour d'un café.<br/><br/>Repousser ses limites techniques grâce au soutien d'une équipe d'experts et à l'accompagnement d'une société pas comme les autres."
-    5: 
-      title: "Esprit start-up"
-      content: "Un fonctionnement qui stimule l’innovation, renforce l’esprit d’équipe et rend plus réactif.<br/><br/>Responsabiliser et donner de la liberté aux Monkeys leur permet de s'épanouir et de grandir sereinement.<br/><br/>Nous rejoindre, c’est intégrer :<br/><br/><ul><li>Une dynamique entrepreneuriale : chacun est investi dans le développement de la société</li><li>Une ambiance de travail conviviale</li><li>Des échanges constants</li><li>Des initiatives anti-routine, ...</li></ul><br/>Cultiver l’esprit ­d’en­treprise ­de ses salariés, et si c’était ça ­l’esprit startup ? "
-    6: 
-      title: "Le Pack Monkey"
-      content: "Chez MonkeyPatch, nous aimons capitaliser et voir nos Experts progresser !<br/><br/>Nous soutenons toute initiative qui permet à nos consultants d'enrichir leur expertise et la reconnaissance de leurs pairs :<br/><br/><ul><li>Rédaction d'articles techniques (blog)</li><li>Participation et/ou animation de conférences techniques (à Toulouse ou à l'international)</li><li>Participation et/ou organisation d'hackathons</li><li>Développement de supports de formation de nouvelles technologique</li></ul>Nous partons du principe que chacun doit apporter sa pierre à l’édifice.<br/><br/>Pour encourager cette démarche nous allouons chaque année un budget et un nombre de jours de disponibilité pour suivre des formations, participer aux conférences ou aux hackathons... Et enfin nous permettons à chaque consultant de choisir son materiel."
-    7: 
-      title: "Une entreprise pas comme les autres"
-      content: " Nous bousculons les codes des entreprises traditionnelles.<br/><br/>Nous souhaitons que chacun de nos Monkeys puisse être force de proposition, être partie prenante dans le recrutement des nouveaux Monkeys, avoir son mot à dire sur les investissements de l'entreprise. Nos collaborateurs peuvent prendre part au board de la société, et ainsi prendre part pleinement aux choix de la stratégie de l'entreprise.<br/><br/>Une entreprise qui parie sur les hommes de son équipe."
-    8: 
-      title: "Bénéficier d’une rémunération attractive et équitable"
-      content: " En tant que membre de l’équipe de MonkeyPatch, vous serez reconnu pour votre travail et votre engagement, à la fois en tant qu’individu qu'au niveau collectif. <br/><br/>Nous souhaitons récompenser à juste titre l'ensemble de nos consultants. Leur rémunération comprend un salaire fixe, des primes individelles liées à leurs activités et une part variable liée à la productivité collective. Chez nous le salaire ce n'est ni un tabou ni un secret, on est transparent sur le salaire de l'équipe dirigeante. <br/><br/>Notre mot d'ordre, travailler sur des problématiques clientes pointues et exigeantes, mérite une reconnaissance humaine et financière."
-    title: "Les Atouts de la Tribu"
-    intro: "Chez MonkeyPatch, nous recherchons à constituer une équipe d’Experts qui partagent nos valeurs et nos ambitions."
-  team: 
+  profiles:
     title: "Les profils de la tribu"
     intro: "Une équipe complémentaire"
-  front-end: "Front-end"
-  front-end-desc: "Pivot entre le Design (UI/UX) et le Back-End, il est en charge de créer des interfaces claires et simples pour l’utilisateur. Le responsive design n’a plus de secrets pour lui. Jongleur entre les librairies Javascript les plus récentes, il excelle également dans la mise en page HTML5 et CSS."
-  back-end: "Back-end"
-  back-end-desc: "Sans lui, de nombreux projets Web ou Mobile ne seraient qu’une coquille vide. Alors qu’il travaille souvent sur des éléments invisibles pour l’utilisateur, il peut se vanter d’en gérer les données et la sécurité. Il maîtrise les bases de données SQL ou NoSQL et les notions de sécurité."
-  mobile: "Mobile"
-  mobile-desc: "Toujours scotché à son smartphone, il réalise des applications en prenant soin des détails afin que l’expérience utilisateur soit la plus satisfaisante. Il maîtrise parfaitement l’un des environnements Mobile (iOS, Android, Windows Phone)."
-  devops: "Dev-Ops"
-  devops-desc: "Le chaînon manquant entre le développeur et l'administrateur système, il améliore la performance et la sécurité des systèmes d'information. Il est capable de configurer n’importe quelle application, indifféremment du langage et du serveur."
-  ux-ui: "UI/UX"
-  ux-ui-desc: "A l'écoute des dernières tendances Web et Mobile, il a pour mission de concevoir des interfaces agréables et faciles à prendre en main de manière à ce que l’expérience utilisateur soit la meilleure possible."
+  assets:
+    title: "Les Atouts de la Tribu"
+    intro: "Chez MonkeyPatch, nous recherchons à constituer une équipe d’Experts qui partagent nos valeurs et nos ambitions."
   secu: "Expert sécurité"
   secu-desc: "Aucune des dernières méthodes de hacking ne lui est inconnue. Il propose des moyens pour sécuriser à la fois les données et les applications. Il permet à l’entreprise de contrer les attaques et protège la confidentialité."
-  big-data: "Expert Big Data"
-  big-data-desc: "Capable de retrouver son chemin dans la jungle des données, il met en place le recueil, l’analyse, la visualisation de celles-ci et définit des algorithmes pour les transformer en information exploitable."
 jobs: 
   title: "Si vous êtes Monkeys"
   intro: "Nous recherchons avant tout à bâtir une équipe de passionnés qui aiment partager et confronter leur expertise à des problématiques clients pointues"
@@ -143,7 +107,7 @@ philo:
     need: "Il faut des gens passionnés et investis"
     we-are: "Nous sommes convaincus que MonkeyPatch sera reconnue comme société d’expertise en informatique grâce à l’expertise de notre équipe. Pour relever ce challenge, notre Expertise doit s’enrichir en se confrontant quotidiennement à des défis techniques et en accueillant de nouveau Experts."
     but-we: "MAIS NOUS PENSONS SURTOUT QUE NOUS DEVONS NOUS APPUYER ET CAPITALISER SUR NOTRE ÉQUIPE."
-    why: "Nous avons fait le choix de créer MonkeyPatch sans lien hiérarchique.Nous avons souhaité que tous les membres de l’équipe puissent prendre part à l’ensemble des décisions de l’entreprise et avoir accès de façon transparente aux chiffres de l’entreprise."
+    why: "Nous avons fait le choix de créer MonkeyPatch sans lien hiérarchique.Nous avons sEsprit start-upouhaité que tous les membres de l’équipe puissent prendre part à l’ensemble des décisions de l’entreprise et avoir accès de façon transparente aux chiffres de l’entreprise."
   einstein: 
     sitation: "La logique vous conduira d’un point A à un point B. L’imagination et l’audace vous conduiront où vous le désirez."
     from: "Albert Einstein"
@@ -154,10 +118,6 @@ philo:
   founders: 
     title: "Les fondateurs"
     text: "Animés par la même volonté et la même passion, Emmanuel et Matthieu ont décidé de créer MonkeyPatch fin 2015"
-    cofounder: "Co-Fondateur"
-    innov: "Facilitateur d’Innovation" 
-    devsenior: "Developpeur Sénior"
-    xp: "ans d’Exp."
 error: 
   404: "Oops! Quelque-chose s'est mal passé. <br>La page ou le fichier demandé peut avoir été déplacé ou supprimé."
   back: "Retour à l'accueil"

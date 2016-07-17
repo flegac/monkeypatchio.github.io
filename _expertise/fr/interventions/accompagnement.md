@@ -1,7 +1,6 @@
 ---
-title: expertise.interventions.accompagnement
+title: Accompagnement
 img: /public/images/expert/Accompagnement.png
-lang: fr
 order: 4
 ---
 

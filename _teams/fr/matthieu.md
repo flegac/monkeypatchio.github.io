@@ -5,9 +5,9 @@ order: 1
 image: /public/images/team/matthieu.jpg
 lang: fr
 roles:
-  - philo.founders.innov
-  - philo.founders.cofounder
-xp: "+10"
+  - Facilitateur d’Innovation
+  - Co-Fondateur
+xp: "+10 ans d’Exp."
 linkedin: https://www.linkedin.com/in/matcaylet
 twitter: https://twitter.com/MCaylet
 ---

@@ -1,7 +1,6 @@
 ---
-title: expertise.interventions.prototype
+title: Prototype
 img: /public/images/expert/Proto.png
-lang: fr
 order: 2
 ---
 

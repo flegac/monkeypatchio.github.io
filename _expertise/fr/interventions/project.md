@@ -1,7 +1,6 @@
 ---
-title: expertise.interventions.project
+title: Projet
 img: /public/images/expert/Project.png
-lang: fr
 order: 3
 ---
 

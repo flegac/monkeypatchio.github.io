@@ -1,7 +1,6 @@
 ---
-title: expertise.offers.conseil
+title: Audit et conseil
 img: /public/images/expert/Conseil.png
-lang: fr 
 order: 4
 ---
 

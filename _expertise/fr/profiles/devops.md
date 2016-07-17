@@ -1,7 +1,6 @@
 ---
-title: expertise.profiles.devops
+title: Consultant DevOps
 img: /public/images/expert/DevOps.png
-lang: fr
 order: 3
 ---
 

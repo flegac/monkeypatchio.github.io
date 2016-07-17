@@ -1,7 +1,6 @@
 ---
-title: expertise.profiles.uiux
+title: Consultant UI / UX
 img: /public/images/expert/UI-UX.png
-lang: fr
 order: 4
 ---
 

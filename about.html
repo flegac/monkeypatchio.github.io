@@ -34,9 +34,9 @@ title: titles.about
         <div class="detail">
           <h3>{{founder.name}}</h3>
           {% for role in founder.roles %}
-            <h4>{% t role %}</h4>
+            <h4>{{ role }}</h4>
           {% endfor %}
-          <h5>{{founder.xp}} {% t philo.founders.xp %}</h5>
+          <h5>{{founder.xp}}</h5>
           <div>{{founder.content}}</div>
           <ul class="social">
             {% if founder.twitter %}

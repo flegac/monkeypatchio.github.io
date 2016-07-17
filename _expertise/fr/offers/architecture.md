@@ -1,7 +1,6 @@
 ---
-title: expertise.offers.architecture
+title: Architecture
 img: /public/images/expert/Architecture.png
-lang: fr
 order: 1
 ---
 

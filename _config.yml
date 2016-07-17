@@ -18,7 +18,7 @@ exclude:
 # Languages
 languages:
   - "fr"
-  - "en"
+#  - "en"
 exclude_from_localizations:
   - "public"
   - "_sass"
@@ -55,10 +55,14 @@ contact:
 
 # Collections
 collections:
-  - expertise
-  - jobs
-  - profiles
-  - teams
+  expertise:
+    output: false
+  teams:
+    output: false
+  jobs:
+    output: false
+  profiles:
+    output: false
 
 defaults:
   -
@@ -67,18 +71,43 @@ defaults:
     values:
       layout: default
       order: 0
+  - # Expertises
+    scope:
+      path: "_expertise/fr"
+    values:
+      lang: fr
   -
     scope:
-      path: "_expertise/offers"
+      path: "_expertise/fr/offers"
     values:
       type: offers
   -
     scope:
-      path: "_expertise/interventions"
+      path: "_expertise/fr/interventions"
     values:
       type: interventions
   -
     scope:
-      path: "_expertise/profiles"
+      path: "_expertise/fr/profiles"
+    values:
+      type: profiles
+  - # Teams
+    scope:
+      path: "_teams/fr"
+    values:
+      lang: fr
+  - # profiles
+    scope:
+      path: "_profiles/fr"
+    values:
+      lang: fr
+  -
+    scope:
+      path: "_profiles/fr/assets"
+    values:
+      type: assets
+  -
+    scope:
+      path: "_profiles/fr/profiles"
     values:
       type: profiles

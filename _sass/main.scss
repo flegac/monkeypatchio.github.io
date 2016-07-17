@@ -10,7 +10,7 @@ body {
 }
 
 // Hide checkbox
-input[type=checkbox] {
+input[type=checkbox], input[type=radio] {
   display: none;
 }
 

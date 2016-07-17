@@ -5,9 +5,9 @@ order: 2
 image: /public/images/team/emmanuel.jpg
 lang: fr
 roles:
-  - philo.founders.devsenior
-  - philo.founders.cofounder
-xp: "+10"
+  - Developpeur Sénior
+  - Co-Fondateur
+xp: "+10 ans d’Exp."
 linkedin: https://fr.linkedin.com/in/vinasemmanuel
 twitter: https://twitter.com/EmmanuelVinas
 github: https://github.com/EmmanuelVinas

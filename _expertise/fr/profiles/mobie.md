@@ -1,7 +1,6 @@
 ---
-title: expertise.profiles.mobile
+title: Consultant Mobile
 img: /public/images/expert/Mobile.png
-lang: fr
 order: 2
 ---
 

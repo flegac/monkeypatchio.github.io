@@ -1,7 +1,6 @@
 ---
-title: expertise.offers.lead
+title: Lead technique
 img: /public/images/expert/Lead_tech.png
-lang: fr 
 order: 3
 ---
 

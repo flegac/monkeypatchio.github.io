@@ -1,7 +1,6 @@
 ---
-title: expertise.profiles.web
+title: Consultant Web
 img: /public/images/expert/Front End.png
-lang: fr
 order: 1
 ---
 

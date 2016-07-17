@@ -1,7 +1,6 @@
 ---
-title: expertise.offers.developpement
+title: Développement
 img: /public/images/expert/Dev.png
-lang: fr 
 order: 2
 ---
 
