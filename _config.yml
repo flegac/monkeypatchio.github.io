@@ -18,7 +18,7 @@ exclude:
 # Languages
 languages:
   - "fr"
-#  - "en"
+  - "en"
 exclude_from_localizations:
   - "public"
   - "_sass"
@@ -94,6 +94,11 @@ defaults:
   - # Teams
     scope:
       path: "_teams/fr"
+    values:
+      lang: fr
+  - # Jobs
+    scope:
+      path: "_jobs/fr"
     values:
       lang: fr
   - # profiles

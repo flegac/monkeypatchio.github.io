@@ -1,0 +1,94 @@
+.job {
+
+  section {
+    h1, h2 {
+      color: $grey2;
+    }
+    h2 {
+      font-size: 1.25rem;
+      font-weight: normal;
+    }
+  }
+
+  .job-top {
+    background-image:url('/public/images/background/recutement.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% top;
+    background-size: cover;
+    height: 650px;
+  }
+
+  .jobs {
+    background-color: $grey3;
+    padding-bottom: 2rem; 
+    color: $grey2;
+
+    .nojob {
+      max-width: 80vw;
+      display: flex;
+      align-items: center;
+      a {
+        white-space: nowrap;
+      }
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+
+      .job {
+        margin: .5rem 0;
+        padding: 0 1rem 0 .5rem;
+        background-color: $white;
+        border-left: .25rem solid $blue6;
+        width: 80vw;
+        label {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          img {
+            max-height: 4rem;
+          }
+
+          div.title, div.techno {
+            padding: 0 1rem;
+            text-align: left;
+            flex: 1 1 auto; 
+            width: 50%;
+            color: $grey4;
+            &:hover {
+             color: $blue6;
+            }
+          }
+          div.sep {
+            border-left: .25rem solid $grey3;
+          }
+          .fa{
+            &::after{
+              color: $blue6;
+              content: "\f054";
+            }
+          }
+        }
+        .content {
+          width: 100%;
+          display: none;
+          text-align: left;
+        }
+      }
+
+      input[name="job"]:checked + .job {
+        .fa{
+          &::after{
+            color: $blue6;
+            content: "\f078";
+          }
+        }
+        .content {
+          display: block;
+        }
+      }
+    }
+  }
+}

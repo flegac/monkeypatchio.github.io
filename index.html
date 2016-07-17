@@ -3,41 +3,39 @@ title: titles.home
 permalink: index
 ---
 
-<main>
-  <!-- Carousel -->
-  <section class="carousel">
-    <h1>
-      <div>{% t home.tagline1 %}</div>
-      <div>{% t home.tagline2 %}</div>
-    </h1>
-    <label for="contact" class="button">
-      {% t general.talk-to-us %}
-    </label>
-  </section> 
+<!-- Carousel -->
+<section class="carousel">
+  <h1>
+    <div>{% t home.tagline1 %}</div>
+    <div>{% t home.tagline2 %}</div>
+  </h1>
+  <label for="contact" class="button">
+    {% t general.talk-to-us %}
+  </label>
+</section> 
 
-  <!-- Who -->
-  <section class="who">
-    <h1>{%t home.who-we-are %}</h1>
-    <p>{%t home.intro %}</p>
-    <div class="benefits">
-      {% for benefit in site.data.benefits %}
-      <div>
-        <i class="fa fa-{{benefit.icon}}" aria-hidden="true"></i>
-        <h3>{%t benefit.text %}</h3>
-      </div>
-      {% endfor %}
+<!-- Who -->
+<section class="who">
+  <h1>{%t home.who-we-are %}</h1>
+  <p>{%t home.intro %}</p>
+  <div class="benefits">
+    {% for benefit in site.data.benefits %}
+    <div>
+      <i class="fa fa-{{benefit.icon}}" aria-hidden="true"></i>
+      <h3>{%t benefit.text %}</h3>
     </div>
-  </section>
+    {% endfor %}
+  </div>
+</section>
 
-  <!-- Customers -->
-  <section class="customers">
-    <h1>{%t home.worked-with %}</h1>
-    <div class="list">
-      {% for customer in site.data.customers %}
-        <img alt="{{customer.alt}}" src="{{customer.img}}">
-      {% endfor %}
-    </div>
-  </section>
-</main>
+<!-- Customers -->
+<section class="customers">
+  <h1>{%t home.worked-with %}</h1>
+  <div class="list">
+    {% for customer in site.data.customers %}
+      <img alt="{{customer.alt}}" src="{{customer.img}}">
+    {% endfor %}
+  </div>
+</section>
 
 {% include contact_modal.html %}
