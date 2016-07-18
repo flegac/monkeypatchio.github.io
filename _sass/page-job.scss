@@ -49,6 +49,9 @@
           cursor: pointer;
           img {
             max-height: 4rem;
+            max-width: 4rem;
+            vertical-align: middle;
+            margin: .25rem 0;
           }
 
           div.title, div.techno {
@@ -57,12 +60,14 @@
             flex: 1 1 auto; 
             width: 50%;
             color: $grey4;
+            transition: all 0.4s ease-in-out;
             &:hover {
              color: $blue6;
             }
           }
           div.sep {
             border-left: .25rem solid $grey3;
+            align-self: stretch;
           }
           .fa{
             &::after{
@@ -81,7 +86,6 @@
       input[name="job"]:checked + .job {
         .fa{
           &::after{
-            color: $blue6;
             content: "\f078";
           }
         }

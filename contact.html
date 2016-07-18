@@ -3,40 +3,39 @@ order: 5
 title: titles.contact
 permalink: contact
 ---
+<section class="contact-top">
 
-<!-- ******Map Section****** --> 
-<section class="map-section section">
-    <div class="container">
-        <div class="section-titles">
-            <h1>{% t contact.start %}</h1>
-            <h2>{% t contact.meet %}</h2>
-        </div><!--//section-titles-->
-
-        <div class="row">
-            <div id="map-outer" class="col-md-12 col-sm-6 col-xs-12">
-                <div id="address" class="col-md-4">
-                    <div class="adress-outer col-md-12" >
-                        <h2>Monkey Patch</h2>     
-                        <p class="address">     
-                            <span class="fs1" aria-hidden="true" data-icon="&#x77;">&nbsp;</span><a href="tel:{{ site.contact.tel-link }}">{{ site.contact.tel }}</a><br/>
-                            <span class="fs1" aria-hidden="true" data-icon="&#xe010;">&nbsp;</span><a href="mailto:{{ site.contact.mail }}">{{ site.contact.mail }}</a><br/>
-                            <span class="region">{{ site.contact.address }}</span><br/>
-                            <span class="postal-code">{{ site.contact.postcode }}, {{ site.contact.city }}</span><br/>
-                            <span class="country-name">{{ site.contact.country }}</span>
-                        </p>
-                    </div>
-                </div>
-                <div id="map" class="col-md-8 col-sm-6 col-xs-12" style="height:400px;"></div>
-            </div><!-- //map-outer -->
-        </div><!-- // row -->
-    </div><!--//container-->
 </section>
 
-<!-- ******Contact Section****** --> 
-<section class="contact-section last-section section">
-    <div class="container">
-        {% include contact_form.html %}
-    </div><!--//container-->
-</section><!--//contact-section-->
+<section class="meet-us">
+  <h1>{% t contact.start %}</h1>
+  <h2>{% t contact.meet %}</h2>
 
+  <div class="map">
+    <address>
+      <h2>Monkey Patch</h2>
+      <div>
+        <i class="fa fa-phone" aria-hidden="true"></i>
+        <a href="tel:{{ site.contact.tel-link }}">{{ site.contact.tel }}</a>
+      </div>
+      <div>
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <a href="mailto:{{ site.contact.mail }}">{{ site.contact.mail }}</a>
+      </div>
+      <div>
+        {{ site.contact.address }}
+      </div>
+      <div>
+        {{ site.contact.postcode }}, {{ site.contact.city }}
+      </div>
+      <div>
+        {{ site.contact.country }}
+      </div>
+    </address>
+    <iframe src="{{ site.google.map.iframe }}" width="640" height="480" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+</section>
 
+<section class="contact">
+  {% include contact_form.html %}
+</section>

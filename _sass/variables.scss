@@ -13,8 +13,6 @@ $blue7: #4285F4;
 $blue4: #026CA6;
 
 
-$darkBlue: #013d5c;
-
 $txtGrey: #666;
 $grey2: #5E5E5E;
 $grey3: #f5f5f5;
@@ -31,7 +29,7 @@ $bgHeaderMenuActive: $blue2;
 // Footer
 $bgFooter: $blue3;
 $bgFooterBottom: $blue4;
-$bgBtnTop: $darkBlue;
+$bgBtnTop: transparentize($black, .5);
 
 $txtFooter: transparentize($white, .1);
 $txtFooterBottom: $txtFooter;

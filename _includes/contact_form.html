@@ -1,30 +1,10 @@
-<form id="contact-form" class="contact-form" method="post" action="//formspree.io/{{ site.contact.mail }}">
+<form id="contact-form" method="post" action="//formspree.io/{{ site.contact.mail }}">
   <input type="hidden" name="_next" value="/" />
   <input type="hidden" name="_subject" value="Contact from monkeypatch.io" />
-  <div class="row text-center">
-    <div class="contact-form-inner">
-      <div class="row">
-
-        <div class="col-md-6 col-sm-6 col-xs-12 form-group">
-          <label class="sr-only" for="cname">{% t contact.name %}</label>
-          <input type="text" class="form-control" id="cname" name="name" placeholder="{% t contact.name %}" required>
-        </div>
-        <div class="col-md-6 col-sm-6 col-xs-12 form-group">
-          <label class="sr-only" for="cemail">{% t contact.email %}</label>
-          <input type="email" class="form-control" id="cemail" name="email" placeholder="{% t contact.email %}" required>
-        </div>
-        <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-          <label class="sr-only" for="cmessage">{% t contact.message %}</label>
-          <textarea class="form-control" id="cmessage" name="message" placeholder="{% t contact.message %}" rows="12" required></textarea>
-        </div>
-        <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-          <button type="submit" class="btn btn-block btn-cta btn-cta-primary">{% t contact.send %}</button>
-        </div>
-      </div>
-      <!--//row-->
-    </div>
+  <div class="row">
+    <input type="text" name="name" placeholder="{% t contact.name %}" required>
+    <input type="email" name="email" placeholder="{% t contact.email %}" required>
   </div>
-  <!--//row-->
-  <div id="form-messages"></div>
+  <textarea name="message" placeholder="{% t contact.message %}" rows="12" required></textarea>
+  <button type="submit" class="button">{% t contact.send %}</button>
 </form>
-<!--//contact-form-->

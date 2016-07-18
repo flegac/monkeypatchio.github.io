@@ -1,3 +1,47 @@
 .contact {
+
+  .contact-top {
+    height: 480px;
+    background-image: url('/public/images/background/Toulouse-PontNeuf.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% top; 
+    background-size: cover;
+  }
+
+  .meet-us {
+    margin: 1rem auto;
+    h1, h2 {
+      color: $grey2;
+    }
+    h2 {
+      margin: 0;
+      font-weight: normal;
+      font-size: 1.25rem;
+    }
+    .map {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      address {
+        margin: 1rem;
+        padding: .5rem;
+        font-style: normal;
+        text-align: left;
+        background-color: $bgBenefit;
+        h2 {
+          color: $txtBenefitHeader; 
+        }
+        i.fa::after {
+          color: $txtBenefitIcon;
+        }
+      }
+    }
+  }
+
+  .contact {
+    color: $grey4;
+    background: $grey3;
+  }
   
 }

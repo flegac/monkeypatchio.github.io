@@ -99,6 +99,7 @@
                a {
                  font-size: 3rem;
                  color: $txtTeamSocial;
+                 transition: all 0.4s ease-in-out;
                  &:hover {
                    color: $txtTeamSocialHover;
                  }
