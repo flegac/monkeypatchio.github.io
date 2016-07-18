@@ -21,6 +21,7 @@ languages:
   - "en"
 exclude_from_localizations:
   - "public"
+  - "css"
   - "_sass"
 
 # Setup
