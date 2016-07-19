@@ -4,7 +4,7 @@
     margin: 0;
     h2 {
       font-weight: normal;
-      font-size: 1.25rem;
+      font-size: 1.125rem;
     }
 
     .content {
@@ -14,11 +14,11 @@
   }
 
   .careers-top {
-    margin-top: 3.75rem;
+    margin-top: $menuHeight;
     height: 480px;
     background: 
       url('/public/images/careers/assets_bg-bottom.png') no-repeat center bottom,
-      url('/public/images/background/career.jpg') no-repeat center top;
+      url('/public/images/background/career.jpg') no-repeat center center;
     background-size: contain, cover;
   }
 
@@ -34,9 +34,10 @@
       flex-wrap: wrap;
       justify-content: space-around;
       .profile {
-        flex: 1 1 25%;
+        flex: 1 1 33%;
         background-color: $bgBenefit;
         max-width: 32rem;
+        min-width: 16rem;
         margin: 1rem;
         padding: 0.25rem;
         display: flex;

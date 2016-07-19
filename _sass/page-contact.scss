@@ -24,6 +24,7 @@
       align-items: flex-start;
       flex-wrap: wrap;
       address {
+        flex: 1 1;
         margin: 1rem;
         padding: .5rem;
         font-style: normal;
@@ -38,6 +39,7 @@
       }
       iframe{
         max-width: 95vw;
+        flex: 3 1;
       }
     }
   }

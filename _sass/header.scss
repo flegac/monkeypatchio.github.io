@@ -8,7 +8,7 @@ body>header {
   max-width: 100vw;
 
   .menu {
-    height: 3.75rem;
+    height: $menuHeight;
     display: flex;
     justify-content: space-between;
     align-items: center;

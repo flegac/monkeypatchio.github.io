@@ -135,14 +135,22 @@
     padding: 0.5rem 2.5rem;
     background-color: $black;
     justify-content: space-around;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
 
     img {
       max-width: 100vw;
+      flex: 1 1;
+      min-width: 25vw
     }
 
     blockquote {
       color: transparentize($white, 0.2);
+      flex: 2 1;
+      margin: 0;
+      min-width: 50vw;
+      max-width: 60vw;
       p {
         font-size: 1.5rem;
         line-height: 2.5rem;
@@ -181,10 +189,10 @@
 }
 
 @media (max-width: 32rem) {
-  section {
-    padding: 2.5rem 0.5rem;
-  }
   .about  {
+    section {
+      padding: 2.5rem 0.5rem;
+    }
     .philo h1 {
       font-size: 2rem;
     }

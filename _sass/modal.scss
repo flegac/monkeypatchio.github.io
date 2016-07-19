@@ -1,3 +1,101 @@
-.modal.modal-contact {
-  display: none; // FIXME
+.dialog {
+  left: 33%;
+  margin: -250px 0 0 0;
+  opacity: 0;
+  position: absolute;
+  top: -50%;
+  visibility: hidden;
+  width: 66vw;
+  box-sizing: border-box;
+  transition: all .4s ease-in-out;
+
+  .body {
+    background: $white;
+    border-radius: .25rem; 
+    box-shadow: .25rem .25rem .75rem transparentize($black,.1);
+    z-index: 20;
+    position: relative;
+  }
+
+  &:target {
+    opacity: 1;
+    top: 50%;
+    visibility: visible;
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $black;
+      background: transparentize(black,.2);
+      z-index: 10;
+    }
+  }
+
+  .close {
+    float: right;
+    margin: .25rem;
+    font-size: 1.5rem;
+    color: $txtBenefitHeader;
+    opacity: .8;
+    transition: all .4s ease-in-out;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  h1, p, .row {
+    text-align: center;
+    color: $txtBenefitHeader;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    a {
+      color: $txtBenefitHeader;
+      text-align: center;
+      &:hover {
+        text-decoration: none;
+        .text {
+          text-decoration: underline;
+        }
+      }
+      div {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: 0;
+        border: thin solid $txtBenefitHeader;
+        border-radius: 50%;
+        display: inline-block;      
+        i.fa {
+          font-size: 1.5rem;
+          display: inline-block;
+          line-height: 2.5rem;
+        }
+      }
+    }
+  }
+  form {
+    background: $grey3;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .dialog {
+    width: 32rem;
+    top: -50%;
+    left: calc((100vw - 32rem) / 2);
+    margin:-250px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 40rem) {
+  .dialog {
+    width: 90vw;
+    top: -50%;
+    left: 5vw;
+    margin: -250px 0 0 0;
+  }
 }

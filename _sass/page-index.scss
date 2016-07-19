@@ -1,10 +1,10 @@
 .index {
 
   .carousel {
-    margin-top: 3.75rem;
+    margin-top: $menuHeight;
     background-image: url('/public/images/background/promo-background-1.jpg');
     background-repeat: no-repeat;
-    background-position: 50% top;
+    background-position: 50% center;
     background-size: cover;
     min-height: 480px;
     justify-content: flex-start;

@@ -58,10 +58,9 @@ body>footer {
         color: $txtSocial;
         border-radius: 50%;
         text-align: center;
-        i.fa {
-          margin-top: .5rem; 
+        i.fa { 
           font-size: 1.5rem;
-          vertical-align: bottom;
+          line-height: 2.5rem;
         }
       }
     }

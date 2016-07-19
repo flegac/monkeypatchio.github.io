@@ -5,17 +5,19 @@
       color: $grey2;
     }
     h2 {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
+      padding: 0 1rem;
       font-weight: normal;
     }
   }
 
   .job-top {
+    margin-top: 3.75rem;
     background-image:url('/public/images/background/recutement.jpg');
     background-repeat: no-repeat;
-    background-position: 50% top;
+    background-position: 50% center;
     background-size: cover;
-    height: 650px;
+    height: 480px;
   }
 
   .jobs {

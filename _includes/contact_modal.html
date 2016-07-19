@@ -1,30 +1,28 @@
 <!-- Contact Modal -->
-<input type="checkbox" id="contact"/>
-<div class="modal modal-contact" id="modal-contact" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 id="contactModalLabel" class="modal-title text-center">{% t general.contact-modal-title %}</h4>
-        <p class="intro text-center">{% t general.contact-modal-intro %}</p>
-      </div>
-      <div class="modal-body">
-        <ul class="contact-info list-inline text-center">
-          <li class="tel">
-            <span class="fs1" aria-hidden="true" data-icon="&#x77;"></span><br />
-            <a href="tel:{{ site.contact.tel-link }}">{{ site.contact.tel }}</a>
-          </li>
-          <li class="email">
-            <span class="fs1" aria-hidden="true" data-icon="&#xe010;"></span><br />
-            <a href="mailto:{{ site.contact.mail }}">{{ site.contact.mail }}</a>
-          </li>
-        </ul>
-        {% include contact_form.html %}
-      </div>
-      <!--//modal-body-->
+<div class="dialog" id="dialog-contact">
+  <div class="body">
+    <a class="close" href="#">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </a>
+    <h1>{% t general.contact-modal-title %}</h1>
+    <div class="row">
+      <a href="tel:{{ site.contact.tel-link }}">
+        <div>
+          <i class="fa fa-phone" aria-hidden="true"></i>
+        </div>
+        <br>
+        <span class="text">{{ site.contact.tel }}</span>
+      </a>
+      <a href="mailto:{{ site.contact.mail }}">
+        <div>
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </div>
+        <br>
+        <span class="text">{{ site.contact.mail }}</span>
+      </a>
     </div>
-    <!--//modal-content-->
+    <p>{% t general.contact-modal-intro %}</p>
+    {% include contact_form.html %}
   </div>
-  <!--//modal-dialog-->
+  <a href="#"><div class="overlay"></div></a>
 </div>
-<!--//modal-->
