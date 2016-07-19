@@ -1,11 +1,12 @@
 .index {
 
   .carousel {
+    margin-top: 3.75rem;
     background-image: url('/public/images/background/promo-background-1.jpg');
     background-repeat: no-repeat;
     background-position: 50% top;
     background-size: cover;
-    min-height: 650px;
+    min-height: 480px;
     justify-content: flex-start;
 
     h1 {
@@ -78,5 +79,11 @@
         margin: 1rem;
       }
     }
+  }
+}
+
+@media (max-width: 32rem) {
+  .index .carousel h1 >div:nth-child(2) {
+    font-size: 2rem;
   }
 }

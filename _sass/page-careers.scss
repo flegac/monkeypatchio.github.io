@@ -15,20 +15,11 @@
 
   .careers-top {
     margin-top: 3.75rem;
-    height: 650px;
-    background-image: url('/public/images/background/career.jpg');
-    background-repeat: no-repeat;
-    background-position: 50% top; 
-    background-size: cover;
-
-    &>div {
-      position: absolute;
-      bottom: 140px;
-      width: 100%;
-      height: 140px;
-      background: url('/public/images/careers/assets_bg-bottom.png') no-repeat scroll center bottom / 100% 100%;
-      
-    }
+    height: 480px;
+    background: 
+      url('/public/images/careers/assets_bg-bottom.png') no-repeat center bottom,
+      url('/public/images/background/career.jpg') no-repeat center top;
+    background-size: contain, cover;
   }
 
   .profiles {
@@ -43,12 +34,15 @@
       flex-wrap: wrap;
       justify-content: space-around;
       .profile {
+        flex: 1 1 25%;
         background-color: $bgBenefit;
         max-width: 32rem;
         margin: 1rem;
         padding: 0.25rem;
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
         img {
           margin: 0.5rem;
         }

@@ -26,6 +26,7 @@
     .nojob {
       max-width: 80vw;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       a {
         white-space: nowrap;
@@ -37,27 +38,32 @@
       flex-direction: column;
 
       .job {
-        margin: .5rem 0;
-        padding: 0 1rem 0 .5rem;
-        background-color: $white;
         border-left: .25rem solid $blue6;
-        width: 80vw;
+        width: 90vw;
+        margin: .25rem 0;
+
         label {
           width: 100%;
           display: flex;
-          align-items: center;
+          align-items: stretch;
+          flex-wrap: wrap;
           cursor: pointer;
-          img {
-            max-height: 4rem;
-            max-width: 4rem;
-            vertical-align: middle;
-            margin: .25rem 0;
+          span {
+            padding-left: .5rem; 
+            background-color: $white;
+            img {
+              max-height: 4rem;
+              max-width: 4rem;
+              vertical-align: middle;
+              margin: .25rem 0;
+            }
           }
 
           div.title, div.techno {
+            background-color: $white;
             padding: 0 1rem;
             text-align: left;
-            flex: 1 1 auto; 
+            flex: 1 1; 
             width: 50%;
             color: $grey4;
             transition: all 0.4s ease-in-out;
@@ -65,19 +71,24 @@
              color: $blue6;
             }
           }
-          div.sep {
-            border-left: .25rem solid $grey3;
-            align-self: stretch;
+          div.techno {
+            margin-left: .25rem;
           }
           .fa{
-            &::after{
+            background-color: $white;
+            display: flex;
+            align-items: center;
+            padding-right: 0.25rem;
+            &::before{
               color: $blue6;
               content: "\f054";
             }
           }
         }
         .content {
-          width: 100%;
+          background-color: $white;
+          padding: 0.25rem;
+          width: calc(100% - .5rem);
           display: none;
           text-align: left;
         }
@@ -85,7 +96,7 @@
 
       input[name="job"]:checked + .job {
         .fa{
-          &::after{
+          &::before{
             content: "\f078";
           }
         }

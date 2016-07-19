@@ -3,19 +3,20 @@
   flex-direction: column;
   min-width: 80%;
   margin: 1rem 0;
+  max-width: 95vw;
 
   .row {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     input {
-      margin: 0.25rem .5rem;
-      flex: 1 1 50%;
+      flex: 1 1;
     }
   }
 
   input, textarea, button {
     margin: 0.25rem .5rem;
-    padding: .5rem 1.875rem;
+    padding: .5rem 0.5rem;
     border: none;
     border-radius: .25rem;
     font-size: 1.25rem;

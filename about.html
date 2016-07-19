@@ -27,7 +27,7 @@ title: titles.about
   <div class="list">
     {% assign sorted_founders = site.teams | sort:"order" | where: "lang", site.lang | where: "type", "founders" %}
     {% for founder in sorted_founders %}
-      <div>
+      <div class="founder">
         <div class="photo">
           <img alt="{{founder.name}}" src="{{founder.image}}">
         </div>
