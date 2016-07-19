@@ -10,7 +10,7 @@ gems:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-multiple-languages-plugin
-#  - jekyll-press
+  - jekyll-press
   
 exclude:
   - deploy.sh
