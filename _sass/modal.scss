@@ -2,13 +2,12 @@
   left: 33%;
   margin: -250px 0 0 0;
   opacity: 0;
-  position: absolute;
+  position: fixed;
   top: -50%;
   visibility: hidden;
   width: 66vw;
   box-sizing: border-box;
   transition: all .4s ease-in-out;
-
   .body {
     background: $white;
     border-radius: .25rem; 
@@ -35,7 +34,7 @@
 
   .close {
     float: right;
-    margin: .25rem;
+    margin: 0.25rem 0.5rem;
     font-size: 1.5rem;
     color: $txtBenefitHeader;
     opacity: .8;

@@ -76,15 +76,21 @@
           div.techno {
             margin-left: .25rem;
           }
-          .fa{
+          .open, .close {
+            color: $blue6;
+            border: none;
             background-color: $white;
-            display: flex;
             align-items: center;
             padding-right: 0.25rem;
-            &::before{
-              color: $blue6;
-              content: "\f054";
-            }
+            outline: 0;
+            flex: 0 0;
+            cursor: pointer;
+          }
+          .open {
+            display: flex;
+          }
+          .close {
+            display: none;
           }
         }
         .content {
@@ -97,11 +103,12 @@
       }
 
       input[name="job"]:checked + .job {
-        .fa{
-          &::before{
-            content: "\f078";
+          .open {
+            display: none;
           }
-        }
+          .close {
+            display: flex;
+          }
         .content {
           display: block;
         }

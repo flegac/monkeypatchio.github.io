@@ -79,11 +79,21 @@
              color: $blue6;
             }
           }
-          .fa{
-            &::after{
-              color: $blue6;
-              content: "\f054";
-            }
+          .open, .close {
+            color: $blue6;
+            border: none;
+            background-color: $white;
+            align-items: center;
+            padding-right: 0.25rem;
+            outline: 0;
+            flex: 0 0;
+            cursor: pointer;
+          }
+          .open {
+            display: flex;
+          }
+          .close {
+            display: none;
           }
         }
         .content {
@@ -93,11 +103,11 @@
       }
 
       input[name="accordion"]:checked + .asset {
-        .fa{
-          &::after{
-            color: $blue6;
-            content: "\f078";
-          }
+        .open {
+          display: none;
+        }
+        .close {
+          display: flex;
         }
         .content {
           display: block;

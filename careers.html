@@ -28,7 +28,7 @@ permalink: careers
 <section class="assets">
   <h1>{% t careers.assets.title %}</h1>
   <h2>{% t careers.assets.intro %}</h2>
-  <div class="list">
+  <form class="list">
     {% assign sorted_assets = site.profiles | sort:"order" | where: "lang", site.lang | where: "type", "assets" %}
     {% for asset in sorted_assets %}
       <input type="radio" id="accordion-{{forloop.index}}" name="accordion" value="{{forloop.index}}">
@@ -38,11 +38,14 @@ permalink: careers
             <img alt="{{asset.title}}" src="{{asset.image}}">
           </span>
           <div class="title">{{ asset.title }}</div>
-          <i class="fa"></i>
+          <div class="open">
+            <i class="fa fa-chevron-right"></i>
+          </div>
+          <button class="close" type="reset"><i class="fa fa-chevron-down"></i></button>
         </label>
         <div class="content">{{ asset.content }}</div>
       </div>
     {% endfor %}
-  </div>
+  </form>
 </section>
 

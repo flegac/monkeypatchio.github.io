@@ -15,6 +15,9 @@ body>footer {
     &.mail {
       text-decoration: underline;
     }
+    &.contact:hover {
+      text-decoration: none;
+    }
   }
 
   .top {
@@ -61,6 +64,9 @@ body>footer {
         i.fa { 
           font-size: 1.5rem;
           line-height: 2.5rem;
+        }
+        &:hover {
+          box-shadow: .125rem .125rem .5rem transparentize($black,0.8);
         }
       }
     }
