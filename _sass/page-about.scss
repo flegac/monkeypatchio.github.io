@@ -63,7 +63,7 @@
       align-items: stretch;
       
       .founder {
-        flex: 1 1;
+        flex: 1 1 auto;
         margin: 1rem;
         padding: 0.5rem;
         background-color: $bgBenefit;
@@ -71,18 +71,16 @@
         flex-wrap: wrap;
 
         .photo {
-          flex: 1 1;
+          flex: 1 1 auto;
           display: flex;
           align-items: flex-start;
           justify-content: center;
-          img {
-            max-width: 16vw;
-          }
         }
 
         .detail {
-          flex: 1 1;
+          flex: 1 1  auto;
           min-width: 16rem;
+          max-width: 20vw;
           text-align: left;
           margin-left: 0.5rem;
           h3, h4, h5 {
