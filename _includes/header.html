@@ -6,19 +6,6 @@
       </a>
     </div>
     
-    <nav class="menu">
-      <ul>
-        {% assign sorted_pages = site.pages | sort:"order" %}
-        {% for node in sorted_pages %}
-          <li class="{% if node.permalink == page.permalink %}active{% endif %}">
-            {% if node.order > 0 %}
-              <a href="{{ site.baseurl }}{{ node.url }}">{% t node.title %}</a>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
-    </nav>
-    
     <nav class="lang">
       <ul>
         <li class="{% if site.lang == "en" %}active{% endif %}">
@@ -28,6 +15,19 @@
         <li class="{% if site.lang == "fr" %}active{% endif %}">
           <a href="{{ site.baseurl_root }}{{ page.url}}" >{% t global.french %}</a>
         </li>
+      </ul>
+    </nav>
+    
+    <nav class="menu">
+      <ul>
+        {% assign sorted_pages = site.pages | sort:"order" %}
+        {% for node in sorted_pages %}
+          {% if node.order > 0 %}
+            <li class="{% if node.permalink == page.permalink %}active{% endif %}">
+              <a href="{{ site.baseurl }}{{ node.url }}">{% t node.title %}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
       </ul>
     </nav>
       
@@ -59,3 +59,4 @@
       </ul>
   </nav>
 </header>
+<a id="top"></a>

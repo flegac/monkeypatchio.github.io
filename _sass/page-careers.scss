@@ -44,6 +44,7 @@
         align-items: center;
         flex-wrap: wrap;
         justify-content: center;
+        align-content: flex-start;
         img {
           margin: 0.5rem;
         }
@@ -113,7 +114,38 @@
           display: block;
         }
       }
+    }
+  }
+}
 
+// No Flexbox support
+.no-flexbox .careers {
+  .profiles {
+    background-image: none;
+  }
+  .profiles .list .profile {
+    display: inline-block;
+  }
+  .assets {
+    margin-top: 0 !important;
+  }
+  .assets .list .asset {
+    display: block;
+    label {
+      display: table-row;
+      vertical-align: middle;
+      & > span, & > div {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      & > div.title {
+        width: 100%;
+      }
+      & > div.open {
+        float: right;
+        height: 3rem;
+        padding-top: 1.5rem;
+      }
     }
   }
 }

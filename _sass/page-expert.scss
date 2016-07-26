@@ -73,12 +73,22 @@
     color: $txtProfiles;
   }
 
-  .contact {
+  .contact-block {
     background-color: $bgContact;
     color: $txtContact;
     padding-bottom: .5rem;
     p {
       margin-bottom: 3rem;
+    }
+  }
+}
+
+// No Flexbox support
+.no-flexbox .expert {
+  section .list > div {
+    display: inline-block;
+    span {
+      display: block;
     }
   }
 }

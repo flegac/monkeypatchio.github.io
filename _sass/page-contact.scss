@@ -4,7 +4,7 @@
     height: 480px;
     background-image: url('/public/images/background/Toulouse-PontNeuf.jpg');
     background-repeat: no-repeat;
-    background-position: 50% top; 
+    background-position: 50% center; 
     background-size: cover;
   }
 
@@ -44,7 +44,7 @@
     }
   }
 
-  .contact {
+  .contact-block {
     color: $grey4;
     background: $grey3;
   }

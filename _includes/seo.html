@@ -98,10 +98,6 @@
   {% assign seo_page_image = seo_page_image | escape %}
 {% endif %}
 
-{% if seo_tag.title and seo_title %}
-  <title>{{ seo_title }}</title>
-{% endif %}
-
 {% if seo_page_title %}
   <meta property="og:title" content="{{ seo_page_title }}" />
 {% endif %}

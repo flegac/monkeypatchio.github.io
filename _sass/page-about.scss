@@ -45,7 +45,7 @@
   .dream {
     background-image: url('/public/images/background/philo.jpg');
     background-size: cover;
-    background-position: 50% top;
+    background-position: 50% center;
     height: 480px;
     justify-content: flex-start;
     h1 {
@@ -76,9 +76,7 @@
           align-items: flex-start;
           justify-content: center;
           img {
-            max-width: 25vw;
-            box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-            border-radius: 50%;
+            max-width: 16vw;
           }
         }
 
@@ -178,14 +176,13 @@
   .coffee {
     flex-direction: row;
     justify-content: space-around;
-    flex-wrap: wrap;
 
     div:first-child, div:last-child {
       background-image: url('/public/images/philo/coffee.png');
       background-size: cover;
       background-repeat: no-repeat;
-      min-width: 6rem;
-      min-height: 6rem;
+      width: 6rem;
+      height: 6rem;
     }
   }
 }
@@ -206,7 +203,38 @@
 @media (max-width: 40rem) {
   .about .founders .list {
     flex-wrap: wrap;
-    .detail {
+  }
+}
+
+// No Flexbox support
+.no-flexbox .about {
+  .philo > div > div {
+    display: inline-block;
+  }
+  .founders .list .founder {
+    display: inline-block;
+    .photo, .detail {
+      display: inline-block;
+    }
+    .photo {
+      vertical-align: top;
+    }
+    .detail > div {
+      display: inline-block;
+      max-width: 16rem;
+    }
+  }
+  .quote {
+    span {
+      display: inline-block;
+    }
+    blockquote {
+      display: inline-block;
+    }
+  }
+  .coffee {
+    div:first-child, div:last-child {
+      display: none;
     }
   }
 }

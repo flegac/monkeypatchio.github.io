@@ -5,6 +5,10 @@
   padding: 1rem;
   max-width: 95vw;
 
+  label {
+    display: none;
+  }
+
   .row {
     display: flex;
     justify-content: space-between;
@@ -26,5 +30,16 @@
   }
   textarea {
     resize: vertical;
+  }
+}
+
+// No placeholder support
+.no-placeholder #contact-form {
+  text-align: left;
+  label {
+    display: block;
+  }
+  button {
+    display: block;
   }
 }

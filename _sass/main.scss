@@ -60,6 +60,17 @@ a {
   }
 }
 
+// No Flexbox supports
+.no-flexbox {
+  h1, h2, h3, h4, h5, h6 {
+    display: block;
+    text-align: center;
+  }
+  p {
+    display: block;
+  }
+}
+
 @import "header";
 @import "footer";
 @import "modal";

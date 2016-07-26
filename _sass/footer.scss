@@ -1,4 +1,4 @@
-body>footer {
+body > footer {
   background-color: $bgFooter;
   color: $txtFooter;
 
@@ -92,7 +92,17 @@ body>footer {
       width: 1rem;
       margin: .25rem;
       padding: .25rem;
+    }
+  }
+}
 
+.no-flexbox body > footer {
+  .top {
+    height: 8.625rem;
+    text-align: center;
+    &>div {
+      display: inline-block;
+      vertical-align: top;
     }
   }
 }

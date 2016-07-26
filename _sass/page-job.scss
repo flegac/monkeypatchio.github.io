@@ -116,3 +116,26 @@
     }
   }
 }
+
+// No Flexbox support
+.no-flexbox .job {
+  .jobs .list .job {
+    display: block;
+    label {
+      display: table-row;
+      vertical-align: middle;
+      & > span, & > div {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      & > div.title, & > div.techno {
+        width: 50%;
+      }
+      & > div.open {
+        float: right;
+        height: 3rem;
+        padding-top: 1.5rem;
+      }
+    }
+  }
+}
