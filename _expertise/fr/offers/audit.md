@@ -1,6 +1,6 @@
 ---
 title: Audit et conseil
-img: /public/images/expert/Conseil.png
+img: /public/images/expert/Audit.svg
 order: 4
 ---
 

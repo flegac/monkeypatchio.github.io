@@ -1,6 +1,6 @@
 ---
 title: Architecture
-img: /public/images/expert/Architecture.png
+img: /public/images/expert/Architecture.svg
 order: 1
 ---
 

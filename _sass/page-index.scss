@@ -42,15 +42,16 @@
   .who {
     .benefits {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       flex-wrap: wrap;
       align-items: stretch;
       align-content: space-around;
       &> div {
         background-color: $bgBenefit;
-        min-width: 12rem;
+        width: 10rem;
         margin: 1rem;
         padding: 2rem 1.5rem 1rem 1.5rem;
+        flex: 0 1 10rem;
         i {
           display: block;
           font-size: 3.75rem;
@@ -67,15 +68,14 @@
 
   .customers {
     .list {
-      margin: 0 20vw;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: stretch;
       flex-wrap: wrap;
-      align-items: stretch;
       align-content: space-around;
-      &> img {
+      &> span {
         margin: 1rem;
+        flex: 1 1 200px;
       }
     }
   }

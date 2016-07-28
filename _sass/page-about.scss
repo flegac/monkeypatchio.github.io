@@ -1,7 +1,7 @@
 .about {
   
   section {
-    padding: 3.5rem 2.5rem;
+    padding-top: 3.5rem;
     h1 {
       font-size: 2.5rem;
     }
@@ -27,7 +27,7 @@
     &> div {
       width: 100%;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       flex-wrap: wrap;
 
       h3 {
@@ -59,9 +59,10 @@
     .list {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: space-between;
+      width: 100%;
       align-items: stretch;
-      
+
       .founder {
         flex: 1 1 auto;
         margin: 1rem;
@@ -72,9 +73,13 @@
 
         .photo {
           flex: 1 1 auto;
+          max-width: 12rem;
           display: flex;
           align-items: flex-start;
           justify-content: center;
+          img {
+            max-width: 12rem;
+          }
         }
 
         .detail {
@@ -83,10 +88,11 @@
           max-width: 20vw;
           text-align: left;
           margin-left: 0.5rem;
-          h3, h4, h5 {
-            margin: 0.25em 0;
+          h3 {
+            margin: 0;
           }
           h4, h5 {
+            margin: 0.25em 0;
             font-style: italic;
             font-weight: normal;
           }
@@ -173,7 +179,7 @@
 
   .coffee {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 
     div:first-child, div:last-child {
       background-image: url('/public/images/philo/coffee.png');

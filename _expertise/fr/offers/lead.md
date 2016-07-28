@@ -1,6 +1,6 @@
 ---
 title: Lead technique
-img: /public/images/expert/Lead_tech.png
+img: /public/images/expert/LeadTechnique.svg
 order: 3
 ---
 

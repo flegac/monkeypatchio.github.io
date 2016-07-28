@@ -28,16 +28,21 @@ body>header {
       li {
         display: inline;
         a {
+          display: inline-block;
           white-space: nowrap;
-          padding: 1.25rem 0.5rem 0.625rem 0.5rem;
+          padding: 0 0.5rem;
           font-size: 1rem;
           color: $txtLink;
           text-decoration: none;
-          transition: all 0.4s ease-in-out;
+          transition: all 0.2s ease-in-out;
         }
-        &.active a, & a:hover {
+        &.active a {
           color: $txtLinkActive;
-          border-bottom: .1875rem solid $txtLinkActive;
+          box-shadow: 0 3px 0 $white;
+        }
+        a:hover {
+          box-shadow: 0 2px 0 transparentize($bgHeaderMenu,.1),
+            0 3px 0 $white;
         }
       }
     }
@@ -50,10 +55,23 @@ body>header {
     nav.lang {
       order: 1;
       margin: 0 0.5rem 0 2rem;
-      ul li {
-        color: $txtLink;
-        a {
-          padding: 1.25rem 0 0.625rem 0;
+      ul {
+        margin-top: 0;
+        li {
+          color: $txtLink;
+          font-size: .8rem;
+          a {
+            padding: 0;
+            font-size: .8rem;
+          }
+        &.active a {
+          color: $txtLinkActive;
+          box-shadow: 0 2px 0 $white;
+        }
+        a:hover {
+          box-shadow: 0 1px 0 transparentize($bgHeaderMenu,.1),
+            0 2px 0 $white;
+        }
         }
       }
     }

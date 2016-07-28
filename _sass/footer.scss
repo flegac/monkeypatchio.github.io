@@ -1,6 +1,7 @@
 body > footer {
   background-color: $bgFooter;
   color: $txtFooter;
+  padding: 0 $globalMargin;
 
   a {
     white-space: nowrap;
@@ -20,9 +21,9 @@ body > footer {
     }
   }
 
-  .top {
+  &.top {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     h3 {
       color: $txtFooterHeader;
@@ -42,37 +43,43 @@ body > footer {
     }
 
     p {
-      margin: .5rem;
+      margin: .5rem 0;
     }
 
-    ul.social {
-      display: flex;
-      justify-content: flex-start;
-      padding: 0;
-      li {
-        display: inline-block;
-      }
-      a {
-        display: inline-block;
-        width: 2.5rem;
-        height: 2.5rem;
-        margin: 0 1rem;
-        background: $bgSocial;
-        color: $txtSocial;
-        border-radius: 50%;
+    .social-network {
+      h3 {
         text-align: center;
-        i.fa { 
-          font-size: 1.5rem;
-          line-height: 2.5rem;
-        }
-        &:hover {
-          box-shadow: .125rem .125rem .5rem transparentize($black,0.8);
+      }
+      ul.social {
+        display: flex;
+        justify-content: space-around;
+        margin-left: 0;
+        padding: 0;
+        margin: 0;
+        li {
+          display: inline-block;
+          a {
+            display: inline-block;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: $bgSocial;
+            color: $txtSocial;
+            border-radius: 50%;
+            text-align: center;
+            i.fa { 
+              font-size: 1.5rem;
+              line-height: 2.5rem;
+            }
+            &:hover {
+              box-shadow: .125rem .125rem .5rem transparentize($black,0.8);
+            }
+          }
         }
       }
     }
   }
   
-  .bottom {
+  &.bottom {
     text-align: center;
     background-color: $bgFooterBottom;
     color: $txtFooterBottom;

@@ -33,7 +33,9 @@ permalink: index
   <h1>{%t home.worked-with %}</h1>
   <div class="list">
     {% for customer in site.data.customers %}
-      <img alt="{{customer.alt}}" src="{{customer.img}}">
+      <span>
+        <img alt="{{customer.alt}}" src="{{customer.img}}">
+      </span> 
     {% endfor %}
   </div>
 </section>

@@ -20,13 +20,13 @@
     }
     .map {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: flex-start;
       flex-wrap: wrap;
+      width: 100%;
       address {
         flex: 1 1 auto;
-        margin: 1rem;
-        padding: .5rem;
+        padding: 1rem;
         font-style: normal;
         text-align: left;
         background-color: $bgBenefit;
@@ -38,7 +38,6 @@
         }
       }
       iframe{
-        max-width: 95vw;
         flex: 3 1 auto;
       }
     }

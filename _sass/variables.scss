@@ -2,6 +2,9 @@
 $menuHeight: 3.75rem;
 
 
+// Global margin left/right
+$globalMargin: 10vw;
+
 // Colors
 $white: #fff;
 $black: #000;
@@ -23,7 +26,7 @@ $grey4: #999;
 
 // Links
 $txtLinkActive: $white;
-$txtLink: transparentize($txtLinkActive, .2);
+$txtLink: $white;
 
 // Header
 $bgHeaderMenu: $blue1;

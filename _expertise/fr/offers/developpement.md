@@ -1,6 +1,6 @@
 ---
 title: Développement
-img: /public/images/expert/Dev.png
+img: /public/images/expert/Developpement.svg
 order: 2
 ---
 

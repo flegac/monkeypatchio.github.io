@@ -1,10 +1,27 @@
-.expert {
+$tabBorderWidth: .125rem;
 
+@keyframes DisplayTab {
+  0% {
+    transform: translate(100vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+.expert {
   section {
-    padding: 3.5rem .25rem;
+    padding-top: 3.5rem;
+    overflow: hidden;
+
     h1,h3, p {
       max-width: 85vw;
       margin: .5rem auto;
+    }
+    p {
+      text-align: justify;
     }
 
     h1 {
@@ -19,7 +36,7 @@
     .list {
       width: 100%;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       flex-wrap: wrap;
       align-items: stretch;
       align-content: space-around;
@@ -33,27 +50,85 @@
     }
     
     hr {
-      width: 90%;
+      width: 100%;
     }
 
     .detail {
       text-align: left;
     }
+    
+    input[type=radio] {
+      position: fixed;
+      top: -100vh;
+      left: 100vw;
+    }
+    
+    // Tabs
+    .tabs {
+      padding-bottom: .5rem;
+      label {
+        display: block;
+        float: left; 
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        padding-top: .25rem;
+        border: $tabBorderWidth solid transparent;
+        img {
+          width: 10rem;
+          max-width: 100%;
+        }
+        h3 {
+          margin: .25rem 0;
+        }
+      }
+      [id^="tab"]:checked + label {
+        border-top-color: $white;
+      }
+      article {
+        text-align: left;
+        display: none;
+        clear: both;
+        padding: .5rem;
+        transition: all 0.4s ease;
+        animation: DisplayTab 0.7s ease-in-out;
+        h2, h3, h4 {
+          margin: 0;
+        }
+      }
+      #tab-0:checked~ #content-0,
+      #tab-1:checked~ #content-1,
+      #tab-2:checked~ #content-2,
+      #tab-3:checked~ #content-3,
+      #tab-4:checked~ #content-4,
+      #tab-5:checked~ #content-5,
+      #tab-6:checked~ #content-6 {
+        display: block;
+      }
+    }
   }
 
   .solutions {
-    margin-top: 5.5rem;
+    background-color: $bgContact;
+    margin-top: 3.5rem;
+    flex-direction: row;
     h1 {
       color: $txtSolutionHeader;
-    }
-    h3 {
-      color: $txtSolutionSubtitles;
     }
   }
 
   .offers {
     background-color: $bgOffers;
     color: $white;
+
+    .tabs { // 4 tabs
+      label {
+        width: calc( (100% / 4) - 2 * #{$tabBorderWidth});
+      }
+      [id^="tab"]:checked + label, article {
+        background: darken($bgOffers, 10%);
+      }
+    }
   }
 
   .interventions {
