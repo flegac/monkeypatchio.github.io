@@ -66,7 +66,7 @@ expertise:
     content: "L'évolution rapide des outils technologiques et des processus de développement est l’un des enjeux les plus importants de notre société, les choix techniques sont complexes et ont un impact majeur sur la productivité de l’entreprise.<br> MonkeyPatch aide ses clients à tirer profit des nouvelles technologies pour mettre en place des solutions adaptées à leurs besoins.<br> Notre panel de compétence couvre entre autres le Web Front-End et Back-End, Mobile, Big Data, DevOps.<br> Chacune de nos interventions clients nous donne l’occasion de partager nos connaissances, d’apporter notre expertise technique et de contribuer à la bonne réalisation de leurs projets."
   offers: 
     title: "Nos Offres"
-    line-1: "MonkeyPatch, société spécialisée dans l’expertise Web, Mobile et Big Data, accompagne ses clients sur les phases de conception d’architectures, de développement, de lead technique, d’audit, de conseil et formation"
+    content: "MonkeyPatch, société spécialisée dans l’expertise Web, Mobile et Big Data, accompagne ses clients sur les phases de conception d’architectures, de développement, de lead technique, d’audit, de conseil et formation"
     architecture: "Architecture"
     developpement: "Développement"
     lead: "Lead technique"
@@ -81,16 +81,10 @@ expertise:
     title: "Une nouvelle approche"
   profiles: 
     title: "Nos Experts"
-    web: "Consultant Web"
-    mobile: "Consultant Mobile"
-    devops: "Consultant DevOps"
-    uiux: "Consultant UI / UX"
-    line-1: "Nos consultants sont recrutés pour leur passion de l’informatique, leurs compétences, leur savoir-être et leur aptitude à s’intégrer dans les équipes projets de nos clients."
-    line-2: "Ils couvrent un large spectre technologique allant de la définition des IHM, au développement d’applications Web, Mobile et Big Data, jusqu’à la gestion de l’environnement opérationnel."
-    line-3: "Leur complémentarité nous permet d’intervenir sur tout type de projet à forte expertise."
+    content: "Nos consultants sont recrutés pour leur passion de l’informatique, leurs compétences, leur savoir-être et leur aptitude à s’intégrer dans les équipes projets de nos clients.<br> Ils couvrent un large spectre technologique allant de la définition des IHM, au développement d’applications Web, Mobile et Big Data, jusqu’à la gestion de l’environnement opérationnel.<br> Leur complémentarité nous permet d’intervenir sur tout type de projet à forte expertise."
   contact: 
     title: "Nous contacter"
-    subtitle: "Nous avons la volonté de vous accompagner sur votre démarche d’innovation technologique <br/>ou d’utilisation de nouveaux usages.<br/>Chez nous, chaque client a une seule personne qui recueille votre besoin, l’analyse et vous propose les  solutions les plus adaptées."
+    subtitle: "Nous avons la volonté de vous accompagner sur votre démarche d’innovation technologique ou d’utilisation de nouveaux usages.<br> Chez nous, chaque client a une seule personne qui recueille votre besoin, l’analyse et vous propose les  solutions les plus adaptées."
     meet: "Rencontrer nos facilitateurs d'innovation"
 philo: 
   company: 

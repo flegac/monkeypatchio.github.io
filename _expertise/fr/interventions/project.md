@@ -1,6 +1,6 @@
 ---
 title: Projet
-img: /public/images/expert/Project.png
+img: /public/images/expert/Projet.svg
 order: 3
 ---
 

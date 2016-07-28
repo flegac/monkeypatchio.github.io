@@ -1,39 +1,39 @@
 ---
-order: 1
-title: titles.expert
+order: 1 
+title: titles.expert 
 permalink: expert
 ---
 
 <section class="solutions">
-  <div>
+  <div class="rocket">
     <img src="/public/images/expert/rocket.svg" alt="Expertise">
   </div>
-  <div>
+  <div class="head">
     <h1>{% t expertise.solutions.title %}</h1>
     <p>{% t expertise.solutions.content %}</p>
   </div>
 </section>
 
 <section class="offers">
-  <h1>{% t expertise.offers.title %}</h1>
-  <h3>{% t expertise.offers.line-1 %}</h3>
+  <h2>{% t expertise.offers.title %}</h2>
+  <p>{% t expertise.offers.content %}</p>
   {% assign sorted_offers = site.expertise | sort:"order" | where: "lang", site.lang | where: "type", "offers" %}
   <div class="tabs">
     <!-- Tabs -->
     {% for offer in sorted_offers %}
       {% if forloop.first == true %}
-        <input id="tab-{{ forloop.index }}" type="radio" name="offers" checked>
-      {% else %} 
-        <input id="tab-{{ forloop.index }}" type="radio" name="offers">
+        <input id="tab-offer-{{ forloop.index }}" type="radio" name="offers" checked>
+      {% else %}
+        <input id="tab-offer-{{ forloop.index }}" type="radio" name="offers">
       {% endif %}
-      <label for="tab-{{ forloop.index }}">
+      <label for="tab-offer-{{ forloop.index }}">
         <img alt="{{offer.title}}" src="{{offer.img}}">
         <h3>{{ offer.title }}</h3>
       </label>
     {% endfor %}
     <!-- Content -->
     {% for offer in sorted_offers %}
-      <article id="content-{{ forloop.index }}">
+      <article id="content-offer-{{ forloop.index }}">
         {{offer.content}}
       </article>
     {% endfor %}
@@ -41,31 +41,31 @@ permalink: expert
 </section>
 
 <section class="interventions">
-  <h1>{% t expertise.interventions.title %}</h1>
-  <h3>{% t expertise.interventions.line-1 %}</h3>
-  <div class="list">
-    {% assign sorted_interventions = site.expertise | sort:"order" | where: "lang", site.lang | where: "type", "interventions" %}
+  <h2>{% t expertise.interventions.title %}</h2>
+  <p>{% t expertise.interventions.content %}</p>
+
+  {% assign sorted_interventions = site.expertise | sort:"order" | where: "lang", site.lang | where: "type", "interventions" %}
+  <div class="tabs">
+    <!-- Tabs -->
+    {% for intervention in sorted_interventions %} {% if forloop.first == true %}
+    <input id="tab-intervention-{{ forloop.index }}" type="radio" name="interventions" checked> {% else %}
+    <input id="tab-intervention-{{ forloop.index }}" type="radio" name="interventions"> {% endif %}
+    <label for="tab-intervention-{{ forloop.index }}">
+        <img alt="{{ intervention.title }}" src="{{ intervention.img }}">
+        <h3>{{ intervention.title }}</h3>
+      </label> {% endfor %}
+    <!-- Content -->
     {% for intervention in sorted_interventions %}
-      <div>
-        <span>
-          <img alt="{{intervention.title}}" src="{{intervention.img}}">
-        </span>
-        {{ intervention.title }}
-      </div>
-    {% endfor %}
-  </div>
-  <hr>
-  <div class="detail">
-    {% for intervention in sorted_interventions %}
+    <article id="content-intervention-{{ forloop.index }}">
       {{intervention.content}}
+    </article>
     {% endfor %}
   </div>
 </section>
 
 <section class="approach">
-  <h1>{% t expertise.approach.title %}</h1>
-  {% assign sorted_approaches = site.expertise | sort:"order" | where: "lang", site.lang | where: "type", "approach" %}
-  {% for approach in sorted_approaches %}
+  <h2>{% t expertise.approach.title %}</h2>
+  {% assign sorted_approaches = site.expertise | sort:"order" | where: "lang", site.lang | where: "type", "approach" %} {% for approach in sorted_approaches %}
     <div>
       {{approach.content}}
     </div>
@@ -74,34 +74,44 @@ permalink: expert
 
 <section class="profiles">
   <h1>{% t expertise.profiles.title %}</h1>
-  <h3>{% t expertise.profiles.line-1 %}</h3>
-  <h3>{% t expertise.profiles.line-2 %}</h3>
-  <h3>{% t expertise.profiles.line-3 %}</h3>
-  <div class="list">
-    {% assign sorted_profiles = site.expertise | sort:"order" | where: "lang", site.lang | where: "type", "profiles" %}
+  <p>{% t expertise.profiles.content %}</p>
+
+  {% assign sorted_profiles = site.expertise | sort:"order" | where: "lang", site.lang | where: "type", "profiles" %}
+  <div class="tabs">
+    <!-- Tabs -->
     {% for profile in sorted_profiles %}
-      <div>
-        <span>
-          <img alt="{{profile.title}}" src="{{profile.img}}">
-        </span>
-        {{ profile.title }}
-      </div>
+      {% if forloop.first == true %}
+        <input id="tab-profile-{{ forloop.index }}" type="radio" name="profiles" checked>
+      {% else %}
+        <input id="tab-profile-{{ forloop.index }}" type="radio" name="profiles">
+      {% endif %}
+      <label for="tab-profile-{{ forloop.index }}">
+        <img alt="{{ profile.title }}" src="{{ profile.img }}">
+        <h3>{{ profile.title }}</h3>
+      </label>
     {% endfor %}
-  </div>
-  <hr>
-  <div class="detail">
+    <!-- Content -->
     {% for profile in sorted_profiles %}
-      {{profile.content}}
+      <article id="content-profile-{{ forloop.index }}">
+        {{profile.content}}
+        <div class="techno">
+          {% for techno in profile.techno %}
+            <span>{{ techno }}</span> 
+          {% endfor %} 
+        </div>
+      </article>
     {% endfor %}
   </div>
 </section>
 
 <section class="contact-block">
   <h1>{% t expertise.contact.title %}</h1>
-  <p>{% t expertise.contact.subtitle %}</p>    
-  <a href="#dialog-contact" class="button">
-    {% t expertise.contact.meet %}
-  </a>
-</section>	
+  <div>
+    <p>{% t expertise.contact.subtitle %}</p>
+    <div>
+      <a href="#dialog-contact" class="button">{% t expertise.contact.meet %}</a>
+    </div>
+  </div>
+</section>
 
 {% include contact_modal.html %}

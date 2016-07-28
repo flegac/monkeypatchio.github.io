@@ -66,7 +66,7 @@
         margin: .5rem 0;
         padding: 0 1rem 0 .5rem;
         background-color: $white;
-        border-left: .25rem solid $blue6;
+        border-left: .25rem solid $blue1;
         width: 80vw;
         label {
           width: 100%;
@@ -78,11 +78,11 @@
             color: $grey4;
             transition: all 0.4s ease-in-out;
             &:hover {
-             color: $blue6;
+             color: $blue1;
             }
           }
           .open, .close {
-            color: $blue6;
+            color: $blue1;
             border: none;
             background-color: $white;
             align-items: center;

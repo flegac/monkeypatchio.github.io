@@ -1,6 +1,6 @@
 ---
 title: Accompagnement
-img: /public/images/expert/Accompagnement.png
+img: /public/images/expert/Accompagnement.svg
 order: 4
 ---
 

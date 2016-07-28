@@ -6,6 +6,7 @@ body>header {
   right: 0;
   z-index: 1;
   max-width: 100vw;
+  box-shadow: 0 3px 10px transparentize($black, .8);
 
   .menu {
     height: $menuHeight;

@@ -7,24 +7,23 @@
     background-position: 50% center;
     background-size: cover;
     min-height: 480px;
-    justify-content: flex-start;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     h1 {
       text-transform: uppercase;
       font-weight: 800;
-      padding-left: 12.5vw;
-      padding-right: 12.5vw;
 
       &>div:first-child {
-        margin-top: 9.25rem;
         font-size: 1.75rem;
         color: $white;
       }
       &>div:nth-child(2) {
-        margin: 1.25rem 0 ;
         line-height: 1.1em;
         font-size: 3.5rem;
-        color: $blue5;
+        color: $blue1;
         text-shadow: 0 1px 1px transparentize($black,.5);
       }
     }
@@ -36,6 +35,9 @@
       margin: 1rem auto;
       display: inline-block;
       max-width: 75vw;
+    }
+    p {
+      text-align: justify;
     }
   }
 
@@ -83,7 +85,7 @@
 
 @media (max-width: 32rem) {
   .index .carousel h1 >div:nth-child(2) {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 

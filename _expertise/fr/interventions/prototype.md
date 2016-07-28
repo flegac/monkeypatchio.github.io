@@ -1,6 +1,6 @@
 ---
 title: Prototype
-img: /public/images/expert/Proto.png
+img: /public/images/expert/Prototype.svg
 order: 2
 ---
 

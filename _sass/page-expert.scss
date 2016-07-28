@@ -65,7 +65,8 @@ $tabBorderWidth: .125rem;
     
     // Tabs
     .tabs {
-      padding-bottom: .5rem;
+      padding: .5rem 0;
+      width: 100%;
       label {
         display: block;
         float: left; 
@@ -77,43 +78,53 @@ $tabBorderWidth: .125rem;
         img {
           width: 10rem;
           max-width: 100%;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 6rem;
         }
         h3 {
           margin: .25rem 0;
         }
       }
       [id^="tab"]:checked + label {
-        border-top-color: $white;
+        border-bottom-color: transparentize($white, 0.6);
+        h3 {
+          font-weight: bold;
+        }
       }
       article {
         text-align: left;
         display: none;
         clear: both;
-        padding: .5rem;
+        padding: 0 .5rem;
+        margin: .5rem 0;
         transition: all 0.4s ease;
         animation: DisplayTab 0.7s ease-in-out;
+        border-left: $tabBorderWidth solid transparentize($white, 0.6);
         h2, h3, h4 {
           margin: 0;
         }
-      }
-      #tab-0:checked~ #content-0,
-      #tab-1:checked~ #content-1,
-      #tab-2:checked~ #content-2,
-      #tab-3:checked~ #content-3,
-      #tab-4:checked~ #content-4,
-      #tab-5:checked~ #content-5,
-      #tab-6:checked~ #content-6 {
-        display: block;
       }
     }
   }
 
   .solutions {
-    background-color: $bgContact;
+    background: $blue1 url('/public/images/fond.svg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
     margin-top: 3.5rem;
     flex-direction: row;
-    h1 {
-      color: $txtSolutionHeader;
+
+    .rocket {
+      margin-right: 1rem;
+      flex: 0 1 auto;
+      display: flex;
+    }
+    .head {
+      h1, p {
+        color: $white;
+      }
     }
   }
 
@@ -126,7 +137,16 @@ $tabBorderWidth: .125rem;
         width: calc( (100% / 4) - 2 * #{$tabBorderWidth});
       }
       [id^="tab"]:checked + label, article {
-        background: darken($bgOffers, 10%);
+        //background: darken($bgOffers, 10%);
+      }
+      #tab-offer-0:checked ~ #content-offer-0,
+      #tab-offer-1:checked ~ #content-offer-1,
+      #tab-offer-2:checked ~ #content-offer-2,
+      #tab-offer-3:checked ~ #content-offer-3,
+      #tab-offer-4:checked ~ #content-offer-4,
+      #tab-offer-5:checked ~ #content-offer-5,
+      #tab-offer-6:checked ~ #content-offer-6 {
+        display: block;
       }
     }
   }
@@ -134,6 +154,23 @@ $tabBorderWidth: .125rem;
   .interventions {
     background-color: $bgInterventions; 
     color: $white;
+    .tabs { // 4 tabs
+      label {
+        width: calc( (100% / 3) - 2 * #{$tabBorderWidth});
+      }
+      [id^="tab"]:checked + label, article {
+        //background: darken($bgInterventions, 10%);
+      }
+      #tab-intervention-0:checked ~ #content-intervention-0,
+      #tab-intervention-1:checked ~ #content-intervention-1,
+      #tab-intervention-2:checked ~ #content-intervention-2,
+      #tab-intervention-3:checked ~ #content-intervention-3,
+      #tab-intervention-4:checked ~ #content-intervention-4,
+      #tab-intervention-5:checked ~ #content-intervention-5,
+      #tab-intervention-6:checked ~ #content-intervention-6 {
+        display: block;
+      }
+    }
   }
 
   .approach {
@@ -145,15 +182,56 @@ $tabBorderWidth: .125rem;
   }
 
   .profiles {
-    color: $txtProfiles;
+    background-color: $grey2;
+    color: $white;
+    .tabs { // 4 tabs
+      article .techno {
+        font-size: 80%;
+        font-style: italic;
+        span:nth-child(n+2) {
+          &::before {
+            content: ', ';
+          }
+        }
+      }
+      label {
+        width: calc( (100% / 4) - 2 * #{$tabBorderWidth});
+      }
+      [id^="tab"]:checked + label, article {
+        //background: darken($grey2, 10%);
+      }
+      #tab-profile-0:checked ~ #content-profile-0,
+      #tab-profile-1:checked ~ #content-profile-1,
+      #tab-profile-2:checked ~ #content-profile-2,
+      #tab-profile-3:checked ~ #content-profile-3,
+      #tab-profile-4:checked ~ #content-profile-4,
+      #tab-profile-5:checked ~ #content-profile-5,
+      #tab-profile-6:checked ~ #content-profile-6 {
+        display: block;
+      }
+    }
   }
 
   .contact-block {
     background-color: $bgContact;
     color: $txtContact;
-    padding-bottom: .5rem;
-    p {
-      margin-bottom: 3rem;
+    & > div {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-bottom: 3rem;
+
+      p {
+        margin: 0;
+        padding: 0;
+        flex: 1 1 40vw;
+      }
+      div {
+        margin-left: 1rem;
+        flex: 1 1 20vw;
+      }
     }
   }
 }
@@ -165,5 +243,18 @@ $tabBorderWidth: .125rem;
     span {
       display: block;
     }
+  }
+}
+
+@media (max-width: 640px) {
+  .expert section .tabs {
+    label h3 {
+      display: none;
+    }
+  }
+}
+@media (max-width: 62rem) {
+  .expert .solutions {
+    flex-direction: column;
   }
 }

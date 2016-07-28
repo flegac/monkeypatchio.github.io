@@ -10,11 +10,8 @@ $white: #fff;
 $black: #000;
 
 $blue8: #5cbbdb;
-$blue5: #2ebcfc;
-$blue1: #03a9f4;
-$blue6: #13a8eb;
-$blue2: #0a97d3;
-$blue3: #0288d1;
+
+$blue1: #00b0f0;
 $blue7: #4285F4;
 $blue4: #026CA6;
 
@@ -30,10 +27,10 @@ $txtLink: $white;
 
 // Header
 $bgHeaderMenu: $blue1;
-$bgHeaderMenuActive: $blue2;
+$bgHeaderMenuActive: $blue1;
 
 // Footer
-$bgFooter: $blue3;
+$bgFooter: $blue1;
 $bgFooterBottom: $blue4;
 $bgBtnTop: transparentize($black, .5);
 
@@ -50,13 +47,13 @@ $txtBenefitIcon: #727272;
 $txtBenefitHeader: #505c70;
 
 // Expert
-$txtSolutionHeader: $blue6;
+$txtSolutionHeader: $blue1;
 $txtSolutionSubtitles: $grey2;
 
-$bgOffers: $blue6;
+$bgOffers: $blue1;
 $bgInterventions: #9B26AF;
 
-$bgApproach: $blue6;
+$bgApproach: $blue1;
 
 $txtProfiles:$blue7;
 
