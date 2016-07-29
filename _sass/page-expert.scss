@@ -75,21 +75,27 @@ $tabBorderWidth: .125rem;
         text-align: center;
         padding-top: .25rem;
         border: $tabBorderWidth solid transparent;
-        img {
+        svg {
           width: 10rem;
+          height: 10rem;
           max-width: 100%;
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: 6rem;
+          .hexa-inner, .hexa-outer {
+            opacity: 0.4;
+          }
         }
         h3 {
           margin: .25rem 0;
         }
       }
       [id^="tab"]:checked + label {
-        border-bottom-color: transparentize($white, 0.6);
+        //border-bottom-color: transparentize($white, 0.6);
         h3 {
           font-weight: bold;
+        }
+        svg {
+          .hexa-outer {
+            opacity: .85;
+          }
         }
       }
       article {
@@ -139,6 +145,11 @@ $tabBorderWidth: .125rem;
       [id^="tab"]:checked + label, article {
         //background: darken($bgOffers, 10%);
       }
+      [id^="tab"]:checked + label svg .inner {
+        path, polygon {
+          fill: $bgOffers;
+        }
+      }
       #tab-offer-0:checked ~ #content-offer-0,
       #tab-offer-1:checked ~ #content-offer-1,
       #tab-offer-2:checked ~ #content-offer-2,
@@ -160,6 +171,11 @@ $tabBorderWidth: .125rem;
       }
       [id^="tab"]:checked + label, article {
         //background: darken($bgInterventions, 10%);
+      }
+      [id^="tab"]:checked + label svg .inner {
+        path, polygon {
+          fill: $bgInterventions;
+        }
       }
       #tab-intervention-0:checked ~ #content-intervention-0,
       #tab-intervention-1:checked ~ #content-intervention-1,
@@ -199,6 +215,14 @@ $tabBorderWidth: .125rem;
       }
       [id^="tab"]:checked + label, article {
         //background: darken($grey2, 10%);
+      }
+      [id^="tab"]:checked + label svg .inner {
+        path, polygon, circle, rect {
+          fill: $grey2;
+        }
+        line {
+          stroke: $grey2;
+        }
       }
       #tab-profile-0:checked ~ #content-profile-0,
       #tab-profile-1:checked ~ #content-profile-1,

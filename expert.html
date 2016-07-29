@@ -27,7 +27,7 @@ permalink: expert
         <input id="tab-offer-{{ forloop.index }}" type="radio" name="offers">
       {% endif %}
       <label for="tab-offer-{{ forloop.index }}">
-        <img alt="{{offer.title}}" src="{{offer.img}}">
+        {% include_relative {{ offer.img }} %}
         <h3>{{ offer.title }}</h3>
       </label>
     {% endfor %}
@@ -47,13 +47,17 @@ permalink: expert
   {% assign sorted_interventions = site.expertise | sort:"order" | where: "lang", site.lang | where: "type", "interventions" %}
   <div class="tabs">
     <!-- Tabs -->
-    {% for intervention in sorted_interventions %} {% if forloop.first == true %}
-    <input id="tab-intervention-{{ forloop.index }}" type="radio" name="interventions" checked> {% else %}
-    <input id="tab-intervention-{{ forloop.index }}" type="radio" name="interventions"> {% endif %}
-    <label for="tab-intervention-{{ forloop.index }}">
-        <img alt="{{ intervention.title }}" src="{{ intervention.img }}">
+    {% for intervention in sorted_interventions %}
+      {% if forloop.first == true %}
+        <input id="tab-intervention-{{ forloop.index }}" type="radio" name="interventions" checked>
+      {% else %}
+        <input id="tab-intervention-{{ forloop.index }}" type="radio" name="interventions">
+      {% endif %}
+      <label for="tab-intervention-{{ forloop.index }}">
+        {% include_relative {{ intervention.img }} %}
         <h3>{{ intervention.title }}</h3>
-      </label> {% endfor %}
+      </label>
+    {% endfor %}
     <!-- Content -->
     {% for intervention in sorted_interventions %}
     <article id="content-intervention-{{ forloop.index }}">
@@ -65,7 +69,8 @@ permalink: expert
 
 <section class="approach">
   <h2>{% t expertise.approach.title %}</h2>
-  {% assign sorted_approaches = site.expertise | sort:"order" | where: "lang", site.lang | where: "type", "approach" %} {% for approach in sorted_approaches %}
+  {% assign sorted_approaches = site.expertise | sort:"order" | where: "lang", site.lang | where: "type", "approach" %}
+  {% for approach in sorted_approaches %}
     <div>
       {{approach.content}}
     </div>
@@ -86,7 +91,7 @@ permalink: expert
         <input id="tab-profile-{{ forloop.index }}" type="radio" name="profiles">
       {% endif %}
       <label for="tab-profile-{{ forloop.index }}">
-        <img alt="{{ profile.title }}" src="{{ profile.img }}">
+        {% include_relative {{ profile.img }} %}
         <h3>{{ profile.title }}</h3>
       </label>
     {% endfor %}

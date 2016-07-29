@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="256px" height="256px" viewBox="0 0 256 256" enable-background="new 0 0 256 256" xml:space="preserve">
 <g>
-	<g opacity="0.4">
-		<g>
-			<path fill="#FFFFFF" d="M29.566,70.897v114.207l98.435,57.095l98.433-57.095V70.897l-98.433-57.097L29.566,70.897z M128.001,0
-				L17.822,64v128.001L128.001,256l110.177-63.999V64L128.001,0z M231.33,187.928L128.001,247.86L24.67,187.928V68.075
-				L128.001,8.141L231.33,68.075V187.928z"/>
-		</g>
+	<g class="hexa-inner">
+    <path fill="#FFFFFF" d="M128,0L17.823,63.999v128L128,256l110.177-64.001v-128L128,0z M231.33,187.926L128,247.856L24.67,187.926V68.075L128,8.14l103.33,59.936V187.926z"/>
 	</g>
-	<g id="Lead_Technique_1_">
+  <g class="hexa-outer">
+    <path fill="#FFFFFF" d="M29.567,70.896v114.208L128,242.197l98.431-57.094V70.896L128,13.8L29.567,70.896z"/>
+  </g>
+	<g class="inner">
 		<g>
 			<path fill="#FFFFFF" d="M156.649,94.223l-6.829,20.893h-3.471l6.828-20.893H156.649L156.649,94.223z"/>
 			<path fill="#FFFFFF" d="M157.879,108.95l8.569-4.018l-8.569-4.53v-3.431l12.44,7.087v2.046l-12.44,6.26V108.95L157.879,108.95z"
