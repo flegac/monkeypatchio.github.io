@@ -67,16 +67,9 @@ expertise:
   offers: 
     title: "Nos Offres"
     content: "MonkeyPatch, société spécialisée dans l’expertise Web, Mobile et Big Data, accompagne ses clients sur les phases de conception d’architectures, de développement, de lead technique, d’audit, de conseil et formation"
-    architecture: "Architecture"
-    developpement: "Développement"
-    lead: "Lead technique"
-    conseil: "Audit et conseil"
   interventions: 
     title: "Nos Interventions"
-    innovation: "Innovation"
-    prototype: "Prototype"
-    project: "Projet"
-    accompagnement: "Accompagnement"
+    content: "MonkeyPatch propose différents services tout au long du cycle de développement de produits numériques.<br> En intervenant au sein de vos équipes ou en réalisant entièrement vos projets ou bien encore en formant vos consultants, nous apportons notre expertise technique pour vous aider à réaliser vos projets de manière efficace, qu’ils en soient au stade d'ébauche ou déjà utilisés par vos clients.<br> De la validation d’une idée par un prototype, à la mise en production d’une application nous apportons notre expertise technique pour vous aider à réaliser vos projets de manière efficace. Une fois les solutions mises en place, vos équipes restent autonomes et tirent profit des méthodes de travail appliquées par nos experts."
   approach: 
     title: "Une nouvelle approche"
   profiles: 

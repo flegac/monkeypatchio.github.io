@@ -30,6 +30,7 @@ Crédits photos : Les photos intégrées sur le présent site seront non contrac
 - Photos page : être Monkeys
 Les Chimpanzés de l'espace - wallpaper.free.fr
 Depositphotos
+Freepik.com
 
 
 #### Logos - Visuel

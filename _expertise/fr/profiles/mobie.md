@@ -5,7 +5,7 @@ order: 2
 techno:
   - Android
   - iOS
-  - Cordova
+  - Cross Platform
   - Swift
   - ...
 ---
