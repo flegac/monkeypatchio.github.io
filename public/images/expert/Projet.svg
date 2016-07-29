@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="256px" height="256px" viewBox="0 0 256 256" enable-background="new 0 0 256 256" xml:space="preserve">
-<g id="Hexagone">
-	<g id="Hexogone">
-		<g opacity="0.4">
-			<g>
-				<path fill="#FFFFFF" d="M29.567,70.896v114.208l98.435,57.098l98.432-57.098V70.896L128.002,13.8L29.567,70.896z M128.002,0
-					L17.822,63.999V192l110.18,64l110.176-64V63.999L128.002,0z M231.33,187.928l-103.328,59.932L24.67,187.928V68.076L128.002,8.14
-					L231.33,68.076V187.928z"/>
-			</g>
-		</g>
+
+	<g class="hexa-inner">
+    <path fill="#FFFFFF" d="M128,0L17.823,63.999v128L128,256l110.177-64.001v-128L128,0z M231.33,187.926L128,247.856L24.67,187.926V68.075L128,8.14l103.33,59.936V187.926z"/>
 	</g>
-</g>
-<g id="Layer_1_1_">
+  <g class="hexa-outer">
+    <path fill="#FFFFFF" d="M29.567,70.896v114.208L128,242.197l98.431-57.094V70.896L128,13.8L29.567,70.896z"/>
+  </g>
+	<g class="inner">
 	<g id="Project">
 		<g id="Project_1_">
 			<path fill="#FFFFFF" d="M185.523,99.752H96.32c-3.835,0-6.945,3.111-6.945,6.945v51.159c0,3.838,3.11,6.949,6.945,6.949h34.196
