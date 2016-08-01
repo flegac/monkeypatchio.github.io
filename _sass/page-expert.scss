@@ -16,15 +16,11 @@ $tabBorderWidth: .125rem;
     padding-top: 3.5rem;
     overflow: hidden;
 
-    h1,h3, p {
-      max-width: 85vw;
-      margin: .5rem auto;
-    }
     p {
       text-align: justify;
     }
 
-    h1 {
+    h1, h2 {
       font-weight: bold;
       font-size: 2.5rem;
     }
@@ -65,7 +61,7 @@ $tabBorderWidth: .125rem;
     
     // Tabs
     .tabs {
-      padding: .5rem 0;
+      padding: .5rem 0 3.5rem 0;
       width: 100%;
       label {
         display: block;
@@ -84,17 +80,33 @@ $tabBorderWidth: .125rem;
           }
         }
         h3 {
-          margin: .25rem 0;
+          margin: .25rem 0 .5rem 0;
+          &::before {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            content: '\f054';
+            margin-right: .25rem;
+          }
         }
       }
       [id^="tab"]:checked + label {
         //border-bottom-color: transparentize($white, 0.6);
         h3 {
-          font-weight: bold;
+          //font-weight: bold;
+          &::before {
+            content: '\f078';
+          }
+          
         }
         svg {
           .hexa-outer {
             opacity: .85;
+          }
+          .hexa-inner {
+            opacity: .6;
           }
         }
       }
@@ -110,6 +122,9 @@ $tabBorderWidth: .125rem;
         h2, h3, h4 {
           margin: 0;
         }
+        h2 {
+          font-size: 1.5rem;
+        }
       }
     }
   }
@@ -120,34 +135,61 @@ $tabBorderWidth: .125rem;
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 5.5rem;
-    flex-direction: row;
-
-    .rocket {
-      margin-right: 1rem;
-      flex: 0 1 auto;
-      display: flex;
+    color: $white;
+    h1 {
+      text-align: left;
+      width: 100%;
     }
-    .head {
-      h1, p {
-        color: $white;
+    & > div {
+      display: flex;
+      flex-direction: row;
+      .rocket {
+        margin-right: 1rem;
+        flex: 1 1 auto;
+        display: flex;
+      }
+      p {
+        flex: 1 1 auto;
       }
     }
   }
 
   .offers {
-    background-color: $bgOffers;
-    color: $white;
+    background-color: $bgContact;
+    color: $txtContact;
+
+    h2, h3, h4 {
+      color: $bgOffers;
+    }
 
     .tabs { // 4 tabs
       label {
         width: calc( (100% / 4) - 2 * #{$tabBorderWidth});
+        svg {
+          max-height: calc( 80vw / 4);
+        }
       }
       [id^="tab"]:checked + label, article {
         //background: darken($bgOffers, 10%);
       }
+      [id^="tab"] + label svg  {
+        path, polygon {
+          fill: $bgOffers;
+        }
+        .inner {
+          path, polygon {
+            fill: $bgContact;
+          }
+        }
+      }
       [id^="tab"]:checked + label svg .inner {
         path, polygon {
           fill: $bgOffers;
+        }
+      }
+      [id^="tab"]:checked + label svg .inner {
+        path, polygon {
+          fill: $white;
         }
       }
       #tab-offer-0:checked ~ #content-offer-0,
@@ -159,6 +201,10 @@ $tabBorderWidth: .125rem;
       #tab-offer-6:checked ~ #content-offer-6 {
         display: block;
       }
+
+      article {
+        border-left: .125rem solid transparentize($bgOffers,0.4);
+      }
     }
   }
 
@@ -168,6 +214,9 @@ $tabBorderWidth: .125rem;
     .tabs { // 4 tabs
       label {
         width: calc( (100% / 3) - 2 * #{$tabBorderWidth});
+        svg {
+          max-height: calc( 80vw / 3);
+        }
       }
       [id^="tab"]:checked + label, article {
         //background: darken($bgInterventions, 10%);
@@ -190,6 +239,7 @@ $tabBorderWidth: .125rem;
   }
 
   .approach {
+    padding-bottom: 3.5rem;
     background-color: $bgApproach;
     color: $white;
     &> div {
@@ -212,6 +262,9 @@ $tabBorderWidth: .125rem;
       }
       label {
         width: calc( (100% / 4) - 2 * #{$tabBorderWidth});
+        svg {
+          max-height: calc( 80vw / 4);
+        }
       }
       [id^="tab"]:checked + label, article {
         //background: darken($grey2, 10%);
@@ -243,18 +296,17 @@ $tabBorderWidth: .125rem;
       width: 100%;
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
       justify-content: space-between;
       padding-bottom: 3rem;
 
       p {
         margin: 0;
-        padding: 0;
-        flex: 1 1 40vw;
+        padding: 0 0 1rem 0;
+        flex: 1 1 auto;
       }
       div {
         margin-left: 1rem;
-        flex: 1 1 20vw;
+        flex: 1 1 auto;
       }
     }
   }
@@ -270,15 +322,19 @@ $tabBorderWidth: .125rem;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 40rem) {
   .expert section .tabs {
     label h3 {
       display: none;
     }
   }
 }
+
 @media (max-width: 62rem) {
-  .expert .solutions {
+  .expert .solutions > div {
+    flex-direction: column;
+  }
+  .expert .contact-block > div {
     flex-direction: column;
   }
 }

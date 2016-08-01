@@ -5,11 +5,11 @@ permalink: expert
 ---
 
 <section class="solutions">
-  <div class="rocket">
-    <img src="/public/images/expert/rocket.svg" alt="Expertise">
-  </div>
-  <div class="head">
-    <h1>{% t expertise.solutions.title %}</h1>
+  <h1>{% t expertise.solutions.title %}</h1>
+  <div>
+    <div class="rocket">
+      <img src="/public/images/expert/rocket.svg" alt="Expertise">
+    </div>
     <p>{% t expertise.solutions.content %}</p>
   </div>
 </section>
@@ -78,7 +78,7 @@ permalink: expert
 </section>
 
 <section class="profiles">
-  <h1>{% t expertise.profiles.title %}</h1>
+  <h2>{% t expertise.profiles.title %}</h2>
   <p>{% t expertise.profiles.content %}</p>
 
   {% assign sorted_profiles = site.expertise | sort:"order" | where: "lang", site.lang | where: "type", "profiles" %}
@@ -110,7 +110,7 @@ permalink: expert
 </section>
 
 <section class="contact-block">
-  <h1>{% t expertise.contact.title %}</h1>
+  <h2>{% t expertise.contact.title %}</h2>
   <div>
     <p>{% t expertise.contact.subtitle %}</p>
     <div>
