@@ -10,7 +10,7 @@ techno:
   - ...
 ---
 
-## Consultant Mobile
+### Consultant Mobile
 
 Nos consultants Mobile réalisent des applications natives tout comme des versions Mobile de site Web sur les principales plateformes Android / iOS.
 

@@ -4,7 +4,7 @@ img: /public/images/expert/Architecture.svg
 order: 1
 ---
 
-## Conception d’architectures
+### Conception d’architectures
 
 Nous participons à l’élaboration d’architectures flexibles capables de s’adapter à l’évolution des composants et répondre aux futurs enjeux projets.
 

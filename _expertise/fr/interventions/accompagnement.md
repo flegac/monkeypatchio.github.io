@@ -4,7 +4,7 @@ img: /public/images/expert/Accompagnement.svg
 order: 4
 ---
 
-## Un accompagnement personnalisé
+### Un accompagnement personnalisé
 
 Nous garantissons sur toutes nos missions la mise en commun des techniques et méthodes de développement pour que vous puissiez avoir la maîtrise de vos projets. Vos équipes montent ainsi en compétence et pourront réutiliser les connaissances acquises lors de la réalisation de futurs développements.
 

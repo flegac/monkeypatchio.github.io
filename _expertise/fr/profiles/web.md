@@ -14,7 +14,7 @@ techno:
   - ...
 ---
 
-## Consultant Web (Front-End / Back-End)
+### Consultant Web (Front-End / Back-End)
 
 Nos consultants Web sont experts en développement Front-End et/ou Back-End. Ils sont capables de réaliser une application Web à fort trafic en respectant les standards imposés.
 

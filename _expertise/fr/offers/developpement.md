@@ -4,7 +4,7 @@ img: /public/images/expert/Developpement.svg
 order: 2
 ---
 
-## Développement de projets
+### Développement de projets
 
 Nous mettons à disposition de vos équipes notre expertise en développement pour accroître votre capacité à innover et industrialiser des produits compétitifs.
 

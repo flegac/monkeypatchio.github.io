@@ -4,7 +4,7 @@ img: /public/images/expert/LeadTechnique.svg
 order: 3
 ---
 
-## Lead technique
+### Lead technique
 
 Nous définissons avec vos équipes les bonnes pratiques à respecter. Nous leur permettons de résoudre des problèmes techniques tout en respectant l’architecture définie.
 

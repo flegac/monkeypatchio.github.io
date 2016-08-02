@@ -4,7 +4,7 @@ img: /public/images/expert/Audit.svg
 order: 4
 ---
 
-## Audit et conseil
+### Audit et conseil
 
 Nous vous accompagnons sur l’élaboration de la stratégie informatique aussi bien au niveau projet qu’au niveau entreprise.
 

@@ -11,7 +11,7 @@ techno:
   - ...
 ---
 
-## Consultant DevOps
+### Consultant DevOps
 
 Nos consultants DevOps sont spécialistes dans l’automatisation des processus de développements comprenant l’optimisation des tests, la mise en place d’intégration continue, les déploiements automatisés.
 
