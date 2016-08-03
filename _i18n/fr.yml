@@ -33,6 +33,7 @@ contact:
   email: "Votre email"
   message: "Votre message"
   send: "Envoyer votre message"
+  sent: "Votre message a bien été envoyer"
   start: "Venez nous rencontrer"
   meet: "Que ce soit pour discuter de vos projets ou de votre souhait de rejoindre notre équipe, n’hésitez pas à nous contacter. "
 careers: 

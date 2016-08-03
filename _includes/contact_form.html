@@ -1,5 +1,6 @@
 <form id="contact-form" method="post" action="http://62.210.81.45:8083/">
-  <input type="hidden" name="redirect" value="http://www.monkeypatch.io/contact" />
+  <div id="sent">{% t contact.sent %}</div>
+  <input type="hidden" name="redirect" value="http://www.monkeypatch.io/contact#sent" />
   <div class="row">
     <label for="txtName">{% t contact.name %}</label>
     <input type="text" name="subject" id="txtName" placeholder="{% t contact.name %}" required>
@@ -10,4 +11,3 @@
   <textarea name="body" id="txtMessage" placeholder="{% t contact.message %}" rows="8" required></textarea>
   <button type="submit" class="button">{% t contact.send %}</button>
 </form>
- 
