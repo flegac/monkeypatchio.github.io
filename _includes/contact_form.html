@@ -1,14 +1,13 @@
-<form id="contact-form" method="post" action="//formspree.io/{{ site.contact.mail }}">
-  <input type="hidden" name="_next" value="/" />
-  <input type="hidden" name="_subject" value="Contact from monkeypatch.io" />
+<form id="contact-form" method="post" action="http://62.210.81.45:8083/">
+  <input type="hidden" name="redirect" value="http://www.monkeypatch.io/contact" />
   <div class="row">
     <label for="txtName">{% t contact.name %}</label>
-    <input type="text" name="name" id="txtName" placeholder="{% t contact.name %}" required>
+    <input type="text" name="subject" id="txtName" placeholder="{% t contact.name %}" required>
     <label for="txtEmail">{% t contact.email %}</label>
-    <input type="email" name="email" id="txtEmail" placeholder="{% t contact.email %}" required>
+    <input type="email" name="from" id="txtEmail" placeholder="{% t contact.email %}" required>
   </div>
   <label for="txtMessage">{% t contact.message %}</label>
-  <textarea name="message" id="txtMessage" placeholder="{% t contact.message %}" rows="8" required></textarea>
+  <textarea name="body" id="txtMessage" placeholder="{% t contact.message %}" rows="8" required></textarea>
   <button type="submit" class="button">{% t contact.send %}</button>
 </form>
  
