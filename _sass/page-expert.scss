@@ -149,6 +149,7 @@ $tabBorderWidth: .125rem;
       }
       p {
         flex: 1 1 auto;
+        max-width: calc(80vw - 18rem);
       }
     }
   }
@@ -332,6 +333,9 @@ $tabBorderWidth: .125rem;
 @media (max-width: 62rem) {
   .expert .solutions > div {
     flex-direction: column;
+    p {
+      max-width: 80vw;
+    }
   }
   .expert .contact-block > div {
     flex-direction: column;

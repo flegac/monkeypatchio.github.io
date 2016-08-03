@@ -1,18 +1,12 @@
--
-  img: "/public/images/logos/logo-1.png"
+- img: "logo-1.png"
   alt: "Generali"
-- 
-  img: "/public/images/logos/logo-2.png"
+- img: "logo-2.png"
   alt: "Airbus"
-- 
-  img: "/public/images/logos/logo-3.png"
+- img: "logo-3.png"
   alt: "CLS"
-- 
-  img: "/public/images/logos/logo-4.png"
+- img: "logo-4.png"
   alt: "Valtech"
-- 
-  img: "/public/images/logos/logo-5.png"
+- img: "logo-5.png"
   alt: "ResMed"
-- 
-  img: "/public/images/logos/logo-6.png"
+- img: "logo-6.png"
   alt: "Ingenico"

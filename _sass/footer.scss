@@ -104,10 +104,10 @@ body > footer {
 }
 
 .no-flexbox body > footer {
-  .top {
+  &.top {
     height: 8.625rem;
     text-align: center;
-    &>div {
+    & > div {
       display: inline-block;
       vertical-align: top;
     }

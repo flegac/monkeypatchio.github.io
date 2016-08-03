@@ -10,5 +10,5 @@ Nous participons à l’élaboration d’architectures flexibles capables de s�
 
 * Définir des architectures évolutives orientées microservices
 * Respecter les standards de sécurité
-* Prendre en compte les exigences de qualité et de de performances
+* Prendre en compte les exigences de qualité et de performances
 * Refondre l’existant pour offrir flexibilité et scalabilité

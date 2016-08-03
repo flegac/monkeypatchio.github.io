@@ -13,25 +13,18 @@ titles:
 general: 
   talk-to-us: "Nous contacter"
   get-in-touch: "Rester en contact"
-  quick-links: "Liens rapides"
-  in-progress: "En Construction"
   contact-modal-title: "Pour nous contacter"
   contact-modal-intro: "Remplissez le formulaire"
   social-networks: "Réseaux sociaux"
-home: 
-  tagline1: "Ensemble"
-  tagline2: "Changeons les idées en innovations"
-  who-we-are: "Qui nous sommes"
-  intro: "Nous sommes une équipe d'experts spécialisés dans le web, le mobile et le cloud. Convaincus par l’agilité et le lean startup, nos consultants sont tous des passionnés qui aiment participer aux meetups, conférences techniques et hackathons pour tester de nouvelles technologies, partager leur expertise et progresser."
+home:
+  expert-title: "Experts en informatique"
+  expert-content: "Nos équipes sont constituées exclusivement de personnes ayant un goût prononcé pour l’informatique et souhaitant rester dans des postes techniques pour être au plus près du code.<br> Tous ont plus de 5 ans d’expérience et des références significatives en Web, Mobile ou Big Data.<br> Pour maintenir et faire évoluer leur niveau d’expertise, ils bénéficient de temps dédiés (17 jours/an) à l’expérimentation de technologies et à la mise en commun de leurs savoir-faire."
+  who-we-are: "Qui sommes nous ?"
+  intro: "<p>MonkeyPatch est une société Toulousaine de conseil et de réalisation en informatique créée en Mars 2016. Elle couvre des activités : </p><ul><li>d’expertise informatique,</li><li>de conseil en architecture ou de gouvernance informatique,</li><li>de réalisation de logiciels ou services Web (SaaS, Cloud, BigData ...),</li><li>de réalisation d’applications Mobile.</li></ul><p>MonkeyPatch s’entoure uniquement d’experts en informatique dans les métiers du Web, du Mobile et du Big Data.</p>"
   benefits: 
-    skilled: "Une équipe qualifiée"
-    agile: "Approche agile"
-    quality: "Code de qualité"
-    overheads: "Consultants passionnés"
-    agile-desc: "!!!!!!!!!!!!!!!!!!!!!!!!!!"
-    skilled-desc: "Notre équipe seulement composée de passionnés ayant au moins 5 ans d'expérience"
-    quality-desc: "!!!!!!!!!!!!!!!!!!!!!!!!!!"
-    overheads-desc: "!!!!!!!!!!!!!!!!!!!!!!!!!!"
+    passion: "Passion"
+    experience: "Expérience > 5 ans"
+    mkpday: "17 Jours Monkeys"
   worked-with: "Ils nous ont déjà fait confiance"
 contact: 
   title: "Nous contacter"

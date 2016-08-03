@@ -1,12 +1,6 @@
--
-  icon: lightbulb-o
-  text: home.benefits.skilled
--
-  icon: compass
-  text: home.benefits.agile
--
-  icon: star-o
-  text: home.benefits.quality
--
-  icon: heart-o
-  text: home.benefits.overheads
+- image: Passion-02.svg
+  text: home.benefits.passion
+- image: Exp-04.svg
+  text: home.benefits.experience
+- image: JourMKP-03.svg
+  text: home.benefits.mkpday

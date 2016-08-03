@@ -1,75 +1,82 @@
 .index {
 
-  .carousel {
-    margin-top: $menuHeight;
-    background-image: url('/public/images/background/promo-background-1.jpg');
+  .header {
+    background: $greyIndex url('/public/images/fond.svg');
     background-repeat: no-repeat;
-    background-position: 50% center;
     background-size: cover;
-    min-height: 480px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+    h1, h2, p, ul {
+      margin: 0;
+      color: $white;
+      width: 100%;
+    }
     h1 {
-      text-transform: uppercase;
-      font-weight: 800;
-
-      &>div:first-child {
-        font-size: 1.75rem;
-        color: $white;
-      }
-      &>div:nth-child(2) {
-        line-height: 1.1em;
-        font-size: 3.5rem;
-        color: $blue1;
-        text-shadow: 0 1px 1px transparentize($black,.5);
+      padding-top: $menuHeight + 2rem;
+      text-align: center;
+      font-size: 3rem;
+      &::before, &::after {
+        display: inline-block;
+        width: 8rem;
+        height: 2rem;
+        border-bottom: medium solid $white;
+        vertical-align: text-top;
+        margin: 0 2rem; 
+        content: ' ';
       }
     }
-  }
-
-  .who, .customers {
-    margin: 5rem 0;
-    h1, p {
-      margin: 1rem auto;
-      display: inline-block;
-      max-width: 75vw;
+    h2 {
+      text-align: left;
+      margin: 1.5rem 0;
     }
     p {
+      margin: 0;
       text-align: justify;
     }
-  }
-
-  .who {
-    .benefits {
-      width: 100%;
+    ul {
+      text-align: left;
+      margin: 0.5rem 0;
+    }
+    .header-top {
+      padding-top: 0;
       display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      align-items: stretch;
-      align-content: space-around;
-      &> div {
-        background-color: $bgBenefit;
-        width: 10rem;
-        margin: 1rem;
-        padding: 2rem 1.5rem 1rem 1.5rem;
-        flex: 0 1 10rem;
-        i {
-          display: block;
-          font-size: 3.75rem;
-          color: $txtBenefitIcon;
-        }
-        h3 {
-        font-size: 1.125rem;
-          color: $txtBenefitHeader;
-          display: inline-block;
-        }
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      img {
+        margin-top: -3rem; // XXX
+        max-width: 80vw;
+        max-height: calc(100vh - 8rem);
+      }
+    }
+    .header-bottom {
+      padding-top: 0;
+      padding-bottom: 3.5rem;
+      display: flex;
+      flex-direction: column;
+      background-color: transparentize($black, .5);
+      .benefits {
+        margin: 2rem 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
       }
     }
   }
 
   .customers {
+    margin: 3.5rem 0;
+    h2, p {
+      margin: 1rem auto;
+      display: inline-block;
+      max-width: 75vw;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    p {
+      text-align: justify;
+    }
     .list {
       display: flex;
       justify-content: space-between;
@@ -84,17 +91,17 @@
   }
 }
 
-@media (max-width: 32rem) {
-  .index .carousel h1 >div:nth-child(2) {
-    font-size: 2.5rem;
+@media (max-width: 62rem) {
+  .index .header h1 {
+    &::before, &::after {
+      display: none;
+    }
   }
 }
 
+// Support for IE9
 .no-flexbox .index {
-  .carousel {
-    margin-top: - $menuHeight;
-  }
-  .who .benefits > div {
+  .list > span, .header .header-bottom .benefits > div {
     display: inline-block;
   }
 }

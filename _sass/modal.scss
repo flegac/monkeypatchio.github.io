@@ -18,6 +18,10 @@
     box-shadow: .25rem .25rem .75rem transparentize($black,.1);
     z-index: 20;
     position: relative;
+
+    #contact-form {
+      width: calc(100% - 2rem);
+    }
   }
 
   &:target {
