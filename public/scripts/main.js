@@ -1,10 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
   var i;
+  var menuHeight = document.querySelector('.menu').offsetHeight;
   var showElement = function (query) {
     return function () {
       var selector = '#' + this.id + ' + ' + query;
-      // console.info('showElement', selector);
-      document.querySelector(selector).scrollIntoView(true);
+      var element = document.querySelector(selector);
+      var left = element.offsetLeft;
+      var top = element.offsetTop
+      window.scrollTo(left, top - menuHeight);
     }
   };
 
