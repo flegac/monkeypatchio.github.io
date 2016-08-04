@@ -1,1 +1,27 @@
-document.addEventListener("DOMContentLoaded",function(){var e,t=document.querySelector(".menu").offsetHeight,n=function(e){return function(){var n="#"+this.id+" + "+e,o=document.querySelector(n),r=o.offsetLeft,d=o.offsetTop;window.scrollTo(r,d-t)}},o=document.querySelectorAll(".careers .assets .list input[type=radio]"),r=n(".asset");for(e=0;e<o.length;e++)o[e].addEventListener("change",r);var d=document.querySelectorAll(".job .jobs .list input[type=radio]"),s=n(".job");for(e=0;e<d.length;e++)d[e].addEventListener("change",s)});
+document.addEventListener('DOMContentLoaded', function () {
+  var i;
+  var menuHeight = document.querySelector('.menu').offsetHeight;
+  var showElement = function (query) {
+    return function () {
+      var selector = '#' + this.id + ' + ' + query;
+      var element = document.querySelector(selector);
+      var left = element.offsetLeft;
+      var top = element.offsetTop
+      window.scrollTo(left, top - menuHeight);
+    }
+  };
+
+  // Auto Show Asset
+  var assets = document.querySelectorAll('.careers .assets .list input[type=radio]');
+  var showAssetElement = showElement('.asset');
+  for (i = 0; i < assets.length; i++) {
+    assets[i].addEventListener('change', showAssetElement);
+  }
+
+  // Auto Show Job
+  var jobs = document.querySelectorAll('.job .jobs .list input[type=radio]');
+  var showJobElement = showElement('.job');
+  for (i = 0; i < jobs.length; i++) {
+    jobs[i].addEventListener('change', showJobElement);
+  }
+});
