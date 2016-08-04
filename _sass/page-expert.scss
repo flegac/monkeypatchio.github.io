@@ -294,19 +294,14 @@ $tabBorderWidth: .125rem;
     color: $txtContact;
     & > div {
       width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
       padding-bottom: 3rem;
 
       p {
         margin: 0;
         padding: 0 0 1rem 0;
-        flex: 1 1 auto;
       }
       div {
         margin-left: 1rem;
-        flex: 1 1 auto;
       }
     }
   }
