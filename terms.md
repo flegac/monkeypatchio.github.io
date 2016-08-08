@@ -27,10 +27,11 @@ Réalisation du site : MonkeyPatch
 
 Crédits photos : Les photos intégrées sur le présent site seront non contractuelles.
 
-- Photos page : être Monkeys
-Les Chimpanzés de l'espace - wallpaper.free.fr
 Depositphotos
+
 Freepik.com
+
+Illustration : [Gribouillis.net](http://www.gribouillis.net/)
 
 
 #### Logos - Visuel
