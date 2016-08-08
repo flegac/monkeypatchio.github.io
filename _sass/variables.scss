@@ -1,21 +1,16 @@
 // Menu
 $menuHeight: 3.75rem;
 
-
 // Global margin left/right
 $globalMargin: 10vw;
 
 // Colors
 $white: #fff;
 $black: #000;
-
 $blue8: #5cbbdb;
-
 $blue1: #00b0f0;
 $blue7: #4285F4;
 $blue4: #026CA6;
-
-
 $txtGrey: #666;
 $grey2: #5E5E5E;
 $grey3: #f5f5f5;
@@ -34,11 +29,9 @@ $bgHeaderMenuActive: $blue1;
 $bgFooter: $blue1;
 $bgFooterBottom: $blue4;
 $bgBtnTop: transparentize($black, .5);
-
 $txtFooter: transparentize($white, .1);
 $txtFooterBottom: $txtFooter;
 $txtFooterHeader: $txtFooter;
-
 $bgSocial: $txtFooter;
 $txtSocial: $bgFooter;
 
@@ -50,14 +43,10 @@ $txtBenefitHeader: #505c70;
 // Expert
 $txtSolutionHeader: $blue1;
 $txtSolutionSubtitles: $grey2;
-
 $bgOffers: $blue1;
 $bgInterventions: #9B26AF;
-
 $bgApproach: $blue1;
-
 $txtProfiles:$blue7;
-
 $bgContact: #F4F4F4;
 $txtContact: #7F7F7F;
 

@@ -60,6 +60,12 @@
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
+
+        svg {
+          text, tspan {
+            font-family: 'Open Sans';
+          }
+        }
       }
     }
   }
