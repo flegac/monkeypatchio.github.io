@@ -15,7 +15,9 @@ gems:
 
 # Blog pagination
 paginate: 5
-paginate_path: "blog/:num"
+paginate_path: "/blog/p:num/"
+future: true
+excerpt_separator: "<!--more-->"
 
 exclude:
   - deploy.sh
@@ -132,5 +134,15 @@ defaults:
       layout: post
   - scope:
       path: "_posts/fr"
+    values:
+      lang: fr
+      type: profiles
+  - # Blog
+    scope:
+      path: "_drafts"
+    values:
+      layout: post
+  - scope:
+      path: "_drafts/fr"
     values:
       lang: fr

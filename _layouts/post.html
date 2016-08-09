@@ -4,8 +4,25 @@
 {% include head.html %}
 <body class="post">
   {% include header.html %}
-  <h1>{{page.title}}</h1>
-  {{ content }}
+  <section>
+    <h1>
+      <span>{{page.title}}</span>
+      <span class="date">{% include date.html date=page.date %}</span>
+      <div class="authors">
+        {% for author in page.authors %}
+          <span>{{ site.data.authors[author].name }}</span> 
+        {% endfor %}
+      </div>
+    </h1>
+
+    <div class="tags">
+      {% for tag in page.tags %}
+        <span>{{ tag }}</span> 
+      {% endfor %} 
+    </div>
+
+    <article>{{ content }}</article>
+  </section>
   {% include footer.html %}
   <!-- Google Tag Manager -->
   <noscript>

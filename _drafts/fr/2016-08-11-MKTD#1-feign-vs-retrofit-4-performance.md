@@ -48,7 +48,6 @@ public class RestClientBenchmark {
 
 Il est bien sur trés intéressant d'ajouter des `@Benchmark` pour tester dans les mêmes conditions sans le parallélisme de la `Stream`, ou avec des API asynchronnes comme `RxJava`, ou les `CompletableFuture` de Java 8.
 
-
 ## Feign
 
 TODO

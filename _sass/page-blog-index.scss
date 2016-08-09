@@ -12,22 +12,59 @@
 
     article {
       width: 100%;
-
-      h2 {
-        margin: .5rem 0;
-      }
-
-      &::nth-child(n+1) {
+      margin: 1rem 0;
+      &:nth-child(n+2) {
         border-top: thin dotted transparentize($black, .8);
       } 
-      .content {
+      
+      h2 {
+        margin: .5rem 0;
         .date {
           color: $txtGrey;
+          font-size: .8em;
+          float: right;
         }
+      }
+      p {
+        text-align: justify;
+      }
+      .content {
         code {
           font-family: 'Fira Mono', monospace;
         }
       }
+      .authors{
+        clear: right;
+        float: right;
+        text-align: right;
+        color: $txtGrey;
+        font-size: 1.1rem;
+        span {
+          &:nth-child(n+2)::before {
+            content: ', ';
+          }
+        }
+      }
+      .tags {
+        &::before {
+          content: 'Tags: ';
+        }
+        span {
+          font-style: italic;
+          &:nth-child(n+2)::before {
+            content: ', ';
+          }
+        }
+      }
+    }
+  }
+
+  .pages {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    span, em, a {
+      margin: 0 .5rem;
     }
   }
 }

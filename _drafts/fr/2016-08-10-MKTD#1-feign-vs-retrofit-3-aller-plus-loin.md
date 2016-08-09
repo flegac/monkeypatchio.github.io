@@ -114,8 +114,11 @@ private static void addCookies(RequestTemplate template) {
 Pour Feign, le mécanisme l'authentification par cookie est proche du mécanisme qui utilise l’entête `Authorization` que l’on voit souvent associé au JWT: ils se basent sur des entêtes HTTP. Par contre l’utilisation des cookies alourdi le code.
 
 ### Gestion des erreurs
+
 ### Upload
+
 ### Download
+
 ### Bilan
 
 ## Retrofit
@@ -181,6 +184,7 @@ private Response authInterceptor(Interceptor.Chain chain) throws IOException {
 {% endhighlight %}
 
 ### Upload
+
 ### Download
 
 
@@ -191,3 +195,11 @@ Que ce soit avec Feign ou retrofit,  il a été très aisé de gérer les cookie
 Nous avons également trouvé que la gestion des erreurs en mode synchrone était mieux géré avec Feign. 
 
 Les solutions utilisant `OkHttp` sont communes à Feign et Retrofit dans le cas ou `OkHttp` est utilisé comme client HTTP pour Feign
+
+*[MKTD]: MonkeyTechDays
+*[HTTP]: HyperText Transfer Protocol
+*[REST]: REpresentational State Transfer
+*[API]: Application Programming Interface
+*[JSON]: JavaScript Object Notation
+*[XML]: eXtensible Markup Language
+*[URL]: Uniform Resource Locator

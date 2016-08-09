@@ -1,5 +1,71 @@
 .post {
-  .h1 {
-   padding-top: 3.5rem;
+  section {
+    text-align: left;
+    display: block;
+    
+    h1 {
+      padding-top: 3.5rem;
+    }
+
+    .date {
+      color: $txtGrey;
+      font-size: .8em;
+      float: right;
+    }
+
+    .authors{
+      clear: right;
+      float: right;
+      text-align: right;
+      color: $txtGrey;
+      font-size: 1.1rem;
+      span {
+        &:nth-child(n+2)::before {
+          content: ', ';
+        }
+      }
+    }
+    
+    .tags {
+      &::before {
+        content: 'Tags: ';
+      }
+      span {
+        font-style: italic;
+        &:nth-child(n+2)::before {
+          content: ', ';
+        }
+      }
+    }
+    
+    article {
+      width: 100%;
+      margin: 1rem 0;
+
+      p {
+        text-align: justify;
+        margin: 0.5rem 0 0 0;
+      }
+      abbr {
+        cursor: help;
+      }
+      
+      ul {
+        margin: .5rem 0;
+        li {
+          line-height: 1.75rem;
+        }
+      }
+      figure {
+        margin: 2rem 0;
+      }
+
+      blockquote {
+        margin: 0.5rem 0 0 0;
+        padding-left: 1rem;
+        border-left: medium solid $blue1;
+        font-style: italic;
+      }
+    }
   }
 }
