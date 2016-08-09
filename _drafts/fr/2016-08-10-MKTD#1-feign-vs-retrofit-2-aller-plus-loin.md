@@ -11,7 +11,10 @@ Le deuxième défi est destiné à aller plus loin, et d’adresser des problèm
 * l'authentification
 * la gestion des erreurs (Exception)
 * l’upload et le download de fichiers
+
 <!--more-->
+1
+[MKTD#1 Article précédent: Prise en main]({% post_url 2016-08-09-MKTD#1-feign-vs-retrofit-1-prise-en-main %})
 
 Pour l’authentification, le serveur fournit un mécanisme à base de [JWT](https://jwt.io/) et de [Cookie](https://tools.ietf.org/html/rfc6265), une autre interface décrit cette nouvelle opération.
 
@@ -195,7 +198,10 @@ Que ce soit avec Feign ou retrofit,  il a été très aisé de gérer les cookie
 
 Nous avons également trouvé que la gestion des erreurs en mode synchrone était mieux géré avec Feign. 
 
-Les solutions utilisant `OkHttp` sont communes à Feign et Retrofit dans le cas ou `OkHttp` est utilisé comme client HTTP pour Feign
+Les solutions utilisant [OkHttp](http://square.github.io/okhttp/) sont communes à Feign et Retrofit dans le cas ou le client [okhttp-client](https://github.com/OpenFeign/feign/tree/master/okhttp) est utilisé comme client HTTP pour Feign
+
+
+[La suite du MKTD#1: Autres sujets]({% post_url 2016-08-12-MKTD#1-feign-vs-retrofit-3-autres-sujets %})
 
 *[MKTD]: MonkeyTechDays
 *[HTTP]: HyperText Transfer Protocol

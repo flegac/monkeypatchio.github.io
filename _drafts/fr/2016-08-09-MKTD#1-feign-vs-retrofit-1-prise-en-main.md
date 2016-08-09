@@ -6,11 +6,28 @@ tags: [MKTD, Java, REST, Feign, Retrofit]
 comments: true
 ---
 
+## Introduction
+
+Nous avons organisé à Toulouse début juillet le premier [MonkeyTechDays](http://www.monkeytechdays.com/) chez [HarryCow](http://www.harrycow.com/).
+Un MKTD consiste à comparer, apprendre sous forme de défis une ou plusieurs technologies sur une journée.
+ 
+Ce premier événement était l’occasion d’approfondir les technologies de clients REST en Java. Nous avons étudié [Feign](https://github.com/OpenFeign/feign), une librairie initiée par [Netflix](https://netflix.github.io/) et [Retrofit](http://square.github.io/retrofit/) écrite par [Square](https://github.com/square). Ces deux API permettent d’écrire des clients REST en Java de façon plus élégante qu’avec les solutions plus classiques (JAX-RS client, Spring Rest Template, …)
+<!--more-->
+
+Pour aider les équipes à tester les technologies nous avions au préalable déployé plusieurs services REST sur le thème des singes.
+Le code source de cette journée est disponible à l’adresse : <https://github.com/monkeytechdays>
+
+
+## Défi 0 : Constitution des équipes
+
+Ce défi n’avait rien de technique mais nous a permis de constituer des équipes équitables pour chaque technologie, en finissant nos cafés, croissants, ... L’équipe Feign étant dirigée par [Igor](https://twitter.com/ilaborie) et l’équipe Retrofit par [Emmanuel](https://twitter.com/EmmanuelVinas). 
+
+## Défi 1: 
+
 Ce premier défi consistait à une mise en bouche pour découvrir ces technologies. 
 
 Le principe d’utilisation de [Feign](https://github.com/OpenFeign/feign) et [Retrofit](http://square.github.io/retrofit/) consiste à créer une interface décrivant le service REST, l’API se charge de créer une instance de cette interface.
 Dans ce premier défi, les interfaces étaient fournies, il suffisait de compléter le code pour faire passer des tests unitaires.
-<!--more-->
 
 Voici les deux interfaces retournant du JSON :
 
@@ -208,7 +225,7 @@ La première étape consiste à rajouter les dépendances de Rétrofit
 {% endhighlight %}
 
 Ensuite il nous faut rajouter les annotations spécifiques à Retrofit sur l’interface. 
-Les règles du jeu étant de ne pas changer la signature de l’interface, nous avons du ajouter une autre interface utilisée par la `callFactory` par défaut de Retrofit.
+Les règles du jeu étant de ne pas changer la signature de l’interface, nous avons du ajouter une autre interface utilisée par la `CallFactory` par défaut de Retrofit.
 
 {% highlight java linenos %}
 public interface MonkeyRaceService {
@@ -336,7 +353,7 @@ Cela nous obligerais quand même à traiter les exceptions de type `DirectCallIO
 Autre point que nous avons trouvé dommage lors de cet exercice est le fait que nous devons catcher les `IOException` qui peuvent se produire lors de l’appel. 
 Peut être manque-t’il a Retrofit une gestion des exceptions comme Feign peut l’avoir. Nous verrons cela plus en détail dans l’exercice suivant.
 
-Autre point *négatif*, Retrofit ayant besoin de plusieurs dépendances pour fonctionner : `OkHttp` et d'au moins 1 *converter*, la taille de l’exécutable généré était sensiblement plus grosse que celle de l’exécutable de Feign (1,5Mo contre 0,5Mo). 
+Autre point *négatif*, Retrofit ayant besoin de plusieurs dépendances pour fonctionner : [OkHttp](http://square.github.io/okhttp/) et d'au moins 1 *converter*, la taille de l’exécutable généré était sensiblement plus grosse que celle de l’exécutable de Feign (1.5Mo contre 0.5Mo). 
 
 #### Points Positifs
 
@@ -344,7 +361,7 @@ Retrofit reste simple à utiliser. Le fait que les principaux converters soient 
 
 Retrofit a ses propres annotations, évitant ainsi les erreurs de typo est une très bonne chose. Bien que feign se soit amélioré sur les messages d’erreurs, nous trouvons préférable le choix qu’à fait l’équipe de rétrofit sur cette partie.
 
-[La suite du MKTD: défi 2: Aller plus loin]({% post_url 2016-08-10-MKTD#1-feign-vs-retrofit-3-aller-plus-loin %})
+[La suite du MKTD#1: Aller plus loin]({% post_url 2016-08-10-MKTD#1-feign-vs-retrofit-2-aller-plus-loin %})
 
 *[MKTD]: MonkeyTechDays
 *[HTTP]: HyperText Transfer Protocol
