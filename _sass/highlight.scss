@@ -1,0 +1,32 @@
+
+
+.highlight {
+  font-family: 'Fira Mono', monospace;
+  
+  .gutter {
+    text-align: right;
+    .lineno {}
+  }
+  .code {
+    text-align: left;
+  }
+
+  .language-java .code {
+    .k {} // switch return new case
+    .kd {} // public static
+    .kt {} // int
+    .n {} // RuntimeException status message 
+    .nf {} // decodeError NoSuchElementException IllegalArgumentException 
+    .nc {}
+    .o {} // ({<:
+    .mi {} // 404
+    .w {} // tab, whitespace
+    .c {} // comments
+  }
+
+  .language-xml .code {
+    .c{} // comments
+    .nt{} // <qsdqsd> text
+    .w {} // tab, whitespace
+  }
+}

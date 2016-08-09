@@ -10,9 +10,13 @@ gems:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-multiple-languages-plugin
-  - octopress-autoprefixer
-  - jekyll-press
-  
+#  - octopress-autoprefixer
+#  - jekyll-press
+
+# Blog pagination
+paginate: 5
+paginate_path: "blog/:num"
+
 exclude:
   - deploy.sh
 
@@ -64,6 +68,8 @@ contact:
 
 # Collections
 collections:
+  posts:
+    output: true
   expertise:
     output: false
   teams:
@@ -74,8 +80,7 @@ collections:
     output: false
 
 defaults:
-  -
-    scope:
+  - scope:
       path: "" # an empty string here means all files in the project
     values:
       layout: default
@@ -85,18 +90,15 @@ defaults:
       path: "_expertise/fr"
     values:
       lang: fr
-  -
-    scope:
+  - scope:
       path: "_expertise/fr/offers"
     values:
       type: offers
-  -
-    scope:
+  - scope:
       path: "_expertise/fr/interventions"
     values:
       type: interventions
-  -
-    scope:
+  - scope:
       path: "_expertise/fr/profiles"
     values:
       type: profiles
@@ -115,13 +117,20 @@ defaults:
       path: "_profiles/fr"
     values:
       lang: fr
-  -
-    scope:
+  - scope:
       path: "_profiles/fr/assets"
     values:
       type: assets
-  -
-    scope:
+  - scope:
       path: "_profiles/fr/profiles"
     values:
       type: profiles
+  - # Blog
+    scope:
+      path: "_posts"
+    values:
+      layout: post
+  - scope:
+      path: "_posts/fr"
+    values:
+      lang: fr

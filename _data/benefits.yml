@@ -1,6 +1,6 @@
-- image: /public/images/index/Passion-02.svg
+- image: /svg/index/Passion-02.svg
   text: home.benefits.passion
-- image: /public/images/index/Exp-04.svg
+- image: /svg/index/Exp-04.svg
   text: home.benefits.experience
-- image: /public/images/index/JourMKP-03.svg
+- image: /svg/index/JourMKP-03.svg
   text: home.benefits.mkpday

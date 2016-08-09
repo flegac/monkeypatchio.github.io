@@ -1,0 +1,33 @@
+.blog {
+  section {
+    text-align: left;
+  }
+  .blog-top {
+    padding-top: 3.5rem;
+  }
+
+  .entries {
+    display: flex;
+    flex-direction: column;
+
+    article {
+      width: 100%;
+
+      h2 {
+        margin: .5rem 0;
+      }
+
+      &::nth-child(n+1) {
+        border-top: thin dotted transparentize($black, .8);
+      } 
+      .content {
+        .date {
+          color: $txtGrey;
+        }
+        code {
+          font-family: 'Fira Mono', monospace;
+        }
+      }
+    }
+  }
+}

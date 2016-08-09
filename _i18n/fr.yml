@@ -8,6 +8,7 @@ titles:
   careers: "Être Monkeys"
   jobs: "Nos Jobs"
   contact: "Contact"
+  blog: "Blog"
   terms: "Termes et conditions"
   404: "404: quelque-chose s'est mal passé"
 general: 
@@ -101,3 +102,7 @@ philo:
 error: 
   404: "Oops! Quelque-chose s'est mal passé. <br>La page ou le fichier demandé peut avoir été déplacé ou supprimé."
   back: "Retour à l'accueil"
+blog:
+  pages:
+    previous: Précédant
+    next: Suivant

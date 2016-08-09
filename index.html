@@ -15,8 +15,7 @@ permalink: index
     <div class="benefits">
     {% for benefit in site.data.benefits %}
       <div>
-        {% include_relative {{ benefit.image }} %}
-        <!--<img src="/public/images/index/{{ benefit.image }}" alt="{%t benefit.text %}">-->
+        {% include {{ benefit.image }} %}
       </div>
     {% endfor %}
     </div>
