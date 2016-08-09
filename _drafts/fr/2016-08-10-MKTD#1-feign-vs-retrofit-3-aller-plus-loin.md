@@ -3,6 +3,7 @@ authors:
   - evinas
   - ilaborie
 tags: [MKTD, Java, REST, Feign, Retrofit, Cookie]
+comments: true
 ---
 
 Le deuxième défi est destiné à aller plus loin, et d’adresser des problèmes plus avancés:

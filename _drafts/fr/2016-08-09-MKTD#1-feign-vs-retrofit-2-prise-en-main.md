@@ -3,6 +3,7 @@ authors:
   - evinas
   - ilaborie
 tags: [MKTD, Java, REST, Feign, Retrofit]
+comments: true
 ---
 
 Ce premier défi consistait à une mise en bouche pour découvrir ces technologies. 

@@ -132,12 +132,13 @@ defaults:
       path: "_posts"
     values:
       layout: post
+      comments: true
   - scope:
       path: "_posts/fr"
     values:
       lang: fr
-      type: profiles
-  - # Blog
+      comments: true
+  - # Blog Draft
     scope:
       path: "_drafts"
     values:

@@ -3,6 +3,7 @@ authors:
   - evinas
   - ilaborie
 tags: [MKTD, Java, REST, Feign, Retrofit]
+comments: true
 ---
 
 Les deux technologies bien que très semblables disposent chacune de ses forces et ses faiblesses.

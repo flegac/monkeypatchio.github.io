@@ -3,6 +3,7 @@ authors:
   - evinas
   - ilaborie
 tags: [MKTD, Java, REST, Feign, Retrofit, Android, RxJava]
+comments: true
 ---
 
 Malheureusement nous avons pas eu le temps d'aborder ces sujets sous la forme d'exercice lors du MKTD, mais nous en avons discuter autour de l'apéro de fin

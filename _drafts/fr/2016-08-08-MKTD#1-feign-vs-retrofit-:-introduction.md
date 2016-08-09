@@ -3,6 +3,7 @@ authors:
   - evinas
   - ilaborie
 tags: [MKTD, Java, REST, Feign, Retrofit]
+comments: true
 ---
 
 Nous avons organisé à Toulouse début juillet le premier [MonkeyTechDays](http://www.monkeytechdays.com/).

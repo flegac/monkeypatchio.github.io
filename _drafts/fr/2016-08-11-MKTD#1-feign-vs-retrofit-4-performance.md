@@ -3,6 +3,7 @@ authors:
   - evinas
   - ilaborie
 tags: [MKTD, Java, REST, Feign, Retrofit, Cookie]
+comments: true
 ---
 
 Le but de cet exercice était d’utiliser toutes les solutions possibles, hormis le cache pour améliorer les requêtes.
