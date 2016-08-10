@@ -3,10 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var menuHeight = document.querySelector('.menu').offsetHeight;
   var showElement = function (query) {
     return function () {
-      var selector = '#' + this.id + ' + ' + query;
-      var element = document.querySelector(selector);
+      var element = query ? document.querySelector('#' + this.id + ' + ' + query) : this;
       var left = element.offsetLeft;
-      var top = element.offsetTop
+      var top = element.offsetTop;
       window.scrollTo(left, top - menuHeight);
     }
   };
@@ -19,9 +18,15 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Auto Show Job
-  var jobs = document.querySelectorAll('.job .jobs .list input[type=radio]');
-  var showJobElement = showElement('.job');
+  var jobs = document.querySelectorAll('.job .jobs .list .job a');
+  var showJobElement = showElement();
   for (i = 0; i < jobs.length; i++) {
-    jobs[i].addEventListener('change', showJobElement);
+    jobs[i].addEventListener('click', function () {
+      var that = this;
+      setTimeout(function () {
+        showJobElement.call(that);
+        that.href = /.*#$/.test(that.href) ? '#' + that.parentNode.id : '#';
+      }, 100);
+    });
   }
 });
