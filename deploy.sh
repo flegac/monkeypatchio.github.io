@@ -12,9 +12,10 @@ else
   echo "Clone master"
   git clone --depth 1 --branch master https://github.com/MonkeyPatchIo/monkeypatchio.github.io $DEST
 fi
+jekyll clean
 
 echo "Build"
-jekyll build
+jekyll build --draft
 
 pushd $DEST
   echo "Clean old files"

@@ -361,8 +361,6 @@ Retrofit reste simple à utiliser. Le fait que les principaux converters soient 
 
 Retrofit a ses propres annotations, évitant ainsi les erreurs de typo est une très bonne chose. Bien que feign se soit amélioré sur les messages d’erreurs, nous trouvons préférable le choix qu’à fait l’équipe de rétrofit sur cette partie.
 
-[La suite du MKTD#1: Aller plus loin]({% post_url 2016-08-10-MKTD#1-feign-vs-retrofit-2-aller-plus-loin %})
-
 *[MKTD]: MonkeyTechDays
 *[HTTP]: HyperText Transfer Protocol
 *[REST]: REpresentational State Transfer

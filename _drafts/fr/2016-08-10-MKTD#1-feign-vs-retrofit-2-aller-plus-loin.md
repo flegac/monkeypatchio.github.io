@@ -4,40 +4,50 @@ authors:
   - ilaborie
 tags: [MKTD, Java, REST, Feign, Retrofit, Cookie]
 comments: true
+published: false
 ---
 
-Le deuxième défi est destiné à aller plus loin, et d’adresser des problèmes plus avancés:
-
-* l'authentification
-* la gestion des erreurs (Exception)
-* l’upload et le download de fichiers
-
-<!--more-->
-1
 [MKTD#1 Article précédent: Prise en main]({% post_url 2016-08-09-MKTD#1-feign-vs-retrofit-1-prise-en-main %})
 
-Pour l’authentification, le serveur fournit un mécanisme à base de [JWT](https://jwt.io/) et de [Cookie](https://tools.ietf.org/html/rfc6265), une autre interface décrit cette nouvelle opération.
+## Défi 2: Aller plus loin...
+
+Le deuxième défi permet d’adresser des problèmes plus avancés comme :
+
+* l'authentification,
+* la gestion des erreurs via des `Exception` Java,
+* l’*upload* et le *download* de fichiers.
+
+<!--more-->
+
+### Authentification avec Cookie
+
+Pour l’authentification, le serveur fournit un mécanisme à base de [JWT](https://jwt.io/) et de [Cookie](https://tools.ietf.org/html/rfc6265), une autre interface Java décrit cette nouvelle opération:
 
 {% highlight java linenos %}
 public interface AuthenticationApi {
+  
     String login(LoginPassword loginPassword) throws SecurityException;
 }
 {% endhighlight %}
 
-Dans l'entête de la réponse, se trouve un `Set-Cookie` qu’il faudra décoder, puis envoyer ce cookie dans les requêtes aux autres services.
+Dans l'entête de la réponse HTTP se trouve un `Set-Cookie` qu’il faudra décoder, puis envoyer ce cookie dans les requêtes aux autres services.
+
+> Les solutions à base de *token* sont un peu plus simples à mettre en oeuvre avec Feign et Retrofit, mais ici l'objectif n'était pas de faire les choses les plus simples. Pour plus d'information vous pouvez regarder [ce blog].(https://auth0.com/blog/angularjs-authentication-with-cookies-vs-token/)
+
+### Gestion des erreurs
 
 Pour la gestion des erreurs nous devons renvoyer une erreur spécifique en fonction du code HTTP retourné par le serveur lors de l'appel à une méthode de nos service.
-Le code qui détermine quelle exception à retourner est le suivant: 
+Le code qui détermine quelle exception à retourner est le suivant : 
 
 {% highlight java linenos %}
 public static RuntimeException decodeError(int status, String message, Supplier<RuntimeException> defaultCase) {
     switch (status) {
-        case 404:
+        case 404: // Not Found
             return new NoSuchElementException(message);
-        case 400:
+        case 400: // Bad Request
             return new IllegalArgumentException(message);
-        case 401:
-        case 403:
+        case 401: // Unauthorized
+        case 403: // Forbidden
             return new SecurityException(message);
         default:
             return defaultCase.get();
@@ -47,8 +57,28 @@ public static RuntimeException decodeError(int status, String message, Supplier<
 
 ## Feign
 
-### Tips: log des requêtes HTTP
+### Astuce: log des requêtes HTTP
+
+Pour facilité le développement de ce défi il va être très pratique de pouvoir afficher des *logs* sur les requêtes ou les réponses HTTP.
+
+#### Quick & Dirty
+
+La solution la plus directe est d'utiliser un `RequestInterceptor` qui va être appeler par Feign avant de construire la requête HTTP, et de faire un `System.out`. 
+
+{% highlight java linenos %}
+Feign.builder()
+        .interceptor(System.out::println) // Quick & Dirty debug
+        .decoder(new GsonDecoder())
+        .encoder(new GsonEncoder())
+        .target(MonkeyRaceApi.class, url);
+{% endhighlight %}
+
+Evidement ça ne marche que pour la requête HTTP.
+
+#### Solution avec un logger Feign
+
 TODO
+
 
 ### Authentification avec Cookie
 

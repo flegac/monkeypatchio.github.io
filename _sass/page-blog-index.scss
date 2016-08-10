@@ -29,8 +29,15 @@
         text-align: justify;
       }
       .content {
+        clear: both;
         h1, h2, h3, h4, h5, h6 {
           display: none;
+        }
+        a {
+          display: none;
+          &.readmore {
+            display: inline;
+          }
         }
       }
       .authors{

@@ -133,6 +133,7 @@ defaults:
     values:
       layout: post
       comments: true
+      published: true
   - scope:
       path: "_posts/fr"
     values:
@@ -143,6 +144,7 @@ defaults:
       path: "_drafts"
     values:
       layout: post
+      comments: true
   - scope:
       path: "_drafts/fr"
     values:

@@ -7,13 +7,13 @@
   <section class="post">
     <h1>
       <span>{{page.title}}</span>
-      <span class="count"><script id="dsq-count-scr" src="//monkeypatchblog.disqus.com/count.js" async></script></span>
       <span class="date">{% include date.html date=page.date %}</span>
       <div class="authors">
         {% for author in page.authors %}
           <span>{{ site.data.authors[author].name }}</span> 
         {% endfor %}
       </div>
+      <!--<a href="#disqus_thread" class="count"><script id="dsq-count-scr" src="//monkeypatchblog.disqus.com/count.js" async></script></a>-->
     </h1>
 
     <div class="tags">

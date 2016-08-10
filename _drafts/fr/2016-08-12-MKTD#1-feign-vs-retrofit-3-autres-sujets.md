@@ -4,8 +4,8 @@ authors:
   - ilaborie
 tags: [MKTD, Java, REST, Feign, Retrofit, Android, RxJava]
 comments: true
+published: false
 ---
-
 
 Le but de cet exercice était d’utiliser toutes les solutions possibles, hormis le cache pour améliorer les requêtes.
 La JVM ayant plein d'astuce d'optimisation (comme la compilation en code natif à chaud JIT), il est vite compliqué de faire des benchmarks 'valable' en Java.
