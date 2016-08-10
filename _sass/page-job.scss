@@ -16,11 +16,13 @@
 
   .job-top {
     margin-top: 3.75rem;
-    background-image:url('/public/images/background/recutement.jpg');
-    background-repeat: no-repeat;
-    background-position: 50% center;
-    background-size: cover;
-    height: 480px;
+    img {
+      max-width: 100vw;
+      max-height: calc(100vh - 8rem);
+    }
+  }
+  & > .title {
+    display: none;
   }
 
   .jobs {
