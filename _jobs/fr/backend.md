@@ -1,33 +1,44 @@
 ---
-title: Back End Java/JEE (H/F)  
-subtitle: (Labège – 5 à 8 ans d’expériences)
-order: 4
+title: titles.job.backend  
+order: 2
 image: public/images/monkies/back-end.png
-techno: Java – JEE – JBoss – Git  
-subtechno: (Projet au sein d’une PME)
+techno: [Java/JEE, SQL, NoSQL, Messaging] 
 ---
 
-## La mission
+MonkeyPatch société d’expertise informatique recherche des consultants Back-End. Vous êtes technophile et aimez les challenges techniques ? Vous souhaitez rejoindre une équipe dynamique passionnée par l’informatique ?
 
-Au sein du département développement d’un grand compte toulousain, vous intégrez une équipe constituée de passionnés avec l’esprit open source :
+### Poste et mission
 
-* Recueil des besoins
-* Conception
-* Etre force de proposition sur l'ergonomie et la performance
-* Développement
-* Tests et mise en production.
+En tant qu’expert Back-End, vous n'avez pas peur de vous plonger dans les languages de programmation Back End et les Bases de données.
+Vous aurez comme missions :
 
-## Profil recherché
+ * Contribuer au développement back-end
+ * Proposer de nouvelles fonctionnalités et des améliorations
+ * Apporter un rôle de conseil et d’expertise technique
+ * Etre force de proposition sur les performances et l’architecture
+ * Assurer une veille permanente autour des usages, des technologies dans le domaine du serveur et de la base de donnée
+ * Et (selon mission et expériences) assurer le lead technique du projet
 
-De formation supérieure Bac+5 (Ecole d'ingénieurs, Master) vous avez acquis une expérience de 5 ans minimum dans le développement JEE.
+Au sein de notre équipe vous serez amené également à participer régulièrement à des événements techniques permettant de se confronter nouvelles orientations techniques et de mettre en commun votre savoir-faire.
 
-* Vous maîtrisez l’environnement Java, JBoss et Git.
-* Vous avez réalisé plusieurs projets en mode Agile ou Lean Startup
-* Hormis une expérience sur les technologies Java/JEE, des connaissances sur des technologies back-end telles Symfony2, Laravel, Silex, Python/Django, Ruby on Rails, sur la conception d'API REST seraient un plus.
+### Profil Recherché
+
+Vous maîtrisez une ou plusieurs technologies Back End et prêtez attention à la performance et la fiabilité de vos développement et vous avez l'habitude de travailler dans un environnement agile.
+Vous pratiquez ces technologies. 
+    
+ * Au moins un des Langages : Java, Scala, Go, Ruby, Kotlin, Rust
+ * Messaging AMQP, Kafka, JMS
+ * Web services principalement REST
+ * Bases de données NoSQL, SQL
+ * Tests Unitaires, Tests d'intégrations...
+
+### Plus
+
+La connaissance en Front end est un plus. 
 
 ## Modalités
 
-* Lieu de travail: Labèbe
-* Date de disponibilité: ASAP
-* Rémunération : suivant profil
+* Lieu de travail: ~ Toulouse
+* Date de disponibilité: Asap
+* Rémunération : Attractive
 * Type de contrat: CDI

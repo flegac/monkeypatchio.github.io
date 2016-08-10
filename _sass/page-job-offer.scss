@@ -3,5 +3,13 @@ body.job {
   main {
     min-height: calc(100vh - 11.75rem);
     padding: 5.5rem 10vw 1.5rem 10vw;
+
+    .profile {
+      float: right;
+      margin-left: 1rem; 
+    }
+    p {
+      text-align: justify;
+    }
   }
 }

@@ -78,6 +78,7 @@
             padding: 0 1rem;
             text-align: left;
             flex: 1 1 40%; 
+            line-height: 4rem;
             width: 50%;
             color: $grey4;
             transition: all 0.4s ease-in-out;
@@ -87,6 +88,12 @@
           }
           div.techno {
             margin-left: .25rem;
+            span {
+              padding: 0;
+              &:not(:last-child)::after {
+                content: ', ';
+              }
+            }
           }
           .open, .close {
             color: $blue1;

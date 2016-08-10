@@ -1,20 +1,21 @@
 ---
-title: Expert Front-End (H/F)
-subtitle: (Toulouse - 5 ans d'expérience minimum)
+title: titles.job.frontend
 order: 1
-image: /public/images/monkies/front-end.png
-techno: HTML 5 - CSS 3 - Javascript
+image: public/images/monkies/front-end.png
+techno: [HTML5, CSS3, JavaScript]
 ---
-MonkeyPatch société d’expertise informatique recherche des consultants Front-end. Vous êtes technophile et aimez les challenges techniques ? Vous souhaitez rejoindre une équipe dynamique passionnée par l’informatique ?
 
-## Poste et missions
+# Expert Front End
 
-En tant qu’expert Front-End, vous jouerez un véritable rôle de pivot entre le Design (UX/UI) et le Développement Back-End. 
-En étroite collaboration avec la "tribu" de la société, vous intégrerez soit les projets techniques de nos clients soit l’un de nos projets internes. 
+MonkeyPatch société d’expertise informatique recherche des consultants Front-End. Vous êtes technophile et aimez les challenges techniques ? Vous souhaitez rejoindre une équipe dynamique passionnée par l’informatique ?
+
+### Poste et mission
+
+En tant qu’expert Front-End, vous jouerez un véritable rôle de pivot entre le Design (UX/UI) et le Développement Back-End.
 Vous aurez comme missions :
 
 * Contribuer au développement front-end
-* Proposer de nouvelles fonctionnalités et des améliorations,
+* Proposer de nouvelles fonctionnalités et des améliorations
 * Apporter un rôle de conseil et d’expertise technique
 * Etre force de proposition sur les performances et l’architecture
 * Assurer une veille permanente autour des usages, des technologies dans le domaine du web & du mobile
@@ -24,15 +25,21 @@ Au sein de notre équipe vous serez amené également à participer régulièrem
 
 ## Profil recherché
 
-Issu(e) d’une formation informatique de niveau Bac+5, vous possédez au minimum six ans d’expériences en développement front-end en société de services ou en agence digitale.
+HTML5, CSS3 et le responsive design n’ont aucun secret pour vous.
+Vous savez exploiter toutes les possibilités de JavaScript natif ainsi que les principaux frameworks associés :
 
-* HTML5, CSS3 et le responsive design n’ont aucun secret pour vous
-* Vous savez exploiter toutes les possibilités de JavaScript natif ainsi que les principaux frameworks associés : AngularJS, Node. js, jQuery, Blackbone.js ou Ember.js,…
-*  La maîtrise des web-services et d'un environnement back-end de type Java JEE est un plus
+ * JavaScript, EmacScript 6+, TypeScript
+ * HTML5 / CSS 3
+ * Au moins un framework js récent (AngularJS, React, Aurelia, ...)
+ * Les outils NodeJS
+
+## Plus
+
+La maîtrise des web-services REST et d’un environnement back-end est un plus.
 
 ## Modalités
 
-* Lieu de travail: Toulouse
-* Date de disponibilité: Dès que possible
-* Rémunération : suivant profil
+* Lieu de travail: ~ Toulouse
+* Date de disponibilité: Asap
+* Rémunération : Attractive
 * Type de contrat: CDI

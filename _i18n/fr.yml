@@ -11,6 +11,12 @@ titles:
   blog: "Blog"
   terms: "Termes et conditions"
   404: "404: quelque-chose s'est mal passé"
+  job:
+    frontend: Expert Front-End
+    backend: Expert Back-End
+    mobile: Expert Mobile
+    devops: Expert DevOps
+    bigdata: Expert Big Data 
 general: 
   talk-to-us: "Nous contacter"
   get-in-touch: "Rester en contact"
