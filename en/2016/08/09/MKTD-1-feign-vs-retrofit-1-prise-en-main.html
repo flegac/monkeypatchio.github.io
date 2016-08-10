@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<!--  lastBuildDate : Wed, 10 Aug 2016 09:30:33 +0200 -->
+<html>
+<head>
+  <title></title>
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <!-- Google site verification -->
+  <meta name="google-site-verification" content="Gq_ytzUtfYn95WsiH66e4Lfb8zANT-LUwD8JgH9xXdw" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Expertise informatique, Dévelopement informatique" />
+  <meta name="description" content="Société de conseil et d'expertise en informatique spécialisée dans les nouvelles technologies." />
+  <meta name="author" content="">
+  <!-- Begin SEO tags -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:title" content="" />
+
+
+
+  <meta name="description" content="IntroductionNous avons organisé à Toulouse début juillet le premier MonkeyTechDays chez HarryCow.Un MKTD consiste à comparer, apprendre sous forme de défis une ou plusieurs technologies sur une journée.Ce premier événement était l’occasion d’approfondir les technologies de clients REST en Java. Nous avons étudié Feign, une librairie initiée par Netflix et Retrofit écrite par Square. Ces deux API permettent d’écrire des clients REST en Java de façon plus élégante qu’avec les solutions plus classiques (JAX-RS client, Spring Rest Template, …)" />
+  <meta property="og:description" content="IntroductionNous avons organisé à Toulouse début juillet le premier MonkeyTechDays chez HarryCow.Un MKTD consiste à comparer, apprendre sous forme de défis une ou plusieurs technologies sur une journée.Ce premier événement était l’occasion d’approfondir les technologies de clients REST en Java. Nous avons étudié Feign, une librairie initiée par Netflix et Retrofit écrite par Square. Ces deux API permettent d’écrire des clients REST en Java de façon plus élégante qu’avec les solutions plus classiques (JAX-RS client, Spring Rest Template, …)" />
+
+
+
+  <link rel="canonical" href="http://www.monkeypatch.io/en/2016/08/09/MKTD-1-feign-vs-retrofit-1-prise-en-main.html" />
+  <meta property="og:url" content="http://www.monkeypatch.io/en/2016/08/09/MKTD-1-feign-vs-retrofit-1-prise-en-main.html" />
+
+
+
+  <meta property="og:site_name" content="MonkeyPatch - Expertise Informatique" />
+
+
+
+
+
+
+
+
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2016-08-09T00:00:00+02:00" />
+
+
+
+
+
+
+  
+    <meta name="twitter:card" content="summary" />
+  
+
+  <meta name="twitter:site" content="@MonkeyPatch_io" />
+
+  
+    <meta name="twitter:creator" content="@EmmanuelVinas" />
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+
+    "@type": "BlogPosting",
+
+
+
+    "headline": "",
+
+
+
+    "datePublished": "2016-08-09T00:00:00+02:00",
+
+
+    "description": "IntroductionNous avons organisé à Toulouse début juillet le premier MonkeyTechDays chez HarryCow.Un MKTD consiste à comparer, apprendre sous forme de défis une ou plusieurs technologies sur une journée.Ce premier événement était l’occasion d’approfondir les technologies de clients REST en Java. Nous avons étudié Feign, une librairie initiée par Netflix et Retrofit écrite par Square. Ces deux API permettent d’écrire des clients REST en Java de façon plus élégante qu’avec les solutions plus classiques (JAX-RS client, Spring Rest Template, …)",
+
+
+    "logo": "http://www.monkeypatch.io/en/public/images/logos/logo-mkp-blue.png",
+
+
+    "url": "http://www.monkeypatch.io/en/2016/08/09/MKTD-1-feign-vs-retrofit-1-prise-en-main.html"
+  }
+</script>
+
+<!-- End Jekyll SEO tag -->
+
+  
+  
+  <link rel="alternate" hreflang="fr" href="http://www.monkeypatch.io/index" />
+  
+
+  <link rel="shortcut icon" href="favicon.ico">
+  
+  <!-- Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Fira+Mono:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link id="theme-style" rel="stylesheet" href="/css/main.css">
+</head>
+
+<body class="post">
+  <header>
+  <div class="menu">
+    <div class="logo">
+      <a href="/en/index">
+        <img alt="Monkey Patch" src="/public/images/logos/logo-monkey.svg">
+      </a>
+    </div>
+    
+    <nav class="lang">
+      <ul>
+        <li class="active">
+          <a href="en/2016/08/09/MKTD-1-feign-vs-retrofit-1-prise-en-main.html" >EN</a>
+        </li>
+        <li class="sep">|</li>
+        <li class="">
+          <a href="/2016/08/09/MKTD-1-feign-vs-retrofit-1-prise-en-main.html" >FR</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <nav class="menu">
+      <ul>
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li class="">
+              <a href="/en/expert">Our expertise</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/about">Our thoughts</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/careers">Be a Monkey</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/job">Our Jobs</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/contact">Contact</a>
+            </li>
+          
+        
+        <li class="">
+          <a href="/en/blog">Blog</a>
+        </li>
+      </ul>
+    </nav>
+      
+    <nav class="hamburger">
+      <label for="menu-hamburger">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </label>
+    </nav>
+    
+  </div>
+  <input type="checkbox" id="menu-hamburger"/>
+  <nav class="menu-hamburger">
+     <ul>
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li class="">
+              <a href="/en/expert">Our expertise</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/about">Our thoughts</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/careers">Be a Monkey</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/job">Our Jobs</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/contact">Contact</a>
+            </li>
+          
+        
+      </ul>
+      <ul class="lang">
+        <li class="active">
+          <a href="en/2016/08/09/MKTD-1-feign-vs-retrofit-1-prise-en-main.html" >EN</a>
+        </li>
+        <li class="">
+          <a href="/2016/08/09/MKTD-1-feign-vs-retrofit-1-prise-en-main.html" >FR</a>
+        </li>
+      </ul>
+  </nav>
+</header>
+<a id="top"></a>
+
+  <section class="post">
+    <h1>
+      <span>Mktd#1 Feign Vs Retrofit 1 Prise En Main</span>
+      <span class="date">
+
+  09 August, 2016
+
+</span>
+      <div class="authors">
+        
+          <span>Emmanuel Vinas</span> 
+        
+          <span>Igor Laborie</span> 
+        
+      </div>
+      <!--<a href="#disqus_thread" class="count"><script id="dsq-count-scr" src="//monkeypatchblog.disqus.com/count.js" async></script></a>-->
+    </h1>
+
+    <div class="tags">
+      
+        <span>MKTD</span> 
+      
+        <span>Java</span> 
+      
+        <span>REST</span> 
+      
+        <span>Feign</span> 
+      
+        <span>Retrofit</span> 
+       
+    </div>
+
+    <article><h2 id="introduction">Introduction</h2>
+
+<p>Nous avons organisé à Toulouse début juillet le premier <a href="http://www.monkeytechdays.com/">MonkeyTechDays</a> chez <a href="http://www.harrycow.com/">HarryCow</a>.
+Un <abbr title="MonkeyTechDays">MKTD</abbr> consiste à comparer, apprendre sous forme de défis une ou plusieurs technologies sur une journée.</p>
+
+<p>Ce premier événement était l’occasion d’approfondir les technologies de clients <abbr title="REpresentational State Transfer">REST</abbr> en Java. Nous avons étudié <a href="https://github.com/OpenFeign/feign">Feign</a>, une librairie initiée par <a href="https://netflix.github.io/">Netflix</a> et <a href="http://square.github.io/retrofit/">Retrofit</a> écrite par <a href="https://github.com/square">Square</a>. Ces deux <abbr title="Application Programming Interface">API</abbr> permettent d’écrire des clients <abbr title="REpresentational State Transfer">REST</abbr> en Java de façon plus élégante qu’avec les solutions plus classiques (JAX-RS client, Spring Rest Template, …)
+<!--more--></p>
+
+<p>Pour aider les équipes à tester les technologies nous avions au préalable déployé plusieurs services <abbr title="REpresentational State Transfer">REST</abbr> sur le thème des singes.
+Le code source de cette journée est disponible à l’adresse : <a href="https://github.com/monkeytechdays">https://github.com/monkeytechdays</a></p>
+
+<h2 id="dfi-0--constitution-des-quipes">Défi 0 : Constitution des équipes</h2>
+
+<p>Ce défi n’avait rien de technique mais nous a permis de constituer des équipes équitables pour chaque technologie, en finissant nos cafés, croissants, … L’équipe Feign étant dirigée par <a href="https://twitter.com/ilaborie">Igor</a> et l’équipe Retrofit par <a href="https://twitter.com/EmmanuelVinas">Emmanuel</a>.</p>
+
+<h2 id="dfi-1">Défi 1:</h2>
+
+<p>Ce premier défi consistait à une mise en bouche pour découvrir ces technologies.</p>
+
+<p>Le principe d’utilisation de <a href="https://github.com/OpenFeign/feign">Feign</a> et <a href="http://square.github.io/retrofit/">Retrofit</a> consiste à créer une interface décrivant le service <abbr title="REpresentational State Transfer">REST</abbr>, l’<abbr title="Application Programming Interface">API</abbr> se charge de créer une instance de cette interface.
+Dans ce premier défi, les interfaces étaient fournies, il suffisait de compléter le code pour faire passer des tests unitaires.</p>
+
+<p>Voici les deux interfaces retournant du <abbr title="JavaScript Object Notation">JSON</abbr> :</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonkeyApi</span> <span class="o">{</span>
+   <span class="n">Page</span><span class="o">&lt;</span><span class="n">Monkey</span><span class="o">&gt;</span> <span class="nf">getMonkeys</span><span class="o">(</span><span class="kt">int</span> <span class="n">page</span><span class="o">);</span>
+   <span class="n">Monkey</span> <span class="nf">getMonkeyByName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">);</span>
+   <span class="n">Monkey</span> <span class="nf">createMonkey</span><span class="o">(</span><span class="n">Monkey</span> <span class="n">monkey</span><span class="o">);</span>
+   <span class="kt">void</span> <span class="nf">deleteMonkey</span><span class="o">(</span><span class="n">String</span> <span class="n">id</span><span class="o">);</span>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonkeyRaceApi</span> <span class="o">{</span>
+    <span class="n">List</span><span class="o">&lt;</span><span class="n">MonkeyRace</span><span class="o">&gt;</span> <span class="nf">getMonkeyRaces</span><span class="o">();</span>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>et une interface dont le service retourne du <abbr title="eXtensible Markup Language">XML</abbr> :</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonkeyStatsApi</span> <span class="o">{</span>
+    <span class="n">MonkeyStatistics</span> <span class="nf">getMonkeyStats</span><span class="o">();</span>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Voir le code  <a href="https://github.com/monkeytechdays/mktd1-defi1">https://github.com/monkeytechdays/mktd1-defi1</a></p>
+
+<p>Pour réussir ce défi il faut donc résoudre ces points:</p>
+
+<ul>
+  <li>faire un GET et décoder le <abbr title="JavaScript Object Notation">JSON</abbr> de la réponse,</li>
+  <li>faire un GET avec un paramètre de requête,</li>
+  <li>faire un GET avec un paramètre dans le <em>path</em> de la requête,</li>
+  <li>faire un POST avec un encodage en <abbr title="JavaScript Object Notation">JSON</abbr> du corps de la requête,</li>
+  <li>faire un DELETE</li>
+  <li>faire un GET et décoder le <abbr title="eXtensible Markup Language">XML</abbr> e la réponse</li>
+</ul>
+
+<h2 id="feign">Feign</h2>
+
+<p>La documentation de Feign se trouve dans le <a href="https://github.com/OpenFeign/feign">README.md</a> sous GitHub. La documentation des extensions se trouve aussi ces fichiers README.md.</p>
+
+<blockquote>
+  <p>Bien que Feign supporte Java 6 par défaut, nous avons codé avec Java 8.</p>
+</blockquote>
+
+<h3 id="dpendances">Dépendances</h3>
+
+<p>Pour commencer à utiliser Feign il faut bien sur ajouter les dépendances nécessaires pour ce défi:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></td><td class="code"><pre><span class="c">&lt;!-- Feign --&gt;</span>
+<span class="nt">&lt;dependency&gt;</span>
+   <span class="nt">&lt;groupId&gt;</span>com.netflix.feign<span class="nt">&lt;/groupId&gt;</span>
+   <span class="nt">&lt;artifactId&gt;</span>feign-core<span class="nt">&lt;/artifactId&gt;</span>
+   <span class="nt">&lt;version&gt;</span>8.17.0<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+<span class="c">&lt;!-- Feign: encode/decode <abbr title="JavaScript Object Notation">JSON</abbr> with GSON --&gt;</span>
+<span class="nt">&lt;dependency&gt;</span>
+   <span class="nt">&lt;groupId&gt;</span>com.netflix.feign<span class="nt">&lt;/groupId&gt;</span>
+   <span class="nt">&lt;artifactId&gt;</span>feign-gson<span class="nt">&lt;/artifactId&gt;</span>
+   <span class="nt">&lt;version&gt;</span>8.17.0<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+<span class="c">&lt;!-- Feign: encode/decode <abbr title="eXtensible Markup Language">XML</abbr> with JAXB --&gt;</span>
+<span class="nt">&lt;dependency&gt;</span>
+   <span class="nt">&lt;groupId&gt;</span>com.netflix.feign<span class="nt">&lt;/groupId&gt;</span>
+   <span class="nt">&lt;artifactId&gt;</span>feign-jaxb<span class="nt">&lt;/artifactId&gt;</span>
+   <span class="nt">&lt;version&gt;</span>8.17.0<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<blockquote>
+  <p>Nous recommandons bien sur l’utilisation d’une propriété maven pour définir la version de Feign utilisée.</p>
+</blockquote>
+
+<h3 id="configuration-des-interfaces">Configuration des interfaces</h3>
+
+<p>Ensuite il faut annoter les interfaces pour que Feign fasse les requêtes <abbr title="HyperText Transfer Protocol">HTTP</abbr> correspondantes. Feign apporte ses propres annotations pour décrire les requêtes <abbr title="HyperText Transfer Protocol">HTTP</abbr>:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">@RequestLine</code>: permet de définir la première ligne de la requête <abbr title="HyperText Transfer Protocol">HTTP</abbr>: le verbe <abbr title="HyperText Transfer Protocol">HTTP</abbr> (GET, POST, PUT, DELETE, …) et le chemin, on y précise aussi les paramètres de la requête. On peut utiliser la notation <code class="highlighter-rouge"><span class="p">{</span><span class="err">name</span><span class="p">}</span></code> pour définir une partie variable de la requête (paramètre ou chemin)</li>
+  <li><code class="highlighter-rouge">@Param</code>: cette annotation permet de faire le lien entre une variable définit dans les autres annotations (<code class="highlighter-rouge">@RequestLine</code>, <code class="highlighter-rouge">@Headers</code>, …) et le paramètre de la méthode. Il faut préciser le nom de la variable dans l’annotation.</li>
+  <li><code class="highlighter-rouge">@Headers</code>: permet d’ajouter une entête <abbr title="HyperText Transfer Protocol">HTTP</abbr>, comme pour <code class="highlighter-rouge">@RequestLine</code> on peut utiliser la notation <code class="highlighter-rouge"><span class="p">{</span><span class="err">name</span><span class="p">}</span></code> pour définir une valeur variable dans l’entête <abbr title="HyperText Transfer Protocol">HTTP</abbr>. Cette annotation peut être mis sur l’interface ou sur une méthode de cette interface. 
+Pas d’annotation pour le corps d’une requête POST ou PUT, le paramètre sans annotation sera convertie dans le corps de la requête.</li>
+</ul>
+
+<p>Ce qui nous donne ceci :</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonkeyRaceApi</span> <span class="o">{</span>
+    <span class="nd">@RequestLine</span><span class="o">(</span><span class="s">"GET /races"</span><span class="o">)</span>
+    <span class="n">List</span><span class="o">&lt;</span><span class="n">MonkeyRace</span><span class="o">&gt;</span> <span class="nf">getMonkeyRaces</span><span class="o">();</span>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14</pre></td><td class="code"><pre><span class="nd">@Headers</span><span class="o">(</span><span class="s">"Content-Type: application/json"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonkeyApi</span> <span class="o">{</span>
+    <span class="nd">@RequestLine</span><span class="o">(</span><span class="s">"GET ?page={page}"</span><span class="o">)</span>
+    <span class="n">Page</span><span class="o">&lt;</span><span class="n">Monkey</span><span class="o">&gt;</span> <span class="nf">getMonkeys</span><span class="o">(</span><span class="nd">@Param</span><span class="o">(</span><span class="s">"page"</span><span class="o">)</span> <span class="kt">int</span> <span class="n">page</span><span class="o">);</span>
+
+    <span class="nd">@RequestLine</span><span class="o">(</span><span class="s">"GET /{name}"</span><span class="o">)</span>
+    <span class="n">Monkey</span> <span class="nf">getMonkeyByName</span><span class="o">(</span><span class="nd">@Param</span><span class="o">(</span><span class="s">"name"</span><span class="o">)</span> <span class="n">String</span> <span class="n">name</span><span class="o">);</span>
+
+    <span class="nd">@RequestLine</span><span class="o">(</span><span class="s">"POST "</span><span class="o">)</span>
+    <span class="n">Monkey</span> <span class="nf">createMonkey</span><span class="o">(</span><span class="n">Monkey</span> <span class="n">monkey</span><span class="o">);</span>
+
+    <span class="nd">@RequestLine</span><span class="o">(</span><span class="s">"DELETE /{id}"</span><span class="o">)</span>
+    <span class="kt">void</span> <span class="nf">deleteMonkey</span><span class="o">(</span><span class="nd">@Param</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span> <span class="n">String</span> <span class="n">id</span><span class="o">);</span>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonkeyStatsApi</span> <span class="o">{</span>
+    <span class="nd">@RequestLine</span><span class="o">(</span><span class="s">"GET /stats"</span><span class="o">)</span>
+    <span class="n">MonkeyStatistics</span> <span class="nf">getMonkeyStats</span><span class="o">();</span>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<h3 id="construction-des-instances">Construction des instances</h3>
+
+<p>Ensuite on utiliser l’<abbr title="Application Programming Interface">API</abbr> <em>fluent builder</em> de Feign pour créer l’instance de ces interfaces. C’est ici que l’on va faire intervenir les encodeurs/décodeurs que l’on a ajouter dans nos dépendances plus tôt :</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5</pre></td><td class="code"><pre><span class="kd">static</span> <span class="n">MonkeyRaceApi</span> <span class="nf">buildRaceApi</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">Feign</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
+            <span class="o">.</span><span class="na">decoder</span><span class="o">(</span><span class="k">new</span> <span class="n">GsonDecoder</span><span class="o">())</span> <span class="c1">// Decode <abbr title="JavaScript Object Notation">JSON</abbr> from respone body</span>
+            <span class="o">.</span><span class="na">target</span><span class="o">(</span><span class="n">MonkeyRaceApi</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">url</span><span class="o">);</span>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6</pre></td><td class="code"><pre><span class="kd">static</span> <span class="n">MonkeyApi</span> <span class="nf">buildMonkeyApi</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">Feign</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
+            <span class="o">.</span><span class="na">decoder</span><span class="o">(</span><span class="k">new</span> <span class="n">GsonDecoder</span><span class="o">())</span> <span class="c1">// Decode <abbr title="JavaScript Object Notation">JSON</abbr> from respone body</span>
+            <span class="o">.</span><span class="na">encoder</span><span class="o">(</span><span class="k">new</span> <span class="n">GsonEncoder</span><span class="o">())</span> <span class="c1">// Encode <abbr title="JavaScript Object Notation">JSON</abbr> for request body</span>
+            <span class="o">.</span><span class="na">target</span><span class="o">(</span><span class="n">MonkeyApi</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">url</span> <span class="o">+</span> <span class="s">"/monkeys"</span><span class="o">);</span>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10</pre></td><td class="code"><pre><span class="kd">static</span> <span class="n">MonkeyStatsApi</span> <span class="nf">buildStatsApi</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// Create JAXB context factory</span>
+    <span class="n">JAXBContextFactory</span> <span class="n">jaxbFactory</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JAXBContextFactory</span><span class="o">.</span><span class="na">Builder</span><span class="o">()</span>
+            <span class="o">.</span><span class="na">withMarshallerJAXBEncoding</span><span class="o">(</span><span class="s">"UTF-8"</span><span class="o">)</span>
+            <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+
+    <span class="k">return</span> <span class="n">Feign</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
+            <span class="o">.</span><span class="na">decoder</span><span class="o">(</span><span class="k">new</span> <span class="n">JAXBDecoder</span><span class="o">(</span><span class="n">jaxbFactory</span><span class="o">))</span> <span class="c1">// Decode <abbr title="eXtensible Markup Language">XML</abbr> from response body</span>
+            <span class="o">.</span><span class="na">target</span><span class="o">(</span><span class="n">MonkeyStatsApi</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">url</span><span class="o">);</span>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<blockquote>
+  <p>Feign va concaténer l’<abbr title="Uniform Resource Locator">URL</abbr> avec le chemin définit dans le chemin de l’annotation <code class="highlighter-rouge">@RequestLine</code>, ceci permet facilement de rajouter un préfixe pour les services si on le souhaite.</p>
+</blockquote>
+
+<h3 id="bilan">Bilan</h3>
+
+<p>Peu de points négatifs pour Feign dans cet exercice:</p>
+
+<ul>
+  <li>pour faire fonctionner le décodage <abbr title="eXtensible Markup Language">XML</abbr> il a fallut triturer un peu l’objet pour que <a href="https://docs.oracle.com/javase/tutorial/jaxb/intro/">JAXB</a> deserialize correctement le <abbr title="eXtensible Markup Language">XML</abbr>. Mais c’est plus un problème lié à JAXB et au <abbr title="eXtensible Markup Language">XML</abbr> de façon plus général,</li>
+  <li>Les messages d’erreurs sont parfois pas simple à décrypter, mais avec un peu de pratique et une connaissance basique du protocole <abbr title="HyperText Transfer Protocol">HTTP</abbr> ça n’est pas vraiment un problème. Un problème classique est le fait d’oublier le verbe <abbr title="HyperText Transfer Protocol">HTTP</abbr> dans l’annotation <code class="highlighter-rouge">@RequestLine</code>.</li>
+</ul>
+
+<p>Beaucoup de coté positif ici:</p>
+
+<ul>
+  <li>simple et proche du <abbr title="HyperText Transfer Protocol">HTTP</abbr>,</li>
+  <li>très léger, il n’y a pas de dépendances transitives pour le <code class="highlighter-rouge">feign-core</code>,</li>
+  <li>facilement extensible: par exemples il est facile de changer d’encodeur/décodeur <a href="https://github.com/OpenFeign/feign/tree/master/gson">GSON</a>, <a href="https://github.com/OpenFeign/feign/tree/master/jackson">Jackson</a>, <a href="https://github.com/OpenFeign/feign/tree/master/jaxb">JAXB</a>, …,</li>
+  <li>il y a un bon support de Java 8, par exemples les méthodes <code class="highlighter-rouge">static</code> et <code class="highlighter-rouge">default</code> des interfaces de Java 8 sont supportées.</li>
+</ul>
+
+<p>Quelques remarques:</p>
+
+<ul>
+  <li>il y a d’autres annotations <code class="highlighter-rouge">@Body</code>, <code class="highlighter-rouge">@HeaderMap</code>, <code class="highlighter-rouge">@QueryMap</code> qui existent,</li>
+  <li>on peut configurer la façon dont les variables (<code class="highlighter-rouge">@Param</code>) sont convertient en String via les Expander.</li>
+  <li>pour définir un chemin racine à toutes nos méthodes dans l’interface, on peut l’ajouter dans l’<abbr title="Uniform Resource Locator">URL</abbr> utilisé par le builder.</li>
+</ul>
+
+<blockquote>
+  <p>Il n’y a pas de magie dans Feign : il n’utilise que ce qui existe déjà dans le JDK (<code class="highlighter-rouge">java.net.HttpURLConnection</code>, <code class="highlighter-rouge">java.lang.reflect.Proxy</code>, <code class="highlighter-rouge">java.lang.reflect.InvocationHandler</code>, …)</p>
+</blockquote>
+
+<h2 id="retrofit">Retrofit</h2>
+
+<p>La première étape consiste à rajouter les dépendances de Rétrofit</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></td><td class="code"><pre><span class="cp">&lt;! -- Dépendance de rétrofit --&gt;</span>
+<span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>com.squareup.retrofit2<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>retrofit<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>${retrofit.version}<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+<span class="cp">&lt;! -- Converter Jackson pour gérer le Json --&gt;</span>
+<span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>com.squareup.retrofit2<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>converter-jackson<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>${retrofit.version}<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+<span class="c">&lt;!-- Converter Simple Xml pour gérer le xml --&gt;</span>
+<span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>com.squareup.retrofit2<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>converter-simplexml<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>${retrofit.version}<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Ensuite il nous faut rajouter les annotations spécifiques à Retrofit sur l’interface. 
+Les règles du jeu étant de ne pas changer la signature de l’interface, nous avons du ajouter une autre interface utilisée par la <code class="highlighter-rouge">CallFactory</code> par défaut de Retrofit.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonkeyRaceService</span> <span class="o">{</span>
+   <span class="nd">@GET</span><span class="o">(</span><span class="s">"races"</span><span class="o">)</span>
+    <span class="n">Call</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">MonkeyRace</span><span class="o">&gt;&gt;</span> <span class="nf">getMonkeyRaces</span><span class="o">();</span>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonkeyService</span> <span class="o">{</span>
+    <span class="nd">@GET</span><span class="o">(</span><span class="s">"monkeys"</span><span class="o">)</span>
+    <span class="n">Call</span><span class="o">&lt;</span><span class="n">Page</span><span class="o">&lt;</span><span class="n">Monkey</span><span class="o">&gt;&gt;</span> <span class="nf">getMonkeys</span><span class="o">();</span>
+
+    <span class="nd">@GET</span><span class="o">(</span><span class="s">"monkeys/{name}"</span><span class="o">)</span>
+    <span class="n">Call</span><span class="o">&lt;</span><span class="n">Monkey</span><span class="o">&gt;</span> <span class="nf">getMonkeyByName</span><span class="o">(</span><span class="nd">@Path</span><span class="o">(</span><span class="s">"name"</span><span class="o">)</span> <span class="n">String</span> <span class="n">name</span><span class="o">);</span>
+
+    <span class="nd">@POST</span><span class="o">(</span><span class="s">"monkeys"</span><span class="o">)</span>
+    <span class="n">Call</span><span class="o">&lt;</span><span class="n">Monkey</span><span class="o">&gt;</span> <span class="nf">create</span><span class="o">(</span><span class="nd">@Body</span> <span class="n">Monkey</span> <span class="n">monkey</span><span class="o">);</span>
+
+    <span class="nd">@DELETE</span><span class="o">(</span><span class="s">"monkeys/{id}"</span><span class="o">)</span>
+    <span class="n">Call</span><span class="o">&lt;</span><span class="n">ResponseBody</span><span class="o">&gt;</span> <span class="nf">delete</span><span class="o">(</span><span class="nd">@Path</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span> <span class="n">String</span> <span class="n">monkeyId</span><span class="o">);</span>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonkeyStatsService</span> <span class="o">{</span>
+    <span class="nd">@GET</span><span class="o">(</span><span class="s">"/stats"</span><span class="o">)</span>
+    <span class="n">Call</span><span class="o">&lt;</span><span class="n">MonkeyStatistics</span><span class="o">&gt;</span> <span class="nf">getMonkeyStats</span><span class="o">();</span>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Ensuite nous avons implémenté les interfaces <code class="highlighter-rouge">MonkeyApi</code>, <code class="highlighter-rouge">MonkeyRaceApi</code>, <code class="highlighter-rouge">MonkeyStatsApi</code> en utilisant les interfaces spécifiques pour Retrofit.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">RetrofitMonkeyApi</span> <span class="kd">implements</span> <span class="n">MonkeyApi</span><span class="o">,</span> <span class="n">RetrofitApi</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="n">MonkeyService</span> <span class="n">monkeyService</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setBaseUrl</span><span class="o">(</span><span class="n">String</span> <span class="n">baseUrl</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">monkeyService</span> <span class="o">=</span> <span class="n">createRetrofit</span><span class="o">(</span><span class="n">baseUrl</span><span class="o">,</span> <span class="kc">false</span><span class="o">).</span><span class="na">create</span><span class="o">(</span><span class="n">MonkeyService</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">Page</span><span class="o">&lt;</span><span class="n">Monkey</span><span class="o">&gt;</span> <span class="nf">getMonkeys</span><span class="o">(</span><span class="kt">int</span> <span class="n">page</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="nf">executeCall</span><span class="o">(</span><span class="nl">monkeyService:</span><span class="o">:</span><span class="n">getMonkeys</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">Monkey</span> <span class="nf">getMonkeyByName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="nf">executeCall</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="n">monkeyService</span><span class="o">.</span><span class="na">getMonkeyByName</span><span class="o">(</span><span class="n">name</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">Monkey</span> <span class="nf">createMonkey</span><span class="o">(</span><span class="n">Monkey</span> <span class="n">monkey</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="nf">executeCall</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="n">monkeyService</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">monkey</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">deleteMonkey</span><span class="o">(</span><span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">executeCall</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="n">monkeyService</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="n">id</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">RetrofitApi</span> <span class="o">{</span>
+
+    <span class="k">default</span> <span class="n">Retrofit</span> <span class="nf">createRetrofit</span><span class="o">(</span><span class="n">String</span> <span class="n">baseUrl</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">useXml</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Retrofit</span><span class="o">.</span><span class="na">Builder</span> <span class="n">builder</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Retrofit</span><span class="o">.</span><span class="na">Builder</span><span class="o">()</span>
+                <span class="o">.</span><span class="na">baseUrl</span><span class="o">(</span><span class="n">baseUrl</span><span class="o">);</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">useXml</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">builder</span><span class="o">.</span><span class="na">addConverterFactory</span><span class="o">(</span><span class="n">SimpleXmlConverterFactory</span><span class="o">.</span><span class="na">create</span><span class="o">());</span>
+        <span class="o">}</span>
+        <span class="n">builder</span><span class="o">.</span><span class="na">addConverterFactory</span><span class="o">(</span><span class="n">JacksonConverterFactory</span><span class="o">.</span><span class="na">create</span><span class="o">());</span>
+        <span class="k">return</span> <span class="n">builder</span><span class="o">.</span><span class="na">build</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="k">default</span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">T</span> <span class="nf">executeCall</span><span class="o">(</span><span class="n">Supplier</span><span class="o">&lt;</span><span class="n">Call</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span> <span class="n">supplier</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">Call</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">call</span> <span class="o">=</span> <span class="n">supplier</span><span class="o">.</span><span class="na">get</span><span class="o">();</span>
+            <span class="k">return</span> <span class="n">call</span><span class="o">.</span><span class="na">execute</span><span class="o">().</span><span class="na">body</span><span class="o">();</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<h3 id="bilan-1">Bilan</h3>
+
+<h4 id="points-ngatifs">Points négatifs</h4>
+
+<p>Nous avons trouvé dommage qu’il n’y ai pas nativement une <code class="highlighter-rouge">CallFactory</code> permettant de faire de façon synchrone un appel retournant notre objet métier sans avoir besoin de passer par l’objet <code class="highlighter-rouge">Call</code> à la manière dont cela est géré avec Feign.</p>
+
+<p>Il aurait été aussi possible de faire notre propre <code class="highlighter-rouge">CallAdapterFactory</code>. Voici un exemple tiré du code source des tests de Retrofit :</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></td><td class="code"><pre><span class="kd">static</span> <span class="kd">class</span> <span class="nc">DirectCallIOException</span> <span class="kd">extends</span> <span class="n">RuntimeException</span> <span class="o">{</span>
+    <span class="n">DirectCallIOException</span><span class="o">(</span><span class="n">String</span> <span class="n">message</span><span class="o">,</span> <span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="kd">super</span><span class="o">(</span><span class="n">message</span><span class="o">,</span> <span class="n">e</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">static</span> <span class="kd">class</span> <span class="nc">DirectCallAdapterFactory</span> <span class="kd">extends</span> <span class="n">CallAdapter</span><span class="o">.</span><span class="na">Factory</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">CallAdapter</span><span class="o">&lt;?&gt;</span> <span class="n">get</span><span class="o">(</span><span class="kd">final</span> <span class="n">Type</span> <span class="n">returnType</span><span class="o">,</span> <span class="n">Annotation</span><span class="o">[]</span> <span class="n">annotations</span><span class="o">,</span> <span class="n">Retrofit</span> <span class="n">retrofit</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="n">CallAdapter</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;()</span> <span class="o">{</span>
+            <span class="nd">@Override</span> <span class="kd">public</span> <span class="n">Type</span> <span class="nf">responseType</span><span class="o">()</span> <span class="o">{</span>
+                <span class="k">return</span> <span class="n">returnType</span><span class="o">;</span>
+            <span class="o">}</span>
+
+            <span class="nd">@Override</span> <span class="kd">public</span> <span class="n">Object</span> <span class="nf">adapt</span><span class="o">(</span><span class="n">Call</span> <span class="n">call</span><span class="o">)</span> <span class="o">{</span>
+                <span class="k">try</span> <span class="o">{</span>
+                    <span class="k">return</span> <span class="n">call</span><span class="o">.</span><span class="na">execute</span><span class="o">().</span><span class="na">body</span><span class="o">();</span>
+                <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="k">throw</span> <span class="k">new</span> <span class="nf">DirectCallIOException</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">(),</span> <span class="n">e</span><span class="o">);</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">};</span>
+    <span class="o">}</span>
+<span class="o">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Cela nous obligerais quand même à traiter les exceptions de type <code class="highlighter-rouge">DirectCallIOException</code>.</p>
+
+<p>Autre point que nous avons trouvé dommage lors de cet exercice est le fait que nous devons catcher les <code class="highlighter-rouge">IOException</code> qui peuvent se produire lors de l’appel. 
+Peut être manque-t’il a Retrofit une gestion des exceptions comme Feign peut l’avoir. Nous verrons cela plus en détail dans l’exercice suivant.</p>
+
+<p>Autre point <em>négatif</em>, Retrofit ayant besoin de plusieurs dépendances pour fonctionner : <a href="http://square.github.io/okhttp/">OkHttp</a> et d’au moins 1 <em>converter</em>, la taille de l’exécutable généré était sensiblement plus grosse que celle de l’exécutable de Feign (1.5Mo contre 0.5Mo).</p>
+
+<h4 id="points-positifs">Points Positifs</h4>
+
+<p>Retrofit reste simple à utiliser. Le fait que les principaux converters soient disponibles est une très bonne chose.</p>
+
+<p>Retrofit a ses propres annotations, évitant ainsi les erreurs de typo est une très bonne chose. Bien que feign se soit amélioré sur les messages d’erreurs, nous trouvons préférable le choix qu’à fait l’équipe de rétrofit sur cette partie.</p>
+
+</article>
+  </section>
+  
+  
+  <section class="comment">
+    <div id="disqus_thread"></div>
+    <script>
+    var disqus_config = function () {
+        this.page.url = "http://www.monkeypatch.io/en/2016/08/09/MKTD-1-feign-vs-retrofit-1-prise-en-main.html";  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = "/2016/08/09/MKTD-1-feign-vs-retrofit-1-prise-en-main.html"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//monkeypatchblog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </section>
+  
+
+  <footer class="top">
+    <div>
+      <h3>Get In Touch</h3>
+      <p>
+        <a class="contact" href="/encontact">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <img src="/public/images/icons/Toulouse.png" alt="Toulouse">
+        </a>
+      </p>
+      <p>
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        <a class="mail" href="mailto:contact@monkeypatch.io">contact@monkeypatch.io</a>
+      </p>
+    </div>
+    <div class="social-network">
+      <h3>Social Networks</h3>
+      <ul class="social">
+        <li>
+          <a href="https://twitter.com/monkeypatch_io">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/monkeypatch-io">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<footer class="bottom">
+  <div>
+    Copyright @ 2016 MonkeyPatch -<a href="/en/terms">Terms and Conditions</a>
+  </div>
+  <div>
+    Made with <i class="fa fa-heart" aria-hidden="true"></i> In Toulouse
+  </div>
+  <a class="goToTop" href="#top">
+    <i class="fa fa-caret-up" aria-hidden="true"></i>
+  </a>
+</footer>
+
+  <!-- Google Tag Manager -->
+  <noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-KGGFWH" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KGGFWH');
+  </script>
+  <!-- End Google Tag Manager -->
+  <script src="/public/scripts/modernizr-custom.js"></script>
+  <script src="/public/scripts/main.js"></script>
+</body>
+</html>
+
+
+
+
