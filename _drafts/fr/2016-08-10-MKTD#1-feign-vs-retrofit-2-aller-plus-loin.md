@@ -9,6 +9,8 @@ published: false
 
 [MKTD#1 Article précédent: Prise en main]({% post_url 2016-08-09-MKTD#1-feign-vs-retrofit-1-prise-en-main %})
 
+--- 
+
 ## Défi 2: Aller plus loin...
 
 Le deuxième défi permet d’adresser des problèmes plus avancés comme :
@@ -30,9 +32,9 @@ public interface AuthenticationApi {
 }
 {% endhighlight %}
 
-Dans l'entête de la réponse HTTP se trouve un `Set-Cookie` qu’il faudra décoder, puis envoyer ce cookie dans les requêtes aux autres services.
+Dans l'en-tête de la réponse HTTP se trouve un `Set-Cookie` qu’il faudra décoder, puis envoyer ce *cookie* dans les requêtes aux autres services.
 
-> Les solutions à base de *token* sont un peu plus simples à mettre en oeuvre avec Feign et Retrofit, mais ici l'objectif n'était pas de faire les choses les plus simples. Pour plus d'information vous pouvez regarder [ce blog].(https://auth0.com/blog/angularjs-authentication-with-cookies-vs-token/)
+> Les solutions à base de *token* sont un peu plus simples à mettre en oeuvre avec Feign et Retrofit, mais ici l'objectif n'était pas de faire les choses les plus simples. Pour plus d'information sur ce sujet vous pouvez regarder [ce blog].(https://auth0.com/blog/angularjs-authentication-with-cookies-vs-token/)
 
 ### Gestion des erreurs
 
@@ -63,7 +65,7 @@ Pour facilité le développement de ce défi il va être très pratique de pouvo
 
 #### Quick & Dirty
 
-La solution la plus directe est d'utiliser un `RequestInterceptor` qui va être appeler par Feign avant de construire la requête HTTP, et de faire un `System.out`. 
+La solution la plus directe est d'utiliser un `RequestInterceptor` qui va être appelé par Feign avant de construire la requête HTTP, et de faire un `System.out`. 
 
 {% highlight java linenos %}
 Feign.builder()
@@ -77,12 +79,30 @@ Evidement ça ne marche que pour la requête HTTP.
 
 #### Solution avec un logger Feign
 
-TODO
+Pour éviter d'avoir des dépendances sur bibliothèques tierces Feign à définit son propre `Logger`. Cette une classe abstraite avec une seule méthode à implémenter. Ensuite il faut définir le niveau de *log* souhaité: `NONE`, `BASIC`, `HEADERS`, `FULL`.
+On peut donc faire comme ceci:
 
+{% highlight java linenos %}
+Feign.builder()
+        .logLevel(Logger.Level.FULL)
+        .logger(new Logger() {
+            @Override
+            protected void log(String configKey, String format, Object... args) {
+                System.out.printf("[%s] ", configKey);
+                System.out.printf(format, args);
+                System.out.println();
+            }
+        })
+        .decoder(new GsonDecoder())
+        .encoder(new GsonEncoder())
+        .target(MonkeyRaceApi.class, url);
+{% endhighlight %}
+
+Dans Feign, le `feign.Logger.JavaLogger` implémente le mécanisme pour le *logger* du JDK (`java.util.logging.Logger`), et il existe bien sûr une extension pour utiliser [SLF4J](https://github.com/OpenFeign/feign/tree/master/slf4j).
 
 ### Authentification avec Cookie
 
-La première étape est de récupérer le cookie générer par la requête d’authentification. Pour cela on utilise un décodeur spécifique qui va traiter les entêtes de la réponse pour stocker les cookies.
+La première étape est de récupérer le *cookie* générer par la requête d’authentification. Pour cela on utilise un décodeur spécifique qui va traiter les en-têtes de la réponse pour stocker les *cookies*.
 
 {% highlight java linenos %}
 private static String getAuthToken(String url, String login, String password) {
@@ -94,25 +114,29 @@ private static String getAuthToken(String url, String login, String password) {
 }
 {% endhighlight %}
 
-Le stockage du cookie est assurer par le [CookieManager](https://docs.oracle.com/javase/8/docs/api/index.html?overview-summary.html) du JDK depuis Java 1.6.
+Le stockage du *cookie* est assuré par le [CookieManager](https://docs.oracle.com/javase/8/docs/api/index.html?overview-summary.html) disponible depuis Java 6.
 
 {% highlight java linenos %}
 private static final CookieManager COOKIE_MANAGER = new CookieManage
 {% endhighlight %}
 
-L’utilisation de ce CookieManager est traité dans la méthode `handleCookies` ci dessous:
+L’utilisation de ce `CookieManager` est traité dans la méthode `handleCookies` ci dessous:
 
 {% highlight java linenos %}
 private static String handleCookies(Map<String, Collection<String>> headers) {
+   // From Map<String, Collection<String>> to Map<String, List<String>>
    Map<String, List<String>> h = headers.entrySet().stream()
-           .collect(toMap(Map.Entry::getKey, entry -> entry.getValue().stream()
-                   .collect(toList())));
+           .collect(
+             toMap(
+               Map.Entry::getKey, 
+               entry -> entry.getValue().stream().collect(toList()))
+            );
    try {
        URI uri = URI.create(BASE_URL);
        COOKIE_MANAGER.put(uri, h);
-       return COOKIE_MANAGER.getCookieStore().get(uri).stream()
+       return COOKIE_MANAGER.getCookieStore().get(uri).stream() // Stream<HttpCookie>
                .filter(cookie -> "token".equals(cookie.getName()))
-               .findFirst()
+               .findFirst() // Optional<HttpCookie>
                .map(HttpCookie::getValue)
                .orElseThrow(() -> new IllegalStateException("Authentication cookie not found"));
    } catch (IOException e) {
@@ -121,7 +145,7 @@ private static String handleCookies(Map<String, Collection<String>> headers) {
 }
 {% endhighlight %}
 
-Une fois stocker, ce cookie devra être envoyer dans les futures requêtes fait par Feign, pour cela on utilise le mécanisme de `requestInterceptor`.
+Une fois stocké, ce *cookie* devra être envoyé dans les futures requêtes fait par Feign, pour cela on utilise le mécanisme de `RequestInterceptor` qui permet de modifier le `RequestTemplate` que Feign utilise pour construire la requête HTTP.
 
 {% highlight java linenos %}
 static MonkeyRaceApi buildRaceApi(String url, String login, String password) {
@@ -145,15 +169,98 @@ private static void addCookies(RequestTemplate template) {
 }
 {% endhighlight %}
 
-Pour Feign, le mécanisme l'authentification par cookie est proche du mécanisme qui utilise l’entête `Authorization` que l’on voit souvent associé au JWT: ils se basent sur des entêtes HTTP. Par contre l’utilisation des cookies alourdi le code.
+Pour Feign, le mécanisme l'authentification par *cookie* est proche du mécanisme qui utilise l’en-tête `Authorization` que l’on voit souvent associé au JWT: ils se basent sur des en-têtes HTTP, donc on utiliserai la même techinque du `RequestInterceptor` pour implémenter . Par contre l’utilisation des *cookies* alourdi fortement le code.
+
+> On peut aussi utiliser une `feign.Target` pour traiter les aspects d'authentification, voir la [documentation](https://github.com/OpenFeign/feign#setting-headers-per-target).
 
 ### Gestion des erreurs
 
+Dans Feign, il existe un mécanisme pour traiter les cas en erreurs, c'est à dire si la réponse HTTP à un code >= 400. Pour cela il suffit d'utiliser un `ErrorDecoder` :  
+
+{% highlight java linenos %}
+static MonkeyRaceApi buildRaceApi(String url, String login, String password) {
+   getAuthToken(url, login, password);
+   return builder
+           .errorDecoder(ApiFactory::decodeError) // Decode errors
+           .requestInterceptor(ApiFactory::addCookies) // Inject Cookies
+           .decoder(new GsonDecoder())
+           .encoder(new GsonEncoder())
+           .target(MonkeyRaceApi.class, url);
+}
+{% endhighlight %}
+
+{% highlight java linenos %}
+private static Exception decodeError(String methodKey, Response response) {
+    return decodeError(response.status(), methodKey,
+            () -> FeignException.errorStatus(methodKey, response));
+}
+{% endhighlight %}
+
+> Parfois on souhaite traiter le cas particulier d'une erreur `404` dans le `Decoder` traditionnel, pour celà il suffit d'utiliser la méthode `feign.Feign.Builder#decode404` sur le builder.
+
 ### Upload
+
+Pour l'*upload* de fichier le serveur REST proposait deux solutions:
+
+* un *upload* via un [formulaire multipart](https://www.ietf.org/rfc/rfc2388.txt) avec l'en-tête `Content-type` à `multipart/form-data`
+* un *upload* directe avec les données du fichier directement dans le corps de la requête, l'en-tête `Content-type` à `application/octet-stream`.
+
+Les deux solutions sont implémetables via le même principe: un `Decoder` spécifique.
+La seconde solution est beaucoup plus simple à implémenter car pour correctement gérer le corps d'une requête *multipart* va nécessité l'utilisation d'une API externe (par exemple [Commons FileUpload d'Apache](https://commons.apache.org/proper/commons-fileupload/)) ce qui va alourdire le code.
+On pourra regarder du coté de <https://github.com/xxlabaza/feign-form> ou <https://github.com/pcan/feign-client-test> pour voir des solutions ou des idées pour les aspects *multipart*.
+
+La seconde solution est donc beaucoup plus simple, le principe est de traité le cas particulier d'un objet du type `java.io.InputStream` et de déléguer les autres cas à un autre encodeur. Après il suffit d'appeler la méthode `feign.RequestTemplate#body(byte[], java.nio.charset.Charset)` qui permet de définir le corps de la requête HTTP.
+Ici il est préférab d'extraire le code dans une nouvelle classe :
+
+{% highlight java linenos %}
+public class UploadEncoder implements Encoder {
+    private final Encoder delegate;
+
+    public UploadEncoder(Encoder encoder) {
+        super();
+        delegate = encoder;
+    }
+
+    @Override
+    public void encode(Object object, Type bodyType, RequestTemplate template) throws EncodeException {
+        if (InputStream.class.equals(bodyType)) {
+            template.header("Content-type", "application/octet-stream");
+            InputStream inputStream = InputStream.class.cast(object);
+            // InputStream to byte[]
+            try (BufferedInputStream bin = new BufferedInputStream(inputStream);
+                 ByteArrayOutputStream bos = new ByteArrayOutputStream()) {
+                byte[] buffer = new byte[1024];
+                int bytesRead;
+                while ((bytesRead = bin.read(buffer)) > 0) {
+                    bos.write(buffer, 0, bytesRead);
+                }
+                bos.flush();
+                template.body(bos.toByteArray(), StandardCharsets.UTF_8);
+            } catch (IOException e) {
+                throw new EncodeException("Cannot upload file", e);
+            }
+        } else {
+            delegate.encode(object, bodyType, template);
+        }
+    }
+}
+{% endhighlight %}
+
+> On peut bien sûr simplifier le code en utilisant une bibliothèque qui permert plus facilement de faire la conversion `InputStream` vers `byte[]`, mais ça ne fait pas de mal d'écrire des `try with resources` de temps en temps.
+> On peut légitimement argumenté que ce code risque de poser des problèmes si le fichier est particulièrement gros, mais si on doit gérer ce genre de cas, il faut aussi se poser la question: une API REST est elle la bonne solution pour 
 
 ### Download
 
+TODO
+
 ### Bilan
+
+Il est très simple dans Feign de manipuler les en-têtes HTTP, cela permet d'ajouter facilement les divers mécanismes d'autentifications: *Cookie*, *Token*.
+Il est très facile de gérer les réponses HTTP en erreur, c'est un des points fort de Feign par rapport à Retrofit.
+Le mécanisme d'encodeur permet facilement de traiter le cas d'*upload* du fichier, et de façon plus générale de traiter tous les cas de *serialization* de la requête HTTP. 
+TODO download
+
+Feign offre une grande souplesse grace aux `Encoder`, `Decoder`, `RequestInterceptor`, ... on arrive assez facilement à résoudre les divers problèmes posés autour des API REST.
 
 ## Retrofit
 
@@ -224,12 +331,13 @@ private Response authInterceptor(Interceptor.Chain chain) throws IOException {
 
 ### Bilan
 
-Que ce soit avec Feign ou retrofit,  il a été très aisé de gérer les cookies. 
+Que ce soit avec Feign ou retrofit,  il a été très aisé de gérer les *cookies*. 
 
 Nous avons également trouvé que la gestion des erreurs en mode synchrone était mieux géré avec Feign. 
 
-Les solutions utilisant [OkHttp](http://square.github.io/okhttp/) sont communes à Feign et Retrofit dans le cas ou le client [okhttp-client](https://github.com/OpenFeign/feign/tree/master/okhttp) est utilisé comme client HTTP pour Feign
+Les solutions utilisant [OkHttp](http://square.github.io/okhttp/) sont communes à Retrofit et à Feign (si on utilise le client [okhttp-client](https://github.com/OpenFeign/feign/tree/master/okhttp) est utilisé comme client HTTP pour Feign).
 
+---
 
 [La suite du MKTD#1: Autres sujets]({% post_url 2016-08-12-MKTD#1-feign-vs-retrofit-3-autres-sujets %})
 
@@ -240,3 +348,5 @@ Les solutions utilisant [OkHttp](http://square.github.io/okhttp/) sont communes 
 *[JSON]: JavaScript Object Notation
 *[XML]: eXtensible Markup Language
 *[URL]: Uniform Resource Locator
+*[JWT]: Json WebToken
+*[JDK]: Java Development Kit

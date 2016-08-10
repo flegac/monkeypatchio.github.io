@@ -8,25 +8,25 @@ comments: true
 
 ## Introduction
 
-Nous avons organisé à Toulouse début juillet le premier [MonkeyTechDays](http://www.monkeytechdays.com/) chez [HarryCow](http://www.harrycow.com/).
-Un MKTD consiste à comparer, apprendre sous forme de défis une ou plusieurs technologies sur une journée.
+Nous avons organisé à Toulouse début juillet, le premier [MonkeyTechDays](http://www.monkeytechdays.com/) chez [HarryCow](http://www.harrycow.com/).
+Un MKTD consiste à comparer, apprendre, sous forme de défis, une ou plusieurs technologies sur une journée.
  
-Ce premier événement était l’occasion d’approfondir les technologies de clients REST en Java. Nous avons étudié [Feign](https://github.com/OpenFeign/feign), une librairie initiée par [Netflix](https://netflix.github.io/) et [Retrofit](http://square.github.io/retrofit/) écrite par [Square](https://github.com/square). Ces deux API permettent d’écrire des clients REST en Java de façon plus élégante qu’avec les solutions plus classiques (JAX-RS client, Spring Rest Template, …)
+Ce premier événement était l’occasion d’approfondir les technologies de clients REST en Java. Nous avons étudié [Feign](https://github.com/OpenFeign/feign), une librairie initiée par [Netflix](https://netflix.github.io/) et [Retrofit](http://square.github.io/retrofit/) qui est écrite par [Square](https://github.com/square). Ces deux API permettent d’écrire des clients REST en Java de façon plus élégante qu’avec les solutions plus classiques comme JAX-RS client, Spring Rest Template, …
 <!--more-->
 
-Pour aider les équipes à tester les technologies nous avions au préalable déployé plusieurs services REST sur le thème des singes.
+Pour aider les équipes à tester les technologies, nous avions au préalable déployé plusieurs services REST sur le thème des singes.
 Le code source de cette journée est disponible à l’adresse : <https://github.com/monkeytechdays>
 
 
 ## Défi 0 : Constitution des équipes
 
-Ce défi n’avait rien de technique mais nous a permis de constituer des équipes équitables pour chaque technologie, en finissant nos cafés, croissants, ... L’équipe Feign étant dirigée par [Igor](https://twitter.com/ilaborie) et l’équipe Retrofit par [Emmanuel](https://twitter.com/EmmanuelVinas). 
+Ce défi n’avait rien de technique, mais nous a permis de constituer des équipes équitables pour chaque technologie, en finissant nos cafés, croissants, ... L’équipe Feign étant dirigée par [Igor](https://twitter.com/ilaborie) et l’équipe Retrofit par [Emmanuel](https://twitter.com/EmmanuelVinas). 
 
-## Défi 1: 
+## Défi 1: Prise en main
 
 Ce premier défi consistait à une mise en bouche pour découvrir ces technologies. 
 
-Le principe d’utilisation de [Feign](https://github.com/OpenFeign/feign) et [Retrofit](http://square.github.io/retrofit/) consiste à créer une interface décrivant le service REST, l’API se charge de créer une instance de cette interface.
+Le principe d’utilisation de [Feign](https://github.com/OpenFeign/feign) et [Retrofit](http://square.github.io/retrofit/) consiste à créer une interface décrivant le service REST, puis l’API se charge de créer une instance de cette interface.
 Dans ce premier défi, les interfaces étaient fournies, il suffisait de compléter le code pour faire passer des tests unitaires.
 
 Voici les deux interfaces retournant du JSON :
@@ -56,24 +56,24 @@ public interface MonkeyStatsApi {
 
 Voir le code  <https://github.com/monkeytechdays/mktd1-defi1> 
 
-Pour réussir ce défi il faut donc résoudre ces points:
+Pour réussir ce défi, il faut donc faire:
 
-* faire un GET et décoder le JSON de la réponse,
-* faire un GET avec un paramètre de requête,
-* faire un GET avec un paramètre dans le *path* de la requête,
-* faire un POST avec un encodage en JSON du corps de la requête,
-* faire un DELETE
-* faire un GET et décoder le XML e la réponse
+* un GET et décoder le JSON de la réponse,
+* un GET avec un paramètre de requête,
+* un GET avec un paramètre dans le *path* de la requête,
+* un POST avec un encodage en JSON du corps de la requête,
+* un DELETE,
+* un GET et décoder le XML de la réponse.
 
 ## Feign
 
-La documentation de Feign se trouve dans le [README.md](https://github.com/OpenFeign/feign) sous GitHub. La documentation des extensions se trouve aussi ces fichiers README.md.
+La documentation de Feign se trouve dans le [README.md](https://github.com/OpenFeign/feign) sous GitHub. La documentation des extensions se trouve aussi dans des fichiers README.md de ces extensions.
 
 > Bien que Feign supporte Java 6 par défaut, nous avons codé avec Java 8.
 
 ### Dépendances
 
-Pour commencer à utiliser Feign il faut bien sur ajouter les dépendances nécessaires pour ce défi:
+Pour commencer à utiliser Feign, il faut bien sûr ajouter les dépendances nécessaires pour ce défi:
 
 {% highlight xml linenos %}
 <!-- Feign -->
@@ -96,16 +96,16 @@ Pour commencer à utiliser Feign il faut bien sur ajouter les dépendances néce
 </dependency>
 {% endhighlight %}
 
-> Nous recommandons bien sur l’utilisation d’une propriété maven pour définir la version de Feign utilisée.
+> Nous recommandons bien sûr l’utilisation d’une propriété maven pour définir la version de Feign utilisée.
 
 ### Configuration des interfaces
 
 Ensuite il faut annoter les interfaces pour que Feign fasse les requêtes HTTP correspondantes. Feign apporte ses propres annotations pour décrire les requêtes HTTP:
 
 * `@RequestLine`: permet de définir la première ligne de la requête HTTP: le verbe HTTP (GET, POST, PUT, DELETE, …) et le chemin, on y précise aussi les paramètres de la requête. On peut utiliser la notation `{name}` pour définir une partie variable de la requête (paramètre ou chemin)
-* `@Param`: cette annotation permet de faire le lien entre une variable définit dans les autres annotations (`@RequestLine`, `@Headers`, …) et le paramètre de la méthode. Il faut préciser le nom de la variable dans l’annotation.
-* `@Headers`: permet d’ajouter une entête HTTP, comme pour `@RequestLine` on peut utiliser la notation `{name}` pour définir une valeur variable dans l’entête HTTP. Cette annotation peut être mis sur l’interface ou sur une méthode de cette interface. 
-Pas d’annotation pour le corps d’une requête POST ou PUT, le paramètre sans annotation sera convertie dans le corps de la requête.
+* `@Param`: cette annotation permet de faire le lien entre une variable définie dans les autres annotations (`@RequestLine`, `@Headers`, …) et le paramètre de la méthode. Il faut préciser le nom de la variable dans l’annotation.
+* `@Headers`: permet d’ajouter une en-tête HTTP, comme pour `@RequestLine` on peut utiliser la notation `{name}` pour définir une valeur variable dans l’en-tête HTTP. Cette annotation, peut être mise sur l’interface, ou sur une méthode de cette interface. 
+Pas d’annotation pour le corps d’une requête POST ou PUT, le paramètre sans annotation sera converti dans le corps de la requête.
 
 Ce qui nous donne ceci :
 
@@ -142,7 +142,7 @@ public interface MonkeyStatsApi {
 
 ### Construction des instances
 
-Ensuite on utiliser l’API *fluent builder* de Feign pour créer l’instance de ces interfaces. C’est ici que l’on va faire intervenir les encodeurs/décodeurs que l’on a ajouter dans nos dépendances plus tôt :
+Ensuite, on a utilisé l’API *fluent builder* de Feign pour créer l’instance de ces interfaces. C’est ici que l’on va faire intervenir les encodeurs/décodeurs que l’on a ajoutés dans nos dépendances plus tôt :
 
 {% highlight java linenos %}
 static MonkeyRaceApi buildRaceApi(String url) {
@@ -174,28 +174,27 @@ static MonkeyStatsApi buildStatsApi(String url) {
 }
 {% endhighlight %}
 
-> Feign va concaténer l'URL avec le chemin définit dans le chemin de l'annotation `@RequestLine`, ceci permet facilement de rajouter un préfixe pour les services si on le souhaite.
+> Feign va concaténer l'URL avec le chemin défini, dans le chemin de l'annotation `@RequestLine`, ceci permet facilement de rajouter un préfixe pour les services si on le souhaite.
 
 ### Bilan
 
 Peu de points négatifs pour Feign dans cet exercice:
 
-* pour faire fonctionner le décodage XML il a fallut triturer un peu l’objet pour que [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/) deserialize correctement le XML. Mais c’est plus un problème lié à JAXB et au XML de façon plus général,
-* Les messages d’erreurs sont parfois pas simple à décrypter, mais avec un peu de pratique et une connaissance basique du protocole HTTP ça n’est pas vraiment un problème. Un problème classique est le fait d’oublier le verbe HTTP dans l’annotation `@RequestLine`.
+* pour faire fonctionner le décodage XML il a fallu triturer un peu l’objet pour que [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/) *deserialize* correctement le XML. Mais c’est plus un problème lié à JAXB et au XML de façon plus générale,
+* Les messages d’erreurs ne sont parfois pas simples à décrypter, mais avec un peu de pratique et une connaissance basique du protocole HTTP, ça n’est pas vraiment un problème. Un problème classique est le fait d’oublier le verbe HTTP dans l’annotation `@RequestLine`.
 
-Beaucoup de coté positif ici:
+Beaucoup de côtés positifs ici:
 
 * simple et proche du HTTP,
 * très léger, il n’y a pas de dépendances transitives pour le `feign-core`,
-* facilement extensible: par exemples il est facile de changer d’encodeur/décodeur [GSON](https://github.com/OpenFeign/feign/tree/master/gson), [Jackson](https://github.com/OpenFeign/feign/tree/master/jackson), [JAXB](https://github.com/OpenFeign/feign/tree/master/jaxb), ...,
-* il y a un bon support de Java 8, par exemples les méthodes `static` et `default` des interfaces de Java 8 sont supportées.
+* facilement extensible: par exemple, il est facile de changer d’encodeur/décodeur [GSON](https://github.com/OpenFeign/feign/tree/master/gson), [Jackson](https://github.com/OpenFeign/feign/tree/master/jackson), [JAXB](https://github.com/OpenFeign/feign/tree/master/jaxb), ...,
+* il y a un bon support de Java 8, par exemple, les méthodes `static` et `default` des interfaces de Java 8 sont supportées.
 
 Quelques remarques:
 
 * il y a d’autres annotations `@Body`, `@HeaderMap`, `@QueryMap` qui existent,
-* on peut configurer la façon dont les variables (`@Param`) sont convertient en String via les Expander.
-* pour définir un chemin racine à toutes nos méthodes dans l’interface, on peut l’ajouter dans l’URL utilisé par le builder.
-
+* on peut configurer la façon dont les variables (`@Param`) sont converties en String via les `Expander`.
+* pour définir un chemin racine à toutes nos méthodes dans l’interface, on peut l’ajouter dans l’URL utilisée par le *builder*.
 
 > Il n’y a pas de magie dans Feign : il n'utilise que ce qui existe déjà dans le JDK (`java.net.HttpURLConnection`, `java.lang.reflect.Proxy`, `java.lang.reflect.InvocationHandler`, …)
 
@@ -224,8 +223,8 @@ La première étape consiste à rajouter les dépendances de Rétrofit
 </dependency>
 {% endhighlight %}
 
-Ensuite il nous faut rajouter les annotations spécifiques à Retrofit sur l’interface. 
-Les règles du jeu étant de ne pas changer la signature de l’interface, nous avons du ajouter une autre interface utilisée par la `CallFactory` par défaut de Retrofit.
+Ensuite, il nous faut rajouter les annotations spécifiques à Retrofit sur l’interface. 
+Les règles du jeu étant de ne pas changer la signature de l’interface, nous avons dû ajouter une autre interface utilisée par la `CallFactory` par défaut de Retrofit.
 
 {% highlight java linenos %}
 public interface MonkeyRaceService {
@@ -257,7 +256,7 @@ public interface MonkeyStatsService {
 }
 {% endhighlight %}
 
-Ensuite nous avons implémenté les interfaces `MonkeyApi`, `MonkeyRaceApi`, `MonkeyStatsApi` en utilisant les interfaces spécifiques pour Retrofit.
+Ensuite, nous avons implémenté les interfaces `MonkeyApi`, `MonkeyRaceApi`, `MonkeyStatsApi` en utilisant les interfaces spécifiques pour Retrofit.
 
 {% highlight java linenos %}
 public class RetrofitMonkeyApi implements MonkeyApi, RetrofitApi {
@@ -317,7 +316,7 @@ public interface RetrofitApi {
 
 #### Points négatifs 
 
-Nous avons trouvé dommage qu’il n’y ai pas nativement une `CallFactory` permettant de faire de façon synchrone un appel retournant notre objet métier sans avoir besoin de passer par l’objet `Call` à la manière dont cela est géré avec Feign.
+Nous avons trouvé dommage qu’il n’y ait pas nativement une `CallFactory` permettant de faire de façon synchrone un appel retournant notre objet métier sans avoir besoin de passer par l’objet `Call` à la manière dont cela est géré avec Feign.
 
 Il aurait été aussi possible de faire notre propre `CallAdapterFactory`. Voici un exemple tiré du code source des tests de Retrofit :
 
@@ -348,18 +347,19 @@ static class DirectCallAdapterFactory extends CallAdapter.Factory {
 }
 {% endhighlight %}
 
-Cela nous obligerais quand même à traiter les exceptions de type `DirectCallIOException`.
+Cela nous obligerait quand même à traiter les exceptions de type `DirectCallIOException`.
 
 Autre point que nous avons trouvé dommage lors de cet exercice est le fait que nous devons catcher les `IOException` qui peuvent se produire lors de l’appel. 
-Peut être manque-t’il a Retrofit une gestion des exceptions comme Feign peut l’avoir. Nous verrons cela plus en détail dans l’exercice suivant.
+Peut être manque-t-il a Retrofit une gestion des exceptions comme Feign peut l’avoir. Nous verrons cela plus en détail dans l’exercice suivant.
 
-Autre point *négatif*, Retrofit ayant besoin de plusieurs dépendances pour fonctionner : [OkHttp](http://square.github.io/okhttp/) et d'au moins 1 *converter*, la taille de l’exécutable généré était sensiblement plus grosse que celle de l’exécutable de Feign (1.5Mo contre 0.5Mo). 
+Autre point 'négatif', Retrofit ayant besoin de plusieurs dépendances pour fonctionner : [OkHttp](http://square.github.io/okhttp/) et d'au moins 1 *converter*, la taille de l’exécutable généré était sensiblement plus grosse que celle de l’exécutable de Feign (1.5Mo contre 0.5Mo). 
 
 #### Points Positifs
 
 Retrofit reste simple à utiliser. Le fait que les principaux converters soient disponibles est une très bonne chose. 
 
-Retrofit a ses propres annotations, évitant ainsi les erreurs de typo est une très bonne chose. Bien que feign se soit amélioré sur les messages d’erreurs, nous trouvons préférable le choix qu’à fait l’équipe de rétrofit sur cette partie.
+Retrofit a ses propres annotations, évitant ainsi les erreurs de *typo*, ce qui est une très bonne chose. Bien que feign se soit améliorée sur les messages d’erreurs, nous trouvons préférable le choix qu’a fait l’équipe de Retrofit sur cette partie.
+
 
 *[MKTD]: MonkeyTechDays
 *[HTTP]: HyperText Transfer Protocol
@@ -368,3 +368,4 @@ Retrofit a ses propres annotations, évitant ainsi les erreurs de typo est une t
 *[JSON]: JavaScript Object Notation
 *[XML]: eXtensible Markup Language
 *[URL]: Uniform Resource Locator
+*[JDK]: Java Developement Kit

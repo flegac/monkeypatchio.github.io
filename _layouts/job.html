@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--  lastBuildDate : {{ site.time | date_to_rfc822 }} -->
+<html>
+{% include head.html %}
+<body class="job">
+  {% include header.html %}
+  <main>
+    <p>
+      <a href="{{ site.baseurl }}/job">
+        <i class="fa fa-chevron-left"></i>
+        {% t titles.jobs %}
+      </a>
+    </p>
+    <p>{{ content }}</p>
+    <p>
+      {% t jobs.offers.contact %}
+      <a href="#dialog-contact">{% t jobs.offers.candidature %}</a>
+    </p>
+  </main>
+  {% include contact_modal.html %}
+  {% include footer.html %}
+  <!-- Google Tag Manager -->
+  <noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-KGGFWH" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KGGFWH');
+  </script>
+  <!-- End Google Tag Manager -->
+  <script src="/public/scripts/modernizr-custom.js"></script>
+  <script src="/public/scripts/main.js"></script>
+</body>
+</html>
+
+
+
+

@@ -17,9 +17,8 @@ permalink: job
   <form class="list">
     {% assign sorted_job = site.jobs | sort:"order" | where: "lang", site.lang  %}
     {% for job in sorted_job %}
-      <input type="radio" id="job-{{ forloop.index }}" name="job" value="{{ forloop.index }}">
-      <div class="job">
-        <label for="job-{{ forloop.index }}">
+      <div class="job" id="{{ job.id }}">
+        <a href="#{{ job.id }}">
           <span>
             <img alt="{{ job.title }}" src="{{ job.image }}">
           </span>
@@ -34,12 +33,14 @@ permalink: job
           <div class="open">
             <i class="fa fa-chevron-right"></i>
           </div>
-          <button class="close" type="reset"><i class="fa fa-chevron-down"></i></button>
-        </label>
+          <div class="close">
+            <i class="fa fa-chevron-down"></i>
+          </div>
+        </a>
         <div class="content">
           {{ job.content }}
           <p>
-            {% t jobs.offers.contact %}
+            {% t jobs.offers.contact %}<br>
             <a href="mailto:{{ site.contact.mail }}">
               {% t jobs.offers.candidature %}
             </a>
@@ -52,7 +53,7 @@ permalink: job
   <div class="nojob">
     <p>{% t jobs.nojobs %}</p>
     <div>
-      <a class="button" href="mailto:{{ site.contact.mail }}">{% t jobs.application %}</a>
+      <a class="button" href="#dialog-contact">{% t jobs.application %}</a>
     </div>
   </div>
 </section>

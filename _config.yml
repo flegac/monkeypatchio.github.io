@@ -77,7 +77,7 @@ collections:
   teams:
     output: false
   jobs:
-    output: false
+    output: true
   profiles:
     output: false
 
@@ -110,6 +110,11 @@ defaults:
     values:
       lang: fr
   - # Jobs
+    scope:
+      path: "_jobs"
+    values:
+      layout: job
+  - 
     scope:
       path: "_jobs/fr"
     values:
