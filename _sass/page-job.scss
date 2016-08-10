@@ -27,8 +27,8 @@
 
   .jobs {
     background-color: $grey3;
-    padding-top: 1rem; 
-    padding-bottom: 2rem; 
+    padding-top: 1rem;
+    padding-bottom: 2rem;
     color: $grey2;
 
     .nojob {
@@ -65,7 +65,7 @@
             text-decoration: none;
           }
           span {
-            padding-left: .5rem; 
+            padding-left: .5rem;
             background-color: $white;
             img {
               max-height: 4rem;
@@ -79,7 +79,7 @@
             background-color: $white;
             padding: 0 1rem;
             text-align: left;
-            flex: 1 1 40%; 
+            flex: 1 1 40%;
             line-height: 4rem;
             width: 50%;
             color: $grey4;
@@ -117,8 +117,8 @@
         }
         .content {
           background-color: $white;
-          padding: 0.25rem;
-          width: calc(100% - .5rem);
+          padding: 0.25rem 1rem 0.25rem 1rem;
+          width: calc(100% - 2rem);
           display: none;
           text-align: left;
         }

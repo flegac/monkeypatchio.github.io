@@ -6,40 +6,43 @@ tags: [MKTD, Java, REST, Feign, Retrofit, Cookie]
 comments: true
 published: false
 ---
+Cet article est le deuxième d'une série d'article sur les clients REST en java.
 
-[MKTD#1 Article précédent: Prise en main]({% post_url 2016-08-09-MKTD#1-feign-vs-retrofit-1-prise-en-main %})
+Article précédent :
+[MKTD#1 : Prise en main]({% post_url 2016-08-09-MKTD#1-feign-vs-retrofit-1-prise-en-main %})
 
---- 
+
+---
 
 ## Défi 2: Aller plus loin...
 
 Le deuxième défi permet d’adresser des problèmes plus avancés comme :
 
-* l'authentification,
-* la gestion des erreurs via des `Exception` Java,
-* l’*upload* et le *download* de fichiers.
+* L'authentification
+* La gestion des erreurs via des `Exception` Java
+* L’*upload* et le *download* de fichiers
 
 <!--more-->
 
 ### Authentification avec Cookie
 
-Pour l’authentification, le serveur fournit un mécanisme à base de [JWT](https://jwt.io/) et de [Cookie](https://tools.ietf.org/html/rfc6265), une autre interface Java décrit cette nouvelle opération:
+Pour l’authentification, le serveur fournit un mécanisme à base de [JWT](https://jwt.io/) et de [Cookies](https://tools.ietf.org/html/rfc6265). Une autre interface Java décrit cette nouvelle opération:
 
 {% highlight java linenos %}
 public interface AuthenticationApi {
-  
+
     String login(LoginPassword loginPassword) throws SecurityException;
 }
 {% endhighlight %}
 
-Dans l'en-tête de la réponse HTTP se trouve un `Set-Cookie` qu’il faudra décoder, puis envoyer ce *cookie* dans les requêtes aux autres services.
+Dans l'en-tête de la réponse HTTP se trouve un `Set-Cookie` qu’il faudra décoder. Ce *cookie* devra ensuite être envoyé dans les requêtes faites aux autres services.
 
 > Les solutions à base de *token* sont un peu plus simples à mettre en oeuvre avec Feign et Retrofit, mais ici l'objectif n'était pas de faire les choses les plus simples. Pour plus d'information sur ce sujet vous pouvez regarder [ce blog].(https://auth0.com/blog/angularjs-authentication-with-cookies-vs-token/)
 
 ### Gestion des erreurs
 
-Pour la gestion des erreurs nous devons renvoyer une erreur spécifique en fonction du code HTTP retourné par le serveur lors de l'appel à une méthode de nos service.
-Le code qui détermine quelle exception à retourner est le suivant : 
+Pour la gestion des erreurs, nous devons renvoyer une erreur spécifique en fonction du code HTTP retourné par le serveur.
+Le code qui détermine quelle exception à retourner est le suivant :
 
 {% highlight java linenos %}
 public static RuntimeException decodeError(int status, String message, Supplier<RuntimeException> defaultCase) {
@@ -61,11 +64,11 @@ public static RuntimeException decodeError(int status, String message, Supplier<
 
 ### Astuce: log des requêtes HTTP
 
-Pour facilité le développement de ce défi il va être très pratique de pouvoir afficher des *logs* sur les requêtes ou les réponses HTTP.
+Pour facilité le développement de ce défi, il va être très pratique de pouvoir afficher des *logs* sur les requêtes ou les réponses HTTP.
 
 #### Quick & Dirty
 
-La solution la plus directe est d'utiliser un `RequestInterceptor` qui va être appelé par Feign avant de construire la requête HTTP, et de faire un `System.out`. 
+La solution la plus directe est d'utiliser un `RequestInterceptor` qui est appelé par Feign avant que la requête HTTPs soit construite et logger via un `System.out`.
 
 {% highlight java linenos %}
 Feign.builder()
@@ -75,11 +78,11 @@ Feign.builder()
         .target(MonkeyRaceApi.class, url);
 {% endhighlight %}
 
-Evidement ça ne marche que pour la requête HTTP.
+Evidement, ça ne marche que pour la requête HTTP.
 
 #### Solution avec un logger Feign
 
-Pour éviter d'avoir des dépendances sur bibliothèques tierces Feign à définit son propre `Logger`. Cette une classe abstraite avec une seule méthode à implémenter. Ensuite il faut définir le niveau de *log* souhaité: `NONE`, `BASIC`, `HEADERS`, `FULL`.
+Pour éviter d'avoir des dépendances sur bibliothèques tierces, Feign à définit son propre `Logger`. C'est une classe abstraite avec une seule méthode à implémenter. Ensuite il faut définir le niveau de *log* souhaité: `NONE`, `BASIC`, `HEADERS`, `FULL`.
 On peut donc faire comme ceci:
 
 {% highlight java linenos %}
@@ -102,7 +105,7 @@ Dans Feign, le `feign.Logger.JavaLogger` implémente le mécanisme pour le *logg
 
 ### Authentification avec Cookie
 
-La première étape est de récupérer le *cookie* générer par la requête d’authentification. Pour cela on utilise un décodeur spécifique qui va traiter les en-têtes de la réponse pour stocker les *cookies*.
+La première étape consiste à récupérer le *cookie* généré par la requête d’authentification. Pour cela on utilise un décodeur spécifique qui va traiter les en-têtes de la réponse pour stocker les *cookies*.
 
 {% highlight java linenos %}
 private static String getAuthToken(String url, String login, String password) {
@@ -128,7 +131,7 @@ private static String handleCookies(Map<String, Collection<String>> headers) {
    Map<String, List<String>> h = headers.entrySet().stream()
            .collect(
              toMap(
-               Map.Entry::getKey, 
+               Map.Entry::getKey,
                entry -> entry.getValue().stream().collect(toList()))
             );
    try {
@@ -145,7 +148,7 @@ private static String handleCookies(Map<String, Collection<String>> headers) {
 }
 {% endhighlight %}
 
-Une fois stocké, ce *cookie* devra être envoyé dans les futures requêtes fait par Feign, pour cela on utilise le mécanisme de `RequestInterceptor` qui permet de modifier le `RequestTemplate` que Feign utilise pour construire la requête HTTP.
+Une fois stocké, ce *cookie* devra être envoyé dans les futures requêtes. Pour cela on utilise le mécanisme de `RequestInterceptor` qui permet de modifier le `RequestTemplate` que Feign utilise pour construire la requête HTTP.
 
 {% highlight java linenos %}
 static MonkeyRaceApi buildRaceApi(String url, String login, String password) {
@@ -158,7 +161,7 @@ static MonkeyRaceApi buildRaceApi(String url, String login, String password) {
 }
 {% endhighlight %}
 
-L’intercepteur se comporte comme un consommateur de `RequestTemplate`, l’objet que Feign utilise pour la construction de la requête HTTP.
+L’intercepteur se comporte comme un consommateur de `RequestTemplate`..
 
 {% highlight java linenos %}
 private static void addCookies(RequestTemplate template) {
@@ -169,7 +172,7 @@ private static void addCookies(RequestTemplate template) {
 }
 {% endhighlight %}
 
-Pour Feign, le mécanisme l'authentification par *cookie* est proche du mécanisme qui utilise l’en-tête `Authorization` que l’on voit souvent associé au JWT: ils se basent sur des en-têtes HTTP, donc on utiliserai la même techinque du `RequestInterceptor` pour implémenter . Par contre l’utilisation des *cookies* alourdi fortement le code.
+Pour Feign, le mécanisme d'authentification par *cookie* est proche du mécanisme d’en-tête `Authorization` souvent associé au JWT. Il se base sur des en-têtes HTTP, donc on utiliserai la même technique du `RequestInterceptor` pour implémenter . Par contre l’utilisation des *cookies* alourdi fortement le code.
 
 > On peut aussi utiliser une `feign.Target` pour traiter les aspects d'authentification, voir la [documentation](https://github.com/OpenFeign/feign#setting-headers-per-target).
 
@@ -247,7 +250,7 @@ public class UploadEncoder implements Encoder {
 {% endhighlight %}
 
 > On peut bien sûr simplifier le code en utilisant une bibliothèque qui permert plus facilement de faire la conversion `InputStream` vers `byte[]`, mais ça ne fait pas de mal d'écrire des `try with resources` de temps en temps.
-> On peut légitimement argumenté que ce code risque de poser des problèmes si le fichier est particulièrement gros, mais si on doit gérer ce genre de cas, il faut aussi se poser la question: une API REST est elle la bonne solution pour 
+> On peut légitimement argumenté que ce code risque de poser des problèmes si le fichier est particulièrement gros, mais si on doit gérer ce genre de cas, il faut aussi se poser la question: une API REST est elle la bonne solution pour
 
 ### Download
 
@@ -257,7 +260,7 @@ TODO
 
 Il est très simple dans Feign de manipuler les en-têtes HTTP, cela permet d'ajouter facilement les divers mécanismes d'autentifications: *Cookie*, *Token*.
 Il est très facile de gérer les réponses HTTP en erreur, c'est un des points fort de Feign par rapport à Retrofit.
-Le mécanisme d'encodeur permet facilement de traiter le cas d'*upload* du fichier, et de façon plus générale de traiter tous les cas de *serialization* de la requête HTTP. 
+Le mécanisme d'encodeur permet facilement de traiter le cas d'*upload* du fichier, et de façon plus générale de traiter tous les cas de *serialization* de la requête HTTP.
 TODO download
 
 Feign offre une grande souplesse grace aux `Encoder`, `Decoder`, `RequestInterceptor`, ... on arrive assez facilement à résoudre les divers problèmes posés autour des API REST.
@@ -266,7 +269,7 @@ Feign offre une grande souplesse grace aux `Encoder`, `Decoder`, `RequestInterce
 
 ### Authentification avec Cookie
 
-La façon de faire la plus simple avec Retrofit est de le faire coté client HTTP et d’utiliser ce même client pour les requêtes suivantes ou bien de lui passer le `cookieJar` utilisé. 
+La façon de faire la plus simple avec Retrofit est de le faire coté client HTTP et d’utiliser ce même client pour les requêtes suivantes ou bien de lui passer le `cookieJar` utilisé.
 
 Voici une première implémentation assez basique mais qui pour notre cas d’utilisation fonctionne.
 
@@ -302,7 +305,7 @@ OkHttpClient httpClient = new OkHttpClient.Builder()
 
 ### Gestion des erreurs
 
-Cette fois nous avons utilisé la fonctionnalité d’interceptor de `OkHttp`. Heureusement les exceptions à retourné étaient de type RuntimeException, sinon il nous aurait pas été possible de faire de cette manière. 
+Cette fois nous avons utilisé la fonctionnalité d’interceptor de `OkHttp`. Heureusement les exceptions à retourné étaient de type RuntimeException, sinon il nous aurait pas été possible de faire de cette manière.
 
 {% highlight java linenos %}
 OkHttpClient client = new OkHttpClient.Builder()
@@ -331,9 +334,9 @@ private Response authInterceptor(Interceptor.Chain chain) throws IOException {
 
 ### Bilan
 
-Que ce soit avec Feign ou retrofit,  il a été très aisé de gérer les *cookies*. 
+Que ce soit avec Feign ou retrofit,  il a été très aisé de gérer les *cookies*.
 
-Nous avons également trouvé que la gestion des erreurs en mode synchrone était mieux géré avec Feign. 
+Nous avons également trouvé que la gestion des erreurs en mode synchrone était mieux géré avec Feign.
 
 Les solutions utilisant [OkHttp](http://square.github.io/okhttp/) sont communes à Retrofit et à Feign (si on utilise le client [okhttp-client](https://github.com/OpenFeign/feign/tree/master/okhttp) est utilisé comme client HTTP pour Feign).
 
