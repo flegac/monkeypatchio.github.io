@@ -3,12 +3,12 @@ order: 4
 title: titles.jobs
 permalink: job
 ---
-
+<!--
 <section class="job-top">
   <div>
     <img src="/public/images/careers/TeamMonkeyT3.png" alt="Team Monkey">
   </div>
-</section>
+</section>-->
 
 <section class="title">
   <h1>{% t jobs.title %}</h1>
@@ -42,13 +42,8 @@ permalink: job
           </div>
         </a>
         <div class="content">
-          {{ job.content }}
-          <p>
-            {% t jobs.offers.contact %}<br>
-            <a href="mailto:{{ site.contact.mail }}">
-              {% t jobs.offers.candidature %}
-            </a>
-          </p>
+          {{ job.excerpt | remove: '<p>' | remove: '</p>' }}
+          <a href="{{job.url}}">{% t jobs.offers.readmore %}</a>
         </div>
       </div>
     {% endfor %}

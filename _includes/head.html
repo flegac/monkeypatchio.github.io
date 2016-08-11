@@ -15,8 +15,10 @@
   <!-- SEO -->
   <meta property="og:title" content="{{ page_title }}" />
 
-  <meta property="og:description" content="{{ site.description }}" />
-  <meta name="description" content="{{ site.description }}" />
+  {% capture page_description %}{{ page.excerpt | strip_html }}{% endcapture %}
+  {% if page_description == '' %}{% capture page_description %}{{ page.description }}{% endcapture %}{% endif %}
+  <meta property="og:description" content="{{ page_description }}" />
+  <meta name="description" content="{{ page_description }}" />
   
   {% if page.authors.length > 0 %}
     {% assign authors_list = page.authors %}
@@ -55,8 +57,8 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@{{ site.twitter.username }}" />
   <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
-  <meta name="twitter:title" content="{{ site.contact.name }}">
-  <meta name="twitter:description" content="{{ site.description }}">
+  <meta name="twitter:title" content="{{ page_title }}">
+  <meta name="twitter:description" content="{{ page_description }}">
   <meta name="twitter:image" content="{{ page_image }}">
 
   <!-- Lang --> 

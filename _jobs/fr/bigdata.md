@@ -5,9 +5,11 @@ image: public/images/monkies/big-data.png
 techno: [Hadoop, Spark, ML, ElasticSearch, NoSQL]
 ---
 
+# Expert Big Data
+
 MonkeyPatch société d’expertise informatique recherche des consultants Big Data. Vous êtes technophile et aimez les challenges techniques ? Vous souhaitez rejoindre une équipe dynamique passionnée par l’informatique ?
 
-### Poste et mission
+## Poste et mission
 
 Amoureux de la technique, vous avez pris le pari de vous investir sur des projets de traitement de la Data. Il est aujourd’hui temps de capitaliser en vous frottant à des projets complexes et de grande envergure.
 
@@ -20,9 +22,11 @@ Vous assurerez ces taches:
  * Evaluer les vitesses de croissance des volumes et paramétrer en conséquence.
  * Tester les analyses et extractions répondant aux besoins les plus courants.
 
+<!--more-->
+
 Au sein de notre équipe vous serez amené également à participer régulièrement à des événements techniques permettant de se confronter nouvelles orientations techniques et de mettre en commun votre savoir-faire.
 
-### Profil Recherché
+## Profil Recherché
 
 Vous êtes à l'aise quand il s'agit d'aider les équipes de développement pour qu'elles soient plus performante et si besoin vous êtes capables de les aider à développer. 
 Vous connaissez une ou plusieurs de ces technologies :

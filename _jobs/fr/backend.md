@@ -5,10 +5,12 @@ image: public/images/monkies/back-end.png
 techno: [Java/JEE, SQL, NoSQL, Messaging, Spring] 
 ---
 
+# Expert Back-End
+
 MonkeyPatch société d’expertise informatique recherche des consultants Back-End. Vous êtes technophile et aimez les challenges techniques ? Vous souhaitez rejoindre une équipe dynamique passionnée par l’informatique ?
 
-### Poste et mission
-
+## Poste et mission
+tags
 En tant qu’expert Back-End, vous n'avez pas peur de vous plonger dans les languages de programmation Back End et les Bases de données.
 Vous aurez comme missions :
 
@@ -19,9 +21,11 @@ Vous aurez comme missions :
  * Assurer une veille permanente autour des usages, des technologies dans le domaine du serveur et de la base de donnée
  * Et (selon mission et expériences) assurer le lead technique du projet
 
+<!--more-->
+
 Au sein de notre équipe vous serez amené également à participer régulièrement à des événements techniques permettant de se confronter nouvelles orientations techniques et de mettre en commun votre savoir-faire.
 
-### Profil Recherché
+## Profil Recherché
 
 Vous maîtrisez une ou plusieurs technologies Back End et prêtez attention à la performance et la fiabilité de vos développement et vous avez l'habitude de travailler dans un environnement agile.
 Vous pratiquez ces technologies. 
@@ -32,7 +36,7 @@ Vous pratiquez ces technologies.
  * Bases de données NoSQL, SQL
  * Tests Unitaires, Tests d'intégrations...
 
-### Plus
+## Plus
 
 La connaissance en Front end est un plus. 
 

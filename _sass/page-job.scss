@@ -26,6 +26,7 @@
   }
 
   .jobs {
+    margin-top: 3.75rem;
     background-color: $grey3;
     padding-top: 1rem;
     padding-bottom: 2rem;
@@ -121,6 +122,9 @@
           width: calc(100% - 2rem);
           display: none;
           text-align: left;
+           h1, h2, h3 {
+             display: none;
+           }
         }
       }
 

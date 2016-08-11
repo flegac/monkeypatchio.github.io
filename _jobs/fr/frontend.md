@@ -9,7 +9,7 @@ techno: [HTML5, CSS3, JavaScript, AngularJS, React]
 
 MonkeyPatch société d’expertise informatique recherche des consultants Front-End. Vous êtes technophile et aimez les challenges techniques ? Vous souhaitez rejoindre une équipe dynamique passionnée par l’informatique ?
 
-### Poste et mission
+## Poste et mission
 
 En tant qu’expert Front-End, vous jouerez un véritable rôle de pivot entre le Design (UX/UI) et le Développement Back-End.
 Vous aurez comme missions :
@@ -20,6 +20,8 @@ Vous aurez comme missions :
 * Etre force de proposition sur les performances et l’architecture
 * Assurer une veille permanente autour des usages, des technologies dans le domaine du web & du mobile
 * Et (selon mission et expériences) assurer le lead technique du projet
+
+<!--more-->
 
 Au sein de notre équipe vous serez amené également à participer régulièrement à des événements techniques permettant de se confronter nouvelles orientations techniques et de mettre en commun votre savoir-faire.
 

@@ -6,14 +6,9 @@
   {% include header.html %}
   <section class="post">
     <h1>
-      <span>{{page.title}}</span>
+      <span>{{ page.title }}</span>
       <span class="date">{% include date.html date=page.date %}</span>
-      <div class="authors">
-        {% for author in page.authors %}
-          <a href="https://plus.google.com/{{ site.data.authors[author].googleplus }}" rel=author>{{ site.data.authors[author].name }}</a>
-        {% endfor %}
-      </div>
-      <!--<a href="#disqus_thread" class="count"><script id="dsq-count-scr" src="//monkeypatchblog.disqus.com/count.js" async></script></a>-->
+      <a href="#disqus_thread" class="count"><script id="dsq-count-scr" src="//monkeypatchblog.disqus.com/count.js" async></script></a>
     </h1>
 
     <div class="tags">
@@ -23,6 +18,27 @@
     </div>
 
     <article>{{ content }}</article>
+
+    <div class="authors">
+      {% for author in page.authors %}
+        <div class="author">
+          <a href="https://twitter.com/{{ site.data.authors[author].twitter }}" rel="author">
+            <img src="{{site.data.authors[author].photo}}" alt="{{ site.data.authors[author].name }}">
+            <span>{{ site.data.authors[author].name }}</span>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="share">
+    <a class="twitter-share-button"
+      href="https://twitter.com/share"
+      data-size="large"
+      data-via="monkeypatch_io"
+      data-text="{{ page.title }}"
+      data-hashtags="{% for tag in page.tags %}{{ tag }}{% if forloop.last == false %},{% endif %}{% endfor %}"
+      >Tweet</a>
   </section>
   
   {% if page.comments %}
@@ -68,6 +84,23 @@
   <!-- End Google Tag Manager -->
   <script src="/public/scripts/modernizr-custom.js"></script>
   <script src="/public/scripts/main.js"></script>
+  <!-- Share with Twitter -->
+  <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
 </body>
 </html>
 

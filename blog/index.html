@@ -16,7 +16,7 @@ layout: blog
         <div class="date">{% include date.html date=post.date %}</div>
         <div class="authors">
           {% for author in post.authors %}
-            <a href="https://plus.google.com/{{ site.data.authors[author].twitter }}" rel=author>{{ site.data.authors[author].name }}</a> 
+            <a href="https://twitter.com/{{ site.data.authors[author].twitter }}" rel=author>{{ site.data.authors[author].name }}</a> 
           {% endfor %}
         </div>
       </h2>
