@@ -4,7 +4,7 @@ authors:
   - ilaborie
 tags: [MKTD, Java, REST, Feign, Retrofit, Cookie]
 comments: true
-published: false
+published: true
 ---
 Cet article est le deuxième d'une série d'article sur les clients REST en java.
 
@@ -250,18 +250,42 @@ public class UploadEncoder implements Encoder {
 {% endhighlight %}
 
 > On peut bien sûr simplifier le code en utilisant une bibliothèque qui permert plus facilement de faire la conversion `InputStream` vers `byte[]`, mais ça ne fait pas de mal d'écrire des `try with resources` de temps en temps.
-> On peut légitimement argumenté que ce code risque de poser des problèmes si le fichier est particulièrement gros, mais si on doit gérer ce genre de cas, il faut aussi se poser la question: une API REST est elle la bonne solution pour
+
+> On peut légitimement argumenté que ce code risque de poser des problèmes si le fichier est particulièrement gros, mais si on doit gérer ce genre de cas il faudra aussi se poser la question: une API REST est elle la bonne solution pour faire des *upload* de gros fichier ?
 
 ### Download
 
-TODO
+On utilise le même principe pour le *download*, sauf que bien sur c'est un `feign.Decoder` qui va assurer le travail, ce qui va donner:
+
+{% highlight java linenos %}
+public class DownloadDecoder implements Decoder {
+    private final Decoder delegate;
+
+    DownloadDecoder(Decoder decoder) {
+        super();
+        delegate = decoder;
+    }
+
+    @Override
+    public Object decode(Response response, Type type) throws IOException, DecodeException, FeignException {
+        if (InputStream.class.equals(type)) {
+            return response.body().asInputStream();
+        }
+        return delegate.decode(response, type);
+    }
+}
+{% endhighlight %}
+
+Encore une fois, Feign rend l'opération très simple.
 
 ### Bilan
 
 Il est très simple dans Feign de manipuler les en-têtes HTTP, cela permet d'ajouter facilement les divers mécanismes d'autentifications: *Cookie*, *Token*.
+
 Il est très facile de gérer les réponses HTTP en erreur, c'est un des points fort de Feign par rapport à Retrofit.
-Le mécanisme d'encodeur permet facilement de traiter le cas d'*upload* du fichier, et de façon plus générale de traiter tous les cas de *serialization* de la requête HTTP.
-TODO download
+
+Le mécanisme d'encodeur permet facilement de traiter le cas d'*upload* du fichier, et de façon plus générale de traiter tous les cas de *serialization* de la requête HTTP. 
+Le mécanisme de décodeur va permet de façon trivial de récupérer le contenu d'un fichier que l'on *download*.
 
 Feign offre une grande souplesse grace aux `Encoder`, `Decoder`, `RequestInterceptor`, ... on arrive assez facilement à résoudre les divers problèmes posés autour des API REST.
 
@@ -334,7 +358,7 @@ private Response authInterceptor(Interceptor.Chain chain) throws IOException {
 
 ### Bilan
 
-Que ce soit avec Feign ou retrofit,  il a été très aisé de gérer les *cookies*.
+Que ce soit avec Feign ou retrofit, il a été très aisé de gérer les *cookies*, et les *upload*/*download* de fichiers. 
 
 Nous avons également trouvé que la gestion des erreurs en mode synchrone était mieux géré avec Feign.
 

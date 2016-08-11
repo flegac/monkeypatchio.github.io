@@ -4,7 +4,7 @@ authors:
   - ilaborie
 tags: [MKTD, Java, REST, Feign, Retrofit, Android, RxJava]
 comments: true
-published: false
+published: true
 ---
 
 [MKTD#1 Article précédent: Prise en main]({% post_url 2016-08-09-MKTD#1-feign-vs-retrofit-1-prise-en-main %})
