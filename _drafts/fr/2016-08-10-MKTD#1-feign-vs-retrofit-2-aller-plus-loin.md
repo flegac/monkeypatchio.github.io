@@ -284,7 +284,7 @@ Il est très simple dans Feign de manipuler les en-têtes HTTP, cela permet d'aj
 
 Il est très facile de gérer les réponses HTTP en erreur, c'est un des points fort de Feign par rapport à Retrofit.
 
-Le mécanisme d'encodeur permet facilement de traiter le cas d'*upload* du fichier, et de façon plus générale de traiter tous les cas de *serialization* de la requête HTTP. 
+Le mécanisme d'encodeur permet facilement de traiter le cas d'*upload* du fichier, et de façon plus générale de traiter tous les cas de *serialization* de la requête HTTP.
 Le mécanisme de décodeur va permet de façon trivial de récupérer le contenu d'un fichier que l'on *download*.
 
 Feign offre une grande souplesse grace aux `Encoder`, `Decoder`, `RequestInterceptor`, ... on arrive assez facilement à résoudre les divers problèmes posés autour des API REST.
@@ -293,9 +293,10 @@ Feign offre une grande souplesse grace aux `Encoder`, `Decoder`, `RequestInterce
 
 ### Authentification avec Cookie
 
-La façon de faire la plus simple avec Retrofit est de le faire coté client HTTP et d’utiliser ce même client pour les requêtes suivantes ou bien de lui passer le `cookieJar` utilisé.
+La façon la plus simple pour gérer l'Authentification avec Retrofit consiste à la gérer au niveau du client HTTP. Il suffit ensuite de réutiliser ce même client pour les requêtes suivantes.
+Une autre solution consiste a utiliser un client par requête qui utilise une seule instance de `cookieJar`.
 
-Voici une première implémentation assez basique mais qui pour notre cas d’utilisation fonctionne.
+Voici une première implémentation assez basique mais qui permet de comprendre le mécanisme du `cookieJar`.
 
 {% highlight java linenos %}
 client = new OkHttpClient.Builder()
@@ -316,8 +317,7 @@ client = new OkHttpClient.Builder()
                     });
 {% endhighlight %}
 
-Cette implémentation a été simplifiée en ajoutant la dépendance `okhttp-urlconnection` de `OkHttp`.
-
+Une implémentation plus élégante et plus simple consiste à ajouter la dépendance `okhttp-urlconnection` de `OkHttp`.
 
 {% highlight java linenos %}
 CookieHandler cookieHandler = new CookieManager(
@@ -329,7 +329,8 @@ OkHttpClient httpClient = new OkHttpClient.Builder()
 
 ### Gestion des erreurs
 
-Cette fois nous avons utilisé la fonctionnalité d’interceptor de `OkHttp`. Heureusement les exceptions à retourné étaient de type RuntimeException, sinon il nous aurait pas été possible de faire de cette manière.
+Il n'existe pas, de mon point de vue de solution idéale dans retrofit pour gérer les erreurs comment il en existe dans Feign.
+Nous avons donc utilisé la fonctionnalité d’interceptor de `OkHttp`. Une limitation existe cependant, il faut que les exceptions à retourner soient de type RuntimeException.
 
 {% highlight java linenos %}
 OkHttpClient client = new OkHttpClient.Builder()
@@ -353,12 +354,79 @@ private Response authInterceptor(Interceptor.Chain chain) throws IOException {
 
 ### Upload
 
+Pour l'*upload* nous avons choisi d'utiliser la méthode du [formulaire multipart](https://www.ietf.org/rfc/rfc2388.txt) avec l'en-tête `Content-type` à `multipart/form-data`
+
+Et voici comment faire :
+
+On ajoute la méthode au service.
+
+{% highlight java linenos %}
+public interface MonkeyService {
+
+    @Multipart
+    @POST("monkeys/{id}/photo")
+    Call<Photo> sendPhoto(@Path("id") String id, @Part MultipartBody.Part file);
+}
+{% endhighlight %}
+
+Puis on appelle cette méthode en lui fournissant un RequestBody spécifique en passant par un fichier temporaire contenant la photo et ensuite nous créons le MultipartBody qui est passé au service. 
+
+{% highlight java linenos %}
+    @Override
+    public Photo savePhoto(String id, InputStream stream) throws SecurityException, IllegalArgumentException {
+        return executeCall(() -> {
+            try {
+                Path tmp = Files.createTempFile("exo2", "upload");
+                Files.copy(stream, tmp, REPLACE_EXISTING);
+
+                RequestBody requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), tmp.toFile());
+                MultipartBody.Part body = MultipartBody.Part.createFormData("photo", tmp.toFile().getName(), requestFile);
+                return monkeyService.sendPhoto(id, body);
+            } catch (IOException e) {
+                e.printStackTrace();
+                return null;
+            }
+        });
+    }
+{% endhighlight %}
+
+
 ### Download
 
+Pour le *download* il nous suffit de faire un appel a notre service en récupérant le contenue de la réponse qui se trouve dans le body.
+Pour cela Rétrofit dispose d'un type *générique* (ResponseBody) permettant de récupérer la réponse brute.
+
+On commence par ajouter la méthode à notre service.
+
+public interface MonkeyService {
+    @GET("monkeys/{id}/photo")
+    Call<ResponseBody> downloadPhoto(@Path("id") String id) throws SecurityException, IllegalArgumentException;
+  }
+  {% endhighlight %}
+
+et voici le code qui permet de récupérer notre photo.
+
+{% highlight java linenos %}
+@Override
+public InputStream downloadPhoto(String id) throws SecurityException, IllegalArgumentException {
+    try {
+        Response<ResponseBody> response = monkeyService.downloadPhoto(id).execute();
+        return response.body().byteStream();
+    } catch (IOException e) {
+        return null;
+    }
+}
+{% endhighlight %}
 
 ### Bilan
 
-Que ce soit avec Feign ou retrofit, il a été très aisé de gérer les *cookies*, et les *upload*/*download* de fichiers. 
+Il est très simple dans Retrofit de gérer l'authentification via *Cookie*, *Token*. L'upload et le download ont aussi été assez simple à gérer.
+
+En revanche la gestion des erreurs est un peu moins intuitive.Peut être y a t'il une autre solution auquel nous n'avons pas pensé.
+
+### Bilan Global
+
+Que ce soit avec Feign ou retrofit, il a été très aisé de gérer les *cookies*, et les *upload*/*download* de fichiers.
 
 Nous avons également trouvé que la gestion des erreurs en mode synchrone était mieux géré avec Feign.
 
