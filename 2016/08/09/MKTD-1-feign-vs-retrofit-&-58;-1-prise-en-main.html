@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--  lastBuildDate : Thu, 11 Aug 2016 16:51:05 +0200 -->
+<!--  lastBuildDate : Thu, 11 Aug 2016 18:24:11 +0200 -->
 <html>
 <head>
   
@@ -18,8 +18,24 @@
   <!-- SEO -->
   <meta property="og:title" content="Mktd#1 Feign Vs Retrofit &#58; 1 Prise En Main" />
 
-  <meta property="og:description" content="Société de conseil et d'expertise en informatique spécialisée dans les nouvelles technologies." />
-  <meta name="description" content="Société de conseil et d'expertise en informatique spécialisée dans les nouvelles technologies." />
+  
+  
+  <meta property="og:description" content="Introduction
+
+Nous avons organisé à Toulouse début juillet, le premier MonkeyTechDays chez HarryCow sur la thématique Feign vs Retrofit.
+Un MKTD consiste à comparer, apprendre, sous forme de défis, une ou plusieurs technologies sur une journée.
+
+Ce premier événement était l’occasion d’approfondir les technologies de clients REST en Java. Nous avons donc étudié Feign, une librairie initiée par Netflix et Retrofit qui est écrite par Square. Ces deux API permettent d’écrire des clients REST en Java de façon plus élégante qu’avec les solutions plus classiques comme JAX-RS client, Spring Rest Template, …
+
+" />
+  <meta name="description" content="Introduction
+
+Nous avons organisé à Toulouse début juillet, le premier MonkeyTechDays chez HarryCow sur la thématique Feign vs Retrofit.
+Un MKTD consiste à comparer, apprendre, sous forme de défis, une ou plusieurs technologies sur une journée.
+
+Ce premier événement était l’occasion d’approfondir les technologies de clients REST en Java. Nous avons donc étudié Feign, une librairie initiée par Netflix et Retrofit qui est écrite par Square. Ces deux API permettent d’écrire des clients REST en Java de façon plus élégante qu’avec les solutions plus classiques comme JAX-RS client, Spring Rest Template, …
+
+" />
   
   
   
@@ -68,8 +84,15 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@MonkeyPatch_io" />
   <meta name="twitter:url" content="http://www.monkeypatch.io/2016/08/09/MKTD-1-feign-vs-retrofit-&-58;-1-prise-en-main.html">
-  <meta name="twitter:title" content="MonkeyPatch">
-  <meta name="twitter:description" content="Société de conseil et d'expertise en informatique spécialisée dans les nouvelles technologies.">
+  <meta name="twitter:title" content="Mktd#1 Feign Vs Retrofit &#58; 1 Prise En Main">
+  <meta name="twitter:description" content="Introduction
+
+Nous avons organisé à Toulouse début juillet, le premier MonkeyTechDays chez HarryCow sur la thématique Feign vs Retrofit.
+Un MKTD consiste à comparer, apprendre, sous forme de défis, une ou plusieurs technologies sur une journée.
+
+Ce premier événement était l’occasion d’approfondir les technologies de clients REST en Java. Nous avons donc étudié Feign, une librairie initiée par Netflix et Retrofit qui est écrite par Square. Ces deux API permettent d’écrire des clients REST en Java de façon plus élégante qu’avec les solutions plus classiques comme JAX-RS client, Spring Rest Template, …
+
+">
   <meta name="twitter:image" content="http://www.monkeypatch.io/public/images/logos/logo-mkp-head-blue-x126.png">
 
   <!-- Lang --> 
@@ -276,14 +299,7 @@
 2016
 
 </span>
-      <div class="authors">
-        
-          <a href="https://plus.google.com/+vinasemmanuel" rel=author>Emmanuel Vinas</a>
-        
-          <a href="https://plus.google.com/+IgorLaborie" rel=author>Igor Laborie</a>
-        
-      </div>
-      <!--<a href="#disqus_thread" class="count"><script id="dsq-count-scr" src="//monkeypatchblog.disqus.com/count.js" async></script></a>-->
+      <a href="#disqus_thread" class="count"><script id="dsq-count-scr" src="//monkeypatchblog.disqus.com/count.js" async></script></a>
     </h1>
 
     <div class="tags">
@@ -826,6 +842,34 @@ Nous verrons cela plus en détail dans l’exercice suivant.</p>
 <p>Retrofit a ses propres annotations, évitant ainsi les erreurs de <em>typo</em>, ce qui est une très bonne chose. Bien que Feign se soit améliorée sur les messages d’erreurs, nous trouvons préférable le choix fait par l’équipe de Retrofit sur cette partie.</p>
 
 </article>
+
+    <div class="authors">
+      
+        <div class="author">
+          <a href="https://twitter.com/EmmanuelVinas" rel="author">
+            <img src="https://lh3.googleusercontent.com/-PPNaC_SZen8/AAAAAAAAAAI/AAAAAAAARt8/lRnd47vDjyM/s46-c-k-no/photo.jpg" alt="Emmanuel Vinas">
+            <span>Emmanuel Vinas</span>
+          </a>
+        </div>
+      
+        <div class="author">
+          <a href="https://twitter.com/ilaborie" rel="author">
+            <img src="http://www.gravatar.com/avatar/5870075cc4934bb7c32f2a6c56cc4f8d?s=48" alt="Igor Laborie">
+            <span>Igor Laborie</span>
+          </a>
+        </div>
+      
+    </div>
+  </section>
+
+  <section class="share">
+    <a class="twitter-share-button"
+      href="https://twitter.com/share"
+      data-size="large"
+      data-via="monkeypatch_io"
+      data-text="Mktd#1 Feign Vs Retrofit &#58; 1 Prise En Main"
+      data-hashtags="MKTD,Java,REST,Feign,Retrofit"
+      >Tweet</a>
   </section>
   
   
@@ -914,6 +958,23 @@ Nous verrons cela plus en détail dans l’exercice suivant.</p>
   <!-- End Google Tag Manager -->
   <script src="/public/scripts/modernizr-custom.js"></script>
   <script src="/public/scripts/main.js"></script>
+  <!-- Share with Twitter -->
+  <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
 </body>
 </html>
 
