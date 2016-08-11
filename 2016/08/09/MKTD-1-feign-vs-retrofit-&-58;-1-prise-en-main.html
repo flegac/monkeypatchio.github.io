@@ -1,137 +1,109 @@
 <!DOCTYPE html>
-<!--  lastBuildDate : Wed, 10 Aug 2016 17:19:26 +0200 -->
+<!--  lastBuildDate : Thu, 11 Aug 2016 14:49:00 +0200 -->
 <html>
 <head>
-  <title></title>
+  
+  
+  <title>Mktd#1 Feign Vs Retrofit &#58; 1 Prise En Main</title>
+  
   <!-- Meta -->
   <meta charset="utf-8">
   <!-- Google site verification -->
   <meta name="google-site-verification" content="Gq_ytzUtfYn95WsiH66e4Lfb8zANT-LUwD8JgH9xXdw" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <meta name="keywords" content="Expertise informatique, Dévelopement informatique" />
+
+  <!-- SEO -->
+  <meta property="og:title" content="Mktd#1 Feign Vs Retrofit &#58; 1 Prise En Main" />
+
+  <meta property="og:description" content="Société de conseil et d'expertise en informatique spécialisée dans les nouvelles technologies." />
   <meta name="description" content="Société de conseil et d'expertise en informatique spécialisée dans les nouvelles technologies." />
-  <meta name="author" content="">
-  <!-- Begin SEO tags -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <meta property="og:title" content="" />
-
-
-
-  <meta name="description" content="IntroductionNous avons organisé à Toulouse début juillet, le premier MonkeyTechDays chez HarryCow.Un MKTD consiste à comparer, apprendre, sous forme de défis, une ou plusieurs technologies sur une journée.Ce premier événement était l’occasion d’approfondir les technologies de clients REST en Java. Nous avons étudié Feign, une librairie initiée par Netflix et Retrofit qui est écrite par Square. Ces deux API permettent d’écrire des clients REST en Java de façon plus élégante qu’avec les solutions plus classiques comme JAX-RS client, Spring Rest Template, …" />
-  <meta property="og:description" content="IntroductionNous avons organisé à Toulouse début juillet, le premier MonkeyTechDays chez HarryCow.Un MKTD consiste à comparer, apprendre, sous forme de défis, une ou plusieurs technologies sur une journée.Ce premier événement était l’occasion d’approfondir les technologies de clients REST en Java. Nous avons étudié Feign, une librairie initiée par Netflix et Retrofit qui est écrite par Square. Ces deux API permettent d’écrire des clients REST en Java de façon plus élégante qu’avec les solutions plus classiques comme JAX-RS client, Spring Rest Template, …" />
-
-
-
-  <link rel="canonical" href="http://www.monkeypatch.io/2016/08/09/MKTD-1-feign-vs-retrofit-1-prise-en-main.html" />
-  <meta property="og:url" content="http://www.monkeypatch.io/2016/08/09/MKTD-1-feign-vs-retrofit-1-prise-en-main.html" />
-
-
-
-  <meta property="og:site_name" content="MonkeyPatch - Expertise Informatique" />
-
-
-
-
-
-
-
-
-  <meta property="og:type" content="article" />
-  <meta property="article:published_time" content="2016-08-09T00:00:00+02:00" />
-
-
-
-
-
-
   
-    <meta name="twitter:card" content="summary" />
+  
+    <meta name="author" content="Emmanuel Vinas">
+    <link rel="author" href="https://plus.google.com/+vinasemmanuel"/>
+    
+      <link rel="publisher" href="https://plus.google.com/+vinasemmanuel"/>
+    
+  
+    <meta name="author" content="Igor Laborie">
+    <link rel="author" href="https://plus.google.com/+IgorLaborie"/>
+    
+      <link rel="publisher" href="https://plus.google.com/+IgorLaborie"/>
+    
   
 
+  
+    <meta property="og:type" content="article"/>
+    <meta property="og:article:published_time" content="2016-08-09T00:00:00+02:00">
+    
+      <meta property="og:article:author:username" content="Emmanuel Vinas">
+    
+      <meta property="og:article:author:username" content="Igor Laborie">
+    
+    
+    <meta property="og:article:tag" content="MKTD">
+    
+    <meta property="og:article:tag" content="Java">
+    
+    <meta property="og:article:tag" content="REST">
+    
+    <meta property="og:article:tag" content="Feign">
+    
+    <meta property="og:article:tag" content="Retrofit">
+    
+  
+  
+  
+  
+  <meta property="og:image" content="http://www.monkeypatch.io/public/images/logos/logo-mkp-blue.png"/>
+
+  <meta property="og:url" content="http://www.monkeypatch.io/2016/08/09/MKTD-1-feign-vs-retrofit-&-58;-1-prise-en-main.html"/>
+  <meta property="og:site_name" content="MonkeyPatch"/>
+  
+  <!-- Twitter tags -->
+  <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@MonkeyPatch_io" />
+  <meta name="twitter:url" content="http://www.monkeypatch.io/2016/08/09/MKTD-1-feign-vs-retrofit-&-58;-1-prise-en-main.html">
+  <meta name="twitter:title" content="Mktd#1 Feign Vs Retrofit &#58; 1 Prise En Main">
+  <meta name="twitter:description" content="Société de conseil et d'expertise en informatique spécialisée dans les nouvelles technologies.">
+  <meta name="twitter:image" content="http://www.monkeypatch.io/public/images/logos/logo-mkp-blue.png">
 
-  
-    <meta name="twitter:creator" content="@EmmanuelVinas" />
-  
-
-
-
-
-
-
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-
-    "@type": "BlogPosting",
-
-
-
-    "headline": "",
-
-
-
-    "datePublished": "2016-08-09T00:00:00+02:00",
-
-
-    "description": "IntroductionNous avons organisé à Toulouse début juillet, le premier MonkeyTechDays chez HarryCow.Un MKTD consiste à comparer, apprendre, sous forme de défis, une ou plusieurs technologies sur une journée.Ce premier événement était l’occasion d’approfondir les technologies de clients REST en Java. Nous avons étudié Feign, une librairie initiée par Netflix et Retrofit qui est écrite par Square. Ces deux API permettent d’écrire des clients REST en Java de façon plus élégante qu’avec les solutions plus classiques comme JAX-RS client, Spring Rest Template, …",
-
-
-    "logo": "http://www.monkeypatch.io/public/images/logos/logo-mkp-blue.png",
-
-
-    "url": "http://www.monkeypatch.io/2016/08/09/MKTD-1-feign-vs-retrofit-1-prise-en-main.html"
-  }
-</script>
-
-<!-- End Jekyll SEO tag -->
-
-  
+  <!-- Lang --> 
   
   <link rel="alternate" hreflang="en" href="http://www.monkeypatch.io/en/index" />
+  <meta property="og:locale" content="fr_FR"/>
+  <meta property="og:locale:alternate" content="en_US"/>
   
 
   <link rel="shortcut icon" href="favicon.ico">
   
   <!-- Fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Fira+Mono:400,700' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
 
   <!-- Style -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link id="theme-style" rel="stylesheet" href="/css/main.css">
+
+ <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+
+    "@type": "WebSite",
+
+    "name": "MonkeyPatch",
+    "headline": "Mktd#1 Feign Vs Retrofit &#58; 1 Prise En Main",
+    "image": "http://www.monkeypatch.io/public/images/logos/logo-mkp-blue.png",
+
+    "datePublished": "2016-08-09T00:00:00+02:00",
+
+    "description": "Société de conseil et d'expertise en informatique spécialisée dans les nouvelles technologies.",
+    "url": "http://www.monkeypatch.io/2016/08/09/MKTD-1-feign-vs-retrofit-&-58;-1-prise-en-main.html"
+  }
+</script>
 </head>
 
 <body class="post">
@@ -146,11 +118,11 @@
     <nav class="lang">
       <ul>
         <li class="">
-          <a href="en/2016/08/09/MKTD-1-feign-vs-retrofit-1-prise-en-main.html" >EN</a>
+          <a href="en/2016/08/09/MKTD-1-feign-vs-retrofit-&-58;-1-prise-en-main.html" >EN</a>
         </li>
         <li class="sep">|</li>
         <li class="active">
-          <a href="/2016/08/09/MKTD-1-feign-vs-retrofit-1-prise-en-main.html" >FR</a>
+          <a href="/2016/08/09/MKTD-1-feign-vs-retrofit-&-58;-1-prise-en-main.html" >FR</a>
         </li>
       </ul>
     </nav>
@@ -263,10 +235,10 @@
       </ul>
       <ul class="lang">
         <li class="">
-          <a href="en/2016/08/09/MKTD-1-feign-vs-retrofit-1-prise-en-main.html" >EN</a>
+          <a href="en/2016/08/09/MKTD-1-feign-vs-retrofit-&-58;-1-prise-en-main.html" >EN</a>
         </li>
         <li class="active">
-          <a href="/2016/08/09/MKTD-1-feign-vs-retrofit-1-prise-en-main.html" >FR</a>
+          <a href="/2016/08/09/MKTD-1-feign-vs-retrofit-&-58;-1-prise-en-main.html" >FR</a>
         </li>
       </ul>
   </nav>
@@ -275,7 +247,7 @@
 
   <section class="post">
     <h1>
-      <span>Mktd#1 Feign Vs Retrofit 1 Prise En Main</span>
+      <span>Mktd#1 Feign Vs Retrofit &#58; 1 Prise En Main</span>
       <span class="date">
 
   
@@ -287,9 +259,9 @@
 </span>
       <div class="authors">
         
-          <span>Emmanuel Vinas</span> 
+          <a href="https://plus.google.com/+vinasemmanuel" rel=author>Emmanuel Vinas</a>
         
-          <span>Igor Laborie</span> 
+          <a href="https://plus.google.com/+IgorLaborie" rel=author>Igor Laborie</a>
         
       </div>
       <!--<a href="#disqus_thread" class="count"><script id="dsq-count-scr" src="//monkeypatchblog.disqus.com/count.js" async></script></a>-->
@@ -311,10 +283,10 @@
 
     <article><h2 id="introduction">Introduction</h2>
 
-<p>Nous avons organisé à Toulouse début juillet, le premier <a href="http://www.monkeytechdays.com/">MonkeyTechDays</a> chez <a href="http://www.harrycow.com/">HarryCow</a>.
+<p>Nous avons organisé à Toulouse début juillet, le premier <a href="http://www.monkeytechdays.com/">MonkeyTechDays</a> chez <a href="http://www.harrycow.com/">HarryCow</a> sur la thématique <a href="http://www.monkeytechdays.com/events/mktd-1">Feign vs Retrofit</a>.
 Un <abbr title="MonkeyTechDays">MKTD</abbr> consiste à comparer, apprendre, sous forme de défis, une ou plusieurs technologies sur une journée.</p>
 
-<p>Ce premier événement était l’occasion d’approfondir les technologies de clients <abbr title="REpresentational State Transfer">REST</abbr> en Java. Nous avons étudié <a href="https://github.com/OpenFeign/feign">Feign</a>, une librairie initiée par <a href="https://netflix.github.io/">Netflix</a> et <a href="http://square.github.io/retrofit/">Retrofit</a> qui est écrite par <a href="https://github.com/square">Square</a>. Ces deux <abbr title="Application Programming Interface">API</abbr> permettent d’écrire des clients <abbr title="REpresentational State Transfer">REST</abbr> en Java de façon plus élégante qu’avec les solutions plus classiques comme JAX-RS client, Spring Rest Template, …
+<p>Ce premier événement était l’occasion d’approfondir les technologies de clients <abbr title="REpresentational State Transfer">REST</abbr> en Java. Nous avons donc étudié <a href="https://github.com/OpenFeign/feign">Feign</a>, une librairie initiée par <a href="https://netflix.github.io/">Netflix</a> et <a href="http://square.github.io/retrofit/">Retrofit</a> qui est écrite par <a href="https://github.com/square">Square</a>. Ces deux <abbr title="Application Programming Interface">API</abbr> permettent d’écrire des clients <abbr title="REpresentational State Transfer">REST</abbr> en Java de façon plus élégante qu’avec les solutions plus classiques comme JAX-RS client, Spring Rest Template, …
 <!--more--></p>
 
 <p>Pour aider les équipes à tester les technologies, nous avions au préalable déployé plusieurs services <abbr title="REpresentational State Transfer">REST</abbr> sur le thème des singes.
@@ -322,14 +294,14 @@ Le code source de cette journée est disponible à l’adresse : <a href="https:
 
 <h2 id="dfi-0--constitution-des-quipes">Défi 0 : Constitution des équipes</h2>
 
-<p>Ce défi n’avait rien de technique, mais nous a permis de constituer des équipes équitables pour chaque technologie, en finissant nos cafés, croissants, … L’équipe Feign étant dirigée par <a href="https://twitter.com/ilaborie">Igor</a> et l’équipe Retrofit par <a href="https://twitter.com/EmmanuelVinas">Emmanuel</a>.</p>
+<p>Ce défi n’avait rien de technique, mais nous permet de constituer des équipes équitables pour chaque technologie, en finissant nos cafés, croissants, … L’équipe Feign étant dirigée par <a href="https://twitter.com/ilaborie">Igor</a> et l’équipe Retrofit par <a href="https://twitter.com/EmmanuelVinas">Emmanuel</a>.</p>
 
 <h2 id="dfi-1-prise-en-main">Défi 1: Prise en main</h2>
 
-<p>Ce premier défi consistait à une mise en bouche pour découvrir ces technologies.</p>
+<p>Ce premier défi consiste à une mise en bouche pour découvrir ces technologies.</p>
 
 <p>Le principe d’utilisation de <a href="https://github.com/OpenFeign/feign">Feign</a> et <a href="http://square.github.io/retrofit/">Retrofit</a> consiste à créer une interface décrivant le service <abbr title="REpresentational State Transfer">REST</abbr>, puis l’<abbr title="Application Programming Interface">API</abbr> se charge de créer une instance de cette interface.
-Dans ce premier défi, les interfaces étaient fournies, il suffisait de compléter le code pour faire passer des tests unitaires.</p>
+Dans ce premier défi, il suffisait de compléter les interfaces correpondant aux services <abbr title="REpresentational State Transfer">REST</abbr> pour faire passer des tests unitaires.</p>
 
 <p>Voici les deux interfaces retournant du <abbr title="JavaScript Object Notation">JSON</abbr> :</p>
 
@@ -353,7 +325,7 @@ Dans ce premier défi, les interfaces étaient fournies, il suffisait de complé
 <span class="o">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-<p>et une interface dont le service retourne du <abbr title="eXtensible Markup Language">XML</abbr> :</p>
+<p>et celle dont le service retourne du <abbr title="eXtensible Markup Language">XML</abbr> :</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -362,7 +334,7 @@ Dans ce premier défi, les interfaces étaient fournies, il suffisait de complé
 <span class="o">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-<p>Voir le code  <a href="https://github.com/monkeytechdays/mktd1-defi1">https://github.com/monkeytechdays/mktd1-defi1</a></p>
+<p>Voir le code sous <a href="https://github.com/monkeytechdays/mktd1-defi1">GitHub</a></p>
 
 <p>Pour réussir ce défi, il faut donc faire:</p>
 
@@ -377,7 +349,8 @@ Dans ce premier défi, les interfaces étaient fournies, il suffisait de complé
 
 <h2 id="feign">Feign</h2>
 
-<p>La documentation de Feign se trouve dans le <a href="https://github.com/OpenFeign/feign">README.md</a> sous GitHub. La documentation des extensions se trouve aussi dans des fichiers README.md de ces extensions.</p>
+<p>La documentation de Feign se trouve dans le <a href="https://github.com/OpenFeign/feign">README.md</a> sous GitHub.
+La documentation des extensions se trouve aussi dans des fichiers README.md de ces extensions.</p>
 
 <blockquote>
   <p>Bien que Feign supporte Java 6 par défaut, nous avons codé avec Java 8.</p>
@@ -430,7 +403,7 @@ Dans ce premier défi, les interfaces étaient fournies, il suffisait de complé
 
 <h3 id="configuration-des-interfaces">Configuration des interfaces</h3>
 
-<p>Ensuite il faut annoter les interfaces pour que Feign fasse les requêtes <abbr title="HyperText Transfer Protocol">HTTP</abbr> correspondantes. Feign apporte ses propres annotations pour décrire les requêtes <abbr title="HyperText Transfer Protocol">HTTP</abbr>:</p>
+<p>Ensuite il faut annoter les interfaces pour que Feign fasse les requêtes <abbr title="HyperText Transfer Protocol">HTTP</abbr> correspondantes aux méthodes de ces interfaces. Feign apporte ses propres annotations pour décrire les requêtes <abbr title="HyperText Transfer Protocol">HTTP</abbr>:</p>
 
 <ul>
   <li><code class="highlighter-rouge">@RequestLine</code>: permet de définir la première ligne de la requête <abbr title="HyperText Transfer Protocol">HTTP</abbr>: le verbe <abbr title="HyperText Transfer Protocol">HTTP</abbr> (GET, POST, PUT, DELETE, …) et le chemin, on y précise aussi les paramètres de la requête. On peut utiliser la notation <code class="highlighter-rouge"><span class="p">{</span><span class="err">name</span><span class="p">}</span></code> pour définir une partie variable de la requête (paramètre ou chemin)</li>
@@ -490,7 +463,8 @@ Pas d’annotation pour le corps d’une requête POST ou PUT, le paramètre san
 
 <h3 id="construction-des-instances">Construction des instances</h3>
 
-<p>Ensuite, on a utilisé l’<abbr title="Application Programming Interface">API</abbr> <em>fluent builder</em> de Feign pour créer l’instance de ces interfaces. C’est ici que l’on va faire intervenir les encodeurs/décodeurs que l’on a ajoutés dans nos dépendances plus tôt :</p>
+<p>Pour la dernière étape, on utilise l’<abbr title="Application Programming Interface">API</abbr> <em>fluent builder</em> de Feign pour créer l’instance de ces interfaces.
+C’est ici que l’on va faire intervenir les encodeurs/décodeurs ajoutés dans nos dépendances Maven plus tôt :</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -660,7 +634,7 @@ Les règles du jeu étant de ne pas changer la signature de l’interface, nous 
 <span class="o">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-<p>Ensuite, nous avons implémenté les interfaces <code class="highlighter-rouge">MonkeyApi</code>, <code class="highlighter-rouge">MonkeyRaceApi</code>, <code class="highlighter-rouge">MonkeyStatsApi</code> en utilisant les interfaces spécifiques pour Retrofit.</p>
+<p>Ensuite, nous implémentons les interfaces <code class="highlighter-rouge">MonkeyApi</code>, <code class="highlighter-rouge">MonkeyRaceApi</code>, <code class="highlighter-rouge">MonkeyStatsApi</code> en utilisant les interfaces spécifiques pour Retrofit.</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -764,9 +738,10 @@ Les règles du jeu étant de ne pas changer la signature de l’interface, nous 
 
 <h4 id="points-ngatifs">Points négatifs</h4>
 
-<p>Nous avons trouvé dommage qu’il n’y ait pas nativement une <code class="highlighter-rouge">CallFactory</code> permettant de faire de façon synchrone un appel retournant notre objet métier sans avoir besoin de passer par l’objet <code class="highlighter-rouge">Call</code> à la manière dont cela est géré avec Feign.</p>
+<p>Nous trouvons dommage qu’il n’y ait pas nativement une <code class="highlighter-rouge">CallFactory</code> permettant de faire de façon synchrone un appel retournant notre objet métier sans avoir besoin de passer par l’objet <code class="highlighter-rouge">Call</code> à la manière dont cela est géré avec Feign.</p>
 
-<p>Il aurait été aussi possible de faire notre propre <code class="highlighter-rouge">CallAdapterFactory</code>. Voici un exemple tiré du code source des tests de Retrofit :</p>
+<p>Il est aussi possible de faire notre propre <code class="highlighter-rouge">CallAdapterFactory</code>.
+Voici un exemple tiré du code source des tests de Retrofit :</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -819,16 +794,17 @@ Les règles du jeu étant de ne pas changer la signature de l’interface, nous 
 
 <p>Cela nous obligerait quand même à traiter les exceptions de type <code class="highlighter-rouge">DirectCallIOException</code>.</p>
 
-<p>Autre point que nous avons trouvé dommage lors de cet exercice est le fait que nous devons catcher les <code class="highlighter-rouge">IOException</code> qui peuvent se produire lors de l’appel. 
-Peut être manque-t-il a Retrofit une gestion des exceptions comme Feign peut l’avoir. Nous verrons cela plus en détail dans l’exercice suivant.</p>
+<p>Autre point que nous trouvons dommage lors de cet exercice est le fait que nous devons catcher les <code class="highlighter-rouge">IOException</code> qui peuvent se produire lors de l’appel. 
+Peut être manque-t-il a Retrofit une gestion des exceptions comme Feign peut l’avoir.
+Nous verrons cela plus en détail dans l’exercice suivant.</p>
 
-<p>Autre point ‘négatif’, Retrofit ayant besoin de plusieurs dépendances pour fonctionner : <a href="http://square.github.io/okhttp/">OkHttp</a> et d’au moins 1 <em>converter</em>, la taille de l’exécutable généré était sensiblement plus grosse que celle de l’exécutable de Feign (1.5Mo contre 0.5Mo).</p>
+<p>Dernier point ‘négatif’, Retrofit ayant besoin de plusieurs dépendances pour fonctionner : <a href="http://square.github.io/okhttp/">OkHttp</a> et d’au moins 1 <em>converter</em>, la taille de l’exécutable généré est sensiblement plus grosse que celle de l’exécutable de Feign (1.5Mo contre 0.5Mo).</p>
 
 <h4 id="points-positifs">Points Positifs</h4>
 
-<p>Retrofit reste simple à utiliser. Le fait que les principaux converters soient disponibles est une très bonne chose.</p>
+<p>Retrofit reste simple à utiliser. Le fait que les principaux <em>converters</em> soient disponibles est une très bonne chose.</p>
 
-<p>Retrofit a ses propres annotations, évitant ainsi les erreurs de <em>typo</em>, ce qui est une très bonne chose. Bien que feign se soit améliorée sur les messages d’erreurs, nous trouvons préférable le choix qu’a fait l’équipe de Retrofit sur cette partie.</p>
+<p>Retrofit a ses propres annotations, évitant ainsi les erreurs de <em>typo</em>, ce qui est une très bonne chose. Bien que Feign se soit améliorée sur les messages d’erreurs, nous trouvons préférable le choix fait par l’équipe de Retrofit sur cette partie.</p>
 
 </article>
   </section>
@@ -838,8 +814,8 @@ Peut être manque-t-il a Retrofit une gestion des exceptions comme Feign peut l�
     <div id="disqus_thread"></div>
     <script>
     var disqus_config = function () {
-        this.page.url = "http://www.monkeypatch.io/2016/08/09/MKTD-1-feign-vs-retrofit-1-prise-en-main.html";  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = "/2016/08/09/MKTD-1-feign-vs-retrofit-1-prise-en-main.html"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = "http://www.monkeypatch.io/2016/08/09/MKTD-1-feign-vs-retrofit-&-58;-1-prise-en-main.html";  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = "/2016/08/09/MKTD-1-feign-vs-retrofit-&-58;-1-prise-en-main.html"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
