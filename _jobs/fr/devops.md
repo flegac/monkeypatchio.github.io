@@ -2,7 +2,7 @@
 title: titles.job.devops 
 order: 4
 image: public/images/monkies/dev-ops.png
-techno: [GNU/Linux, Bash, Ansible, Docker, Git, Jenkins]
+techno: [GNU/Linux, Bash, Ansible, Docker, Git]
 ---
 
 MonkeyPatch société d’expertise informatique recherche des consultants DevOps. Vous êtes technophile et aimez les challenges techniques ? Vous souhaitez rejoindre une équipe dynamique passionnée par l’informatique ?
@@ -26,10 +26,10 @@ Vous Maitrisez ces technologies:
     
  * Configuration Linux, Windows
  * Notions de sécurité des systèmes et applications
- * Langages d'automatisation (bash, Puppet, Ansible)
- * Technologies de containers (Docker...)
+ * Langages d'automatisation (Bash, Puppet, Ansible, ...)
+ * Technologies de containers (Docker, Kubernetes, Swarm ...)
  * Intégration continue, déploiement continue
- * Technologie Cloud et clustering (Amazon, Google App Engine, MESOS, kubernetes, Docker swarm...)
+ * Technologie Cloud et clustering (Amazon, Google App Engine, Apache Mesos, ...)
  * Au moins un langage de programmation suivant : Java/Groovy, Go, Ruby, Python
 
 ## Modalités

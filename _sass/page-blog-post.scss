@@ -19,7 +19,7 @@
       text-align: right;
       color: $txtGrey;
       font-size: 1.1rem;
-      span {
+      a {
         &:nth-child(n+2)::before {
           content: ', ';
         }

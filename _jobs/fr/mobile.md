@@ -28,6 +28,7 @@ Vous maîtrisez parfaitement une des technologies mobile récentes et vous prét
 Vous pratiquez ces technologies: 
     
  * Au moins une des technologies : Android, iOS, Cross Platform (Cordova, Ionic)
+ * Au moins un des Langages : Java, Swift, Kotlin, Objective-C 
  * Web services REST
  * l'ecosystème de votre platforme préférée (Gradle, Swift, ...)
  * Tests Unitaires, Tests d'intégrations...

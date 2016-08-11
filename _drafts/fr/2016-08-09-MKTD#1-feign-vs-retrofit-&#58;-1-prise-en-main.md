@@ -1,9 +1,11 @@
 ---
+image: http://www.monkeytechdays.com/img/events/modal/feign-vs-retrofit.jpg
 authors:
   - evinas
   - ilaborie
 tags: [MKTD, Java, REST, Feign, Retrofit]
 comments: true
+published: true
 ---
 
 ## Introduction
@@ -17,7 +19,6 @@ Ce premier événement était l’occasion d’approfondir les technologies de c
 Pour aider les équipes à tester les technologies, nous avions au préalable déployé plusieurs services REST sur le thème des singes.
 Le code source de cette journée est disponible à l’adresse : <https://github.com/monkeytechdays>
 
-
 ## Défi 0 : Constitution des équipes
 
 Ce défi n’avait rien de technique, mais nous permet de constituer des équipes équitables pour chaque technologie, en finissant nos cafés, croissants, ... L’équipe Feign étant dirigée par [Igor](https://twitter.com/ilaborie) et l’équipe Retrofit par [Emmanuel](https://twitter.com/EmmanuelVinas).
@@ -27,7 +28,7 @@ Ce défi n’avait rien de technique, mais nous permet de constituer des équipe
 Ce premier défi consiste à une mise en bouche pour découvrir ces technologies. 
 
 Le principe d’utilisation de [Feign](https://github.com/OpenFeign/feign) et [Retrofit](http://square.github.io/retrofit/) consiste à créer une interface décrivant le service REST, puis l’API se charge de créer une instance de cette interface.
-Dans ce premier défi, les interfaces étaient fournies, il suffisait de compléter le code pour faire passer des tests unitaires.
+Dans ce premier défi, il suffisait de compléter les interfaces correpondant aux services REST pour faire passer des tests unitaires.
 
 Voici les deux interfaces retournant du JSON :
 
@@ -46,7 +47,7 @@ public interface MonkeyRaceApi {
 }
 {% endhighlight %}
 
-et une interface dont le service retourne du XML :
+et celle dont le service retourne du XML :
 
 {% highlight java linenos %}
 public interface MonkeyStatsApi {
@@ -54,7 +55,7 @@ public interface MonkeyStatsApi {
 }
 {% endhighlight %}
 
-Voir le code  <https://github.com/monkeytechdays/mktd1-defi1> 
+Voir le code sous [GitHub](https://github.com/monkeytechdays/mktd1-defi1) 
 
 Pour réussir ce défi, il faut donc faire:
 
@@ -67,7 +68,8 @@ Pour réussir ce défi, il faut donc faire:
 
 ## Feign
 
-La documentation de Feign se trouve dans le [README.md](https://github.com/OpenFeign/feign) sous GitHub. La documentation des extensions se trouve aussi dans des fichiers README.md de ces extensions.
+La documentation de Feign se trouve dans le [README.md](https://github.com/OpenFeign/feign) sous GitHub.
+La documentation des extensions se trouve aussi dans des fichiers README.md de ces extensions.
 
 > Bien que Feign supporte Java 6 par défaut, nous avons codé avec Java 8.
 
@@ -100,7 +102,7 @@ Pour commencer à utiliser Feign, il faut bien sûr ajouter les dépendances né
 
 ### Configuration des interfaces
 
-Ensuite il faut annoter les interfaces pour que Feign fasse les requêtes HTTP correspondantes. Feign apporte ses propres annotations pour décrire les requêtes HTTP:
+Ensuite il faut annoter les interfaces pour que Feign fasse les requêtes HTTP correspondantes aux méthodes de ces interfaces. Feign apporte ses propres annotations pour décrire les requêtes HTTP:
 
 * `@RequestLine`: permet de définir la première ligne de la requête HTTP: le verbe HTTP (GET, POST, PUT, DELETE, …) et le chemin, on y précise aussi les paramètres de la requête. On peut utiliser la notation `{name}` pour définir une partie variable de la requête (paramètre ou chemin)
 * `@Param`: cette annotation permet de faire le lien entre une variable définie dans les autres annotations (`@RequestLine`, `@Headers`, …) et le paramètre de la méthode. Il faut préciser le nom de la variable dans l’annotation.
@@ -142,7 +144,8 @@ public interface MonkeyStatsApi {
 
 ### Construction des instances
 
-Ensuite, on a utilisé l’API *fluent builder* de Feign pour créer l’instance de ces interfaces. C’est ici que l’on va faire intervenir les encodeurs/décodeurs que l’on a ajoutés dans nos dépendances plus tôt :
+Pour la dernière étape, on utilise l’API *fluent builder* de Feign pour créer l’instance de ces interfaces.
+C’est ici que l’on va faire intervenir les encodeurs/décodeurs ajoutés dans nos dépendances Maven plus tôt :
 
 {% highlight java linenos %}
 static MonkeyRaceApi buildRaceApi(String url) {
@@ -256,7 +259,7 @@ public interface MonkeyStatsService {
 }
 {% endhighlight %}
 
-Ensuite, nous avons implémenté les interfaces `MonkeyApi`, `MonkeyRaceApi`, `MonkeyStatsApi` en utilisant les interfaces spécifiques pour Retrofit.
+Ensuite, nous implémentons les interfaces `MonkeyApi`, `MonkeyRaceApi`, `MonkeyStatsApi` en utilisant les interfaces spécifiques pour Retrofit.
 
 {% highlight java linenos %}
 public class RetrofitMonkeyApi implements MonkeyApi, RetrofitApi {
@@ -316,9 +319,10 @@ public interface RetrofitApi {
 
 #### Points négatifs 
 
-Nous avons trouvé dommage qu’il n’y ait pas nativement une `CallFactory` permettant de faire de façon synchrone un appel retournant notre objet métier sans avoir besoin de passer par l’objet `Call` à la manière dont cela est géré avec Feign.
+Nous trouvons dommage qu’il n’y ait pas nativement une `CallFactory` permettant de faire de façon synchrone un appel retournant notre objet métier sans avoir besoin de passer par l’objet `Call` à la manière dont cela est géré avec Feign.
 
-Il aurait été aussi possible de faire notre propre `CallAdapterFactory`. Voici un exemple tiré du code source des tests de Retrofit :
+Il est aussi possible de faire notre propre `CallAdapterFactory`.
+Voici un exemple tiré du code source des tests de Retrofit :
 
 {% highlight java linenos %}
 static class DirectCallIOException extends RuntimeException {
@@ -349,20 +353,18 @@ static class DirectCallAdapterFactory extends CallAdapter.Factory {
 
 Cela nous obligerait quand même à traiter les exceptions de type `DirectCallIOException`.
 
-Autre point que nous avons trouvé dommage lors de cet exercice est le fait que nous devons catcher les `IOException` qui peuvent se produire lors de l’appel. 
-Peut être manque-t-il a Retrofit une gestion des exceptions comme Feign peut l’avoir. Nous verrons cela plus en détail dans l’exercice suivant.
+Autre point que nous trouvons dommage lors de cet exercice est le fait que nous devons catcher les `IOException` qui peuvent se produire lors de l’appel. 
+Peut être manque-t-il a Retrofit une gestion des exceptions comme Feign peut l’avoir.
+Nous verrons cela plus en détail dans l’exercice suivant.
 
-Autre point 'négatif', Retrofit ayant besoin de plusieurs dépendances pour fonctionner : [OkHttp](http://square.github.io/okhttp/) et d'au moins 1 *converter*, la taille de l’exécutable généré était sensiblement plus grosse que celle de l’exécutable de Feign (1.5Mo contre 0.5Mo). 
+Dernier point 'négatif', Retrofit ayant besoin de plusieurs dépendances pour fonctionner : [OkHttp](http://square.github.io/okhttp/) et d'au moins 1 *converter*, la taille de l’exécutable généré est sensiblement plus grosse que celle de l’exécutable de Feign (1.5Mo contre 0.5Mo).
 
 #### Points Positifs
 
-Retrofit reste simple à utiliser. Le fait que les principaux converters soient disponibles est une très bonne chose. 
+Retrofit reste simple à utiliser. Le fait que les principaux *converters* soient disponibles est une très bonne chose. 
 
-Retrofit a ses propres annotations, évitant ainsi les erreurs de *typo*, ce qui est une très bonne chose. Bien que feign se soit améliorée sur les messages d’erreurs, nous trouvons préférable le choix qu’a fait l’équipe de Retrofit sur cette partie.
+Retrofit a ses propres annotations, évitant ainsi les erreurs de *typo*, ce qui est une très bonne chose. Bien que Feign se soit améliorée sur les messages d’erreurs, nous trouvons préférable le choix fait par l’équipe de Retrofit sur cette partie.
 
----
-
-[La suite du MKTD#1: Aller plus loin]({% post_url 2016-08-10-MKTD#1-feign-vs-retrofit-2-aller-plus-loin %})
 
 *[MKTD]: MonkeyTechDays
 *[HTTP]: HyperText Transfer Protocol

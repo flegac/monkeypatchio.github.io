@@ -10,7 +10,7 @@
       <span class="date">{% include date.html date=page.date %}</span>
       <div class="authors">
         {% for author in page.authors %}
-          <span>{{ site.data.authors[author].name }}</span> 
+          <a href="https://plus.google.com/{{ site.data.authors[author].googleplus }}" rel=author>{{ site.data.authors[author].name }}</a>
         {% endfor %}
       </div>
       <!--<a href="#disqus_thread" class="count"><script id="dsq-count-scr" src="//monkeypatchblog.disqus.com/count.js" async></script></a>-->

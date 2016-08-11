@@ -1,13 +1,16 @@
 ---
+image: http://www.monkeytechdays.com/img/events/modal/feign-vs-retrofit.jpg
 authors:
   - evinas
   - ilaborie
 tags: [MKTD, Java, REST, Feign, Retrofit, Android, RxJava]
 comments: true
-published: true
+published: false
 ---
 
+Articles précédents :
 [MKTD#1 Article précédent: Prise en main]({% post_url 2016-08-09-MKTD#1-feign-vs-retrofit-1-prise-en-main %})
+
 [MKTD#1 Article précédent: Aller plus loin]({% post_url 2016-08-10-MKTD#1-feign-vs-retrofit-2-aller-plus-loin %})
 
 ---
@@ -15,7 +18,6 @@ published: true
 Le but de cet exercice était d’utiliser toutes les solutions possibles, hormis le cache pour améliorer les requêtes.
 La JVM ayant plein d'astuce d'optimisation (comme la compilation en code natif à chaud JIT), il est vite compliqué de faire des benchmarks 'valable' en Java.
 La solution la plus simple est d'utiliser [JMH](http://openjdk.java.net/projects/code-tools/jmh/) qui est la solution *officiel* pour la JVM. <!--more-->
-
 
 ## JHM
 

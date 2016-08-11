@@ -2,7 +2,7 @@
 title: titles.job.frontend
 order: 1
 image: public/images/monkies/front-end.png
-techno: [HTML5, CSS3, JavaScript]
+techno: [HTML5, CSS3, JavaScript, AngularJS, React]
 ---
 
 # Expert Front End

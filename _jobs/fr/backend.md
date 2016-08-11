@@ -2,7 +2,7 @@
 title: titles.job.backend  
 order: 2
 image: public/images/monkies/back-end.png
-techno: [Java/JEE, SQL, NoSQL, Messaging] 
+techno: [Java/JEE, SQL, NoSQL, Messaging, Spring] 
 ---
 
 MonkeyPatch société d’expertise informatique recherche des consultants Back-End. Vous êtes technophile et aimez les challenges techniques ? Vous souhaitez rejoindre une équipe dynamique passionnée par l’informatique ?
@@ -26,7 +26,7 @@ Au sein de notre équipe vous serez amené également à participer régulièrem
 Vous maîtrisez une ou plusieurs technologies Back End et prêtez attention à la performance et la fiabilité de vos développement et vous avez l'habitude de travailler dans un environnement agile.
 Vous pratiquez ces technologies. 
     
- * Au moins un des Langages : Java, Scala, Go, Ruby, Kotlin, Rust
+ * Au moins un des Langages : Java, Scala, Go, Ruby, Rust
  * Messaging AMQP, Kafka, JMS
  * Web services principalement REST
  * Bases de données NoSQL, SQL
