@@ -10,8 +10,8 @@ gems:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-multiple-languages-plugin
-  - octopress-autoprefixer
-  - jekyll-press
+#  - octopress-autoprefixer
+#  - jekyll-press
 
 # Blog pagination
 paginate: 5
