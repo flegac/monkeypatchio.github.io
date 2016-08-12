@@ -10,7 +10,7 @@ techno: [Java/JEE, SQL, NoSQL, Messaging, Spring]
 MonkeyPatch société d’expertise informatique recherche des consultants Back-End. Vous êtes technophile et aimez les challenges techniques ? Vous souhaitez rejoindre une équipe dynamique passionnée par l’informatique ?
 
 ## Poste et mission
-tags
+
 En tant qu’expert Back-End, vous n'avez pas peur de vous plonger dans les languages de programmation Back End et les Bases de données.
 Vous aurez comme missions :
 

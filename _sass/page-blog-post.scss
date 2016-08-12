@@ -30,12 +30,18 @@ $navWidth: 14rem;
       padding-left: 1.25rem; 
     }
   }
-
-  section.post {
-    text-align: left;
+  section {
     display: block;
     margin-left: $navWidth + 2rem;
     padding-left: 0; 
+  }
+
+  .share {
+    text-align: right;
+  }
+
+  section.post {
+    text-align: left;
     
     h1 {
       padding-top: 3.5rem;

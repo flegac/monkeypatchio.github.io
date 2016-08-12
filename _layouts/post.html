@@ -19,6 +19,16 @@
         {% endfor %} 
       </div>
 
+      <div class="share">
+        <a class="twitter-share-button"
+          href="https://twitter.com/share"
+          data-size="large"
+          data-via="monkeypatch_io"
+          data-text="{{ page.title }}"
+          data-hashtags="{% for tag in page.tags %}{{ tag }}{% if forloop.last == false %},{% endif %}{% endfor %}"
+          >Tweet</a>
+      </div>
+
       <article>{{ content }}</article>
 
       <div class="authors">
@@ -31,16 +41,6 @@
           </div>
         {% endfor %}
       </div>
-    </section>
-
-    <section class="share">
-      <a class="twitter-share-button"
-        href="https://twitter.com/share"
-        data-size="large"
-        data-via="monkeypatch_io"
-        data-text="{{ page.title }}"
-        data-hashtags="{% for tag in page.tags %}{{ tag }}{% if forloop.last == false %},{% endif %}{% endfor %}"
-        >Tweet</a>
     </section>
     
     {% if page.comments %}
@@ -61,8 +61,8 @@
       <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </section>
     {% endif %}
+    {% include footer.html %}
   </main>
-  {% include footer.html %}
   <!-- Google Tag Manager -->
   <noscript>
     <iframe src="//www.googletagmanager.com/ns.html?id=GTM-KGGFWH" height="0" width="0" style="display:none;visibility:hidden"></iframe>
