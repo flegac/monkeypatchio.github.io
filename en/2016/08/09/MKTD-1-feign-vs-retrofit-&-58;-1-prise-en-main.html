@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--  lastBuildDate : Fri, 12 Aug 2016 14:34:07 +0200 -->
+<!--  lastBuildDate : Fri, 12 Aug 2016 15:28:06 +0200 -->
 <html>
 <head>
   
@@ -16,6 +16,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="keywords" content="Expertise informatique, Dévelopement informatique" />
+
+  <!-- RSS feed -->
+  <link rel="alternate" type="application/rss+xml" title=" RSS Feed" href="http://www.monkeypatch.io/blog/feed.xml" />
 
   <!-- SEO -->
   <meta property="og:title" content="Mktd#1 Feign Vs Retrofit &#58; 1 Prise En Main" />
@@ -186,6 +189,8 @@ Ce premier événement était l’occasion d’approfondir les technologies de c
           
         
           
+        
+          
             <li class="">
               <a href="/en/expert">Our expertise</a>
             </li>
@@ -231,6 +236,8 @@ Ce premier événement était l’occasion d’approfondir les technologies de c
   <input type="checkbox" id="menu-hamburger"/>
   <nav class="menu-hamburger">
      <ul>
+        
+          
         
           
         
@@ -338,7 +345,7 @@ Dans ce premier défi, il suffisait de compléter les interfaces correpondant au
 
 <p>Voici les deux interfaces retournant du <abbr title="JavaScript Object Notation">JSON</abbr> :</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
@@ -348,24 +355,30 @@ Dans ce premier défi, il suffisait de compléter les interfaces correpondant au
    <span class="n">Monkey</span> <span class="nf">getMonkeyByName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">);</span>
    <span class="n">Monkey</span> <span class="nf">createMonkey</span><span class="o">(</span><span class="n">Monkey</span> <span class="n">monkey</span><span class="o">);</span>
    <span class="kt">void</span> <span class="nf">deleteMonkey</span><span class="o">(</span><span class="n">String</span> <span class="n">id</span><span class="o">);</span>
-<span class="o">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonkeyRaceApi</span> <span class="o">{</span>
     <span class="n">List</span><span class="o">&lt;</span><span class="n">MonkeyRace</span><span class="o">&gt;</span> <span class="nf">getMonkeyRaces</span><span class="o">();</span>
-<span class="o">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
 
 <p>et celle dont le service retourne du <abbr title="eXtensible Markup Language">XML</abbr> :</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonkeyStatsApi</span> <span class="o">{</span>
     <span class="n">MonkeyStatistics</span> <span class="nf">getMonkeyStats</span><span class="o">();</span>
-<span class="o">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
 
 <p>Voir le code sous <a href="https://github.com/monkeytechdays/mktd1-defi1">GitHub</a></p>
 
@@ -393,7 +406,7 @@ La documentation des extensions se trouve aussi dans des fichiers README.md de c
 
 <p>Pour commencer à utiliser Feign, il faut bien sûr ajouter les dépendances nécessaires pour ce défi:</p>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-xml highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
@@ -416,19 +429,21 @@ La documentation des extensions se trouve aussi dans des fichiers README.md de c
    <span class="nt">&lt;artifactId&gt;</span>feign-core<span class="nt">&lt;/artifactId&gt;</span>
    <span class="nt">&lt;version&gt;</span>8.17.0<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
-<span class="c">&lt;!-- Feign: encode/decode <abbr title="JavaScript Object Notation">JSON</abbr> with GSON --&gt;</span>
+<span class="c">&lt;!-- Feign: encode/decode JSON with GSON --&gt;</span>
 <span class="nt">&lt;dependency&gt;</span>
    <span class="nt">&lt;groupId&gt;</span>com.netflix.feign<span class="nt">&lt;/groupId&gt;</span>
    <span class="nt">&lt;artifactId&gt;</span>feign-gson<span class="nt">&lt;/artifactId&gt;</span>
    <span class="nt">&lt;version&gt;</span>8.17.0<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
-<span class="c">&lt;!-- Feign: encode/decode <abbr title="eXtensible Markup Language">XML</abbr> with JAXB --&gt;</span>
+<span class="c">&lt;!-- Feign: encode/decode XML with JAXB --&gt;</span>
 <span class="nt">&lt;dependency&gt;</span>
    <span class="nt">&lt;groupId&gt;</span>com.netflix.feign<span class="nt">&lt;/groupId&gt;</span>
    <span class="nt">&lt;artifactId&gt;</span>feign-jaxb<span class="nt">&lt;/artifactId&gt;</span>
    <span class="nt">&lt;version&gt;</span>8.17.0<span class="nt">&lt;/version&gt;</span>
-<span class="nt">&lt;/dependency&gt;</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="nt">&lt;/dependency&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
 
 <blockquote>
   <p>Nous recommandons bien sûr l’utilisation d’une propriété maven pour définir la version de Feign utilisée.</p>
@@ -447,16 +462,18 @@ Pas d’annotation pour le corps d’une requête POST ou PUT, le paramètre san
 
 <p>Ce qui nous donne ceci :</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonkeyRaceApi</span> <span class="o">{</span>
     <span class="nd">@RequestLine</span><span class="o">(</span><span class="s">"GET /races"</span><span class="o">)</span>
     <span class="n">List</span><span class="o">&lt;</span><span class="n">MonkeyRace</span><span class="o">&gt;</span> <span class="nf">getMonkeyRaces</span><span class="o">();</span>
-<span class="o">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
@@ -482,48 +499,62 @@ Pas d’annotation pour le corps d’une requête POST ou PUT, le paramètre san
 
     <span class="nd">@RequestLine</span><span class="o">(</span><span class="s">"DELETE /{id}"</span><span class="o">)</span>
     <span class="kt">void</span> <span class="nf">deleteMonkey</span><span class="o">(</span><span class="nd">@Param</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span> <span class="n">String</span> <span class="n">id</span><span class="o">);</span>
-<span class="o">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonkeyStatsApi</span> <span class="o">{</span>
     <span class="nd">@RequestLine</span><span class="o">(</span><span class="s">"GET /stats"</span><span class="o">)</span>
     <span class="n">MonkeyStatistics</span> <span class="nf">getMonkeyStats</span><span class="o">();</span>
-<span class="o">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
 
 <h3 id="construction-des-instances">Construction des instances</h3>
 
 <p>Pour la dernière étape, on utilise l’<abbr title="Application Programming Interface">API</abbr> <em>fluent builder</em> de Feign pour créer l’instance de ces interfaces.
 C’est ici que l’on va faire intervenir les encodeurs/décodeurs ajoutés dans nos dépendances Maven plus tôt :</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5</pre></td><td class="code"><pre><span class="kd">static</span> <span class="n">MonkeyRaceApi</span> <span class="nf">buildRaceApi</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="n">Feign</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
-            <span class="o">.</span><span class="na">decoder</span><span class="o">(</span><span class="k">new</span> <span class="n">GsonDecoder</span><span class="o">())</span> <span class="c1">// Decode <abbr title="JavaScript Object Notation">JSON</abbr> from respone body</span>
-            <span class="o">.</span><span class="na">target</span><span class="o">(</span><span class="n">MonkeyRaceApi</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">url</span><span class="o">);</span>
-<span class="o">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
 5
-6</pre></td><td class="code"><pre><span class="kd">static</span> <span class="n">MonkeyApi</span> <span class="nf">buildMonkeyApi</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
+6</pre></td><td class="code"><pre><span class="kd">static</span> <span class="n">MonkeyRaceApi</span> <span class="nf">buildRaceApi</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">return</span> <span class="n">Feign</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
-            <span class="o">.</span><span class="na">decoder</span><span class="o">(</span><span class="k">new</span> <span class="n">GsonDecoder</span><span class="o">())</span> <span class="c1">// Decode <abbr title="JavaScript Object Notation">JSON</abbr> from respone body</span>
-            <span class="o">.</span><span class="na">encoder</span><span class="o">(</span><span class="k">new</span> <span class="n">GsonEncoder</span><span class="o">())</span> <span class="c1">// Encode <abbr title="JavaScript Object Notation">JSON</abbr> for request body</span>
-            <span class="o">.</span><span class="na">target</span><span class="o">(</span><span class="n">MonkeyApi</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">url</span> <span class="o">+</span> <span class="s">"/monkeys"</span><span class="o">);</span>
-<span class="o">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+            <span class="c1">// Decode JSON from respone body</span>
+            <span class="o">.</span><span class="na">decoder</span><span class="o">(</span><span class="k">new</span> <span class="n">GsonDecoder</span><span class="o">())</span>
+            <span class="o">.</span><span class="na">target</span><span class="o">(</span><span class="n">MonkeyRaceApi</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">url</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8</pre></td><td class="code"><pre><span class="kd">static</span> <span class="n">MonkeyApi</span> <span class="nf">buildMonkeyApi</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">Feign</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
+            <span class="c1">// Decode JSON from respone body</span>
+            <span class="o">.</span><span class="na">decoder</span><span class="o">(</span><span class="k">new</span> <span class="n">GsonDecoder</span><span class="o">())</span>
+            <span class="c1">// Encode JSON for request body</span>
+            <span class="o">.</span><span class="na">encoder</span><span class="o">(</span><span class="k">new</span> <span class="n">GsonEncoder</span><span class="o">())</span>
+            <span class="o">.</span><span class="na">target</span><span class="o">(</span><span class="n">MonkeyApi</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">url</span> <span class="o">+</span> <span class="s">"/monkeys"</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
@@ -532,17 +563,21 @@ C’est ici que l’on va faire intervenir les encodeurs/décodeurs ajoutés dan
 7
 8
 9
-10</pre></td><td class="code"><pre><span class="kd">static</span> <span class="n">MonkeyStatsApi</span> <span class="nf">buildStatsApi</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
+10
+11</pre></td><td class="code"><pre><span class="kd">static</span> <span class="n">MonkeyStatsApi</span> <span class="nf">buildStatsApi</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
     <span class="c1">// Create JAXB context factory</span>
     <span class="n">JAXBContextFactory</span> <span class="n">jaxbFactory</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JAXBContextFactory</span><span class="o">.</span><span class="na">Builder</span><span class="o">()</span>
             <span class="o">.</span><span class="na">withMarshallerJAXBEncoding</span><span class="o">(</span><span class="s">"UTF-8"</span><span class="o">)</span>
             <span class="o">.</span><span class="na">build</span><span class="o">();</span>
 
     <span class="k">return</span> <span class="n">Feign</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
-            <span class="o">.</span><span class="na">decoder</span><span class="o">(</span><span class="k">new</span> <span class="n">JAXBDecoder</span><span class="o">(</span><span class="n">jaxbFactory</span><span class="o">))</span> <span class="c1">// Decode <abbr title="eXtensible Markup Language">XML</abbr> from response body</span>
+            <span class="c1">// Decode XML from response body</span>
+            <span class="o">.</span><span class="na">decoder</span><span class="o">(</span><span class="k">new</span> <span class="n">JAXBDecoder</span><span class="o">(</span><span class="n">jaxbFactory</span><span class="o">))</span>
             <span class="o">.</span><span class="na">target</span><span class="o">(</span><span class="n">MonkeyStatsApi</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">url</span><span class="o">);</span>
-<span class="o">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
 
 <blockquote>
   <p>Feign va concaténer l’<abbr title="Uniform Resource Locator">URL</abbr> avec le chemin défini, dans le chemin de l’annotation <code class="highlighter-rouge">@RequestLine</code>, ceci permet facilement de rajouter un préfixe pour les services si on le souhaite.</p>
@@ -582,7 +617,7 @@ C’est ici que l’on va faire intervenir les encodeurs/décodeurs ajoutés dan
 
 <p>La première étape consiste à rajouter les dépendances de Rétrofit</p>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-xml highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
@@ -616,22 +651,26 @@ C’est ici que l’on va faire intervenir les encodeurs/décodeurs ajoutés dan
     <span class="nt">&lt;groupId&gt;</span>com.squareup.retrofit2<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>converter-simplexml<span class="nt">&lt;/artifactId&gt;</span>
     <span class="nt">&lt;version&gt;</span>${retrofit.version}<span class="nt">&lt;/version&gt;</span>
-<span class="nt">&lt;/dependency&gt;</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="nt">&lt;/dependency&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
 
 <p>Ensuite, il nous faut rajouter les annotations spécifiques à Retrofit sur l’interface. 
 Les règles du jeu étant de ne pas changer la signature de l’interface, nous avons dû ajouter une autre interface utilisée par la <code class="highlighter-rouge">CallFactory</code> par défaut de Retrofit.</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonkeyRaceService</span> <span class="o">{</span>
    <span class="nd">@GET</span><span class="o">(</span><span class="s">"races"</span><span class="o">)</span>
     <span class="n">Call</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">MonkeyRace</span><span class="o">&gt;&gt;</span> <span class="nf">getMonkeyRaces</span><span class="o">();</span>
-<span class="o">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
@@ -655,21 +694,25 @@ Les règles du jeu étant de ne pas changer la signature de l’interface, nous 
 
     <span class="nd">@DELETE</span><span class="o">(</span><span class="s">"monkeys/{id}"</span><span class="o">)</span>
     <span class="n">Call</span><span class="o">&lt;</span><span class="n">ResponseBody</span><span class="o">&gt;</span> <span class="nf">delete</span><span class="o">(</span><span class="nd">@Path</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span> <span class="n">String</span> <span class="n">monkeyId</span><span class="o">);</span>
-<span class="o">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonkeyStatsService</span> <span class="o">{</span>
     <span class="nd">@GET</span><span class="o">(</span><span class="s">"/stats"</span><span class="o">)</span>
     <span class="n">Call</span><span class="o">&lt;</span><span class="n">MonkeyStatistics</span><span class="o">&gt;</span> <span class="nf">getMonkeyStats</span><span class="o">();</span>
-<span class="o">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
 
 <p>Ensuite, nous implémentons les interfaces <code class="highlighter-rouge">MonkeyApi</code>, <code class="highlighter-rouge">MonkeyRaceApi</code>, <code class="highlighter-rouge">MonkeyStatsApi</code> en utilisant les interfaces spécifiques pour Retrofit.</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
@@ -695,11 +738,13 @@ Les règles du jeu étant de ne pas changer la signature de l’interface, nous 
 24
 25
 26
-27</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">RetrofitMonkeyApi</span> <span class="kd">implements</span> <span class="n">MonkeyApi</span><span class="o">,</span> <span class="n">RetrofitApi</span> <span class="o">{</span>
+27
+28</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">RetrofitMonkeyApi</span> <span class="kd">implements</span> <span class="n">MonkeyApi</span><span class="o">,</span> <span class="n">RetrofitApi</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="n">MonkeyService</span> <span class="n">monkeyService</span><span class="o">;</span>
 
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setBaseUrl</span><span class="o">(</span><span class="n">String</span> <span class="n">baseUrl</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">monkeyService</span> <span class="o">=</span> <span class="n">createRetrofit</span><span class="o">(</span><span class="n">baseUrl</span><span class="o">,</span> <span class="kc">false</span><span class="o">).</span><span class="na">create</span><span class="o">(</span><span class="n">MonkeyService</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+        <span class="n">monkeyService</span> <span class="o">=</span> <span class="n">createRetrofit</span><span class="o">(</span><span class="n">baseUrl</span><span class="o">,</span> <span class="kc">false</span><span class="o">)</span>
+          <span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">MonkeyService</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
     <span class="o">}</span>
 
     <span class="nd">@Override</span>
@@ -721,10 +766,12 @@ Les règles du jeu étant de ne pas changer la signature de l’interface, nous 
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">deleteMonkey</span><span class="o">(</span><span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">executeCall</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="n">monkeyService</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="n">id</span><span class="o">));</span>
     <span class="o">}</span>
-<span class="o">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
@@ -764,8 +811,10 @@ Les règles du jeu étant de ne pas changer la signature de l’interface, nous 
             <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
         <span class="o">}</span>
     <span class="o">}</span>
-<span class="o">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
 
 <h3 id="bilan-1">Bilan</h3>
 
@@ -776,7 +825,7 @@ Les règles du jeu étant de ne pas changer la signature de l’interface, nous 
 <p>Il est aussi possible de faire notre propre <code class="highlighter-rouge">CallAdapterFactory</code>.
 Voici un exemple tiré du code source des tests de Retrofit :</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
@@ -822,8 +871,10 @@ Voici un exemple tiré du code source des tests de Retrofit :</p>
             <span class="o">}</span>
         <span class="o">};</span>
     <span class="o">}</span>
-<span class="o">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
 
 <p>Cela nous obligerait quand même à traiter les exceptions de type <code class="highlighter-rouge">DirectCallIOException</code>.</p>
 
