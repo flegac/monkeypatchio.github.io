@@ -20,8 +20,13 @@
   <!-- SEO -->
   <meta property="og:title" content="{{ page_title }}" />
 
-  {% capture page_description %}{{ page.excerpt | strip_html }}{% endcapture %}
-  {% if page_description == '' %}{% capture page_description %}{{ page.description }}{% endcapture %}{% endif %}
+  {% if page.excerpt %}
+    {% capture page_description %}{{ page.excerpt | strip_html }}{% endcapture %}
+  {% elsif page.description %}
+    {% assign page_description = page.description %}
+  {% else %}
+    {% assign page_description = site.description %}
+  {% endif %}
   <meta property="og:description" content="{{ page_description }}" />
   <meta name="description" content="{{ page_description }}" />
   
