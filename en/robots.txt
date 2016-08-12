@@ -1,1 +1,3 @@
-User-agent: * Disallow: /404.htmlSitemap: http://www.monkeypatch.io/sitemap.xml
+User-agent: * 
+Disallow: /404.html
+Sitemap: http://www.monkeypatch.io/sitemap.xml
