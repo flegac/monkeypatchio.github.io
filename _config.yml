@@ -6,7 +6,6 @@ sass:
 
 
 gems:
-  - jekyll-sitemap
   - jekyll-paginate
   - jekyll-multiple-languages-plugin
   - octopress-autoprefixer
