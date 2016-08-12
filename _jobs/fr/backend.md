@@ -1,7 +1,7 @@
 ---
 title: titles.job.backend  
 order: 2
-image: public/images/monkies/back-end.png
+image: http://www.monkeypatch.io/public/images/monkies/back-end.png
 techno: [Java/JEE, SQL, NoSQL, Messaging, Spring] 
 ---
 

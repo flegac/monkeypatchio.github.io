@@ -1,5 +1,5 @@
 ---
-image: http://www.monkeytechdays.com/img/events/modal/feign-vs-retrofit.jpg
+image: http://www.monkeypatch.io/public/images/logos/logo-FeignVsRetrofit.png
 authors:
   - evinas
   - ilaborie

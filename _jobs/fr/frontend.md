@@ -1,7 +1,7 @@
 ---
 title: titles.job.frontend
 order: 1
-image: public/images/monkies/front-end.png
+image: http://www.monkeypatch.io/public/images/monkies/front-end.png
 techno: [HTML5, CSS3, JavaScript, AngularJS, React]
 ---
 

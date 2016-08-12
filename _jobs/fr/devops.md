@@ -1,7 +1,7 @@
 ---
 title: titles.job.devops 
 order: 4
-image: public/images/monkies/dev-ops.png
+image: http://www.monkeypatch.io/public/images/monkies/dev-ops.png
 techno: [GNU/Linux, Bash, Ansible, Docker, Git]
 ---
 

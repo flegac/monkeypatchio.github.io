@@ -1,7 +1,7 @@
 ---
 title: titles.job.bigdata 
 order: 5
-image: public/images/monkies/big-data.png
+image: http://www.monkeypatch.io/public/images/monkies/big-data.png
 techno: [Hadoop, Spark, ML, ElasticSearch, NoSQL]
 ---
 

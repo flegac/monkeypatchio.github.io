@@ -1,7 +1,7 @@
 ---
 title: titles.job.mobile 
 order: 3
-image: public/images/monkies/mobile.png
+image: http://www.monkeypatch.io/public/images/monkies/mobile.png
 techno: [Android, iOS, Cross Platform]
 ---
 
