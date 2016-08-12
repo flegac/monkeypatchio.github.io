@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--  lastBuildDate : Thu, 11 Aug 2016 18:29:45 +0200 -->
+<!--  lastBuildDate : Fri, 12 Aug 2016 12:23:18 +0200 -->
 <html>
 <head>
   
@@ -8,6 +8,8 @@
   
   <!-- Meta -->
   <meta charset="utf-8">
+  <meta http-equiv="content-language" content="en" />
+  <meta name="language" content="en" />
   <!-- Google site verification -->
   <meta name="google-site-verification" content="Gq_ytzUtfYn95WsiH66e4Lfb8zANT-LUwD8JgH9xXdw" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -74,8 +76,7 @@ Ce premier événement était l’occasion d’approfondir les technologies de c
   
   
   
-  
-  <meta property="og:image" content="http://www.monkeypatch.io/public/images/logos/logo-mkp-head-blue-x126.png"/>
+  <meta property="og:image" content="http://www.monkeypatch.io/public/images/logos/logo-FeignVsRetrofit.png"/>
 
   <meta property="og:url" content="http://www.monkeypatch.io/2016/08/09/MKTD-1-feign-vs-retrofit-&-58;-1-prise-en-main.html"/>
   <meta property="og:site_name" content="MonkeyPatch"/>
@@ -93,11 +94,12 @@ Un MKTD consiste à comparer, apprendre, sous forme de défis, une ou plusieurs 
 Ce premier événement était l’occasion d’approfondir les technologies de clients REST en Java. Nous avons donc étudié Feign, une librairie initiée par Netflix et Retrofit qui est écrite par Square. Ces deux API permettent d’écrire des clients REST en Java de façon plus élégante qu’avec les solutions plus classiques comme JAX-RS client, Spring Rest Template, …
 
 ">
-  <meta name="twitter:image" content="http://www.monkeypatch.io/public/images/logos/logo-mkp-head-blue-x126.png">
+  <meta name="twitter:image" content="http://www.monkeypatch.io/public/images/logos/logo-FeignVsRetrofit.png">
 
   <!-- Lang --> 
-  
+  <link rel="alternate" hreflang="en" href="http://www.monkeypatch.io/en/index" />
   <link rel="alternate" hreflang="fr" href="http://www.monkeypatch.io/index" />
+  
   <meta property="og:locale:alternate" content="fr_FR"/>
   <meta property="og:locale" content="en_US"/>
   
@@ -128,7 +130,7 @@ Ce premier événement était l’occasion d’approfondir les technologies de c
     ],
     "name": "MonkeyPatch",
     "headline": "Mktd#1 Feign Vs Retrofit &#58; 1 Prise En Main",
-    "image": "http://www.monkeypatch.io/public/images/logos/logo-mkp-head-blue-x126.png",
+    "image": "http://www.monkeypatch.io/public/images/logos/logo-FeignVsRetrofit.png",
     
       "datePublished": "2016-08-09T00:00:00+02:00",
       "dateModified": "2016-08-09T00:00:00+02:00",
@@ -281,34 +283,35 @@ Ce premier événement était l’occasion d’approfondir les technologies de c
       </ul>
   </nav>
 </header>
-<a id="top"></a>
 
-  <section class="post">
-    <h1>
-      <span>Mktd#1 Feign Vs Retrofit &#58; 1 Prise En Main</span>
-      <span class="date">
+  <main>
+    <nav class="index"><!-- fill with JS --></nav>
+    <section class="post">
+      <h1 id="top">
+        <span>Mktd#1 Feign Vs Retrofit &#58; 1 Prise En Main</span>
+        <span class="date">
 
   09 August, 2016
 
 </span>
-      <a href="#disqus_thread" class="count"><script id="dsq-count-scr" src="//monkeypatchblog.disqus.com/count.js" async></script></a>
-    </h1>
+        <a href="#disqus_thread" class="count"><script id="dsq-count-scr" src="//monkeypatchblog.disqus.com/count.js" async></script></a>
+      </h1>
 
-    <div class="tags">
-      
-        <span>MKTD</span> 
-      
-        <span>Java</span> 
-      
-        <span>REST</span> 
-      
-        <span>Feign</span> 
-      
-        <span>Retrofit</span> 
-       
-    </div>
+      <div class="tags">
+        
+          <span>MKTD</span> 
+        
+          <span>Java</span> 
+        
+          <span>REST</span> 
+        
+          <span>Feign</span> 
+        
+          <span>Retrofit</span> 
+         
+      </div>
 
-    <article><h2 id="introduction">Introduction</h2>
+      <article><h2 id="introduction">Introduction</h2>
 
 <p>Nous avons organisé à Toulouse début juillet, le premier <a href="http://www.monkeytechdays.com/">MonkeyTechDays</a> chez <a href="http://www.harrycow.com/">HarryCow</a> sur la thématique <a href="http://www.monkeytechdays.com/events/mktd-1">Feign vs Retrofit</a>.
 Un <abbr title="MonkeyTechDays">MKTD</abbr> consiste à comparer, apprendre, sous forme de défis, une ou plusieurs technologies sur une journée.</p>
@@ -835,54 +838,54 @@ Nous verrons cela plus en détail dans l’exercice suivant.</p>
 
 </article>
 
-    <div class="authors">
-      
-        <div class="author">
-          <a href="https://twitter.com/EmmanuelVinas" rel="author">
-            <img src="https://lh3.googleusercontent.com/-PPNaC_SZen8/AAAAAAAAAAI/AAAAAAAARt8/lRnd47vDjyM/s46-c-k-no/photo.jpg" alt="Emmanuel Vinas">
-            <span>Emmanuel Vinas</span>
-          </a>
-        </div>
-      
-        <div class="author">
-          <a href="https://twitter.com/ilaborie" rel="author">
-            <img src="http://www.gravatar.com/avatar/5870075cc4934bb7c32f2a6c56cc4f8d?s=48" alt="Igor Laborie">
-            <span>Igor Laborie</span>
-          </a>
-        </div>
-      
-    </div>
-  </section>
+      <div class="authors">
+        
+          <div class="author">
+            <a href="https://twitter.com/EmmanuelVinas" rel="author">
+              <img src="https://lh3.googleusercontent.com/-PPNaC_SZen8/AAAAAAAAAAI/AAAAAAAARt8/lRnd47vDjyM/s46-c-k-no/photo.jpg" alt="Emmanuel Vinas">
+              <span>Emmanuel Vinas</span>
+            </a>
+          </div>
+        
+          <div class="author">
+            <a href="https://twitter.com/ilaborie" rel="author">
+              <img src="http://www.gravatar.com/avatar/5870075cc4934bb7c32f2a6c56cc4f8d?s=48" alt="Igor Laborie">
+              <span>Igor Laborie</span>
+            </a>
+          </div>
+        
+      </div>
+    </section>
 
-  <section class="share">
-    <a class="twitter-share-button"
-      href="https://twitter.com/share"
-      data-size="large"
-      data-via="monkeypatch_io"
-      data-text="Mktd#1 Feign Vs Retrofit &#58; 1 Prise En Main"
-      data-hashtags="MKTD,Java,REST,Feign,Retrofit"
-      >Tweet</a>
-  </section>
-  
-  
-  <section class="comment">
-    <div id="disqus_thread"></div>
-    <script>
-    var disqus_config = function () {
-        this.page.url = "http://www.monkeypatch.io/en/2016/08/09/MKTD-1-feign-vs-retrofit-&-58;-1-prise-en-main.html";  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = "/2016/08/09/MKTD-1-feign-vs-retrofit-&-58;-1-prise-en-main.html"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = '//monkeypatchblog.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </section>
-  
-
+    <section class="share">
+      <a class="twitter-share-button"
+        href="https://twitter.com/share"
+        data-size="large"
+        data-via="monkeypatch_io"
+        data-text="Mktd#1 Feign Vs Retrofit &#58; 1 Prise En Main"
+        data-hashtags="MKTD,Java,REST,Feign,Retrofit"
+        >Tweet</a>
+    </section>
+    
+    
+    <section class="comment">
+      <div id="disqus_thread"></div>
+      <script>
+      var disqus_config = function () {
+          this.page.url = "http://www.monkeypatch.io/en/2016/08/09/MKTD-1-feign-vs-retrofit-&-58;-1-prise-en-main.html";  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = "/2016/08/09/MKTD-1-feign-vs-retrofit-&-58;-1-prise-en-main.html"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = '//monkeypatchblog.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+    
+  </main>
   <footer class="top">
     <div>
       <h3>Get In Touch</h3>
@@ -949,7 +952,47 @@ Nous verrons cela plus en détail dans l’exercice suivant.</p>
   </script>
   <!-- End Google Tag Manager -->
   <script src="/public/scripts/modernizr-custom.js"></script>
-  <script src="/public/scripts/main.js"></script>
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+  var i;
+  var nav = document.querySelector('nav.index');
+  var headers = document.querySelectorAll('article h1, article h2, article h3, article h4, article h5, article h6');
+
+  var createNavHeader = function(id, type, text) {
+    var link = document.createElement('a');
+    link.textContent = text;
+    link.setAttribute('href', '#' + id);
+
+    var text = document.createElement(type);
+    text.appendChild(link);
+    return text;
+  };
+  var createHeaderLink = function(id, text) {
+    var link = document.createElement('a');
+    link.classList.add('anchor');
+    link.textContent = text;
+    link.setAttribute('href', '#' + id);
+    return link;
+  };
+
+  var processHeader = function(header) {
+    var id = header.id;
+    var tag = header.tagName;
+    var text = header.textContent;
+
+    var navHeader = createNavHeader(id, tag, text);
+    nav.appendChild(navHeader);
+
+    var headerLink = createHeaderLink(id, text);
+    header.removeChild(header.firstChild);
+    header.appendChild(headerLink); 
+  }
+
+  for (i = 0; i < headers.length; i++) {
+    processHeader(headers[i]);
+  }
+});
+  </script>
   <!-- Share with Twitter -->
   <script>window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],

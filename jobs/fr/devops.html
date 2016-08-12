@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--  lastBuildDate : Thu, 11 Aug 2016 18:29:45 +0200 -->
+<!--  lastBuildDate : Fri, 12 Aug 2016 12:23:18 +0200 -->
 <html>
 <head>
   
@@ -8,6 +8,8 @@
   
   <!-- Meta -->
   <meta charset="utf-8">
+  <meta http-equiv="content-language" content="fr" />
+  <meta name="language" content="fr" />
   <!-- Google site verification -->
   <meta name="google-site-verification" content="Gq_ytzUtfYn95WsiH66e4Lfb8zANT-LUwD8JgH9xXdw" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -71,8 +73,7 @@ En tant qu’expert DevOps, vous êtes amené à réaliser des missions de déve
   
   
   
-  
-  <meta property="og:image" content="http://www.monkeypatch.io/public/images/logos/logo-mkp-head-blue-x126.png"/>
+  <meta property="og:image" content="http://www.monkeypatch.io/public/images/monkies/dev-ops.png"/>
 
   <meta property="og:url" content="http://www.monkeypatch.io/jobs/fr/devops.html"/>
   <meta property="og:site_name" content="MonkeyPatch"/>
@@ -99,11 +100,12 @@ En tant qu’expert DevOps, vous êtes amené à réaliser des missions de déve
 
 
 ">
-  <meta name="twitter:image" content="http://www.monkeypatch.io/public/images/logos/logo-mkp-head-blue-x126.png">
+  <meta name="twitter:image" content="http://www.monkeypatch.io/public/images/monkies/dev-ops.png">
 
   <!-- Lang --> 
-  
   <link rel="alternate" hreflang="en" href="http://www.monkeypatch.io/en/index" />
+  <link rel="alternate" hreflang="fr" href="http://www.monkeypatch.io/index" />
+  
   <meta property="og:locale" content="fr_FR"/>
   <meta property="og:locale:alternate" content="en_US"/>
   
@@ -133,7 +135,7 @@ En tant qu’expert DevOps, vous êtes amené à réaliser des missions de déve
     ],
     "name": "MonkeyPatch",
     "headline": "Expert DevOps",
-    "image": "http://www.monkeypatch.io/public/images/logos/logo-mkp-head-blue-x126.png",
+    "image": "http://www.monkeypatch.io/public/images/monkies/dev-ops.png",
     
     "publisher": {
       "@type": "Organization",
@@ -150,6 +152,48 @@ En tant qu’expert DevOps, vous êtes amené à réaliser des missions de déve
 </head>
 
 <body class="job">
+  <!-- Contact Modal -->
+<div class="dialog" id="dialog-contact">
+  <div class="body">
+    <a class="close" href="#">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </a>
+    <h1>Pour nous contacter</h1>
+    <div class="row">
+      <a href="tel:91335781">
+        <div>
+          <i class="fa fa-phone" aria-hidden="true"></i>
+        </div>
+        <br>
+        <span class="text">05 34 32 61 45</span>
+      </a>
+      <a href="mailto:contact@monkeypatch.io">
+        <div>
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </div>
+        <br>
+        <span class="text">contact@monkeypatch.io</span>
+      </a>
+    </div>
+    <p>Remplissez le formulaire</p>
+    <form id="contact-form" method="post" action="http://62.210.81.45:8083/">
+  <div id="sent">Votre message a bien été envoyer</div>
+  <input type="hidden" name="redirect" value="http://www.monkeypatch.io/contact#sent" />
+  <div class="row">
+    <label for="txtName">Votre nom</label>
+    <input type="text" name="subject" id="txtName" placeholder="Votre nom" required>
+    <label for="txtEmail">Votre email</label>
+    <input type="email" name="from" id="txtEmail" placeholder="Votre email" required>
+  </div>
+  <label for="txtMessage">Votre message</label>
+  <textarea name="body" id="txtMessage" placeholder="Votre message" rows="8" required></textarea>
+  <button type="submit" class="button">Envoyer votre message</button>
+</form>
+
+  </div>
+  <a href="#"><div class="overlay"></div></a>
+</div>
+
   <header>
   <div class="menu">
     <div class="logo">
@@ -286,18 +330,18 @@ En tant qu’expert DevOps, vous êtes amené à réaliser des missions de déve
       </ul>
   </nav>
 </header>
-<a id="top"></a>
 
   <main>
-    <p>
-      <a href="/job">
-        <i class="fa fa-chevron-left"></i>
-        Nos Jobs
-      </a>
-    </p>
-    <hr>
-    <img class="profile" alt="Expert DevOps" src="/public/images/monkies/dev-ops.png">
-    <article><h1 id="expert-devops">Expert DevOps</h1>
+    <section id="top">
+      <p>
+        <a href="/job">
+          <i class="fa fa-chevron-left"></i>
+          Nos Jobs
+        </a>
+      </p>
+      <hr>
+      <img class="profile" alt="Expert DevOps" src="http://www.monkeypatch.io/public/images/monkies/dev-ops.png">
+      <article><h1 id="expert-devops">Expert DevOps</h1>
 
 <p>MonkeyPatch société d’expertise informatique recherche des consultants DevOps. Vous êtes technophile et aimez les challenges techniques ? Vous souhaitez rejoindre une équipe dynamique passionnée par l’informatique ?</p>
 
@@ -341,10 +385,11 @@ Vous Maitrisez ces technologies:</p>
   <li>Type de contrat: CDI</li>
 </ul>
 </article>
-    <p>
-      Vous partagez nos valeurs et souhaitez participer à notre projet ambitieux ; rejoignez notre équipe !
-      <a href="#dialog-contact">Envoyez-nous votre candidature !</a>
-    </p>
+      <p>
+        Vous partagez nos valeurs et souhaitez participer à notre projet ambitieux ; rejoignez notre équipe !
+        <a href="#dialog-contact">Envoyez-nous votre candidature !</a>
+      </p>
+    </section>
 
     <section class="share">
       <a class="twitter-share-button"
@@ -357,48 +402,6 @@ Vous Maitrisez ces technologies:</p>
     </section>
 
   </main>
-  <!-- Contact Modal -->
-<div class="dialog" id="dialog-contact">
-  <div class="body">
-    <a class="close" href="#">
-      <i class="fa fa-times" aria-hidden="true"></i>
-    </a>
-    <h1>Pour nous contacter</h1>
-    <div class="row">
-      <a href="tel:91335781">
-        <div>
-          <i class="fa fa-phone" aria-hidden="true"></i>
-        </div>
-        <br>
-        <span class="text">05 34 32 61 45</span>
-      </a>
-      <a href="mailto:contact@monkeypatch.io">
-        <div>
-          <i class="fa fa-envelope" aria-hidden="true"></i>
-        </div>
-        <br>
-        <span class="text">contact@monkeypatch.io</span>
-      </a>
-    </div>
-    <p>Remplissez le formulaire</p>
-    <form id="contact-form" method="post" action="http://62.210.81.45:8083/">
-  <div id="sent">Votre message a bien été envoyer</div>
-  <input type="hidden" name="redirect" value="http://www.monkeypatch.io/contact#sent" />
-  <div class="row">
-    <label for="txtName">Votre nom</label>
-    <input type="text" name="subject" id="txtName" placeholder="Votre nom" required>
-    <label for="txtEmail">Votre email</label>
-    <input type="email" name="from" id="txtEmail" placeholder="Votre email" required>
-  </div>
-  <label for="txtMessage">Votre message</label>
-  <textarea name="body" id="txtMessage" placeholder="Votre message" rows="8" required></textarea>
-  <button type="submit" class="button">Envoyer votre message</button>
-</form>
-
-  </div>
-  <a href="#"><div class="overlay"></div></a>
-</div>
-
   <footer class="top">
     <div>
       <h3>Rester en contact</h3>
@@ -465,7 +468,6 @@ Vous Maitrisez ces technologies:</p>
   </script>
   <!-- End Google Tag Manager -->
   <script src="/public/scripts/modernizr-custom.js"></script>
-  <script src="/public/scripts/main.js"></script>
   <!-- Share with Twitter -->
   <script>window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
