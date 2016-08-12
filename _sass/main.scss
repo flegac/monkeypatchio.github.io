@@ -1,13 +1,47 @@
 @import "reset";
 
+@import "header";
+@import "footer";
+@import "modal";
+@import "contact";
+@import "highlight";
+
+@import "page-index";
+@import "page-expert";
+@import "page-about";
+@import "page-careers";
+@import "page-job";
+@import "page-job-offer";
+@import "page-contact";
+@import "page-terms";
+@import "page-error";
+
+
+@import "page-blog-index";
+@import "page-blog-post";
+
+
+
 body {
   font-family: 'Open Sans', arial, sans-serif;
   color: $txtGrey;
   font-size: 1.125rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x:hidden;
+  overflow-x: hidden;
   scroll-behavior: smooth;
+
+  // Layout
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  main {
+    flex: 1;
+    min-height: calc(100vh - #{$menuHeight + $footerTopHeight + $footerBottomHeight});
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 }
 
 // Hide checkbox
@@ -71,23 +105,3 @@ a {
     display: block;
   }
 }
-
-@import "header";
-@import "footer";
-@import "modal";
-@import "contact";
-@import "highlight";
-
-@import "page-index";
-@import "page-expert";
-@import "page-about";
-@import "page-careers";
-@import "page-job";
-@import "page-job-offer";
-@import "page-contact";
-@import "page-terms";
-@import "page-error";
-
-
-@import "page-blog-index";
-@import "page-blog-post";

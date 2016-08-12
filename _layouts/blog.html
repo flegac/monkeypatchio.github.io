@@ -4,7 +4,10 @@
 {% include head.html %}
 <body class="blog">
   {% include header.html %}
-  <main>{{ content }}</main>
+  <main>
+    <a id="top"></a>
+    {{ content }}
+  </main>
   {% include footer.html %}
   <!-- Google Tag Manager -->
   <noscript>
@@ -28,7 +31,6 @@
   </script>
   <!-- End Google Tag Manager -->
   <script src="/public/scripts/modernizr-custom.js"></script>
-  <script src="/public/scripts/main.js"></script>
 </body>
 </html>
 

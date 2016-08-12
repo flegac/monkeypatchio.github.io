@@ -1,7 +1,40 @@
 .post {
-  section {
+  $navWidth: 12rem;
+
+  nav.index {
+    color: $grey4;
+    background: $grey3;
+    border-radius: .25rem; 
+    position: fixed;
+    left: .5rem;
+    width: $navWidth;
+    top: 1rem + $menuHeight;
+    font-size: small;
+    h1,h2,h3,h4,h5,h6 {
+      margin: .25em 0;
+    }
+    h2 {
+      padding-left: .25rem; 
+    }
+    h3 {
+      padding-left: .5rem; 
+    }
+    h4 {
+      padding-left: .75rem; 
+    }
+    h5 {
+      padding-left: 1rem; 
+    }
+    h6 {
+      padding-left: 1.25rem; 
+    }
+  }
+
+  section.post {
     text-align: left;
     display: block;
+    margin-left: $navWidth + 2rem;
+    padding-left: 0; 
     
     h1 {
       padding-top: 3.5rem;
@@ -59,7 +92,6 @@
       abbr {
         cursor: help;
       }
-      
       ul {
         margin: .5rem 0;
         li {
@@ -69,12 +101,31 @@
       figure {
         margin: 2rem 0;
       }
-
       blockquote {
         margin: 0.5rem 0 0 0;
         padding-left: 1rem;
         border-left: medium solid $blue1;
         font-style: italic;
+      }
+      h1,h2,h3,h4,h5,h6 {
+        padding-left: 1rem;
+        a {
+          &::before {
+            float: left;
+            padding-top: .5rem;
+            padding-right: .25rem;
+            margin-left: -1.25em;
+            line-height: 1em;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+          &:hover::before {
+            content: '\f0c1';
+          }
+        }
       }
     }
   }

@@ -3,21 +3,24 @@
 <html>
 {% include head.html %}
 <body class="job">
+  {% include contact_modal.html %}
   {% include header.html %}
   <main>
-    <p>
-      <a href="{{ site.baseurl }}/job">
-        <i class="fa fa-chevron-left"></i>
-        {% t titles.jobs %}
-      </a>
-    </p>
-    <hr>
-    <img class="profile" alt="{% t page.title %}" src="{{ page.image }}">
-    <article>{{ content }}</article>
-    <p>
-      {% t jobs.offers.contact %}
-      <a href="#dialog-contact">{% t jobs.offers.candidature %}</a>
-    </p>
+    <section id="top">
+      <p>
+        <a href="{{ site.baseurl }}/job">
+          <i class="fa fa-chevron-left"></i>
+          {% t titles.jobs %}
+        </a>
+      </p>
+      <hr>
+      <img class="profile" alt="{% t page.title %}" src="{{ page.image }}">
+      <article>{{ content }}</article>
+      <p>
+        {% t jobs.offers.contact %}
+        <a href="#dialog-contact">{% t jobs.offers.candidature %}</a>
+      </p>
+    </section>
 
     <section class="share">
       <a class="twitter-share-button"
@@ -30,7 +33,6 @@
     </section>
 
   </main>
-  {% include contact_modal.html %}
   {% include footer.html %}
   <!-- Google Tag Manager -->
   <noscript>
@@ -54,7 +56,6 @@
   </script>
   <!-- End Google Tag Manager -->
   <script src="/public/scripts/modernizr-custom.js"></script>
-  <!--<script src="/public/scripts/main.js"></script>-->
   <!-- Share with Twitter -->
   <script>window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],

@@ -4,64 +4,64 @@
 {% include head.html %}
 <body class="post">
   {% include header.html %}
-  <section class="post">
-    <h1>
-      <span>{{ page.title }}</span>
-      <span class="date">{% include date.html date=page.date %}</span>
-      <a href="#disqus_thread" class="count"><script id="dsq-count-scr" src="//monkeypatchblog.disqus.com/count.js" async></script></a>
-    </h1>
-
-    <div class="tags">
-      {% for tag in page.tags %}
-        <span>{{ tag }}</span> 
-      {% endfor %} 
-    </div>
-    
+  <main>
     <nav class="index"><!-- fill with JS --></nav>
+    <section class="post">
+      <h1 id="top">
+        <span>{{ page.title }}</span>
+        <span class="date">{% include date.html date=page.date %}</span>
+        <a href="#disqus_thread" class="count"><script id="dsq-count-scr" src="//monkeypatchblog.disqus.com/count.js" async></script></a>
+      </h1>
 
-    <article>{{ content }}</article>
+      <div class="tags">
+        {% for tag in page.tags %}
+          <span>{{ tag }}</span> 
+        {% endfor %} 
+      </div>
 
-    <div class="authors">
-      {% for author in page.authors %}
-        <div class="author">
-          <a href="https://twitter.com/{{ site.data.authors[author].twitter }}" rel="author">
-            <img src="{{site.data.authors[author].photo}}" alt="{{ site.data.authors[author].name }}">
-            <span>{{ site.data.authors[author].name }}</span>
-          </a>
-        </div>
-      {% endfor %}
-    </div>
-  </section>
+      <article>{{ content }}</article>
 
-  <section class="share">
-    <a class="twitter-share-button"
-      href="https://twitter.com/share"
-      data-size="large"
-      data-via="monkeypatch_io"
-      data-text="{{ page.title }}"
-      data-hashtags="{% for tag in page.tags %}{{ tag }}{% if forloop.last == false %},{% endif %}{% endfor %}"
-      >Tweet</a>
-  </section>
-  
-  {% if page.comments %}
-  <section class="comment">
-    <div id="disqus_thread"></div>
-    <script>
-    var disqus_config = function () {
-        this.page.url = "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}";  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = "{{ page.url }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = '//monkeypatchblog.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </section>
-  {% endif %}
+      <div class="authors">
+        {% for author in page.authors %}
+          <div class="author">
+            <a href="https://twitter.com/{{ site.data.authors[author].twitter }}" rel="author">
+              <img src="{{site.data.authors[author].photo}}" alt="{{ site.data.authors[author].name }}">
+              <span>{{ site.data.authors[author].name }}</span>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
 
+    <section class="share">
+      <a class="twitter-share-button"
+        href="https://twitter.com/share"
+        data-size="large"
+        data-via="monkeypatch_io"
+        data-text="{{ page.title }}"
+        data-hashtags="{% for tag in page.tags %}{{ tag }}{% if forloop.last == false %},{% endif %}{% endfor %}"
+        >Tweet</a>
+    </section>
+    
+    {% if page.comments %}
+    <section class="comment">
+      <div id="disqus_thread"></div>
+      <script>
+      var disqus_config = function () {
+          this.page.url = "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}";  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = "{{ page.url }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = '//monkeypatchblog.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+    {% endif %}
+  </main>
   {% include footer.html %}
   <!-- Google Tag Manager -->
   <noscript>
@@ -85,8 +85,47 @@
   </script>
   <!-- End Google Tag Manager -->
   <script src="/public/scripts/modernizr-custom.js"></script>
-  <!--<script src="/public/scripts/main.js"></script>-->
-  <script src="/public/scripts/post.js"></script>
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+  var i;
+  var nav = document.querySelector('nav.index');
+  var headers = document.querySelectorAll('article h1, article h2, article h3, article h4, article h5, article h6');
+
+  var createNavHeader = function(id, type, text) {
+    var link = document.createElement('a');
+    link.textContent = text;
+    link.setAttribute('href', '#' + id);
+
+    var text = document.createElement(type);
+    text.appendChild(link);
+    return text;
+  };
+  var createHeaderLink = function(id, text) {
+    var link = document.createElement('a');
+    link.classList.add('anchor');
+    link.textContent = text;
+    link.setAttribute('href', '#' + id);
+    return link;
+  };
+
+  var processHeader = function(header) {
+    var id = header.id;
+    var tag = header.tagName;
+    var text = header.textContent;
+
+    var navHeader = createNavHeader(id, tag, text);
+    nav.appendChild(navHeader);
+
+    var headerLink = createHeaderLink(id, text);
+    header.removeChild(header.firstChild);
+    header.appendChild(headerLink); 
+  }
+
+  for (i = 0; i < headers.length; i++) {
+    processHeader(headers[i]);
+  }
+});
+  </script>
   <!-- Share with Twitter -->
   <script>window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],

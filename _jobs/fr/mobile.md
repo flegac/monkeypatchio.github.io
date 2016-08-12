@@ -9,7 +9,7 @@ techno: [Android, iOS, Cross Platform]
 
 MonkeyPatch société d’expertise informatique recherche des consultants Mobile. Vous êtes technophile et aimez les challenges techniques ? Vous souhaitez rejoindre une équipe dynamique passionnée par l’informatique ?
 
-### Poste et mission
+## Poste et mission
 
 En tant qu'Expert mobile, vous réalisez et déployez des applications mobiles natives ou multi plateforme. 
 Vous aurez comme missions :
@@ -25,7 +25,7 @@ Vous aurez comme missions :
 
 Au sein de notre équipe vous serez amené également à participer régulièrement à des événements techniques permettant de se confronter nouvelles orientations techniques et de mettre en commun votre savoir-faire.
 
-### Profil Recherché
+## Profil Recherché
 
 Vous maîtrisez parfaitement une des technologies mobile récentes et vous prétez attention à rendre vos développement les plus performants dans un environnement mobile.
 

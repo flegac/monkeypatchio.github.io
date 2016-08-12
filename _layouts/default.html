@@ -3,8 +3,12 @@
 <html>
 {% include head.html %}
 <body class="{{page.permalink}}">
+  {% include contact_modal.html %}
   {% include header.html %}
-  {{ content }}
+  <main>
+    <a id="top"></a>
+    {{ content }}
+  </main>
   {% include footer.html %}
   <!-- Google Tag Manager -->
   <noscript>
@@ -28,7 +32,6 @@
   </script>
   <!-- End Google Tag Manager -->
   <script src="/public/scripts/modernizr-custom.js"></script>
-  <script src="/public/scripts/main.js"></script>
 </body>
 </html>
 

@@ -5,6 +5,8 @@
   
   <!-- Meta -->
   <meta charset="utf-8">
+  <meta http-equiv="content-language" content="{{ site.lang }}" />
+  <meta name="language" content="{{ site.lang }}" />
   <!-- Google site verification -->
   <meta name="google-site-verification" content="Gq_ytzUtfYn95WsiH66e4Lfb8zANT-LUwD8JgH9xXdw" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -61,12 +63,12 @@
   <meta name="twitter:image" content="{{ page_image }}">
 
   <!-- Lang --> 
-  {% if site.lang == "fr" %}
   <link rel="alternate" hreflang="en" href="{{ site.url }}/en/index" />
+  <link rel="alternate" hreflang="fr" href="{{ site.url }}/index" />
+  {% if site.lang == "fr" %}
   <meta property="og:locale" content="fr_FR"/>
   <meta property="og:locale:alternate" content="en_US"/>
   {% elsif site.lang == "en" %}
-  <link rel="alternate" hreflang="fr" href="{{ site.url }}/index" />
   <meta property="og:locale:alternate" content="fr_FR"/>
   <meta property="og:locale" content="en_US"/>
   {% endif %}
