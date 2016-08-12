@@ -23,7 +23,7 @@ La solution la plus simple est d'utiliser [JMH](http://openjdk.java.net/projects
 
 Voici le code utiliser pour faire ces tests de performances:
 
-{% highlight java linenos %}
+```java
 public class RestClientBenchmark {
 
     @State(Scope.Benchmark)
@@ -52,7 +52,7 @@ public class RestClientBenchmark {
                 .count();
     }
 }
-{% endhighlight %}
+```
 
 Il est bien sur trés intéressant d'ajouter des `@Benchmark` pour tester dans les mêmes conditions sans le parallélisme de la `Stream`, ou avec des API asynchronnes comme `RxJava`, ou les `CompletableFuture` de Java 8.
 

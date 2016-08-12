@@ -105,3 +105,17 @@ a {
     display: block;
   }
 }
+
+@media screen and (max-width: 64rem) {
+  body {
+    height: auto;
+    display: block;
+  }
+}
+
+@media screen and (max-height: 48rem) {
+  body {
+    height: auto;
+    display: block;
+  }
+}

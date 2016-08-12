@@ -12,6 +12,9 @@ code, pre {
   border: thin solid transparentize($white, 0.5); 
   font-style: normal;
 }
+.highlighter-rouge {
+  margin: 0.5rem 0;
+}
 
 .highlight {
   font-family: 'Fira Mono', monospace;
@@ -38,7 +41,7 @@ code, pre {
     text-align: left;
   }
 
-  .code {
+  .code, code {
     pre {
       margin: 0;
       padding-left: .25rem;
@@ -101,5 +104,13 @@ code, pre {
     .vg                { color: #f8f8f2 }                            /* Name.Variable.Global        */
     .vi                { color: #f8f8f2 }                            /* Name.Variable.Instance      */
     .il                { color: #ae81ff }                            /* Literal.Number.Integer.Long */
+  }
+}
+
+@media screen and (max-width: 64rem) {
+  .highlight {
+    code, pre {
+      font-size: .75rem;
+    }
   }
 }

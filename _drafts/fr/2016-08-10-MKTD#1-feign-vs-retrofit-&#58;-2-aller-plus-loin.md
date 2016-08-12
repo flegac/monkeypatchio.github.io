@@ -28,12 +28,12 @@ Le deuxième défi permet d’adresser des problèmes plus avancés comme :
 
 Pour l’authentification, le serveur fournit un mécanisme à base de [JWT](https://jwt.io/) et de [Cookies](https://tools.ietf.org/html/rfc6265). Une autre interface Java décrit cette nouvelle opération:
 
-{% highlight java linenos %}
+```java
 public interface AuthenticationApi {
 
     String login(LoginPassword loginPassword) throws SecurityException;
 }
-{% endhighlight %}
+```
 
 Dans l'en-tête de la réponse HTTP se trouve un `Set-Cookie` qu’il faudra décoder. Ce *cookie* devra ensuite être envoyé dans les requêtes faites aux autres services.
 
@@ -44,7 +44,7 @@ Dans l'en-tête de la réponse HTTP se trouve un `Set-Cookie` qu’il faudra dé
 Pour la gestion des erreurs, nous devons renvoyer une erreur spécifique en fonction du code HTTP retourné par le serveur.
 Le code qui détermine quelle exception à retourner est le suivant :
 
-{% highlight java linenos %}
+```java
 public static RuntimeException decodeError(int status, String message, Supplier<RuntimeException> defaultCase) {
     switch (status) {
         case 404: // Not Found
@@ -58,7 +58,7 @@ public static RuntimeException decodeError(int status, String message, Supplier<
             return defaultCase.get();
     }
 }
-{% endhighlight %}
+```
 
 ## Feign
 
@@ -70,13 +70,13 @@ Pour faciliter le développement de ce défi, il est très pratique de pouvoir a
 
 La solution la plus directe consite à utiliser un `RequestInterceptor` qui est appelé par Feign avant que la requête HTTP soit construite, et *logger* via un `System.out`.
 
-{% highlight java linenos %}
+```java
 Feign.builder()
         .interceptor(System.out::println) // Quick & Dirty debug
         .decoder(new GsonDecoder())
         .encoder(new GsonEncoder())
         .target(MonkeyRaceApi.class, url);
-{% endhighlight %}
+```
 
 Evidement, ça ne marche que pour la requête HTTP, pour la réponse il faudrait faire quelque chose d'équivalent dans un décodeur.
 
@@ -86,7 +86,7 @@ Pour éviter d'avoir des dépendances sur bibliothèques tierces, Feign à défi
 Ensuite il faut définir le niveau de *log* souhaité: `NONE`, `BASIC`, `HEADERS`, `FULL`.
 On peut donc faire comme ceci:
 
-{% highlight java linenos %}
+```java
 Feign.builder()
         .logLevel(Logger.Level.FULL)
         .logger(new Logger() {
@@ -100,7 +100,7 @@ Feign.builder()
         .decoder(new GsonDecoder())
         .encoder(new GsonEncoder())
         .target(MonkeyRaceApi.class, url);
-{% endhighlight %}
+```
 
 Dans Feign, le `feign.Logger.JavaLogger` implémente le mécanisme au travers du *loggeur* du JDK (`java.util.logging.Logger`), et il existe bien sûr une extension pour utiliser [SLF4J](https://github.com/OpenFeign/feign/tree/master/slf4j).
 
@@ -108,7 +108,7 @@ Dans Feign, le `feign.Logger.JavaLogger` implémente le mécanisme au travers du
 
 La première étape consiste à récupérer le *cookie* généré par la requête d’authentification. Pour cela on utilise un décodeur spécifique qui va traiter les en-têtes de la réponse pour stocker les *cookies*.
 
-{% highlight java linenos %}
+```java
 private static String getAuthToken(String url, String login, String password) {
    AuthenticationApi authenticationApi = builder
            .encoder(new GsonEncoder())
@@ -116,17 +116,17 @@ private static String getAuthToken(String url, String login, String password) {
            .target(AuthenticationApi.class, url);
    return authenticationApi.login(new LoginPassword(login, password));
 }
-{% endhighlight %}
+```
 
 Le stockage du *cookie* est assuré par le [CookieManager](https://docs.oracle.com/javase/8/docs/api/index.html?overview-summary.html) disponible depuis Java 6.
 
-{% highlight java linenos %}
+```java
 private static final CookieManager COOKIE_MANAGER = new CookieManager();
-{% endhighlight %}
+```
 
 L’utilisation de ce `CookieManager` est traité dans la méthode `handleCookies` ci dessous:
 
-{% highlight java linenos %}
+```java
 private static String handleCookies(Map<String, Collection<String>> headers) {
    // From Map<String, Collection<String>> to Map<String, List<String>>
    Map<String, List<String>> h = headers.entrySet().stream()
@@ -147,12 +147,12 @@ private static String handleCookies(Map<String, Collection<String>> headers) {
        throw new RuntimeException(e);
    }
 }
-{% endhighlight %}
+```
 
 Une fois stocké, ce *cookie* sera envoyé dans les futures requêtes.
 Pour cela on utilise une nouvelle fois le mécanisme de `RequestInterceptor` qui permet de modifier le `RequestTemplate`, Feign utilise cet objet pour construire la requête HTTP.
 
-{% highlight java linenos %}
+```java
 static MonkeyRaceApi buildRaceApi(String url, String login, String password) {
    getAuthToken(url, login, password);
    return builder
@@ -161,18 +161,18 @@ static MonkeyRaceApi buildRaceApi(String url, String login, String password) {
            .encoder(new GsonEncoder())
            .target(MonkeyRaceApi.class, url);
 }
-{% endhighlight %}
+```
 
 L’intercepteur se comporte comme un consommateur de `RequestTemplate` :
 
-{% highlight java linenos %}
+```java
 private static void addCookies(RequestTemplate template) {
    URI uri = URI.create(BASE_URL);
    COOKIE_MANAGER.getCookieStore().get(uri).stream()
            .map(HttpCookie::toString)
            .forEach(cookie -> template.header("Cookie", cookie));
 }
-{% endhighlight %}
+```
 
 Pour Feign, le mécanisme d'authentification par *cookie* est proche du mécanisme d’en-tête `Authorization` souvent associé au JWT. Il se base sur des en-têtes HTTP, donc on utiliserait la même technique du `RequestInterceptor` pour implémenter l'authentification à base de *token*. Par contre l’utilisation des *cookies* alourdi fortement le code.
 
@@ -182,7 +182,7 @@ Pour Feign, le mécanisme d'authentification par *cookie* est proche du mécanis
 
 Dans Feign, il existe un mécanisme spécifique pour traiter les cas en erreurs, c'est à dire si la réponse HTTP à un code >= 400. Pour cela il suffit d'utiliser un `ErrorDecoder` :  
 
-{% highlight java linenos %}
+```java
 static MonkeyRaceApi buildRaceApi(String url, String login, String password) {
    getAuthToken(url, login, password);
    return builder
@@ -192,14 +192,14 @@ static MonkeyRaceApi buildRaceApi(String url, String login, String password) {
            .encoder(new GsonEncoder())
            .target(MonkeyRaceApi.class, url);
 }
-{% endhighlight %}
+```
 
-{% highlight java linenos %}
+```java
 private static Exception decodeError(String methodKey, Response response) {
     return decodeError(response.status(), methodKey,
             () -> FeignException.errorStatus(methodKey, response));
 }
-{% endhighlight %}
+```
 
 > Parfois on souhaite traiter le cas particulier d'une erreur `404` dans le `Decoder` utilisé dans le cas nominal, pour celà il suffit d'utiliser la méthode `feign.Feign.Builder#decode404` sur le *builder*.
 
@@ -217,7 +217,7 @@ On peut regarder du coté de <https://github.com/xxlabaza/feign-form> ou <https:
 La seconde solution est donc beaucoup plus simple, le principe est de traiter le cas particulier des objets du type `java.io.InputStream` et de déléguer les autres cas à un autre encodeur JSON classique. Pour définir le corps de de la requête HTTP il faut appeler la méthode `feign.RequestTemplate#body(byte[], java.nio.charset.Charset)`.
 Il est possible d'écrire le code d'un encodeur dans une *lambda* Java 8, mais ici il est préférable d'extraire le code de ce décodeur dans une nouvelle classe :
 
-{% highlight java linenos %}
+```java
 public class UploadEncoder implements Encoder {
     private final Encoder delegate;
 
@@ -249,7 +249,7 @@ public class UploadEncoder implements Encoder {
         }
     }
 }
-{% endhighlight %}
+```
 
 > On peut bien sûr simplifier le code en utilisant une bibliothèque qui permet facilement de faire la conversion `InputStream` vers `byte[]`, mais ça ne fait pas de mal d'écrire des `try with resources` de temps en temps.
 
@@ -259,7 +259,7 @@ public class UploadEncoder implements Encoder {
 
 On utilise un `feign.Decoder` pour le *download*, le principe est similaire à celui utiliser pour l'*upload*. Ce qui va donner:
 
-{% highlight java linenos %}
+```java
 public class DownloadDecoder implements Decoder {
     private final Decoder delegate;
 
@@ -276,7 +276,7 @@ public class DownloadDecoder implements Decoder {
         return delegate.decode(response, type);
     }
 }
-{% endhighlight %}
+```
 
 Une nouvelle fois, Feign rend l'opération très simple une fois que l'on a compris le principe des encodeurs/décodeurs.
 
@@ -300,7 +300,7 @@ Une autre solution consiste a utiliser un client par requête qui utilise une se
 
 Voici une première implémentation assez basique mais qui permet de comprendre le mécanisme du `cookieJar`.
 
-{% highlight java linenos %}
+```java
 client = new OkHttpClient.Builder()
         .cookieJar(
                 new CookieJar() {
@@ -317,29 +317,29 @@ client = new OkHttpClient.Builder()
                             return cookies != null ? cookies : new ArrayList<Cookie>();
                     }
                 });
-{% endhighlight %}
+```
 
 Une implémentation plus élégante et plus simple consiste à ajouter la dépendance `okhttp-urlconnection` de `OkHttp`.
 
-{% highlight java linenos %}
+```java
 CookieHandler cookieHandler = new CookieManager(
             new PersistentCookieStore(ctx), CookiePolicy.ACCEPT_ALL);
 
 OkHttpClient httpClient = new OkHttpClient.Builder()
             .cookieJar(new JavaNetCookieJar(cookieHandler));
-{% endhighlight %}
+```
 
 ### Gestion des erreurs
 
 Il n'existe pas, de mon point de vue de solution idéale dans Retrofit pour gérer les erreurs comment il en existe dans Feign.
 Nous utilisons donc la fonctionnalité d’interceptor de `OkHttp`. Une limitation existe cependant, il faut que les exceptions à retourner soient de type `RuntimeException`.
 
-{% highlight java linenos %}
+```java
 OkHttpClient client = new OkHttpClient.Builder()
         .addInterceptor(this::authInterceptor);
-{% endhighlight %}
+```
 
-{% highlight java linenos %}
+```java
 private Response authInterceptor(Interceptor.Chain chain) throws IOException {
     Request request = chain.request();
     Response response = chain.proceed(request);
@@ -352,7 +352,7 @@ private Response authInterceptor(Interceptor.Chain chain) throws IOException {
     }
     return response;
 }
-{% endhighlight %}
+```
 
 ### Upload
 
@@ -362,18 +362,18 @@ Et voici comment faire :
 
 On ajoute la méthode au service.
 
-{% highlight java linenos %}
+```java
 public interface MonkeyService {
 
     @Multipart
     @POST("monkeys/{id}/photo")
     Call<Photo> sendPhoto(@Path("id") String id, @Part MultipartBody.Part file);
 }
-{% endhighlight %}
+```
 
 On crée un fichier temporaire contenant la photo, puis on appelle méthode `sendPhoto` en lui fournissant un `RequestBody` spécifique contenant ce fichier temporaire contenant, et ensuite nous créons le `MultipartBody` qui est passé au service. 
 
-{% highlight java linenos %}
+```java
 @Override
 public Photo savePhoto(String id, InputStream stream) throws SecurityException, IllegalArgumentException {
     return executeCall(() -> {
@@ -390,7 +390,7 @@ public Photo savePhoto(String id, InputStream stream) throws SecurityException, 
         }
     });
 }
-{% endhighlight %}
+```
 
 ### Download
 
@@ -399,16 +399,16 @@ Pour cela Retrofit dispose d'un type *générique*: `ResponseBody` qui permet de
 
 On commence par ajouter la méthode à notre service :
 
-{% highlight java linenos %}
+```java
 public interface MonkeyService {
     @GET("monkeys/{id}/photo")
     Call<ResponseBody> downloadPhoto(@Path("id") String id) throws SecurityException, IllegalArgumentException;
   }
-{% endhighlight %}
+```
 
 puis voici le code qui permet de récupérer notre photo :
 
-{% highlight java linenos %}
+```java
 @Override
 public InputStream downloadPhoto(String id) throws SecurityException, IllegalArgumentException {
     try {
@@ -418,7 +418,7 @@ public InputStream downloadPhoto(String id) throws SecurityException, IllegalArg
         return null;
     }
 }
-{% endhighlight %}
+```
 
 ### Bilan
 

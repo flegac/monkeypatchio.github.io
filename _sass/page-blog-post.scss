@@ -1,5 +1,6 @@
+$navWidth: 14rem;
+
 .post {
-  $navWidth: 12rem;
 
   nav.index {
     color: $grey4;
@@ -130,3 +131,15 @@
     }
   }
 }
+
+@media screen and (max-width: 64rem) {
+  .post {
+    nav.index {
+      display: none;
+    }
+    section.post {
+      margin-left: $globalMargin;
+    }
+  }
+}
+

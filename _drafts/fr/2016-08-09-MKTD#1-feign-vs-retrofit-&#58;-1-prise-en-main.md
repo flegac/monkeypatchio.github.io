@@ -32,28 +32,28 @@ Dans ce premier défi, il suffisait de compléter les interfaces correpondant au
 
 Voici les deux interfaces retournant du JSON :
 
-{% highlight java linenos %}
+```java
 public interface MonkeyApi {
    Page<Monkey> getMonkeys(int page);
    Monkey getMonkeyByName(String name);
    Monkey createMonkey(Monkey monkey);
    void deleteMonkey(String id);
 }
-{% endhighlight %}
+```
 
-{% highlight java linenos %}
+```java
 public interface MonkeyRaceApi {
     List<MonkeyRace> getMonkeyRaces();
 }
-{% endhighlight %}
+```
 
 et celle dont le service retourne du XML :
 
-{% highlight java linenos %}
+```java
 public interface MonkeyStatsApi {
     MonkeyStatistics getMonkeyStats();
 }
-{% endhighlight %}
+```
 
 Voir le code sous [GitHub](https://github.com/monkeytechdays/mktd1-defi1) 
 
@@ -77,7 +77,7 @@ La documentation des extensions se trouve aussi dans des fichiers README.md de c
 
 Pour commencer à utiliser Feign, il faut bien sûr ajouter les dépendances nécessaires pour ce défi:
 
-{% highlight xml linenos %}
+```xml
 <!-- Feign -->
 <dependency>
    <groupId>com.netflix.feign</groupId>
@@ -96,7 +96,7 @@ Pour commencer à utiliser Feign, il faut bien sûr ajouter les dépendances né
    <artifactId>feign-jaxb</artifactId>
    <version>8.17.0</version>
 </dependency>
-{% endhighlight %}
+```
 
 > Nous recommandons bien sûr l’utilisation d’une propriété maven pour définir la version de Feign utilisée.
 
@@ -111,14 +111,14 @@ Pas d’annotation pour le corps d’une requête POST ou PUT, le paramètre san
 
 Ce qui nous donne ceci :
 
-{% highlight java linenos %}
+```java
 public interface MonkeyRaceApi {
     @RequestLine("GET /races")
     List<MonkeyRace> getMonkeyRaces();
 }
-{% endhighlight %}
+```
 
-{% highlight java linenos %}
+```java
 @Headers("Content-Type: application/json")
 public interface MonkeyApi {
     @RequestLine("GET ?page={page}")
@@ -133,38 +133,41 @@ public interface MonkeyApi {
     @RequestLine("DELETE /{id}")
     void deleteMonkey(@Param("id") String id);
 }
-{% endhighlight %}
+```
 
-{% highlight java linenos %}
+```java
 public interface MonkeyStatsApi {
     @RequestLine("GET /stats")
     MonkeyStatistics getMonkeyStats();
 }
-{% endhighlight %}
+```
 
 ### Construction des instances
 
 Pour la dernière étape, on utilise l’API *fluent builder* de Feign pour créer l’instance de ces interfaces.
 C’est ici que l’on va faire intervenir les encodeurs/décodeurs ajoutés dans nos dépendances Maven plus tôt :
 
-{% highlight java linenos %}
+```java
 static MonkeyRaceApi buildRaceApi(String url) {
     return Feign.builder()
-            .decoder(new GsonDecoder()) // Decode JSON from respone body
+            // Decode JSON from respone body
+            .decoder(new GsonDecoder())
             .target(MonkeyRaceApi.class, url);
 }
-{% endhighlight %}
+```
 
-{% highlight java linenos %}
+```java
 static MonkeyApi buildMonkeyApi(String url) {
     return Feign.builder()
-            .decoder(new GsonDecoder()) // Decode JSON from respone body
-            .encoder(new GsonEncoder()) // Encode JSON for request body
+            // Decode JSON from respone body
+            .decoder(new GsonDecoder())
+            // Encode JSON for request body
+            .encoder(new GsonEncoder())
             .target(MonkeyApi.class, url + "/monkeys");
 }
-{% endhighlight %}
+```
 
-{% highlight java linenos %}
+```java
 static MonkeyStatsApi buildStatsApi(String url) {
     // Create JAXB context factory
     JAXBContextFactory jaxbFactory = new JAXBContextFactory.Builder()
@@ -172,10 +175,11 @@ static MonkeyStatsApi buildStatsApi(String url) {
             .build();
 
     return Feign.builder()
-            .decoder(new JAXBDecoder(jaxbFactory)) // Decode XML from response body
+            // Decode XML from response body
+            .decoder(new JAXBDecoder(jaxbFactory))
             .target(MonkeyStatsApi.class, url);
 }
-{% endhighlight %}
+```
 
 > Feign va concaténer l'URL avec le chemin défini, dans le chemin de l'annotation `@RequestLine`, ceci permet facilement de rajouter un préfixe pour les services si on le souhaite.
 
@@ -199,13 +203,13 @@ Quelques remarques:
 * on peut configurer la façon dont les variables (`@Param`) sont converties en String via les `Expander`.
 * pour définir un chemin racine à toutes nos méthodes dans l’interface, on peut l’ajouter dans l’URL utilisée par le *builder*.
 
-> Il n’y a pas de magie dans Feign : il n'utilise que ce qui existe déjà dans le JDK (`java.net.HttpURLConnection`, `java.lang.reflect.Proxy`, `java.lang.reflect.InvocationHandler`, …)
+> Il n’y a pas de magie dans Feign : il n'utilise que ce qui existe déjà dans le JDK : `java.net.HttpURLConnection`, `java.lang.reflect.Proxy`, `java.lang.reflect.InvocationHandler`, …
 
 ## Retrofit
 
 La première étape consiste à rajouter les dépendances de Rétrofit
 
-{% highlight xml linenos %}
+```xml
 <! -- Dépendance de rétrofit -->
 <dependency>
     <groupId>com.squareup.retrofit2</groupId>
@@ -224,19 +228,19 @@ La première étape consiste à rajouter les dépendances de Rétrofit
     <artifactId>converter-simplexml</artifactId>
     <version>${retrofit.version}</version>
 </dependency>
-{% endhighlight %}
+```
 
 Ensuite, il nous faut rajouter les annotations spécifiques à Retrofit sur l’interface. 
 Les règles du jeu étant de ne pas changer la signature de l’interface, nous avons dû ajouter une autre interface utilisée par la `CallFactory` par défaut de Retrofit.
 
-{% highlight java linenos %}
+```java
 public interface MonkeyRaceService {
    @GET("races")
     Call<List<MonkeyRace>> getMonkeyRaces();
 }
-{% endhighlight %}
+```
 
-{% highlight java linenos %}
+```java
 public interface MonkeyService {
     @GET("monkeys")
     Call<Page<Monkey>> getMonkeys();
@@ -250,23 +254,24 @@ public interface MonkeyService {
     @DELETE("monkeys/{id}")
     Call<ResponseBody> delete(@Path("id") String monkeyId);
 }
-{% endhighlight %}
+```
 
-{% highlight java linenos %}
+```java
 public interface MonkeyStatsService {
     @GET("/stats")
     Call<MonkeyStatistics> getMonkeyStats();
 }
-{% endhighlight %}
+```
 
 Ensuite, nous implémentons les interfaces `MonkeyApi`, `MonkeyRaceApi`, `MonkeyStatsApi` en utilisant les interfaces spécifiques pour Retrofit.
 
-{% highlight java linenos %}
+```java
 public class RetrofitMonkeyApi implements MonkeyApi, RetrofitApi {
     private MonkeyService monkeyService;
 
     public void setBaseUrl(String baseUrl) {
-        monkeyService = createRetrofit(baseUrl, false).create(MonkeyService.class);
+        monkeyService = createRetrofit(baseUrl, false)
+          .create(MonkeyService.class);
     }
 
     @Override
@@ -289,9 +294,9 @@ public class RetrofitMonkeyApi implements MonkeyApi, RetrofitApi {
         executeCall(() -> monkeyService.delete(id));
     }
 }
-{% endhighlight %}
+```
 
-{% highlight java linenos %}
+```java
 public interface RetrofitApi {
 
     default Retrofit createRetrofit(String baseUrl, boolean useXml) {
@@ -313,7 +318,7 @@ public interface RetrofitApi {
         }
     }
 }
-{% endhighlight %}
+```
 
 ### Bilan
 
@@ -324,7 +329,7 @@ Nous trouvons dommage qu’il n’y ait pas nativement une `CallFactory` permett
 Il est aussi possible de faire notre propre `CallAdapterFactory`.
 Voici un exemple tiré du code source des tests de Retrofit :
 
-{% highlight java linenos %}
+```java
 static class DirectCallIOException extends RuntimeException {
     DirectCallIOException(String message, IOException e) {
       super(message, e);
@@ -349,7 +354,7 @@ static class DirectCallAdapterFactory extends CallAdapter.Factory {
         };
     }
 }
-{% endhighlight %}
+```
 
 Cela nous obligerait quand même à traiter les exceptions de type `DirectCallIOException`.
 
