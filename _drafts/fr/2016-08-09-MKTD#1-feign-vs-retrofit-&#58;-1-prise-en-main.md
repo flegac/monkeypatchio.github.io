@@ -188,7 +188,7 @@ static MonkeyStatsApi buildStatsApi(String url) {
 Peu de points négatifs pour Feign dans cet exercice:
 
 * pour faire fonctionner le décodage XML il a fallu triturer un peu l’objet pour que [JAXB](https://docs.oracle.com/javase/tutorial/jaxb/intro/) *deserialize* correctement le XML. Mais c’est plus un problème lié à JAXB et au XML de façon plus générale,
-* Les messages d’erreurs ne sont parfois pas simples à décrypter, mais avec un peu de pratique et une connaissance basique du protocole HTTP, ça n’est pas vraiment un problème. Un problème classique est le fait d’oublier le verbe HTTP dans l’annotation `@RequestLine`.
+* les messages d’erreurs ne sont parfois pas simples à décrypter, mais avec un peu de pratique et une connaissance basique du protocole HTTP, ça n’est pas vraiment un problème. Un problème classique est le fait d’oublier le verbe HTTP dans l’annotation `@RequestLine`.
 
 Beaucoup de côtés positifs ici:
 

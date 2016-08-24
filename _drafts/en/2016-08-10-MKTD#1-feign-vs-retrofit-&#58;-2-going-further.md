@@ -7,26 +7,25 @@ tags: [MKTD, Java, REST, Feign, Retrofit, Cookie]
 comments: true
 published: false
 ---
-Cet article est le deuxième d'une série d'article sur les clients REST en java.
+This article is the second of the serie REST clients in Java.
 
-Article précédent :
-[MKTD#1 : Prise en main]({% post_url 2016-08-09-MKTD#1-feign-vs-retrofit-1-prise-en-main %})
+Previous article:
+[MKTD#1 : Getting started]({% post_url 2016-08-09-MKTD#1-feign-vs-retrofit-1-getting-started %})
 
 ---
 
-## Défi 2: Aller plus loin...
+## Challenge #2: Going further...
 
-Le deuxième défi permet d’adresser des problèmes plus avancés comme :
+The second challenge aims at solving advanced problems such as:
 
-* L'authentification
-* La gestion des erreurs via des `Exception` Java
-* L’*upload* et le *download* de fichiers
-
+* Authentication and session management
+* Errors management via Java `Exception`
+* Files *upload* and *download*
 <!--more-->
 
-### Authentification avec Cookie
+### Session management using Cookies
 
-Pour l’authentification, le serveur fournit un mécanisme à base de [JWT](https://jwt.io/) et de [Cookies](https://tools.ietf.org/html/rfc6265). Une autre interface Java décrit cette nouvelle opération:
+Out of the box, the server provides authentication and session management mechanisms using [JWT](https://jwt.io/) and [Cookies](https://tools.ietf.org/html/rfc6265). A new Java interface describes this operation:
 
 ```java
 public interface AuthenticationApi {
@@ -35,14 +34,15 @@ public interface AuthenticationApi {
 }
 ```
 
-Dans l'en-tête de la réponse HTTP se trouve un `Set-Cookie` qu’il faudra décoder. Ce *cookie* devra ensuite être envoyé dans les requêtes faites aux autres services.
+The response HTTP may return a `Set-Cookie` header to be decoded. This *cookie* value will then be added to subsequent requests headers sent to other services.
 
-> Les solutions à base de *token* sont un peu plus simples à mettre en oeuvre avec Feign et Retrofit, mais ici l'objectif n'était pas de faire les choses les plus simples. Pour plus d'information sur ce sujet vous pouvez regarder [ce blog](https://auth0.com/blog/angularjs-authentication-with-cookies-vs-token/).
+> *Token* based solutions are simpler to put in place using Feign and Retrofit, but in our scenario we are not trying to follow the simplest approach. You can find more information on this topic on [this blog](https://auth0.com/blog/angularjs-authentication-with-cookies-vs-token/).
 
-### Gestion des erreurs
 
-Pour la gestion des erreurs, nous devons renvoyer une erreur spécifique en fonction du code HTTP retourné par le serveur.
-Le code qui détermine quelle exception à retourner est le suivant :
+### Errors management
+
+Regarding errors management, we need to return specific errors based on the HTTP code returned by the server.
+The following piece of code handles the HTTP error to Java exception mapping:
 
 ```java
 public static RuntimeException decodeError(int status, String message, Supplier<RuntimeException> defaultCase) {
@@ -62,13 +62,13 @@ public static RuntimeException decodeError(int status, String message, Supplier<
 
 ## Feign
 
-### Astuce: log des requêtes HTTP
+### Pro tip: HTTP requests logging
 
-Pour faciliter le développement de ce défi, il est très pratique de pouvoir afficher des *logs* sur les requêtes ou les réponses HTTP.
+To ease this challenge implementation, it appears to be very handy to log the HTTP requests and responses.
 
-#### Quick & Dirty
+#### Quick & Dirty way
 
-La solution la plus directe consite à utiliser un `RequestInterceptor` qui est appelé par Feign avant que la requête HTTP soit construite, et *logger* via un `System.out`.
+The quickest way to achieve this is to use a `RequestInterceptor` called by Feign before an HTTP request gets built and log it via `System.out`.
 
 ```java
 Feign.builder()
@@ -78,13 +78,13 @@ Feign.builder()
         .target(MonkeyRaceApi.class, url);
 ```
 
-Evidement, ça ne marche que pour la requête HTTP, pour la réponse il faudrait faire quelque chose d'équivalent dans un décodeur.
+This obviously works only for HTTP requests, to achieve the same for the responses, similar thing has to be added to the decoder.
 
-#### Solution avec un logger Feign
+#### Using Feign logger
 
-Pour éviter d'avoir des dépendances sur bibliothèques tierces, Feign à définit son propre `Logger`. C'est une classe abstraite avec une seule méthode à implémenter. 
-Ensuite il faut définir le niveau de *log* souhaité: `NONE`, `BASIC`, `HEADERS`, `FULL`.
-On peut donc faire comme ceci:
+To avoid third-parties libraries dependencies, Feign defines its own `Logger`. It consists of an abstract class with a single method to implement.
+The log level needs to be defined to allow log filtering later on (`NONE`, `BASIC`, `HEADERS`, `FULL`).
+Here is an example:
 
 ```java
 Feign.builder()
@@ -102,9 +102,9 @@ Feign.builder()
         .target(MonkeyRaceApi.class, url);
 ```
 
-Dans Feign, le `feign.Logger.JavaLogger` implémente le mécanisme au travers du *loggeur* du JDK (`java.util.logging.Logger`), et il existe bien sûr une extension pour utiliser [SLF4J](https://github.com/OpenFeign/feign/tree/master/slf4j).
+By default, Feign logger class `feign.Logger.JavaLogger` relies on the JDK logger `java.util.logging.Logger` but an extension exists to use other loggers such as [SLF4J](https://github.com/OpenFeign/feign/tree/master/slf4j).
 
-### Authentification avec Cookie
+### Cookie based Authentication
 
 La première étape consiste à récupérer le *cookie* généré par la requête d’authentification. Pour cela on utilise un décodeur spécifique qui va traiter les en-têtes de la réponse pour stocker les *cookies*.
 
