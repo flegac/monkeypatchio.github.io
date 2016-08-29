@@ -70,8 +70,9 @@ $navWidth: 14rem;
         height: 3rem;
         align-items: center;
         img {
-          border-radius: 50%; 
-          margin-right: .5rem; 
+          border-radius: 50%;
+          margin-right: .5rem;
+            max-width: 3rem;
         }
       }
     }

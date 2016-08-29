@@ -10,10 +10,10 @@ layout: blog
 <section class="entries">
   {% for post in paginator.posts %}
     <article>
-      <h2>
+      <h2 class="{{ post.lang }}">
         <a href="{{ post.url }}">{{ post.title }}</a>
         <!--<span>({{ post.content | number_of_words }} mots)</span>-->
-        <div class="date">{% include date.html date=post.date %}</div>
+        <div class="date">{% include date.html date=post.date lang=post.lang %}</div>
         <div class="authors">
           {% for author in post.authors %}
             <a href="https://twitter.com/{{ site.data.authors[author].twitter }}" rel=author>{{ site.data.authors[author].name }}</a> 

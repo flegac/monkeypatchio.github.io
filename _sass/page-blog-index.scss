@@ -24,6 +24,13 @@
           font-size: .8em;
           float: right;
         }
+
+        &.en::before {
+          content: '[EN]';
+        }
+        &.fr::before {
+          content: '[FR]';
+        }
       }
       p {
         text-align: justify;

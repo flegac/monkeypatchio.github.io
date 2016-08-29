@@ -242,3 +242,9 @@ philo:
 error: 
   404: "Oops! Something went wrong. <br>The requested page or file may have been moved or deleted."
   back: "Back to Home"
+blog:
+  post:
+    readmore: Read more ...
+  pages:
+    previous: Previous
+    next: Next

@@ -1,5 +1,6 @@
 {% assign date = include.date %}
-{% if site.lang == 'fr' %}
+{% assign lang = include.lang %}
+{% if lang == 'fr' %}
   {% assign m = date | date: "%-m" %}
   {{ date | date: "%-d" }}
   {% case m %}
@@ -18,5 +19,5 @@
   {% endcase %}
 {{ date | date: "%Y" }}
 {% else %}
-  {{ date | date: "%d %B, %Y"date_to_long_string }}
+  {{ date | date: "%B %d, %Y"date_to_long_string }}
 {% endif %}

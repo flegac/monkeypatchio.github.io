@@ -3,6 +3,7 @@ image: http://www.monkeypatch.io/public/images/logos/logo-FeignVsRetrofit.png
 authors:
   - evinas
   - ilaborie
+  - bchauvet
 tags: [MKTD, Java, REST, Feign, Retrofit]
 comments: true
 published: true

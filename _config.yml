@@ -178,3 +178,7 @@ defaults:
       path: "_drafts/fr"
     values:
       lang: fr
+  - scope:
+      path: "_drafts/en"
+    values:
+      lang: en
