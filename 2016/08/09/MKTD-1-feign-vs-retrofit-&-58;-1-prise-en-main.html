@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--  lastBuildDate : Fri, 12 Aug 2016 18:32:58 +0200 -->
+<!--  lastBuildDate : Mon, 29 Aug 2016 17:01:39 +0200 -->
 <html>
 <head>
   
@@ -55,6 +55,12 @@ Ce premier événement était l’occasion d’approfondir les technologies de c
       <link rel="publisher" href="https://plus.google.com/+IgorLaborie"/>
     
   
+    <meta name="author" content="Bruno Chauvet">
+    <link rel="author" href="https://plus.google.com/"/>
+    
+      <link rel="publisher" href="https://plus.google.com/"/>
+    
+  
 
   
     <meta property="og:type" content="article"/>
@@ -63,6 +69,8 @@ Ce premier événement était l’occasion d’approfondir les technologies de c
       <meta property="og:article:author:username" content="Emmanuel Vinas">
     
       <meta property="og:article:author:username" content="Igor Laborie">
+    
+      <meta property="og:article:author:username" content="Bruno Chauvet">
     
     
     <meta property="og:article:tag" content="MKTD">
@@ -127,7 +135,9 @@ Ce premier événement était l’occasion d’approfondir les technologies de c
       
       { "@type": "Person", "name": "Emmanuel Vinas" },
       
-      { "@type": "Person", "name": "Igor Laborie" }
+      { "@type": "Person", "name": "Igor Laborie" },
+      
+      { "@type": "Person", "name": "Bruno Chauvet" }
       
     ],
     "name": "MonkeyPatch",
@@ -304,11 +314,8 @@ Ce premier événement était l’occasion d’approfondir les technologies de c
         <span>Mktd#1 Feign Vs Retrofit &#58; 1 Prise En Main</span>
         <span class="date">
 
-  
-  9
-  Août
-    
-2016
+
+  August 09, 2016
 
 </span>
         <a href="#disqus_thread" class="count"><script id="dsq-count-scr" src="//monkeypatchblog.disqus.com/count.js" async></script></a>
@@ -606,7 +613,7 @@ C’est ici que l’on va faire intervenir les encodeurs/décodeurs ajoutés dan
 
 <ul>
   <li>pour faire fonctionner le décodage <abbr title="eXtensible Markup Language">XML</abbr> il a fallu triturer un peu l’objet pour que <a href="https://docs.oracle.com/javase/tutorial/jaxb/intro/">JAXB</a> <em>deserialize</em> correctement le <abbr title="eXtensible Markup Language">XML</abbr>. Mais c’est plus un problème lié à JAXB et au <abbr title="eXtensible Markup Language">XML</abbr> de façon plus générale,</li>
-  <li>Les messages d’erreurs ne sont parfois pas simples à décrypter, mais avec un peu de pratique et une connaissance basique du protocole <abbr title="HyperText Transfer Protocol">HTTP</abbr>, ça n’est pas vraiment un problème. Un problème classique est le fait d’oublier le verbe <abbr title="HyperText Transfer Protocol">HTTP</abbr> dans l’annotation <code class="highlighter-rouge">@RequestLine</code>.</li>
+  <li>les messages d’erreurs ne sont parfois pas simples à décrypter, mais avec un peu de pratique et une connaissance basique du protocole <abbr title="HyperText Transfer Protocol">HTTP</abbr>, ça n’est pas vraiment un problème. Un problème classique est le fait d’oublier le verbe <abbr title="HyperText Transfer Protocol">HTTP</abbr> dans l’annotation <code class="highlighter-rouge">@RequestLine</code>.</li>
 </ul>
 
 <p>Beaucoup de côtés positifs ici:</p>
