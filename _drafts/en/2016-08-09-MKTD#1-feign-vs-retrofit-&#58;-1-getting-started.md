@@ -25,7 +25,7 @@ This non-technical challenge allows us forming balanced teams on each technology
 
 ## Challenge #1: Getting started
 
-The goal of ths first challenge is to get familiar with the technologies.
+The goal of this first challenge is to get familiar with the technologies.
 The principle of [Feign](https://github.com/OpenFeign/feign) and [Retrofit](http://square.github.io/retrofit/) is to write an interface describing the REST service and the API will take care of implementing an instance of this interface.
 At the end of this first challenge, completing the interfaces for the REST services was sufficient to get the unit tests green.
 
