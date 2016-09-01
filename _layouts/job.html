@@ -18,11 +18,13 @@
       <article>{{ content }}</article>
       <p>
         {% t jobs.offers.contact %}
-        <a href="#dialog-contact">{% t jobs.offers.candidature %}</a>
+      </p>
+      <p>
+        <a href="#dialog-contact" class="button">{% t jobs.offers.candidature %}</a>
       </p>
     </section>
 
-    <section class="share">
+    <!-- <section class="share">
       <a class="twitter-share-button"
         href="https://twitter.com/share"
         data-size="large"
@@ -30,7 +32,7 @@
         data-text="{% t titles.jobs %}"
         data-hashtags="{% for tech in page.techno %}{{ tech }}{% if forloop.last == false %},{% endif %}{% endfor %}"
         >Tweet</a>
-    </section>
+    </section> -->
 
     {% include footer.html %}
   </main>
@@ -65,17 +67,13 @@
   js.id = id;
   js.src = "https://platform.twitter.com/widgets.js";
   fjs.parentNode.insertBefore(js, fjs);
- 
+
   t._e = [];
   t.ready = function(f) {
     t._e.push(f);
   };
- 
+
   return t;
 }(document, "script", "twitter-wjs"));</script>
 </body>
 </html>
-
-
-
-

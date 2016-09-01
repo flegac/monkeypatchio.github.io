@@ -1,5 +1,5 @@
 ---
-title: titles.job.devops 
+title: titles.job.devops
 order: 4
 image: http://www.monkeypatch.io/public/images/monkies/dev-ops.png
 techno: [GNU/Linux, Bash, Ansible, Docker, Git]
@@ -25,9 +25,9 @@ Au sein de notre équipe vous serez amené également à participer régulièrem
 
 ## Profil Recherché
 
-Vous êtes à l'aise quand il s'agit d'aider les équipes de développement pour qu'elles soient plus performantes et si besoin vous êtes capable de les aider à développer. 
+Vous êtes à l'aise quand il s'agit d'aider les équipes de développement pour qu'elles soient plus performantes et si besoin vous êtes capable de les aider à développer.
 Vous Maitrisez ces technologies:
-    
+
  * Configuration Linux, Windows
  * Notions de sécurité des systèmes et applications
  * Langages d'automatisation (Bash, Puppet, Ansible, ...)
@@ -38,7 +38,7 @@ Vous Maitrisez ces technologies:
 
 ## Modalités
 
-* Lieu de travail: ~ Toulouse
+* Lieu de travail: Toulouse
 * Date de disponibilité: Asap
 * Rémunération : Attractive
 * Type de contrat: CDI

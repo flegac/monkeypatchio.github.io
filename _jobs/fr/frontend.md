@@ -27,8 +27,7 @@ Au sein de notre équipe vous serez amené également à participer régulièrem
 
 ## Profil recherché
 
-HTML5, CSS3 et le responsive design n’ont aucun secret pour vous.
-Vous savez exploiter toutes les possibilités de JavaScript natif ainsi que les principaux frameworks associés :
+Nous recherchons des développeurs passionnés qui aiment développer des applications Web. De formation Bac+5 expérimenté de + de 5 ans, l'HTML5, le CSS3 et le responsive design n’ont aucun secret pour vous. Vous savez exploiter toutes les possibilités de JavaScript natif ainsi que les principaux frameworks associés :
 
  * JavaScript, EmacScript 6+, TypeScript
  * HTML5 / CSS 3
@@ -41,7 +40,7 @@ La maîtrise des web-services REST et d’un environnement back-end est un plus.
 
 ## Modalités
 
-* Lieu de travail: ~ Toulouse
+* Lieu de travail: Toulouse
 * Date de disponibilité: Asap
 * Rémunération : Attractive
 * Type de contrat: CDI

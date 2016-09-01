@@ -2,7 +2,7 @@
 title: titles.job.backend  
 order: 2
 image: http://www.monkeypatch.io/public/images/monkies/back-end.png
-techno: [Java/JEE, SQL, NoSQL, Messaging, Spring] 
+techno: [Java/JEE, SQL, NoSQL, Messaging, Spring]
 ---
 
 # Expert Back-End
@@ -28,8 +28,8 @@ Au sein de notre équipe vous serez amené également à participer régulièrem
 ## Profil Recherché
 
 Vous maîtrisez une ou plusieurs technologies Back End et prêtez attention à la performance et la fiabilité de vos développement et vous avez l'habitude de travailler dans un environnement agile.
-Vous pratiquez ces technologies. 
-    
+Vous pratiquez ces technologies.
+
  * Au moins un des Langages : Java, Scala, Go, Ruby, Rust
  * Messaging AMQP, Kafka, JMS
  * Web services principalement REST
@@ -38,11 +38,11 @@ Vous pratiquez ces technologies.
 
 ## Plus
 
-La connaissance en Front end est un plus. 
+La connaissance en Front end est un plus.
 
 ## Modalités
 
-* Lieu de travail: ~ Toulouse
+* Lieu de travail: Toulouse
 * Date de disponibilité: Asap
 * Rémunération : Attractive
 * Type de contrat: CDI

@@ -1,5 +1,5 @@
 ---
-title: titles.job.bigdata 
+title: titles.job.bigdata
 order: 5
 image: http://www.monkeypatch.io/public/images/monkies/big-data.png
 techno: [Hadoop, Spark, ML, ElasticSearch, NoSQL]
@@ -28,17 +28,17 @@ Au sein de notre équipe vous serez amené également à participer régulièrem
 
 ## Profil Recherché
 
-Vous êtes à l'aise quand il s'agit d'aider les équipes de développement pour qu'elles soient plus performante et si besoin vous êtes capables de les aider à développer. 
+Vous êtes à l'aise quand il s'agit d'aider les équipes de développement pour qu'elles soient plus performante et si besoin vous êtes capables de les aider à développer.
 Vous connaissez une ou plusieurs de ces technologies :
-    
+
  * Hadoop, Spark
- * Algorithmes du BigData (MapReduce, k-means, ML, ...), 
+ * Algorithmes du BigData (MapReduce, k-means, ML, ...),
  * Cassandra, MongoDB, ElasticSearch, SolR
  * Au moins un langage de programmation suivant : Python, Scala, Go, Java
 
 ## Modalités
 
-* Lieu de travail: ~ Toulouse
+* Lieu de travail: Toulouse
 * Date de disponibilité: Asap
 * Rémunération : Attractive
 * Type de contrat: CDI

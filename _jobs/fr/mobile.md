@@ -1,5 +1,5 @@
 ---
-title: titles.job.mobile 
+title: titles.job.mobile
 order: 3
 image: http://www.monkeypatch.io/public/images/monkies/mobile.png
 techno: [Android, iOS, Cross Platform]
@@ -11,7 +11,7 @@ MonkeyPatch société d’expertise informatique recherche des consultants Mobil
 
 ## Poste et mission
 
-En tant qu'Expert mobile, vous réalisez et déployez des applications mobiles natives ou multi plateforme. 
+En tant qu'Expert mobile, vous réalisez et déployez des applications mobiles natives ou multi plateforme.
 Vous aurez comme missions :
 
  * Contribuer au développement mobile en Android, iOS ou cross platform
@@ -29,17 +29,17 @@ Au sein de notre équipe vous serez amené également à participer régulièrem
 
 Vous maîtrisez parfaitement une des technologies mobile récentes et vous prétez attention à rendre vos développement les plus performants dans un environnement mobile.
 
-Vous pratiquez ces technologies: 
-    
+Vous pratiquez ces technologies:
+
  * Au moins une des technologies : Android, iOS, Cross Platform (Cordova, Ionic)
- * Au moins un des Langages : Java, Swift, Kotlin, Objective-C 
+ * Au moins un des Langages : Java, Swift, Kotlin, Objective-C
  * Web services REST
  * l'ecosystème de votre platforme préférée (Gradle, Swift, ...)
  * Tests Unitaires, Tests d'intégrations...
 
 ## Modalités
 
-* Lieu de travail: ~ Toulouse
+* Lieu de travail: Toulouse
 * Date de disponibilité: Asap
 * Rémunération : Attractive
 * Type de contrat: CDI
