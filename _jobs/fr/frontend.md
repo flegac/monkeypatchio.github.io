@@ -7,11 +7,11 @@ techno: [HTML5, CSS3, JavaScript, AngularJS, React]
 
 # Expert Front End
 
-MonkeyPatch société d’expertise informatique recherche des consultants Front-End. Vous êtes technophile et aimez les challenges techniques ? Vous souhaitez rejoindre une équipe dynamique passionnée par l’informatique ?
+MonkeyPatch société d’expertise informatique recherche des consultants Front-End. Vous êtes technophile et aimez les challenges techniques ? Vous souhaitez rejoindre une équipe dynamique et passionnée par l’informatique ?
 
-## Poste et mission
+## Poste et missions
 
-En tant qu’expert Front-End, vous jouerez un véritable rôle de pivot entre le Design (UX/UI) et le Développement Back-End.
+En tant qu’Expert Front-End, vous jouerez un véritable rôle de pivot entre le Design (UX/UI) et le Développement Back-End.
 Vous aurez comme missions :
 
 * Contribuer au développement front-end
@@ -23,11 +23,11 @@ Vous aurez comme missions :
 
 <!--more-->
 
-Au sein de notre équipe vous serez amené également à participer régulièrement à des événements techniques permettant de se confronter nouvelles orientations techniques et de mettre en commun votre savoir-faire.
+Au sein de notre équipe, vous serez amené également à participer régulièrement à des événements techniques permettant de se confronter nouvelles orientations techniques et de mettre en commun votre savoir-faire.
 
 ## Profil recherché
 
-Nous recherchons des développeurs passionnés qui aiment développer des applications Web. De formation Bac+5 expérimenté de + de 5 ans, l'HTML5, le CSS3 et le responsive design n’ont aucun secret pour vous. Vous savez exploiter toutes les possibilités de JavaScript natif ainsi que les principaux frameworks associés :
+Nous recherchons des développeurs passionnés qui aiment développer des applications Web. De formation Bac+5 et expérimenté de + de 5 ans, l'HTML5, le CSS3 et le responsive design n’ont aucun secret pour vous. Vous savez exploiter toutes les possibilités de JavaScript natif ainsi que les principaux frameworks associés :
 
  * JavaScript, EmacScript 6+, TypeScript
  * HTML5 / CSS 3
