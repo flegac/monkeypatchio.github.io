@@ -7,7 +7,7 @@ tags: [MKTD, Java, REST, Feign, Retrofit, Cookie]
 comments: true
 published: false
 ---
-Cet article est le deuxième d'une série d'article sur les clients REST en java.
+Cet article est le deuxième d'une série de trois articles sur les clients REST en java que sont Feign et Retrofit.
 
 Article précédent :
 [MKTD#1 : Prise en main]({% post_url 2016-08-09-MKTD#1-feign-vs-retrofit-1-prise-en-main %})
@@ -26,7 +26,8 @@ Le deuxième défi permet d’adresser des problèmes plus avancés comme :
 
 ### Authentification avec Cookie
 
-Pour l’authentification, le serveur fournit un mécanisme à base de [JWT](https://jwt.io/) et de [Cookies](https://tools.ietf.org/html/rfc6265). Une autre interface Java décrit cette nouvelle opération:
+Afin de gérer le besoin d'authentification, le serveur fournit un mécanisme à base de [JWT](https://jwt.io/) et de [Cookies](https://tools.ietf.org/html/rfc6265).
+Voici l'interface Java décrivant cette nouvelle opération:
 
 ```java
 public interface AuthenticationApi {
@@ -35,14 +36,14 @@ public interface AuthenticationApi {
 }
 ```
 
-Dans l'en-tête de la réponse HTTP se trouve un `Set-Cookie` qu’il faudra décoder. Ce *cookie* devra ensuite être envoyé dans les requêtes faites aux autres services.
+Dans l'en-tête de la réponse HTTP se trouve un `Set-Cookie` qu’il faut décoder. Ce *cookie* doit ensuite être envoyé dans les requêtes faites aux autres services.
 
-> Les solutions à base de *token* sont un peu plus simples à mettre en oeuvre avec Feign et Retrofit, mais ici l'objectif n'était pas de faire les choses les plus simples. Pour plus d'information sur ce sujet vous pouvez regarder [ce blog](https://auth0.com/blog/angularjs-authentication-with-cookies-vs-token/).
+> Les solutions à base de *token* sont un peu plus simples à mettre en oeuvre avec Feign et Retrofit, mais ici, l'objectif n'est pas de faire les choses de la façon la plus simples. Pour plus d'information sur ce sujet vous pouvez regarder [ce blog](https://auth0.com/blog/angularjs-authentication-with-cookies-vs-token/).
 
 ### Gestion des erreurs
 
-Pour la gestion des erreurs, nous devons renvoyer une erreur spécifique en fonction du code HTTP retourné par le serveur.
-Le code qui détermine quelle exception à retourner est le suivant :
+Pour la gestion des erreurs, le but de l'exercice est de renvoyer une erreur spécifique en fonction du code HTTP retourné par le serveur.
+Le code qui détermine l'exception à retourner est le suivant :
 
 ```java
 public static RuntimeException decodeError(int status, String message, Supplier<RuntimeException> defaultCase) {
@@ -68,7 +69,7 @@ Pour faciliter le développement de ce défi, il est très pratique de pouvoir a
 
 #### Quick & Dirty
 
-La solution la plus directe consite à utiliser un `RequestInterceptor` qui est appelé par Feign avant que la requête HTTP soit construite, et *logger* via un `System.out`.
+La solution la plus directe consite à utiliser un `RequestInterceptor` qui est appelé par Feign avant que la requête HTTP ne soit construite, et *logger* via un `System.out`.
 
 ```java
 Feign.builder()
@@ -82,9 +83,9 @@ Evidement, ça ne marche que pour la requête HTTP, pour la réponse il faudrait
 
 #### Solution avec un logger Feign
 
-Pour éviter d'avoir des dépendances sur bibliothèques tierces, Feign à définit son propre `Logger`. C'est une classe abstraite avec une seule méthode à implémenter. 
-Ensuite il faut définir le niveau de *log* souhaité: `NONE`, `BASIC`, `HEADERS`, `FULL`.
-On peut donc faire comme ceci:
+Pour éviter d'avoir des dépendances sur bibliothèques tierces, Feign à définit son propre `Logger`. C'est une classe abstraite avec une seule méthode à implémenter.
+Il faut ensuite définir le niveau de *log* souhaité: `NONE`, `BASIC`, `HEADERS`, `FULL`.
+Voici ce que ça donne:
 
 ```java
 Feign.builder()
@@ -174,13 +175,13 @@ private static void addCookies(RequestTemplate template) {
 }
 ```
 
-Pour Feign, le mécanisme d'authentification par *cookie* est proche du mécanisme d’en-tête `Authorization` souvent associé au JWT. Il se base sur des en-têtes HTTP, donc on utiliserait la même technique du `RequestInterceptor` pour implémenter l'authentification à base de *token*. Par contre l’utilisation des *cookies* alourdi fortement le code.
+Dans Feign, le mécanisme d'authentification par *cookie* est proche du mécanisme d’en-tête `Authorization` souvent associé au JWT. Il se base sur des en-têtes HTTP. Pour implémenter l'authentification à base de *token*, on utiliserait donc la même technique du `RequestInterceptor`. On constate quand même que l’utilisation des *cookies* alourdi fortement le code.
 
 > On peut aussi utiliser une `feign.Target` pour traiter les aspects d'authentification, voir la [documentation de Feign](https://github.com/OpenFeign/feign#setting-headers-per-target).
 
 ### Gestion des erreurs
 
-Dans Feign, il existe un mécanisme spécifique pour traiter les cas en erreurs, c'est à dire si la réponse HTTP à un code >= 400. Pour cela il suffit d'utiliser un `ErrorDecoder` :  
+Dans Feign, il existe un mécanisme spécifique pour traiter les cas en erreurs, c'est à dire si la réponse HTTP à un code >= 400. Ce  mécanisme utilise un `ErrorDecoder` :  
 
 ```java
 static MonkeyRaceApi buildRaceApi(String url, String login, String password) {
@@ -205,13 +206,13 @@ private static Exception decodeError(String methodKey, Response response) {
 
 ### Upload
 
-Concernant l'*upload* de fichier le serveur REST propose deux solutions:
+Concernant l'*upload* de fichier, le serveur REST propose deux solutions:
 
 * un *upload* via un [formulaire multipart](https://www.ietf.org/rfc/rfc2388.txt) avec l'en-tête `Content-type` à `multipart/form-data`
 * un *upload* directe avec les données du fichier directement dans le corps de la requête, l'en-tête `Content-type` à `application/octet-stream`.
 
 Les deux solutions sont implémetables en utilisant le même principe: un `Decoder` spécifique.
-La seconde solution est beaucoup plus simple à implémenter car gérer le corps d'une requête *multipart* va nécessité l'utilisation d'une API externe (par exemple [Commons FileUpload d'Apache](https://commons.apache.org/proper/commons-fileupload/)) ce qui va alourdire le code.
+La seconde solution est beaucoup plus simple à implémenter car gérer le corps d'une requête *multipart* nécessite l'utilisation d'une API externe (par exemple [Commons FileUpload d'Apache](https://commons.apache.org/proper/commons-fileupload/)).
 On peut regarder du coté de <https://github.com/xxlabaza/feign-form> ou <https://github.com/pcan/feign-client-test> pour voir des solutions ou des idées pour ces aspects *multipart*.
 
 La seconde solution est donc beaucoup plus simple, le principe est de traiter le cas particulier des objets du type `java.io.InputStream` et de déléguer les autres cas à un autre encodeur JSON classique. Pour définir le corps de de la requête HTTP il faut appeler la méthode `feign.RequestTemplate#body(byte[], java.nio.charset.Charset)`.
@@ -253,7 +254,7 @@ public class UploadEncoder implements Encoder {
 
 > On peut bien sûr simplifier le code en utilisant une bibliothèque qui permet facilement de faire la conversion `InputStream` vers `byte[]`, mais ça ne fait pas de mal d'écrire des `try with resources` de temps en temps.
 
-> On peut légitimement argumenté que ce code risque de poser des problèmes si le fichier est particulièrement gros. Mais si on doit gérer ce genre de cas il faut aussi se poser la question suivante: une API REST est elle la bonne solution pour faire des *upload* de gros fichier ?
+> On peut légitimement argumenter que ce code risque de poser des problèmes si le fichier est particulièrement gros. Mais si on doit gérer ce genre de cas, il faut aussi se poser la question suivante: une API REST est elle la bonne solution pour faire des *upload* de gros fichier ?
 
 ### Download
 
@@ -278,13 +279,13 @@ public class DownloadDecoder implements Decoder {
 }
 ```
 
-Une nouvelle fois, Feign rend l'opération très simple une fois que l'on a compris le principe des encodeurs/décodeurs.
+Une nouvelle fois, Feign rend l'opération très simple dès qu'on a compris le principe des encodeurs/décodeurs.
 
 ### Bilan
 
 Feign rend la manipulation des en-têtes HTTP très simple, cela permet d'utiliser les divers mécanismes d'autentifications par *Cookie* ou *Token* facilement.
 
-La gestion des erreurs dans Feign est aussi trivial, c'est un des points fort de Feign par rapport à Retrofit.
+La gestion des erreurs dans Feign est aussi triviale, c'est un des points fort de Feign par rapport à Retrofit.
 
 Le mécanisme d'encodeur permet facilement de traiter le cas d'*upload* du fichier, et de façon plus générale de traiter tous les cas de *serialization* des requêtes HTTP.
 Le mécanisme de décodeur va permettre de récupérer le contenu d'un fichier que l'on *download*, ou plus généralement les divers mécanismes de *deserialization* des réponses HTTP.
@@ -295,10 +296,10 @@ Feign offre une grande souplesse grace aux `Encoder`, `Decoder`, `RequestInterce
 
 ### Authentification avec Cookie
 
-La façon la plus simple pour gérer l'authentification avec Retrofit consiste à la gérer au niveau du client HTTP. Il suffit ensuite de réutiliser ce même client pour les requêtes suivantes.
-Une autre solution consiste a utiliser un client par requête qui utilise une seule instance de `cookieJar`.
+La façon la plus simple de gérer l'authentification avec Retrofit consiste à utiliser les mécanismes du client HTTP (`okHttp3`). Comme pour feign, on fait une première requête qui récupère le cookie et ensuite on utilise le même client pour les autres requêtes. 
+Une autre solution consiste a utiliser un client par requête mais une  seule instance de `cookieJar`.
 
-Voici une première implémentation assez basique mais qui permet de comprendre le mécanisme du `cookieJar`.
+Voici une première implémentation assez basique qui permet de comprendre le mécanisme du `cookieJar`.
 
 ```java
 client = new OkHttpClient.Builder()
@@ -332,7 +333,7 @@ OkHttpClient httpClient = new OkHttpClient.Builder()
 ### Gestion des erreurs
 
 Il n'existe pas, de mon point de vue de solution idéale dans Retrofit pour gérer les erreurs comment il en existe dans Feign.
-Nous utilisons donc la fonctionnalité d’interceptor de `OkHttp`. Une limitation existe cependant, il faut que les exceptions à retourner soient de type `RuntimeException`.
+Pour cet exercice, nous utilisons donc la fonctionnalité d’interceptor de `OkHttp`. Une limitation existe cependant; il faut que les exceptions à retourner soient de type `RuntimeException`.
 
 ```java
 OkHttpClient client = new OkHttpClient.Builder()
@@ -356,7 +357,7 @@ private Response authInterceptor(Interceptor.Chain chain) throws IOException {
 
 ### Upload
 
-Pour l'*upload* nous choisons d'utiliser la méthode du [formulaire multipart](https://www.ietf.org/rfc/rfc2388.txt) avec l'en-tête `Content-type` à `multipart/form-data`
+Pour l'*upload* , nous avons choisi d'utiliser la méthode du [formulaire multipart](https://www.ietf.org/rfc/rfc2388.txt) avec l'en-tête `Content-type` à `multipart/form-data`
 
 Et voici comment faire :
 
@@ -371,7 +372,7 @@ public interface MonkeyService {
 }
 ```
 
-On crée un fichier temporaire contenant la photo, puis on appelle méthode `sendPhoto` en lui fournissant un `RequestBody` spécifique contenant ce fichier temporaire contenant, et ensuite nous créons le `MultipartBody` qui est passé au service. 
+On crée un fichier temporaire contenant la photo, puis on appelle la méthode `sendPhoto` en lui fournissant un `RequestBody` spécifique contenant ce fichier temporaire et ensuite nous créons le `MultipartBody` qui est passé au service.
 
 ```java
 @Override
@@ -394,8 +395,8 @@ public Photo savePhoto(String id, InputStream stream) throws SecurityException, 
 
 ### Download
 
-Pour le *download* il nous suffit de faire un appel a notre service en récupérant le corps de la réponse.
-Pour cela Retrofit dispose d'un type *générique*: `ResponseBody` qui permet de récupérer la réponse brute.
+Pour le *download* il nous suffit de faire un appel à notre service en récupérant le corps de la réponse.
+Pour cela Retrofit dispose d'un type *générique*: `ResponseBody` qui permet de récupérer la réponse `brute`.
 
 On commence par ajouter la méthode à notre service :
 
@@ -447,3 +448,4 @@ Les solutions utilisant [OkHttp](http://square.github.io/okhttp/) sont communes 
 *[URL]: Uniform Resource Locator
 *[JWT]: Json WebToken
 *[JDK]: Java Development Kit
+
