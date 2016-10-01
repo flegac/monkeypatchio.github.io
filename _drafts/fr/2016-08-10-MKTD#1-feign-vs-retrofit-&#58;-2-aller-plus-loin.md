@@ -5,12 +5,12 @@ authors:
   - ilaborie
 tags: [MKTD, Java, REST, Feign, Retrofit, Cookie]
 comments: true
-published: false
+published: true
 ---
 Cet article est le deuxième d'une série de trois articles sur les clients REST en java que sont Feign et Retrofit.
 
 Article précédent :
-[MKTD#1 : Prise en main]({% post_url 2016-08-09-MKTD#1-feign-vs-retrofit-1-prise-en-main %})
+[MKTD#1 : Prise en main]({% post_url 2016-08-09-MKTD#1-feign-vs-retrofit-&#58;-1-prise-en-main %})
 
 ---
 
@@ -90,7 +90,7 @@ Voici ce que ça donne:
 ```java
 Feign.builder()
         .logLevel(Logger.Level.FULL)
-        .logger(new Logger() {
+        .logger(new Logger() { // implements Feign abstract Logger
             @Override
             protected void log(String configKey, String format, Object... args) {
                 System.out.printf("[%s] ", configKey);
@@ -181,7 +181,7 @@ Dans Feign, le mécanisme d'authentification par *cookie* est proche du mécanis
 
 ### Gestion des erreurs
 
-Dans Feign, il existe un mécanisme spécifique pour traiter les cas en erreurs, c'est à dire si la réponse HTTP à un code >= 400. Ce  mécanisme utilise un `ErrorDecoder` :  
+Dans Feign, il existe un mécanisme spécifique pour traiter les cas en erreurs, c'est à dire si la réponse HTTP à un code ≥ 400. Ce  mécanisme utilise un `ErrorDecoder` :  
 
 ```java
 static MonkeyRaceApi buildRaceApi(String url, String login, String password) {
@@ -434,10 +434,6 @@ Que ce soit avec Feign ou Retrofit, il est aisé de gérer les *cookies*, et les
 Nous avons également trouvé que la gestion des erreurs en mode synchrone était mieux géré avec Feign.
 
 Les solutions utilisant [OkHttp](http://square.github.io/okhttp/) sont communes à Retrofit et à Feign quand on utilise le client [okhttp-client](https://github.com/OpenFeign/feign/tree/master/okhttp) dans Feign.
-
----
-
-[La suite du MKTD#1: Autres sujets]({% post_url 2016-08-12-MKTD#1-feign-vs-retrofit-3-autres-sujets %})
 
 *[MKTD]: MonkeyTechDays
 *[HTTP]: HyperText Transfer Protocol

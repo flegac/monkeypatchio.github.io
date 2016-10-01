@@ -6,12 +6,12 @@ authors:
   - bchauvet
 tags: [MKTD, Java, REST, Feign, Retrofit, Cookie]
 comments: true
-published: false
+published: true
 ---
 This article is the second of the serie REST clients in Java.
 
 Previous article:
-[MKTD#1 : Getting started]({% post_url 2016-08-09-MKTD#1-feign-vs-retrofit-1-getting-started %})
+[MKTD#1 : Getting started]({% post_url 2016-08-09-MKTD#1-feign-vs-retrofit-&#58;-1-getting-started %})
 
 ---
 
@@ -435,9 +435,6 @@ Nous avons également trouvé que la gestion des erreurs en mode synchrone étai
 
 Les solutions utilisant [OkHttp](http://square.github.io/okhttp/) sont communes à Retrofit et à Feign quand on utilise le client [okhttp-client](https://github.com/OpenFeign/feign/tree/master/okhttp) dans Feign.
 
----
-
-[La suite du MKTD#1: Autres sujets]({% post_url 2016-08-12-MKTD#1-feign-vs-retrofit-3-autres-sujets %})
 
 *[MKTD]: MonkeyTechDays
 *[HTTP]: HyperText Transfer Protocol

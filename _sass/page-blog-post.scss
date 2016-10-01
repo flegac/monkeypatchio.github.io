@@ -18,7 +18,7 @@ $navWidth: 14rem;
       padding-left: .25rem; 
     }
     h3 {
-      padding-left: .5rem; 
+      padding-left: .5rem;
     }
     h4 {
       padding-left: .75rem; 
@@ -117,6 +117,9 @@ $navWidth: 14rem;
       }
       h1,h2,h3,h4,h5,h6 {
         padding-left: 1rem;
+        abbr {
+          display: none;
+        }
         a {
           &::before {
             float: left;
