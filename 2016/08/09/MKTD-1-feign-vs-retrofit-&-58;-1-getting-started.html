@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--  lastBuildDate : Mon, 10 Oct 2016 14:35:38 +0200 -->
+<!--  lastBuildDate : Mon, 31 Oct 2016 08:56:48 +0100 -->
 <html>
 <head>
   
@@ -401,16 +401,13 @@ At the end of this first challenge, completing the interfaces for the <abbr titl
 
 <p>The code is available here: <a href="https://github.com/monkeytechdays/mktd1-defi1">GitHub</a></p>
 
-<p>To pass this challenge, the following is required:</p>
-
-<ul>
-  <li>GET request and parse the <abbr title="JavaScript Object Notation">JSON</abbr> response</li>
-  <li>GET request with a <abbr title="Uniform Resource Locator">URL</abbr> parameter</li>
-  <li>GET request with a path parameter</li>
-  <li>POST request with encoded <abbr title="JavaScript Object Notation">JSON</abbr> body</li>
-  <li>DELETE request</li>
-  <li>GET request and parse the <abbr title="eXtensible Markup Language">XML</abbr> response</li>
-</ul>
+<p>To pass this challenge, the following is required:
+* GET request and parse the <abbr title="JavaScript Object Notation">JSON</abbr> response
+* GET request with a <abbr title="Uniform Resource Locator">URL</abbr> parameter
+* GET request with a path parameter
+* POST request with encoded <abbr title="JavaScript Object Notation">JSON</abbr> body
+* DELETE request
+* GET request and parse the <abbr title="eXtensible Markup Language">XML</abbr> response</p>
 
 <h2 id="feign">Feign</h2>
 
@@ -841,7 +838,7 @@ The rules of the game being to not modify the interface signature, we had to add
 
 <p>We found quite annoying that there is no way with <code class="highlighter-rouge">CallFactory</code> to issue a synchronous call returning an object without having to use the <code class="highlighter-rouge">Call</code> object - as this can be done with Feign</p>
 
-<p>It is also possible to create our own <code class="highlighter-rouge">CallAdapterFactory</code>. Here is an example from Retrofit test source code:</p>
+<p>It is also possible to create our own `CallAdapterFactory. Here is an example from Retrofit test source code:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
