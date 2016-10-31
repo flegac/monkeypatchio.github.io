@@ -209,7 +209,7 @@ private static Exception decodeError(String methodKey, Response response) {
 Concernant l'*upload* de fichier, le serveur REST propose deux solutions:
 
 * un *upload* via un [formulaire multipart](https://www.ietf.org/rfc/rfc2388.txt) avec l'en-tête `Content-type` à `multipart/form-data`
-* un *upload* directe avec les données du fichier directement dans le corps de la requête, l'en-tête `Content-type` à `application/octet-stream`.
+* un *upload* direct avec les données du fichier directement dans le corps de la requête, l'en-tête `Content-type` à `application/octet-stream`.
 
 Les deux solutions sont implémetables en utilisant le même principe: un `Decoder` spécifique.
 La seconde solution est beaucoup plus simple à implémenter car gérer le corps d'une requête *multipart* nécessite l'utilisation d'une API externe (par exemple [Commons FileUpload d'Apache](https://commons.apache.org/proper/commons-fileupload/)).

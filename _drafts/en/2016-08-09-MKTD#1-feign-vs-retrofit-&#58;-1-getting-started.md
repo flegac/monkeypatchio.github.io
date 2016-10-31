@@ -57,6 +57,7 @@ public interface MonkeyStatsApi {
 The code is available here: [GitHub](https://github.com/monkeytechdays/mktd1-defi1)
 
 To pass this challenge, the following is required:
+
 * GET request and parse the JSON response
 * GET request with a URL parameter
 * GET request with a path parameter
@@ -327,7 +328,7 @@ public interface RetrofitApi {
 
 We found quite annoying that there is no way with `CallFactory` to issue a synchronous call returning an object without having to use the `Call` object - as this can be done with Feign
 
-It is also possible to create our own `CallAdapterFactory. Here is an example from Retrofit test source code:
+It is also possible to create our own `CallAdapterFactory`. Here is an example from Retrofit test source code:
 
 ```java
 static class DirectCallIOException extends RuntimeException {
