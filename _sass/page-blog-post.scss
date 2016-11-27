@@ -96,6 +96,10 @@ $navWidth: 14rem;
       p {
         text-align: justify;
         margin: 0.5rem 0 0 0;
+
+        img {
+          max-width: 80vw;
+        }
       }
       abbr {
         cursor: help;
