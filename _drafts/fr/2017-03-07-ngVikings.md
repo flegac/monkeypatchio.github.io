@@ -5,6 +5,7 @@ authors:
 tags: [ngVikings, Angular, WebSecurity, RxJS]
 comments: true
 published: true
+title: ngVikings 2017
 ---
 
 ## Introduction
