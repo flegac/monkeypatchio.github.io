@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--  lastBuildDate : Thu, 12 Jan 2017 16:18:26 +0100 -->
+<!--  lastBuildDate : Sat, 11 Mar 2017 14:48:34 +0100 -->
 <html>
 <head>
   
@@ -390,7 +390,7 @@ Le deuxième défi permet d’adresser des problèmes plus avancés comme :
 
 <hr />
 
-<h2 id="dfi-2-aller-plus-loin">Défi 2: Aller plus loin…</h2>
+<h2 id="défi-2-aller-plus-loin">Défi 2: Aller plus loin…</h2>
 
 <p>Le deuxième défi permet d’adresser des problèmes plus avancés comme :</p>
 
@@ -407,10 +407,15 @@ Le deuxième défi permet d’adresser des problèmes plus avancés comme :
 <p>Afin de gérer le besoin d’authentification, le serveur fournit un mécanisme à base de <a href="https://jwt.io/"><abbr title="Json WebToken">JWT</abbr></a> et de <a href="https://tools.ietf.org/html/rfc6265">Cookies</a>.
 Voici l’interface Java décrivant cette nouvelle opération:</p>
 
-<div class="language-java highlighter-rouge"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">AuthenticationApi</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">AuthenticationApi</span> <span class="o">{</span>
 
     <span class="n">String</span> <span class="nf">login</span><span class="o">(</span><span class="n">LoginPassword</span> <span class="n">loginPassword</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">SecurityException</span><span class="o">;</span>
 <span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
 </div>
 
 <p>Dans l’en-tête de la réponse <abbr title="HyperText Transfer Protocol">HTTP</abbr> se trouve un <code class="highlighter-rouge">Set-Cookie</code> qu’il faut décoder. Ce <em>cookie</em> doit ensuite être envoyé dans les requêtes faites aux autres services.</p>
@@ -424,7 +429,19 @@ Voici l’interface Java décrivant cette nouvelle opération:</p>
 <p>Pour la gestion des erreurs, le but de l’exercice est de renvoyer une erreur spécifique en fonction du code <abbr title="HyperText Transfer Protocol">HTTP</abbr> retourné par le serveur.
 Le code qui détermine l’exception à retourner est le suivant :</p>
 
-<div class="language-java highlighter-rouge"><span class="kd">public</span> <span class="kd">static</span> <span class="n">RuntimeException</span> <span class="nf">decodeError</span><span class="o">(</span><span class="kt">int</span> <span class="n">status</span><span class="o">,</span> <span class="n">String</span> <span class="n">message</span><span class="o">,</span> <span class="n">Supplier</span><span class="o">&lt;</span><span class="n">RuntimeException</span><span class="o">&gt;</span> <span class="n">defaultCase</span><span class="o">)</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="n">RuntimeException</span> <span class="nf">decodeError</span><span class="o">(</span><span class="kt">int</span> <span class="n">status</span><span class="o">,</span> <span class="n">String</span> <span class="n">message</span><span class="o">,</span> <span class="n">Supplier</span><span class="o">&lt;</span><span class="n">RuntimeException</span><span class="o">&gt;</span> <span class="n">defaultCase</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">switch</span> <span class="o">(</span><span class="n">status</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">case</span> <span class="mi">404</span><span class="o">:</span> <span class="c1">// Not Found</span>
             <span class="k">return</span> <span class="k">new</span> <span class="nf">NoSuchElementException</span><span class="o">(</span><span class="n">message</span><span class="o">);</span>
@@ -437,11 +454,13 @@ Le code qui détermine l’exception à retourner est le suivant :</p>
             <span class="k">return</span> <span class="n">defaultCase</span><span class="o">.</span><span class="na">get</span><span class="o">();</span>
     <span class="o">}</span>
 <span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
 </div>
 
 <h2 id="feign">Feign</h2>
 
-<h3 id="astuce-log-des-requtes-http">Astuce: log des requêtes <abbr title="HyperText Transfer Protocol">HTTP</abbr></h3>
+<h3 id="astuce-log-des-requêtes-http">Astuce: log des requêtes <abbr title="HyperText Transfer Protocol">HTTP</abbr></h3>
 
 <p>Pour faciliter le développement de ce défi, il est très pratique de pouvoir afficher des <em>logs</em> sur les requêtes ou les réponses <abbr title="HyperText Transfer Protocol">HTTP</abbr>.</p>
 
@@ -449,11 +468,17 @@ Le code qui détermine l’exception à retourner est le suivant :</p>
 
 <p>La solution la plus directe consite à utiliser un <code class="highlighter-rouge">RequestInterceptor</code> qui est appelé par Feign avant que la requête <abbr title="HyperText Transfer Protocol">HTTP</abbr> ne soit construite, et <em>logger</em> via un <code class="highlighter-rouge">System.out</code>.</p>
 
-<div class="language-java highlighter-rouge"><span class="n">Feign</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5</pre></td><td class="code"><pre><span class="n">Feign</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
         <span class="o">.</span><span class="na">interceptor</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">)</span> <span class="c1">// Quick &amp; Dirty debug</span>
         <span class="o">.</span><span class="na">decoder</span><span class="o">(</span><span class="k">new</span> <span class="n">GsonDecoder</span><span class="o">())</span>
         <span class="o">.</span><span class="na">encoder</span><span class="o">(</span><span class="k">new</span> <span class="n">GsonEncoder</span><span class="o">())</span>
         <span class="o">.</span><span class="na">target</span><span class="o">(</span><span class="n">MonkeyRaceApi</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">url</span><span class="o">);</span>
+</pre></td></tr></tbody></table>
+</div>
 </div>
 
 <p>Evidement, ça ne marche que pour la requête <abbr title="HyperText Transfer Protocol">HTTP</abbr>, pour la réponse il faudrait faire quelque chose d’équivalent dans un décodeur.</p>
@@ -464,7 +489,19 @@ Le code qui détermine l’exception à retourner est le suivant :</p>
 Il faut ensuite définir le niveau de <em>log</em> souhaité: <code class="highlighter-rouge">NONE</code>, <code class="highlighter-rouge">BASIC</code>, <code class="highlighter-rouge">HEADERS</code>, <code class="highlighter-rouge">FULL</code>.
 Voici ce que ça donne:</p>
 
-<div class="language-java highlighter-rouge"><span class="n">Feign</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13</pre></td><td class="code"><pre><span class="n">Feign</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
         <span class="o">.</span><span class="na">logLevel</span><span class="o">(</span><span class="n">Logger</span><span class="o">.</span><span class="na">Level</span><span class="o">.</span><span class="na">FULL</span><span class="o">)</span>
         <span class="o">.</span><span class="na">logger</span><span class="o">(</span><span class="k">new</span> <span class="n">Logger</span><span class="o">()</span> <span class="o">{</span> <span class="c1">// implements Feign abstract Logger</span>
             <span class="nd">@Override</span>
@@ -477,6 +514,8 @@ Voici ce que ça donne:</p>
         <span class="o">.</span><span class="na">decoder</span><span class="o">(</span><span class="k">new</span> <span class="n">GsonDecoder</span><span class="o">())</span>
         <span class="o">.</span><span class="na">encoder</span><span class="o">(</span><span class="k">new</span> <span class="n">GsonEncoder</span><span class="o">())</span>
         <span class="o">.</span><span class="na">target</span><span class="o">(</span><span class="n">MonkeyRaceApi</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">url</span><span class="o">);</span>
+</pre></td></tr></tbody></table>
+</div>
 </div>
 
 <p>Dans Feign, le <code class="highlighter-rouge">feign.Logger.JavaLogger</code> implémente le mécanisme au travers du <em>loggeur</em> du <abbr title="Java Development Kit">JDK</abbr> (<code class="highlighter-rouge">java.util.logging.Logger</code>), et il existe bien sûr une extension pour utiliser <a href="https://github.com/OpenFeign/feign/tree/master/slf4j">SLF4J</a>.</p>
@@ -485,23 +524,52 @@ Voici ce que ça donne:</p>
 
 <p>La première étape consiste à récupérer le <em>cookie</em> généré par la requête d’authentification. Pour cela on utilise un décodeur spécifique qui va traiter les en-têtes de la réponse pour stocker les <em>cookies</em>.</p>
 
-<div class="language-java highlighter-rouge"><span class="kd">private</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">getAuthToken</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">,</span> <span class="n">String</span> <span class="n">login</span><span class="o">,</span> <span class="n">String</span> <span class="n">password</span><span class="o">)</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7</pre></td><td class="code"><pre><span class="kd">private</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">getAuthToken</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">,</span> <span class="n">String</span> <span class="n">login</span><span class="o">,</span> <span class="n">String</span> <span class="n">password</span><span class="o">)</span> <span class="o">{</span>
    <span class="n">AuthenticationApi</span> <span class="n">authenticationApi</span> <span class="o">=</span> <span class="n">builder</span>
            <span class="o">.</span><span class="na">encoder</span><span class="o">(</span><span class="k">new</span> <span class="n">GsonEncoder</span><span class="o">())</span>
            <span class="o">.</span><span class="na">decoder</span><span class="o">((</span><span class="n">response</span><span class="o">,</span> <span class="n">type</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">handleCookies</span><span class="o">(</span><span class="n">response</span><span class="o">.</span><span class="na">headers</span><span class="o">()))</span> <span class="c1">// decode cookies</span>
            <span class="o">.</span><span class="na">target</span><span class="o">(</span><span class="n">AuthenticationApi</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">url</span><span class="o">);</span>
    <span class="k">return</span> <span class="n">authenticationApi</span><span class="o">.</span><span class="na">login</span><span class="o">(</span><span class="k">new</span> <span class="n">LoginPassword</span><span class="o">(</span><span class="n">login</span><span class="o">,</span> <span class="n">password</span><span class="o">));</span>
 <span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
 </div>
 
 <p>Le stockage du <em>cookie</em> est assuré par le <a href="https://docs.oracle.com/javase/8/docs/api/index.html?overview-summary.html">CookieManager</a> disponible depuis Java 6.</p>
 
-<div class="language-java highlighter-rouge"><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">CookieManager</span> <span class="n">COOKIE_MANAGER</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CookieManager</span><span class="o">();</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">CookieManager</span> <span class="n">COOKIE_MANAGER</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CookieManager</span><span class="o">();</span>
+</pre></td></tr></tbody></table>
+</div>
 </div>
 
 <p>L’utilisation de ce <code class="highlighter-rouge">CookieManager</code> est traité dans la méthode <code class="highlighter-rouge">handleCookies</code> ci dessous:</p>
 
-<div class="language-java highlighter-rouge"><span class="kd">private</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">handleCookies</span><span class="o">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Collection</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span> <span class="n">headers</span><span class="o">)</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></td><td class="code"><pre><span class="kd">private</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">handleCookies</span><span class="o">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Collection</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span> <span class="n">headers</span><span class="o">)</span> <span class="o">{</span>
    <span class="c1">// From Map&lt;String, Collection&lt;String&gt;&gt; to Map&lt;String, List&lt;String&gt;&gt;</span>
    <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;&gt;</span> <span class="n">h</span> <span class="o">=</span> <span class="n">headers</span><span class="o">.</span><span class="na">entrySet</span><span class="o">().</span><span class="na">stream</span><span class="o">()</span>
            <span class="o">.</span><span class="na">collect</span><span class="o">(</span>
@@ -521,12 +589,21 @@ Voici ce que ça donne:</p>
        <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
    <span class="o">}</span>
 <span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
 </div>
 
 <p>Une fois stocké, ce <em>cookie</em> sera envoyé dans les futures requêtes.
 Pour cela on utilise une nouvelle fois le mécanisme de <code class="highlighter-rouge">RequestInterceptor</code> qui permet de modifier le <code class="highlighter-rouge">RequestTemplate</code>, Feign utilise cet objet pour construire la requête <abbr title="HyperText Transfer Protocol">HTTP</abbr>.</p>
 
-<div class="language-java highlighter-rouge"><span class="kd">static</span> <span class="n">MonkeyRaceApi</span> <span class="nf">buildRaceApi</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">,</span> <span class="n">String</span> <span class="n">login</span><span class="o">,</span> <span class="n">String</span> <span class="n">password</span><span class="o">)</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8</pre></td><td class="code"><pre><span class="kd">static</span> <span class="n">MonkeyRaceApi</span> <span class="nf">buildRaceApi</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">,</span> <span class="n">String</span> <span class="n">login</span><span class="o">,</span> <span class="n">String</span> <span class="n">password</span><span class="o">)</span> <span class="o">{</span>
    <span class="n">getAuthToken</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">login</span><span class="o">,</span> <span class="n">password</span><span class="o">);</span>
    <span class="k">return</span> <span class="n">builder</span>
            <span class="o">.</span><span class="na">requestInterceptor</span><span class="o">(</span><span class="nl">ApiFactory:</span><span class="o">:</span><span class="n">addCookies</span><span class="o">)</span> <span class="c1">// Inject Cookies</span>
@@ -534,16 +611,25 @@ Pour cela on utilise une nouvelle fois le mécanisme de <code class="highlighter
            <span class="o">.</span><span class="na">encoder</span><span class="o">(</span><span class="k">new</span> <span class="n">GsonEncoder</span><span class="o">())</span>
            <span class="o">.</span><span class="na">target</span><span class="o">(</span><span class="n">MonkeyRaceApi</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">url</span><span class="o">);</span>
 <span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
 </div>
 
 <p>L’intercepteur se comporte comme un consommateur de <code class="highlighter-rouge">RequestTemplate</code> :</p>
 
-<div class="language-java highlighter-rouge"><span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">addCookies</span><span class="o">(</span><span class="n">RequestTemplate</span> <span class="n">template</span><span class="o">)</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6</pre></td><td class="code"><pre><span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">addCookies</span><span class="o">(</span><span class="n">RequestTemplate</span> <span class="n">template</span><span class="o">)</span> <span class="o">{</span>
    <span class="n">URI</span> <span class="n">uri</span> <span class="o">=</span> <span class="n">URI</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">BASE_URL</span><span class="o">);</span>
    <span class="n">COOKIE_MANAGER</span><span class="o">.</span><span class="na">getCookieStore</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="n">uri</span><span class="o">).</span><span class="na">stream</span><span class="o">()</span>
            <span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="nl">HttpCookie:</span><span class="o">:</span><span class="n">toString</span><span class="o">)</span>
            <span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="n">cookie</span> <span class="o">-&gt;</span> <span class="n">template</span><span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Cookie"</span><span class="o">,</span> <span class="n">cookie</span><span class="o">));</span>
 <span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
 </div>
 
 <p>Dans Feign, le mécanisme d’authentification par <em>cookie</em> est proche du mécanisme d’en-tête <code class="highlighter-rouge">Authorization</code> souvent associé au <abbr title="Json WebToken">JWT</abbr>. Il se base sur des en-têtes <abbr title="HyperText Transfer Protocol">HTTP</abbr>. Pour implémenter l’authentification à base de <em>token</em>, on utiliserait donc la même technique du <code class="highlighter-rouge">RequestInterceptor</code>. On constate quand même que l’utilisation des <em>cookies</em> alourdi fortement le code.</p>
@@ -556,7 +642,15 @@ Pour cela on utilise une nouvelle fois le mécanisme de <code class="highlighter
 
 <p>Dans Feign, il existe un mécanisme spécifique pour traiter les cas en erreurs, c’est à dire si la réponse <abbr title="HyperText Transfer Protocol">HTTP</abbr> à un code ≥ 400. Ce  mécanisme utilise un <code class="highlighter-rouge">ErrorDecoder</code> :</p>
 
-<div class="language-java highlighter-rouge"><span class="kd">static</span> <span class="n">MonkeyRaceApi</span> <span class="nf">buildRaceApi</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">,</span> <span class="n">String</span> <span class="n">login</span><span class="o">,</span> <span class="n">String</span> <span class="n">password</span><span class="o">)</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9</pre></td><td class="code"><pre><span class="kd">static</span> <span class="n">MonkeyRaceApi</span> <span class="nf">buildRaceApi</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">,</span> <span class="n">String</span> <span class="n">login</span><span class="o">,</span> <span class="n">String</span> <span class="n">password</span><span class="o">)</span> <span class="o">{</span>
    <span class="n">getAuthToken</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">login</span><span class="o">,</span> <span class="n">password</span><span class="o">);</span>
    <span class="k">return</span> <span class="n">builder</span>
            <span class="o">.</span><span class="na">errorDecoder</span><span class="o">(</span><span class="nl">ApiFactory:</span><span class="o">:</span><span class="n">decodeError</span><span class="o">)</span> <span class="c1">// Decode errors</span>
@@ -565,12 +659,19 @@ Pour cela on utilise une nouvelle fois le mécanisme de <code class="highlighter
            <span class="o">.</span><span class="na">encoder</span><span class="o">(</span><span class="k">new</span> <span class="n">GsonEncoder</span><span class="o">())</span>
            <span class="o">.</span><span class="na">target</span><span class="o">(</span><span class="n">MonkeyRaceApi</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">url</span><span class="o">);</span>
 <span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
 </div>
 
-<div class="language-java highlighter-rouge"><span class="kd">private</span> <span class="kd">static</span> <span class="n">Exception</span> <span class="nf">decodeError</span><span class="o">(</span><span class="n">String</span> <span class="n">methodKey</span><span class="o">,</span> <span class="n">Response</span> <span class="n">response</span><span class="o">)</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="kd">private</span> <span class="kd">static</span> <span class="n">Exception</span> <span class="nf">decodeError</span><span class="o">(</span><span class="n">String</span> <span class="n">methodKey</span><span class="o">,</span> <span class="n">Response</span> <span class="n">response</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">return</span> <span class="nf">decodeError</span><span class="o">(</span><span class="n">response</span><span class="o">.</span><span class="na">status</span><span class="o">(),</span> <span class="n">methodKey</span><span class="o">,</span>
             <span class="o">()</span> <span class="o">-&gt;</span> <span class="n">FeignException</span><span class="o">.</span><span class="na">errorStatus</span><span class="o">(</span><span class="n">methodKey</span><span class="o">,</span> <span class="n">response</span><span class="o">));</span>
 <span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
 </div>
 
 <blockquote>
@@ -593,7 +694,37 @@ On peut regarder du coté de <a href="https://github.com/xxlabaza/feign-form">ht
 <p>La seconde solution est donc beaucoup plus simple, le principe est de traiter le cas particulier des objets du type <code class="highlighter-rouge">java.io.InputStream</code> et de déléguer les autres cas à un autre encodeur <abbr title="JavaScript Object Notation">JSON</abbr> classique. Pour définir le corps de de la requête <abbr title="HyperText Transfer Protocol">HTTP</abbr> il faut appeler la méthode <code class="highlighter-rouge">feign.RequestTemplate#body(byte[], java.nio.charset.Charset)</code>.
 Il est possible d’écrire le code d’un encodeur dans une <em>lambda</em> Java 8, mais ici il est préférable d’extraire le code de ce décodeur dans une nouvelle classe :</p>
 
-<div class="language-java highlighter-rouge"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UploadEncoder</span> <span class="kd">implements</span> <span class="n">Encoder</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UploadEncoder</span> <span class="kd">implements</span> <span class="n">Encoder</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="kd">final</span> <span class="n">Encoder</span> <span class="n">delegate</span><span class="o">;</span>
 
     <span class="kd">public</span> <span class="nf">UploadEncoder</span><span class="o">(</span><span class="n">Encoder</span> <span class="n">encoder</span><span class="o">)</span> <span class="o">{</span>
@@ -624,6 +755,8 @@ Il est possible d’écrire le code d’un encodeur dans une <em>lambda</em> Jav
         <span class="o">}</span>
     <span class="o">}</span>
 <span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
 </div>
 
 <blockquote>
@@ -638,7 +771,22 @@ Il est possible d’écrire le code d’un encodeur dans une <em>lambda</em> Jav
 
 <p>On utilise un <code class="highlighter-rouge">feign.Decoder</code> pour le <em>download</em>, le principe est similaire à celui utiliser pour l’<em>upload</em>. Ce qui va donner:</p>
 
-<div class="language-java highlighter-rouge"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DownloadDecoder</span> <span class="kd">implements</span> <span class="n">Decoder</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DownloadDecoder</span> <span class="kd">implements</span> <span class="n">Decoder</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="kd">final</span> <span class="n">Decoder</span> <span class="n">delegate</span><span class="o">;</span>
 
     <span class="n">DownloadDecoder</span><span class="o">(</span><span class="n">Decoder</span> <span class="n">decoder</span><span class="o">)</span> <span class="o">{</span>
@@ -654,6 +802,8 @@ Il est possible d’écrire le code d’un encodeur dans une <em>lambda</em> Jav
         <span class="k">return</span> <span class="n">delegate</span><span class="o">.</span><span class="na">decode</span><span class="o">(</span><span class="n">response</span><span class="o">,</span> <span class="n">type</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
 </div>
 
 <p>Une nouvelle fois, Feign rend l’opération très simple dès qu’on a compris le principe des encodeurs/décodeurs.</p>
@@ -678,7 +828,22 @@ Une autre solution consiste a utiliser un client par requête mais une  seule in
 
 <p>Voici une première implémentation assez basique qui permet de comprendre le mécanisme du <code class="highlighter-rouge">cookieJar</code>.</p>
 
-<div class="language-java highlighter-rouge"><span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OkHttpClient</span><span class="o">.</span><span class="na">Builder</span><span class="o">()</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</pre></td><td class="code"><pre><span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OkHttpClient</span><span class="o">.</span><span class="na">Builder</span><span class="o">()</span>
         <span class="o">.</span><span class="na">cookieJar</span><span class="o">(</span>
                 <span class="k">new</span> <span class="nf">CookieJar</span><span class="o">()</span> <span class="o">{</span>
                     <span class="kd">private</span> <span class="kd">final</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Cookie</span><span class="o">&gt;&gt;</span> <span class="n">cookieStore</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
@@ -694,15 +859,23 @@ Une autre solution consiste a utiliser un client par requête mais une  seule in
                             <span class="k">return</span> <span class="n">cookies</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">?</span> <span class="n">cookies</span> <span class="o">:</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Cookie</span><span class="o">&gt;();</span>
                     <span class="o">}</span>
                 <span class="o">});</span>
+</pre></td></tr></tbody></table>
+</div>
 </div>
 
 <p>Une implémentation plus élégante et plus simple consiste à ajouter la dépendance <code class="highlighter-rouge">okhttp-urlconnection</code> de <code class="highlighter-rouge">OkHttp</code>.</p>
 
-<div class="language-java highlighter-rouge"><span class="n">CookieHandler</span> <span class="n">cookieHandler</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CookieManager</span><span class="o">(</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5</pre></td><td class="code"><pre><span class="n">CookieHandler</span> <span class="n">cookieHandler</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CookieManager</span><span class="o">(</span>
             <span class="k">new</span> <span class="nf">PersistentCookieStore</span><span class="o">(</span><span class="n">ctx</span><span class="o">),</span> <span class="n">CookiePolicy</span><span class="o">.</span><span class="na">ACCEPT_ALL</span><span class="o">);</span>
 
 <span class="n">OkHttpClient</span> <span class="n">httpClient</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OkHttpClient</span><span class="o">.</span><span class="na">Builder</span><span class="o">()</span>
             <span class="o">.</span><span class="na">cookieJar</span><span class="o">(</span><span class="k">new</span> <span class="n">JavaNetCookieJar</span><span class="o">(</span><span class="n">cookieHandler</span><span class="o">));</span>
+</pre></td></tr></tbody></table>
+</div>
 </div>
 
 <h3 id="gestion-des-erreurs-2">Gestion des erreurs</h3>
@@ -710,11 +883,25 @@ Une autre solution consiste a utiliser un client par requête mais une  seule in
 <p>Il n’existe pas, de mon point de vue de solution idéale dans Retrofit pour gérer les erreurs comment il en existe dans Feign.
 Pour cet exercice, nous utilisons donc la fonctionnalité d’interceptor de <code class="highlighter-rouge">OkHttp</code>. Une limitation existe cependant; il faut que les exceptions à retourner soient de type <code class="highlighter-rouge">RuntimeException</code>.</p>
 
-<div class="language-java highlighter-rouge"><span class="n">OkHttpClient</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OkHttpClient</span><span class="o">.</span><span class="na">Builder</span><span class="o">()</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="n">OkHttpClient</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OkHttpClient</span><span class="o">.</span><span class="na">Builder</span><span class="o">()</span>
         <span class="o">.</span><span class="na">addInterceptor</span><span class="o">(</span><span class="k">this</span><span class="o">::</span><span class="n">authInterceptor</span><span class="o">);</span>
+</pre></td></tr></tbody></table>
+</div>
 </div>
 
-<div class="language-java highlighter-rouge"><span class="kd">private</span> <span class="n">Response</span> <span class="nf">authInterceptor</span><span class="o">(</span><span class="n">Interceptor</span><span class="o">.</span><span class="na">Chain</span> <span class="n">chain</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12</pre></td><td class="code"><pre><span class="kd">private</span> <span class="n">Response</span> <span class="nf">authInterceptor</span><span class="o">(</span><span class="n">Interceptor</span><span class="o">.</span><span class="na">Chain</span> <span class="n">chain</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
     <span class="n">Request</span> <span class="n">request</span> <span class="o">=</span> <span class="n">chain</span><span class="o">.</span><span class="na">request</span><span class="o">();</span>
     <span class="n">Response</span> <span class="n">response</span> <span class="o">=</span> <span class="n">chain</span><span class="o">.</span><span class="na">proceed</span><span class="o">(</span><span class="n">request</span><span class="o">);</span>
 
@@ -726,6 +913,8 @@ Pour cet exercice, nous utilisons donc la fonctionnalité d’interceptor de <co
     <span class="o">}</span>
     <span class="k">return</span> <span class="n">response</span><span class="o">;</span>
 <span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
 </div>
 
 <h3 id="upload-1">Upload</h3>
@@ -736,17 +925,39 @@ Pour cet exercice, nous utilisons donc la fonctionnalité d’interceptor de <co
 
 <p>On ajoute la méthode au service.</p>
 
-<div class="language-java highlighter-rouge"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonkeyService</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonkeyService</span> <span class="o">{</span>
 
     <span class="nd">@Multipart</span>
     <span class="nd">@POST</span><span class="o">(</span><span class="s">"monkeys/{id}/photo"</span><span class="o">)</span>
     <span class="n">Call</span><span class="o">&lt;</span><span class="n">Photo</span><span class="o">&gt;</span> <span class="nf">sendPhoto</span><span class="o">(</span><span class="nd">@Path</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span> <span class="n">String</span> <span class="n">id</span><span class="o">,</span> <span class="nd">@Part</span> <span class="n">MultipartBody</span><span class="o">.</span><span class="na">Part</span> <span class="n">file</span><span class="o">);</span>
 <span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
 </div>
 
 <p>On crée un fichier temporaire contenant la photo, puis on appelle la méthode <code class="highlighter-rouge">sendPhoto</code> en lui fournissant un <code class="highlighter-rouge">RequestBody</code> spécifique contenant ce fichier temporaire et ensuite nous créons le <code class="highlighter-rouge">MultipartBody</code> qui est passé au service.</p>
 
-<div class="language-java highlighter-rouge"><span class="nd">@Override</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</pre></td><td class="code"><pre><span class="nd">@Override</span>
 <span class="kd">public</span> <span class="n">Photo</span> <span class="nf">savePhoto</span><span class="o">(</span><span class="n">String</span> <span class="n">id</span><span class="o">,</span> <span class="n">InputStream</span> <span class="n">stream</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">SecurityException</span><span class="o">,</span> <span class="n">IllegalArgumentException</span> <span class="o">{</span>
     <span class="k">return</span> <span class="nf">executeCall</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="o">{</span>
         <span class="k">try</span> <span class="o">{</span>
@@ -762,6 +973,8 @@ Pour cet exercice, nous utilisons donc la fonctionnalité d’interceptor de <co
         <span class="o">}</span>
     <span class="o">});</span>
 <span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
 </div>
 
 <h3 id="download-1">Download</h3>
@@ -771,15 +984,28 @@ Pour cela Retrofit dispose d’un type <em>générique</em>: <code class="highli
 
 <p>On commence par ajouter la méthode à notre service :</p>
 
-<div class="language-java highlighter-rouge"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonkeyService</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MonkeyService</span> <span class="o">{</span>
     <span class="nd">@GET</span><span class="o">(</span><span class="s">"monkeys/{id}/photo"</span><span class="o">)</span>
     <span class="n">Call</span><span class="o">&lt;</span><span class="n">ResponseBody</span><span class="o">&gt;</span> <span class="nf">downloadPhoto</span><span class="o">(</span><span class="nd">@Path</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span> <span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">SecurityException</span><span class="o">,</span> <span class="n">IllegalArgumentException</span><span class="o">;</span>
   <span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
 </div>
 
 <p>puis voici le code qui permet de récupérer notre photo :</p>
 
-<div class="language-java highlighter-rouge"><span class="nd">@Override</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9</pre></td><td class="code"><pre><span class="nd">@Override</span>
 <span class="kd">public</span> <span class="n">InputStream</span> <span class="nf">downloadPhoto</span><span class="o">(</span><span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">SecurityException</span><span class="o">,</span> <span class="n">IllegalArgumentException</span> <span class="o">{</span>
     <span class="k">try</span> <span class="o">{</span>
         <span class="n">Response</span><span class="o">&lt;</span><span class="n">ResponseBody</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="n">monkeyService</span><span class="o">.</span><span class="na">downloadPhoto</span><span class="o">(</span><span class="n">id</span><span class="o">).</span><span class="na">execute</span><span class="o">();</span>
@@ -788,6 +1014,8 @@ Pour cela Retrofit dispose d’un type <em>générique</em>: <code class="highli
         <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
     <span class="o">}</span>
 <span class="o">}</span>
+</pre></td></tr></tbody></table>
+</div>
 </div>
 
 <h3 id="bilan-1">Bilan</h3>

@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<!--  lastBuildDate : Sat, 11 Mar 2017 14:48:50 +0100 -->
+<html>
+<head>
+  
+  
+  <title>Ngviknigs</title>
+  
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="content-language" content="en" />
+  <meta name="language" content="en" />
+  <!-- Google site verification -->
+  <meta name="google-site-verification" content="Gq_ytzUtfYn95WsiH66e4Lfb8zANT-LUwD8JgH9xXdw" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="keywords" content="Expertise informatique, Dévelopement informatique" />
+
+  <!-- RSS feed -->
+  <link rel="alternate" type="application/rss+xml" title=" RSS Feed" href="http://www.monkeypatch.io/blog/feed.xml" />
+
+  <!-- SEO -->
+  <meta property="og:title" content="Ngviknigs" />
+
+  
+  <meta property="og:description" content="Introduction
+
+À peine remis du MonkeyTechDay #3: Reactive Streams coaché par @sdeleuze, je prends l’avion direction Copenhague pour assister à la première édition de ngVikings.
+
+  Pour un retour sur le MKTD, voir le retour de Maxime
+
+
+#Stereotype, Au Danemark il fait plus froid qu’à Toulouse, il y a des Lego, des Carlseberg, et une sirène.
+
+J’ai plutôt l’habitude de participer à des conférences assez généralistes, mais là, je vais faire deux jours intégralement sur du Angular (comprendre Angular 2+ pour ceux qui ne font pas encore la différence entre AngularJs et ‘Just Angular’).
+
+C’est pour moi l’occasion d’approfondir le sujet, de voir l’écosystème, et de rencontrer des développeurs passionnés par ce sujet.
+
+Je constate que certains ‘grands comptes’ Toulousains font un premier pas vers Angular sur leurs nouveaux projets, c’est donc le moment idéal pour moi d’aller plus loin sur le sujet.
+
+" />
+  <meta name="description" content="Introduction
+
+À peine remis du MonkeyTechDay #3: Reactive Streams coaché par @sdeleuze, je prends l’avion direction Copenhague pour assister à la première édition de ngVikings.
+
+  Pour un retour sur le MKTD, voir le retour de Maxime
+
+
+#Stereotype, Au Danemark il fait plus froid qu’à Toulouse, il y a des Lego, des Carlseberg, et une sirène.
+
+J’ai plutôt l’habitude de participer à des conférences assez généralistes, mais là, je vais faire deux jours intégralement sur du Angular (comprendre Angular 2+ pour ceux qui ne font pas encore la différence entre AngularJs et ‘Just Angular’).
+
+C’est pour moi l’occasion d’approfondir le sujet, de voir l’écosystème, et de rencontrer des développeurs passionnés par ce sujet.
+
+Je constate que certains ‘grands comptes’ Toulousains font un premier pas vers Angular sur leurs nouveaux projets, c’est donc le moment idéal pour moi d’aller plus loin sur le sujet.
+
+" />
+  
+  
+  
+    <meta name="author" content="Emmanuel Vinas">
+    <link rel="author" href="https://plus.google.com/+vinasemmanuel"/>
+    
+      <link rel="publisher" href="https://plus.google.com/+vinasemmanuel"/>
+    
+  
+    <meta name="author" content="Igor Laborie">
+    <link rel="author" href="https://plus.google.com/+IgorLaborie"/>
+    
+      <link rel="publisher" href="https://plus.google.com/+IgorLaborie"/>
+    
+  
+    <meta name="author" content="Bruno Chauvet">
+    <link rel="author" href="https://plus.google.com/"/>
+    
+      <link rel="publisher" href="https://plus.google.com/"/>
+    
+  
+
+  
+    <meta property="og:type" content="article"/>
+    <meta property="og:article:published_time" content="2017-03-07T00:00:00+01:00">
+    
+      <meta property="og:article:author:username" content="Emmanuel Vinas">
+    
+      <meta property="og:article:author:username" content="Igor Laborie">
+    
+      <meta property="og:article:author:username" content="Bruno Chauvet">
+    
+    
+    <meta property="og:article:tag" content="ngVikings">
+    
+    <meta property="og:article:tag" content="Angular">
+    
+    <meta property="og:article:tag" content="WebSecurity">
+    
+    <meta property="og:article:tag" content="RxJS">
+    
+  
+  
+  
+  <meta property="og:image" content="https://ngvikings.org/images/backgrounds/2017.jpg"/>
+
+  <meta property="og:url" content="http://www.monkeypatch.io/2017/03/07/ngViknigs.html"/>
+  <meta property="og:site_name" content="MonkeyPatch"/>
+  
+  <!-- Twitter tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@MonkeyPatch_io" />
+  <meta name="twitter:url" content="http://www.monkeypatch.io/2017/03/07/ngViknigs.html">
+  <meta name="twitter:title" content="Ngviknigs">
+  <meta name="twitter:description" content="Introduction
+
+À peine remis du MonkeyTechDay #3: Reactive Streams coaché par @sdeleuze, je prends l’avion direction Copenhague pour assister à la première édition de ngVikings.
+
+  Pour un retour sur le MKTD, voir le retour de Maxime
+
+
+#Stereotype, Au Danemark il fait plus froid qu’à Toulouse, il y a des Lego, des Carlseberg, et une sirène.
+
+J’ai plutôt l’habitude de participer à des conférences assez généralistes, mais là, je vais faire deux jours intégralement sur du Angular (comprendre Angular 2+ pour ceux qui ne font pas encore la différence entre AngularJs et ‘Just Angular’).
+
+C’est pour moi l’occasion d’approfondir le sujet, de voir l’écosystème, et de rencontrer des développeurs passionnés par ce sujet.
+
+Je constate que certains ‘grands comptes’ Toulousains font un premier pas vers Angular sur leurs nouveaux projets, c’est donc le moment idéal pour moi d’aller plus loin sur le sujet.
+
+">
+  <meta name="twitter:image" content="https://ngvikings.org/images/backgrounds/2017.jpg">
+
+  <!-- Lang --> 
+  <link rel="alternate" hreflang="en" href="http://www.monkeypatch.io/en/index" />
+  <link rel="alternate" hreflang="fr" href="http://www.monkeypatch.io/index" />
+  
+  <meta property="og:locale:alternate" content="fr_FR"/>
+  <meta property="og:locale" content="en_US"/>
+  
+
+  <link rel="shortcut icon" href="favicon.ico">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link id="theme-style" rel="stylesheet" href="/css/main.css">
+
+ <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    
+      "@type": "BlogPosting", // 
+      "mainEntityOfPage": "http://www.monkeypatch.io/2017/03/07/ngViknigs.html", 
+    
+    "author": [
+      
+      { "@type": "Person", "name": "Emmanuel Vinas" },
+      
+      { "@type": "Person", "name": "Igor Laborie" },
+      
+      { "@type": "Person", "name": "Bruno Chauvet" }
+      
+    ],
+    "name": "MonkeyPatch",
+    "headline": "Ngviknigs",
+    "image": "https://ngvikings.org/images/backgrounds/2017.jpg",
+    
+      "datePublished": "2017-03-07T00:00:00+01:00",
+      "dateModified": "2017-03-07T00:00:00+01:00",
+      "datePublished": "2017-03-07T00:00:00+01:00",
+    
+    "publisher": {
+      "@type": "Organization",
+      "name": "MonkeyPatch",
+      "logo": "http://www.monkeypatch.io/public/images/logos/logo-mkp-blue-x256.png",
+      "sameAs": [
+        "https://twitter.com/monkeypatch_io","https://www.linkedin.com/company/monkeypatch-io"
+      ]
+    },
+    "description": "Société de conseil et d'expertise en informatique spécialisée dans les nouvelles technologies.",
+    "url": "http://www.monkeypatch.io/2017/03/07/ngViknigs.html"
+  }
+</script>
+</head>
+
+<body class="post">
+  <header>
+  <div class="menu">
+    <div class="logo">
+      <a href="/en/index">
+        <img alt="Monkey Patch" src="/public/images/logos/logo-monkey.svg">
+      </a>
+    </div>
+    
+    <nav class="lang">
+      <ul>
+        <li class="active">
+          <a href="en/2017/03/07/ngViknigs.html" >EN</a>
+        </li>
+        <li class="sep">|</li>
+        <li class="">
+          <a href="/2017/03/07/ngViknigs.html" >FR</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <nav class="menu">
+      <ul>
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li class="">
+              <a href="/en/expert">Our expertise</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/about">Our thoughts</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/careers">Be a Monkey</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/job">Our Jobs</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/contact">Contact</a>
+            </li>
+          
+        
+        <li class="">
+          <a href="/en/blog">Blog</a>
+        </li>
+      </ul>
+    </nav>
+      
+    <nav class="hamburger">
+      <label for="menu-hamburger">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </label>
+    </nav>
+    
+  </div>
+  <input type="checkbox" id="menu-hamburger"/>
+  <nav class="menu-hamburger">
+     <ul>
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li class="">
+              <a href="/en/expert">Our expertise</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/about">Our thoughts</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/careers">Be a Monkey</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/job">Our Jobs</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/contact">Contact</a>
+            </li>
+          
+        
+        <li class="">
+          <a href="/en/blog">Blog</a>
+        </li>
+      </ul>
+      <ul class="lang">
+        <li class="active">
+          <a href="en/2017/03/07/ngViknigs.html" >EN</a>
+        </li>
+        <li class="">
+          <a href="/2017/03/07/ngViknigs.html" >FR</a>
+        </li>
+      </ul>
+  </nav>
+</header>
+
+  <main>
+    <nav class="index"><!-- fill with JS --></nav>
+    <section class="post">
+      <h1 id="top">
+        <span>Ngviknigs</span>
+        <span class="date">
+
+
+  March 07, 2017
+
+</span>
+        <a href="#disqus_thread" class="count"><script id="dsq-count-scr" src="//monkeypatchblog.disqus.com/count.js" async></script></a>
+      </h1>
+
+      <div class="tags">
+        
+          <span>ngVikings</span> 
+        
+          <span>Angular</span> 
+        
+          <span>WebSecurity</span> 
+        
+          <span>RxJS</span> 
+         
+      </div>
+
+      <div class="share">
+        <a class="twitter-share-button"
+          href="https://twitter.com/share"
+          data-size="large"
+          data-via="monkeypatch_io"
+          data-text="Ngviknigs"
+          data-hashtags="ngVikings,Angular,WebSecurity,RxJS"
+          >Tweet</a>
+      </div>
+
+      <article><h2 id="introduction">Introduction</h2>
+
+<p>À peine remis du <a href="https://www.meetup.com/fr-FR/Monkey-Tech-Days/events/232103376/">MonkeyTechDay #3: Reactive Streams</a> coaché par <a href="https://twitter.com/sdeleuze">@sdeleuze</a>, je prends l’avion direction Copenhague pour assister à la première édition de <a href="https://ngvikings.org/">ngVikings</a>.</p>
+<blockquote>
+  <p>Pour un retour sur le MKTD, voir le retour de <a href="https://medium.com/@Maxime_/monkey-tech-days-3-reactive-streams-c94f74e710d#.xzvbilpsi">Maxime</a></p>
+</blockquote>
+
+<p>#Stereotype, Au Danemark il fait plus froid qu’à Toulouse, il y a des Lego, des Carlseberg, et une sirène.</p>
+
+<p>J’ai plutôt l’habitude de participer à des conférences assez généralistes, mais là, je vais faire deux jours intégralement sur du Angular (comprendre Angular 2+ pour ceux qui ne font pas encore la différence entre AngularJs et ‘Just Angular’).</p>
+
+<p>C’est pour moi l’occasion d’approfondir le sujet, de voir l’écosystème, et de rencontrer des développeurs passionnés par ce sujet.</p>
+
+<p>Je constate que certains ‘grands comptes’ Toulousains font un premier pas vers Angular sur leurs nouveaux projets, c’est donc le moment idéal pour moi d’aller plus loin sur le sujet.
+<!--more--></p>
+
+<h2 id="jour-1---conference-day">Jour 1 - Conference day</h2>
+
+<p>La conférence se déroule à <a href="https://en.itu.dk/">l’université IT de Copenhague</a>, les présentations durent 30 minutes, le rythme est soutenu : pas le temps de s’endormir. Les pauses de 5 minutes entre les conférences sont un peu trop courtes pour vraiment souffler, mais le hall de l’université est suffisament grand pour éviter les embouteillages.</p>
+
+<p>À noter que l’après-midi, une salle spéciale est réservée pour discuter avec tous les speakers en parallèle des deux salles avec des présentations, c’est particulièrement intéressant, car le format n’autorise pas vraiment la possibilité de poser des questions pendant les présentations.</p>
+
+<p>Le cadre est très bien, cette université est classe. Quand on arrive on est accueilli par de la musique ‘Vikings’ comme par exemple <a href="https://www.youtube.com/watch?v=7fPoRacRhKE&amp;feature=youtu.be">Wardruna - Bjarkan</a>. (ne m’en demandez pas plus sur le sujet, j’y connais rien).</p>
+
+<h3 id="intro--keynote">Intro &amp; keynote</h3>
+
+<p>Cette conférence est organisée par des communautés des pays scandinaves (au sens large): AngularJS Copenhagen, GDG Copenhagen, AngularJS Oslo, AngularJS Gothenburg, ngAarhus, ngStockholm, Angular Finland. Pendant l’introduction, les organisateurs sont accompagnés de Vikings en costume, ça met tout de suite dans l’ambiance.</p>
+
+<p>Après une rapide introduction, ils laissent la place à <a href="auchenberg">Kenneth Auchenberg</a> de Microsoft pour la keynote.
+Derrière le titre un peu provoquant: <a href="https://speakerdeck.com/auchenberg/a-future-without-browsers-february-2017">A Future without Browsers</a> il nous expose une vision possible du futur du web que je trouve assez plausible.</p>
+
+<p>Il a commencé par nous faire un rappel du début des navigateurs internet, pour nous montrer le changement avec ce qu’ils sont devenus aujourd’hui : des moteurs d’applications. Aujoud’hui, on constate que beaucoup d’utilisateurs ne savent même plus que lorsqu’ils sont sur des réseaux sociaux, ils utilisent internet !</p>
+
+<p>Les usages ont aussi beaucoup changé avec l’arrivée des smartphones qui ont mis quelques années pour devenir la plateforme majoritaire sur internet. Il faut aussi remarquer que la compétition entre ces navigateurs a tiré tout ce monde vers le haut. Demain, les PWA (Progressive Web App) pourraient bien remplacer les applications natives. Enfin de plus en plus d’applications desktop se basent sur des navigateurs comme par exemple celles qui sont basées sur <a href="http://electron.atom.io/">Electron</a>. Qui aurait cru il y a quelques années que le monde des IDE allait être concurencé par des applications qui tournent dans un navigateur ?</p>
+
+<p>Les applications natives embarquent aussi fréquemment un navigateur.
+Les nouvelles interfaces de recherche (Siri, Cortana), et les nouveaux assistants domestiques (Google Home, Echo, Alexa, …) sont nos nouveaux moteurs de recherche, et de nouveaux écosystèmes pour les applications.</p>
+
+<p><img src="/public/images/ngVikings17/keynote-webflux.png" alt="Web Flux" /></p>
+
+<p>Pour résumer, le monde des browsers tel que l’on a connu est révolu, aujourd’hui le navigateur au coeur des changements numériques. Ceci promet un bel avenir aux développeurs Web (du coup, la notion de Front-End n’est pas tout à fait exacte).</p>
+
+<h3 id="angular-outside-the-browser-angular-for-the-headless-web">Angular outside the Browser (Angular for the Headless web)</h3>
+
+<p>Ensuite, je regarde la présentation de <a href="https://twitter.com/manekinekko">Wassim Chegham</a> un GDE français qui nous parle d’<a href="https://github.com/angular/universal">angular universal</a>.
+Voici ses slides : <a href="http://slides.com/wassimchegham/angular2-universal#/">http://slides.com/wassimchegham/angular2-universal#/</a>.</p>
+
+<p>L’objectif est le rendu coté serveur des applications angular. En effet, certains cas d’utilisation vont nécessiter ce rendu en dehors du navigateur : IoT, SEO (Search Engine Optimisation), Preview (social link), accélération du rendu de la première page.
+Angular s’inspire des autres frameworks qui ont déjà répondus à ce besoin.</p>
+
+<p>Le système de rendu d’Angular peut donc faire avec le navigateur, avec les webworkers dans le navigateur ou bien dans un serveur comme NodeJS ou avec du .Net, et bientôt d’autres langages (on l’espère).</p>
+
+<p>Dans le cas d’un rendu serveur pour accélérer le premier chargement, ensuite le navigateur reprend la main pour contiuner normalement. Cependant le problème qu’il faut résoudre, c’est que l’état conservé sur le serveur devra être transféré dans le navigateur. Pour cela, il y a <a href="https://github.com/angular/preboot">preboot</a> qui va enregistrer les événements pour les rejouer ensuite. Attention, il faut utiliser le moteur de rendu d’Angular et pas le DOM, sinon on va perdre la capacité offerte par Angular Universal.</p>
+
+<p>Bonne nouvelle Angular Universal rejoint Angular Core, ça nous promet de la qualité et une très bonne intégration.</p>
+
+<p>Concrètement, un bon point de départ est <a href="https://medium.com/google-developer-experts/angular-universal-for-the-rest-of-us-922ca8bac84#.db8v2ofj2">Angular Universal For The Rest Of Us</a>. Le seul point faible de la présentation, c’est que j’aurais aimé voir un exemple en live.</p>
+
+<h3 id="angular-continuous-integration">Angular Continuous integration</h3>
+
+<p>Je continue par la présentation de <a href="https://twitter.com/elecash">Raúl Jiménez</a>.
+Voici ses slides <a href="http://slides.com/elecash/angular-continuous-integration#/">http://slides.com/elecash/angular-continuous-integration#/</a></p>
+
+<p>Il introduit le syndrome iwoml: ‘it works on my latop’. Pour éviter de succomber à ce syndrome, il nous propose de faire de l’intégration continue. Notez que le mécanisme de déclaration des dépendances sous npm rends ceci plus important que dans un environnement ou les versions des libraries sont plus strictement contrôlés.</p>
+
+<p>1- create a github repo</p>
+
+<p>2- log in to Travis with your Github user</p>
+
+<p>3- enable a repo on your Travis profile</p>
+
+<p>4- install the Travis CLI and run “travis init”</p>
+
+<p>5- modify the .travis.yml file</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></td><td class="code"><pre><span class="s">sudo</span><span class="pi">:</span> <span class="s">false</span>
+<span class="s">language</span><span class="pi">:</span> <span class="s">node_js</span>
+<span class="s">cache</span><span class="pi">:</span>
+  <span class="s">directories</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">node_modules</span>
+<span class="s">notifications</span><span class="pi">:</span>
+  <span class="s">email</span><span class="pi">:</span> <span class="s">false</span>
+<span class="s">node_js</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s1">'</span><span class="s">4'</span>
+<span class="s">before_install</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">export CHROME_BIN=chromium-browser</span>
+  <span class="pi">-</span> <span class="s">export DISPLAY=:99.0</span>
+  <span class="pi">-</span> <span class="s">sh -e /etc/init.d/xvfb start</span>
+  <span class="pi">-</span> <span class="s">npm i -g npm@^3.0.0</span>
+<span class="s">before_script</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">npm prune</span>
+<span class="s">script</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">npm run build</span>
+<span class="s">branches</span><span class="pi">:</span>
+  <span class="s">except</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">/^v\d+\.\d+\.\d+$/</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>6- add your scripts on package.json</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="s2">"prebuild"</span><span class="err">:</span><span class="w"> </span><span class="s2">"npm test -- --single-run"</span><span class="err">,</span><span class="w">
+</span><span class="s2">"build"</span><span class="err">:</span><span class="w"> </span><span class="s2">"ng build --prod --aot"</span><span class="err">,</span><span class="w">
+</span></pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>7- modify the karma.conf.js</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="k">if</span> <span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">TRAVIS</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">configuration</span><span class="p">.</span><span class="nx">browsers</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Chrome_travis_ci'</span><span class="p">];</span>
+<span class="p">}</span>
+<span class="nx">config</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">configuration</span><span class="p">);</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>8- create a branch and send a pull request</p>
+
+<p>Et il nous fait du live-coding sur une version amélioré en rajoutant <a href="https://greenkeeper.io/">GreenKeeper</a> et du versionnage sémantique. GreenKeeper permet de déclancher automatiquement des Pull Request sur le frontend lorsque le backend change.</p>
+
+<p>Voir les dépôts git pour le <a href="https://github.com/elecash/ng2-ci-app">frontend</a> et le <a href="https://github.com/elecash/ng2-ci-api">backend</a>.</p>
+
+<p>La démo est vraiment convaincante, il faut de toute urgence que j’adapte ces scripts aux environnements que j’utilise traditionnellement (Jenkins, backend Java).</p>
+
+<p>En gros voici les scripts npm de la partie client (basé sur angular-cli):</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</pre></td><td class="code"><pre><span class="s2">"scripts"</span><span class="err">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"precommit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npm test -- --single-run"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"commit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"git-cz"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"ng"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ng"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"serve:build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http-server ./dist -s -p 4200"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ng serve"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"start:aot"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ng serve --prod --aot"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"prebuild"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npm test -- --single-run"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ng build --prod --aot --bh /ng2-ci-app/"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"build:travis"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ng build --prod --aot"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"lint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tslint \"src/**/*.ts\""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ng test"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"pree2e"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webdriver-manager update --standalone false --gecko false"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"e2e"</span><span class="p">:</span><span class="w"> </span><span class="s2">"concurrently \"npm run serve:build\" \"protractor\" --kill-others --success first"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"stop"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kill $(cat .pid)"</span><span class="w">
+</span><span class="p">}</span><span class="err">,</span><span class="w">
+</span></pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>et sur la partie backend (NodeJS):</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6</pre></td><td class="code"><pre><span class="s2">"scripts"</span><span class="err">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rimraf dist &amp;&amp; node build.js"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"commit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"git-cz"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"semantic-release"</span><span class="p">:</span><span class="w"> </span><span class="s2">"semantic-release pre &amp;&amp; npm publish &amp;&amp; semantic-release post"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"postpublish"</span><span class="p">:</span><span class="w"> </span><span class="s2">"greenkeeper-postpublish"</span><span class="w">
+  </span><span class="p">}</span><span class="err">,</span><span class="w">
+</span></pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>Pour voir les compléments voir directement dans les dépôts Github. J’ai eu l’occasion par la suite de discuter avec Raùl, j’espère qu’on aura la chance de le voir passer par Toulouse dans le cadre du Devfest (ou du GDG Toulouse).</p>
+
+<h3 id="angular-forms">Angular Forms</h3>
+
+<p>Ensuite, je vais voir la présentation d’<a href="https://twitter.com/lakatos88">Alex Lakatos</a> sur les formulaires.
+Il fait le tour des solutions pour faire des formulaires dans Angular:</p>
+
+<ul>
+  <li>basés sur des templates HTML (old fashion) en gros ce qu’on faisait en AngularJS</li>
+  <li>les réactives forms qui sont plus dynamique et avec moins de code HTML (mais du TypeScript). Le suivi des changements est facilités si on utilise les évènements générés sous forme d’<code class="highlighter-rouge">Observable</code>, et l’ajout de validateur (éventuellement custom et asynchrone) est plus facile.</li>
+</ul>
+
+<p>Les deux types ont leurs avantages et leurs défauts, il faut choisir en fonction de la situation. Disons que sur un formulaire simple, on peut se contenter de la version template, mais qu’assez rapidement, on arrive à des situations ou les formulaire dynamiques apportent plus.</p>
+
+<h3 id="angular-material">Angular Material</h3>
+
+<p>Dernière présentation avant la pause repas, ça devient dur de tenir. Mais <a href="https://twitter.com/ladyleet">Tracy Lee</a> nous fait une présentation sur <a href="https://material.angular.io/">Angular Material</a> qui est surtout du live-coding. Encore une GDE.</p>
+
+<p>Pas évident de transcrire du live-coding, beaucoup de composants y passent: toolbar, sidenav, icon, grid list, chips, tooltip, dialog, button, card, list, tabs, snackbar. Le plus simple, c’est de suivre les slides: <a href="http://www.slideshare.net/ladyleet/angular-material-2-ngvikingsconf">http://www.slideshare.net/ladyleet/angular-material-2-ngvikingsconf</a>, et les sources: <a href="https://github.com/ladyleet/ng-vikings-one">https://github.com/ladyleet/ng-vikings-one</a>, enfin, un lien partique pour le thème matérial: <a href="https://www.materialpalette.com/">https://www.materialpalette.com/</a></p>
+
+<h3 id="lunch">Lunch</h3>
+
+<p>Comme tout bon français, je porte une attention toute particulière sur la qualité des repas (surtout quand je suis à l’étranger), le buffet froid servi était correct et varié. Les pâtisseries danoises ne sont pas mauvaises, mais pas terrible en terme de diététique.
+La pose repas c’est aussi l’occasion de faire une photo de groupe et de participer au quiz. Les questions étaient tellement simples, que le premier lot a été gagné par le premier venu :P</p>
+
+<p><a href="/public/images/ngVikings17/lucky.png">Lucky Guy</a></p>
+
+<h3 id="authentication">Authentication</h3>
+
+<p>Pour commencer doucement l’après-midi, j’assiste à une présentation de <a href="https://twitter.com/simona_cotin">Simona Cotin</a> parlant des aspects authentification: une comparaison entre les mécanismes à base de Cookie et JWT.
+Je connaissais déjà le sujet, mais sur ce genre de thématique, une bonne révision ne fait jamais de mal.</p>
+
+<p>Les authentifications classiques sont basées sur un identifiant de session qui est construit coté serveur, il faut donc conserver cette session en vie (en mémoire, ou dans une base de données), on fonctionne donc en mode ‘statefull’. Cet état est donc géré coté serveur, et cela se complexifie vite si on est sur un architecture distribuée. Coté client, on stocke généralement cet identifiant dans un Cookie.</p>
+
+<p><a href="https://jwt.io/">JWT (JSON Web Token)</a> fournit une alternative intéressante à cette architecture car on va pouvoir être ‘stateless’. Au lieu de renvoyer un identifiant de session, on envoie un token qui contient une partie en JSON (appelé claims ou payload). En plus de ces données le token contient un checksum et les informations nécessaires pour vérifier ce checksum. Pour garantir la confiance en ce token il faut aussi associer une clé secrète qui est utilisée pour faire une vérification avec le checksum. Certains algorithmes utilisés pour calculer ce checksum utilisent un mécanisme de clé privée/publique qui permet à tous de vérifier le token, mais de garantir que c’est bien le serveur qui a la responsablilté d’authentifier l’utilisateur qui génère le jeton.</p>
+
+<p>Dans une route d’Angular on peut associer un ‘guard’ qui permet de bloquer des routes si l’utilisateur n’est pas authentifié.</p>
+
+<p>Il y avait aussi quelques assertions un peu rapides concernant les aspects sécurités comme CRSF et XSS que je ne préfère pas rapporter, car je ne suis pas expert dans le domaine et je ne suis pas convaincu quelles soient exactes. C’était une bonne présentation pour commencer l’après-midi.</p>
+
+<h3 id="lazy-loading">Lazy loading</h3>
+
+<p>Ensuite, je suis allé voir <a href="https://twitter.com/manfredsteyer">Manfred Steyer</a> qui nous parle du lazy loading des modules d’Angular.</p>
+
+<p>Sa présentation était super, j’ai apprécié l’alternance entre la théorie et les démonstrations.
+Je vous détailerai le sujet plus bas. Vous trouverez ses slides ici: <a href="https://speakerdeck.com/manfredsteyer/angular-lazy-loading-ngvikings-in-copenhagen-feb-2017">https://speakerdeck.com/manfredsteyer/angular-lazy-loading-ngvikings-in-copenhagen-feb-2017</a>.</p>
+
+<h3 id="sri---sub-resource-integrity">SRI - Sub Resource integrity</h3>
+
+<p>J’avais déjà vu une présentation de <a href="https://twitter.com/PhilippeDeRyck">Philippe De Ryck</a> à DevoxxBE, c’est un expert dans la sécurité des applications web.</p>
+
+<p>Dans sa présentation il se concentre sur la sécurisation du code externe, c’est-à-dire du code qui peut venir des CDN, des scripts externes (type publicité, google analytics, …), ou des utilisateurs de notre application. Voir les slides ici: <a href="https://www.websec.be/blog/ngvikings2017/">https://www.websec.be/blog/ngvikings2017/</a>.</p>
+
+<p>Pour valider le code venant d’un CDN on peut ajouter un checksum avec l’attribut <code class="highlighter-rouge">integrity</code> dans la balise <code class="highlighter-rouge">&lt;script&gt;</code>. Le navigateur se chargera de vérifier ce checksum, et si la vérification échoue, il interdit l’exécution du script. Ce mécanisme s’appelle le SRI (Sub Resource Integrity).</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre></td><td class="code"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">“.../angular.js”</span>
+    <span class="na">integrity=</span><span class="s">“sha384-Li9v...DqAJ”</span>
+    <span class="na">crossorigin=</span><span class="s">“anonymous”</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>Attention toutefois, on peut utiliser ce mécanisme pour détecter la présence d’un fichier. Il faut aussi bien configurer les CORS pour éviter des fuites.
+Les CDN font des efforts pour simplifier le process, mais on peut aussi le générer nous-même, par exemple avec le plugin webpack suivant : <a href="https://github.com/waysact/webpack-subresource-integrity">webpack-subresource-integrity</a>.</p>
+
+<p>Le support dans les navigateurs n’est pas <a href="http://caniuse.com/#feat=subresource-integrity">parfait</a>, mais ça arrive.</p>
+
+<p>Bien sûr, cela ne suffit pas, car le script peut faire mal les choses et ouvrir des portes supplémentaires. Voici un résumé du talk qu’il a donné sur le sujet <a href="https://www.youtube.com/watch?v=l89acmnGMSc">Boosting the security of your Angular 2 application - NG-BE 2016</a>:</p>
+
+<ul>
+  <li>Angular nous protège déjà du XSS en retirant tout ce qui peut être dangereux, c’est actif par défaut.</li>
+  <li>Attention ne pas laisser les utilisateurs contrôler les templates, si on fait de l’AOT c’est de toute façon pas possible.</li>
+  <li>le CSP (Content Security Policy) peut éviter l’exécution de scripts injectés.</li>
+</ul>
+
+<p>Pour ce qui est de la personnalisation venant des utilisateurs : par exemple si l’application rend possible l’affichage de contenu HTML créé par un utilisateur, la solution à base d’iframe sandboxée permet de contrôler ce qui est possible dans cette iframe.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">“...”</span> <span class="na">sandbox</span> <span class="nt">&gt;</span> <span class="nt">&lt;/iframe&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>Dans l’attribut <code class="highlighter-rouge">sandbox</code> on peut préciser ce qui est possible de faire pour le contenu de l’iframe, par exemple <code class="highlighter-rouge">allow-scripts</code> ou <code class="highlighter-rouge">allow-same-origin</code>. ATTENTION n’utilisez pas les <code class="highlighter-rouge">allow-scripts</code> et <code class="highlighter-rouge">allow-same-origin</code> en même temps.
+Notez que l’on peut passer directement le code HTML dans l’attribut <code class="highlighter-rouge">srcdoc</code> d’une iframe.
+Pour communiquer avec l’iframe il faut passer par un envoi de message, et coté iframe il faut penser à contrôler l’origine des messages.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="kd">let</span> <span class="nx">iframe</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">HTMLIFrameElement</span><span class="o">&gt;</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElememtById</span><span class="p">(</span><span class="s1">'myIFrame'</span><span class="p">);</span>
+<span class="nx">iframe</span><span class="p">.</span><span class="nx">contentWindow</span><span class="p">.</span><span class="nx">postMessage</span><span class="p">(</span><span class="s1">'The message'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">);</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6</pre></td><td class="code"><pre><span class="kr">const</span> <span class="nx">that</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'message'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">origin</span> <span class="o">===</span> <span class="s1">'http://localhost:4200'</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">that</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>Aujourd’hui, tous les navigateurs supportent les iframes sandboxées.</p>
+
+<p>Pour information, il sera à DevoxxFR en Avril cette année, ne manquez pas sa conférence ‘Building Secure Angular Applicatons’.</p>
+
+<h3 id="coffee-break">Coffee Break</h3>
+
+<p>Une petite pause d’1h pour faire le plein d’énergie, et entamer la rédaction de ce post.</p>
+
+<h3 id="patterns">Patterns</h3>
+
+<p>Je reprends avec la présentation de <a href="https://twitter.com/valorkin">Dmitriy Shekhovtsov</a> qui nous parle des patterns dans Angular, en particulier sur l’injection de dépendances. Les sujets abordés sont : l’injection de dépendances, les injecteurs, les ServiceLocators, les modules, …</p>
+
+<p>Désolé, mais je n’ai ni les slides, ni pris de photos pour vous faire une retranscription sans bêtises, donc je vais m’abstenir.</p>
+
+<h3 id="rxjs-everything-is-a-stream">RxJS everything is a stream</h3>
+
+<p>L’avant-dernière présentation de la journée concernent RxJS, en effet la programmation réactive est de plus en plus présente, et Angular s’adapte parfaitement à cette façon de développer.</p>
+
+<p>En 1/2 heure <a href="https://twitter.com/chris_noring">Christoffer Noring</a> nous explique ce qui est intéressant avec RxJS par rapport aux callbacks, aux Promises, et aux api de Array. Ensuite, il parcours certains des opérateurs comme <code class="highlighter-rouge">map</code>, <code class="highlighter-rouge">debounce</code>, <code class="highlighter-rouge">switchMap</code>, <code class="highlighter-rouge">flatMap</code>, … Quelques exemples sur l’autocomplétion ou le retry sont parfaits pour montrer la puissance du concept.</p>
+
+<p>Vous retrouverez ses slides ici: <a href="http://www.slideshare.net/ChristofferNoring/rxjs-ngvikings">http://www.slideshare.net/ChristofferNoring/rxjs-ngvikings</a>.
+La présentation allait super vite, heureusement que j’étais déjà assez à l’aise avec ces concepts. Christoffer est un trés bon speaker.</p>
+
+<h3 id="webpack">Webpack</h3>
+
+<p>Je finis par la présentation de <a href="https://twitter.com/TheLarkInn">Sean Larkinn</a>, le mainteneur principal de <a href="www.monkeytechdays.com/">webpack</a>.
+Dans cette présentation, il nous parle nous présente bien sur Webpack en parcourant les concepts principaux :</p>
+
+<ul>
+  <li>Entry: c’est le premier fichier JavaScript qui démarre l’application (ce qu’il faut charger). Les <code class="highlighter-rouge">import</code> (ES6 ou TypeScript) ou les <code class="highlighter-rouge">require</code> permettent de définir le graphe des dépendances.</li>
+  <li>Output: c’est le résultat du bundeling (ou et comment), il est en relation avec l’entrée.</li>
+  <li>Loaders: décrivent comment Webpack doit traiter les fichiers. Ça correspond à une fonction qui prend en entrée un fichier source et retourne un état modifié (chargé). Le cas typique des transpileurs (TypeScript, Babel). Pour ajouter un loader il faut configurer une expression régulière de test (ce qui doit passer dans le loader), son nom (<code class="highlighter-rouge">ts-loader</code> -&gt; le nom est ‘ts’) ou une liste de noms (enchainement de loader).</li>
+  <li>Plugins: tout ce que ne fait pas un loader. En gros on peut faire ce qu’on veut a une étape de compilation. On se branche sur les événements du compilateur. En fait ~ 80% de Webpack est en fait des plugins.</li>
+</ul>
+
+<p>Pour faire simple, Entry = What, Output = Where, Loaders = How, Plugins = 🦄.</p>
+
+<p>Aujourd’hui webpack est devenu indispensable dans les outils de build web, y compris pour autre chose que les applications Angular (angular-cli est basé sur webpack). Il en profite pour faire un appel à la communauté pour que l’avenir de webpack soit radieux.</p>
+
+<p>De mon côté il y a quelques années, j’avais accueilli avec septisisme l’arrivé de webpack dans l’écosystème des outils de build. En fait il ne fallait pas le voir comme étant un outil d’exécution de tâches comme le sont par exemple grunt ou gulp, il faut le voir comme étant un bundler (qui peut d’ailleurs être lancé par gulp).</p>
+
+<p>Aujourd’hui, je vois beaucoup mieux son intérêt, en particuliers pour résoudre les fonctionnalités comme l’AOT. Webpack 2 est actuellement la meilleure solution pour le packaging des applications, et je vais devoir m’y mettre sérieusement, cette présentation arrive à point nommé pour moi.</p>
+
+<p>Sean est un super speaker, la pêche qu’il a est communicative, et c’est agréable pour une audience et des micros qui fatiguent après une longue journée. Sa présentation montre que Webpack est basé sur des concepts simples.</p>
+
+<h3 id="outro--soirée">Outro &amp; soirée</h3>
+
+<p>Une petite conclusion est faite par les organisateurs, c’est le moment de nous expliquer comment se continue la soirée: dans les goodies, nous avons deux pièces qui nous permettent de prendre une boisson au bar de l’université, un DJ est là pour mettre l’ambiance, et bien sûr, un buffet permet de se restaurer.</p>
+
+<p>C’est aussi l’occasion d’échanger avec des participants ou des speakers, vous savez déjà que je pense que rien que pour ces échanges ça vaut le coup d’aller dans des conférences. On en profite aussi pour faire les photos avec les costumes de Vikings (sérieux s’abstenir), mais je préfère ne pas trop tarder, car la conférence n’est pas terminée pour moi.</p>
+
+<p><a href="/public/images/ngVikings17/coin.png">Coin</a></p>
+
+<h2 id="jour-2---workshop-day">Jour 2 - Workshop day</h2>
+
+<p>Le second jour est dédié aux workshops, il fallait faire un choix en avance, j’ai opté pour ‘Advanced Angular’ mais il y avait six autres sujets.
+C’est <a href="https://twitter.com/manfredsteyer">Manfred Steyer</a> qui anime cette session. La première partie correspond à des slides sur la théorie et du live-coding pour mettre en application, la seconde partie correspond au lab: c’est nous qui faisons.</p>
+
+<p>Je pense qu’il n’y a pas de meilleure façon d’apprendre que de pratiquer (c’est ce qui est d’ailleurs à l’origine des <a href="www.monkeytechdays.com/">MonkeyTechDay</a>).</p>
+
+<p>On travaille sur une application qui est basée sur <a href="https://github.com/AngularClass/angular2-webpack-starter">angular seed</a>, mais ça peut aussi être appliqué sur les applications initialisées par angular-cli. Vous trouverez une mise en pratique des concepts que l’on va voir dans le dépôt suivant : <a href="https://github.com/manfredsteyer/AdvAngular.git">https://github.com/manfredsteyer/AdvAngular.git</a>.</p>
+
+<h3 id="part-i---lazy-loading">Part I - lazy loading</h3>
+
+<p>La première partie correspond en gros à la présentation que Manfred avait fait la veille.</p>
+
+<p>Avant de se lancer dans l’aspect lazy loading, on fait un rapide point sur la capacité d’avoir des routes auxiliaires. Rien de très compliqué : on peut nommer les outlets, et brancher des composants dedans. C’est pratique pour des popups, des modals, des zones autonomes dans les applications, ou bien encore si on fait une application du style ‘Notorn Commander’.</p>
+
+<p>Une application classique en Angular va être constituée d’un module principal AppModule, de features modules et d’un SharedModule.</p>
+
+<p>Il va être intéressant de charger les modules de features les moins utilisés de façon paresseuse. Pour cela il faut que l’outillage supporte ce mécanisme, ce qui est le cas des projets générés par la cli ou angular-seed. En gros c’est le plugin <code class="highlighter-rouge">angular2-router-loader</code> qui fait le boulot.</p>
+
+<p>Avant d’aller plus loin, une petite astuce tout simple pour débugger les routes sous Angular, dans notre module de route, on peut activer les logs comme ceci :</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6</pre></td><td class="code"><pre><span class="err">@</span><span class="nx">NgModule</span><span class="p">({</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">RouterModule</span><span class="p">.</span><span class="nx">forRoot</span><span class="p">(</span><span class="nx">routes</span><span class="p">,</span> <span class="p">{</span><span class="na">enableTracing</span><span class="p">:</span> <span class="kc">true</span><span class="p">})],</span>
+  <span class="na">exports</span><span class="p">:</span> <span class="p">[</span><span class="nx">RouterModule</span><span class="p">],</span>
+  <span class="na">providers</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kr">class</span> <span class="nx">AppRoutingModule</span> <span class="p">{</span> <span class="p">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>Ceci va nous permettre d’avoir les informations suivantes :</p>
+
+<p><img src="/public/images/ngVikings17/route-log.png" alt="Route Logging" /></p>
+
+<p>Comment active-t-on le lazy loading ? C’est au niveau des routes que l’on va le plus travailler, mais avant cela, la première étape c’est de retirer notre module des imports de AppModule, … Ensuite, on va associer notre module à une route particulière et définir le chemin du module correspondant.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="p">{</span>
+    <span class="nl">path</span><span class="p">:</span> <span class="s1">'lazy'</span><span class="p">,</span>
+    <span class="nx">loadChildren</span><span class="err">:</span> <span class="s1">'./modules/lazy/lazy.module.ts#LazyModule'</span> <span class="c1">// trigger lazy-loading</span>
+<span class="p">},</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>Puis les sous routes de notre composant seront automatiquement préfixée par le chemin de notre module.</p>
+
+<p>Pour vérifier que l’on a bien un chargement paresseux, il suffit de voir les éléments générés par webpack, et regarder leur chargement dans le navigateur.</p>
+
+<p><img src="/public/images/ngVikings17/lazy-module.png" alt="Lazy Module" />
+<img src="/public/images/ngVikings17/lazy-network.png" alt="Lazy Loading" /></p>
+
+<p>Autre point étudié dans cette partie : le pré-chargement. En effet, c’est bien d’accélérer le rendu de la première page, mais ensuite si on peut charger le reste des modules avant que l’utilisateur en ait besoin, c’est mieux.
+Pour cela, on peut utiliser le ‘preloadingStrategy’ :</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9</pre></td><td class="code"><pre><span class="err">@</span><span class="nx">NgModule</span><span class="p">({</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">RouterModule</span><span class="p">.</span><span class="nx">forRoot</span><span class="p">(</span><span class="nx">routes</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">preloadingStrategy</span><span class="p">:</span> <span class="nx">PreloadAllModules</span><span class="p">,</span>
+    <span class="na">enableTracing</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">})],</span>
+  <span class="na">exports</span><span class="p">:</span> <span class="p">[</span><span class="nx">RouterModule</span><span class="p">],</span>
+  <span class="na">providers</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kr">class</span> <span class="nx">AppRoutingModule</span> <span class="p">{</span> <span class="p">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>Ici le <code class="highlighter-rouge">PreloadAllModules</code> vient de <code class="highlighter-rouge">@angular/router</code>, il va automatiquement charger les lazy-modules après le démarrage de l’application. On peut bien sûr écrire notre propre preloader, par exemple:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12</pre></td><td class="code"><pre><span class="k">import</span> <span class="p">{</span><span class="nx">PreloadingStrategy</span><span class="p">,</span> <span class="nx">Route</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"@angular/router"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">Observable</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"rxjs/Observable"</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kr">class</span> <span class="nx">CustomPreloadingStrategy</span> <span class="k">implements</span> <span class="nx">PreloadingStrategy</span> <span class="p">{</span>
+  <span class="nx">preload</span><span class="p">(</span><span class="nx">route</span><span class="err">:</span> <span class="nx">Route</span><span class="p">,</span> <span class="nx">fn</span><span class="err">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">Observable</span><span class="o">&lt;</span><span class="kr">any</span><span class="o">&gt;</span><span class="p">)</span><span class="err">:</span> <span class="nx">Observable</span><span class="o">&lt;</span><span class="kr">any</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">route</span><span class="p">.</span><span class="nx">data</span> <span class="o">&amp;&amp;</span> <span class="nx">route</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="s1">'preload'</span><span class="p">])</span> <span class="p">{</span> <span class="c1">// si le module a un data: {preload:true}</span>
+      <span class="kd">const</span> <span class="nx">_1s</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
+      <span class="k">return</span> <span class="nx">Observable</span><span class="p">.</span><span class="nx">of</span><span class="p">(</span><span class="kc">true</span><span class="p">).</span><span class="nx">delay</span><span class="p">(</span><span class="nx">_1s</span><span class="p">).</span><span class="nx">flatMap</span><span class="p">(</span><span class="nx">_</span> <span class="o">=&gt;</span> <span class="nx">fn</span><span class="p">());</span> <span class="c1">// on le charge avec un delai de 1s</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">Observable</span><span class="p">.</span><span class="nx">of</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>Attention, on peut avoir de mauvaises surprises quand on active le lazy-loading des modules. En effet, les services définis dans le SharedModule seront à nouveau créés pour le module lazy au moment du chargement. Pour cela, on peut utiliser le pattern de <a href="https://angular.io/docs/ts/latest/guide/ngmodule.html#!#core-module">CoreModule</a>, ou bien plus simplement exposer le SharedModule soit avec les services, soit sans les services.</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12</pre></td><td class="code"><pre><span class="err">@</span><span class="nx">NgModule</span><span class="p">({</span>
+  <span class="c1">// ...</span>
+  <span class="na">providers</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kr">class</span> <span class="nx">SharedModule</span> <span class="p">{</span>
+    <span class="k">static</span> <span class="nx">forRoot</span><span class="p">()</span><span class="err">:</span> <span class="nx">ModuleWithProviders</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="na">ngModule</span><span class="p">:</span> <span class="nx">SharedModule</span><span class="p">,</span>
+            <span class="na">providers</span><span class="p">:</span> <span class="p">[</span><span class="nx">XService</span><span class="p">,</span> <span class="nx">YService</span><span class="p">,</span> <span class="p">...]</span>
+        <span class="p">};</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>Ces fonctionnalités sont très puissantes, par contre on peut vite tomber dans le piège, et il y a beaucoup de boilerplate autour des modules je trouve. Heureusement qu’angular-cli est là. Si vous avez encore du mal avec les modules vous pouvez regarder ceci: <a href="http://blog.angular-university.io/angular2-ngmodule/">http://blog.angular-university.io/angular2-ngmodule/</a></p>
+
+<h3 id="part-ii---performance-aot-onpush">Part II - Performance: AOT, OnPush</h3>
+
+<p>On fait le point sur la compilation AOT, bonne nouvelle c’est activé par défaut dans le <code class="highlighter-rouge">ng build -prod</code> avec angular-cli on angular-seed (NgcWebpackPlugin). Pour rappel le principe est de compiler les templates angular en JavaScript, ce qui permet de gagner du temps dans le navigateur, et aussi de retirer la partie compilateur de Angular lors de la construction des packages. Autre point qui est encore jeune : le tree-shaking, ou la capaciter de retirer les branches non utilisés dans le code pour aléger les packages. On peut attendre beaucoup d’améliorations de ce côté dans le futur.</p>
+
+<p>Attention, il est important d’avoir du code défini avec des modules ES6. C’est important pour les bibliothèques que l’on va charger.
+Quelques remarques supplémentaires :</p>
+
+<ul>
+  <li>la compilation AOT est plus stricte, on peut avoir des erreurs de compilation remontées à cette étape.</li>
+  <li>le démarrage de l’application est grandement amélioré</li>
+  <li>les tailles ne sont pas toujours plus petites (on ajoute du JavaScript correspondant aux templates)</li>
+  <li>à utiliser uniquement en production</li>
+</ul>
+
+<p>Autre point abordé la stratégie de mise à jour <code class="highlighter-rouge">onPush</code>. Dans le mode par défaut angular tranverse l’arbre des composants pour mettre à jour l’application. Avec la stratégie <code class="highlighter-rouge">onPush</code>, une comparaison par référence des <code class="highlighter-rouge">@input</code> des composants va être faite pour savoir si on traite le composant. Donc dans le cas d’une modification d’un seul élément de tableau on peut optimiser le rafraichissement.</p>
+
+<p>Pour activer ce comportement :</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9</pre></td><td class="code"><pre><span class="err">@</span><span class="nx">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="s1">'my-cmp'</span><span class="p">,</span>
+  <span class="na">templateUrl</span><span class="p">:</span> <span class="s1">'./cmp.component.html'</span><span class="p">,</span>
+  <span class="na">changeDetection</span><span class="p">:</span> <span class="nx">ChangeDetectionStrategy</span><span class="p">.</span><span class="nx">OnPush</span> <span class="c1">// Statégie OnPush</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kr">class</span> <span class="nx">CmpComponent</span> <span class="p">{</span>
+    <span class="err">@</span><span class="nx">Input</span><span class="p">()</span> <span class="nx">data</span><span class="p">;</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>Pour notifier d’un changement, il faut donc un nouveau ‘data’ en entrée. On peut utiliser une librairie comme <a href="https://facebook.github.io/immutable-js/">immutable.js</a> ou bien faire cela tout simplement en TypeScript.</p>
+
+<p>Note: les opérations de déconstructions sont très utiles ici : <code class="highlighter-rouge">const newData = {...oldData, newValue: 'plop'}</code>.</p>
+
+<p>Dans le cas des <code class="highlighter-rouge">Observable</code> utilisés avec le pipe <code class="highlighter-rouge">async</code>, il faudra donc passer par des <code class="highlighter-rouge">Subject&lt;T&gt;</code> et faire des <code class="highlighter-rouge">next(t)</code> pour déclancher les mises à jour.</p>
+
+<h3 id="part-iii---i18n">Part III - i18n</h3>
+
+<p>Dans cette partie, on étudie les aspects internationalisation, deux solutions sont étudiées.
+La première est basée sur le compilateur qui offre de bonnes performances, mais les fichiers de traductions sont compliqués à maintenir, et cela oblige de générer une application pour chaque langage supporté.</p>
+
+<p>L’autre solution que je vais détailler utilise <a href="https://github.com/ocombe/ng2-translate">ng2-translate</a>, le portage du module qui était plébicité pour traiter ce sujet en AngularJS.</p>
+
+<p>Après avoir ajouté la dépendance npm <code class="highlighter-rouge">ng2-translate</code>, il faut importer un module que l’on va construire avec un <code class="highlighter-rouge">TranslateLoader</code> :</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6</pre></td><td class="code"><pre><span class="c1">// Module to import</span>
+<span class="nx">TranslateModule</span><span class="p">.</span><span class="nx">forRoot</span><span class="p">({</span>
+    <span class="na">provide</span><span class="p">:</span> <span class="nx">TranslateLoader</span><span class="p">,</span>
+    <span class="na">useFactory</span><span class="p">:</span> <span class="nx">http</span> <span class="o">=&gt;</span> <span class="k">new</span> <span class="nx">TranslateStaticLoader</span><span class="p">(</span><span class="nx">http</span><span class="p">,</span> <span class="s1">'./i18n'</span><span class="p">,</span> <span class="s1">'.json'</span><span class="p">),</span>
+    <span class="na">deps</span><span class="p">:</span> <span class="p">[</span><span class="nx">Http</span><span class="p">]}</span>
+<span class="p">)</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>Ensuite on configure le <code class="highlighter-rouge">TranslateService</code> :</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5</pre></td><td class="code"><pre><span class="k">private</span> <span class="nx">initNgTranslate</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">translate</span><span class="p">.</span><span class="nx">addLangs</span><span class="p">([</span><span class="s1">'en'</span><span class="p">,</span> <span class="s1">'fr'</span><span class="p">]);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">translate</span><span class="p">.</span><span class="nx">setDefaultLang</span><span class="p">(</span><span class="s1">'navigator.language || navigator.userLanguage'</span><span class="p">);</span> <span class="c1">// Pour avoir la langue par défaut du navigateur</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">translate</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s1">'fr'</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>On va ensuite créer les fichiers JSON contenant les traductions dans <code class="highlighter-rouge">i18n/fr.json</code> et <code class="highlighter-rouge">i18n/en.json</code>.
+Puis il suffit d’utiliser <code class="highlighter-rouge">ma.clef | translate</code> pour avoir la version internationalisée.</p>
+
+<p>Enfin pour changer de langue, on pourra faire :</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre>  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="err">(</span><span class="na">click</span><span class="err">)="</span><span class="na">setLang</span><span class="err">('</span><span class="na">en</span><span class="err">')"</span><span class="nt">&gt;</span>🇬🇧<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="err">(</span><span class="na">click</span><span class="err">)="</span><span class="na">setLang</span><span class="err">('</span><span class="na">fr</span><span class="err">')"</span><span class="nt">&gt;</span>🇫🇷<span class="nt">&lt;/button&gt;</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre></td><td class="code"><pre>  <span class="k">public</span> <span class="nx">setLang</span><span class="p">(</span><span class="nx">lang</span><span class="err">:</span> <span class="kr">string</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">translateService</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">lang</span><span class="p">);</span>
+  <span class="p">}</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 id="part-iv---authentification">Part IV - authentification</h3>
+
+<p>La dernière partie correspond aux aspects authentification, on parle de JWT de OAuth de <a href="http://openid.net/connect/">OIDC (OpenId Connect)</a>. En gros, on voit comment on peut utiliser <a href="https://github.com/manfredsteyer/angular-oauth2-oidc">angular-oauth2-oidc</a>.</p>
+
+<p>Le sujet de l’authentification est vaste, et très lié au SI de mes clients, je ne me suis donc pas trop concentré sur cette partie.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Mes attentes ont été comblées lors de ce WE danois. Après cette conférence, je vois bien que la plateforme est aujourd’hui mature, et que l’écosystème est aujourd’hui suffisamment stable pour que l’on démarre des projets Angular y compris dans des sociétés qui sont plus conservatrices dans leurs choix techniques.</p>
+
+<p>J’aime beaucoup l’idée d’un jour spécifique pour faire un workshop, cela m’a vraiment permis de prendre du recul sur Angular, et de me sentir plus à l’aise avec des concepts avancés. C’est avec beaucoup de confiance que je vais aborder mes prochains projets en Angular.</p>
+
+<p>Bravo pour les organisateurs, les sponsors, les speakers, et tous les gens qui rendent ce genre d’évènement possible.
+Il faut bien sûr que je rajoute à cette liste <a href="https://twitter.com/angulartoulouse">@angularToulouse</a> et <a href="http://www.monkeypatch.io/">MonkeyPatch</a> sans qui je n’y serais pas allé, et aux relecteurs/correcteurs de ce post.</p>
+
+<p>Enfin j’ai eu l’occasion de discuter avec plein de développeurs (speaker) passionnés, il y avait une super ambiance, la communauté Angular est vraiment géniale.
+Vivement l’an prochain !</p>
+
+<p>Vous retrouverez les vidéos ici: <a href="https://ngvikings.org/schedule/day1">https://ngvikings.org/schedule/day1</a>, et d’autres retours :</p>
+
+<p><a href="http://jsdiaries.com/2017/02/20/angular-ngvikings-2017/">http://jsdiaries.com/2017/02/20/angular-ngvikings-2017/</a></p>
+
+<p><a href="https://home.lundogbendsen.dk/ngvikings-angular-conference-2017/">https://home.lundogbendsen.dk/ngvikings-angular-conference-2017/</a></p>
+
+<p><a href="https://blog.jayway.com/2017/02/16/conference-report-ngvikings-2017/">https://blog.jayway.com/2017/02/16/conference-report-ngvikings-2017/</a></p>
+
+<p>Note: vous avez les liens vers les slides qui manquent, ou tout simplement des remarques, utilisez les commentaires pour compléter ce post…</p>
+
+<h2 id="quelques-photos-pour-finir">Quelques photos pour finir</h2>
+
+<p>L’université IT de Copenhague :</p>
+
+<p><img src="/public/images/ngVikings17/venue.png" alt="Venue" /></p>
+
+<p>Apprenti vikings (peu convaincant) :</p>
+
+<p><img src="/public/images/ngVikings17/Yarrrgh.jpg" alt="Yarrrgh" /></p>
+
+<p>Salle pour discuter avec les speakers :</p>
+
+<p><img src="/public/images/ngVikings17/speakers-room.png" alt="Speaker room" /></p>
+
+<p>On peut manger des tapas à Copenhague :</p>
+
+<p><img src="/public/images/ngVikings17/tapas.png" alt="Tapas" /></p>
+
+<p>Beaucoup de sérieux dans l’organisation :</p>
+
+<p><img src="/public/images/ngVikings17/organisateurs.png" alt="Organisateurs" /></p>
+
+<p>Il fait un peu plus froid qu’a Toulouse :</p>
+
+<p><img src="/public/images/ngVikings17/climat.png" alt="Climat" /></p>
+</article>
+
+      <div class="authors">
+        
+          <div class="author">
+            <a href="https://twitter.com/ilaborie" rel="author">
+              <img src="http://www.gravatar.com/avatar/5870075cc4934bb7c32f2a6c56cc4f8d?s=48" alt="Igor Laborie">
+              <span>Igor Laborie</span>
+            </a>
+          </div>
+        
+      </div>
+    </section>
+    
+    
+    <section class="comment">
+      <div id="disqus_thread"></div>
+      <script>
+      var disqus_config = function () {
+          this.page.url = "http://www.monkeypatch.io/en/2017/03/07/ngViknigs.html";  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = "/2017/03/07/ngViknigs.html"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = '//monkeypatchblog.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+    
+    <footer class="top">
+    <div>
+      <h3>Get In Touch</h3>
+      <p>
+        <a class="contact" href="/encontact">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <img src="/public/images/icons/Toulouse.png" alt="Toulouse">
+        </a>
+      </p>
+      <p>
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        <a class="mail" href="mailto:contact@monkeypatch.io">contact@monkeypatch.io</a>
+      </p>
+    </div>
+    <div class="social-network">
+      <h3>Social Networks</h3>
+      <ul class="social">
+        <li>
+          <a href="https://twitter.com/monkeypatch_io">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/monkeypatch-io">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<footer class="bottom">
+  <div>
+    Copyright @ 2016 MonkeyPatch -<a href="/en/terms">Terms and Conditions</a>
+  </div>
+  <div>
+    Made with <i class="fa fa-heart" aria-hidden="true"></i> In Toulouse
+  </div>
+  <a class="goToTop" href="#top">
+    <i class="fa fa-caret-up" aria-hidden="true"></i>
+  </a>
+</footer>
+
+  </main>
+  <!-- Google Tag Manager -->
+  <noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-KGGFWH" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KGGFWH');
+  </script>
+  <!-- End Google Tag Manager -->
+  <script src="/public/scripts/modernizr-custom.js"></script>
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+  var i;
+  var nav = document.querySelector('nav.index');
+  var headers = document.querySelectorAll('article h1, article h2, article h3, article h4, article h5, article h6');
+
+  var createNavHeader = function(id, type, text) {
+    var link = document.createElement('a');
+    link.textContent = text;
+    link.setAttribute('href', '#' + id);
+
+    var text = document.createElement(type);
+    text.appendChild(link);
+    return text;
+  };
+  var createHeaderLink = function(id, text) {
+    var link = document.createElement('a');
+    link.classList.add('anchor');
+    link.textContent = text;
+    link.setAttribute('href', '#' + id);
+    return link;
+  };
+
+  var processHeader = function(header) {
+    var id = header.id;
+    var tag = header.tagName;
+    var text = header.textContent;
+
+    var navHeader = createNavHeader(id, tag, text);
+    nav.appendChild(navHeader);
+
+    var headerLink = createHeaderLink(id, text);
+    header.removeChild(header.firstChild);
+    header.appendChild(headerLink); 
+  }
+
+  for (i = 0; i < headers.length; i++) {
+    processHeader(headers[i]);
+  }
+});
+  </script>
+  <!-- Share with Twitter -->
+  <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+</body>
+</html>
+
+
+
+
