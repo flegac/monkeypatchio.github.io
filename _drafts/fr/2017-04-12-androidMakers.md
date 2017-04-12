@@ -12,7 +12,7 @@ title: AndroidMakers 2017
 ## Introduction
 
 Un peu comme après le 1er de l'an, quand je reviens d'une conférence, j'ai généralement plein de bonnes résolutions en tête, j'ai envie d'appliquer toutes les bonnes méthodes, de tester les différentes techniques et libs qui ont été présentées. Mais cette fois, je vais commencer par faire mon retour sur ce blog pour ne rien oublier des deux jours que j'ai passé à l'[Android Makers](http://androidmakers.fr/).
-
+<!--more-->
 ## Un peu d'histoire.
 
 Toujours organisé par le PAUG et BeMyApp, Android Makers c'est le remake de la DroidCon Paris qui s'était arrétée en 2015 avec la troisième édition.
