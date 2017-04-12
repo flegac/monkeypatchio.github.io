@@ -12,6 +12,7 @@ title: AndroidMakers 2017
 ## Introduction
 
 Un peu comme après le 1er de l'an, quand je reviens d'une conférence, j'ai généralement plein de bonnes résolutions en tête, j'ai envie d'appliquer toutes les bonnes méthodes, de tester les différentes techniques et libs qui ont été présentées. Mais cette fois, je vais commencer par faire mon retour sur ce blog pour ne rien oublier des deux jours que j'ai passé à l'[Android Makers](http://androidmakers.fr/).
+
 <!--more-->
 ## Un peu d'histoire.
 
@@ -28,12 +29,19 @@ Android Makers, promet :
 
 
 Et pour le coup, ils ne nous ont pas menti, il y avait pas mal de têtes connues dans le monde Android qui sont venus pour animer des conférences. Pour ne citer qu'eux :
+
 * [Chet Haase](https://twitter.com/chethaase)
+
 * [Romain Guy](https://twitter.com/romainguy)
+
 * [Lisa Wray](https://twitter.com/lisawrayz)
+
 * [Cyril Mottier](https://twitter.com/cyrilmottier)
+
 * [Ty Smith](https://twitter.com/tsmith)
+
 * [Eyal Lezmy](https://twitter.com/Eyal_Lezmy)
+
 * [Taylor Ling](https://twitter.com/taylorling)
 
 Et oui, la majorité ne sont pas Francais, donc si vous voulez venir à une prochaine session d'Android makers, il est recommandé de comprendre l'anglais.
