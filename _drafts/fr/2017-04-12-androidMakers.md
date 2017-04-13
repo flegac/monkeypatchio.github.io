@@ -48,7 +48,7 @@ Et oui, la majorité ne sont pas Francais, donc si vous voulez venir à une proc
 
 Pour nous aider à faire notre choix dans les conférences à suivre, les organisateurs avaient prévu une application Android qui nous permettait de faire notre planning parmis 3 tracks. 2 salles avec des présentations de 45 minutes, et une petite salle de workshops assez longs ou mini scéances de 20 minutes.
 
-Pour les chiffres, ça se déroulait sur 2 jours, il y avait 560 participants et 33 speakers.
+Pour les chiffres, ça se déroulait sur 2 jours, il y avait 560 participants et 66 speakers.
 
 ## Jour 1.
 
