@@ -62,16 +62,16 @@ twitter:
 
 google:
   map:
-    iframe: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2891.6225725756276!2d1.4868599515209782!3d43.55190887902245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebdd6314e8b39%3A0x61a8203a28bb90fc!2sMonkeyPatch!5e0!3m2!1sfr!2sfr!4v1468852963039"
+    iframe: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23112.980676664938!2d1.4281590369155557!3d43.6039891787125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebc9db1176e93%3A0xca0a476f6ced8e42!2sMonkeyPatch!5e0!3m2!1sfr!2sfr!4v1491932015302"
 
 logo: http://www.monkeypatch.io/public/images/logos/logo-mkp-head-blue-x126.png
 
 
-social: 
+social:
   logo: http://www.monkeypatch.io/public/images/logos/logo-mkp-blue-x256.png
   links:
     - "https://twitter.com/monkeypatch_io"
-    - "https://www.linkedin.com/company/monkeypatch-io" 
+    - "https://www.linkedin.com/company/monkeypatch-io"
 
 # Custom vars
 version: 1.0.0
@@ -81,15 +81,15 @@ github:
 mail:
   server: http://192.168.1.160:9090
 
-# Contact 
+# Contact
 contact:
   name: MonkeyPatch
-  tel: 05 34 32 61 45
-  tel-link: 0534326145
+  tel: 05 82 95 68 06
+  tel-link: 0582956806
   mail: contact@monkeypatch.io
-  address: 12 Avenue de l'Europe
-  city: Ramonville-Saint-Agne
-  postcode: 31520
+  address: 31 rue Alsace Lorraine
+  city: Toulouse
+  postcode: 31000
   country: France
 
 # Collections
@@ -138,7 +138,7 @@ defaults:
       path: "_jobs"
     values:
       layout: job
-  - 
+  -
     scope:
       path: "_jobs/fr"
     values:

@@ -2,3 +2,4 @@ _site/
 .vscode/
 .sass-cache/
 .DS_Store
+.idea/
