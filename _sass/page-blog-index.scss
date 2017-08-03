@@ -15,8 +15,8 @@
       margin: 1rem 0;
       &:nth-child(n+2) {
         border-top: thin dotted transparentize($black, .8);
-      } 
-      
+      }
+
       h2 {
         margin: .5rem 0;
         .date {
@@ -41,7 +41,6 @@
           display: none;
         }
         a {
-          display: none;
           &.readmore {
             display: inline;
           }
