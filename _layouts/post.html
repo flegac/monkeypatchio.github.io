@@ -9,24 +9,23 @@
     <section class="post">
       <h1 id="top">
         <span>{{ page.title }}</span>
-        <span class="date">{% include date.html date=page.date lang=post.lang %}</span>
-        <a href="#disqus_thread" class="count"><script id="dsq-count-scr" src="//monkeypatchblog.disqus.com/count.js" async></script></a>
+        <div class="share">
+          <a class="twitter-share-button"
+            href="https://twitter.com/share"
+            data-size="large"
+            data-via="monkeypatch_io"
+            data-text="{{ page.title }}"
+            data-hashtags="{% for tag in page.tags %}{{ tag }}{% if forloop.last == false %},{% endif %}{% endfor %}"
+            >Tweet</a>
+        </div>
       </h1>
+
+      <span class="date">{% include date.html date=page.date lang=post.lang %}</span>
 
       <div class="tags">
         {% for tag in page.tags %}
-          <span>{{ tag }}</span> 
-        {% endfor %} 
-      </div>
-
-      <div class="share">
-        <a class="twitter-share-button"
-          href="https://twitter.com/share"
-          data-size="large"
-          data-via="monkeypatch_io"
-          data-text="{{ page.title }}"
-          data-hashtags="{% for tag in page.tags %}{{ tag }}{% if forloop.last == false %},{% endif %}{% endfor %}"
-          >Tweet</a>
+          <span>{{ tag }}</span>
+        {% endfor %}
       </div>
 
       <article>{{ content }}</article>
@@ -42,7 +41,7 @@
         {% endfor %}
       </div>
     </section>
-    
+
     {% if page.comments %}
     <section class="comment">
       <div id="disqus_thread"></div>
@@ -118,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var headerLink = createHeaderLink(id, text);
     header.removeChild(header.firstChild);
-    header.appendChild(headerLink); 
+    header.appendChild(headerLink);
   }
 
   for (i = 0; i < headers.length; i++) {
@@ -135,17 +134,13 @@ document.addEventListener('DOMContentLoaded', function () {
   js.id = id;
   js.src = "https://platform.twitter.com/widgets.js";
   fjs.parentNode.insertBefore(js, fjs);
- 
+
   t._e = [];
   t.ready = function(f) {
     t._e.push(f);
   };
- 
+
   return t;
 }(document, "script", "twitter-wjs"));</script>
 </body>
 </html>
-
-
-
-

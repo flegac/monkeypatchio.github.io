@@ -1,4 +1,6 @@
 .blog {
+  line-height: 1.62857143;
+
   section {
     text-align: left;
   }
@@ -9,6 +11,8 @@
   .entries {
     display: flex;
     flex-direction: column;
+    color: $black;
+    padding: 0 14vw;
 
     article {
       width: 100%;
@@ -21,14 +25,16 @@
         margin: .5rem 0;
         .date {
           color: $txtGrey;
-          font-size: .8em;
+          font-size: .7em;
           float: right;
         }
 
         &.en::before {
+          color: $txtGrey;
           content: '[EN]';
         }
         &.fr::before {
+          color: $txtGrey;
           content: '[FR]';
         }
       }
@@ -37,6 +43,8 @@
       }
       .content {
         clear: both;
+        margin-bottom: 1rem;
+
         hr, h1, h2, h3, h4, h5, h6 {
           display: none;
         }
@@ -51,7 +59,7 @@
         float: right;
         text-align: right;
         color: $txtGrey;
-        font-size: 1.1rem;
+        font-size: 1.0rem;
         a {
           &:nth-child(n+2)::before {
             content: ', ';
@@ -59,14 +67,24 @@
         }
       }
       .tags {
+        margin-top: 1rem;
+        font-size: 80%;
+
         &::before {
           content: 'Tags: ';
         }
         span {
           font-style: italic;
-          &:nth-child(n+2)::before {
-            content: ', ';
-          }
+          display: inline;
+          padding: .2em .6em .3em;
+          font-weight: 700;
+          line-height: 1;
+          color: $white;
+          text-align: center;
+          white-space: nowrap;
+          vertical-align: baseline;
+          border-radius: .25em;
+          background-color: $blue8;
         }
       }
     }

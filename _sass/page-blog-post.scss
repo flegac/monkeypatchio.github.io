@@ -1,11 +1,12 @@
-$navWidth: 14rem;
+$navWidth: 15rem;
 
 .post {
+  line-height: 1.62857143;
 
   nav.index {
     color: $grey4;
     background: $grey3;
-    border-radius: .25rem; 
+    border-radius: .25rem;
     position: fixed;
     left: .5rem;
     width: $navWidth;
@@ -13,36 +14,50 @@ $navWidth: 14rem;
     font-size: small;
     h1,h2,h3,h4,h5,h6 {
       margin: .25em 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    h1 {
+      font-size: 1.1em;
     }
     h2 {
-      padding-left: .25rem; 
+      padding-left: .25rem;
+      font-size: 1em;
     }
     h3 {
       padding-left: .5rem;
+      font-size: 0.8em;
     }
     h4 {
-      padding-left: .75rem; 
+      padding-left: .75rem;
+      font-size: 0.7em;
     }
     h5 {
-      padding-left: 1rem; 
+      padding-left: 1rem;
+      font-size: 0.6em;
     }
     h6 {
-      padding-left: 1.25rem; 
+      padding-left: 1.25rem;
+      font-size: 0.5em;
     }
   }
   section {
     display: block;
-    margin-left: $navWidth + 2rem;
-    padding-left: 0; 
+    margin-left: 7rem;
+    padding-left: 0;
+    padding: 0 13vw;
   }
 
   .share {
     text-align: right;
+    float: right;
   }
 
   section.post {
     text-align: left;
-    
+    color: $black;
+
     h1 {
       padding-top: 3.5rem;
       .count {
@@ -53,8 +68,6 @@ $navWidth: 14rem;
 
     .date {
       color: $txtGrey;
-      font-size: .8em;
-      float: right;
     }
 
     .authors{
@@ -76,29 +89,40 @@ $navWidth: 14rem;
         }
       }
     }
-    
+
     .tags {
+      margin-top: 1rem;
+      font-size: 80%;
+
       &::before {
         content: 'Tags: ';
       }
+
       span {
         font-style: italic;
-        &:nth-child(n+2)::before {
-          content: ', ';
-        }
+        display: inline;
+        padding: .2em .6em .3em;
+        font-weight: 700;
+        line-height: 1;
+        color: $white;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        border-radius: .25em;
+        background-color: $blue8;
       }
     }
-    
+
     article {
       width: 100%;
       margin: 1rem 0;
 
       p {
         text-align: justify;
-        margin: 0.5rem 0 0 0;
+        margin: 1rem 0 0 0;
 
         img {
-          max-width: 80vw;
+          max-width: 100%;
         }
       }
       abbr {
@@ -156,4 +180,3 @@ $navWidth: 14rem;
     }
   }
 }
-
