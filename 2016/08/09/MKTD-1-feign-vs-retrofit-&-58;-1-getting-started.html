@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--  lastBuildDate : Tue, 02 May 2017 20:57:52 +0200 -->
+<!--  lastBuildDate : Mon, 14 Aug 2017 17:54:32 +0200 -->
 <html>
 <head>
   
@@ -59,6 +59,12 @@ We decided to improve our knowledge of REST clients in Java during this first ev
       <link rel="publisher" href="https://plus.google.com/"/>
     
   
+    <meta name="author" content="Arnaud bos">
+    <link rel="author" href="https://plus.google.com/"/>
+    
+      <link rel="publisher" href="https://plus.google.com/"/>
+    
+  
 
   
     <meta property="og:type" content="article"/>
@@ -69,6 +75,8 @@ We decided to improve our knowledge of REST clients in Java during this first ev
       <meta property="og:article:author:username" content="Igor Laborie">
     
       <meta property="og:article:author:username" content="Bruno Chauvet">
+    
+      <meta property="og:article:author:username" content="Arnaud bos">
     
     
     <meta property="og:article:tag" content="MKTD">
@@ -134,7 +142,9 @@ We decided to improve our knowledge of REST clients in Java during this first ev
       
       { "@type": "Person", "name": "Igor Laborie" },
       
-      { "@type": "Person", "name": "Bruno Chauvet" }
+      { "@type": "Person", "name": "Bruno Chauvet" },
+      
+      { "@type": "Person", "name": "Arnaud bos" }
       
     ],
     "name": "MonkeyPatch",
@@ -183,6 +193,8 @@ We decided to improve our knowledge of REST clients in Java during this first ev
     <nav class="menu">
       <ul>
         
+        
+          
         
           
         
@@ -264,6 +276,8 @@ We decided to improve our knowledge of REST clients in Java during this first ev
           
         
           
+        
+          
             <li class="">
               <a href="/expert">Notre Expertise</a>
             </li>
@@ -313,37 +327,36 @@ We decided to improve our knowledge of REST clients in Java during this first ev
     <section class="post">
       <h1 id="top">
         <span>Mktd#1 Feign Vs Retrofit &#58; 1 Getting Started</span>
-        <span class="date">
+        <div class="share">
+          <a class="twitter-share-button"
+            href="https://twitter.com/share"
+            data-size="large"
+            data-via="monkeypatch_io"
+            data-text="Mktd#1 Feign Vs Retrofit &#58; 1 Getting Started"
+            data-hashtags="MKTD,Java,REST,Feign,Retrofit"
+            >Tweet</a>
+        </div>
+      </h1>
+
+      <span class="date">
 
 
   August 09, 2016
 
 </span>
-        <a href="#disqus_thread" class="count"><script id="dsq-count-scr" src="//monkeypatchblog.disqus.com/count.js" async></script></a>
-      </h1>
 
       <div class="tags">
         
-          <span>MKTD</span> 
+          <span>MKTD</span>
         
-          <span>Java</span> 
+          <span>Java</span>
         
-          <span>REST</span> 
+          <span>REST</span>
         
-          <span>Feign</span> 
+          <span>Feign</span>
         
-          <span>Retrofit</span> 
-         
-      </div>
-
-      <div class="share">
-        <a class="twitter-share-button"
-          href="https://twitter.com/share"
-          data-size="large"
-          data-via="monkeypatch_io"
-          data-text="Mktd#1 Feign Vs Retrofit &#58; 1 Getting Started"
-          data-hashtags="MKTD,Java,REST,Feign,Retrofit"
-          >Tweet</a>
+          <span>Retrofit</span>
+        
       </div>
 
       <article><h2 id="introduction">Introduction</h2>
@@ -939,7 +952,7 @@ We will find this out during the next part.</p>
         
       </div>
     </section>
-    
+
     
     <section class="comment">
       <div id="disqus_thread"></div>
@@ -1058,7 +1071,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var headerLink = createHeaderLink(id, text);
     header.removeChild(header.firstChild);
-    header.appendChild(headerLink); 
+    header.appendChild(headerLink);
   }
 
   for (i = 0; i < headers.length; i++) {
@@ -1075,17 +1088,13 @@ document.addEventListener('DOMContentLoaded', function () {
   js.id = id;
   js.src = "https://platform.twitter.com/widgets.js";
   fjs.parentNode.insertBefore(js, fjs);
- 
+
   t._e = [];
   t.ready = function(f) {
     t._e.push(f);
   };
- 
+
   return t;
 }(document, "script", "twitter-wjs"));</script>
 </body>
 </html>
-
-
-
-

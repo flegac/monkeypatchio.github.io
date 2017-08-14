@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--  lastBuildDate : Tue, 02 May 2017 20:57:52 +0200 -->
+<!--  lastBuildDate : Mon, 14 Aug 2017 17:54:32 +0200 -->
 <html>
 <head>
   
@@ -59,6 +59,12 @@ Un peu comme après le 1er de l’an, quand je reviens d’une conférence, j’
       <link rel="publisher" href="https://plus.google.com/"/>
     
   
+    <meta name="author" content="Arnaud bos">
+    <link rel="author" href="https://plus.google.com/"/>
+    
+      <link rel="publisher" href="https://plus.google.com/"/>
+    
+  
 
   
     <meta property="og:type" content="article"/>
@@ -69,6 +75,8 @@ Un peu comme après le 1er de l’an, quand je reviens d’une conférence, j’
       <meta property="og:article:author:username" content="Igor Laborie">
     
       <meta property="og:article:author:username" content="Bruno Chauvet">
+    
+      <meta property="og:article:author:username" content="Arnaud bos">
     
     
     <meta property="og:article:tag" content="Android">
@@ -128,7 +136,9 @@ Un peu comme après le 1er de l’an, quand je reviens d’une conférence, j’
       
       { "@type": "Person", "name": "Igor Laborie" },
       
-      { "@type": "Person", "name": "Bruno Chauvet" }
+      { "@type": "Person", "name": "Bruno Chauvet" },
+      
+      { "@type": "Person", "name": "Arnaud bos" }
       
     ],
     "name": "MonkeyPatch",
@@ -177,6 +187,8 @@ Un peu comme après le 1er de l’an, quand je reviens d’une conférence, j’
     <nav class="menu">
       <ul>
         
+        
+          
         
           
         
@@ -258,6 +270,8 @@ Un peu comme après le 1er de l’an, quand je reviens d’une conférence, j’
           
         
           
+        
+          
             <li class="">
               <a href="/expert">Notre Expertise</a>
             </li>
@@ -307,31 +321,30 @@ Un peu comme après le 1er de l’an, quand je reviens d’une conférence, j’
     <section class="post">
       <h1 id="top">
         <span>AndroidMakers 2017</span>
-        <span class="date">
+        <div class="share">
+          <a class="twitter-share-button"
+            href="https://twitter.com/share"
+            data-size="large"
+            data-via="monkeypatch_io"
+            data-text="AndroidMakers 2017"
+            data-hashtags="Android,AndroidMakers"
+            >Tweet</a>
+        </div>
+      </h1>
+
+      <span class="date">
 
 
   April 12, 2017
 
 </span>
-        <a href="#disqus_thread" class="count"><script id="dsq-count-scr" src="//monkeypatchblog.disqus.com/count.js" async></script></a>
-      </h1>
 
       <div class="tags">
         
-          <span>Android</span> 
+          <span>Android</span>
         
-          <span>AndroidMakers</span> 
-         
-      </div>
-
-      <div class="share">
-        <a class="twitter-share-button"
-          href="https://twitter.com/share"
-          data-size="large"
-          data-via="monkeypatch_io"
-          data-text="AndroidMakers 2017"
-          data-hashtags="Android,AndroidMakers"
-          >Tweet</a>
+          <span>AndroidMakers</span>
+        
       </div>
 
       <article><h1 id="retour-sur-landroid-makers-2017">Retour sur l’Android Makers 2017</h1>
@@ -487,7 +500,7 @@ En commencant par “L’évolution des notifications” que nous a présentée 
   <li>La petite salle de workshop/conférence dont l’acoustique n’était pas assez bonne pour bien entendre le speaker.</li>
 </ul>
 
-<h1 id="À-refaire-">À refaire ?</h1>
+<h1 id="à-refaire-">À refaire ?</h1>
 
 <p>Bien sûr! Les organisateurs nous ont déjà promis une suite pour l’année prochaine, donc si vous n’avez pas pu être présent à cette session et que vous gravitez autour du monde Android, je vous recommande chaudement de ne pas manquer la mouture 2018 de l’Android Makers.</p>
 </article>
@@ -503,7 +516,7 @@ En commencant par “L’évolution des notifications” que nous a présentée 
         
       </div>
     </section>
-    
+
     
     <section class="comment">
       <div id="disqus_thread"></div>
@@ -622,7 +635,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var headerLink = createHeaderLink(id, text);
     header.removeChild(header.firstChild);
-    header.appendChild(headerLink); 
+    header.appendChild(headerLink);
   }
 
   for (i = 0; i < headers.length; i++) {
@@ -639,17 +652,13 @@ document.addEventListener('DOMContentLoaded', function () {
   js.id = id;
   js.src = "https://platform.twitter.com/widgets.js";
   fjs.parentNode.insertBefore(js, fjs);
- 
+
   t._e = [];
   t.ready = function(f) {
     t._e.push(f);
   };
- 
+
   return t;
 }(document, "script", "twitter-wjs"));</script>
 </body>
 </html>
-
-
-
-
