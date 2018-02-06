@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<!--  lastBuildDate : Tue, 06 Feb 2018 15:24:33 +0100 -->
+<html>
+<head>
+  
+  
+  <title>MKTD#4 Du challenge et du partage autour de</title>
+  
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="content-language" content="fr" />
+  <meta name="language" content="fr" />
+  <!-- Google site verification -->
+  <meta name="google-site-verification" content="Gq_ytzUtfYn95WsiH66e4Lfb8zANT-LUwD8JgH9xXdw" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="keywords" content="Expertise informatique, Dévelopement informatique" />
+
+  <!-- RSS feed -->
+  <link rel="alternate" type="application/rss+xml" title=" RSS Feed" href="http://www.monkeypatch.io/blog/feed.xml" />
+
+  <!-- SEO -->
+  <meta property="og:title" content="MKTD#4 Du challenge et du partage autour de" />
+
+  
+  <meta property="og:description" content="MKTD#4 : Du challenge et du partage autour de #Kotlin #Swift
+
+Pour la quatrième édition, on repart sur le format 2 technos / 2 coachs qui nous semble très pertinent pour comparer 2 technos utilisées aussi bien coté Mobile que côté Back-End.
+
+" />
+  <meta name="description" content="MKTD#4 : Du challenge et du partage autour de #Kotlin #Swift
+
+Pour la quatrième édition, on repart sur le format 2 technos / 2 coachs qui nous semble très pertinent pour comparer 2 technos utilisées aussi bien coté Mobile que côté Back-End.
+
+" />
+  
+  
+  
+    <meta name="author" content="Emmanuel Vinas">
+    <link rel="author" href="https://plus.google.com/+vinasemmanuel"/>
+    
+      <link rel="publisher" href="https://plus.google.com/+vinasemmanuel"/>
+    
+  
+    <meta name="author" content="Igor Laborie">
+    <link rel="author" href="https://plus.google.com/+IgorLaborie"/>
+    
+      <link rel="publisher" href="https://plus.google.com/+IgorLaborie"/>
+    
+  
+    <meta name="author" content="Bruno Chauvet">
+    <link rel="author" href="https://plus.google.com/"/>
+    
+      <link rel="publisher" href="https://plus.google.com/"/>
+    
+  
+    <meta name="author" content="Arnaud bos">
+    <link rel="author" href="https://plus.google.com/"/>
+    
+      <link rel="publisher" href="https://plus.google.com/"/>
+    
+  
+    <meta name="author" content="Matthieu Caylet">
+    <link rel="author" href="https://plus.google.com/"/>
+    
+      <link rel="publisher" href="https://plus.google.com/"/>
+    
+  
+    <meta name="author" content="Alteanne Fernandez">
+    <link rel="author" href="https://plus.google.com/"/>
+    
+      <link rel="publisher" href="https://plus.google.com/"/>
+    
+  
+
+  
+    <meta property="og:type" content="article"/>
+    <meta property="og:article:published_time" content="2018-02-05T00:00:00+01:00">
+    
+      <meta property="og:article:author:username" content="Emmanuel Vinas">
+    
+      <meta property="og:article:author:username" content="Igor Laborie">
+    
+      <meta property="og:article:author:username" content="Bruno Chauvet">
+    
+      <meta property="og:article:author:username" content="Arnaud bos">
+    
+      <meta property="og:article:author:username" content="Matthieu Caylet">
+    
+      <meta property="og:article:author:username" content="Alteanne Fernandez">
+    
+    
+    <meta property="og:article:tag" content="MonkeyTechDay">
+    
+    <meta property="og:article:tag" content="Tech days">
+    
+    <meta property="og:article:tag" content="MKTD">
+    
+    <meta property="og:article:tag" content="Tech Addicts">
+    
+    <meta property="og:article:tag" content="Techno">
+    
+    <meta property="og:article:tag" content="kotlin">
+    
+    <meta property="og:article:tag" content="swift">
+    
+  
+  
+  
+  <meta property="og:image" content="http://www.monkeypatch.io/public/images/logos/logo-mkp-head-blue-x126.png"/>
+
+  <meta property="og:url" content="http://www.monkeypatch.io/2018/02/05/MKTDs-articles-5.html"/>
+  <meta property="og:site_name" content="MonkeyPatch"/>
+  
+  <!-- Twitter tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@MonkeyPatch_io" />
+  <meta name="twitter:url" content="http://www.monkeypatch.io/2018/02/05/MKTDs-articles-5.html">
+  <meta name="twitter:title" content="MKTD#4 Du challenge et du partage autour de">
+  <meta name="twitter:description" content="MKTD#4 : Du challenge et du partage autour de #Kotlin #Swift
+
+Pour la quatrième édition, on repart sur le format 2 technos / 2 coachs qui nous semble très pertinent pour comparer 2 technos utilisées aussi bien coté Mobile que côté Back-End.
+
+">
+  <meta name="twitter:image" content="http://www.monkeypatch.io/public/images/logos/logo-mkp-head-blue-x126.png">
+
+  <!-- Lang --> 
+  <link rel="alternate" hreflang="en" href="http://www.monkeypatch.io/en/index" />
+  <link rel="alternate" hreflang="fr" href="http://www.monkeypatch.io/index" />
+  
+  <meta property="og:locale" content="fr_FR"/>
+  <meta property="og:locale:alternate" content="en_US"/>
+  
+
+  <link rel="shortcut icon" href="favicon.ico">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link id="theme-style" rel="stylesheet" href="/css/main.css">
+
+ <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    
+      "@type": "BlogPosting", // 
+      "mainEntityOfPage": "http://www.monkeypatch.io/2018/02/05/MKTDs-articles-5.html", 
+    
+    "author": [
+      
+      { "@type": "Person", "name": "Emmanuel Vinas" },
+      
+      { "@type": "Person", "name": "Igor Laborie" },
+      
+      { "@type": "Person", "name": "Bruno Chauvet" },
+      
+      { "@type": "Person", "name": "Arnaud bos" },
+      
+      { "@type": "Person", "name": "Matthieu Caylet" },
+      
+      { "@type": "Person", "name": "Alteanne Fernandez" }
+      
+    ],
+    "name": "MonkeyPatch",
+    "headline": "MKTD#4 Du challenge et du partage autour de",
+    "image": "http://www.monkeypatch.io/public/images/logos/logo-mkp-head-blue-x126.png",
+    
+      "datePublished": "2018-02-05T00:00:00+01:00",
+      "dateModified": "2018-02-05T00:00:00+01:00",
+      "datePublished": "2018-02-05T00:00:00+01:00",
+    
+    "publisher": {
+      "@type": "Organization",
+      "name": "MonkeyPatch",
+      "logo": "http://www.monkeypatch.io/public/images/logos/logo-mkp-blue-x256.png",
+      "sameAs": [
+        "https://twitter.com/monkeypatch_io","https://www.linkedin.com/company/monkeypatch-io"
+      ]
+    },
+    "description": "Société de conseil et d'expertise en informatique spécialisée dans les nouvelles technologies.",
+    "url": "http://www.monkeypatch.io/2018/02/05/MKTDs-articles-5.html"
+  }
+</script>
+</head>
+
+<body class="post">
+  <header>
+  <div class="menu">
+    <div class="logo">
+      <a href="/index">
+        <img alt="Monkey Patch" src="/public/images/logos/logo-monkey.svg">
+      </a>
+    </div>
+    
+    <nav class="lang">
+      <ul>
+        <li class="">
+          <a href="en/2018/02/05/MKTDs-articles-5.html" >EN</a>
+        </li>
+        <li class="sep">|</li>
+        <li class="active">
+          <a href="/2018/02/05/MKTDs-articles-5.html" >FR</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <nav class="menu">
+      <ul>
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li class="">
+              <a href="/expert">Notre Expertise</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/about">Notre Philo</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/careers">Être Monkeys</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/job">Nos Jobs</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/contact">Contact</a>
+            </li>
+          
+        
+        <li class="">
+          <a href="/blog">Blog</a>
+        </li>
+      </ul>
+    </nav>
+      
+    <nav class="hamburger">
+      <label for="menu-hamburger">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </label>
+    </nav>
+    
+  </div>
+  <input type="checkbox" id="menu-hamburger"/>
+  <nav class="menu-hamburger">
+     <ul>
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li class="">
+              <a href="/expert">Notre Expertise</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/about">Notre Philo</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/careers">Être Monkeys</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/job">Nos Jobs</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/contact">Contact</a>
+            </li>
+          
+        
+        <li class="">
+          <a href="/blog">Blog</a>
+        </li>
+      </ul>
+      <ul class="lang">
+        <li class="">
+          <a href="en/2018/02/05/MKTDs-articles-5.html" >EN</a>
+        </li>
+        <li class="active">
+          <a href="/2018/02/05/MKTDs-articles-5.html" >FR</a>
+        </li>
+      </ul>
+  </nav>
+</header>
+
+  <main>
+    <nav class="index"><!-- fill with JS --></nav>
+    <section class="post">
+      <h1 id="top">
+        <span>MKTD#4 Du challenge et du partage autour de</span>
+        <div class="share">
+          <a class="twitter-share-button"
+            href="https://twitter.com/share"
+            data-size="large"
+            data-via="monkeypatch_io"
+            data-text="MKTD#4 Du challenge et du partage autour de"
+            data-hashtags="MonkeyTechDay,Tech days,MKTD,Tech Addicts,Techno,kotlin,swift"
+            >Tweet</a>
+        </div>
+      </h1>
+
+      <span class="date">
+
+
+  February 05, 2018
+
+</span>
+
+      <div class="tags">
+        
+          <span>MonkeyTechDay</span>
+        
+          <span>Tech days</span>
+        
+          <span>MKTD</span>
+        
+          <span>Tech Addicts</span>
+        
+          <span>Techno</span>
+        
+          <span>kotlin</span>
+        
+          <span>swift</span>
+        
+      </div>
+
+      <article><h1 id="mktd4--du-challenge-et-du-partage-autour-de-kotlin-swift">MKTD#4 : Du challenge et du partage autour de #Kotlin #Swift</h1>
+
+<p>Pour la quatrième édition, on repart sur le format 2 technos / 2 coachs qui nous semble très pertinent pour comparer 2 technos utilisées aussi bien coté Mobile que côté Back-End.
+<!--more-->
+<img src="https://lh4.googleusercontent.com/RIAf_-K3pNuAzwrEk3sipRva_1AQ4Ba70IGFL4BRaUEGIldsh1w5V344WU_scJtY_T1pQKZajCrD7Tt7gxn5=w1867-h903" alt="Kotlin Swift" /></p>
+
+<p>Le format de nos MKTD commence à être bien rodé :</p>
+<ul>
+  <li>on accueille les participants autour d’un petit déjeuner</li>
+  <li>on fait un défi IceBreaker pour se mettre en jambe</li>
+  <li>on fait des TP Individuels</li>
+  <li>on pitche nos résultats et impressions sur la techno</li>
+  <li>on déjeune tous ensemble</li>
+  <li>après le mot du sponsor, on code une appli en équipe</li>
+  <li>on fait la table ronde</li>
+  <li>et on clôture l’événement autour d’un apéro dinatoire</li>
+</ul>
+
+<p>Le MKTD#4 s’est déroulé le 12 mai 2017. <a href="https://twitter.com/EmmanuelVinas?lang=fr">Emmanuel</a> et <a href="https://twitter.com/dplaindoux?lang=fr">Didier</a> nous avaient concocté un bien beau programme autour de Kotlin et Swift. Après un IceBreaker super fun, ils nous ont rapidement présenté les nouveautés des 2 langages. Tout le reste de la matinée, chaque participant réalisait, à son rythme, les TP pour rentrer dans la philo de Kotlin et Swift3. Après un repas marocain et le discours du représentant d’<a href="https://twitter.com/InformatiqueBP?lang=fr">i-BP</a>, on a attaqué en équipe la réalisation d’un jeu où des singes doivent naviguer dans un labyrinthe pour manger des… Eh oui, des bananes !
+Après avoir résolu quelques difficultés d’algorithme, les équipes ont pu faire jouer leurs IA respectives.</p>
+
+<blockquote>
+  <p>“Ah ! Le souvenir de l’IA Swift qui n’arrivait pas à éviter son premier mur !”</p>
+</blockquote>
+
+<h2 id="jeu-twitter">Jeu twitter</h2>
+<p>Pour ce MKTD#4 se déroulait pour la première fois un défi Twitter. Pour remporter des T-shirts Kotlin et Swift, il ne fallait pas hésiter à poster sur Twitter des photos fun et délirantes. Beaucoup se sont pris au jeu.
+Les Twittos qui ont pris le plus de photos, et ceux qui ont été les plus fun sont sélectionnés par la team Com et les coachs.</p>
+
+<p>Certains participants, ont même eu droit à un portrait. Altéanne, commençant tout juste un stage d’illustration &amp; design, a pu s’imprégner de l’état d’esprit de l’événement. Elle a retranscrit en quelques croquis l’ambiance studieuse et fun de la journée.</p>
+
+<p><img src="https://lh6.googleusercontent.com/OZG9IB9lwH6855rdNS7AAO4stObDym1Lyvt5XHWPvhxBgD7VCVyStCcy-gWijClkS4QljKaTg289KjFfiqak=w1867-h903" alt="Meetup commentaires kotlin swift" /></p>
+
+<h2 id="aie-aie-premier-problème-de-réseau-">Aie Aie premier problème de réseau !</h2>
+<p>Pour que les équipes puissent pitcher, on met à disposition des outils collaboratifs comme Google Slides. Ces outils sont censés faire gagner du temps afin de passer plus de temps sur la partie codage… mais quand le réseau fait des siennes ça fonctionne beaucoup moins bien que prévu.</p>
+
+<h2 id="un-petit-bémol-">Un petit bémol !</h2>
+<p>Nous retenons tout de même un petit bémol. Durant cette édition, plusieurs personnes sont parties à 16h00 pour aller récupérer leur(s) enfant(s) ou partir en Week-End. Les coachs et les organisateurs passent beaucoup de temps, bénévolement pour préparer un MKTD. On a été déçue que tous les participants n’aient pas pu rester au moins jusqu’à la fin de la table ronde.</p>
+
+<h2 id="un-sponsor-au-top-">Un sponsor au top !</h2>
+
+<p><img src="https://lh5.googleusercontent.com/U0BCujDhU00_sFuROF8aiVtr6JPKhr5UolqdJBqT9-lCqi14nO2NirfHBZeyb81wLM41ONxQ3AnZ3dE-NdPV=w1867-h903" alt="Sponsor MKTD5" /></p>
+
+<p>Le soutien d’un sponsor comme i-BP nous permet de participer à une partie des frais liés à l’organisation d’un MKTD.</p>
+
+<p>De manière non-exhaustive, on peut citer :</p>
+<ul>
+  <li>les petits déjeuners,</li>
+  <li>le repas du déjeuner pour chaque participants, sponsors et organisateurs,</li>
+  <li>le buffet du soir et les boissons (softs, bières, vins, cidres …),</li>
+  <li>le coût de la location de la salle,</li>
+  <li>les frais éventuels des speakers/coachs.</li>
+</ul>
+
+<p>Répartis dans les 2 teams, les 5 membres de leurs équipes ont vraiment joué le jeu. Ils ont pu entre autres, expérimenter et comparer Kotlin et Swift ; mais également échanger avec les autres participants et avoir leurs impressions sur ces technos.</p>
+<blockquote>
+  <p>“Les goodies (essui lunettes) d’i-BP sont vraiment nickel !”</p>
+</blockquote>
+
+<p>← revenir à <a href="/2018/02/05/MKTDs-articles-4.html">MKTD#3</a> → Article suivant <a href="/2018/02/05/MKTDs-articles-6.html">MKTD#5</a></p>
+
+</article>
+
+      <div class="authors">
+        
+          <div class="author">
+            <a href="https://twitter.com/alteannefr" rel="author">
+              <img src="https://pbs.twimg.com/profile_images/941731677172305920/9xePqA2g_400x400.jpg" alt="Alteanne Fernandez">
+              <span>Alteanne Fernandez</span>
+            </a>
+          </div>
+        
+          <div class="author">
+            <a href="https://twitter.com/MCaylet" rel="author">
+              <img src="https://pbs.twimg.com/profile_images/912003996566609920/Lo6EspIy_400x400.jpg" alt="Matthieu Caylet">
+              <span>Matthieu Caylet</span>
+            </a>
+          </div>
+        
+      </div>
+    </section>
+
+    
+    <section class="comment">
+      <div id="disqus_thread"></div>
+      <script>
+      var disqus_config = function () {
+          this.page.url = "http://www.monkeypatch.io/2018/02/05/MKTDs-articles-5.html";  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = "/2018/02/05/MKTDs-articles-5.html"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = '//monkeypatchblog.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+    
+    <footer class="top">
+    <div>
+      <h3>Rester en contact</h3>
+      <p>
+        <a class="contact" href="contact">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <img src="/public/images/icons/Toulouse.png" alt="Toulouse">
+        </a>
+      </p>
+      <p>
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        <a class="mail" href="mailto:contact@monkeypatch.io">contact@monkeypatch.io</a>
+      </p>
+    </div>
+    <div class="social-network">
+      <h3>Réseaux sociaux</h3>
+      <ul class="social">
+        <li>
+          <a href="https://twitter.com/monkeypatch_io">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/monkeypatch-io">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<footer class="bottom">
+  <div>
+    Copyright @ 2016 MonkeyPatch -<a href="/terms">Termes et conditions</a>
+  </div>
+  <div>
+    Made with <i class="fa fa-heart" aria-hidden="true"></i> In Toulouse
+  </div>
+  <a class="goToTop" href="#top">
+    <i class="fa fa-caret-up" aria-hidden="true"></i>
+  </a>
+</footer>
+
+  </main>
+  <!-- Google Tag Manager -->
+  <noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-KGGFWH" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KGGFWH');
+  </script>
+  <!-- End Google Tag Manager -->
+  <script src="/public/scripts/modernizr-custom.js"></script>
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+  var i;
+  var nav = document.querySelector('nav.index');
+  var headers = document.querySelectorAll('article h1, article h2, article h3, article h4, article h5, article h6');
+
+  var createNavHeader = function(id, type, text) {
+    var link = document.createElement('a');
+    link.textContent = text;
+    link.setAttribute('href', '#' + id);
+
+    var text = document.createElement(type);
+    text.appendChild(link);
+    return text;
+  };
+  var createHeaderLink = function(id, text) {
+    var link = document.createElement('a');
+    link.classList.add('anchor');
+    link.textContent = text;
+    link.setAttribute('href', '#' + id);
+    return link;
+  };
+
+  var processHeader = function(header) {
+    var id = header.id;
+    var tag = header.tagName;
+    var text = header.textContent;
+
+    var navHeader = createNavHeader(id, tag, text);
+    nav.appendChild(navHeader);
+
+    var headerLink = createHeaderLink(id, text);
+    header.removeChild(header.firstChild);
+    header.appendChild(headerLink);
+  }
+
+  for (i = 0; i < headers.length; i++) {
+    processHeader(headers[i]);
+  }
+});
+  </script>
+  <!-- Share with Twitter -->
+  <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+</body>
+</html>

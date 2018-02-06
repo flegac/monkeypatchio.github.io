@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<!--  lastBuildDate : Tue, 06 Feb 2018 15:24:52 +0100 -->
+<html>
+<head>
+  
+  
+  <title>MKTD#1 Expérimentation du format</title>
+  
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="content-language" content="en" />
+  <meta name="language" content="en" />
+  <!-- Google site verification -->
+  <meta name="google-site-verification" content="Gq_ytzUtfYn95WsiH66e4Lfb8zANT-LUwD8JgH9xXdw" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="keywords" content="Expertise informatique, Dévelopement informatique" />
+
+  <!-- RSS feed -->
+  <link rel="alternate" type="application/rss+xml" title=" RSS Feed" href="http://www.monkeypatch.io/blog/feed.xml" />
+
+  <!-- SEO -->
+  <meta property="og:title" content="MKTD#1 Expérimentation du format" />
+
+  
+  <meta property="og:description" content="MKTD#1 : Expérimentation du format #Feign #Retrofit
+En juin 2016, au gré de quelques recherches sur le net, on a découvert un petit espace de coworking nommé HarryCow,
+
+" />
+  <meta name="description" content="MKTD#1 : Expérimentation du format #Feign #Retrofit
+En juin 2016, au gré de quelques recherches sur le net, on a découvert un petit espace de coworking nommé HarryCow,
+
+" />
+  
+  
+  
+    <meta name="author" content="Emmanuel Vinas">
+    <link rel="author" href="https://plus.google.com/+vinasemmanuel"/>
+    
+      <link rel="publisher" href="https://plus.google.com/+vinasemmanuel"/>
+    
+  
+    <meta name="author" content="Igor Laborie">
+    <link rel="author" href="https://plus.google.com/+IgorLaborie"/>
+    
+      <link rel="publisher" href="https://plus.google.com/+IgorLaborie"/>
+    
+  
+    <meta name="author" content="Bruno Chauvet">
+    <link rel="author" href="https://plus.google.com/"/>
+    
+      <link rel="publisher" href="https://plus.google.com/"/>
+    
+  
+    <meta name="author" content="Arnaud bos">
+    <link rel="author" href="https://plus.google.com/"/>
+    
+      <link rel="publisher" href="https://plus.google.com/"/>
+    
+  
+    <meta name="author" content="Matthieu Caylet">
+    <link rel="author" href="https://plus.google.com/"/>
+    
+      <link rel="publisher" href="https://plus.google.com/"/>
+    
+  
+    <meta name="author" content="Alteanne Fernandez">
+    <link rel="author" href="https://plus.google.com/"/>
+    
+      <link rel="publisher" href="https://plus.google.com/"/>
+    
+  
+
+  
+    <meta property="og:type" content="article"/>
+    <meta property="og:article:published_time" content="2018-02-05T00:00:00+01:00">
+    
+      <meta property="og:article:author:username" content="Emmanuel Vinas">
+    
+      <meta property="og:article:author:username" content="Igor Laborie">
+    
+      <meta property="og:article:author:username" content="Bruno Chauvet">
+    
+      <meta property="og:article:author:username" content="Arnaud bos">
+    
+      <meta property="og:article:author:username" content="Matthieu Caylet">
+    
+      <meta property="og:article:author:username" content="Alteanne Fernandez">
+    
+    
+    <meta property="og:article:tag" content="MonkeyTechDay">
+    
+    <meta property="og:article:tag" content="Tech days">
+    
+    <meta property="og:article:tag" content="MKTD">
+    
+    <meta property="og:article:tag" content="Tech Addicts">
+    
+    <meta property="og:article:tag" content="Techno">
+    
+    <meta property="og:article:tag" content="feign">
+    
+    <meta property="og:article:tag" content="retrofit">
+    
+  
+  
+  
+  <meta property="og:image" content="http://www.monkeypatch.io/public/images/logos/logo-mkp-head-blue-x126.png"/>
+
+  <meta property="og:url" content="http://www.monkeypatch.io/2018/02/05/MKTDs-articles-2.html"/>
+  <meta property="og:site_name" content="MonkeyPatch"/>
+  
+  <!-- Twitter tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@MonkeyPatch_io" />
+  <meta name="twitter:url" content="http://www.monkeypatch.io/2018/02/05/MKTDs-articles-2.html">
+  <meta name="twitter:title" content="MKTD#1 Expérimentation du format">
+  <meta name="twitter:description" content="MKTD#1 : Expérimentation du format #Feign #Retrofit
+En juin 2016, au gré de quelques recherches sur le net, on a découvert un petit espace de coworking nommé HarryCow,
+
+">
+  <meta name="twitter:image" content="http://www.monkeypatch.io/public/images/logos/logo-mkp-head-blue-x126.png">
+
+  <!-- Lang --> 
+  <link rel="alternate" hreflang="en" href="http://www.monkeypatch.io/en/index" />
+  <link rel="alternate" hreflang="fr" href="http://www.monkeypatch.io/index" />
+  
+  <meta property="og:locale:alternate" content="fr_FR"/>
+  <meta property="og:locale" content="en_US"/>
+  
+
+  <link rel="shortcut icon" href="favicon.ico">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link id="theme-style" rel="stylesheet" href="/css/main.css">
+
+ <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    
+      "@type": "BlogPosting", // 
+      "mainEntityOfPage": "http://www.monkeypatch.io/2018/02/05/MKTDs-articles-2.html", 
+    
+    "author": [
+      
+      { "@type": "Person", "name": "Emmanuel Vinas" },
+      
+      { "@type": "Person", "name": "Igor Laborie" },
+      
+      { "@type": "Person", "name": "Bruno Chauvet" },
+      
+      { "@type": "Person", "name": "Arnaud bos" },
+      
+      { "@type": "Person", "name": "Matthieu Caylet" },
+      
+      { "@type": "Person", "name": "Alteanne Fernandez" }
+      
+    ],
+    "name": "MonkeyPatch",
+    "headline": "MKTD#1 Expérimentation du format",
+    "image": "http://www.monkeypatch.io/public/images/logos/logo-mkp-head-blue-x126.png",
+    
+      "datePublished": "2018-02-05T00:00:00+01:00",
+      "dateModified": "2018-02-05T00:00:00+01:00",
+      "datePublished": "2018-02-05T00:00:00+01:00",
+    
+    "publisher": {
+      "@type": "Organization",
+      "name": "MonkeyPatch",
+      "logo": "http://www.monkeypatch.io/public/images/logos/logo-mkp-blue-x256.png",
+      "sameAs": [
+        "https://twitter.com/monkeypatch_io","https://www.linkedin.com/company/monkeypatch-io"
+      ]
+    },
+    "description": "Société de conseil et d'expertise en informatique spécialisée dans les nouvelles technologies.",
+    "url": "http://www.monkeypatch.io/2018/02/05/MKTDs-articles-2.html"
+  }
+</script>
+</head>
+
+<body class="post">
+  <header>
+  <div class="menu">
+    <div class="logo">
+      <a href="/en/index">
+        <img alt="Monkey Patch" src="/public/images/logos/logo-monkey.svg">
+      </a>
+    </div>
+    
+    <nav class="lang">
+      <ul>
+        <li class="active">
+          <a href="en/2018/02/05/MKTDs-articles-2.html" >EN</a>
+        </li>
+        <li class="sep">|</li>
+        <li class="">
+          <a href="/2018/02/05/MKTDs-articles-2.html" >FR</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <nav class="menu">
+      <ul>
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li class="">
+              <a href="/en/expert">Our expertise</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/about">Our thoughts</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/careers">Be a Monkey</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/job">Our Jobs</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/contact">Contact</a>
+            </li>
+          
+        
+        <li class="">
+          <a href="/en/blog">Blog</a>
+        </li>
+      </ul>
+    </nav>
+      
+    <nav class="hamburger">
+      <label for="menu-hamburger">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </label>
+    </nav>
+    
+  </div>
+  <input type="checkbox" id="menu-hamburger"/>
+  <nav class="menu-hamburger">
+     <ul>
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li class="">
+              <a href="/en/expert">Our expertise</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/about">Our thoughts</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/careers">Be a Monkey</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/job">Our Jobs</a>
+            </li>
+          
+        
+          
+            <li class="">
+              <a href="/en/contact">Contact</a>
+            </li>
+          
+        
+        <li class="">
+          <a href="/en/blog">Blog</a>
+        </li>
+      </ul>
+      <ul class="lang">
+        <li class="active">
+          <a href="en/2018/02/05/MKTDs-articles-2.html" >EN</a>
+        </li>
+        <li class="">
+          <a href="/2018/02/05/MKTDs-articles-2.html" >FR</a>
+        </li>
+      </ul>
+  </nav>
+</header>
+
+  <main>
+    <nav class="index"><!-- fill with JS --></nav>
+    <section class="post">
+      <h1 id="top">
+        <span>MKTD#1 Expérimentation du format</span>
+        <div class="share">
+          <a class="twitter-share-button"
+            href="https://twitter.com/share"
+            data-size="large"
+            data-via="monkeypatch_io"
+            data-text="MKTD#1 Expérimentation du format"
+            data-hashtags="MonkeyTechDay,Tech days,MKTD,Tech Addicts,Techno,feign,retrofit"
+            >Tweet</a>
+        </div>
+      </h1>
+
+      <span class="date">
+
+
+  February 05, 2018
+
+</span>
+
+      <div class="tags">
+        
+          <span>MonkeyTechDay</span>
+        
+          <span>Tech days</span>
+        
+          <span>MKTD</span>
+        
+          <span>Tech Addicts</span>
+        
+          <span>Techno</span>
+        
+          <span>feign</span>
+        
+          <span>retrofit</span>
+        
+      </div>
+
+      <article><h1 id="mktd1--expérimentation-du-format-feign-retrofit">MKTD#1 : Expérimentation du format #Feign #Retrofit</h1>
+<p>En juin 2016, au gré de quelques recherches sur le net, on a découvert un petit espace de coworking nommé <a href="https://www.harrycow.com/">HarryCow</a>, <!--more-->qui venait de se créer, à peine 15 jours avant. Les gérants d’HarryCow, Nathalie et Benoît ne connaissaient pas bien l’univers des hackathons ou des Techdays mais le courant est passé. C’était parti pour une expérimentation de notre concept, chez eux, autour de Feign et Retrofit !</p>
+
+<p>Les coachs, <a href="https://twitter.com/EmmanuelVinas">Emmanuel</a> et <a href="https://twitter.com/ilaborie">Igor</a> ont alors préparé une série d’exos pour que chacun puisse apprendre et partager réellement en équipe.
+Bien que nous souhaitions un événement avec un niveau soutenu, il ne fallait pas non plus qu’il soit sans vie. On a décidé que les MKTD seraient à notre image, articulés autour de la bienveillance, du partage et de la décontraction (pas la peine de se mettre de pression).</p>
+
+<p>Le 8 juillet 2016 s’est déroulé le premier MKTD. Une petite dizaine de ‘TechAddicts’ (principalement des personnes de notre réseau) a été répartie en 2 équipes pour coder les exos. Puis à la fin de chacun d’eux, on demandait aux TechAddicts de pitcher les intérêts et les performances des résultats obtenus.</p>
+
+<p><img src="https://lh4.googleusercontent.com/un-LFaEUjw2fq2j-1A1DkNZwxykwfRDqkauqsotjsJX72l1H8q3t5rMznH5ExHwmGgFcPVrVe5XSC2UTD70m=w1867-h903" alt="Tech addicts" /></p>
+
+<h2 id="bilan-de-cette-première-expérimentation-">Bilan de cette première expérimentation :</h2>
+
+<p>Sur cette première édition, on n’était pas nombreux, mais le format a séduit !</p>
+
+<p>Le concept de faire des exos en équipe sur une journée à beaucoup plu, mais on a eu les yeux plus gros que le ventre car les participants n’ont pu en faire que la moitié. On s’est dit qu’il faudrait ajuster le volume.</p>
+
+<p>Pour essayer de définir quelle était la meilleure techno, à la fin de chaque pitch, les coachs et les participants étaient appelés à voter. Euh… ça n’a pas été très convaincant.</p>
+
+<p>On a également initié la rédaction d’articles pour partager notre expérience avec ceux qui n’ont pas pu venir :
+<a href="2016/08/09/MKTD-1-feign-vs-retrofit-&amp;-58;-1-prise-en-main.html">Fein &amp; Retrofit 1</a>
+<a href="/2016/08/10/MKTD-1-feign-vs-retrofit-&amp;-58;-2-aller-plus-loin.html">Fein &amp; Retrofit 2</a></p>
+
+<p>“ Good job guys”</p>
+
+<p><img src="https://lh5.googleusercontent.com/K7aX7BkjdIpTydNUEbUYTeWgumWxHHoErTQrcoGHnTHTOS5ccqPYUcf8ZItRwBuySk1lkoL0YkZbf0e3X0O-=w1867-h903" alt="" /></p>
+
+<blockquote>
+  <p>“Super encourageant pour en faire d’autres”</p>
+</blockquote>
+
+<p>← revenir à <a href="/2018/02/05/MKTDs-articles-1.html">l’article principal</a> → Article suivant <a href="/2018/02/05/MKTDs-articles-3.html">MKTD#2</a></p>
+
+</article>
+
+      <div class="authors">
+        
+          <div class="author">
+            <a href="https://twitter.com/alteannefr" rel="author">
+              <img src="https://pbs.twimg.com/profile_images/941731677172305920/9xePqA2g_400x400.jpg" alt="Alteanne Fernandez">
+              <span>Alteanne Fernandez</span>
+            </a>
+          </div>
+        
+          <div class="author">
+            <a href="https://twitter.com/MCaylet" rel="author">
+              <img src="https://pbs.twimg.com/profile_images/912003996566609920/Lo6EspIy_400x400.jpg" alt="Matthieu Caylet">
+              <span>Matthieu Caylet</span>
+            </a>
+          </div>
+        
+      </div>
+    </section>
+
+    
+    <section class="comment">
+      <div id="disqus_thread"></div>
+      <script>
+      var disqus_config = function () {
+          this.page.url = "http://www.monkeypatch.io/en/2018/02/05/MKTDs-articles-2.html";  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = "/2018/02/05/MKTDs-articles-2.html"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = '//monkeypatchblog.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+    
+    <footer class="top">
+    <div>
+      <h3>Get In Touch</h3>
+      <p>
+        <a class="contact" href="/encontact">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <img src="/public/images/icons/Toulouse.png" alt="Toulouse">
+        </a>
+      </p>
+      <p>
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        <a class="mail" href="mailto:contact@monkeypatch.io">contact@monkeypatch.io</a>
+      </p>
+    </div>
+    <div class="social-network">
+      <h3>Social Networks</h3>
+      <ul class="social">
+        <li>
+          <a href="https://twitter.com/monkeypatch_io">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/monkeypatch-io">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<footer class="bottom">
+  <div>
+    Copyright @ 2016 MonkeyPatch -<a href="/en/terms">Terms and Conditions</a>
+  </div>
+  <div>
+    Made with <i class="fa fa-heart" aria-hidden="true"></i> In Toulouse
+  </div>
+  <a class="goToTop" href="#top">
+    <i class="fa fa-caret-up" aria-hidden="true"></i>
+  </a>
+</footer>
+
+  </main>
+  <!-- Google Tag Manager -->
+  <noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-KGGFWH" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KGGFWH');
+  </script>
+  <!-- End Google Tag Manager -->
+  <script src="/public/scripts/modernizr-custom.js"></script>
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+  var i;
+  var nav = document.querySelector('nav.index');
+  var headers = document.querySelectorAll('article h1, article h2, article h3, article h4, article h5, article h6');
+
+  var createNavHeader = function(id, type, text) {
+    var link = document.createElement('a');
+    link.textContent = text;
+    link.setAttribute('href', '#' + id);
+
+    var text = document.createElement(type);
+    text.appendChild(link);
+    return text;
+  };
+  var createHeaderLink = function(id, text) {
+    var link = document.createElement('a');
+    link.classList.add('anchor');
+    link.textContent = text;
+    link.setAttribute('href', '#' + id);
+    return link;
+  };
+
+  var processHeader = function(header) {
+    var id = header.id;
+    var tag = header.tagName;
+    var text = header.textContent;
+
+    var navHeader = createNavHeader(id, tag, text);
+    nav.appendChild(navHeader);
+
+    var headerLink = createHeaderLink(id, text);
+    header.removeChild(header.firstChild);
+    header.appendChild(headerLink);
+  }
+
+  for (i = 0; i < headers.length; i++) {
+    processHeader(headers[i]);
+  }
+});
+  </script>
+  <!-- Share with Twitter -->
+  <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+</body>
+</html>
