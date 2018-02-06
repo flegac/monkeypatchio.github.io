@@ -12,7 +12,6 @@ ilaborie:
   email: igor@monkeypatch.io
   photo: http://www.gravatar.com/avatar/5870075cc4934bb7c32f2a6c56cc4f8d?s=48
 
-
 bchauvet:
   name: Bruno Chauvet
   twitter: brunochauvet
@@ -24,3 +23,15 @@ abos:
   twitter: arnaud_bos
   email: arnaud@monkeypatch.io
   photo: https://lh3.googleusercontent.com/-IcsS2cmlyNc/AAAAAAAAAAI/AAAAAAAAAAA/AMp5VUrrivxfxUpn2bpn_11YK17d_ccTbA/s48-c-mo/photo.jpg
+
+mcaylet:
+  name: Matthieu Caylet
+  twitter: MCaylet
+  email: matthieu@monkeypatch.io
+  photo: https://pbs.twimg.com/profile_images/912003996566609920/Lo6EspIy_400x400.jpg
+
+afernandez:
+  name: Alteanne Fernandez
+  twitter: alteannefr 
+  email: alteanne@monkeypatch.io
+  photo: https://pbs.twimg.com/profile_images/941731677172305920/9xePqA2g_400x400.jpg
