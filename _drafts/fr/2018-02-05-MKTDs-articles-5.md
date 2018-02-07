@@ -12,7 +12,7 @@ tags: [MonkeyTechDay, Tech days, MKTD, Tech Addicts, Techno, kotlin, swift]
 
 Pour la quatrième édition, on repart sur le format 2 technos / 2 coachs qui nous semble très pertinent pour comparer 2 technos utilisées aussi bien coté Mobile que côté Back-End.
 <!--more-->
-![Kotlin Swift](https://lh4.googleusercontent.com/RIAf_-K3pNuAzwrEk3sipRva_1AQ4Ba70IGFL4BRaUEGIldsh1w5V344WU_scJtY_T1pQKZajCrD7Tt7gxn5=w1867-h903)
+![Kotlin Swift](https://lh3.googleusercontent.com/Cb0GhO9F2m6Q-w-2kLlFOflRNk_0yUhLkePt5XZmlvw1kOFNdtpWSgWYXkoRldSIuHbAOmlP-1XApQWXZq9hNmUEOThbvyh3JjdT2J7GaH5SeAMfN4BEF9RaTGlPwA-KgoBSyBhpPSq5MPKt7hZF7REY39GBF0On-aVs4R1EBJs2FofQrX9m-vgy8vKAhzPnJXaGMhyWZBEjx83hYTZb2fvbtnrxvzv-tvTBmOHt8Xt5EERJZ1eS-mAoYJldQYYWbHl93dr6TlDdhl9Y_Q3086s9WDGd17b4DvKbf7c8gN8LfwELt72Rw1FahXC7XG19FV5PiZp8O3Fh8QApkTt3jZque5eQDsVLBDAeHOB9pY3fITWPENXJKqqV5VrzgPzxPy1Q425ECfO-C8BnaZe95ZjSow6eJhQFpZayElbejZ3x3SbMEYUwm0ntP6kISa3ucCSlIS_OAXhgryfpTk_tbH2mPzuhofpiZKDgmBxYbeZYaSbPLfN9AGjGQKTj0dr8cOapEV9BI7th-TVYHcFtdRuX77cCqy5rlC4qSZdf7Y4g5oIiMerqrvnejjVtbOAJGTdxaJ2ooSr2gAku5ev3yrGUaVO1Ekhqj1Ep7J3Cho2MaHqvlYT0UqtTQyRJ78PZn0KPVTc3XZHofGVoLQAk5lQE1if1SyWs=w1867-h739-no)
 
 Le format de nos MKTD commence à être bien rodé : 
 - on accueille les participants autour d’un petit déjeuner 
@@ -35,7 +35,7 @@ Les Twittos qui ont pris le plus de photos, et ceux qui ont été les plus fun s
 
 Certains participants, ont même eu droit à un portrait. Altéanne, commençant tout juste un stage d’illustration & design, a pu s'imprégner de l’état d’esprit de l'événement. Elle a retranscrit en quelques croquis l’ambiance studieuse et fun de la journée.
 
-![Meetup commentaires kotlin swift](https://lh6.googleusercontent.com/OZG9IB9lwH6855rdNS7AAO4stObDym1Lyvt5XHWPvhxBgD7VCVyStCcy-gWijClkS4QljKaTg289KjFfiqak=w1867-h903)
+![Meetup commentaires kotlin swift](https://lh3.googleusercontent.com/A34veaj1wL9dJw0WfB2UzZC_-8ziCUYmOkKuI6MpqmiQh34nTp4_QZfPj_Rc2hVizuKGPS5fw1A5q9u--HeY48z78lFJ1tLEDQQ0g0gSovdaROQCvcOymuH3osLu3RcNntR3_zKKG_zuIaQxHbJAXoB7mE2KCPC_Rv2SHRbenaf0CFltl04BbhkECduPi8Mg6iDSkoTGAruxe6hFyOjzqzoy9pAueJP5zu15qLw13SBo95qJjJ8XYV604zgpTOpXCx7u5xc5mLpKQZx2AubqfGsqJ9I8x6Zt2tiERHU9Xau7W3dZB0wGAWwhbUIxZhPWSMFt0O8lC4q3_vvwTrBcM9NzwgF1QH9ZMyw1XjDX7ALbh1kmZ9rHukw5yC8niA96UjFNYTqVOH7v6uSECUYs4VE1xApwzih3jk8OP1eylJy9NLdNky8aDI6nambLfSHIVkLlMdXlCCU4151VEJ2YrfAFwpIoU0QvotaHP-ZoT_vi1M80so9MGkBNeoDcNpNwKas_vn6InZ9q-2ZHFtq26qpNaWSIFCt88u1NlZ8p--QJ7w-kE7kaKcPpGQc-_JZlGtWVWVj7nYWrNtk8ZAx_36WY0iIBdeQ1OjqpzDUiLvIzHuD-5c3vtK_3YvBNfsxoz8dZ4eeUXA5PT8sbv5TSFqYUz683QU6m=w1107-h687-no)
 
 
 ## Aie Aie premier problème de réseau !
@@ -48,7 +48,7 @@ Nous retenons tout de même un petit bémol. Durant cette édition, plusieurs pe
 
 ## Un sponsor au top !
  
-![Sponsor MKTD5](https://lh5.googleusercontent.com/U0BCujDhU00_sFuROF8aiVtr6JPKhr5UolqdJBqT9-lCqi14nO2NirfHBZeyb81wLM41ONxQ3AnZ3dE-NdPV=w1867-h903)
+![Sponsor MKTD5](https://lh3.googleusercontent.com/s0DFSAjRxzWdTV0NyjFl6Q6Kr4lOPurZkz8ZdNTyiz33BepD_KSZPmskyBpJgMRkUP9vLZGlIFoA9Q8vl2BetUYxq-h3sP0Qy-dhWqACA6fER9yn3MvtveE8Z0pgzDAhQ_BycGEgJmRXbVAOTsizrgAlXapBesBJZnkbOdhOzdU0Y2DPe8XoVn_dRVC8ViGJ2kmGjUvwOn4R-3JA39vcdx-KmaD4Gy5IX8xOz9AGedgvvL2r96fOk6nT6pqR23_TcerJr1PvQ9lOvOogMbWBJEpnLIgDc1-SkXuqi3IZx_lvAYT5hVgJxI5iQES0-b4AbcZ-KH2ZMAjaV2E4d-CQdTmri2EZRYxR0qvE36UeDB77Ut-noG7C6kZ6okCd9zuBucYWkWB2Ogh-qJhE64pvhVtRD6cwigq-iEnfGSkccSAaNzvzxA2DDyBIaWi3UeMIMzsUFbO-TiIVzybEETEjR2rFI5cjoyCpGqNn8gUb6TJauCV929ZDdLvAv6ofyHgEXH6EahY_PhIuDUeG7gDsw2UGdHP8WUfVhQs-Ig5y1q23QX1v_KWiJIYkVckME0K70esF616y6y4m8qPTzsGxrefyVPUHhBBfvtxCRTSg-MSEpxj0ZoMAw49Mmjy2VcJnjM2DtSpoqqz79XLn9QznzEGoZKKyPJdo=w1250-h430-no)
 
 Le soutien d’un sponsor comme i-BP nous permet de participer à une partie des frais liés à l'organisation d’un MKTD. 
 
