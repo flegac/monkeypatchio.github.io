@@ -1,5 +1,5 @@
 ---
-title: MKTD#4 Du challenge et du partage autour de #Kotlin #Swift
+title: MKTD#4 Du challenge et du partage autour de &#35;Kotlin &#35;Swift
 authors: 
   - afernandez
   - mcaylet

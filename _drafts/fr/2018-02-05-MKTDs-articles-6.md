@@ -1,5 +1,5 @@
 ---
-title: Mktd#5 Seulement 17 mois après la 1ère édition ! #Go #Rust
+title: Mktd#5 Seulement 17 mois après la 1ère édition ! &#35;Go &#35;Rust
 authors: 
   - afernandez
   - mcaylet

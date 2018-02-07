@@ -1,5 +1,5 @@
 ---
-title: MKTD#3 La programmation réactive ça vous tente ? #Reactive
+title: MKTD#3 La programmation réactive ça vous tente ? &#35;Reactive
 authors: 
   - afernandez
   - mcaylet

@@ -1,5 +1,5 @@
 ---
-title: MKTD#2 On remet le couvert autour d’#Angular2 #React #AureliaJS
+title: MKTD#2 On remet le couvert autour d’&#35;Angular2 &#35;React &#35;AureliaJS
 authors:
   - afernandez
   - mcaylet
