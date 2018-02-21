@@ -1,3 +1,6 @@
 _site/
 .vscode/
 .sass-cache/
+/.gem
+/.bundle
+/.bash_history

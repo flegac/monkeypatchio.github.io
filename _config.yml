@@ -14,7 +14,10 @@ gems:
   - jekyll-press
   
 exclude:
-  - deploy.sh
+  - build.sh
+  - docker.sh
+  - Gemfile
+  - Gemfile.lock
 
 # Languages
 languages:
