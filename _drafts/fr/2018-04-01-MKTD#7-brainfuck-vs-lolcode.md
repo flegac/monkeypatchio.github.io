@@ -11,7 +11,7 @@ published: true
 # MKTD#7 : On a validé le sujet du prochain MonkeyTechDay ! #Brainfuck #LOLCODE
 
 A peine remis du MKTD#6 sur Flink et Kafka Streams (article à
-venir), nous prennons connaissance des retours faits par les participants
+venir), nous prenons connaissance des retours faits par les participants
 sur l'organisation de l'événement, les technos, les exercices proposés et les
 niveaux des coachs.<!--more-->
 
@@ -40,14 +40,14 @@ concision évidente est un atout certain pour la productivité des équipes
 de dévs.
 
 Fort heureusement, Brainfuck gagne en popularité depuis plusieurs mois comme on
-peut le constater en le comparant à un language récent:
+peut le constater en le comparant à un langage récent:
 
 ![Brainfuck vs Kotlin](/public/images/fool/Brainfuck.png)
 
-Kotlin a connu un pic de popularité  après l'annonce faite par Google du
+Kotlin a connu un pic de popularité après l'annonce faite par Google du
 support de Kotlin pour le développement Android.
 
-Fort heureusement et comme on peut le constater sur ce graphique et sur le
+Fort heureusement, et comme on peut le constater sur ce graphique et sur le
 sondage d'opinion présenté ci-dessous: **la communauté est rapidement revenue à la
 raison et commence enfin à reconnaître Brainfuck à sa juste valeur**.
 
@@ -148,7 +148,7 @@ confort des développeurs.
 
 Et pour fêter cet évènement, nous vous proposons un petit challenge: Essayez de
 résoudre ce petit programme Brainfuck de tête (ou sur papier) afin de découvrir
-le lien vers la page d'inscription du MTDK#8!
+le lien vers la page d'inscription du MTDK#7!
 
 ```
 ++++++++[>+++++++++++++>+++++++++++++++>++++++++++++++>+++++++>++++++>++++++++++++>+++++++++++<<<<<<<-]
