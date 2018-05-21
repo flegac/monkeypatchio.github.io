@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--  lastBuildDate : Wed, 04 Apr 2018 23:22:47 +0200 -->
+<!--  lastBuildDate : Mon, 21 May 2018 17:41:41 +0200 -->
 <html>
 <head>
   
@@ -481,7 +481,7 @@ Voici ses slides <a href="http://slides.com/elecash/angular-continuous-integrati
 
 <p>5- modify the .travis.yml file</p>
 
-<div class="language-yaml highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -501,52 +501,49 @@ Voici ses slides <a href="http://slides.com/elecash/angular-continuous-integrati
 18
 19
 20
-21</pre></td><td class="code"><pre><span class="s">sudo</span><span class="pi">:</span> <span class="s">false</span>
-<span class="s">language</span><span class="pi">:</span> <span class="s">node_js</span>
-<span class="s">cache</span><span class="pi">:</span>
-  <span class="s">directories</span><span class="pi">:</span>
+21
+</pre></td><td class="rouge-code"><pre><span class="na">sudo</span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">language</span><span class="pi">:</span> <span class="s">node_js</span>
+<span class="na">cache</span><span class="pi">:</span>
+  <span class="na">directories</span><span class="pi">:</span>
     <span class="pi">-</span> <span class="s">node_modules</span>
-<span class="s">notifications</span><span class="pi">:</span>
-  <span class="s">email</span><span class="pi">:</span> <span class="s">false</span>
-<span class="s">node_js</span><span class="pi">:</span>
+<span class="na">notifications</span><span class="pi">:</span>
+  <span class="na">email</span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">node_js</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="s1">'</span><span class="s">4'</span>
-<span class="s">before_install</span><span class="pi">:</span>
+<span class="na">before_install</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="s">export CHROME_BIN=chromium-browser</span>
   <span class="pi">-</span> <span class="s">export DISPLAY=:99.0</span>
   <span class="pi">-</span> <span class="s">sh -e /etc/init.d/xvfb start</span>
   <span class="pi">-</span> <span class="s">npm i -g npm@^3.0.0</span>
-<span class="s">before_script</span><span class="pi">:</span>
+<span class="na">before_script</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="s">npm prune</span>
-<span class="s">script</span><span class="pi">:</span>
+<span class="na">script</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="s">npm run build</span>
-<span class="s">branches</span><span class="pi">:</span>
-  <span class="s">except</span><span class="pi">:</span>
+<span class="na">branches</span><span class="pi">:</span>
+  <span class="na">except</span><span class="pi">:</span>
     <span class="pi">-</span> <span class="s">/^v\d+\.\d+\.\d+$/</span>
-</pre></td></tr></tbody></table>
-</div>
-</div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>6- add your scripts on package.json</p>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre><span class="s2">"prebuild"</span><span class="err">:</span><span class="w"> </span><span class="s2">"npm test -- --single-run"</span><span class="err">,</span><span class="w">
-</span><span class="s2">"build"</span><span class="err">:</span><span class="w"> </span><span class="s2">"ng build --prod --aot"</span><span class="err">,</span><span class="w">
-</span></pre></td></tr></tbody></table>
-</div>
-</div>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="s2">"prebuild"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npm test -- --single-run"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ng build --prod --aot"</span><span class="p">,</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>7- modify the karma.conf.js</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-4</pre></td><td class="code"><pre><span class="k">if</span> <span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">TRAVIS</span><span class="p">)</span> <span class="p">{</span>
+4
+</pre></td><td class="rouge-code"><pre><span class="k">if</span> <span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">TRAVIS</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">configuration</span><span class="p">.</span><span class="nx">browsers</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Chrome_travis_ci'</span><span class="p">];</span>
 <span class="p">}</span>
-<span class="nx">config</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">configuration</span><span class="p">);</span>
-</pre></td></tr></tbody></table>
-</div>
-</div>
+<span class="nx">config</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="nx">configuration</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>8- create a branch and send a pull request</p>
 
@@ -558,7 +555,7 @@ Voici ses slides <a href="http://slides.com/elecash/angular-continuous-integrati
 
 <p>En gros voici les scripts npm de la partie client (basé sur angular-cli):</p>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -573,42 +570,40 @@ Voici ses slides <a href="http://slides.com/elecash/angular-continuous-integrati
 13
 14
 15
-16</pre></td><td class="code"><pre><span class="s2">"scripts"</span><span class="err">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"precommit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npm test -- --single-run"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"commit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"git-cz"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"ng"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ng"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"serve:build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http-server ./dist -s -p 4200"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ng serve"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"start:aot"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ng serve --prod --aot"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"prebuild"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npm test -- --single-run"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ng build --prod --aot --bh /ng2-ci-app/"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"build:travis"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ng build --prod --aot"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"lint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tslint \"src/**/*.ts\""</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ng test"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"pree2e"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webdriver-manager update --standalone false --gecko false"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"e2e"</span><span class="p">:</span><span class="w"> </span><span class="s2">"concurrently \"npm run serve:build\" \"protractor\" --kill-others --success first"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"stop"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kill $(cat .pid)"</span><span class="w">
-</span><span class="p">}</span><span class="err">,</span><span class="w">
-</span></pre></td></tr></tbody></table>
-</div>
-</div>
+16
+</pre></td><td class="rouge-code"><pre><span class="s2">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"precommit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npm test -- --single-run"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"commit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"git-cz"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ng"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ng"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"serve:build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http-server ./dist -s -p 4200"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ng serve"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"start:aot"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ng serve --prod --aot"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"prebuild"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npm test -- --single-run"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ng build --prod --aot --bh /ng2-ci-app/"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"build:travis"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ng build --prod --aot"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tslint </span><span class="se">\"</span><span class="s2">src/**/*.ts</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ng test"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"pree2e"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webdriver-manager update --standalone false --gecko false"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"e2e"</span><span class="p">:</span><span class="w"> </span><span class="s2">"concurrently </span><span class="se">\"</span><span class="s2">npm run serve:build</span><span class="se">\"</span><span class="s2"> </span><span class="se">\"</span><span class="s2">protractor</span><span class="se">\"</span><span class="s2"> --kill-others --success first"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"stop"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kill $(cat .pid)"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>et sur la partie backend (NodeJS):</p>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
-6</pre></td><td class="code"><pre><span class="s2">"scripts"</span><span class="err">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rimraf dist &amp;&amp; node build.js"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"commit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"git-cz"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"semantic-release"</span><span class="p">:</span><span class="w"> </span><span class="s2">"semantic-release pre &amp;&amp; npm publish &amp;&amp; semantic-release post"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"postpublish"</span><span class="p">:</span><span class="w"> </span><span class="s2">"greenkeeper-postpublish"</span><span class="w">
-  </span><span class="p">}</span><span class="err">,</span><span class="w">
-</span></pre></td></tr></tbody></table>
-</div>
-</div>
+6
+</pre></td><td class="rouge-code"><pre><span class="s2">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rimraf dist &amp;&amp; node build.js"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"commit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"git-cz"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"semantic-release"</span><span class="p">:</span><span class="w"> </span><span class="s2">"semantic-release pre &amp;&amp; npm publish &amp;&amp; semantic-release post"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"postpublish"</span><span class="p">:</span><span class="w"> </span><span class="s2">"greenkeeper-postpublish"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>Pour voir les compléments voir directement dans les dépôts Github. J’ai eu l’occasion par la suite de discuter avec Raùl, j’espère qu’on aura la chance de le voir passer par Toulouse dans le cadre du Devfest (ou du GDG Toulouse).</p>
 
@@ -665,14 +660,13 @@ Je vous détailerai le sujet plus bas. Vous trouverez ses slides ici: <a href="h
 
 <p>Pour valider le code venant d’un CDN on peut ajouter un checksum avec l’attribut <code class="highlighter-rouge">integrity</code> dans la balise <code class="highlighter-rouge">&lt;script&gt;</code>. Le navigateur se chargera de vérifier ce checksum, et si la vérification échoue, il interdit l’exécution du script. Ce mécanisme s’appelle le SRI (Sub Resource Integrity).</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-3</pre></td><td class="code"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">“.../angular.js”</span>
+3
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">“.../angular.js”</span>
     <span class="na">integrity=</span><span class="s">“sha384-Li9v...DqAJ”</span>
     <span class="na">crossorigin=</span><span class="s">“anonymous”</span><span class="nt">&gt;&lt;/script&gt;</span>
-</pre></td></tr></tbody></table>
-</div>
-</div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>Attention toutefois, on peut utiliser ce mécanisme pour détecter la présence d’un fichier. Il faut aussi bien configurer les CORS pour éviter des fuites.
 Les CDN font des efforts pour simplifier le process, mais on peut aussi le générer nous-même, par exemple avec le plugin webpack suivant : <a href="https://github.com/waysact/webpack-subresource-integrity">webpack-subresource-integrity</a>.</p>
@@ -689,36 +683,33 @@ Les CDN font des efforts pour simplifier le process, mais on peut aussi le gén�
 
 <p>Pour ce qui est de la personnalisation venant des utilisateurs : par exemple si l’application rend possible l’affichage de contenu HTML créé par un utilisateur, la solution à base d’iframe sandboxée permet de contrôler ce qui est possible dans cette iframe.</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">“...”</span> <span class="na">sandbox</span> <span class="nt">&gt;</span> <span class="nt">&lt;/iframe&gt;</span>
-</pre></td></tr></tbody></table>
-</div>
-</div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">“...”</span> <span class="na">sandbox</span> <span class="nt">&gt;</span> <span class="nt">&lt;/iframe&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>Dans l’attribut <code class="highlighter-rouge">sandbox</code> on peut préciser ce qui est possible de faire pour le contenu de l’iframe, par exemple <code class="highlighter-rouge">allow-scripts</code> ou <code class="highlighter-rouge">allow-same-origin</code>. ATTENTION n’utilisez pas les <code class="highlighter-rouge">allow-scripts</code> et <code class="highlighter-rouge">allow-same-origin</code> en même temps.
 Notez que l’on peut passer directement le code HTML dans l’attribut <code class="highlighter-rouge">srcdoc</code> d’une iframe.
 Pour communiquer avec l’iframe il faut passer par un envoi de message, et coté iframe il faut penser à contrôler l’origine des messages.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre><span class="kd">let</span> <span class="nx">iframe</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">HTMLIFrameElement</span><span class="o">&gt;</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElememtById</span><span class="p">(</span><span class="s1">'myIFrame'</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="kd">let</span> <span class="nx">iframe</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">HTMLIFrameElement</span><span class="o">&gt;</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElememtById</span><span class="p">(</span><span class="s1">'myIFrame'</span><span class="p">);</span>
 <span class="nx">iframe</span><span class="p">.</span><span class="nx">contentWindow</span><span class="p">.</span><span class="nx">postMessage</span><span class="p">(</span><span class="s1">'The message'</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">);</span>
-</pre></td></tr></tbody></table>
-</div>
-</div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
-6</pre></td><td class="code"><pre><span class="kr">const</span> <span class="nx">that</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+6
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">that</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
 <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'message'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">origin</span> <span class="o">===</span> <span class="s1">'http://localhost:4200'</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">that</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">});</span>
-</pre></td></tr></tbody></table>
-</div>
-</div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>Aujourd’hui, tous les navigateurs supportent les iframes sandboxées.</p>
 
@@ -794,20 +785,19 @@ C’est <a href="https://twitter.com/manfredsteyer">Manfred Steyer</a> qui anime
 
 <p>Avant d’aller plus loin, une petite astuce tout simple pour débugger les routes sous Angular, dans notre module de route, on peut activer les logs comme ceci :</p>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
-6</pre></td><td class="code"><pre><span class="err">@</span><span class="nx">NgModule</span><span class="p">({</span>
+6
+</pre></td><td class="rouge-code"><pre><span class="p">@</span><span class="nd">NgModule</span><span class="p">({</span>
   <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">RouterModule</span><span class="p">.</span><span class="nx">forRoot</span><span class="p">(</span><span class="nx">routes</span><span class="p">,</span> <span class="p">{</span><span class="na">enableTracing</span><span class="p">:</span> <span class="kc">true</span><span class="p">})],</span>
   <span class="na">exports</span><span class="p">:</span> <span class="p">[</span><span class="nx">RouterModule</span><span class="p">],</span>
   <span class="na">providers</span><span class="p">:</span> <span class="p">[]</span>
 <span class="p">})</span>
-<span class="k">export</span> <span class="kr">class</span> <span class="nx">AppRoutingModule</span> <span class="p">{</span> <span class="p">}</span>
-</pre></td></tr></tbody></table>
-</div>
-</div>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">AppRoutingModule</span> <span class="p">{</span> <span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>Ceci va nous permettre d’avoir les informations suivantes :</p>
 
@@ -815,16 +805,15 @@ C’est <a href="https://twitter.com/manfredsteyer">Manfred Steyer</a> qui anime
 
 <p>Comment active-t-on le lazy loading ? C’est au niveau des routes que l’on va le plus travailler, mais avant cela, la première étape c’est de retirer notre module des imports de AppModule, … Ensuite, on va associer notre module à une route particulière et définir le chemin du module correspondant.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-4</pre></td><td class="code"><pre><span class="p">{</span>
+4
+</pre></td><td class="rouge-code"><pre><span class="p">{</span>
     <span class="nl">path</span><span class="p">:</span> <span class="s1">'lazy'</span><span class="p">,</span>
-    <span class="nx">loadChildren</span><span class="err">:</span> <span class="s1">'./modules/lazy/lazy.module.ts#LazyModule'</span> <span class="c1">// trigger lazy-loading</span>
+    <span class="nx">loadChildren</span><span class="p">:</span> <span class="s1">'./modules/lazy/lazy.module.ts#LazyModule'</span> <span class="c1">// trigger lazy-loading</span>
 <span class="p">},</span>
-</pre></td></tr></tbody></table>
-</div>
-</div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>Puis les sous routes de notre composant seront automatiquement préfixée par le chemin de notre module.</p>
 
@@ -836,7 +825,7 @@ C’est <a href="https://twitter.com/manfredsteyer">Manfred Steyer</a> qui anime
 <p>Autre point étudié dans cette partie : le pré-chargement. En effet, c’est bien d’accélérer le rendu de la première page, mais ensuite si on peut charger le reste des modules avant que l’utilisateur en ait besoin, c’est mieux.
 Pour cela, on peut utiliser le ‘preloadingStrategy’ :</p>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -844,7 +833,8 @@ Pour cela, on peut utiliser le ‘preloadingStrategy’ :</p>
 6
 7
 8
-9</pre></td><td class="code"><pre><span class="err">@</span><span class="nx">NgModule</span><span class="p">({</span>
+9
+</pre></td><td class="rouge-code"><pre><span class="p">@</span><span class="nd">NgModule</span><span class="p">({</span>
   <span class="na">imports</span><span class="p">:</span> <span class="p">[</span><span class="nx">RouterModule</span><span class="p">.</span><span class="nx">forRoot</span><span class="p">(</span><span class="nx">routes</span><span class="p">,</span> <span class="p">{</span>
     <span class="na">preloadingStrategy</span><span class="p">:</span> <span class="nx">PreloadAllModules</span><span class="p">,</span>
     <span class="na">enableTracing</span><span class="p">:</span> <span class="kc">true</span>
@@ -852,14 +842,12 @@ Pour cela, on peut utiliser le ‘preloadingStrategy’ :</p>
   <span class="na">exports</span><span class="p">:</span> <span class="p">[</span><span class="nx">RouterModule</span><span class="p">],</span>
   <span class="na">providers</span><span class="p">:</span> <span class="p">[]</span>
 <span class="p">})</span>
-<span class="k">export</span> <span class="kr">class</span> <span class="nx">AppRoutingModule</span> <span class="p">{</span> <span class="p">}</span>
-</pre></td></tr></tbody></table>
-</div>
-</div>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">AppRoutingModule</span> <span class="p">{</span> <span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>Ici le <code class="highlighter-rouge">PreloadAllModules</code> vient de <code class="highlighter-rouge">@angular/router</code>, il va automatiquement charger les lazy-modules après le démarrage de l’application. On peut bien sûr écrire notre propre preloader, par exemple:</p>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -870,25 +858,24 @@ Pour cela, on peut utiliser le ‘preloadingStrategy’ :</p>
 9
 10
 11
-12</pre></td><td class="code"><pre><span class="k">import</span> <span class="p">{</span><span class="nx">PreloadingStrategy</span><span class="p">,</span> <span class="nx">Route</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"@angular/router"</span><span class="p">;</span>
+12
+</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="p">{</span><span class="nx">PreloadingStrategy</span><span class="p">,</span> <span class="nx">Route</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"@angular/router"</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span><span class="nx">Observable</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"rxjs/Observable"</span><span class="p">;</span>
 
-<span class="k">export</span> <span class="kr">class</span> <span class="nx">CustomPreloadingStrategy</span> <span class="k">implements</span> <span class="nx">PreloadingStrategy</span> <span class="p">{</span>
-  <span class="nx">preload</span><span class="p">(</span><span class="nx">route</span><span class="err">:</span> <span class="nx">Route</span><span class="p">,</span> <span class="nx">fn</span><span class="err">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">Observable</span><span class="o">&lt;</span><span class="kr">any</span><span class="o">&gt;</span><span class="p">)</span><span class="err">:</span> <span class="nx">Observable</span><span class="o">&lt;</span><span class="kr">any</span><span class="o">&gt;</span> <span class="p">{</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">CustomPreloadingStrategy</span> <span class="kr">implements</span> <span class="nx">PreloadingStrategy</span> <span class="p">{</span>
+  <span class="nx">preload</span><span class="p">(</span><span class="nx">route</span><span class="p">:</span> <span class="nx">Route</span><span class="p">,</span> <span class="nx">fn</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">Observable</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span><span class="p">):</span> <span class="nx">Observable</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">route</span><span class="p">.</span><span class="nx">data</span> <span class="o">&amp;&amp;</span> <span class="nx">route</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="s1">'preload'</span><span class="p">])</span> <span class="p">{</span> <span class="c1">// si le module a un data: {preload:true}</span>
       <span class="kd">const</span> <span class="nx">_1s</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
-      <span class="k">return</span> <span class="nx">Observable</span><span class="p">.</span><span class="nx">of</span><span class="p">(</span><span class="kc">true</span><span class="p">).</span><span class="nx">delay</span><span class="p">(</span><span class="nx">_1s</span><span class="p">).</span><span class="nx">flatMap</span><span class="p">(</span><span class="nx">_</span> <span class="o">=&gt;</span> <span class="nx">fn</span><span class="p">());</span> <span class="c1">// on le charge avec un delai de 1s</span>
+      <span class="k">return</span> <span class="nx">Observable</span><span class="p">.</span><span class="k">of</span><span class="p">(</span><span class="kc">true</span><span class="p">).</span><span class="nx">delay</span><span class="p">(</span><span class="nx">_1s</span><span class="p">).</span><span class="nx">flatMap</span><span class="p">(</span><span class="nx">_</span> <span class="o">=&gt;</span> <span class="nx">fn</span><span class="p">());</span> <span class="c1">// on le charge avec un delai de 1s</span>
     <span class="p">}</span>
-    <span class="k">return</span> <span class="nx">Observable</span><span class="p">.</span><span class="nx">of</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">Observable</span><span class="p">.</span><span class="k">of</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</pre></td></tr></tbody></table>
-</div>
-</div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>Attention, on peut avoir de mauvaises surprises quand on active le lazy-loading des modules. En effet, les services définis dans le SharedModule seront à nouveau créés pour le module lazy au moment du chargement. Pour cela, on peut utiliser le pattern de <a href="https://angular.io/docs/ts/latest/guide/ngmodule.html#!#core-module">CoreModule</a>, ou bien plus simplement exposer le SharedModule soit avec les services, soit sans les services.</p>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -899,21 +886,20 @@ Pour cela, on peut utiliser le ‘preloadingStrategy’ :</p>
 9
 10
 11
-12</pre></td><td class="code"><pre><span class="err">@</span><span class="nx">NgModule</span><span class="p">({</span>
+12
+</pre></td><td class="rouge-code"><pre><span class="p">@</span><span class="nd">NgModule</span><span class="p">({</span>
   <span class="c1">// ...</span>
   <span class="na">providers</span><span class="p">:</span> <span class="p">[]</span>
 <span class="p">})</span>
-<span class="k">export</span> <span class="kr">class</span> <span class="nx">SharedModule</span> <span class="p">{</span>
-    <span class="k">static</span> <span class="nx">forRoot</span><span class="p">()</span><span class="err">:</span> <span class="nx">ModuleWithProviders</span> <span class="p">{</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">SharedModule</span> <span class="p">{</span>
+    <span class="kr">static</span> <span class="nx">forRoot</span><span class="p">():</span> <span class="nx">ModuleWithProviders</span> <span class="p">{</span>
         <span class="k">return</span> <span class="p">{</span>
             <span class="na">ngModule</span><span class="p">:</span> <span class="nx">SharedModule</span><span class="p">,</span>
             <span class="na">providers</span><span class="p">:</span> <span class="p">[</span><span class="nx">XService</span><span class="p">,</span> <span class="nx">YService</span><span class="p">,</span> <span class="p">...]</span>
         <span class="p">};</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></td></tr></tbody></table>
-</div>
-</div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>Ces fonctionnalités sont très puissantes, par contre on peut vite tomber dans le piège, et il y a beaucoup de boilerplate autour des modules je trouve. Heureusement qu’angular-cli est là. Si vous avez encore du mal avec les modules vous pouvez regarder ceci: <a href="http://blog.angular-university.io/angular2-ngmodule/">http://blog.angular-university.io/angular2-ngmodule/</a></p>
 
@@ -935,7 +921,7 @@ Quelques remarques supplémentaires :</p>
 
 <p>Pour activer ce comportement :</p>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -943,18 +929,17 @@ Quelques remarques supplémentaires :</p>
 6
 7
 8
-9</pre></td><td class="code"><pre><span class="err">@</span><span class="nx">Component</span><span class="p">({</span>
+9
+</pre></td><td class="rouge-code"><pre><span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
   <span class="na">selector</span><span class="p">:</span> <span class="s1">'my-cmp'</span><span class="p">,</span>
   <span class="na">templateUrl</span><span class="p">:</span> <span class="s1">'./cmp.component.html'</span><span class="p">,</span>
   <span class="na">changeDetection</span><span class="p">:</span> <span class="nx">ChangeDetectionStrategy</span><span class="p">.</span><span class="nx">OnPush</span> <span class="c1">// Statégie OnPush</span>
 <span class="p">})</span>
-<span class="k">export</span> <span class="kr">class</span> <span class="nx">CmpComponent</span> <span class="p">{</span>
-    <span class="err">@</span><span class="nx">Input</span><span class="p">()</span> <span class="nx">data</span><span class="p">;</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">CmpComponent</span> <span class="p">{</span>
+    <span class="p">@</span><span class="nd">Input</span><span class="p">()</span> <span class="nx">data</span><span class="p">;</span>
     <span class="c1">// ...</span>
 <span class="p">}</span>
-</pre></td></tr></tbody></table>
-</div>
-</div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>Pour notifier d’un changement, il faut donc un nouveau ‘data’ en entrée. On peut utiliser une librairie comme <a href="https://facebook.github.io/immutable-js/">immutable.js</a> ou bien faire cela tout simplement en TypeScript.</p>
 
@@ -971,56 +956,52 @@ La première est basée sur le compilateur qui offre de bonnes performances, mai
 
 <p>Après avoir ajouté la dépendance npm <code class="highlighter-rouge">ng2-translate</code>, il faut importer un module que l’on va construire avec un <code class="highlighter-rouge">TranslateLoader</code> :</p>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
-6</pre></td><td class="code"><pre><span class="c1">// Module to import</span>
+6
+</pre></td><td class="rouge-code"><pre><span class="c1">// Module to import</span>
 <span class="nx">TranslateModule</span><span class="p">.</span><span class="nx">forRoot</span><span class="p">({</span>
     <span class="na">provide</span><span class="p">:</span> <span class="nx">TranslateLoader</span><span class="p">,</span>
     <span class="na">useFactory</span><span class="p">:</span> <span class="nx">http</span> <span class="o">=&gt;</span> <span class="k">new</span> <span class="nx">TranslateStaticLoader</span><span class="p">(</span><span class="nx">http</span><span class="p">,</span> <span class="s1">'./i18n'</span><span class="p">,</span> <span class="s1">'.json'</span><span class="p">),</span>
     <span class="na">deps</span><span class="p">:</span> <span class="p">[</span><span class="nx">Http</span><span class="p">]}</span>
 <span class="p">)</span>
-</pre></td></tr></tbody></table>
-</div>
-</div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>Ensuite on configure le <code class="highlighter-rouge">TranslateService</code> :</p>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
-5</pre></td><td class="code"><pre><span class="k">private</span> <span class="nx">initNgTranslate</span><span class="p">()</span> <span class="p">{</span>
+5
+</pre></td><td class="rouge-code"><pre><span class="kr">private</span> <span class="nx">initNgTranslate</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">translate</span><span class="p">.</span><span class="nx">addLangs</span><span class="p">([</span><span class="s1">'en'</span><span class="p">,</span> <span class="s1">'fr'</span><span class="p">]);</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">translate</span><span class="p">.</span><span class="nx">setDefaultLang</span><span class="p">(</span><span class="s1">'navigator.language || navigator.userLanguage'</span><span class="p">);</span> <span class="c1">// Pour avoir la langue par défaut du navigateur</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">translate</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s1">'fr'</span><span class="p">);</span>
 <span class="p">}</span>
-</pre></td></tr></tbody></table>
-</div>
-</div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>On va ensuite créer les fichiers JSON contenant les traductions dans <code class="highlighter-rouge">i18n/fr.json</code> et <code class="highlighter-rouge">i18n/en.json</code>.
 Puis il suffit d’utiliser <code class="highlighter-rouge">ma.clef | translate</code> pour avoir la version internationalisée.</p>
 
 <p>Enfin pour changer de langue, on pourra faire :</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre>  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="err">(</span><span class="na">click</span><span class="err">)="</span><span class="na">setLang</span><span class="err">('</span><span class="na">en</span><span class="err">')"</span><span class="nt">&gt;</span>🇬🇧<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="err">(</span><span class="na">click</span><span class="err">)="</span><span class="na">setLang</span><span class="err">('</span><span class="na">fr</span><span class="err">')"</span><span class="nt">&gt;</span>🇫🇷<span class="nt">&lt;/button&gt;</span>
-</pre></td></tr></tbody></table>
-</div>
-</div>
-
-<div class="language-typescript highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-3</pre></td><td class="code"><pre>  <span class="k">public</span> <span class="nx">setLang</span><span class="p">(</span><span class="nx">lang</span><span class="err">:</span> <span class="kr">string</span><span class="p">)</span> <span class="p">{</span>
+</pre></td><td class="rouge-code"><pre>  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="err">(</span><span class="na">click</span><span class="err">)="</span><span class="na">setLang</span><span class="err">('</span><span class="na">en</span><span class="err">')"</span><span class="nt">&gt;</span>🇬🇧<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="err">(</span><span class="na">click</span><span class="err">)="</span><span class="na">setLang</span><span class="err">('</span><span class="na">fr</span><span class="err">')"</span><span class="nt">&gt;</span>🇫🇷<span class="nt">&lt;/button&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>  <span class="kr">public</span> <span class="nx">setLang</span><span class="p">(</span><span class="nx">lang</span><span class="p">:</span> <span class="nx">string</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">translateService</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">lang</span><span class="p">);</span>
   <span class="p">}</span>
-</pre></td></tr></tbody></table>
-</div>
-</div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <h3 id="part-iv---authentification">Part IV - authentification</h3>
 

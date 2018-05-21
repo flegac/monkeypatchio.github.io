@@ -1,9 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.5.1)
-      public_suffix (~> 2.0, >= 2.0.2)
-    autoprefixer-rails (7.1.2.3)
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
+    autoprefixer-rails (8.5.0)
       execjs
     colorator (1.1.0)
     css_press (0.3.2)
@@ -11,7 +11,7 @@ GEM
       json
     csspool-st (3.1.2)
     execjs (2.7.0)
-    ffi (1.9.18)
+    ffi (1.9.23)
     forwardable-extended (2.6.0)
     html_press (0.8.2)
       htmlentities
@@ -37,15 +37,14 @@ GEM
       jekyll
       multi_css (>= 0.1.0)
       multi_js (>= 0.1.0)
-    jekyll-sass-converter (1.5.0)
+    jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
-    jekyll-watch (1.5.0)
-      listen (~> 3.0, < 3.1)
+    jekyll-watch (1.5.1)
+      listen (~> 3.0)
     json (2.1.0)
-    kramdown (1.14.0)
+    kramdown (1.16.2)
     liquid (3.0.6)
-    listen (3.0.8)
-      rb-fsevent (~> 0.9, >= 0.9.4)
+    listen (3.1.5)
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
     multi_css (0.1.0)
@@ -55,15 +54,15 @@ GEM
     octopress-autoprefixer (2.0.1)
       autoprefixer-rails
       jekyll (~> 3.0)
-    pathutil (0.14.0)
+    pathutil (0.16.1)
       forwardable-extended (~> 2.6)
     public_suffix (2.0.5)
-    rb-fsevent (0.10.2)
+    rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     rouge (1.11.1)
     safe_yaml (1.0.4)
-    sass (3.5.1)
+    sass (3.5.6)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -80,7 +79,9 @@ DEPENDENCIES
   jekyll-multiple-languages-plugin
   jekyll-paginate
   jekyll-press
+  jekyll-sass-converter (= 1.5.2)
   octopress-autoprefixer
+  public_suffix (= 2.0.5)
 
 BUNDLED WITH
-   1.15.3
+   1.16.2

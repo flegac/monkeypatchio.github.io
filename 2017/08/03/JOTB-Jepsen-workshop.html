@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--  lastBuildDate : Wed, 04 Apr 2018 23:22:47 +0200 -->
+<!--  lastBuildDate : Mon, 21 May 2018 17:41:41 +0200 -->
 <html>
 <head>
   
@@ -492,24 +492,23 @@ which will analyze the <em>history</em>, more manageable.</p>
 operations (think JSON documents, JavaScript Objects, Java HashMaps,
 Python Dictionaries, whatever seems familiar to you):</p>
 
-<div class="language-clojure highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<div class="language-clojure highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
 7
-8</pre></td><td class="code"><pre><span class="c1">;; a read: we don't know what value we'll read from the system yes so value is 'nil
+8
+</pre></td><td class="rouge-code"><pre><span class="c1">;; a read: we don't know what value we'll read from the system yes so value is 'nil</span><span class="w">
 </span><span class="p">{</span><span class="no">:type</span><span class="w"> </span><span class="no">:invoke,</span><span class="w"> </span><span class="no">:f</span><span class="w"> </span><span class="no">:read,</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="n">nil</span><span class="p">}</span><span class="w">
 
-</span><span class="c1">;; a write of an integer that will be performed on the system
+</span><span class="c1">;; a write of an integer that will be performed on the system</span><span class="w">
 </span><span class="p">{</span><span class="no">:type</span><span class="w"> </span><span class="no">:invoke,</span><span class="w"> </span><span class="no">:f</span><span class="w"> </span><span class="no">:write,</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="p">(</span><span class="nb">rand-int</span><span class="w"> </span><span class="mi">5</span><span class="p">)}</span><span class="w">
 
-</span><span class="c1">;; a compare-and-set of an old integer and a new integer value
+</span><span class="c1">;; a compare-and-set of an old integer and a new integer value</span><span class="w">
 </span><span class="p">{</span><span class="no">:type</span><span class="w"> </span><span class="no">:invoke,</span><span class="w"> </span><span class="no">:f</span><span class="w"> </span><span class="no">:cas,</span><span class="w"> </span><span class="no">:value</span><span class="w"> </span><span class="p">[(</span><span class="nb">rand-int</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb">rand-int</span><span class="w"> </span><span class="mi">5</span><span class="p">)]}</span><span class="w">
-</span></pre></td></tr></tbody></table>
-</div>
-</div>
+</span></pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>These operations are <em><code class="highlighter-rouge">invocation operations</code></em>, they just describe a bunch of
 types of operations for the <em>clients</em> to perform.</p>
